@@ -1,0 +1,29 @@
+---
+description: Alla förfrågningar om annonsinfogning använder samma URL-struktur och samma grundläggande frågeparametrar. Ytterligare frågeparametrar gör att manifestservern kan arbeta med olika klienter och situationer.
+seo-description: Alla förfrågningar om annonsinfogning använder samma URL-struktur och samma grundläggande frågeparametrar. Ytterligare frågeparametrar gör att manifestservern kan arbeta med olika klienter och situationer.
+seo-title: Begäranden om annonsinfogning
+title: Begäranden om annonsinfogning
+uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
+translation-type: tm+mt
+source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+
+---
+
+
+# Begäranden om annonsinfogning {#requests-for-ad-insertion}
+
+Alla förfrågningar om annonsinfogning använder samma URL-struktur och samma grundläggande frågeparametrar. Ytterligare frågeparametrar gör att manifestservern kan arbeta med olika klienter och situationer.
+
+| Parameter | Beskrivning |
+|--- |--- |
+| u | Resurs-ID är en MD5-hash av adobe_request_id från Adobe Primetimes metadata för annonsbeslut. Tillhandahålls av din kontoansvarige på Adobe. |
+| z | Zon-ID för tillgången som måste tillhandahållas Auditude. Tillhandahålls av din kontoansvarige på Adobe. |
+| `__sid__` | Ett unikt ID som manifestservern använder för att generera sessions-ID. |
+
+>[!NOTE]
+>
+>Parametern `__sid__` omges av två understreck.
+
+Manifestservern underhåller sessioner för enskilda klienter eller grupper av klienter för att säkerställa att sekvenserna av API-interaktioner för olika klienter hålls åtskilda. Den `__sid__` klient som skickas i bootstrap-URL:en till manifestservern ska vara unik i sin miljö. Manifestservern använder den för att skapa ett globalt unikt ID som returneras till klienten.
+
+De återstående frågeparametrarna gäller olika klienter och situationer.
