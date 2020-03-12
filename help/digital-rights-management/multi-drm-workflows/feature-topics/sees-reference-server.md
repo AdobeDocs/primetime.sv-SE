@@ -1,0 +1,34 @@
+---
+description: Ett sätt att samordna licensiering och policystyrning är att bygga in dessa funktioner i en tillståndsserver. Adobe tillhandahåller den server för SEES-referensberättigande som du kan arbeta med för att skapa en egen server.
+seo-description: Ett sätt att samordna licensiering och policystyrning är att bygga in dessa funktioner i en tillståndsserver. Adobe tillhandahåller den server för SEES-referensberättigande som du kan arbeta med för att skapa en egen server.
+seo-title: Referensserver - exempel ExpressPlay-tillståndsserver (SEES)
+title: Referensserver - exempel ExpressPlay-tillståndsserver (SEES)
+uuid: 99e42f76-7730-42fc-a9a9-f6396ac12c02
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES) {#reference-server-sample-expressplay-entitlement-server-sees}
+
+Ett sätt att samordna licensiering och policystyrning är att bygga in dessa funktioner i en tillståndsserver. Adobe tillhandahåller den server för SEES-referensberättigande som du kan arbeta med för att skapa en egen server.
+
+Referensservern SEES demonstrerar ExpressPlay-berättigandetjänsten och visar två tjänster: grundläggande tidsbaserat berättigande och enhetsbindningsberättigande.
+
+SEES är byggt på två ExpressPlay Fairplay-tjänster:
+
+1. Tjänst för uttryckstokenbegäran
+1. Tjänst för hämtning av Expresdisplay-post
+
+URL-formatet för ExpressPlay-tokenbegäran har två former, en för produktion, en för testmiljön:
+
+**Produktion**:<span></span>https://fp-gen.{prod_domain}/hms/fp/token
+
+**Test**:<span></span>https://fp-gen.test.expressplay.com/hms/fp/token
+
+URL-formatet för hämtning av ExpressPlay-post har två former, en för produktion, en för testmiljön:
+
+**Produktion**:<span></span>https://api.{prod_domain}/cmiapi/getrecord/
+
+**Test**:<span></span>https://api.test.expressplay.com/cmiapi/getrecord/
