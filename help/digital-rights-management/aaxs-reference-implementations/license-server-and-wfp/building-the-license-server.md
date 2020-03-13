@@ -1,0 +1,19 @@
+---
+seo-title: Skapar licensservern
+title: Skapar licensservern
+uuid: d7ca8a8f-c778-41a2-b823-93fac9ab07c5
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Skapar licensservern {#building-the-license-server}
+
+Referensimplementeringslicensservern innehåller WAR-filer för distribution av licensservern. Den innehåller även källkoden för licensservern och ett Ant-byggskript (Reference Implementation\Server\refimpl\build-refimpl.xml) så att du enkelt kan ändra koden.
+
+>[!NOTE] {class=&quot;- topic/note &quot;
+>
+>Det här steget behövs bara om du vill ändra källkoden. I utvärderingssyfte kan du hoppa över det här steget och använda WAR-filerna som de levererats.
+
+Innan du kör Ant-skriptet ändrar du skriptet för att ange platserna för Adobe Access SDK, Tomcat, MySQL och Log4J. Öppna build-refimpl.xml i en textredigerare och redigera egenskapernas värden `sdkdir, tomcatdir, mysqldir, and log4jdir`. Om du vill kompilera källkoden och skapa WAR-filerna för referensimplementeringen kör du skriptet med hjälp `ant -f build-refimpl.xml all` av katalogen som innehåller Ant-skriptet. När skriptet är klart skapas en [!DNL refimpl-build/wars] katalog med serverns WAR-filer.
