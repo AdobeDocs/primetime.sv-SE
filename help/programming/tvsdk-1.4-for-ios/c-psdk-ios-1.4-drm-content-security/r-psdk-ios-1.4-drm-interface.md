@@ -1,0 +1,66 @@
+---
+description: Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
+seo-description: Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
+seo-title: Översikt över Primetime DRM-gränssnittet
+title: Översikt över Primetime DRM-gränssnittet
+uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
+translation-type: tm+mt
+source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+
+---
+
+
+# Översikt över Primetime DRM-gränssnittet {#primetime-drm-interface-overview}
+
+Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade Primetime DRM-lösning.
+
+Fråga din Adobe-representant om den senaste informationen om att det finns DRM-lösningar från tredje part.
+
+Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
+
+<!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
+
+Primetime DRM ger ett skalbart och effektivt arbetsflöde för att implementera innehållsskydd i TVSDK-program. Du skyddar och hanterar rättigheterna till ditt videoinnehåll genom att skapa en licens för varje digital mediefil.
+
+TVSDK stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Det innebär att programmet måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp med Flash DRMManager. MediaPlayer ger dig DRM-hanteraren för autentisering för att aktivera detta.
+
+Se exempelkoden för DRM som ingår i TVSDK-paketet.
+
+Detta är de viktigaste API-elementen för att arbeta med DRM:
+
+* En referens i mediespelaren till DRM-hanterarobjektet som implementerar DRM-undersystemet:
+
+   ```
+   @property (readonly, nonatomic) DRMManager *drmManager
+   ```
+
+<!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
+
+TVSDK skickar ett `PTMediaPlayerItemDRMMetadataChanged` meddelande när DRM-metadata ändras. Dessa metadata används som indata för nästan alla funktioner i `DRMManager` klassen.
+
+<!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
+
+Om den DRM-skyddade strömmen är kodad med flera bithastigheter (MBR), bör de DRM-metadata som används för variantspellistan vara samma som de metadata som används i alla bithastighetsströmmar.
+
+>[!TIP] {prioritet=&quot;high&quot;}
+>
+>När du refererar till DRM-skyddade resurs-URL:er i din iOS-app, `?faxs=1` måste frågesträngsparametern läggas till i (MBR)-URL:en på angiven nivå. Exempel: >
+>
+```>
+>https://your.domain.com/hls/[...]/index.m3u8?faxs=1
+>```>
+>The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. You can also append the `faxs=1` tag on DRM-protected HLS asset URLs that are destined for other platforms; it is observed as required on iOS or treated as a non-op in players on other platforms.
+
+
+
+<!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
+
+Mer information om DRM finns i dokumentationen [för](https://help.adobe.com/en_US/primetime/drm)Adobe Primetime DRM.
+
+## Implementera Primetime DRM i ett TSVDK-program {#implement-primetime-drm-in-a-tsvdk-application}
+
+Primetime DRM är integrerat i TVSDK, vilket förenklar implementeringen av innehållsskydd i en TVSDK-applikation.
+
+En översikt och information om hur du använder Primetime DRM för att implementera innehållsskydd i ett TVSDK-program finns i:
+
+* [Adobe Primetime TVSDK-DRM Workflow (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
