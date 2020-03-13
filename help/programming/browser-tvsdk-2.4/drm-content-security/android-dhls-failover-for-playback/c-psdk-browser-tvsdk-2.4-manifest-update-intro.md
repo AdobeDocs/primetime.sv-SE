@@ -1,0 +1,31 @@
+---
+description: Webbläsarens TVSDK kan identifiera ändrad uppspelningsinformation i mastermanifesten m3u8 för direktuppspelning och uppdatera uppspelningsinformationen medan strömmen spelas upp. Browser TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från huvudmanifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
+seo-description: Webbläsarens TVSDK kan identifiera ändrad uppspelningsinformation i mastermanifesten m3u8 för direktuppspelning och uppdatera uppspelningsinformationen medan strömmen spelas upp. Browser TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från huvudmanifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
+seo-title: Live master-manifest update
+title: Live master-manifest update
+uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Live master-manifest update{#live-master-manifest-update}
+
+Webbläsarens TVSDK kan identifiera ändrad uppspelningsinformation i mastermanifesten m3u8 för direktuppspelning och uppdatera uppspelningsinformationen medan strömmen spelas upp. Browser TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från huvudmanifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
+
+Följande funktioner stöds:
+
+* Profilantal (öka eller minska)
+* Profilbithastigheter (överlappande eller inte överlappande)
+* Profiler med URL:er på samma (eller olika) servrar
+* Alla redundansstrukturer
+
+Alla följande villkor måste vara uppfyllda:
+
+* Strömmen är live.
+* Både tid och tagg ändras.
+* All återgivningsinformation är densamma (förutom att URL:er kan variera).
+* DRM-åtkomstinformationen är densamma.
+* Segment paketeras runt samma PTS och bildrutegränser i ett litet felintervall.
+
