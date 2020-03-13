@@ -1,0 +1,24 @@
+---
+description: Dessa klasser beskriver meddelanden om fel, varningar och vissa aktiviteter som TVSDK utfärdar för loggnings- och felsökningsändamål.
+seo-description: Dessa klasser beskriver meddelanden om fel, varningar och vissa aktiviteter som TVSDK utfärdar för loggnings- och felsökningsändamål.
+seo-title: Meddelandeklasser
+title: Meddelandeklasser
+uuid: 8a276056-775f-432d-a4b4-722f6e4e278f
+translation-type: tm+mt
+source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+
+---
+
+
+# Meddelandeklasser {#notification-classes}
+
+Dessa klasser beskriver meddelanden om fel, varningar och vissa aktiviteter som TVSDK utfärdar för loggnings- och felsökningsändamål.
+
+| **Klassnamn** | **Beskrivning** |
+|---|---|
+| [PTMediaError](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaError.html) | En klass som beskriver meddelandet för ett fel som gör att spelaren avbryter uppspelningen. Det här är en [PTNotification](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotification.html) med meddelandetypen FEL. |
+| [PTMediaPlayerNotifications](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerNotifications.html) | Visar alla meddelanden som skickas av Primetime Player-ramverket. |
+| [PTNotification](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotification.html) | En klass som innehåller informationsmeddelanden, varningar och fel. Kapslar in objektrepresentationen av en enda meddelandehändelse i [PTNotificationHistory](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotificationHistory.html). |
+| [PTNotificationHistory](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotificationHistory.html) | En klass som lagrar en logg över [PTNotificationHistoryItem](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotificationHistoryItem.html) -objekt som ger åtkomst till en historiklista för meddelandehändelser. Det innebär att den har en lista med element, där varje element innehåller en separat instans av [PTNotification](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotification.html) |
+| [PTNotificationHistoryItem](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotificationHistoryItem.html) | En klass som definierar en post i den cirkulära listan i [PTNotificationHistory](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTNotificationHistory.html) och som innehåller meddelandet och dess tidsstämpel. |
+
