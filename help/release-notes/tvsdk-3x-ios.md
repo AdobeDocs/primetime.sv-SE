@@ -1,29 +1,33 @@
 ---
-title: Versionsinformation om TVSDK 3.10 för iOS
-description: Versionsinformationen för TVSDK 3.10 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.10.
+title: Versionsinformation om TVSDK 3.11 för iOS
+description: Versionsinformationen för TVSDK 3.11 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
 
-# Versionsinformation om TVSDK 3.10 för iOS {#tvsdk-for-ios-release-notes}
+# Versionsinformation om TVSDK 3.11 för iOS {#tvsdk-for-ios-release-notes}
 
-Versionsinformationen för TVSDK 3.10 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.10.
+Versionsinformationen för TVSDK 3.11 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.11.
 
 ## System- och programvarukrav {#system-software-requirements}
 
-Innan du hämtar iOS 3.10 ska du kontrollera att maskinvaru-, operativsystem- och programversionerna uppfyller följande krav:
+Innan du laddar ned iOS 3.11 bör du kontrollera att maskinvaru-, operativsystem- och programversionerna uppfyller följande krav:
 
 Operativsystem: iOS 8.0 eller senare.
 
-## iOS TVSDK 3.10
+## iOS TVSDK 3.11
 
-Ett problem har korrigerats där TVSDK-spelaren inte utlöste PTMediaPlayerStatusError-meddelanden när nätverket inte är tillgängligt.
+Åtgärdade kundproblem där `isFallbackOnInvalidCreativeEnabled` och metoden `customParams` får programmet att krascha.
 
 Information om korrigeringar i den aktuella versionen finns i avsnittet [Kundproblem som har korrigerats](#resolved-issues) och om begränsningar finns i avsnittet [Kända problem och begränsningar](#known-issues-and-limitations) .
 
 ### Nya funktioner och korrigeringar i tidigare versioner {#whats-new-previous}
+
+**iOS TVSDK 3.10**
+
+* Korrigerade ett problem där TVSDK-spelaren inte utlöste `PTMediaPlayerStatusError` meddelanden när nätverket inte är tillgängligt.
 
 **iOS TVSDK 3.9**
 
@@ -290,11 +294,17 @@ Comment Type: draft
 </note>
  -->
 
+**iOS TVSDK 3.11**
+
+* (ZD#40998) - Detta `isFallbackOnInvalidCreativeEnabled` gör att programmet kraschar.
+
+* (ZD#41289) - `NSInvalidArgumentException` observeras med metoden `customParams` som gör att programmet kraschar.
+
+### Lösta problem i tidigare versioner {#resolved-issues-previous}
+
 **iOS TVSDK 3.10**
 
 (ZD#40943) - TVSDK-spelaren utlöser inte PTMediaPlayerStatusError-meddelanden när nätverket inte är tillgängligt.
-
-### Lösta problem i tidigare versioner {#resolved-issues-previous}
 
 **iOS TVSDK 3.9**
 
@@ -310,94 +320,81 @@ Comment Type: draft
 
 **iOS TVSDK 3.7**
 
-* (ZD#38961) - Innehållet kan inte spelas upp i PiP-fönstret (Picture-in-Picture) när ett innehåll har spelats upp, när flera innehåll har konfigurerats för att spelas upp i PiP.
+(ZD#38961) - Innehållet kan inte spelas upp i PiP-fönstret (Picture-in-Picture) när ett innehåll har spelats upp, när flera innehåll har konfigurerats för att spelas upp i PiP.
 
 **iOS TVSDK 3.6**
 
-* Inga nya problem i den här versionen.
+Inga nya problem i den här versionen.
 
 **iOS TVSDK 3.5**
 
-* Inga nya problem i den här versionen.
+Inga nya problem i den här versionen.
 
 **Version 3.3**
 
-* (ZD#37820) - En vitlista har lagts till för det anpassade huvudet HS-Id, HS-SSAI-TAG.
+(ZD#37820) - En vitlista har lagts till för det anpassade huvudet HS-Id, HS-SSAI-TAG.
 
 **Version 3.2**
 
-**Biljett#36588** - En krasch inträffar när STOP-metoden för MediaPlayer anropas.
-
+* **Biljett#36588** - En krasch inträffar när STOP-metoden för MediaPlayer anropas.
 Korrigerad intermittent krasch som observerades när STOP-metoden anropades för några strömmar med undertexter.
 
-**Ticket#37080** - Dubblettbegäranden för manifest-anrop.
-
+* **Ticket#37080** - Dubblettbegäranden för manifest-anrop.
 Åtgärdade dubblettbegäranden som gjorts för manifest-URL:er under uppspelning. TVSDK gör nu ett anrop per manifest.
 
-**Biljett#37** - CRS-normaliseringsregel misslyckas med matchningstypen eq
-
-Korrigerade ett fall där spelaren kraschade när den påträffades med den senaste normaliseringsregeluppsättningen för värdnamn med matchningstypen &quot;eq&quot;.
+* **Biljett#37** - CRS-normaliseringsregel misslyckas med matchningstypen eqEtt fall där spelaren kraschade när den påträffades med den senaste normaliseringsregeluppsättningen för värdnamn med matchningstypen eq har åtgärdats.
 
 **Version 3.1**
 
-**Biljett nr 36313** - Oförutsebara intermittenta resultat vid linjära annonsbrytningar
-
-Korrigerad intermittent uppspelning under linjära annonsbrytningar i Live-strömmen.
+**Biljett nr 36313** - Oförutsebara resultat med intermittent annonsuppspelning under linjär annonsuppspelningKorrigerad intermittent uppspelning under linjär annonsuppspelning i liveströmmen.
 
 **Version 3.0.1**
 
-**Biljett36948** - CRS - Inkonsekvent ordning för val av tillgångar i iOS 12
-
-Den resurs som valts för CRS är inte alltid den högsta kvalitetsvarianten som returneras i ett VAST- eller VMAP-svar.
+**Biljett36948** - CRS - Inkonsekvent ordning för val av tillgångar i iOS 12Den resurs som valts för CRS är inte alltid den högsta kvalitetsvarianten som returneras i ett VAST- eller VMAP-svar.
 
 **Version 3.0**
 
-**Biljett35311** - Spelarstatus PAUSAS inte under telefonsamtalsavbrott
+* **Biljett35311** - Spelarstatus PAUSAS inte under telefonsamtalsavbrottAvbrottshanteraren har lagts till så att spelaren inte avbryts. Vid avbrott ändras spelarstatusen till PAUSED och uppspelningen återupptas när du klickar på uppspelningsknappen.
 
-Avbrottshanteraren har lagts till för att stoppa spelaren från att avbryta. Vid avbrott ändras spelarstatusen till PAUSED och uppspelningen återupptas när du klickar på uppspelningsknappen.
+* **Biljett36685** - Live-resurser - Tidsmatchningsfel med spelarens tidsförlopp och SCTE-markörens tidKorrigeringstiden beräknas för SCTE-markörerna som ligger före direktpunkten.
 
-**Biljett36685** - Live-resurser - Tidsmatchningsfel med spelarens tidsförlopp och SCTE-markörtid
-
-Korrekt tid beräknas för SCTE-markörerna som ligger före direktpunkten.
-
-**Biljett36492** - och uppdateras `currentTime` `localTime` inte när du söker till en ny position under pausad status
-
-Spelarens aktuella tid kan nu anges till noll om spelaren är i pausat läge. tidigare var den aktuella tiden inställd på noll endast i uppspelningsläge.
+* **Biljett36492** - `currentTime` och uppdateras `localTime` inte när du försöker till en ny position under pausad status. Spelarens aktuella tid kan nu anges till noll om spelaren är i pausat läge. tidigare var den aktuella tiden inställd på noll endast i uppspelningsläge.
 
 **Version 1.4.45**
 
-**Ticket36294** - iOS TVSDK fungerar inte med Xcode 10
+* **Ticket36294** - iOS TVSDK fungerar inte med Xcode 10Åtgärdade kompileringsproblemen med TVSDK i XCode 10. På grund av XCode 10-kraven kräver appar som bygger på TVSDK för iOS 1.4.45 och framåt ett lägsta distributionsmål som iOS 7.0
 
-Åtgärdade kompileringsproblem med TVSDK i XCode 10. På grund av XCode 10-kraven kräver appar som bygger på TVSDK för iOS 1.4.45 och framåt ett lägsta distributionsmål som iOS 7.0
+* **Biljett36321** - En avvikelse har observerats i sökbart intervall mellan `PTMediaPlayer` och `AVPlayer` instans i uppspelningsläge.
 
-**Biljett36321** - En avvikelse har observerats i sökbart intervall mellan `PTMediaPlayer` och `AVPlayer` instans i uppspelningsläge.
-**Biljett36493** - stöd `libstdc++` för iOS 12
-
-Åtgärdade kompileringsproblem med TVSDK på iOS 12. Appar som byggs på TVSDK för iOS 1.4.45 och framåt kräver lägsta distributionsmål som iOS 7.0
+* **Ticket36493** - stöd `libstdc++` för iOS 12Korrigerade kompileringsproblem med TVSDK på iOS 12. Appar som byggs på TVSDK för iOS 1.4.45 och framåt kräver lägsta distributionsmål som iOS 7.0
 
 **Version 1.4.44**
 
-**Biljett34683** - Förloppstiden för annonsuppspelning är negativ
+* **Biljett34683** - Förloppstiden för annonsuppspelning är negativ
 
 Ytterligare kontroller har lagts in för att hantera fallet när det finns en avvikelse mellan den varaktighet som rapporteras av annonsservern och det faktiska annonsinnehållet.
 
-**Biljett34801** - currentTime och localTime uppdaterades inte vid sökning till en ny position under pausad status
+* **Biljett34801** - currentTime och localTime uppdaterades inte när en ny position skulle sökas under pausad status. Spelarens aktuella tid kan nu ställas in på noll om spelaren är i pausat läge. tidigare var den aktuella tiden inställd på noll endast i uppspelningsläge.
 
-Spelarens aktuella tid kan nu anges till noll om spelaren är i pausat läge. tidigare var den aktuella tiden inställd på noll endast i uppspelningsläge.
-
-**Biljett35037** - Uppspelningen stoppas med felaktig URL vid återgång från signalbaserad annonsinfogning.
-
+* **Biljett35037** - Uppspelningen stoppas med felaktig URL vid återgång från signalbaserad annonsinfogning.
 Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tillagd isAvbruten kod för kontroll och undantagshantering för att göra åtgärdskön mer robust.
 
 **Version 1.4.43**
 
 * (ZD#32990) - iOS: Innehåll spelas upp i stället för annonser på vissa referenspunkter. `selectedMediaOptionInMediaSelectionGroup` API som ingick i AVPlayerItem-gränssnittet har nu flyttats under AVMediaSelection i iOS 11. Problemet löstes med det nya API:t.
+
 * (ZD#33683) TVSDK borttaget == suffix från metadatasträngarna. Problemet har åtgärdats i tolkningslogiken.
+
 * (ZD#33905) - iOS TVSDK anropar manifestfilerna med två användaragenter. Problemet med användaragenten har åtgärdats i första m3u8-anropet (fall av ny installation). M3u8 har samma användaragenter för alla samtal nu.
+
 * (ZD#34293) - Förrullningar som infogats i LINEAR-strömmar spelas inte upp korrekt i iOS11. Problemet är åtgärdat för förhandsannonser.
+
 * (ZD#34684) - När principen för att hoppa över annonser tillämpas visas bildrutor för förrullning i några sekunder. Ett nytt API, enableVodPreroll, har introducerats för att inaktivera uppspelning före videouppspelning. Standardvärdet för denna API är Yes. API:t gör att det inte går att sammanfoga annonsinnehåll i huvudinnehållet.
+
 * (ZD#34765) - Efter att stop() anropats hämtas fortfarande få transportströmssegment. Förbättrade API:t Stop() för att undvika hämtning av de extra segmenten.
+
 * (ZD#34865) - Annonser före registrering för djurbesättningar trunkeras på iOS. Relaterat till iOS11 och att lägga till ytterligare en kontroll för att bekräfta om strömmen är pre-roll eller main-content åtgärdar detta problem.
+
 * (ZD#35093) - Korrigerade ett redundansscenario där uppspelningen inte växlar till säkerhetskopieringsströmmen om den primära varianten av strömmen misslyckas vid start (returnerar 404).
 
 **1.4.42 (1.4.42.118)**
@@ -405,10 +402,13 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 * (ZD#34385) - Uppspelningen stoppas med en felaktig URL vid återgång från signalbaserad annonsinfogning.
 
    Öka det maximala antalet samtidiga för `CustomAVAssetLoaderOperations`så att manifestläsningarna kan fortsätta att köras.
+
 * (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
+
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
    Annons-ID för den slutliga annonseringen hämtas nu i VHL-pingar vid VAST-/VMAP-omdirigeringar.
+
 * (ZD#33904) - TVSDK är inte registrerad för AVFoundation-meddelanden `AVAudioSessionMediaServicesWereLostNotification` och `AVAudioSessionMediaServicesWereResetNotification`.
 
    `PTMediaServicesWereLostNotification` och `PTMediaServicesWereResetNotification` kan nu registreras i spelarappen för att få meddelanden när medietjänsterna återställs eller förloras.
