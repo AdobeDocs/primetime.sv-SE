@@ -43,26 +43,20 @@ Så här lägger du till stöd för VPAID 2.0:
    >Dessutom bör du bara skapa en anpassad annonsvy när spelaren är i läget FÖRBEREDD,
    >
    >
-   >Ta bara bort den anpassade annonsvyn när återställning anropas. Exempel:    >
+   >Ta bara bort den anpassade annonsvyn när återställning anropas. Exempel:
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
+   >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`webbsidan innan du tar bort den. Exempel:
    >
-
-
-
-   >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`webbsidan innan du tar bort den. Exempel:    >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```
