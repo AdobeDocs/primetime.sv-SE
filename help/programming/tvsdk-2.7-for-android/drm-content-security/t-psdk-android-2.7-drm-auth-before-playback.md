@@ -5,7 +5,7 @@ seo-title: DRM-autentisering före uppspelning
 title: DRM-autentisering före uppspelning
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ I det här exemplet kan du använda `DRMHelper` metoder för att hämta innehål
 
 1. Implementera återanropen i `DRMLoadMetadataListener`.
 
-       &quot;loadDRMMetadata&quot; anropar dessa händelsehanterare.
-       
- &quot;java     
- public interface DRMLoadMetadataListener {     
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
-     * @param authNeeded
-     * huruvida DRM-autentisering krävs.
-       * @param drmMetadata
-     * de tolkade DRMMetadata som erhållits.    */
- public     void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-   public     void onLoadMetadataUrlError();
-       }
-     
-     &quot;
-     
-     Här finns mer information om hanterarna:
+   Dessa händelsehanterare anropas `loadDRMMetadata` .
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   Här finns mer information om hanterarna:
+
    * `onLoadMetadataUrlStart` identifierar när inläsningen av metadata-URL har påbörjats.
    * `onLoadMetadataUrlComplete` identifierar när metadata-URL:en har lästs in.
    * `onLoadMetadataUrlError` anger att det inte gick att läsa in metadata.
