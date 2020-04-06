@@ -48,26 +48,26 @@ I det här exemplet kan du använda `DRMHelper` metoder för att hämta innehål
 
 1. Implementera återanropen i `DRMLoadMetadataListener`.
 
-       &quot;loadDRMMetadata&quot; anropar dessa händelsehanterare.
-       
- &quot;java     
- public interface DRMLoadMetadataListener {     
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
-     * @param authNeeded
-     * huruvida DRM-autentisering krävs.
-       * @param drmMetadata
-     * de tolkade DRMMetadata som erhållits.    */
- public     void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-   public     void onLoadMetadataUrlError();
-       }
-     
-     &quot;
-     
-     Här finns mer information om hanterarna:
+   `loadDRMMetadata` anropar dessa händelsehanterare.
+
+   ```java
+   public interface DRMLoadMetadataListener { 
+    
+       public void onLoadMetadataUrlStart(); 
+    
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
    
+   ```
+
+   Här finns mer information om hanterarna:
+
    * `onLoadMetadataUrlStart` identifierar när inläsningen av metadata-URL har påbörjats.
    * `onLoadMetadataUrlComplete` identifierar när metadata-URL:en har lästs in.
    * `onLoadMetadataUrlError` anger att det inte gick att läsa in metadata.
