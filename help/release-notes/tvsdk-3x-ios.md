@@ -2,7 +2,7 @@
 title: Versionsinformation om TVSDK 3.11 för iOS
 description: Versionsinformationen för TVSDK 3.11 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -183,7 +183,6 @@ I `PTSDKConfig` klassen har API:t forceHTTPS lagts till.
 Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Adobe Primetimes annonsbesluts-, DRM- och Video Analytics-servrar. `PTSDKConfig` Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
 
 >[!NOTE] Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
-> 
 
 **Version 1.4.18**
 
@@ -218,7 +217,6 @@ Primetime iOS TVSDK har nu stöd för VPAID 2.0 Javascript-kreatörer för en in
 **Version 1.4.13**
 
 >[!NOTE] Nielsen-modulen har tagits bort från TVSDK-bygget och TVSDK kommer inom kort att uppdateras med en ny Nielsen-integreringsmodul.
-
 
 **Ad Fallback, Daisy chaining in ad ad selection logic (Zendesk #3103)**
 
@@ -403,7 +401,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 
    Öka det maximala antalet samtidiga för `CustomAVAssetLoaderOperations`så att manifestläsningarna kan fortsätta att köras.
 
-* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
+* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
 
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
@@ -1108,9 +1106,11 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 ## Enhetscertifiering och support {#device-certification-and-support}
 
 >[!NOTE]
-Följande funktioner stöds **inte** i TVSDK:
-* Långsam rörelse på alla plattformar och versioner.
-* Livetrick.
+>
+>Följande funktioner stöds **inte** i TVSDK:
+>
+>* Långsam rörelse på alla plattformar och versioner.
+>* Livetrick.
 
 
 **Version 1.4.43**
