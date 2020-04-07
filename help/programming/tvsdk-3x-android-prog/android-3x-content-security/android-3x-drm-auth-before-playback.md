@@ -5,7 +5,7 @@ seo-title: DRM-autentisering före uppspelning
 title: DRM-autentisering före uppspelning
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
 
 ---
 
@@ -48,13 +48,13 @@ I det här exemplet kan du använda `DRMHelper` metoder för att hämta innehål
 
 1. Implementera återanropen i `DRMLoadMetadataListener`.
 
-   `loadDRMMetadata` anropar dessa händelsehanterare.
+   Dessa händelsehanterare anropas `loadDRMMetadata` .
 
    ```java
    public interface DRMLoadMetadataListener { 
-    
+   
        public void onLoadMetadataUrlStart(); 
-    
+   
        /** 
        * @param authNeeded 
        * whether DRM authentication is needed. 
@@ -63,7 +63,6 @@ I det här exemplet kan du använda `DRMHelper` metoder för att hämta innehål
        public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
        public void onLoadMetadataUrlError(); 
    } 
-   
    ```
 
    Här finns mer information om hanterarna:
