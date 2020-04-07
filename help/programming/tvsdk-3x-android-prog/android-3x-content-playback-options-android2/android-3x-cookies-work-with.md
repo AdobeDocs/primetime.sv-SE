@@ -5,7 +5,7 @@ seo-title: Arbeta med cookies
 title: Arbeta med cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -64,8 +64,9 @@ Så här arbetar du med cookies:
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   När du har angett värdet false för setReadSetCookieHeader anger du cookies för nyckelbegäranden med hjälp av JAVA cookie-hanteraren.
    >
+   >När du har angett värdet false för setReadSetCookieHeader anger du cookies för nyckelbegäranden med hjälp av JAVA cookie-hanteraren.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Det här återanrops-API:t aktiveras när det finns en uppdatering i C++-cookies (cookies som kommer från http-svar). Programmet behöver lyssna på det här återanropet och kan uppdatera JAVA CookieStore så att deras nätverksanrop i JAVA kan använda cookies enligt nedan:
 
