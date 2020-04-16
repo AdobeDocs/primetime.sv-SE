@@ -5,7 +5,7 @@ seo-title: Skapa en medieresurs
 title: Skapa en medieresurs
 uuid: f34a11a3-dac2-405e-8632-1d9617cc019d
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 1b7ec3759561159c55018b4b81f896ecc99a25e8
 
 ---
 
@@ -20,32 +20,32 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
 
    Konstruktorn kräver följande parametrar `MediaResource` :
 
-   <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
-      <thead> 
-      <tr> 
-      <th colname="col1" class="entry"> Konstruktorparameter </th> 
-      <th colname="col2" class="entry"> Beskrivning </th> 
-      </tr> 
+   <table id="table_22886D6770FB45E99D35D0B90E6CC302">
+      <thead>
+      <tr>
+      <th colname="col1" class="entry"> Konstruktorparameter </th>
+      <th colname="col2" class="entry"> Beskrivning </th>
+      </tr>
       </thead>
-      <tbody> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> En sträng som representerar URL:en för mediets manifest/spellista. </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> En av följande medlemmar i <span class="codeph"> MediaResource.Type- </span> uppräkningen, som motsvarar den angivna filtypen: 
-      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-basmediefilformat (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASH mediepresentationsbeskrivning (MPD) </li> 
-      </ul> </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> En instans av <span class="codeph"> Metadata- </span> klassen (en ordlisteliknande struktur), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Om du använder annonsering ska du ställa in <span class="codeph"> AuditudeSettings </span> innan du använder konstruktorn (se <a keyref="ad-insertion-metadata"></a>). </td> 
-      </tr> 
-      </tbody> 
+      <tbody>
+      <tr>
+      <td colname="col1"> <span class="codeph"> url </span> </td>
+      <td colname="col2"> En sträng som representerar URL:en för mediets manifest/spellista. </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> type </span> </td>
+      <td colname="col2"> En av följande medlemmar i <span class="codeph"> MediaResource.Type- </span> uppräkningen, som motsvarar den angivna filtypen:
+      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282">
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li>
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-basmediefilformat (MP4) </li>
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASH mediepresentationsbeskrivning (MPD) </li>
+      </ul> </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> metadata </span> </td>
+      <td colname="col2"> En instans av <span class="codeph"> Metadata- </span> klassen (en ordlisteliknande struktur), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Om du använder annonsering ska du ställa in <span class="codeph"> AuditudeSettings </span> innan du använder konstruktorn. </td>
+      </tr>
+      </tbody>
    </table>
 
    >[!IMPORTANT]
@@ -57,11 +57,11 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
    I följande kod skapas en `MediaResource` instans:
 
    ```java
-   // To do: Create metadata here 
-   MediaResource res = new MediaResource( 
-     "https://www.example.com/video/some-video.m3u8",  
-     MediaResource.Type.HLS, 
-     metadata); 
+   // To do: Create metadata here
+   MediaResource res = new MediaResource(
+     "https://www.example.com/video/some-video.m3u8",
+     MediaResource.Type.HLS,
+     metadata);
    ```
 
    När som helst efter det här steget kan du använda åtkomstmetoder (get-ters) för att undersöka resursens typ, URL-adress och metadata. `MediaResource`
