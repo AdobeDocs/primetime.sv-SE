@@ -5,7 +5,7 @@ seo-title: Implementera VPAID 2.0-integrering
 title: Implementera VPAID 2.0-integrering
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
 
 ---
 
@@ -41,10 +41,10 @@ Om du vill lägga till stöd för VPAID 2.0 lägger du till en anpassad annonsvy
    >Dessutom bör du bara skapa en anpassad annonsvy när spelaren är i läget FÖRBEREDD,
    >
    >
-   >Ta bara bort den anpassade annonsvyn när återställning anropas. Exempel:    >
+   >Ta bara bort den anpassade annonsvyn när återställning anropas. Exempel:
    >
    >
-   ```>
+   ```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -52,9 +52,11 @@ Om du vill lägga till stöd för VPAID 2.0 lägger du till en anpassad annonsvy
    >} 
    >
    >```
-
-   Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`webbsidan innan du tar bort den. Exempel:
-   >```
-   >if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
+   >
+   >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`webbsidan innan du tar bort den. Exempel:
+   >
+   >
    ```
+   >if (_playerFrame != null) 
+   >       _playerFrame.removeAllViews(); 
+   >```
