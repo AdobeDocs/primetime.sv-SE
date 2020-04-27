@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
 
 ---
 
@@ -282,7 +282,7 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * **Moat Integration -** Stöd för annonsvisning från Moat.
 
-   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
+   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
 * **Analyser**
 
