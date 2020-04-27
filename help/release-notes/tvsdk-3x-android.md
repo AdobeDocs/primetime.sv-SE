@@ -1,21 +1,21 @@
 ---
-title: Versionsinformation om TVSDK 3.10 för Android
-seo-title: Versionsinformation om TVSDK 3.10 för Android
-description: Versionsinformation för TVSDK 3.10 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10
-seo-description: Versionsinformation för TVSDK 3.10 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10
+title: Versionsinformation om TVSDK 3.11 för Android
+seo-title: Versionsinformation om TVSDK 3.11 för Android
+description: Versionsinformation om TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10
+seo-description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: c4d5b2d5c942a96eadb8f40203ce25a29fe3e1ae
+source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 ---
 
 
-# Versionsinformation om TVSDK 3.10 för Android {#tvsdk-for-android-release-notes}
+# Versionsinformation om TVSDK 3.11 för Android {#tvsdk-for-android-release-notes}
 
-Versionsinformationen för TVSDK 3.10 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10.
+Versionsinformationen för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11.
 
 Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distribution. I den medföljande README.md-filen beskrivs hur du skapar referensspelaren.
 
@@ -35,11 +35,20 @@ Den omfattande uppsättningen funktioner som stöds och inte stöds finns i [fun
 
 <!-- ## New features {#new-features} -->
 
-## Android TVSDK 3.10
+## Android TVSDK 3.11
 
-Den aktuella versionen fokuserar på att åtgärda de vanligaste kundproblemen som nämns i avsnittet [lösta problem](#resolved-issues) .
+**PSSH-boxhämtning tillåts**
+
+TVSDK tillåter nu hämtning av den systemspecifika rubrikruta för skydd som är associerad med den aktuella inlästa medieresursen. Nytt API `getPSSH()` har lagts till i `com.adobe.mediacore.drm.DRMManager`.
+Mer information finns i [WideVM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+
+De vanligaste kundproblemen som har åtgärdats i den aktuella versionen beskrivs i avsnittet [Lösta problem](#resolved-issues) .
 
 ### Nya funktioner och förbättringar i tidigare versioner
+
+**Android TVSDK 3.10**
+
+Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som nämns i avsnittet [lösta problem](#resolved-issues) .
 
 **Android TVSDK 3.9**
 
@@ -204,12 +213,17 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 * API-ändringar:
 
    * En ny Event CookiesUpdatedEvent läggs till. Den skickas av mediaspelaren när dess cookie uppdateras.
+
    * Ett nytt API läggs till i NetworkConfiguration::set/ getCustomUserAgent() för att använda en anpassad användaragent.
+
    * Ett nytt API läggs till i NetworkConfiguration::set/ getEncodedUrlForTracking för att framtvinga kodning av osäkra tecken.
+
    * Ett nytt API läggs till i NetworkConfiguration::getNetworkDownVerificationUrl() för att ange en URL för nätverksverifiering om en redundans uppstår.
+
    * En ny egenskap läggs till i TextFormat::treatSpaceAsAlphaNum som definierar om mellanrum ska hanteras som alfanumeriskt när bildtexter visas.
 
 * Ändringar i SizeAvailableEvent: Tidigare användes metoderna getHeight() och getWidth() för SizeAvailableEvent i 2.5.2 för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Nu returneras den utdatahöjd respektive utdatavärde som returneras av avkodaren.
+
 * Förändringar i Buffering-beteende: Buffertbeteendet har ändrats. Det överlåts åt apputvecklaren om vad de vill göra om bufferten är tom. 2.5.3 använder uppspelningsbuffertstorlek vid tom buffertsituation.
 
 **Version 2.5.2**
@@ -223,21 +237,33 @@ De viktiga nya funktionerna i Android 2.5.1.
 * **Prestandaförbättringar** Den nya TVSDK 2.5.1-arkitekturen ger ett antal prestandaförbättringar. Baserat på statistik från en jämförande studie från tredje part ger den nya arkitekturen en 5 gånger kortare starttid och 3,8 gånger färre uteslutna bildrutor jämfört med branschens genomsnitt:
 
    * **Direkt aktiverat för VOD och live -** När du aktiverar direkt initieras och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera MediaPlayerItemLoader-instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.5.1 har även stöd för Instant On för **liveströmmar** . De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
+
    * **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
+
    * **Nedladdning av delar av segment/delsegmentering -** TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
+
    * **Lazy-annonsupplösning -** TVSDK väntar inte på upplösning av annonser som inte är preflight innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt är inte tillåtna förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
+
    * **Beständiga nätverksanslutningar -** Med den här funktionen kan TVSDK skapa och lagra en intern lista över beständiga nätverksanslutningar. De här anslutningarna återanvänds för flera begäranden i stället för att en ny anslutning öppnas för varje nätverksbegäran och sedan tas bort. Detta ökar effektiviteten och minskar fördröjningen i nätverkskoden, vilket ger snabbare uppspelningsprestanda.
 När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen. Vissa servrar kanske inte stöder den här typen av anslutning. I så fall kommer TVSDK att återgå till att skapa en anslutning för varje begäran igen. Även om beständiga anslutningar är aktiverade som standard har TVSDK nu ett konfigurationsalternativ så att program kan inaktivera beständiga anslutningar om så önskas.
+
    * **Parallell nedladdning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
+
    * **Parallella annonshämtningar -** TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
 
 * **Uppspelning**
 
    * **MP4 Content Playback -** MP4 short clips do not need to be retranscoded to play back within TVSDK.
-Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
+      > [!NOTE]
+      >
+      > ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
+
    * **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
+
    * **Smidigare tricks-** De här förbättringarna förbättrar användarupplevelsen:
+
       * Anpassad bithastighet och bildrutefrekvensval under uppspelning, baserat på bandbredd och buffertprofil
+
       * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
 
 * **Skydd av innehåll**
@@ -247,15 +273,16 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
 * **Stöd för arbetsflöden**
 
    * **Direktfaktureringsintegrering -** Detta skickar faktureringsstatistik till Adobe Analytics-backend, som certifieras av Adobe Primetime för strömmar som används av kunden.
-
-      TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK API:t för datainfogning i Adobe Analytics för att skicka faktureringsmått som innehållstyp, inmatningsaktiverade flaggor och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens längd - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+   TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK API:t för datainfogning i Adobe Analytics för att skicka faktureringsmått som innehållstyp, inmatningsaktiverade flaggor och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens längd - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
 
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
+
 
 * **Reklam**
 
    * **Moat Integration -** Stöd för annonsvisning från Moat.
-   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
+
+   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
 * **Analyser**
 
@@ -265,17 +292,18 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
 
    * Metoderna getHeight() och getWidth() för SizeAvailableEvent returnerar nu utdata i höjd och bredd. Visningsproportioner kan beräknas enligt följande:
 
-      SizeAvailableEvent e;
+   ```java
+   SizeAvailableEvent e;
+   DAR = e.getWidth()/ e.getHeight();
+   ```
 
-      DAR = e.getWidth()/ e.getHeight();
+   Du kan också använda lagringsproportioner i form av bredd och höjd på stapel för att beräkna ramens bredd och höjd:
 
-      Du kan också använda lagringsproportioner i form av bredd och höjd på stapel för att beräkna ramens bredd och höjd:
-
-      SAR = e.getSarWidth()/e.getSarHeight();
-
-      frameHeight = e.getHeight();
-
-      frameWidth = e.getWidth()/SAR;
+   ```java
+   SAR = e.getSarWidth()/e.getSarHeight();
+   frameHeight = e.getHeight();
+   frameWidth = e.getWidth()/SAR;
+   ```
 
 * **Cookies**
 
@@ -291,7 +319,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 |---|---|---|
 | Allmän uppspelning (Play, Pause, Seek) | VOD + Live | Y |
 | FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | Y |
-| Sök när en annons spelas upp | VOD + Live | Stöds inte |
+| Sök när en annons spelas upp | Live | Stöds inte |
 | AC3 | VOD + Live | Stöds inte |
 | MP3 | VOD | Stöds inte |
 | Uppspelning av MP4-innehåll | VOD | Y |
@@ -357,7 +385,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | DRM | VOD + Live | Primetime DRM only (Future: WideVM) |
 | Extern uppspelning (RBOP) | VOD + Live | Endast Primetime DRM |
 | Licensrotation | VOD + Live | Endast Primetime DRM |
-| Nyckelrotation | VOD + Live | Endast Primetime DRM |
+| Nyckelrotation | VOD + Live | Primetime DRM och Widewin DRM |
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
@@ -368,13 +396,17 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens, till exempel ZD#xxxxx.
 
-**Android TVSDK 3.10**
+**Android TVSDK 3.11**
 
-I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.10 Android-versionen.
+I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.11 Android-versionen.
 
-* ZD#40340 - Programmet kraschar med felet&quot;App Not Responding&quot; vid uppspelningsförsök efter svartlistning av alla TS-filer (TypeScript).
+* ZD# - Koreanska tecken visas som saknade teckensymboler för HLS-manifest med WebVTT i Android TVSDK-referensappen.
 
 ### Lösta problem i tidigare versioner
+
+**Android TVSDK 3.10**
+
+* ZD#40340 - Programmet kraschar med felet&quot;App Not Responding&quot; vid uppspelningsförsök efter svartlistning av alla TS-filer (TypeScript).
 
 **Android TVSDK 3.8**
 
@@ -603,11 +635,15 @@ WebViewDebbuging är som standard inställt på False. Om du vill aktivera fels�
 
 ## Kända fel och begränsningar {#known-issues-and-limitations}
 
-**Android TVSDK 3.10**
+**Android TVSDK 3.11**
 
 * Inga nya begränsningar har lagts till.
 
 ### Kända fel och begränsningar i tidigare versioner
+
+**Android TVSDK 3.10**
+
+* Inga nya begränsningar har lagts till.
 
 **Android TVSDK 3.8**
 
