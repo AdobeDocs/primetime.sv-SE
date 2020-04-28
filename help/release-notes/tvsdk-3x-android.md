@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
+source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
 
 ---
 
@@ -396,7 +396,7 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.11 Android-versionen.
 
-* Koreanska tecken visas som saknade teckensymboler för HLS-manifest med WebVTT i Android TVSDK-referensappen.
+* ZD#41252 - Koreanska tecken visas som saknade teckensymboler för HLS-manifest med WebVTT i Android TVSDK-referensappen.
 
 ### Lösta problem i tidigare versioner
 
