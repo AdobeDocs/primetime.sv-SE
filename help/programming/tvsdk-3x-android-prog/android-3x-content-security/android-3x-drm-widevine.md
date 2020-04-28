@@ -5,7 +5,7 @@ seo-title: DRM, Widewin
 title: DRM, Widewin
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: ddcdf38fb7a77b7609a21bbdf6b32188b917e22c
+source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
 
 ---
 
@@ -68,7 +68,7 @@ MediaDrmCallback callback)
 
 * `callback` - anpassad implementering av MediaDrmCallback som ska användas i stället för standardinställningen `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-Mer information finns i 3.11 API-referens.
+Mer information finns i [Android TVSDK 3.11 API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
 ## Hämta PSSH-ruta för den aktuella inlästa MediaPlayer-resursen {#pssh-box-mediaplayer-resoource}
 
