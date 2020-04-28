@@ -5,7 +5,7 @@ description: API:erna hjälper dig att snabbt och enkelt skapa funktionella prog
 seo-description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 # API-referenser för Adobe Primetime {#api-references}
 
 + TVSDK 3.11 {#tvsdk-311}
-   + [TVSDK 3.11 för Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_311/index.html)
+   + [TVSDK 3.11 för Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
 
 + TVSDK 3.5 {#tvsdk-35}
    + [TVSDK 3.5 för iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v35/index.html)
