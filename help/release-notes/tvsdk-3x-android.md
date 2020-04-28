@@ -1,5 +1,5 @@
 ---
-title: Versionsinformation om TVSDK 3.11 för Android
+title: Versionsinformation om TVSDK 3.10 för Android
 seo-title: Versionsinformation om TVSDK 3.11 för Android
 description: Versionsinformation om TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10
 seo-description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
@@ -8,14 +8,14 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
+source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
 
 ---
 
 
-# Versionsinformation om TVSDK 3.11 för Android {#tvsdk-for-android-release-notes}
+# Versionsinformation om TVSDK 3.10 för Android {#tvsdk-for-android-release-notes}
 
-Versionsinformationen för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11.
+Versionsinformationen för TVSDK 3.10 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10.
 
 Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distribution. I den medföljande README.md-filen beskrivs hur du skapar referensspelaren.
 
@@ -33,22 +33,20 @@ TVSDK för Android har många prestandaförbättringar jämfört med tidigare ve
 
 Den omfattande uppsättningen funktioner som stöds och inte stöds finns i [funktionsmatrisen](#feature-matrix) i versionsinformationen.
 
-<!-- ## New features {#new-features} -->
-
-## Android TVSDK 3.11
-
-**PSSH-boxhämtning tillåts**
-
-TVSDK tillåter nu hämtning av den systemspecifika rubrikruta för skydd som är associerad med den aktuella inlästa medieresursen. Nytt API `getPSSH()` har lagts till i `com.adobe.mediacore.drm.DRMManager`.
-Mer information finns i [WideVM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
-
-De vanligaste kundproblemen som har åtgärdats i den aktuella versionen beskrivs i avsnittet [Lösta problem](#resolved-issues) .
-
-### Nya funktioner och förbättringar i tidigare versioner
-
 **Android TVSDK 3.10**
 
 Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som nämns i avsnittet [lösta problem](#resolved-issues) .
+
+<!-- ## New features {#new-features} -->
+
+<!--
+## Android TVSDK 3.11
+**Protection System Specific Header (PSSH) Box fetching allowed**
+TVSDK now allows fetching of Protection System Specific Header Box associated with current loaded Media Resource. New API `getPSSH()` has been added to `com.adobe.mediacore.drm.DRMManager`.
+For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
+
+### Nya funktioner och förbättringar i tidigare versioner
 
 **Android TVSDK 3.9**
 
@@ -393,17 +391,15 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens, till exempel ZD#xxxxx.
 
-**Android TVSDK 3.11**
-
-I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.11 Android-versionen.
-
-* ZD#41252 - Koreanska tecken visas som saknade teckensymboler för HLS-manifest med WebVTT i Android TVSDK-referensappen.
-
-### Lösta problem i tidigare versioner
-
 **Android TVSDK 3.10**
 
 * ZD#40340 - Programmet kraschar med felet&quot;App Not Responding&quot; vid uppspelningsförsök efter svartlistning av alla TS-filer (TypeScript).
+
+<!-- **Android TVSDK 3.11**
+This section provides a summary of the issue resolved in TVSDK 3.11 Android release.
+* ZD#41252 - Korean characters are displayed as missing glyph symbols for HLS manifests with WebVTT in Android TVSDK reference app. -->
+
+### Lösta problem i tidigare versioner
 
 **Android TVSDK 3.8**
 
