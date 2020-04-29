@@ -1,14 +1,14 @@
 ---
 title: Versionsinformation om TVSDK 3.11 för Android
 seo-title: Versionsinformation om TVSDK 3.11 för Android
-description: Versionsinformation om TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.10
+description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
 seo-description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 26b0622f807405eaec9cfe162799111ed340e02c
+source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
 
 ---
 
@@ -97,46 +97,58 @@ Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som 
 * **Stöd för parallell annonsupplösning och hämtning av manifest**
 
    * TVSDK 3.2 stöder den samtidiga upplösningen i stället för den sekventiella upplösningen för alla annonsbegäranden och annonsbrytningar utom för VMAP.
+
    * Alla annonsmanifestationer i en annonsbrytning hämtas samtidigt.
+
 * **Aktiverat stöd för tidsgräns för annonsupplösning och hämtning av manifest.**
 
    * Användarna kan nu ange timeout-värdet för den övergripande annonsupplösningen och för hämtning av manifest.  För VMAP gäller timeoutvärdet för enskilda annonsbrytningar när alla annonsbrytningar löses sekventiellt.
+
 * **Introducerade nya API:er i klassen AdvertisingMetadata:**
 
-   * void setAdResolutionTimeout(int adResolutionTimeout)
-   * int getAdResolutionTimeout()
-   * void setAdManifestTimeout(int adManifestTimeout)
-   * int getAdManifestTimeout()
+   * `void setAdResolutionTimeout(int adResolutionTimeout)`
+
+   * `int getAdResolutionTimeout()`
+
+   * `void setAdManifestTimeout(int adManifestTimeout)`
+
+   * `int getAdManifestTimeout()`
+
 * **Borttagen nedan API:er från klassen AdvertisingMetadata:**
 
-   * void setAdRequestTimeout(int adRequestTimeout)
-   * int getAdRequestTimeout()
+   * `void setAdRequestTimeout(int adRequestTimeout)`
+
+   * `int getAdRequestTimeout()`
+
 * **Aktiverad uppspelning av strömmar med AC3/EAC3-ljudkodek**
 
-   * void alwaysUseAC3OnSupportedDevices (boolean) i klassen MediaPlayer
+   * `void alwaysUseAC3OnSupportedDevices(boolean val)` i `MediaPlayer` klassen
+
 * **TVSDK har stöd för CMAF och uppspelning av oformaterade strömmar för krypterad Wideglobal CTR.**
+
 * **Uppspelning av HEVC-strömmar med 4K stöds nu.**
+
 * **Parallella begäranden** om annonseringsanrop - TVSDK förhämtar nu 20 annonseringsbegäranden parallellt.
 
 **Version 3.0**
 
 * **TVSDK 3.0 stöder HEVC-strömmar (High Efficiency Video Coding).**
 
-* **Just in Time - Matcha annonser närmare annonsmarkörer**
+* **Just in Time - Reolving ads close to ads ads** Lazy Ad Resolving now resolves each ads break independent. Tidigare var annonsupplösningen tvåstegsbaserad: pre-rolls löstes innan uppspelningen startades och alla my-/post-rollplatser kombinerades efter att uppspelningen startades. Med den här förbättrade funktionen löses nu alla annonsbrytningar vid en viss tidpunkt före annonsreferenspunkten.
 
-   Lazy Ad Resolving löser nu alla annonsbrytningar oberoende av varandra. Tidigare var annonsupplösningen tvåstegsbaserad: pre-rolls löstes innan uppspelningen startades och alla my-/post-rollplatser kombinerades efter att uppspelningen startades. Med den här förbättrade funktionen löses nu alla annonsbrytningar vid en viss tidpunkt före annonsreferenspunkten.
+> [!NOTE]
+>
+> Lazy Ad Resolving har nu inaktiverats som standard och måste aktiveras explicit.
 
-   **Observera: Lazy Ad Resolving har nu inaktiverats som standard och måste aktiveras explicit.**
+Ett nytt API läggs till `AdvertisingMetadata::setDelayAdLoadingTolerance` för att få den fördröjda annonsinläsningstoleransen som är kopplad till dessa Advertising-metadata.\
+Sökningar är nu tillåtna direkt efter PREPARATION, och sökning efter över annonsbrytningar ger en omedelbar lösning innan sökningen är klar.\
+Signeringslägen `SERVER_MAP` och `MANIFEST_CUES` stöds.
 
-   Ett nytt API läggs till i *AdvertisingMetadata::setDelayAdLoadingTolerance* för att få den fördröjda och inläsningstoleransen som är kopplad till dessa Advertising-metadata.\
-   Sökningen är nu tillåten omedelbart efter BEREDNING, och sökning efter över- och brytningar ger en omedelbar lösning innan sökningen är klar.\
-   Signeringslägena SERVER_MAP och MANIFEST_CUES stöds.
+Mer information finns i [TVSDK 3.0 for Android Programmer&#39;s Guide](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) on API and event changes.
 
-   Mer information finns i TVSDK 3.0 for Android Programmer&#39;s Guide on API and event changes.
+* **Uppdaterad`targetSdkVersion`till den senaste versionen**
 
-* **Uppdatera`targetSdkVersion`till den senaste versionen**
-
-   Uppdatera `targetSdkVersion` från 19 till 27 för smidig funktion.
+Uppdaterad `targetSdkVersion` från 19 till 27 för smidig funktion.
 
 * **Placement.Type getPlacementType() är nu en metod i gränssnittet TimelineMarker**
 
@@ -167,6 +179,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
    Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
 
    * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
+
    * Ad trackers for the part ad ad ad ad (second ad) are not fire. Spåraren för endast den tredje annonsen aktiveras.
 
 * **Säker annonsinläsning över HTTPS**
@@ -175,7 +188,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
-   * Inkludera nu AdSystem och CreativeId som nya parametrar i förfrågningarna 1401 och 1403.
+   Nu med `AdSystem` och `CreativeId` som nya parametrar i förfrågningarna 1401 och 1403.
 
 * **API setEncodeUrlForTracking i klassen NetworkConfiguration har tagits bort** eftersom osäkra tecken i en URL ska kodas.
 
@@ -183,17 +196,17 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 Android TVSDK v2.5.4 erbjuder följande uppdateringar och API-ändringar:
 
-* Ändringar i standardvärdet för WebViewDebuging
+* Ändringar i standardvärdet för `WebViewDebbuging`
 
-   Värdet för WebViewDebbuging är som standard False. Om du vill aktivera det anropar du setWebContentsDebuggingEnabled(true) i programmet.
+   `WebViewDebbuging` är som standard `Fals`e. Om du vill aktivera det anropar du `setWebContentsDebuggingEnabled(true)` i programmet.
 
-* Uppgradering av OpenSSL- och Curl-version
+* **Uppgradering av OpenSSL- och Curl-version**
 
    Uppdaterat libcurl till v7.57.0 och OpenSSL till v1.0.2 kB.
 
 * Åtkomst på appnivå för VAST-svarsobjekt
 
-   Introducerade ett nytt API NetworkAdInfo::getVastXml() som ger åtkomst till VAST-svarsobjektet för programmet.
+   Introducerade ett nytt API `NetworkAdInfo::getVastXml()` som ger åtkomst till VAST-svarsobjektet till programmet.
 
 **Version 2.5.3**
 
@@ -205,23 +218,24 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
 * Användaragent för TVSDK kan anpassas: har vi lagt till några nya API:er för att anpassa användaragenterna.
 
-   * setCustomUserAgent(String-värde)
-   * getCustomUserAgent()
+   * `setCustomUserAgent(String value)`
+   * `getCustomUserAgent()`
 
 * Dela cookies mellan Android-program och TVSDK: Android TVSDK har nu stöd för åtkomst av cookies mellan JAVA-lager (som lagras i CookieStore i Android-programmet) och C++ TVSDK-lagret. Nu går det att ange och/eller ändra cookies i ursprungligt C++-lager eftersom de kommer att exponeras för Java Cookie Store.
+
 * API-ändringar:
 
-   * En ny Event CookiesUpdatedEvent läggs till. Den skickas av mediaspelaren när dess cookie uppdateras.
+   * En ny händelse `CookiesUpdatedEvent` läggs till. Den skickas av mediaspelaren när dess cookie uppdateras.
 
-   * Ett nytt API läggs till i NetworkConfiguration::set/ getCustomUserAgent() för att använda en anpassad användaragent.
+   * Ett nytt API läggs till för `NetworkConfiguration::set/ getCustomUserAgent()` att använda en anpassad användaragent.
 
-   * Ett nytt API läggs till i NetworkConfiguration::set/ getEncodedUrlForTracking för att framtvinga kodning av osäkra tecken.
+   * Ett nytt API läggs till för `NetworkConfiguration::set/ getEncodedUrlForTracking` att framtvinga kodning av osäkra tecken.
 
-   * Ett nytt API läggs till i NetworkConfiguration::getNetworkDownVerificationUrl() för att ange en URL för nätverksverifiering om en redundans uppstår.
+   * Ett nytt API läggs till `NetworkConfiguration::getNetworkDownVerificationUrl()` för att ange en URL för nätverksverifiering om en redundans inträffar.
 
-   * En ny egenskap läggs till i TextFormat::treatSpaceAsAlphaNum som definierar om mellanrum ska hanteras som alfanumeriskt när bildtexter visas.
+   * En ny egenskap läggs till `TextFormat::treatSpaceAsAlphaNum` som definierar om mellanrum ska behandlas som alfanumeriskt när bildtexter visas.
 
-* Ändringar i SizeAvailableEvent: Tidigare användes metoderna getHeight() och getWidth() för SizeAvailableEvent i 2.5.2 för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Nu returneras den utdatahöjd respektive utdatavärde som returneras av avkodaren.
+* Förändringar i `SizeAvailableEvent`. Tidigare användes metoderna `getHeight()` och `getWidth()` metoderna i `SizeAvailableEvent` 2.5.2 för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Nu returneras den utdatahöjd respektive utdatavärde som returneras av avkodaren.
 
 * Förändringar i Buffering-beteende: Buffertbeteendet har ändrats. Det överlåts åt apputvecklaren om vad de vill göra om bufferten är tom. 2.5.3 använder uppspelningsbuffertstorlek vid tom buffertsituation.
 
@@ -233,37 +247,38 @@ Android TVSDK v2.5.2 innehåller viktiga felkorrigeringar och några API-ändrin
 
 De viktiga nya funktionerna i Android 2.5.1.
 
-* **Prestandaförbättringar** Den nya TVSDK 2.5.1-arkitekturen ger ett antal prestandaförbättringar. Baserat på statistik från en jämförande studie från tredje part ger den nya arkitekturen en 5 gånger kortare starttid och 3,8 gånger färre uteslutna bildrutor jämfört med branschens genomsnitt:
+* **Prestandaförbättringar -** Den nya TVSDK 2.5.1-arkitekturen ger ett antal prestandaförbättringar. Baserat på statistik från en jämförande studie från tredje part ger den nya arkitekturen en 5 gånger kortare starttid och 3,8 gånger färre uteslutna bildrutor jämfört med branschens genomsnitt:
 
-   * **Direkt aktiverat för VOD och live -** När du aktiverar direkt initieras och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera MediaPlayerItemLoader-instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.5.1 har även stöd för Instant On för **liveströmmar** . De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
+* **Direkt aktiverat för VOD och live -** När du aktiverar direkt initieras och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera MediaPlayerItemLoader-instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.5.1 har även stöd för Instant On för **liveströmmar** . De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
 
-   * **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
+* **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
 
-   * **Nedladdning av delar av segment/delsegmentering -** TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
+* **Nedladdning av delar av segment/delsegmentering -** TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
 
-   * **Lazy-annonsupplösning -** TVSDK väntar inte på upplösning av annonser som inte är preflight innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt är inte tillåtna förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
+* **Lazy-annonsupplösning -** TVSDK väntar inte på upplösning av annonser som inte är preflight innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt är inte tillåtna förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
 
-   * **Beständiga nätverksanslutningar -** Med den här funktionen kan TVSDK skapa och lagra en intern lista över beständiga nätverksanslutningar. De här anslutningarna återanvänds för flera begäranden i stället för att en ny anslutning öppnas för varje nätverksbegäran och sedan tas bort. Detta ökar effektiviteten och minskar fördröjningen i nätverkskoden, vilket ger snabbare uppspelningsprestanda.
+* **Beständiga nätverksanslutningar -** Med den här funktionen kan TVSDK skapa och lagra en intern lista över beständiga nätverksanslutningar. De här anslutningarna återanvänds för flera begäranden i stället för att en ny anslutning öppnas för varje nätverksbegäran och sedan tas bort. Detta ökar effektiviteten och minskar fördröjningen i nätverkskoden, vilket ger snabbare uppspelningsprestanda.
 När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen. Vissa servrar kanske inte stöder den här typen av anslutning. I så fall kommer TVSDK att återgå till att skapa en anslutning för varje begäran igen. Även om beständiga anslutningar är aktiverade som standard har TVSDK nu ett konfigurationsalternativ så att program kan inaktivera beständiga anslutningar om så önskas.
 
-   * **Parallell nedladdning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
+* **Parallell nedladdning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
 
-   * **Parallella annonshämtningar -** TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
+* **Parallella annonshämtningar -** TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
 
 * **Uppspelning**
 
-   * **MP4 Content Playback -** MP4 short clips do not need to be retranscoded to play back within TVSDK.
-      > [!NOTE]
-      >
-      > ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
+* **MP4 Content Playback -** MP4 short clips do not need to be retranscoded to play back within TVSDK.
 
-   * **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
+   > [!NOTE]
+   >
+   > ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
 
-   * **Smidigare tricks-** De här förbättringarna förbättrar användarupplevelsen:
+* **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
 
-      * Anpassad bithastighet och bildrutefrekvensval under uppspelning, baserat på bandbredd och buffertprofil
+* **Smidigare tricks-** De här förbättringarna förbättrar användarupplevelsen:
 
-      * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
+   * Anpassad bithastighet och bildrutefrekvensval under uppspelning, baserat på bandbredd och buffertprofil
+
+   * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
 
 * **Skydd av innehåll**
 
@@ -281,7 +296,7 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * **Moat Integration -** Stöd för annonsvisning från Moat.
 
-   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
+   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
 * **Analyser**
 
@@ -291,18 +306,22 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * `getHeight()` och `getWidth()` metoderna för `SizeAvailableEvent` returnerar nu utdata i höjd och bredd. Visningsproportioner kan beräknas enligt följande:
 
+      ```java
       SizeAvailableEvent e;
-DAR = e.getWidth()/ e.getHeight();
+      DAR = e.getWidth()/ e.getHeight();
+      ```
 
       Du kan också använda lagringsproportioner i form av bredd och höjd på stapel för att beräkna ramens bredd och höjd:
 
+      ```java
       SAR = e.getSarWidth()/e.getSarHeight();
-frameHeight = e.getHeight();
-frameWidth = e.getWidth()/SAR;
+      frameHeight = e.getHeight();
+      frameWidth = e.getWidth()/SAR;
+      ```
 
 * **Cookies**
 
-   * Android TVSDK har nu stöd för åtkomst till JAVA-cookies som lagras i CookieStore i Android-programmet. Ett återanrops-API (onCookiesUpdated) tillhandahålls för att spela in varje gång en ny cookie kommer som en del av svarsrubriken&quot;Set-Cookie&quot;. Dessa cookies är tillgängliga som en lista över HttpCookie(s) som används för en annan URI/domän genom att ange dessa cookie-värden på den aktuella URI/domänen med CookieStore. På samma sätt uppdateras cookie-värdena i TVSDK med API:t för CookieStore-tillägg.
+   * Android TVSDK har nu stöd för åtkomst till JAVA-cookies som lagras i CookieStore i Android-programmet. Ett återanrops-API (onCookiesUpdated) tillhandahålls för att spela in varje gång en ny cookie kommer som en del av **Set-Cookie** Response-huvudet. Dessa cookies är tillgängliga som en lista över HttpCookie(s) som används för en annan URI/domän genom att ange dessa cookie-värden på den aktuella URI/domänen med CookieStore. På samma sätt uppdateras cookie-värdena i TVSDK med API:t för CookieStore-tillägg.
 
 ## Funktionsmatris {#feature-matrix}
 
