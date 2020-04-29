@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -333,7 +333,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 |---|---|---|
 | Allmän uppspelning (Play, Pause, Seek) | VOD + Live | Y |
 | FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | Y |
-| Sök när en annons spelas upp | Live | Stöds inte |
+| Sök när en annons spelas upp | VOD + Live | Stöds inte |
 | AC3 | VOD + Live | Stöds inte |
 | MP3 | VOD | Stöds inte |
 | Uppspelning av MP4-innehåll | VOD | Y |
@@ -399,7 +399,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | DRM | VOD + Live | Primetime DRM only (Future: WideVM) |
 | Extern uppspelning (RBOP) | VOD + Live | Endast Primetime DRM |
 | Licensrotation | VOD + Live | Endast Primetime DRM |
-| Nyckelrotation | VOD + Live | Primetime DRM och Widewin DRM |
+| Nyckelrotation | VOD + Live | Endast Primetime DRM |
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.11 Android-versionen.
 
-* ZD#41252 - Koreanska tecken visas som saknade teckensymboler för HLS-manifest med WebVTT i Android TVSDK-referensappen.
+* ZD#41252 - Koreanska tecken i WebVTT fungerar inte efter Android 7.1.
 
 ### Lösta problem i tidigare versioner
 
