@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation om PTAI 20.3.3
+title: Versionsinformation om PTAI 20.5.1
 description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 **När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 EASTERN
 
-* Ett problem har korrigerats för att säkerställa att rätt CORS-huvuden anges när sidhuvuden som ändrats sedan skickas.
+* Ett problem har korrigerats som säkerställer att korrekta CORS-huvuden anges när rubrikerna If-Modified-Since skickas.
 
 * Felkorrigeringar på CRS-kontrollpanelen.
 
@@ -48,17 +48,19 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 **När:** Tisdagen den 28 januari 2020 från kl. 2:00 till kl. 03:00 EASTERN
 
-* **VMAP med FER-stöd för CueFormat** Convert-cues från FER-ström till parametrar för åsidosättning av FW-tidslinje, när ptcueformat=nbc används och strömmen är en VOD-ström med in-manifest cues och inbakade annonser.
+* **VMAP med FER-stöd för nbc CueFormat**
 
-* Anpassa fältet för användaragent i HTTP Header innan det vidarebefordras till annonsleverantörer/CDN från tredje part.
+   Konvertera Cues från FER-ström till parametrar för åsidosättning av tidslinje för FW, när `ptcueformat=nbc` används och strömmen är en VOD-ström med in-manifest cues och inbakade annonser.
 
-* Filtrera bort kontrolltecken/icke-utskrivbara tecken (ASCII-kod &lt; 32) från HTTP-rubriker som är&quot;user-agent&quot; innan de skickas till Auditude och andra annonsleverantörer, CDN:er. Auditude Ad-Call misslyckades tidigare för sådana ogiltiga rubriker.
+* Anpassa fältet för användaragent i HTTP Header innan det vidarebefordras till tredjeparts annonsleverantörer/ CDN.
+
+* Filtrera bort kontrolltecken/icke-utskrivbara tecken (ASCII-kod &lt; 32) från HTTP-headers för användare/agent innan de skickas till Auditude och andra annonsleverantörer, CDN. Auditude Ad-Call misslyckades tidigare för sådana ogiltiga rubriker.
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
 
 ## Lösta problem
 
-Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Till exempel ZD#xxxxx.
+Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Exempel: ZD#xxxxx.
 
 **PTAI 20.3.3**
 
