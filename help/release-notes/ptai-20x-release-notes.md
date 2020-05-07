@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.5.1
 description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
+source-git-commit: 90f75f263e96ea37dd93a91f4392077ea2c70f32
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 ## Nyheter i PTAI 20.5.1
 
-**När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 EASTERN
+**När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 Eastern Time
 
 * Ett problem har korrigerats som säkerställer att korrekta CORS-huvuden anges när rubrikerna If-Modified-Since skickas.
 
@@ -28,7 +28,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 ### Version 20.3.4
 
-**När:** Onsdagen den 1 april 2020 från 03:00 till 04:00 EASTERN
+**När:** Onsdagen den 1 april 2020 från 03:00 till 04:00 Eastern Time
 
 * Korrigerade ett problem som gjorde att undertexter inte synkroniserades efter att annonsen infogats i VOD/WebVTT.
 
@@ -36,7 +36,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 ### Version 20.3.3
 
-**När:** Torsdag den 26 mars 2020 från 03:00 till 04:00 EASTERN
+**När:** Torsdagen den 26 mars 2020 från 03:00 till 04:00 Eastern Time
 
 * SSAI 4XX- och 5XX-svar ger nu korrekt CORS-relaterade rubriker, vilket gör att javascript-/webview-klienter kan läsa felsvar.
 
@@ -44,9 +44,16 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 * Korrigerade ett problem med CMAF/demuxed-ljudströmmar, där EXT-X-MEDIA-SEQUENCE-nummer i vissa scenarier skulle öka felaktigt.
 
+### Version 20.2.1
+
+**När:** Torsdag 13 februari 2020 från 04:30 till 05:30 Eastern Time
+
+* Stöd för sammanslagning av annonsmaterial som innehåller flera strömmar med enbart ljud baserat på språk/kodek/bithastighet.
+* Mindre prestandaförbättringar och underhållsuppdateringar.
+
 ### Version 20.1.3
 
-**När:** Tisdagen den 28 januari 2020 från kl. 2:00 till kl. 03:00 EASTERN
+**När:** Tisdagen den 28 januari 2020 från kl. 02:00 till kl. 03:00 Eastern Time
 
 * **VMAP med FER-stöd för nbc CueFormat**
 
@@ -57,6 +64,22 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 * Filtrera bort kontrolltecken/icke-utskrivbara tecken (ASCII-kod &lt; 32) från HTTP-headers för användare/agent innan de skickas till Auditude och andra annonsleverantörer, CDN. Auditude Ad-Call misslyckades tidigare för sådana ogiltiga rubriker.
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
+
+### Version 20.1.2 [Programfix]
+
+**När:** Måndagen den 20 januari 2020 från 02:00 till 03:00 Eastern Time
+
+* Underhållsuppdateringar.
+
+### Version 20.1.1
+
+**När:** Onsdagen den 15 januari 2020 från 04:00 till 05:00 Eastern Time
+
+* Tjänsten Creative Repackaging erbjuder nu snabbare annonsinfogning genom att automatiskt svartlista oformaterade kreatörer.
+
+* Fas 1-stöd har lagts till för det nya SCTE 35-cue-formatet vid annonsinfogning på serversidan.
+
+* Underhållsuppgraderingar.
 
 ## Lösta problem
 
