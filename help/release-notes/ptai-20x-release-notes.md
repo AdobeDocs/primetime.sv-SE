@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.5.1
 description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 90f75f263e96ea37dd93a91f4392077ea2c70f32
+source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,26 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 * Korrigerade ett problem med X-Forwarded-For-huvuden, där IPv6-adresser inte var korrekt URL-kodade när de skickades till annonsservrarna.
 
 * Korrigerade ett problem med CMAF/demuxed-ljudströmmar, där EXT-X-MEDIA-SEQUENCE-nummer i vissa scenarier skulle öka felaktigt.
+
+### Version 20.3.2
+
+**När:** Onsdagen den 11 mars 2020 från 05:30 till 07:00 Eastern Time
+
+* Förbättrad SCTE35-signalhantering.
+
+* Underhållsuppdateringar.
+
+### Version 20.3.1
+
+**När:** Torsdagen den 5 mars 2020 från 02:30 till 04:30 Eastern Time
+
+* Prestandaförbättringar:
+
+   * Stöd för cacheminne har lagts till för både mastermanifest/media m3u8-manifest. De här manifesten svarar nu på Cache-Control: public- och Max-Age-rubriker, som ofta kan förbättra videons startprestanda.
+
+   * Stöd har lagts till för att tvinga https-kreatörer att hämta över http, vilket även kan förbättra videostartens prestanda.
+
+* Säkerhets- och underhållsåtgärder.
 
 ### Version 20.2.1
 
