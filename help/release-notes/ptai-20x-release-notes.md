@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.5.1
 description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 ## Lösta problem
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Exempel: ZD#xxxxx.
+
+**PTAI 20.5.1**
+
+* Problem med CORS-rubriker när sidhuvuden som ändrats sedan skickas.
+
+* Problem i CRS-kontrollpanelen.
+
+**PTAI 20.3.4**
+
+* Ett problem som gjorde att undertexter inte synkroniserades efter annonsinfogning i VOD/WebVTT.
 
 **PTAI 20.3.3**
 
