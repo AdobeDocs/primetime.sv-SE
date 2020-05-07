@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.5.1
 description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 **När:** Torsdagen den 26 mars 2020 från 03:00 till 04:00 Eastern Time
 
-* SSAI 4XX- och 5XX-svar ger nu korrekt CORS-relaterade rubriker, vilket gör att javascript-/webview-klienter kan läsa felsvar.
+* SSAI 4XX- och 5XX-svar ger nu korrekt CORS-relaterade rubriker, vilket gör att JavaScript-webbvyklienter kan läsa felsvar.
 
 * Korrigerade ett problem med X-Forwarded-For-huvuden, där IPv6-adresser inte var korrekt URL-kodade när de skickades till annonsservrarna.
 
@@ -85,7 +85,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
 
-### Version 20.1.2 [Programfix]
+### Version 20.1.2 (programfix)
 
 **När:** Måndagen den 20 januari 2020 från 02:00 till 03:00 Eastern Time
 
@@ -103,7 +103,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 
 ## Lösta problem
 
-Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Exempel: ZD#xxxxx.
+Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Exempel: `ZD#xxxxx`
 
 **PTAI 20.5.1**
 
