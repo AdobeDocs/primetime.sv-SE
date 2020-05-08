@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionsinformation om Primetime
 translation-type: tm+mt
-source-git-commit: 7dd4dced32253a3d94e753a49a4b52a60bbba4b1
+source-git-commit: 1ec9411ac897ac6e7328aef9a6ddd614f533f1d0
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
    + [Versionsinformation om PTAI 20.5.1](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK för iOS {#tvsdk-ios}
-   + [Versionsinformation om TVSDK 3.11 för iOS](tvsdk-3x-ios.md)
+   + [Versionsinformation om TVSDK 3.12 för iOS](tvsdk-3x-ios.md)
    + [Versionsinformation om TVSDK 1.4 för iOS](tvsdk-1-4-ios.md)
 + TVSDK för Android {#tvsdk-android}
    + [Versionsinformation om TVSDK 3.11 för Android](tvsdk-3x-android.md)
