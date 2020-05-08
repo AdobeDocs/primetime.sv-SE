@@ -4,7 +4,7 @@ seo-title: Versionsinformation om Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -14,24 +14,25 @@ ht-degree: 0%
 
 # Versionsinformation om Primetime
 
-Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
+Välkommen till versionsinformationen för Adobe Primetime. Dokumenten i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel
 
-## Förbättringar och korrigeringar i PTAI 20.5.1
-
-Fokuserad på att åtgärda de vanligaste kundproblemen.
-
-## Korrigeringar i TVSDK 3.11 Android
-
-Utgåvan förbättrade stödet för Wideglobal DRM och löste de vanligaste kundproblemen.
-Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
-
-## Förbättringar och korrigeringar i versionsinformation för TVSDK 3.11 iOS
+## Förbättringar och korrigeringar i versionsinformation för TVSDK 3.12 iOS
 
 Versionen fokuserade på att lösa de vanligaste kundproblemen.
 
 Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-ios.md)finns här.
 
-Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [PTAI versionsinformation](ptai-19x-release-notes.md).
+## Förbättringar och korrigeringar i PTAI 20.5.1
+
+Fokuserad på att åtgärda de vanligaste kundproblemen.
+
+Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [PTAI versionsinformation](ptai-20x-release-notes.md).
+
+## Korrigeringar i TVSDK 3.11 Android
+
+Utgåvan förbättrade stödet för Wideglobal DRM och löste de vanligaste kundproblemen.
+
+Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Se även
 
