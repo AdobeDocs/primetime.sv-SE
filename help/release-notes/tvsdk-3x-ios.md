@@ -1,29 +1,36 @@
 ---
-title: Versionsinformation om TVSDK 3.11 för iOS
-description: Versionsinformationen för TVSDK 3.11 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.11.
+title: Versionsinformation om TVSDK 3.12 för iOS
+description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om TVSDK 3.11 för iOS {#tvsdk-for-ios-release-notes}
+# Versionsinformation om TVSDK 3.12 för iOS {#tvsdk-for-ios-release-notes}
 
-Versionsinformationen för TVSDK 3.11 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.11.
+Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 
 ## System- och programvarukrav {#system-software-requirements}
 
-Innan du laddar ned iOS 3.11 bör du kontrollera att maskinvaru-, operativsystem- och programversionerna uppfyller följande krav:
+Innan du laddar ned iOS 3.12 bör du kontrollera att maskinvaru-, operativsystem- och programversionerna uppfyller följande krav:
 
 Operativsystem: iOS 8.0 eller senare.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Åtgärdade kundproblem där `isFallbackOnInvalidCreativeEnabled` och metoden `customParams` får programmet att krascha.
+Korrigerade ett problem där direktuppspelningen misslyckades efter 15 minuters uppspelning.
 
 Information om korrigeringar i den aktuella versionen finns i avsnittet [Kundproblem som har korrigerats](#resolved-issues) och om begränsningar finns i avsnittet [Kända problem och begränsningar](#known-issues-and-limitations) .
 
 ### Nya funktioner och korrigeringar i tidigare versioner {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Åtgärdade kundproblem där `isFallbackOnInvalidCreativeEnabled` och metoden `customParams` får programmet att krascha.
 
 **iOS TVSDK 3.10**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* Direktuppspelningen misslyckas efter 15 minuters uppspelning när TVSDK används för iOS 3.10.
+
+### Lösta problem i tidigare versioner {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998) - Detta `isFallbackOnInvalidCreativeEnabled` gör att programmet kraschar.
 
 * (ZD#41289) - `NSInvalidArgumentException` observeras med metoden `customParams` som gör att programmet kraschar.
-
-### Lösta problem i tidigare versioner {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -499,7 +509,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 
 Användning av kreativt ID och AdSystem i CRS-begäran baserat på CRS-normaliseringsregler
 
-* (ZD #29176) - Krasch `PTAdPolicyDeligate``satAdBreakAsWatched:position`
+* (ZD #29176) - krasch den `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
 
 Krasch på grund av tom AdBreak hanteras nu.
 
