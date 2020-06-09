@@ -4,9 +4,9 @@ seo-title: Versionsinformation om Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
+source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Versionsinformation om Primetime
 
-Välkommen till versionsinformationen för Adobe Primetime. Dokumenten i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel
+Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
+
+## Förbättringar och korrigeringar i PTAI 20.6.1
+
+Versionen fokuserade på funktioner som manifest manipulation och förbättring av API:er för att hålla sessionen levande med VOD-resurser i lång form. Versionen innehåller även korrigeringar av de vanligaste kundproblemen.
+
+Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [PTAI versionsinformation](ptai-20x-release-notes.md).
 
 ## Förbättringar och korrigeringar i versionsinformation för TVSDK 3.12 iOS
 
 Versionen fokuserade på att lösa de vanligaste kundproblemen.
 
 Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-ios.md)finns här.
-
-## Förbättringar och korrigeringar i PTAI 20.5.1
-
-Fokuserad på att åtgärda de vanligaste kundproblemen.
-
-Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [PTAI versionsinformation](ptai-20x-release-notes.md).
 
 ## Korrigeringar i TVSDK 3.11 Android
 
