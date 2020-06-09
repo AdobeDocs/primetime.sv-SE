@@ -1,20 +1,40 @@
 ---
-title: Versionsinformation om PTAI 20.5.1
-description: Versionsinformation om PTAI 20.5.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
+title: Versionsinformation om PTAI 20.6.1
+description: Versionsinformation om PTAI 20.6.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om dynamisk annonsinfogning för Primetime 20.5.1
+# Versionsinformation om dynamisk annonsinfogning för Primetime 20.6.1
 
-Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända i Primetimes dynamiska annonsinfogning 2020.
+Versionsinformationen om dynamisk annonsinfogning 20.6.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetimes dynamiska annonsinfogning 2020.
 
-## Nyheter i PTAI 20.5.1
+## Nyheter i PTAI 20.6.1
+
+**När:** Tisdagen den 2 juni 2020 från 03:00 till 05:00 Eastern Time
+
+**Nya funktioner**
+
+Kontakta Adobes support för att aktivera följande nya funktioner via konfiguration på serversidan:
+
+* Manifestmanipulation: HLS-segment och resurs-URL:er kan nu omvandlas mellan HTTP och HTTPS för att öka prestandan genom att minska antalet TLS-handskakningar vid backend-begäranden. Den kan också användas för att sammanfoga annons-/innehållsfragment till samma CDN:er.
+
+* VOD med lång form: Förbättrade API:er för att hålla sessionerna levande med VOD-resurser i lång form.
+
+**Felkorrigeringar**
+
+* Ett problem har korrigerats där WebVTT-fragment alltid begärdes under http-protokollet, oavsett vilket protokoll som ursprungligen begärdes.
+
+* Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
+
+## Vad som ändrats i tidigare versioner
+
+### Version 20.5.1
 
 **När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 Eastern Time
 
@@ -23,8 +43,6 @@ Versionsinformationen om dynamisk annonsinfogning 20.5.1 beskriver vad som är n
 * Felkorrigeringar på CRS-kontrollpanelen.
 
 * Underhållsuppdateringar.
-
-## Vad som ändrats i tidigare versioner
 
 ### Version 20.3.4
 
