@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.6.1
 description: Versionsinformation om PTAI 20.6.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,6 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 * Ett problem har korrigerats där WebVTT-fragment alltid begärdes under http-protokollet, oavsett vilket protokoll som ursprungligen begärdes.
 
 * Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
-
-## Vad som ändrats i tidigare versioner
 
 ### Version 20.5.1
 
