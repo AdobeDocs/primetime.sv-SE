@@ -2,7 +2,10 @@
 title: Versionsinformation om PTAI 19.11.1
 description: Versionsinformationen för PTAI 19.11.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 **När:** Onsdag 21 augusti 2019 02:00 till 03:00 Eastern Time
 
 * SSAI Dashboard: Avsnittet Sessionsstatistik. Du kan exportera sessionshändelserna via alternativet Hämta CSV.
+
 * Underhållsuppdateringar
 
 ### Version 19.8.1
