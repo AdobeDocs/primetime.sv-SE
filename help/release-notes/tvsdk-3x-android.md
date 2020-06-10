@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -334,7 +337,8 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | Allmän uppspelning (Play, Pause, Seek) | VOD + Live | Y |
 | FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | Y |
 | Sök när en annons spelas upp | VOD + Live | Stöds inte |
-| AC3 | VOD + Live | Stöds inte |
+| HEVC-uppspelning | VOD + Live | Endast fMP4-behållare |
+| AC3 och EAC3 | VOD + Live | Stöds inte |
 | MP3 | VOD | Stöds inte |
 | Uppspelning av MP4-innehåll | VOD | Y |
 | Adaptiv logik för växling av bithastighet | VOD + Live | Y |
@@ -354,7 +358,6 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | Sena ljudbindning | VOD + Live | Y |
 | 302 Omdirigering | VOD + Live | Y |
 | Uppspelning med förskjutning | VOD + Live | Y |
-| Uppspelning endast av ljud | VOD + Live | Y |
 | Trick Play | VOD + Live | Y |
 | Långsam rörelse i Trick Play | VOD + Live | Stöds inte |
 | Smooth Trick Play (med ABR) | VOD + Live | Y |
@@ -384,19 +387,43 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | Lazy Ad Resolve | VOD | Y |
 | Stöd för brytpunkter - SSAI | VOD + Live | Y |
 | Companion Ads, Banner Ads och Clickable Ads | VOD + Live | Y |
+| 302 Omdirigera taggighet | VOD + Live | Y |
+
+| Funktion | Innehållstyp | HLS |
+|---|---|---|
+| Allmän uppspelning, annonser aktiverade | VOD + Live | Y |
+| FER-innehåll med annonser aktiverade | VOD | Y |
+| Standardbeteenden för annonser | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| MP4-annonser | VOD + Live | Y (från CRS) |
+| Trick Play med annonser aktiverade | VOD + Live | Y |
+| Endast annons | VOD | Y |
+| Målparametrar | VOD + Live | Y |
+| Egna parametrar | VOD + Live | Y |
+| Anpassade annonsbeteenden | VOD + Live | Y |
+| Anpassade annonstaggar | Live | Y |
+| Anpassade annonslösare | VOD + Live | Y |
+| Anpassad annonslösning för frihjulshjul | VOD | Y |
+| C3 | VOD + Live | Stöds inte |
+| Lazy Ad Resolve | VOD | Y |
+| Stöd för brytpunkter - SSAI | VOD + Live | Y |
+| Companion Ads, Banner Ads och Clickable Ads | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Tidigt annonsutträde | Live | Y |
 | Regelbaserad kreativ prioritering | VOD + Live | Y |
 | CRS-regler | VOD + Live | Y |
 | JSON Ad Resolver | VOD + Live | Stöds inte |
 | Moat Integration | VOD + Live | Y |
+| Inläggning av delvis annonsbrytning | Live | Y |
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
 | AES-kryptering | VOD + Live | Y |
 | AES-kryptering - exempel | VOD + Live | Y |
 | Tokeniserade strömmar | VOD + Live | Y |
-| DRM | VOD + Live | Primetime DRM only (Future: WideVM) |
+| DRM, Widewin | VOD + Live | Endast fMP4-behållare |
+| Primetime DRM | VOD + Live | Y |
 | Extern uppspelning (RBOP) | VOD + Live | Endast Primetime DRM |
 | Licensrotation | VOD + Live | Endast Primetime DRM |
 | Nyckelrotation | VOD + Live | Endast Primetime DRM |
