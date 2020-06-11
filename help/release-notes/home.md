@@ -4,7 +4,7 @@ seo-title: Versionsinformation om Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
+source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -15,6 +15,12 @@ ht-degree: 0%
 # Versionsinformation om Primetime
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
+
+## Korrigeringar i TVSDK 3.12 Android
+
+Versionen fokuserade på att uppdatera Primetime Reference-programmets gråskaleversion till version 5.6.4.
+
+Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Förbättringar och korrigeringar i PTAI 20.6.1
 
@@ -27,12 +33,6 @@ Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [P
 Versionen fokuserade på att lösa de vanligaste kundproblemen.
 
 Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-ios.md)finns här.
-
-## Korrigeringar i TVSDK 3.11 Android
-
-Utgåvan förbättrade stödet för Wideglobal DRM och löste de vanligaste kundproblemen.
-
-Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Se även
 
