@@ -1,24 +1,24 @@
 ---
-title: Versionsinformation om TVSDK 3.11 för Android
-seo-title: Versionsinformation om TVSDK 3.11 för Android
-description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
-seo-description: Versionsinformation för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11
+title: Versionsinformation om TVSDK 3.12 för Android
+seo-title: Versionsinformation om TVSDK 3.12 för Android
+description: Versionsinformation för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12
+seo-description: Versionsinformation för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
 workflow-type: tm+mt
-source-wordcount: '5490'
+source-wordcount: '5531'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om TVSDK 3.11 för Android {#tvsdk-for-android-release-notes}
+# Versionsinformation om TVSDK 3.12 för Android {#tvsdk-for-android-release-notes}
 
-Versionsinformationen för TVSDK 3.11 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.11.
+Versionsinformationen för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12.
 
 Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distribution. I den medföljande README.md-filen beskrivs hur du skapar referensspelaren.
 
@@ -36,26 +36,31 @@ TVSDK för Android har många prestandaförbättringar jämfört med tidigare ve
 
 Den omfattande uppsättningen funktioner som stöds och inte stöds finns i [funktionsmatrisen](#feature-matrix) i versionsinformationen.
 
-## Android TVSDK 3.11
+## Android TVSDK 3.12
 
-**PSSH-boxhämtning tillåts**
+Primetime Reference-programmets gråskaleversion har nu uppdaterats till version 5.6.4.
 
-TVSDK tillåter nu hämtning av den systemspecifika rubrikruta för skydd som är associerad med den aktuella inlästa medieresursen. Nytt API `getPSSH()` har lagts till i `com.adobe.mediacore.drm.DRMManager`.
-Mer information finns i [WideVM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Följ instruktionerna från Viktigt-filen som finns i TSDK zip för att konfigurera och köra referensappen med Android Studio `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`.
 
 De vanligaste kundproblemen som har åtgärdats i den aktuella versionen beskrivs i avsnittet [Lösta problem](#resolved-issues) .
 
 ### Nya funktioner och förbättringar i tidigare versioner
 
+**Android TVSDK 3.11**
+
+* **Hämtning av PSSH-rutor (Protection System Specific Header) tillåts** - TVSDK tillåter hämtning av den systemspecifika rubrikruta för skydd som är associerad med den aktuella inlästa medieresursen. Nytt API `getPSSH()` har lagts till i `com.adobe.mediacore.drm.DRMManager`.
+
+Mer information finns i [WideVM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+
 **Android TVSDK 3.10**
 
-Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som nämns i avsnittet [lösta problem](#resolved-issues) .
+Versionen fokuserade på att åtgärda de vanligaste kundproblemen som nämns i avsnittet [lösta problem](#resolved-issues) .
 
 **Android TVSDK 3.9**
 
-* **Secure Delivery over HTTPS** - Android TVSDK 3.9 introducerar säkra leveransfunktioner via HTTPS för säker leverans med oöverträffad skalbarhet och prestanda.
+* **Secure Delivery over HTTPS** - Android TVSDK 3.9 introducerade säkra leveransfunktioner via HTTPS för säker leverans med oöverträffad skalbarhet och prestanda.
 
-   För att möjliggöra säker leverans via HTTPS introduceras ett nytt API i `NetworkConfiguration` klassen.
+   För att möjliggöra säker leverans via HTTPS introducerades ett nytt API i `NetworkConfiguration` klassen.
 
    `public void setForceHTTPS (boolean value)`
 
@@ -65,7 +70,7 @@ Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som 
 
 * **Stöd för pre-roll med partiell Ad-Break-funktion** - Med den här förbättringen har TVSDK 3.8 stöd för pre-roll-ads med partiell Ad-Break-funktion (PABI).
 
-   Förhandsgranskningsannonsen spelas upp, om en sådan finns, och sedan spelas innehållet upp från den direktpunkt som emulerar upplevelsen av live-TV.
+Förhandsgranskningsannonsen spelas upp, om en sådan finns, och sedan spelas innehållet upp från den direktpunkt som emulerar upplevelsen av live-TV.
 
 **Android TVSDK 3.7**
 
@@ -82,6 +87,7 @@ Den här versionen fokuserade på att åtgärda de vanligaste kundproblemen som 
 **Version 3.5**
 
 * **Just In Time Ad Resolution** - TVSDK 3.5 tar bort stödet för de annonser som spelas upp från tidslinjen.
+
 * **Stöd för uppspelning** offline är aktiverat - Med uppspelning offline kan användare nu hämta videoinnehåll till sina enheter och titta på det när de inte är anslutna. Mer information finns i&quot;[Offline Playback with Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)&quot;.
 
 **Version 3.4**
@@ -437,13 +443,17 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens, till exempel ZD#xxxxx.
 
-**Android TVSDK 3.11**
+**Android TVSDK 3.12**
 
-I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.11 Android-versionen.
+I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.12 Android-versionen.
 
-* ZD#41252 - Koreanska tecken i WebVTT fungerar inte efter Android 7.1.
+* ZD#40584 - Primetimes referensapp byggs inte med den senaste övertoningsversionen.
 
 ### Lösta problem i tidigare versioner
+
+**Android TVSDK 3.11**
+
+* ZD#41252 - Koreanska tecken i WebVTT fungerar inte efter Android 7.1.
 
 **Android TVSDK 3.10**
 
