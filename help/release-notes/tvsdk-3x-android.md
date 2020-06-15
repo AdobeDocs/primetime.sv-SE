@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -305,7 +305,7 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * **Moat Integration -** Stöd för annonsvisning från Moat.
 
-   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
+   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
 * **Analyser**
 
@@ -371,28 +371,6 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | Utbrott av annonser | VOD + Live | Stöds inte |
 | Direkt på | VOD + Live | Stöds inte |
 | Stöd för brytpunkter | VOD + Live | Y |
-| 302 Omdirigera taggighet | VOD + Live | Y |
-
-| Funktion | Innehållstyp | HLS |
-|---|---|---|
-| Allmän uppspelning, annonser aktiverade | VOD + Live | Y |
-| FER-innehåll med annonser aktiverade | VOD | Y |
-| Standardbeteenden för annonser | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| MP4-annonser | VOD + Live | Y (från CRS) |
-| Trick Play med annonser aktiverade | VOD + Live | Y |
-| Endast annons | VOD | Y |
-| Målparametrar | VOD + Live | Y |
-| Egna parametrar | VOD + Live | Y |
-| Anpassade annonsbeteenden | VOD + Live | Y |
-| Anpassade annonstaggar | Live | Y |
-| Anpassade annonslösare | VOD + Live | Y |
-| Anpassad annonslösning för frihjulshjul | VOD | Y |
-| C3 | VOD + Live | Stöds inte |
-| Lazy Ad Resolve | VOD | Y |
-| Stöd för brytpunkter - SSAI | VOD + Live | Y |
-| Companion Ads, Banner Ads och Clickable Ads | VOD + Live | Y |
 | 302 Omdirigera taggighet | VOD + Live | Y |
 
 | Funktion | Innehållstyp | HLS |
