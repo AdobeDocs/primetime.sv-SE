@@ -2,7 +2,7 @@
 title: Versionsinformation om TVSDK 3.12 för iOS
 description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska hindren för `VideoHeartbea
 
 **Nätverksannonsinformation**
 
-TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klasser som är tillgängliga via en Ad Asset- `networkAdInfo` egenskap. Den här informationen kan användas för att integrera med andra annonseringsplattformar som **Moat Analytics**.
+TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klasser som är tillgängliga via en Ad Asset- `networkAdInfo` egenskap. Den här informationen kan användas för integrering med andra Ad Analytics-plattformar som **Moat Analytics**.
 
 **Version 1.4.31**
 
@@ -187,7 +187,7 @@ TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad I
 
 I `PTSDKConfig` klassen har API:t forceHTTPS lagts till.
 
-Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Adobe Primetimes annonsbesluts-, DRM- och Video Analytics-servrar. `PTSDKConfig` Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
+Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Analytics-servrar för Adobe Primetime-annonsering, DRM och Video. `PTSDKConfig` Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
 
 >[!NOTE] Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
 
@@ -340,11 +340,12 @@ Inga nya problem i den här versionen.
 
 **Version 3.3**
 
-(ZD#37820) - En vitlista har lagts till för det anpassade huvudet HS-Id, HS-SSAI-TAG.
+(ZD#37820) - En lista över tillåtna för anpassat huvud-HS-ID, HS-SSAI-TAG har lagts till.
 
 **Version 3.2**
 
 * **Biljett#36588** - En krasch inträffar när STOP-metoden för MediaPlayer anropas.
+
 Korrigerad intermittent krasch som observerades när STOP-metoden anropades för några strömmar med undertexter.
 
 * **Ticket#37080** - Dubblettbegäranden för manifest-anrop.
@@ -411,7 +412,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 
    Öka det maximala antalet samtidiga för `CustomAVAssetLoaderOperations`så att manifestläsningarna kan fortsätta att köras.
 
-* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
+* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
 
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
@@ -438,24 +439,29 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
    Korrigerade felet vid uppspelning av innehåll på Apple TV, vilket förhindrar uppspelning helt
 * (ZD #32146) - Ingen `PTMediaPlayerStatusError` har tagits emot för HLS Live-innehåll som blockerar iOS 11 dev beta
 
-   Ingen `PTMediaPlayerStatusError` har tagits emot för HLS Live- och VOD-innehåll vid blockering med Charles (Drop connection and 403)
-* (ZD #29242) - Airplay-videouppspelning misslyckas med annonser aktiverade
+   Inget `PTMediaPlayerStatusError` har tagits emot för HLS Live- och VOD-innehåll om blockering med Charles (Drop connection and 403).
 
-   När annonser är aktiverade och AirPlay är aktiverat för att starta uppspelning av en video startar videouppspelningen aldrig och inget fel visas
-* (ZD#33341) - utlösare `DRMInterface.h` bygger varningar i Xcode 9
+* (ZD #29242) - Airplay-videouppspelning misslyckas med annonser aktiverade.
 
-   Korrigerade två blockprototyper i `DRMInterface.h` vilka ordet void saknades i parameterlistorna
-* (ZD#31979) - Kompilerar/körs inte när det är iOS 10 eller senare för iPhone 7/iPhone7+
+   När annonser är aktiverade och AirPlay är aktiverat när du börjar spela upp en video, startar aldrig videouppspelningen och inget fel visas.
 
-   Korrigerad kompilering av IB-dokument för tidigare versioner än iOS 7 stöds inte längre
-* (ZD#32920) - vit tom skärm i en annonsbrytning och ingen annonsbrytning slutförd
+* (ZD#33341) - utlöser `DRMInterface.h` varningar i Xcode 9.
 
-   När en annonsbrytning visar annonsförekomster och när en annonsförekomst är klar visas en vit tom skärm
-* (ZD#32509) - Inaktivera skärminspelning för iOS 11 Inaktivera skärminspelning för iOS 11
+   Korrigerade två blockprototyper i `DRMInterface.h` vilka ordet void saknades i parameterlistorna.
 
-* (ZD#33179) - Intermittent händelsefel i iOS11
+* (ZD#31979) - Kompilerar/körs inte när det är iOS 10 eller senare för iPhone 7/iPhone7+.
 
-   Åtgärdade händelsefelet i iOS 11
+   Korrigerad kompilering av IB-dokument för tidigare versioner än iOS 7 stöds inte längre.
+
+* (ZD#32920) - Tom skärm i en annonsbrytning och ingen annonsbrytning slutförs.
+
+   När en annonsbrytning visar annonsförekomster och när en annonsförekomst är klar visas en tom skärm.
+
+* (ZD#32509) - Inaktivera skärminspelning för iOS 11 Inaktivera skärminspelning för iOS 11.
+
+* (ZD#33179) - Intermittent händelsefel i iOS11.
+
+   Åtgärdade händelsefelet i iOS 11.
 
 **Version 1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 * (ZD #31951) - TVSDK-fel under licensroteringar.
 
    Korrigerade licensrotationsproblemet.
-* (ZD #31951) - Vit tom skärm i en annonsbrytning och utan annonsbrytning.
+* (ZD #31951) - Tom skärm i en annonsbrytning och ingen annonsbrytning slutförs.
 
    Hanterade ett problem där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda `<AdParameters>` VAST-nod.
 * (ZD #33336) - iOS TVSDK - Ad pods not be fill, trots att tillräckligt många annonser returnerades av Freewheel.
@@ -625,9 +631,9 @@ Problemet löstes genom en tillfällig lösning för strömmar som inte har ett 
 
 Följande problem löstes för TVSDK i den här versionen:
 
-* (ZD# 24180) Lägg till en anpassad rubrik i vitlistan
+* (ZD# 24180) Lägg till en anpassad rubrik för listan Tillåt.
 
-En ny anpassad rubrik har lagts till i TVSDK-vitlistan.
+Ett nytt anpassat huvud har lagts till i listan över tillåtna för TVSDK.
 
 * (ZD# 25016) Redundansström väljs slumpmässigt när ABR-kontrollparametrar anges
 
@@ -647,19 +653,19 @@ När den sista starttiden för en annonsbrytning från VMAP infaller innan den t
 
 * VHL (Video Heartbeat Library) har uppdaterats till version 1.5.9 för att lösa följande problem:
 
-* (ZD #22351) VHL - Analys: Varaktighet för livevideoresurs
+* (ZD #22351) VHL - Analytics: Varaktighet för livevideoresurs
 
 Problemet löstes genom att ett objekt-Duration-API lades till i PTVideoAnalyticsTrackingMetadata för att uppdatera resursens varaktighet för live-/linjära strömmar och tillhandahålla en logik för att kontrollera liveströmmen.
 
-* (ZD# 22675) VHL - Analys: Uppdaterar livevideoresursens varaktighet
+* (ZD# 22675) VHL - Analytics: Uppdaterar livevideoresursens varaktighet
 
 Problemet är detsamma som ZD #22351.
 
-* (ZD #25908) VHL - Analys: Adobe Heartbeat Event Crash
+* (ZD #25908) VHL - Analytics: Adobe Heartbeat Event Crash
 
 Problemet löstes genom att implementeringen uppdaterades för att använda den senaste versionen av VHL för iOS version 1.5.9 för att förbättra stabilitet och prestanda.
 
-* (ZD #25956) VHL - Analys: Krasch vid upprepad uppspelning av videoklipp
+* (ZD #25956) VHL - Analytics: Krasch vid upprepad uppspelning av videoklipp
 
 Problemet är detsamma som ZD #25908.
 
@@ -771,7 +777,7 @@ Problemet löstes genom att logiken uppdaterades för att visa spelarvyn om en V
 
 Problemet löstes genom att VideoAnalyticsTracker uppdaterades för att korrekt identifiera inledande/slutförande av kapitel vid övergång mellan kapitelgränser och icke-kapitelgränser.
 
-* (ZD #20784) - Analys: Utlösande av innehåll för live-videoövergångar
+* (ZD #20784) - Analytics: Utlösande av innehåll för live-videoövergångar
 
 Problemet löstes genom att en logik lades till för att manuellt aktivera slutförandet av innehåll under en videospårningssession.
 
@@ -1086,7 +1092,7 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 
 **Version 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Analysimplementering för TreeHouse-appen, bibliotek som lagts till för att skapa paket har lagts till `AdobeAnalyticsPlugin.a` .
+* (ZD #2141) Analytics-implementering för TreeHouse-appen, lade till biblioteket för att skapa paket `AdobeAnalyticsPlugin.a` .
 * Video Heartbeats Library update to 1.4.1.2
 * [PTPALY-4226] [relaterat till ZD #2423) Om du utför DRM-återställning kan programdokumentdata tas bort.
 
@@ -1163,7 +1169,7 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 * Det kan hända att licensrotationsvideo inte spelas upp på iOS 11 och att den spelas upp korrekt på iOS 9.x och iOS 10.x.
 * Om uppspelningen är aktiv över AirPlay hoppas VPAID-annonser över i VPAID 2.0-stödet.
 * drmNativeInterface.framework länkar inte korrekt när minimimålet är iOS7 (eller senare).
-Tillfällig lösning: Ange uttryckligen biblioteket libstdc+.6.dylib enligt följande: Gå till Mål->Bygg faser->Länka binärt med bibliotek och lägg till libstdc++.6.dylib.
+Tillfällig lösning: Ange uttryckligen biblioteket libstdc+.6.dylib enligt följande: Gå till Target->Bygg faser->Länka binärt med bibliotek och lägg till libstdc++.6.dylib.
 * Det gick inte att infoga post-roll-API:t för ersättning.
 * Om du söker efter en annonsbrytning (utan att komma ut ur den) utfärdas en dubblett av meddelanden om annonsstart och annonsbrytningar
 * Inställning av currentTimeUpdateInterval har ingen effekt.
