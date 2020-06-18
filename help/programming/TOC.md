@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Programming Help
+user-guide-title: Hjälp om Primetime-programmering
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4307'
+ht-degree: 0%
 
 ---
 
@@ -266,7 +269,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
    + Skydd av innehåll {#content-protection}
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
       + [Apple FairPlay i TVSDK-applikationer](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
-      + [Vitlista ditt iOS-program](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md)
+      + [Tillåt att ditt iOS-program visas](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [Meddelanden om spelarstatus, aktivitet, fel och loggar](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Anpassad loggning](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
    + [Redundans](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
@@ -280,7 +283,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Klasser för tidslinje](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [Tidslinjeannonsklasser](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
       + [Klasser för hantering av digitala rättigheter](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
-      + [Klasser för videoanalys](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
+      + [Videoklasser i Analytics](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
    + Meddelandekoder {#notification-codes}
       + [TVSDK-meddelandesystem](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/c-ios-notification-codes.md)
       + [FELMEDDELANDEkoder](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notifications-errors.md)
@@ -302,7 +305,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Återanvända eller ta bort en MediaPlayer-instans](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
          + [Inspektera tidslinjen för uppspelning](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [Pausa och återställa MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
-      + Lyssna efter händelser för Primetime Player {#listen-primetime-player-events}
+      + Lyssna efter händelser för Primetime Player   {#listen-primetime-player-events}
          + [Översikt](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
          + [Implementera händelseavlyssnare och återanrop](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
       + [Konfigurera felhantering](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md)
@@ -720,7 +723,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
    + Skydd av innehåll {#content-protection}
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [Apple FairPlay i TVSDK-applikationer](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
-      + [Vitlista ditt iOS-program](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-whitelist-your-ios-application.md)
+      + [Tillåt att ditt iOS-program visas](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
    + [Meddelande om spelarstatus, aktivitet, fel och loggar ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [Anpassad loggning](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [Redundans](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
@@ -734,7 +737,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Klasser för tidslinje](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline.md)
       + [Tidslinjeannonsklasser](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
       + [Klasser för hantering av digitala rättigheter](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
-      + [Klasser för videoanalys](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
+      + [Videoklasser i Analytics](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
    + Meddelandekoder {#notification-codes}
       + [TVSDK-meddelandesystem](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
       + [FELMEDDELANDEkoder](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notifications-errors.md)
@@ -930,7 +933,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Klasser för tidslinjeåtgärder](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-operations.md)
       + [Klasser för tidslinjematchning](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-resolvers.md)
       + [Verktygsklasser](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-utility.md)
-      + [Klasser för videoanalys](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
+      + [Videoklasser i Analytics](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
    + Meddelandekoder {#notification-codes}
       + [Översikt](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-notification-codes.md)
       + [FELMEDDELANDEkoder](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-errors.md)
