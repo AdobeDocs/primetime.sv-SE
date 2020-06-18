@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -147,7 +150,7 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
 * **Stöd för arbetsflöden**
 
    * **Direktfaktureringsintegrering -** Detta skickar faktureringsstatistik till Adobe Analytics-backend, som certifieras av Adobe Primetime för strömmar som används av kunden.
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK API:t för datainfogning i Adobe Analytics för att skicka faktureringsmått som innehållstyp, inmatningsaktiverade flaggor och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens längd - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. Vid varje direktstarthändelse använder TVSDK Adobes API för datainfogning i Analytics för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på längden på den fakturerbara strömmen - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte eller ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
 
 * **Reklam**
@@ -155,7 +158,7 @@ TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet
    * **Moat Integration -** Stöd för annonsvisning från Moat.
    * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
-* **Analyser**
+* **Analytics**
 
    * **VHL 2.0 -** Det här är den senaste optimerade VHL-integreringen (Video Heartbeats Library) för automatisk insamling av användningsdata för Adobe Analytics. API:ernas komplexitet har minskat för att underlätta implementeringen. Hämta VHL-biblioteket [v2.0.0 för Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) och extrahera JAR-filen i mappen libs.
 
@@ -204,7 +207,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 | Avancerad redundans | VOD + Live | Y |
 | QoS och spelarmeddelanden | VOD + Live | Y |
 | Stöd för cookie-rubriker | VOD + Live | Y |
-| Stöd för anpassade HTTP-rubriker | VOD + Live | Y (vitlistning krävs) |
+| Stöd för anpassade HTTP-rubriker | VOD + Live | Y (tillåt att lista krävs) |
 | Ange parametrar för buffertkontroll | VOD + Live | Y |
 | Ange adaptiva bithastighetskontroller | VOD + Live | Y |
 | Egna manifesttaggar | VOD + Live | Y |
@@ -260,7 +263,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
-| Integrering med Adobe Analytics VHL | VOD + Live | Y |
+| Integrering med Analytics VHL | VOD + Live | Y |
 | Fakturering | VOD + Live | Y |
 
 ## Lösta problem {#resolved-issues}
