@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '7913'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ Inga nya funktioner.
    public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
    ```
 
-   Detta bör returnera en array med PlacementOpportunityDetector. Nu kan du registrera flera projektidentifierare. För till exempel funktionen för tidig annons krävdes två Detectors för säljprojekt - en för annonsinfogning och en för tidig avslutning av annonsen. Du behöver bara implementera den här nya funktionen om du har implementerat en egen AdvertisingFactory (och inte använder DefaultAdvertisingfactory). För att få fram det befintliga beteendet måste du skapa en enda Opportunity Detector, som i funktionen createOpportunityDetector(), som placeras i en array och returneras:
+   Detta bör returnera en array med PlacementOpportunityDetector. Nu kan du registrera flera projektidentifierare. För till exempel funktionen för tidig annons krävdes två identifierare för säljprojekt - en för annonsinfogning och en för tidig avslutning av annonsen. Du behöver bara implementera den här nya funktionen om du har implementerat en egen AdvertisingFactory (och inte använder DefaultAdvertisingfactory). För att få fram det befintliga beteendet måste du skapa en enda Opportunity Detector, som i funktionen createOpportunityDetector(), som placeras i en array och returneras:
 
    ```
    public class MyAdvertisingFactory extends AdvertisingFactory {  
@@ -89,7 +92,7 @@ Felkorrigering för Innehållsväxling på Android.
 
 * **Nätverksannonsinformation**
 
-   TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i klassen NetworkAdInfo som är tillgänglig via egenskapen networkAdInfo på en annonsresurs. Den här informationen kan användas för att integrera med andra annonseringsplattformar som **Moat Analytics**.
+   TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i klassen NetworkAdInfo som är tillgänglig via egenskapen networkAdInfo på en annonsresurs. Den här informationen kan användas för integrering med andra Ad Analytics-plattformar som **Moat Analytics**.
 
 **Version 1.4.31**
 
@@ -248,7 +251,7 @@ TVSDK 1.4.43 har certifierats med Android-enheter som har Android 6.0.1/ 7.0 och
 
 * Zendesk #33068 - Amazon lip sync issue on new device. Problem med läppsynkronisering har åtgärdats i den här versionen.
 * Zendesk #32215 - Android TVSDK 1.4.38 - Säkerhetsproblem `[Hotlist]`. Uppdaterat till senaste OpenSSL-1.1.0 och curl-7.5.1.
-* Zendesk #32920 - vit tom skärm i en annonsbrytning och utan annonsbrytning. Korrigerade ett problem där en VPAID-behållare kunde hamna i ett obefintligt tillstånd och hanterade ett problem där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda \&amp;lt;AdParameters\&amp;gt. VAST-nod.
+* Zendesk #32920 - Tom skärm i en annonsbrytning och utan annonsbrytning. Korrigerade ett problem där en VPAID-behållare kunde hamna i ett obefintligt tillstånd och hanterade ett problem där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda \&amp;lt;AdParameters\&amp;gt. VAST-nod.
 
 **Version 1.4.39 (1744)**
 
@@ -336,7 +339,7 @@ Koden uppdaterades för att göra annonsbegäran till `cdn.auditude.com` GET i s
 
 * Zendesk #25067 - Crash in VideoEngineTimelineDetta händer eftersom objekt inte rensades korrekt och händelser anropades efter att objekten förstördes. Problemet löstes genom att kontroller lades till för att förhindra null-undantag.
 
-* Zendesk #25352 - Set custom HTTP headerProblemet löstes genom att en ny anpassad rubrik lades till i vitlistan på TVSDK.
+* Zendesk #25352 - Set custom HTTP headerProblemet löstes genom att en ny anpassad rubrik lades till i listan över tillåtna användare på TVSDK.
 
 * Zendesk #25617 - Live stream PTS-rollover orsakar avbrott i spelaren och minneskrasch. Problemet löstes genom att en PTS-rolloverhantering lades till i FragmentedHTTPStreamer när en överrullning sker mitt i ett segment.
 
@@ -348,12 +351,12 @@ Koden uppdaterades för att göra annonsbegäran till `cdn.auditude.com` GET i s
 
 * Zendesk #23174 - Prestandaproblem vid storleksändring av videon. Problemet löstes genom att ett nytt API, MediaPlayerView.setSurfaceFixedSize, som gör att TVSDK kan komma åt SurfaceHolder.setFixedSize() från MediaPlayerView visades.
 
-* Zendesk #24450 - TVSDK gör dubbla annonsbegäranden. Problemet uppstod när den förflutna tiden konverterades till lång och inte dubbel, och problemet har åtgärdats.
+* Zendesk #24450 - TVSDK gör dubbla annonsbegäranden. Det här problemet uppstod när den förflutna tiden konverterades till lång och inte dubbel, och problemet har åtgärdats.
 
 **Version 1.4.26 (1627)**
 
 * Zendesk #21436 - OpenSSL-biblioteksuppdatering till version 1.0.2h Uppdaterat OpenSSL-biblioteket till OpenSSL version 1.0.2h
-* Zendesk #23825 - Cookies ingår inte i återanropen Fixed by provide the support for android cookies.
+* Zendesk #23825 - Cookies inkluderas inte i återanropen Fixed by provide the support for android cookies.
 
 **Version 1.4.25 (1620)**
 
@@ -561,7 +564,7 @@ Borttagen en begränsning för inaktivering av kreativ ompackning för reservann
 
 **Version 1.4.12 (1388)**
 
-* Zendesk #2751 - CSAI and CRS| Förbättra: Hantera dynamiska element i vissa URL-adresser för mediefiler.
+* Zendesk #2751 - CSAI and CRS | Förbättra: Hantera dynamiska element i vissa URL-adresser för mediefiler.
 Uppdaterad Creative Repackaging Service för att hantera annonser med dynamiska kreativa URL:er.
 
 * Zendesk #3965 - Om du växlar tillbaka till normal uppspelning från trickning kommer uppspelningen att hoppa framåt en bit innan uppspelningen startar.
@@ -585,9 +588,9 @@ Instant On har uppdaterats för att tillåta en startpunkt som inte är noll.
 
 **Version 1.4.11 (1363)**
 
-* Zendesk #2076 - Vanlig slutare vid uppspelning av video på Motorola Xoom med Android 4.0.3Enheter som lagts till i vitlistan för att förhindra att de försöker spela upp högprofilinnehåll.
+* Zendesk #2076 - Vanlig slutare vid uppspelning av video på Motorola Xoom med Android 4.0.3Enheter som lagts till så att listan inte kan användas för uppspelning av högprofilinnehåll.
 
-* Zendesk #2197 - `[Ads]` Tracking ad errorsdispatch OperationFailedEvent med varningsmeddelande. 
+* Zendesk #2197 - `[Ads]` Tracking ad errorsdispatch OperationFailedEvent med varningsmeddelande.
 
 * Zendesk #3304 - VAST 3.0- `[ERRORCODE]` makrot fylls inte i
    * felkod 400 visas om annonsen är intern och har dålig kreativitet.
@@ -597,7 +600,7 @@ Instant On har uppdaterats för att tillåta en startpunkt som inte är noll.
 
 * Zendesk #2941 - Live-resurser har inte &quot;0&quot; i sökbart intervall. Tidigare fanns det en 3-segmentbuffert när du sökte till början av en Live-ström, nu är det möjligt att söka till början av en liveström (dvs. början av det första segmentet).
 
-* Zendesk #3169 - Uppdatera referensspelaren med Adobe Analytics-integrering. Referensspelaren har uppdaterats med Adobe Analytics-biblioteket som en exempelimplantering. 
+* Zendesk #3169 - Uppdatera referensspelaren med Adobe Analytics-integreringReferensspelaren har uppdaterats med Adobe Analytics-biblioteket som en exempelimplementering.
 * Zendesk #3299 - Oförklarligt trickbeteende
    * Korrigerade ett fel där det kunde ta flera sekunder att återgå till uppspelningsläget efter att tricket stoppats (ibland 25+ sekunder).
    * Korrigerade ett fel där ett anrop av trick spelas upp en andra gång på samma media, vilket kan göra att strömmen fryser vid den aktuella tiden.
