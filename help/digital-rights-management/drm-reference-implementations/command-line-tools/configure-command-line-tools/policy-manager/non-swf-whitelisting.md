@@ -3,7 +3,10 @@ seo-title: Icke-SWF-programvitlista
 title: Icke-SWF-programvitlista
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Om du befinner dig i en situation där du har ett bibliotek med innehåll som ä
 * Använd en `PolicyUpdateList` på licensservern för att åsidosätta den inkommande principen och infoga en ny vitlistpost för programmet tillsammans med det nya signeringscertifikatets sammanfattning.
 * Uppdatera licensserverns logik för att åsidosätta den inkommande principen och infoga en ny vitlistpost för programmet.
 * Begär att utfärdaren av ditt signeringscertifikat utfärdar ett nytt certifikat som använder samma offentliga/privata nyckelpar som det tidigare certifikatet använde.
-* Om du levererar HDS-/HLS-innehåll som refererar till en URL-slutpunkt för att hämta `DRMMetadata`filen kan du återskapa `DRMMetadata` (med hjälp av Primetime DRM Java SDK) och infoga en ny DRM-princip som innehåller en uppdaterad Application Whitelist-post.
+* Om du levererar HDS-/HLS-innehåll som refererar till en URL-slutpunkt för att hämta `DRMMetadata`innehållet, kan du återskapa `DRMMetadata` (med hjälp av Primetime DRM Java SDK) och infoga en ny DRM-princip som innehåller en uppdaterad Application Whitelist-post.
 
 * Paketera om allt ditt gamla innehåll med en ny DRM-princip som har sammanfattningen av ditt nya signeringscertifikat.
 
@@ -27,4 +30,4 @@ Mer information finns `policy.allowedAIRApplication.n` i *Konfigurationsegenskap
 
 >[!NOTE]
 >
->För vitlistning av ett iOS-program krävs ett särskilt tillvägagångssätt. Se [Whitelist your iOS application](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md) in the *TVSDK for iOS Programmer&#39;s Guide*.
+>Du måste ha en särskild inställning för att kunna visa upp ett iOS-program. Se [Tillåt i listan över iOS-program](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) i *TVSDK for iOS Programmer&#39;s Guide*.
