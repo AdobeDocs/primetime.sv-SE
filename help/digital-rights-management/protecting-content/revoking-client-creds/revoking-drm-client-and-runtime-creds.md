@@ -3,7 +3,10 @@ seo-title: Återkalla DRM-klient- och körningsreferenser
 title: Återkalla DRM-klient- och körningsreferenser
 uuid: 8e36536a-8eed-4d27-8a5f-8d3219817e57
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 DRM-/runtime-versioner identifieras av säkerhetsnivå, versionsnummer och andra attribut, inklusive operativsystem och körningsmiljö. Om du vill begränsa vilka DRM-/runtime-versioner som tillåts anger du modulbegränsningarna i en DRM-princip eller i en `HandlerConfiguration`. Modulbegränsningar kan omfatta en lägsta säkerhetsnivå och en lista över modulversioner som inte får utfärdas för en licens.
 
-Mer information om vilka attribut som används för att identifiera en DRM/körningsmodul finns i [Blacklist of DRM Clients som inte har åtkomst till skyddat innehåll](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md) .
+Se [Blocklista över DRM-klienter som inte har åtkomst till skyddat innehåll](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md) för mer information om de attribut som används för att identifiera en DRM/runtime-modul.
 
 Om den lägsta säkerhetsnivån anges måste klientens version (som anges i maskintoken) vara större än eller lika med det angivna värdet.
 
@@ -24,6 +27,6 @@ Om du behöver en nyare version av Adobe Flash Player/Adobe AIR Runtime eller Ad
 
 Se [Uppdatera en profil med Java API](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md).
 
-Sedan måste du skapa en DRM-principuppdateringslista eller ange begränsningar i `HandlerConfiguration` genom att anropa `HandlerConfiguration.setRuntimeModuleRequirements()` eller `HandlerConfiguration.setDRMModuleRequirements()`. När en användare begär en ny licens med den angivna svartlistan aktiverad måste du installera de senaste körtiderna och biblioteken innan en licens kan utfärdas.
+Sedan måste du skapa en DRM-principuppdateringslista eller ange begränsningar i `HandlerConfiguration` genom att anropa `HandlerConfiguration.setRuntimeModuleRequirements()` eller `HandlerConfiguration.setDRMModuleRequirements()`. När en användare begär en ny licens med de angivna blocklistorna aktiverade måste du installera de senaste körtiderna och biblioteken innan en licens kan utfärdas.
 
-Se exempelkoden i [Uppdatera en princip med Java API. Ett exempel på svartlistning av DRM- och körningsversioner](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) är en svartlistning av DRM- och körningsversioner.
+Se exempelkoden i [Uppdatera en princip med Java API. Ett exempel på blocklistning av DRM- och körningsversioner](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) innehåller ett exempel på blocklistning av DRM- och körningsversioner.
