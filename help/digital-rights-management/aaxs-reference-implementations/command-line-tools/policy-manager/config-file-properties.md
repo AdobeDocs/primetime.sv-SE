@@ -3,7 +3,10 @@ seo-title: Egenskaper för konfigurationsfil
 title: Egenskaper för konfigurationsfil
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,11 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">DRM-klienter hindrade från att komma åt skyddat innehåll. Det här alternativet anger en lista med versioner av DRM-moduler som inte får användas (svart lista). Värdet består av kommaavgränsade namn=värde-par med följande format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">DRM-klienter hindrade från att komma åt skyddat innehåll. Det här alternativet anger en lista med versioner av DRM-moduler som inte får användas (blocklista). Värdet består av kommaavgränsade namn=värde-par med följande format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Programkörningsmiljöerna hindrade från att komma åt skyddat innehåll. Det här alternativet anger en lista med versioner av runtime-moduler som inte får användas (svart lista). Värdet består av kommaavgränsade namn=värde-par med följande format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|program|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Programkörningsmiljöerna hindrade från att komma åt skyddat innehåll. Det här alternativet anger en lista med versioner av runtime-moduler som inte får användas (blocklista). Värdet består av kommaavgränsade namn=värde-par med följande format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|program|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
@@ -145,11 +148,11 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En vit lista över Adobe AIR- och iOS-program som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna Adobe AIR- och iOS-program som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En vit lista över SWF-program som kan spela upp skyddat innehåll. Använd följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> eller file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> är den SWF-fil för vilken hash ska beräknas och <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> är den maximala tiden som tillåts för hämtning och verifiering av SWF-filen (i sekunder). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna SWF-program som kan spela upp skyddat innehåll. Använd följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> eller file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> är den SWF-fil för vilken hash ska beräknas och <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> är den maximala tiden som tillåts för hämtning och verifiering av SWF-filen (i sekunder). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
