@@ -5,7 +5,10 @@ seo-title: Kommandoradsanvändning för principhanteraren
 title: Kommandoradsanvändning för principhanteraren
 uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1228'
+ht-degree: 0%
 
 ---
 
@@ -85,7 +88,7 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Uppspelningsfönstret, vilket är antalet minuter som innehållet kan visas från den första uppspelningen. </p> <p>Om värdet är ospecificerat, eller om <span class="codeph"> -w </span> används utan att ett antal minuter anges, finns det ingen begränsning för uppspelningsfönstret. Värdet får inte vara negativt. </p> <p>Det valfria alternativet <span class="codeph"> Aktivera HS- </span> eller <span class="codeph"> inaktiveraHS- </span> flaggsignaler om du vill aktivera eller inaktivera stopp. Flaggan anger om dekrypteringskontexten förstörs i slutet av uppspelningsfönstret (aktiverat) eller inte förstörs (inaktiverat). </p> <p>Om du till exempel vill ange att innehållet bara får visas i 60 minuter och kräver ett stopp: 
      <codeblock>
        -w&amp;nbsp;60,enableHS 
-     </codeblock> </p> <p>Obs!  Hårdstopp <i></i> stöds för närvarande inte i Flash Player, Android och iOS. </p> </td> 
+     </codeblock> </p> <p>Obs!  <i>Hårdstopp</i> stöds för närvarande inte i Flash Player, Android och iOS. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l minuter </span> </td> 
@@ -108,28 +111,28 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Tillåt anonym åtkomst. </p> <p class="- topic/p ">Du kan inte använda det här alternativet tillsammans med <span class="codeph"> -authNS </span>. </p> <p class="- topic/p ">Det här alternativet är inte tillåtet för uppdateringar. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En vitlista med AIR-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan använda det här alternativet om du vill begränsa vilka utgivare, program och versioner som kan få åtkomst till innehåll som är skyddat med den här DRM-principen. </p> <p class="- topic/p ">Om du inte anger <i class="+ topic/ph hi-d/i ">appId</i>tillåts alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p>Obs!  <i class="+ topic/ph hi-d/i ">min</i> - och <i class="+ topic/ph hi-d/i ">max</i> -versionsnummer är valfria. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -air- </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. Om du vill ta bort eller ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -air </span> utan de återstående argumenten . </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna AIR-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan använda det här alternativet om du vill begränsa vilka utgivare, program och versioner som kan få åtkomst till innehåll som är skyddat med den här DRM-principen. </p> <p class="- topic/p ">Om du inte anger <i class="+ topic/ph hi-d/i ">appId</i>tillåts alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p>Obs!  <i class="+ topic/ph hi-d/i ">min</i> - och <i class="+ topic/ph hi-d/i ">max</i> -versionsnummer är valfria. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -air- </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. Om du vill ta bort eller ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -air </span> utan de återstående argumenten . </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i "></i> value <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"> pairs </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsade namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> eller| release= stringValue </span> </p> <p class="- topic/p ">Till exempel <span class="codeph"> os=Win,release=2.0.1 </span>. Om du under en uppdatering vill ta bort alla poster från listan använder du <span class="codeph"> -drmBlacklist </span> utan de återstående argumenten. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsade namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Till exempel <span class="codeph"> os=Win,release=2.0.1 </span>. Om du under en uppdatering vill ta bort alla poster från listan använder du <span class="codeph"> -drmBlacklist </span> utan de återstående argumenten. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger att DRM-klienter måste ha en tilldelad lägsta säkerhetsnivå för att få åtkomst till skyddat innehåll. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION| USE_IF_AVAILABLE| KRÄVS| NO_PLAYBACK| REQUIRED_ACP| REQUIRED_CGMSA| USE_IF_AVAILABLE_ACP| USE_IF_AVAILABLE_CGMSA </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION | USE_IF_AVAILABLE | KRÄVS | NO_PLAYBACK | REQUIRED_ACP | REQUIRED_CGMSA | USE_IF_AVAILABLE_ACP | USE_IF_AVAILABLE_CGMSA </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Begränsningar för analogt utdataskydd </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE| KRÄVS| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE | KRÄVS | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Begränsningar för skydd av digitala utdata </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeBlacklist name </span> / <i class="+ topic/ph hi-d/i "></i> value <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"> pairs </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">De programkörningsmiljöer som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsat namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> eller| program| release= stringValue </span> </p> <p class="- topic/p ">Till exempel <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Om du under en uppdatering vill ta bort alla poster från listan använder du <span class="codeph"> -runtimeBlacklist </span> utan de återstående argumenten . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">De programkörningsmiljöer som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsat namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | program | release= stringValue </span> </p> <p class="- topic/p ">Till exempel <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Om du under en uppdatering vill ta bort alla poster från listan använder du <span class="codeph"> -runtimeBlacklist </span> utan de återstående argumenten . </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -137,7 +140,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En vitlista med SWF-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -swf- </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. </p> <p>Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -swf </span> utan de återstående argumenten . Om du vill identifiera en SWF-fil med dess hash-värde måste du ange för vilken SWF-fil hash ska beräknas och den maximala tiden som SWF-verifieringen ska slutföras (i sekunder). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna SWF-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -swf- </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. </p> <p>Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -swf </span> utan de återstående argumenten . Om du vill identifiera en SWF-fil med dess hash-värde måste du ange för vilken SWF-fil hash ska beräknas och den maximala tiden som SWF-verifieringen ska slutföras (i sekunder). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= värde </span> </td> 
@@ -148,8 +151,8 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lägger till en anpassad egenskap som visas i licensen som genereras för varje klient. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -p- </span> alternativ om du vill lägga till flera egenskaper. Under en uppdatering måste du använda <span class="codeph"> -p </span> utan de återstående argumenten om du vill ta bort alla egenskaper. Tolkningen eller hanteringen av dessa data hanteras av implementeringen av klientprogrammet. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;anslutningstyper&gt; </span></span> </td> 
-   <td colname="2" class="- topic/entry "> OTA-begränsningar (over the air) för skydd av utdata. I <span class="codeph"> fältet </span> whitelist anges vilka anslutningstyper som ska vitlistas och formatet för &lt;anslutningstyper&gt; är <span class="codeph"> [type(,typ)*] </span>där typen kan vara något av följande: MIRACAST, AIRPLAY, WIDI, DLNA </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;anslutningstyper&gt; </span> </span> </td> 
+   <td colname="2" class="- topic/entry "> OTA-begränsningar (over the air) för skydd av utdata. I <span class="codeph"> fältet </span> whitelist anges vilka anslutningstyper som ska tillåtas och formatet för &lt;anslutningstyper&gt; är <span class="codeph"> [type(,type)*] </span>, där typen kan vara något av följande: MIRACAST, AIRPLAY, WIDI, DLNA </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution &lt;filnamn&gt; </span> </td> 
