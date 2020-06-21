@@ -5,7 +5,10 @@ seo-title: Konfigurationsfiler uppdateras
 title: Konfigurationsfiler uppdateras
 uuid: 34b3247c-3458-49de-b1b0-dc0ebbf61c88
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Du kan när som [!DNL flashaccess-global.xml] helst ändra HSM-lösenordet i. Ä
 
 ## Uppdaterar klientkonfigurationsfilen {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Servern söker även efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och i paketerarens whitelist-certifikatfiler som refereras i klientkonfigurationsfilen.
+Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och paketeraren tillåter listcertifikatfiler som refereras i klientkonfigurationsfilen.
