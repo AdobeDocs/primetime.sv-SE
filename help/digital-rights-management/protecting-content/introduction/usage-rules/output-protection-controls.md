@@ -3,7 +3,10 @@ seo-title: Skydd av utdata
 title: Skydd av utdata
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Utdataskyddet styr parametern om utdata till externa återgivningsenheter är sk
 
 Anger om utdata till externa återgivningsenheter ska begränsas. En extern enhet definieras som en video- eller ljudenhet som inte är inbäddad i datorn. Integrerade bildskärmar, t.ex. bärbara datorer, anses inte vara externa i scenariot för utdataskydd.
 
-OTA-anslutningstyperna är som standard svartlistade, men de kan vitlistas explicit om det behövs. Följande OTA-anslutningar stöds: Miracast, AirPlay, DLNA och WIDI.
+OTA-anslutningstyperna (air) listas som standard, men kan anges explicit om det behövs. Följande OTA-anslutningar stöds: Miracast, AirPlay, DLNA och WIDI.
 
 **Upplösningsbaserat utdataskydd: (Tillgängligt från version 5.3 och framåt.) ** Detta ger utdataskydd baserat på det lodräta pixelantalet i innehållet, vilket gör det möjligt att ange en mängd skyddskrav baserat på antalet lodräta pixlar.
 
