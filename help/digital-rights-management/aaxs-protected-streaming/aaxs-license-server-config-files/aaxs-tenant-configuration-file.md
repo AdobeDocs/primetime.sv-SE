@@ -3,7 +3,10 @@ seo-title: Konfigurationsfil för innehavare
 title: Konfigurationsfil för innehavare
 uuid: 6e5c82c9-b8f5-4fca-8325-a884b2c779f7
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +34,8 @@ Klientkonfigurationsfilen innehåller:
    * **Spela upp höger** - minst en höger måste anges. Om flera rättigheter anges kommer klienten att använda den första rättigheten som den uppfyller alla krav för.
 
       * **Utdataskydd** - Anger om utdata till externa återgivningsenheter ska skyddas.
-      * **AIR- och SWF-programbegränsningar** - Valfri vitlista över SWF- och AIR-program som kan spela upp innehållet (dvs. endast de angivna programmen tillåts). SWF-program identifieras av en URL eller av sammandraget i SWF-filen och den längsta tid som går åt för hämtning och verifiering av sammandraget. Information om hur du beräknar SWF-sammanfattningen finns i avsnittet &quot;SWF-hash-kalkylator&quot;. AIR- och iOS-program identifieras av ett utgivar-ID och valfritt program-ID, lägsta version och högsta version. Om inga programbegränsningar anges kan innehållet spelas upp av alla SWF- eller AIR-program.
-      * **DRM- och körningsmodulbegränsningar** - Anger den lägsta säkerhetsnivå som krävs för DRM/körningsmodulen. Du kan även inkludera en svart lista med versioner som inte får spela upp innehållet. Modulversioner identifieras av attribut som operativsystem och/eller ett versionsnummer. DRM-modulbegränsningar och begränsningar för körningsmodulen har nu stöd för följande ytterligare attribut:
+      * **AIR- och SWF-programbegränsningar** - Valfritt - Tillåt en lista över de SWF- och AIR-program som kan spela upp innehållet (dvs. endast de angivna programmen tillåts). SWF-program identifieras av en URL eller av sammandraget i SWF-filen och den längsta tid som går åt för hämtning och verifiering av sammandraget. Information om hur du beräknar SWF-sammanfattningen finns i avsnittet &quot;SWF-hash-kalkylator&quot;. AIR- och iOS-program identifieras av ett utgivar-ID och valfritt program-ID, lägsta version och högsta version. Om inga programbegränsningar anges kan innehållet spelas upp av alla SWF- eller AIR-program.
+      * **DRM- och körningsmodulbegränsningar** - Anger den lägsta säkerhetsnivå som krävs för DRM/körningsmodulen. Du kan också inkludera en blocklista med versioner som inte får spela upp innehållet. Modulversioner identifieras av attribut som operativsystem och/eller ett versionsnummer. DRM-modulbegränsningar och begränsningar för körningsmodulen har nu stöd för följande ytterligare attribut:
 
          * `oemVendor`
          * `model`
