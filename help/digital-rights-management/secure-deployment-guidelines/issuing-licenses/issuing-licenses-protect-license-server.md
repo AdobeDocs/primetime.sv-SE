@@ -5,7 +5,10 @@ seo-title: Skydda licensservern
 title: Skydda licensservern
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Mer information om hur du skapar CRL:er finns i [RevocationListFactory](https://
 
 ## Återställningsigenkänning {#rollback-detection}
 
-Om din implementering av Adobe Primetime DRM använder affärsregler som kräver att klienten behåller läget (till exempel intervallet för uppspelningsfönstret), rekommenderar Adobe att servern håller reda på återställningsräknaren och använder vitlistning för AIR eller SWF.
+Om din implementering av Adobe Primetime DRM använder affärsregler som kräver att klienten behåller läget (till exempel intervallet för uppspelningsfönstret), rekommenderar Adobe att servern håller reda på återställningsräknaren och använder AIR eller SWF som tillåter listning.
 
 Återställningsräknaren skickas till servern i de flesta begäranden från klienten. Om din implementering av Primetime DRM inte kräver återställningsräknaren kan den ignoreras. I annat fall rekommenderar Adobe att servern lagrar det slumpmässiga dator-ID som hämtas med [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId())och det aktuella räknarvärdet i en databas.
 
@@ -72,11 +75,11 @@ En DoS-attack är ett försök av angripare att förhindra legitima användare a
 
 Mer information om uppspelningsskydd finns i [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Underhåll en vitlista över pålitliga innehållspaket{#maintain-a-whitelist-of-trusted-content-packagers}
+## Underhåll en lista över tillåtna paket med betrott innehåll{#maintain-a-allowlist-of-trusted-content-packagers}
 
-En vitlista är en lista över betrodda enheter.
+En lista över tillåtna är en lista över betrodda enheter.
 
-För innehållspaket är enheterna organisationer som av innehållsägaren är betrodda att paketera (eller kryptera) videofilerna och skapa DRM-skyddat innehåll. När du distribuerar Adobe Primetime DRM bör du ha en vitlista över betrodda innehållspaket. Du måste också verifiera identiteten på innehållspaketeraren i DRM-metadata för en DRM-skyddad fil innan du kan utfärda en licens.
+För innehållspaket är enheterna organisationer som av innehållsägaren är betrodda att paketera (eller kryptera) videofilerna och skapa DRM-skyddat innehåll. När du distribuerar Adobe Primetime DRM bör du ha en lista över betrodda innehållspaket. Du måste också verifiera identiteten på innehållspaketeraren i DRM-metadata för en DRM-skyddad fil innan du kan utfärda en licens.
 
 Mer information om hur du hämtar information om enheten som paketerade innehållet finns i [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
