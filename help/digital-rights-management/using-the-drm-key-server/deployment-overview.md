@@ -3,7 +3,10 @@ seo-title: Distribuera en översikt över nyckelservern Primetime DRM
 title: Distribuera en översikt över nyckelservern Primetime DRM
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -153,7 +156,7 @@ Konfigurationsfilen för **Xbox 360** -klientorganisationen innehåller:
 
 * XSTS-autentiseringsuppgifter - Anger programutvecklarens autentiseringsuppgifter som används för att dekryptera XSTS-token
 * XSTS-signeringscertifikat - Anger det certifikat som används för att verifiera signaturen på XSTS-tokens.
-* Packager Whitelist - Packager-certifikat som är betrodda av nyckelservern. Om det inte finns några paketerarcertifikat i listan betraktas alla paketerarcertifikat som tillförlitliga.
+* Listan Tillåt i Packager - Packager-certifikat som är betrodda av nyckelservern. Om det inte finns några paketerarcertifikat i listan betraktas alla paketerarcertifikat som tillförlitliga.
 
 ## Loggfiler {#log-files}
 
