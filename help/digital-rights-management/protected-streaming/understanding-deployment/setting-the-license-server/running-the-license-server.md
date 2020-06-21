@@ -3,7 +3,10 @@ seo-title: Köra DRM-servern för skyddad direktuppspelning
 title: Köra DRM-servern för skyddad direktuppspelning
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -81,4 +84,4 @@ Du kan när som [!DNL flashaccess-global.xml] helst ändra HSM-lösenordet i. Ä
 
 ### Uppdaterar klientkonfigurationsfilen {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Servern söker även efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och i paketerarens whitelist-certifikatfiler som refereras i klientkonfigurationsfilen.
+Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och paketeraren tillåter listcertifikatfiler som refereras i klientkonfigurationsfilen.
