@@ -2,7 +2,7 @@
 title: Versionsinformation om PTAI 19.11.1
 description: Versionsinformationen för PTAI 19.11.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2019.
 translation-type: tm+mt
-source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 0%
@@ -174,13 +174,13 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
    * Struktur för gammal söknyckel: Zon-, annonssystem-, annons-ID-, Creative-ID-, Creative-URL- och formatparametrar (målvaraktighet, utdataformat, mål-CDN)
    * Uppslagsnycklarna för befintliga CRS-resurser kommer att uppdateras för att matcha den nya strukturen före produktionsreleasen, men observera att nya tillgångar som omkodats mellan uppslagsnyckeluppdateringen och produktionsreleasen kan missas. I så fall initierar de en ny CRS-begäran nästa gång de påträffas efter releasen
 
-* CRS: Lagt till möjlighet att svartlista/vitlista CRS-förfrågningar från specifika annonssystem, annons-ID, kreativa ID:n, kreativa URL:er och/eller kreativa format
+* CRS: Lagt till möjlighet att blockera/tillåt lista över CRS-förfrågningar från specifika annonssystem, annons-ID, kreativa ID:n, kreativa URL:er och/eller kreativa format
 
    >Anteckning
    >
-   >Adobe lägger till svartlistningsregler när annonsleverantörer med dynamiska värden (t.ex. dynamiska parametrar i URL) för samma annons hittas. Sådana svarta listregler inaktiveras när den dynamiska komponenten har lösts, antingen av providern eller via en normaliseringsregel.
+   >Adobe lägger till blocklist-regler när annonsleverantörer med dynamiska värden (t.ex. dynamisk parameter i URL) för samma annons hittas. Sådana blocklisteregler inaktiveras när den dynamiska komponenten har lösts, antingen av providern eller via en normaliseringsregel.
 
-   * Om du vill lägga till en svartlista eller vitlistregel för din zon kan du kontakta din tekniska kontohanterare för att få hjälp.
+   * Om du vill lägga till en blocklist- eller allowlist-regel för din zon kontaktar du din tekniska kontohanterare för att få hjälp.
 
 ### Version 19.1.1
 
