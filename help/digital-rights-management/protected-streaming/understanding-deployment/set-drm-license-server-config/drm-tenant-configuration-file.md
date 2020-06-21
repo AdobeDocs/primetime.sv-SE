@@ -5,7 +5,10 @@ seo-title: Konfigurationsfil för innehavare
 title: Konfigurationsfil för innehavare
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -45,13 +48,13 @@ Klientkonfigurationsfilen innehåller:
    * *Spela upp höger* - Du måste ange minst en rättighet. Om du anger flera behörigheter använder klienten den första rättigheten som uppfyller alla krav.
 
       * *Utdataskydd* - Anger om utdata till externa återgivningsenheter ska skyddas.
-      * *AIR- och SWF-programbegränsningar* - Valfri vitlista över SWF- och AIR-program som kan spela upp innehållet (till exempel tillåts bara de angivna programmen). SWF-program identifieras av en URL eller av sammandraget i SWF-filen och den längsta tid som går åt för hämtning och verifiering av sammandraget.
+      * *AIR- och SWF-programbegränsningar* - Valfritt tillåt en lista över de SWF- och AIR-program som kan spela upp innehållet (till exempel tillåts bara de angivna programmen). SWF-program identifieras av en URL eller av sammandraget i SWF-filen och den längsta tid som går åt för hämtning och verifiering av sammandraget.
 
          Mer information om hur du beräknar SWF-sammanfattningen finns i *SWF-hash-beräkningen* .
 
          Ett utgivar-ID och valfritt program-ID, lägsta version och högsta version identifierar AIR- och iOS-program. Om du inte anger några programbegränsningar kan innehållet spelas upp i alla SWF- och AIR-program.
 
-      * *DRM- och körningsmodulbegränsningar* - Anger den lägsta säkerhetsnivå som krävs för DRM/körningsmodulen. Du kan även inkludera en svart lista med versioner som inte får spela upp innehållet. Modulversioner identifieras av attribut, till exempel operativsystem och/eller ett versionsnummer.
+      * *DRM- och körningsmodulbegränsningar* - Anger den lägsta säkerhetsnivå som krävs för DRM/körningsmodulen. Du kan också inkludera en blocklista med versioner som inte får spela upp innehållet. Modulversioner identifieras av attribut, till exempel operativsystem och/eller ett versionsnummer.
 
          DRM-modulbegränsningar och begränsningar för körningsmodulen har nu stöd för följande ytterligare attribut:
 
