@@ -3,7 +3,10 @@ seo-title: Viktiga funktioner
 title: Viktiga funktioner
 uuid: bee91fd7-a335-4881-abad-8972f28630d5
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1147'
+ht-degree: 0%
 
 ---
 
@@ -45,6 +48,6 @@ Adobe Primetime DRM har följande viktiga funktioner:
 * **Paketering av innehåll som inte är anslutet:** Paketering av innehåll kräver ingen nätverksanslutning till licensservern. Detta möjliggör säkra backend-åtgärder genom att begränsa exponeringen av komprimerat innehåll som ännu inte är skyddat.
 * **Kontroll över klockåterställning: **Primetime DRM ger en säker och korrekt beräkning av tiden för att identifiera återgång av klockan på klientdatorn. Detta medför rättigheter som rör åtkomst till innehåll under en viss tid och förhindrar konsumenterna från att åsidosätta åtkomsträttigheter genom att ändra tiden på datorn.
 * **Individualisering**: Tillåter bindning av innehåll till en viss dator.
-* **Programvitlista:** Tillåter klientkörningen att säkerställa att skyddat innehåll endast spelas upp i ett godkänt SWF- eller AIR-program.
+* **Lista över tillåtna program:** Tillåter klientkörningen att säkerställa att skyddat innehåll endast spelas upp i ett godkänt SWF- eller AIR-program.
 * **Återkallande av kompromisslösa klienter:** Komprometterad klientprogramvara kan återkallas. Om Flash Player- eller Adobe AIR-miljön bedöms vara komprometterad kan tjänsten nekas dessa klienter tills de uppgraderar till en nyare och säkrare version av klientprogramvaran.
 * **Flera profiler för samma videofil:** Ett enda videomaterial kan ha flera inbäddade profiler under paketeringen. När en licens utfärdas kan licensservern bestämma vilken av reglerna som ska användas, vilket gör det möjligt för en innehållsdistributör att använda samma skyddade fil för olika affärsmodeller (t.ex. uthyrning och elektronisk försäljning).
