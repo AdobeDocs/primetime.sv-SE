@@ -3,7 +3,10 @@ seo-title: Viktiga funktioner
 title: Viktiga funktioner
 uuid: b1bded0f-4e45-4ff8-a7ce-dac3d3ec0ab0
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ Adobe Access har följande viktiga funktioner:
 * **Paketering av innehåll som inte är anslutet:** Paketering av innehåll kräver ingen nätverksanslutning till licensservern. Detta möjliggör säkra backend-åtgärder genom att begränsa exponeringen av komprimerat innehåll som ännu inte är skyddat.
 * **Kontroll över klockåterställning: **Adobe Access ger en säker och korrekt beräkning av tiden för att upptäcka klockåterställning på klientdatorn. Detta medför rättigheter som rör åtkomst till innehåll under en viss tid och förhindrar konsumenterna från att åsidosätta åtkomsträttigheter genom att ändra tiden på datorn.
 * **Individualisering**: Tillåter bindning av innehåll till en viss dator.
-* **Programvitlista:** Tillåter klientkörningen att säkerställa att skyddat innehåll endast spelas upp i ett godkänt SWF- eller AIR-program.
+* **Lista över tillåtna program:** Tillåter klientkörningen att säkerställa att skyddat innehåll endast spelas upp i ett godkänt SWF- eller AIR-program.
 * **Återkallande av kompromissade klienter: **Komprometterad klientprogramvara kan återkallas. Om Flash Player- eller Adobe AIR-miljön bedöms vara komprometterad kan tjänsten nekas dessa klienter tills de uppgraderar till en nyare och säkrare version av klientprogramvaran.
 * **Flera profiler för samma videofil: **Ett enstaka videomaterial kan ha flera profiler inbäddade under paketeringen. När en licens utfärdas kan licensservern bestämma vilken av reglerna som ska användas, vilket gör det möjligt för en innehållsdistributör att använda samma skyddade fil för olika affärsmodeller (t.ex. uthyrning och elektronisk försäljning).
 
