@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Management Help
+user-guide-title: Hjälp om Digital Rights Management i Primetime
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 0%
 
 ---
 
@@ -186,10 +189,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Tidsbaserade regler](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Krav för synkronisering](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Körnings- och programbegränsningar {#runtime-application-restrictions}
-      + [Vitlista för Primetime DRM-program som tillåter uppspelning av skyddat innehåll...](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-air.md)
-      + [Vitlista för Adobe® Flash® Player SWF-filer](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-flash.md)
-      + [Lista över DRM-klienter som inte har åtkomst till skyddat innehåll](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md)
-      + [Lista över programkörningar](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-app-runtimes.md)
+      + [Lista över tillåtna DRM-program för Primetime som kan spela upp skyddat innehåll...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Tillåt för Adobe® Flash® Player SWF-filer](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Blocklista över DRM-klienter som inte har åtkomst till skyddat innehåll](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [Blockera lista över programkörningar](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Minsta säkerhetsnivå för DRM och körningsmiljöer](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [Enhetsfunktioner som krävs för att spela upp skyddat innehåll](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Tillämpning av Jailbreak (kräver Adobe Primetime DRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -278,8 +281,8 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [DRM Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Kommandoradsanvändning för principhanteraren](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [Konfigurationsegenskaper](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [Icke-SWF-programvitlista](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-whitelisting.md)
-      + [Vitlista för SWF-program](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-whitelisting.md)
+      + [Icke-SWF-program tillåts](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [Tillåtna listor för SWF-program](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [Listhanterare för DRM-principuppdatering](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
    + [DRM Revocation List Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
@@ -398,7 +401,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Återställningsigenkänning](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Antal datorer när licenser utfärdas](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Uppspelningsskydd](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [Underhåll en vitlista över pålitliga innehållspaket](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-whitelist.md)
+      + [Underhåll en lista över betrodda innehållspaket](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [Timeout för autentiseringstoken](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [Åsidosätta principalternativ](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [Förgenererande licenser](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
@@ -421,10 +424,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Användarautentisering](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [Tidsbaserade regler](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Körnings- och programbegränsningar {#runtime-and-application-restrictions}
-      + [Vitlista för Adobe® Primetime-program som kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)
-      + [Vitlista för Adobe® Flash® Player SWF-filer som kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-flash.md)
-      + [Svartlista över DRM-klienter som inte har åtkomst till skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-drm-clients.md)
-      + [Lista med programkörningsmiljöer som inte har åtkomst till skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-app-runtimes.md)
+      + [Tillåt lista över Adobe® Primetime-program som kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Tillåt lista för Adobe® Flash® Player SWF-filer som får spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Blocklista över DRM-klienter som inte har åtkomst till skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [Blockera en lista över programkörningsmiljöer som inte har åtkomst till skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Minsta säkerhetsnivå för DRM och körningsmiljöer](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Enhetsfunktioner som krävs för att spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Jailbreak Enforcement (requires Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
