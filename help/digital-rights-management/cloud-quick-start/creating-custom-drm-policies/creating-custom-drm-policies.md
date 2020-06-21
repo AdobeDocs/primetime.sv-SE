@@ -3,20 +3,23 @@ seo-title: Skapa anpassade DRM-profiler (valfritt)
 title: Skapa anpassade DRM-profiler (valfritt)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
 
 # Skapa anpassade DRM-profiler (valfritt){#create-custom-drm-policies-optional}
 
-Primetimes DRM Protection Kit innehåller några förkonfigurerade profiler som kan användas under paketeringen. Om ytterligare principkonfigurationer önskas, till exempel en specifik SWF-Whitelisting-rättighet, kan den DRM-principhanterare som ingår användas för att generera anpassade principer.
+Primetimes DRM Protection Kit innehåller några förkonfigurerade profiler som kan användas under paketeringen. Om ytterligare principkonfigurationer önskas, till exempel en specifik SWF-rättighetslista, kan den inkluderade DRM-principhanteraren användas för att generera anpassade principer.
 
 >[!NOTE]
 >
 >Alla profiler måste använda ANONYMOUS-autentisering (inte lösenord för användarnamn eller anpassat), oavsett om arbetsflödet för anpassad autentisering/tillstånd används eller inte.
 
-Principhanteraren ingår i konfigurationsfilen, som har ändrats så att endast de konfigurerbara principalternativ som stöds av DRM-tjänsten i Primetime Cloud visas [!DNL flashaccesstools.properties] . Om du anger principalternativ som inte stöds av DRM-tjänsten i Primetime Cloud resulterar det i licensförvärvsfel. Mer information om hur du använder Primetime DRM Policy Manager finns i: Implementeringar [av DRM-referenser för Primetime: Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
+Principhanteraren ingår i konfigurationsfilen, som har ändrats så att endast de konfigurerbara principalternativ som stöds av DRM-tjänsten i Primetime Cloud visas [!DNL flashaccesstools.properties] . Om du anger principalternativ som inte stöds av DRM-tjänsten i Primetime Cloud resulterar det i licensförvärvsfel. Mer information om hur du använder Primetime DRM Policy Manager finns i: [Implementeringar av Primetime DRM-referenser: Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
 
 Om du vill skapa en ny profil uppdaterar du [!DNL flashaccesstools.properties] filen och använder sedan kommandot:
 
