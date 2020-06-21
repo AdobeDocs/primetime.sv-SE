@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 20.6.1
 description: Versionsinformation om PTAI 20.6.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 **När:** Onsdagen den 15 januari 2020 från 04:00 till 05:00 Eastern Time
 
-* Tjänsten Creative Repackaging erbjuder nu snabbare annonsinfogning genom att automatiskt svartlista oformaterade kreatörer.
+* Tjänsten Creative Repackaging erbjuder nu snabbare annonsinfogning genom att automatiskt blockera listor över felaktigt utformade kreatörer.
 
 * Fas 1-stöd har lagts till för det nya SCTE 35-cue-formatet vid annonsinfogning på serversidan.
 
