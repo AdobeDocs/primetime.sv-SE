@@ -3,9 +3,9 @@ seo-title: Användning av kommandorad
 title: Användning av kommandorad
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna AIR-program som kan spela upp skyddat innehåll. Använd det här för att begränsa vilka utgivare, program och versioner som får komma åt innehåll som skyddas med den här profilen. </p> <p class="- topic/p ">Om <i class="+ topic/ph hi-d/i ">appId</i> inte anges tillåts alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">min</i> - och <i class="+ topic/ph hi-d/i ">max</i> -versionsnummer är valfria. </p> <p class="- topic/p ">Flera <span class="codeph"> -air- </span> alternativ kan anges för att tillåta flera program. Om inga AIR- eller SWF-program anges kan alla program få åtkomst till det här innehållet. Under en uppdatering använder du -air utan de återstående argumenten för att ta bort alla poster från listan. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista av AIR-programmen kunde spela upp skyddat innehåll. Använd det här för att begränsa vilka utgivare, program och versioner som får komma åt innehåll som skyddas med den här profilen. </p> <p class="- topic/p ">Om <i class="+ topic/ph hi-d/i ">appId</i> inte anges tillåts alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">min</i> - och <i class="+ topic/ph hi-d/i ">max</i> -versionsnummer är valfria. </p> <p class="- topic/p ">Flera <span class="codeph"> -air- </span> alternativ kan anges för att tillåta flera program. Om inga AIR- eller SWF-program anges kan alla program få åtkomst till det här innehållet. Under en uppdatering använder du -air utan de återstående argumenten för att ta bort alla poster från listan. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i "></i> value <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"> pairs </span> </td> 
@@ -120,7 +120,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna SWF-program som kan spela upp skyddat innehåll. Flera -swf-alternativ kan anges för att tillåta flera program. Om inga AIR- eller SWF-program anges kan alla program få åtkomst till det här innehållet. Under en uppdatering använder du -swf utan de återstående argumenten för att ta bort alla poster från listan. Om du vill identifiera en SWF-fil med dess hash-värde anger du den SWF-fil som hash-värdet ska beräknas för och den maximala tid som SWF-verifieringen kan slutföras (i sekunder). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista av SWF-programmen kunde spela upp skyddat innehåll. Flera -swf-alternativ kan anges för att tillåta flera program. Om inga AIR- eller SWF-program anges kan alla program få åtkomst till det här innehållet. Under en uppdatering använder du -swf utan de återstående argumenten för att ta bort alla poster från listan. Om du vill identifiera en SWF-fil med dess hash-värde anger du den SWF-fil som hash-värdet ska beräknas för och den maximala tid som SWF-verifieringen kan slutföras (i sekunder). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= värde </span> </td> 
