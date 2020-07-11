@@ -3,9 +3,9 @@ seo-title: Skapa anpassade DRM-profiler (valfritt)
 title: Skapa anpassade DRM-profiler (valfritt)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Skapa anpassade DRM-profiler (valfritt){#create-custom-drm-policies-optional}
 
-Primetimes DRM Protection Kit innehåller några förkonfigurerade profiler som kan användas under paketeringen. Om ytterligare principkonfigurationer önskas, till exempel en specifik SWF-rättighetslista, kan den inkluderade DRM-principhanteraren användas för att generera anpassade principer.
+Primetimes DRM Protection Kit innehåller några förkonfigurerade profiler som kan användas under paketeringen. Om ytterligare principkonfigurationer önskas, till exempel en specifik listrättighet som tillåter SWF-filer, kan den inkluderade DRM-principhanteraren användas för att generera anpassade principer.
 
 >[!NOTE]
 >
