@@ -3,9 +3,9 @@ seo-title: Paketera innehåll
 title: Paketera innehåll
 uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -27,4 +27,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Om varje innehavare använder en annan licensserver och transportautentiseringsuppgifter måste du ange rätt innehavarcertifikat i paketeraren.
 
-För att säkerställa att servern endast utfärdar licenser till innehåll som paketeras av kända paketerare, inkluderar du paketerarens certifikat i listan över tillåtna paket för klientkonfigurationsfilen.
+För att säkerställa att servern endast utfärdar licenser till innehåll som paketeras av kända paketerare, inkluderar du paketerarens certifikat i paketerarens tillåtelselista i klientkonfigurationsfilen.
