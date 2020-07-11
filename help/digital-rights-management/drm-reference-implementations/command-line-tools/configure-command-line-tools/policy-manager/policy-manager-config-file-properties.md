@@ -6,9 +6,9 @@ seo-title: Konfigurationsegenskaper
 title: Konfigurationsegenskaper
 uuid: 216921d1-a9c1-4650-9dce-c025836986e5
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>DRM-klienter som är begränsade från åtkomst till skyddat innehåll. Det här alternativet anger en lista med versioner av DRM-moduler som inte får användas (blocklist). </p> <p>Värdet består av kommaseparerade <span class="codeph"> name=value</span> -par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>DRM-klienter som är begränsade från åtkomst till skyddat innehåll. Det här alternativet anger en lista med versioner av DRM-moduler som inte får användas (blockeringslista). </p> <p>Värdet består av kommaseparerade <span class="codeph"> name=value</span> -par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Programmiljöer är begränsade från åtkomst till skyddat innehåll. Det här alternativet anger en lista med versioner av runtime-moduler som inte får användas (blocklist). </p> <p>Värdet består av kommaseparerade <span class="codeph"> name=value</span> -par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|program|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Programmiljöer är begränsade från åtkomst till skyddat innehåll. Det här alternativet anger en lista med versioner av runtime-moduler som inte får användas (blockeringslista). </p> <p>Värdet består av kommaseparerade <span class="codeph"> name=value</span> -par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|program|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Ytterligare namn/värde-par måste vara kommaavgränsade. Till exempel <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
@@ -186,11 +186,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna program som inte är Flash (Adobe AIR, iOS, Android osv.) som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista av program som inte är Flash (Adobe AIR, iOS, Android osv.) som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En lista över tillåtna SWF-program som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista med SWF-program som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: </p> <p class="- topic/p "> 
      <ul id="ul_EC20F52AD95C4BE3B7F703048A43CDF0"> 
       <li id="li_3E4A47D925C24834A2C25BC5943279D4"><span class="+ topic/ph pr-d/codeph codeph">URL</span> </li> 
       <li id="li_9A7CAF081C5F488FB5CDA6D38C5552F6"><span class="+ topic/ph pr-d/codeph codeph">file=swf_file</span> </li> 
@@ -203,4 +203,3 @@ ht-degree: 0%
   </tr> 
  </tbody> 
 </table>
-
