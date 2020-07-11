@@ -5,7 +5,7 @@ seo-title: Översikt
 title: Översikt
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ SDK innehåller ett Java-API för att utföra dessa åtgärder, och innehåller 
 
 Anger anpassade användningsregler. Anpassade data kan inkluderas i licenser som utfärdas av licensservern. Tolkningen/hanteringen av dessa data är helt och hållet upp till implementeringen av klientprogrammet och licensservern.
 
-Exempel: Aktiverar utbyggbarhet av användningsregler genom att tillåta andra affärsregler att på ett säkert sätt förmedlas som en del av policyn och/eller innehållslicensen. Av säkerhetsskäl bör det här alternativet användas tillsammans med listalternativen för AIR-programmet eller Flash Player SWF-listan över tillåtna eftersom dessa användningsregler används i anpassad klientprogramkod. Mer information finns i&quot;[Körnings- och programbegränsningar](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)&quot;.
+Exempel: Aktiverar utbyggbarhet av användningsregler genom att tillåta andra affärsregler att på ett säkert sätt förmedlas som en del av policyn och/eller innehållslicensen. Av säkerhetsskäl bör det här alternativet användas tillsammans med alternativen för AIR-programmet eller Flash Player SWF tillåtelselista, eftersom dessa användningsregler används i anpassad klientprogramkod. Mer information finns i [Körnings- och programbegränsningar](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md).
