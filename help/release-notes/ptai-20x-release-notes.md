@@ -1,20 +1,44 @@
 ---
-title: Versionsinformation om PTAI 20.6.1
-description: Versionsinformation om PTAI 20.6.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
+title: Versionsinformation om PTAI 20.7.1
+description: Versionsinformation om PTAI 20.7.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om dynamisk annonsinfogning för Primetime 20.6.1
+# Versionsinformation om dynamisk annonsinfogning för Primetime 20.7.1
 
-Versionsinformationen om dynamisk annonsinfogning 20.6.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetimes dynamiska annonsinfogning 2020.
+Versionsinformationen om dynamisk annonsinfogning 20.7.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetimes dynamiska annonsinfogning 2020.
 
-## Nyheter i PTAI 20.6.1
+## Nyheter i PTAI 20.7.1
+
+**När:** Torsdag 9 juli 2020 från 03:00 till 05:00 Eastern Time
+
+**Nya funktioner och förbättringar**
+
+* Förbättrad SCTE35 för att använda något av Provider Ad Start/End-meddelandena eller Break Start/End-meddelandena för att identifiera referenspunkten.
+
+* X-ADBE-AI-X1-huvudet har uppdaterats med ytterligare information för felsökning.
+
+* Förbättrad metrisk aggregering.
+
+* Förbättrad SSAI Console Dashboard för sessionsstatistik.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 20.6.2
+
+**När:** Torsdagen den 18 juni 2020 från 03:00 till 04:00 Eastern Time
+
+**Förbättringar**
+
+Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support för att aktivera millisekundsprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Version 20.6.1
 
 **När:** Tisdagen den 2 juni 2020 från 03:00 till 05:00 Eastern Time
 
@@ -32,7 +56,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
 
-### Version 20.5.1
+#### Version 20.5.1
 
 **När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 Eastern Time
 
@@ -42,7 +66,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Underhållsuppdateringar.
 
-### Version 20.3.4
+#### Version 20.3.4
 
 **När:** Onsdagen den 1 april 2020 från 03:00 till 04:00 Eastern Time
 
@@ -50,7 +74,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Säkerhetsuppdateringar.
 
-### Version 20.3.3
+#### Version 20.3.3
 
 **När:** Torsdagen den 26 mars 2020 från 03:00 till 04:00 Eastern Time
 
@@ -60,7 +84,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Korrigerade ett problem med CMAF/demuxed-ljudströmmar, där EXT-X-MEDIA-SEQUENCE-nummer i vissa scenarier skulle öka felaktigt.
 
-### Version 20.3.2
+#### Version 20.3.2
 
 **När:** Onsdagen den 11 mars 2020 från 05:30 till 07:00 Eastern Time
 
@@ -68,26 +92,26 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Underhållsuppdateringar.
 
-### Version 20.3.1
+#### Version 20.3.1
 
 **När:** Torsdagen den 5 mars 2020 från 02:30 till 04:30 Eastern Time
 
 * Prestandaförbättringar:
 
-   * Stöd för cacheminne har lagts till för både mastermanifest/media m3u8-manifest. De här manifesten svarar nu på Cache-Control: public- och Max-Age-rubriker, som ofta kan förbättra videons startprestanda.
+   * Stöd för cacheminne har lagts till för både m3u8-manifest för överordnad/media. De här manifesten svarar nu på Cache-Control: public- och Max-Age-rubriker, som ofta kan förbättra videons startprestanda.
 
    * Stöd har lagts till för att tvinga https-kreatörer att hämta över http, vilket även kan förbättra videostartens prestanda.
 
 * Säkerhets- och underhållsåtgärder.
 
-### Version 20.2.1
+#### Version 20.2.1
 
 **När:** Torsdag 13 februari 2020 från 04:30 till 05:30 Eastern Time
 
 * Stöd för sammanslagning av annonsmaterial som innehåller flera strömmar med enbart ljud baserat på språk/kodek/bithastighet.
 * Mindre prestandaförbättringar och underhållsuppdateringar.
 
-### Version 20.1.3
+#### Version 20.1.3
 
 **När:** Tisdagen den 28 januari 2020 från kl. 02:00 till kl. 03:00 Eastern Time
 
@@ -101,13 +125,13 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
 
-### Version 20.1.2 (programfix)
+#### Version 20.1.2 (programfix)
 
 **När:** Måndagen den 20 januari 2020 från 02:00 till 03:00 Eastern Time
 
 * Underhållsuppdateringar.
 
-### Version 20.1.1
+#### Version 20.1.1
 
 **När:** Onsdagen den 15 januari 2020 från 04:00 till 05:00 Eastern Time
 
@@ -120,6 +144,12 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 ## Lösta problem
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens. Exempel: `ZD#xxxxx`
+
+**PTAI 20.6.1**
+
+* `WebVTT` fragment begärdes alltid under http-protokollet, oavsett vilket protokoll som ursprungligen begärdes.
+
+* `EXT-X-DISCONTINUITY` -taggar tas bort från spelningslistans övre del när du växlar från annonser tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
 
 **PTAI 20.5.1**
 
