@@ -4,9 +4,9 @@ seo-title: Versionsinformation om Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Versionen fokuserade på att uppdatera Primetime Reference-programmets gråskale
 
 Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
 
-## Förbättringar och korrigeringar i PTAI 20.6.1
+## Förbättringar och korrigeringar i PTAI 20.7.1
 
-Versionen fokuserade på funktioner som manifest manipulation och förbättring av API:er för att hålla sessionen levande med VOD-resurser i lång form. Versionen innehåller även korrigeringar av de vanligaste kundproblemen.
+Versionen fokuserade på SCTE35-förbättring, tillägg av mer information i HTTP-svarshuvuden X-ADBE-AI-X1, förbättrad metrisk aggregering och panelen Sessionsstatistik.
 
 Mer information om den aktuella versionen av dynamisk annonsinfogning finns i [PTAI versionsinformation](ptai-20x-release-notes.md).
 
