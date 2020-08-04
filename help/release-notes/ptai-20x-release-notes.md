@@ -1,20 +1,30 @@
 ---
-title: Versionsinformation om PTAI 20.7.1
-description: Versionsinformation om PTAI 20.7.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2020.
+title: Versionsinformation om PTAI 20.8.1
+description: Versionsinformation om PTAI 20.8.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om dynamisk annonsinfogning för Primetime 20.7.1
+# Versionsinformation om Primetime Dynamic Ad Insertion 20.8.1
 
-Versionsinformationen om dynamisk annonsinfogning 20.7.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetimes dynamiska annonsinfogning 2020.
+Versionsinformationen för Dynamic Ad Insertion 20.8.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
 
-## Nyheter i PTAI 20.7.1
+## Nyheter i PTAI 20.8.1
+
+**När:** Tisdagen den 4 augusti 2020 från kl. 3.00 till kl. 18.00 (Eastern Time)
+
+**Förbättringar och korrigeringar**
+
+Underhållsuppdateringar.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 20.7.1
 
 **När:** Torsdag 9 juli 2020 från 03:00 till 05:00 Eastern Time
 
@@ -26,9 +36,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.7.1 beskriver vad som är n
 
 * Förbättrad metrisk aggregering.
 
-* Förbättrad SSAI Console Dashboard för sessionsstatistik.
-
-### Förbättringar och korrigeringar i tidigare versioner
+* Förbättrad SSAI Console-kontrollpanel för sessionsstatistik
 
 #### Version 20.6.2
 
@@ -36,7 +44,7 @@ Versionsinformationen om dynamisk annonsinfogning 20.7.1 beskriver vad som är n
 
 **Förbättringar**
 
-Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support för att aktivera millisekundsprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
+Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support om du vill aktivera millisekundsprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Version 20.6.1
 
@@ -44,7 +52,7 @@ Förbättrad synkronisering av strömmar för videoklipp som kräver millisekund
 
 **Nya funktioner**
 
-Kontakta Adobes support för att aktivera följande nya funktioner via konfiguration på serversidan:
+Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via konfigurationen på serversidan:
 
 * Manifestmanipulation: HLS-segment och resurs-URL:er kan nu omvandlas mellan HTTP och HTTPS för att öka prestandan genom att minska antalet TLS-handskakningar vid backend-begäranden. Den kan också användas för att sammanfoga annons-/innehållsfragment till samma CDN:er.
 
@@ -54,7 +62,7 @@ Kontakta Adobes support för att aktivera följande nya funktioner via konfigura
 
 * Ett problem har korrigerats där WebVTT-fragment alltid begärdes under http-protokollet, oavsett vilket protokoll som ursprungligen begärdes.
 
-* Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
+* Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta supporten för Adobe för att aktivera den här korrigeringen.
 
 #### Version 20.5.1
 
@@ -149,7 +157,7 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 * `WebVTT` fragment begärdes alltid under http-protokollet, oavsett vilket protokoll som ursprungligen begärdes.
 
-* `EXT-X-DISCONTINUITY` -taggar tas bort från spelningslistans övre del när du växlar från annonser tillbaka till innehåll. Kontakta Adobe Support för att aktivera den här korrigeringen.
+* `EXT-X-DISCONTINUITY` -taggar tas bort från spelningslistans övre del när du växlar från annonser tillbaka till innehåll. Kontakta supporten för Adobe för att aktivera den här korrigeringen.
 
 **PTAI 20.5.1**
 
