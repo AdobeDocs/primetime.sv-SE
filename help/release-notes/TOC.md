@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionsinformation om Primetime
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 # Versionsinformation om Primetime {#release-notes}
 
 + [Översikt över versionsinformation](home.md)
-+ Inläggning av dynamisk annonsering i Primetime {#ptai}
-   + [Versionsinformation om PTAI 20.7.1](ptai-20x-release-notes.md)
++ Primetime Dynamic Ad Insertion {#ptai}
+   + [Versionsinformation om PTAI 20.8.1](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK för iOS {#tvsdk-ios}
    + [Versionsinformation om TVSDK 3.12 för iOS](tvsdk-3x-ios.md)
