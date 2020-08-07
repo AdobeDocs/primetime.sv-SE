@@ -3,7 +3,10 @@ seo-title: Delvis krypteringsnivå
 title: Delvis krypteringsnivå
 uuid: dbd9ce92-c829-4cad-9ac4-c57bd4f70345
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 Det här paketeringsalternativet anger om alla bildrutor, eller bara en delmängd av bildrutor, ska krypteras. Det finns tre krypteringsnivåer: låg, medel och hög.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Delvis kryptering gäller endast för videospåret i F4V-/MP4-filer.
 
