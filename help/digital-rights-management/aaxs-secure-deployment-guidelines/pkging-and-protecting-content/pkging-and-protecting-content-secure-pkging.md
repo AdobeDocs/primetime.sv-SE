@@ -3,7 +3,10 @@ seo-title: Säker paketering av innehåll
 title: Säker paketering av innehåll
 uuid: a5e7cc17-353b-47d1-b89c-a2ba3c9faca1
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ I referensimplementeringskommandoradsverktygen lagras lösenordet för PKCS12-in
 
 Paketeraren använder även transportcertifikaten för licensservern och licensservern. Denna informations integritet och sekretess måste skyddas. Endast behöriga enheter bör tillåtas att använda paketeraren. Om någon av dina privata nycklar har komprometterats ska du omedelbart informera Adobe Systems Incorporated så att certifikatet kan återkallas.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Med API kan du använda samma nyckel för flera olika typer av innehåll. För att säkerställa högsta säkerhetsnivå rekommenderar vi att den här funktionen bara används för FMS-innehåll med flera bitars hastighet. Du bör inte använda samma nyckel för flera filer som representerar olika innehåll.
 
