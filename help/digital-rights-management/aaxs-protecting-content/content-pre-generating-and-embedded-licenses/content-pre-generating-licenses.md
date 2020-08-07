@@ -3,7 +3,10 @@ seo-title: Förgenererande licenser
 title: Förgenererande licenser
 uuid: 31430753-11f1-4ce5-b402-cf4279119a05
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ När en Leaf-licens genereras måste innehållets metadata anges med `initConten
 
 När du genererar en rotlicens kan innehållets metadata anges enligt beskrivningen ovan. En rotlicens kan också genereras med en princip ( `setSelectedPolicy()`) och en licensserver-URL ( `setLicenseServerURL()`) i stället för med metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->En licensserver-URL krävs även om det inte finns någon Adobe Access-licensserver från vilken klienterna kan begära en licens. I det här fallet ska licensserverns URL ange en URL som identifierar licensutfärdaren.
+>En licensserver-URL krävs även om det inte finns någon Adobe Access-licensserver från vilken klienterna kan begära en licens. I så fall ska licensserverns URL ange en URL som identifierar licensutfärdaren.
 
 Om principen använder Förbättrad licenskodning måste en autentiseringsuppgift för licensservern anges för att dekryptera rotkrypteringsnyckeln i principen ( `setRootKeyRetrievalInfo()`).
 
