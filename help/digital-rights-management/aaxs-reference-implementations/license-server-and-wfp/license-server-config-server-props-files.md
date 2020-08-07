@@ -3,14 +3,17 @@ seo-title: Serveregenskapsfiler
 title: Serveregenskapsfiler
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # Serveregenskapsfiler {#server-properties-files}
 
-Servern kräver två konfigurationsfiler, en för licensservern och en för paketeraren. Båda filerna måste placeras i klassökvägen. Egenskapsfilerna innehåller platsen för de inloggningsuppgifter som utfärdats av Adobe. Dessa autentiseringsuppgifter kan anges som en pfx-fil och ett lösenord eller genom att ange ett alias och lösenord för en autentiseringsuppgift som lagras på en HSM.
+Servern kräver två konfigurationsfiler, en för licensservern och en för paketeraren. Båda filerna måste placeras i klassökvägen. Egenskapsfilerna innehåller platsen för inloggningsuppgifterna som utfärdats av Adobe. Dessa autentiseringsuppgifter kan anges som en pfx-fil och ett lösenord eller genom att ange ett alias och lösenord för en autentiseringsuppgift som lagras på en HSM.
 
 Se egenskapsfilerna för mer information om de specifika värdena och hur respektive parameter används. Exempelegenskapsfiler finns i katalogen &quot;resources&quot; i referensimplementeringen (referens Implementation\Server\resources).
 
@@ -32,7 +35,7 @@ Så här förbereder du lösenordet för dina autentiseringsuppgifter:
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >I föregående exempel används ett semikolon (;) som avgränsare. För andra plattformar än Microsoft Windows använder du kolon (:) som avgränsare.
 
