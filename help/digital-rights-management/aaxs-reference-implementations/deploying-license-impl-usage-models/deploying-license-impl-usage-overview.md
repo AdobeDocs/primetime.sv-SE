@@ -3,7 +3,10 @@ seo-title: Implementera översikten över användningsmodeller
 title: Implementera översikten över användningsmodeller
 uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Om du vill aktivera demonstrationen av användningsmodellen anger du den anpassa
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
 ```
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Om du inte aktiverar det valfria demoläget vid paketeringen använder licensservern den policy som angavs vid paketeringen för att utfärda en licens. Om flera profiler har angetts använder licensservern den första giltiga principen.
 
