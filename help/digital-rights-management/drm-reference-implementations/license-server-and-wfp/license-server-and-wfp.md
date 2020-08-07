@@ -5,7 +5,10 @@ seo-title: Licensserver
 title: Licensserver
 uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
 Referensimplementeringsservern kan hjälpa dig att skapa en fullt fungerande licensserver som använder alla funktioner i Adobe Primetime DRM Java SDK.
 
-I den här implementeringen autentiseras användare baserat på användarposter i en databas. Servern innehåller demonstrationsaffärslogik för att utfärda licenser och erbjuder kompatibilitetsstöd för Flash Media Rights Management Server 1.0 och 1.5.
+I den här implementeringen autentiseras användare baserat på användarposter i en databas. Servern innehåller demonstrationslogik för att utfärda licenser och erbjuder kompatibilitetsstöd för Flash Media Rights Management Server 1.0 och 1.5.
 
 ## Krav för licensservern {#license-server-requirements}
 
@@ -29,7 +32,7 @@ När du har installerat Tomcat och MySQL kontaktar du Adobe för att få de DRM-
 
 ## Bygg licensservern {#build-the-license-server}
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Du behöver bara skapa licensservern om du tänker ändra källkoden. I utvärderingssyfte kan du helt enkelt använda WAR-filerna som de levererats.
 
