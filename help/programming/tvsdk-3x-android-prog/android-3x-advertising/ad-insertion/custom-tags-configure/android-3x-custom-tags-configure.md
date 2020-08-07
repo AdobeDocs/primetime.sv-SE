@@ -5,7 +5,10 @@ seo-title: Egna taggar
 title: Egna taggar
 uuid: 2892712f-bb01-4112-baee-6dcafd4fb923
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,9 @@ TVSDK har färdiga funktioner för specifika `#EXT` annonstaggar. Ditt program k
 >
 >Du kan prenumerera på anpassade taggar både för VOD och live/linear-strömmar.
 
->[!LIMITATION] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
+>
+>**Begränsning**
 >
 >När HLS spelas upp med videotaggen i Safari, och inte med Flash Fallback, är den här funktionen inte tillgänglig i Safari.
 
