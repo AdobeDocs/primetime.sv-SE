@@ -3,7 +3,10 @@ seo-title: Brandväggsregler
 title: Brandväggsregler
 uuid: a5667030-c4d0-42e3-b56e-20a12c903954
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Denna URL måste vara tillgänglig endast om du använder API:er för Adobe Access-klienten för att utföra användarautentisering. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder klientAPI:er för Adobe Access för att utföra användarautentisering. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -75,11 +78,11 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er som klienten kan använda för att konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Adobe Access. </p> <p class="- topic/p ">Obs! Den <i class="+ topic/ph hi-d/i ">här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er som klienten kan använda för att konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Den här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Webbtjänst-URL för LiveCycle Rights Management ES. Om innehåll publicerades med en tidigare version av FMRMS tillåter denna URL äldre klienter att ansluta till servern och uppmanas att uppgradera till Adobe Access. </p> <p class="- topic/p ">Obs! Den <i class="+ topic/ph hi-d/i ">här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för LiveCycle Rights Management ES webbtjänst. Om innehåll publicerades med en tidigare version av FMRMS tillåter den här URL:en att äldre klienter ansluter till servern och uppmanas att uppgradera till Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Den här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -88,13 +91,13 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Den interna brandväggen får endast tillåta anslutningar till Adobe Access-licensservern via den omvända proxyn och endast till de URL:er som anges ovan. För att förbättra skalbarheten är kopplingarna mellan den omvända proxyn och Adobe Access över HTTP.
+>Den interna brandväggen får endast tillåta anslutningar till Adobe Access-licensservern via den omvända proxyn och endast till de URL:er som anges ovan. För att förbättra skalbarheten kommer kopplingarna mellan den omvända proxyn och Adobe Access att vara över HTTP.
 
 ## Utgående URL:er {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Licensservern kräver åtkomst via brandväggen för att ladda ned följande listor över återkallade certifikat från Adobe:
+Licensservern kräver åtkomst via brandväggen för att hämta följande listor över återkallade certifikat från Adobe:
 
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
