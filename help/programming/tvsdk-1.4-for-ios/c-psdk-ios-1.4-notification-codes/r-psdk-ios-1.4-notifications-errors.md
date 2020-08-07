@@ -5,7 +5,10 @@ seo-title: FELMEDDELANDEkoder
 title: FELMEDDELANDEkoder
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
@@ -257,4 +260,6 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
  </tbody> 
 </table>
 
->[!NOTE] adID och källa (URL) kan hämtas via `PTAdAsset` i meddelandemetadata med `AD_ASSET` nyckeln.
+>[!NOTE]
+>
+>adID och källa (URL) kan hämtas via `PTAdAsset` i meddelandemetadata med `AD_ASSET` nyckeln.
