@@ -3,7 +3,10 @@ seo-title: Krav för synkronisering
 title: Krav för synkronisering
 uuid: 976a0ae1-bece-437e-b95b-6cd222525d13
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Synkroniseringsbeteendet definieras med följande parametrar:
 * Hårt stoppintervall - (valfritt). Tillåt inte uppspelning om en lyckad synkronisering inte har utförts under den angivna tiden.
 * Tvinga synkroniseringssannolikhet - (valfritt). Sannolikhet med vilken klienten ska skicka ett synkroniseringsmeddelande före nästa startintervall.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den här användningsregeln stöds av Adobe Access-klienter version 3.0 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minimal klientversion](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
 
