@@ -3,9 +3,9 @@ seo-title: Skydd av utdata
 title: Skydd av utdata
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
 | **Inget skydd** - Ingen aktivering av utdataskydd krävs för analoga och digitala utdata. | JA | JA |
 | **Ingen uppspelning** - Tillåt inte uppspelning till en extern enhet för analoga och digitala utdata. | JA | JA |
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Dessa regler används konsekvent på alla plattformar, men du kan bara på ett säkert sätt aktivera utdataskydd på Windows-plattformar. På andra plattformar, till exempel Macintosh och Linux, finns det inga operativsystemsfunktioner som stöds tillgängliga för tredjepartsprogram.
 
