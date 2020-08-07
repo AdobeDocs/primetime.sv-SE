@@ -3,7 +3,10 @@ seo-title: Paketera media
 title: Paketera media
 uuid: f6e877be-d916-4766-bc44-99891a3df3a8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Om du vill paketera en enskild FLV- eller F4V-fil väljer du **[!UICONTROL Selec
 
 Om du vill paketera alla filer i en mapp väljer du **[!UICONTROL Select Single Folder]** alternativet. Ange den mapp som innehåller källfilerna. Endast filer i indatamappen som matchar villkoren kommer att paketeras (filer i undermappar paketeras inte). **[!UICONTROL Input Media File Selection]** Välj om du vill kryptera [!DNL .flv] filer, [!DNL .f4v] filer eller ange ett eget reguljärt uttryck (till exempel &quot;.*&quot; krypterar alla filer i mappen). De krypterade filerna sparas i den angivna utdatamappen med samma filnamn som originalfilen.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Filsökvägarna måste referera till filer som är tillgängliga för paketeringsservern. Om du kör Flash Access Manager på en annan dator än paketeringsservern måste du ange en sökväg som är tillgänglig för servern (antingen på en nätverksenhet eller på själva servern).
 
