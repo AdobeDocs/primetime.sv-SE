@@ -3,7 +3,10 @@ seo-title: Lagra autentiseringsuppgifter
 title: Lagra autentiseringsuppgifter
 uuid: dbce523c-32d9-423f-bc95-39786f85fc29
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 SDK har stöd för flera sätt att lagra autentiseringsuppgifter (ett certifikat för offentlig nyckel och tillhörande privat nyckel), bland annat på en HSM eller som en PKCS12-fil. Autentiseringsuppgifter används när den privata nyckeln krävs (till exempel för att paketeraren ska signera metadata eller för att licensservern ska dekryptera data som krypterats med licensservern eller den offentliga transportnyckeln). Privata nycklar måste övervakas noga för att säkerställa säkerheten för ditt innehåll och din licensserver. PKCS12 är ett standardformat för en fil som innehåller en referens som krypterats med ett lösenord. Filtillägget .pfx används vanligtvis för filer i det här formatet.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Adobe rekommenderar att du använder HSM för maximal säkerhet. Mer information finns i Adobe Access Secure Deployment Guidelines.
+>Adobe rekommenderar att du använder HSM för maximal säkerhet. Mer information finns i Riktlinjerna för säker distribution för Adobe Access.
 
->[!NOTE] {prioritet=&quot;high&quot;}
+>[!NOTE]
 >
 >Från och med Java1.7 har 64-bitars Sun Java för Windows inte stöd för de PKCS11-gränssnitt som krävs för att Adobe Access DRM ska kunna kommunicera med HSM-enheter. Om du tänker använda ett HSM-kort bör du använda en 32-bitarsversion av Java, eller använda en JDK som har stöd för de fullständiga PKCS1-gränssnitten.
 
