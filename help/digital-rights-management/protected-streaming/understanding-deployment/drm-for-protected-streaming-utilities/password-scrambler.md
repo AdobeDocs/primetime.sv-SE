@@ -1,18 +1,21 @@
 ---
-description: Verktyget Password Scrambler krypterar ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
-seo-description: Verktyget Password Scrambler krypterar ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
+description: Med lösenordsmodulen krypteras ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
+seo-description: Med lösenordsmodulen krypteras ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
 seo-title: Lösenordsskrubbare
 title: Lösenordsskrubbare
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
 
 # Lösenordsskrubbare {#password-scrambler}
 
-Verktyget Password Scrambler krypterar ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
+Med lösenordsmodulen krypteras ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
 
 Om du vill köra krysset skriver du:
 
@@ -43,6 +46,6 @@ Encrypted password:
 
 Alla lösenord som du har angett i [!DNL flashaccess-global.xml] och [!DNL flashaccess-tenant.xml] filer måste krypteras.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Verktyget Password Scrambler i Primetime DRM-servern för skyddad direktuppspelning är inte utbytbart med den skriptare som finns i Reference Implementation License Server.
