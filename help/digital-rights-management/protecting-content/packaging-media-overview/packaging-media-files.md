@@ -3,7 +3,10 @@ seo-title: Paketera mediefiler - översikt
 title: Paketera mediefiler - översikt
 uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '663'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ När en fil är krypterad kan dess innehåll inte tolkas utan rätt licens. Du k
 
 Ett visst innehåll kan ha flera DRM-principer. Du kan till exempel licensiera innehåll under olika affärsmodeller utan att behöva paketera innehållet flera gånger. Dessutom kan ni tillåta anonym åtkomst under en kort period och sedan tillåta kunden att köpa innehållet för obegränsad åtkomst. Om innehåll paketeras med flera DRM-principer måste licensservern implementera logik för att välja vilken DRM-princip som ska användas för att utfärda en licens.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Med arkitekturen kan DRM-principer för användning anges och bindas till innehåll när innehållet paketeras. Innan en klient kan spela upp innehåll måste klienten hämta en licens för en angiven dator. Licensen anger vilka användningsregler som används och ger den nyckel som måste användas för att dekryptera innehållet. DRM-principen representerar en mall för att generera en licens. Licensservern kan dock åsidosätta användningsreglerna när den utfärdar en licens. Licensen kan vara ogiltig på grund av sådana begränsningar, t.ex. förfallotider eller uppspelningsfönster.
 
@@ -34,6 +37,6 @@ I vissa fall kan du behöva lagra innehållets metadata som en separat fil och g
 
 Alla dessa åtgärder kan utföras med Java API.
 
-Mer information om Java API finns i API-referens *för* Adobe Primetime.
+Mer information om Java API finns i *Adobe Primetime DRM API Reference* .
 
-Se *Använda Adobe Primetime DRM Reference Implementations* för information om referensimplementeringen av Media Packager.
+Mer information om referensimplementeringen av Media Packager finns i *Använda referensimplementeringar* för Adobe Primetime DRM.
