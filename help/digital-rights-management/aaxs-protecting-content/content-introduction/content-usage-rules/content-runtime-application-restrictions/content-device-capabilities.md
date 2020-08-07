@@ -3,7 +3,10 @@ seo-title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Enhetens funktioner kan identifieras med de attribut som anges i följande tabel
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den här användningsregeln stöds av Adobe Access-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minimal klientversion](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
