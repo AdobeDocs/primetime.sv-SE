@@ -5,7 +5,10 @@ seo-title: Arbetsflöde med flera DRM-DRM för FairPlay
 title: Arbetsflöde med flera DRM-DRM för FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +68,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
    1. Nyckel i ASK för att slutföra certifikatgenereringen och klicka på **[!UICONTROL Continue]**.
    1. När du har verifierat att du har sparat ASK klickar du på **[!UICONTROL Generate]** för att fortsätta.
 
-      >[!NOTE] {prioritet=&quot;high&quot;}
+      >[!NOTE]
       >
       >Det är viktigt att du sparar en kopia av ASK och lagrar den på ett säkert sätt. *Om din ASK är komprometterad kan du inte längre skydda ditt innehåll med FairPlay Streaming.* Endast en (1) ASK tilldelas ditt team. Värdet kommer inte att anges igen och du kan inte hämta det senare.
 
@@ -100,7 +103,7 @@ Nu kan du skapa iOS-program eller HTML5-sidor med FairPlay-innehållsskydd tills
 
 ### Paketera ditt innehåll för FairPlay {#package-your-content-for-fairplay}
 
-Om du vill paketera innehåll kan du antingen använda Adobe Offline Packager eller andra verktyg som ExpressPlays Bento4-paketerare.
+Om du vill paketera innehåll kan du antingen använda offlinepaketeraren i Adobe eller andra verktyg som ExpressPlay Bento4-paketeraren.
 
 Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen och publicering) och skyddar videon med den valda DRM-lösningen (i det här fallet FairPlay):
 
@@ -113,7 +116,7 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
 
 1. Paketera innehållet.
 
-   Här är ett exempel på hur du paketerar med Adobe Offline Packager. I Packager används en konfigurationsfil (t.ex. [!DNL fairplay.xml]) som ser ut ungefär så här:
+   Här är ett exempel på paketering med Adobe Offline Packager. I Packager används en konfigurationsfil (t.ex. [!DNL fairplay.xml]) som ser ut ungefär så här:
 
    ```
    <config>
@@ -141,6 +144,7 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
    * `iv_file_path` - Det här är platsen för IV-filen på paketeringsdatorn.
    * `key_url` - URI-parametern för `EXT-X-KEY` -taggen i [!DNL .m3u8] filen.
    * `content_id` - Standardvärde.
+
    Som anges i [Packager-dokumentationen](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)skapar du en konfigurationsfil som innehåller de vanliga alternativen som du vill använda för att generera utdata. Skapa sedan utdata genom att ange specifika alternativ som kommandoradsargument.&quot;
 
    ```
@@ -158,9 +162,9 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
 
 ### Ange principer för FairPlay {#setting-policies-for-fairplay}
 
-Du kan ange principer för FairPlay-skyddat innehåll med hjälp av en tillståndsserver. Du kan skapa en egen eller använda en exempeltillståndsserver från Adobe.
+Du kan ange principer för FairPlay-skyddat innehåll med hjälp av en tillståndsserver. Du kan konfigurera en egen eller använda en exempeltillståndsserver som tillhandahålls av Adobe.
 
-Adobe tillhandahåller en SEES (Sample ExpressPlay Entitlement Server) som visar hur man gör *tidsbaserade* och *enhetsbindande* tillstånd. Denna exempeltillståndsserver är byggd på ExpressPlay-tjänster.
+Adobe tillhandahåller en SEES-server (Sample ExpressPlay Entitlement Server) som visar hur du gör *tidsbaserade* och *enhetsbindande* tillstånd. Denna exempeltillståndsserver är byggd på ExpressPlay-tjänster.
 
 [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
