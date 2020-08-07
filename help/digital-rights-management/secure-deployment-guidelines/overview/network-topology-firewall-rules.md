@@ -5,7 +5,10 @@ seo-title: Brandväggsregler
 title: Brandväggsregler
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Autentisera användare. </p> <p>Denna URL måste vara tillgänglig om du använder API:er för Adobe Primetime DRM-klienten för användarautentisering. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Autentisera användare. </p> <p>Denna URL måste vara tillgänglig om du använder Adobe Primetime DRM Client API:er för användarautentisering. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -90,7 +93,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Webbtjänst-URL för LiveCycle Rights Management ES. Om innehåll har publicerats med en tidigare version av FMRMS tillåter denna URL äldre klienter att ansluta till servern. Dessa kunder uppmanas att uppgradera till Adobe Primetime DRM. </p> <p class="- topic/p ">Obs! Den här URL:en måste använda SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för LiveCycle Rights Management ES webbtjänst. Om innehåll har publicerats med en tidigare version av FMRMS tillåter denna URL äldre klienter att ansluta till servern. Dessa klienter uppmanas att uppgradera till Adobe Primetime DRM. </p> <p class="- topic/p ">Obs! Den här URL:en måste använda SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -103,7 +106,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den interna brandväggen bör endast tillåta anslutningar till DRM-licensservern Primetime via den omvända proxyn och endast till URL:erna i tabellen. Om du vill förbättra skalbarheten använder du HTTP för anslutningarna mellan den omvända proxyn och Primetime DRM.
 
