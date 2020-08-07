@@ -1,14 +1,17 @@
 ---
-seo-title: Bearbeta DRM-begäranden från Adobe Primetime
-title: Bearbeta DRM-begäranden från Adobe Primetime
+seo-title: Bearbeta Adobe Primetime DRM-begäranden
+title: Bearbeta Adobe Primetime DRM-begäranden
 uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
 
-# Bearbeta DRM-begäranden från Adobe Primetime {#process-adobe-primetime-drm-requests}
+# Bearbeta Adobe Primetime DRM-begäranden {#process-adobe-primetime-drm-requests}
 
 Det allmänna sättet att hantera begäranden är att skapa en hanterare, tolka begäran, ange svarsdata eller felkod och stänga hanteraren.
 
@@ -16,7 +19,7 @@ Basklassen som används för att hantera en begäran/svar-interaktion är `com.a
 
 Om begäran lyckas, ange svarsdata. Anropar annars `RequestMessageBase.setErrorData()` vid fel. Avsluta alltid implementeringen genom att anropa `close()` metoden (det rekommenderas att `close()` anropas i `finally` blocket för en `try` programsats). I API-referensdokumentationen finns ett exempel `MessageHandlerBase` på hur du anropar hanteraren.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >HTTP-statuskod 200 (OK) ska skickas som svar på alla begäranden som behandlas av hanteraren. Om hanteraren inte kunde skapas på grund av ett serverfel kan servern svara med en annan statuskod, till exempel 500 (Internt serverfel).
 
@@ -39,7 +42,7 @@ En Adobe Primetime DRM-begäran kan innehålla en autentiseringstoken.
 
 Om autentisering av användarnamn/lösenord användes kan begäran innehålla en `AuthenticationToken` genererad av `AuthenticationHandler`. Om du vill komma åt och verifiera token måste du använda `RequestMessageBase.getAuthenticationToken()`. Om du vill initiera en begäran om användarnamn/lösenord på klienten använder du API:t för `DRMManager.authenticate()` ActionScript eller iOS.
 
-Om klienten och servern använder en anpassad autentiseringsmekanism hämtar klienten en autentiseringstoken via någon annan kanal och ställer in den anpassade autentiseringstoken med API:t för `DRMManager.setAuthenticationToken` ActionScript 3.0. Använd `RequestMessageBase.getRawAuthenticationToken()` för att hämta den anpassade autentiseringstoken. Serverimplementeringen avgör om den anpassade autentiseringstoken är giltig.
+Om klienten och servern använder en anpassad autentiseringsmekanism hämtar klienten en autentiseringstoken via någon annan kanal och ställer in en anpassad autentiseringstoken med API:t `DRMManager.setAuthenticationToken` ActionScript 3.0. Använd `RequestMessageBase.getRawAuthenticationToken()` för att hämta den anpassade autentiseringstoken. Serverimplementeringen avgör om den anpassade autentiseringstoken är giltig.
 
 ## Uppspelningsskydd {#replay-protection}
 
@@ -63,7 +66,7 @@ Toleransen för klocktillbakaspolning är en egenskap som kan ställas in av lic
 
 Om licensservern finns på en annan domän än SWF-filen för videouppspelning behövs en DRM-principfil ( [!DNL crossdomain.xml]) mellan domäner för att SWF-filen ska kunna begära licenser från en licensserver. En DRM-principfil för flera domäner representeras av en XML-fil som gör att servern kan ange att dess data och dokument är tillgängliga för SWF-filer som hanteras från andra domäner. Alla SWF-filer som hanteras från en domän som anges i licensserverns DRM-korsdomänprincipfil har behörighet att komma åt data eller resurser från den licensservern.
 
-Adobe rekommenderar att utvecklare följer vedertagna standarder när de distribuerar korsdomänprincipfilen genom att endast tillåta betrodda domäner att komma åt licensservern och begränsa tillgången till underkatalogen license på webbservern.
+Adobe rekommenderar att utvecklare följer vedertagna standarder när de distribuerar korsdomänprincipfilen genom att endast tillåta betrodda domäner att komma åt licensservern och begränsa tillgången till licensunderkatalogen på webbservern.
 
 Mer information om DRM-principfiler mellan domäner finns på följande platser:
 
