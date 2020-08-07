@@ -3,7 +3,10 @@ seo-title: Bädda in licenser
 title: Bädda in licenser
 uuid: e3d55376-07de-479c-9a53-04bc8071ced4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Om du vill bädda in en licens måste du skaffa en instans av `com.adobe.flashac
 
 I `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` katalogen Reference Implementation Command Line Tools finns [!DNL Samples] exempelkod som demonstrerar inbäddade licenser.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >En Adobe Primetime DRM 2.0-klient ignorerar alla licenser som är inbäddade i innehållet och försöker sedan hämta en licens från licensservern som anges i metadata. Om metadata anger att ingen licensserver är tillgänglig måste en Primetime DRM 2.0-klient uppgraderas innan du kan visa innehållet.
 
