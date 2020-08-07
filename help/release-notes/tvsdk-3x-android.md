@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distr
 >
 >1. Hämta VideoHeartbeat.jar från [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (VideoHeartbeat-biblioteket för Android v2.0.0)
 >1. Extrahera VideoHeartbeat.jar till mappen libs/.
->
-
 
 
 TVSDK för Android har många prestandaförbättringar jämfört med tidigare versioner. Den ger en tittarupplevelse av hög kvalitet och innehåller alla funktioner i version 1.4, med undantag för Multi-CDN-stöd.
@@ -145,9 +143,9 @@ Förhandsgranskningsannonsen spelas upp, om en sådan finns, och sedan spelas in
 
 * **Just in Time - Reolving ads close to ads ads** Lazy Ad Resolving now resolves each ads break independent. Tidigare var annonsupplösningen tvåstegsbaserad: pre-rolls löstes innan uppspelningen startades och alla my-/post-rollplatser kombinerades efter att uppspelningen startades. Med den här förbättrade funktionen löses nu alla annonsbrytningar vid en viss tidpunkt före annonsreferenspunkten.
 
-> [!NOTE]
+>[!NOTE]
 >
-> Lazy Ad Resolving har nu inaktiverats som standard och måste aktiveras explicit.
+>Lazy Ad Resolving har nu inaktiverats som standard och måste aktiveras explicit.
 
 Ett nytt API läggs till `AdvertisingMetadata::setDelayAdLoadingTolerance` för att få den fördröjda annonsinläsningstoleransen som är kopplad till dessa Advertising-metadata.\
 Sökningar är nu tillåtna direkt efter PREPARATION, och sökning efter över annonsbrytningar ger en omedelbar lösning innan sökningen är klar.\
@@ -193,7 +191,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **Säker annonsinläsning över HTTPS**
 
-   Med Adobe Primetime kan du begära att få en primär annonsserver och CRS via https.
+   Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
@@ -277,9 +275,9 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
 * **MP4 Content Playback -** MP4 short clips do not need to be retranscoded to play back within TVSDK.
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
+   >ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
 
 * **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
 
@@ -295,8 +293,9 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
 * **Stöd för arbetsflöden**
 
-   * **Direktfaktureringsintegrering -** Detta skickar faktureringsstatistik till Adobe Analytics-backend, som certifieras av Adobe Primetime för strömmar som används av kunden.
-   TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. Vid varje direktstarthändelse använder TVSDK Adobes API för datainfogning i Analytics för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på längden på den fakturerbara strömmen - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte eller ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+   * **Integrering med direkt fakturering -** Detta skickar faktureringsmätningar till Adobe Analytics, som certifieras av Adobe Primetime för strömmar som används av kunden.
+
+   TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
 
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
 
@@ -307,7 +306,7 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
-* **Analytics**
+* **Analyser**
 
    * **VHL 2.0 -** Det här är den senaste optimerade VHL-integreringen (Video Heartbeats Library) för automatisk insamling av användningsdata för Adobe Analytics. API:ernas komplexitet har minskat för att underlätta implementeringen. Hämta VHL-biblioteket [v2.0.0 för Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) och extrahera JAR-filen i mappen libs.
 
@@ -414,7 +413,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
-| Integrering med Analytics VHL | VOD + Live | Y |
+| Integrering med Adobe Analytics VHL | VOD + Live | Y |
 | Fakturering | VOD + Live | Y |
 
 ## Lösta problem {#resolved-issues}
@@ -468,11 +467,11 @@ I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.
    * Korrigerade ett specifikt fall runt annonsuppföljningshändelser.
 * ZD#37491 - HTTP-statuskod med felmetadata saknas.
    * Arbetade med att sprida nätverksfel högre upp i stacken.
-* ZD#37808 - Tillåt listans nya anpassade huvud.
+* ZD#37808 - Tillåtelselista Ny anpassad rubrik.
    * Stöd för SSAI_TAG har lagts till som en del av den här korrigeringen.
 * ZD#37622 - URISyntaxfel från specifika AD Pods.
    * Korrigerat ett problem med krasch vid direktuppspelning när kundens Android-app hanteras annonser som innehåller en okodad %
-* ZD#37631 - Mastermanifeståterförsöksmekanism för Android TVSDK.
+* ZD#37631 - Överordnad manifeståterförsöksmekanism för Android TVSDK.
    * Nytt API har lagts till i nätverkskonfigurationen för hantering av den här förbättringen. Om API:t inte används görs inget nytt försök att skapa manifestet. Om det används kommer manifestet att provas igen för att hantera nätverksfel och timeout.
 
 **Version 3.2**
@@ -640,7 +639,7 @@ WebViewDebbuging är som standard inställt på False. Om du vill aktivera fels�
 
    Användaragentsträngen kommer inte längre att trunkeras efter 128 tecken.
 
-   Versionssträngen Adobe Primetime läggs till i systemanvändaragenten.
+   Adobe Primetime-versionssträng läggs till i systemanvändaragenten.
 
 * Zendesk #30809 Saknad SEEK_END-händelse förhindrar att appen övergår till uppspelningsläge.
 * Zendesk #30415 Closed Captions &#39;Cyan&#39;-färg är nu en mörkare nyans av blått (turkos) jämfört med tidigare Primetimes TVSDK-versioner.
@@ -759,4 +758,4 @@ Den här versionen av TVSDK har följande problem:
 * [TVSDK Android C++ API-dokument](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Varje Java-klass har en motsvarande C++-klass, och C++-dokumentationen innehåller mer förklarande material än Javadocs, så se C++-dokumentationen för en djupare förståelse av Java API.
 * [TVSDK 1.4 till 2.5 för migreringshandbok för Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Information om hur du hanterar scenarier för att visa/dölja skärmar finns i den `Application_Changes_for_Screen_On_Off.pdf` fil som ingår i bygget.
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
