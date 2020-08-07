@@ -1,18 +1,21 @@
 ---
-description: För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som har gjorts tillgänglig av Adobe eller ett eget TVSDK-baserat videoprogram.
-seo-description: För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som har gjorts tillgänglig av Adobe eller ett eget TVSDK-baserat videoprogram.
+description: För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som tillhandahålls av Adobe eller ett eget TVSDK-baserat videoprogram.
+seo-description: För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som tillhandahålls av Adobe eller ett eget TVSDK-baserat videoprogram.
 seo-title: Spela upp skyddat innehåll
 title: Spela upp skyddat innehåll
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # Spela upp skyddat innehåll {#playback-your-protected-content}
 
-För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som har gjorts tillgänglig av Adobe eller ett eget TVSDK-baserat videoprogram.
+För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som tillhandahålls av Adobe eller ett eget TVSDK-baserat videoprogram.
 
 1. Använd licensserverns URL från det tokensvar du fick från ExpressPlay-servern för att testa om du kan spela upp skyddat innehåll.
 
@@ -82,7 +85,7 @@ För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {prioritet=&quot;high&quot;}
+   >[!NOTE]
    >
    >Den föregående informationen gäller endast testning av FairPlay-konfigurationen. Det kanske inte gäller för din produktionskonfiguration, beroende på hur du konfigurerar hanteraren för FairPlay. Mer information finns i [Aktivera Apple FairPlay i iOS-program](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) .
 
