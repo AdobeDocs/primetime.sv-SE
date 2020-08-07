@@ -3,9 +3,9 @@ seo-title: Översikt
 title: Översikt
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 När du skapar en AIR-fil genererar AIR Developer Tool (ADT) automatiskt ett utgivar-ID. Verktyget AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) beräknar utgivar-ID för ett AIR-program.
 
-Utgivar-ID:t är unikt för certifikatet som du använder för att skapa en AIR-fil. Om du återanvänder samma certifikat för flera AIR-program har alla AIR-program samma utgivar-ID. En AIR-release som godkänns i version 1.5.2 lägger inte till det genererade utgivar-ID:t i en fil. Om du tänker använda en lista över tillåtna i ett AIR-program använder du det här verktyget för att fastställa utgivar-ID:t.
+Utgivar-ID:t är unikt för certifikatet som du använder för att skapa en AIR-fil. Om du återanvänder samma certifikat för flera AIR-program har alla AIR-program samma utgivar-ID. En AIR-release som godkänns i version 1.5.2 lägger inte till det genererade utgivar-ID:t i en fil. Om du tänker använda ett AIR-program tillåtelselista använder du det här verktyget för att fastställa utgivar-ID:t.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Utgivar-ID:t som används för att framtvinga listor i AIR är inte detsamma som det utgivar-ID som anges i programmets [!DNL application.xml] fil.
+>Det utgivar-ID som används för att framtvinga AIR tillåtelselista är inte samma som det utgivar-ID som anges i programmets [!DNL application.xml] fil.
 
 ## Kommandoradsanvändning för verktyget AIR Publisher ID {#air-publisher-id-utility-command-line-usage}
 
