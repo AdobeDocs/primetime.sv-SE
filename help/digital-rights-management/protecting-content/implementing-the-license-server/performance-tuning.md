@@ -3,7 +3,10 @@ seo-title: Prestandajustering
 title: Prestandajustering
 uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '404'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Använd följande tips för att förbättra prestandan:
 * Att använda nätverks-HSM kan vara betydligt långsammare än att använda en direktansluten HSM.
 * För bättre prestanda kan du som alternativ aktivera inbyggt stöd för kryptografiska åtgärder genom att distribuera de plattformsspecifika biblioteken i SDK- [!DNL thirdparty/cryptoj] mappen. Om du vill aktivera inbyggt stöd lägger du till biblioteket för din plattform (jsafe.dll för Windows eller libjsafe.so för Linux) i sökvägen.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;
+   >[!NOTE]
    >
    >Om du kör flera webbprogram i samma Tomcat-instans och har `jsafe.dll` på sökvägen kan bara det första webbprogrammet som läser in `jsafe.dll` biblioteket läsas in. Därför är det bara det första webbprogrammet som får det inbyggda stödet. Om du i så fall vill förbättra prestandan för alla webbprogram placerar du `cryptoj.jar`utanför WAR-filen. Till exempel i `<tomcat_installation_folder>/lib` katalogen.
 
@@ -25,7 +28,7 @@ Använd följande tips för att förbättra prestandan:
 
 Under vissa förhållanden kan Linux-miljöer pausa vid körning av DRM-relaterade åtgärder i Primetime som kräver slumpmässig nummergenerering, inklusive:
 
-* Start av Adobe Primetime DRM-licensservern
+* Starta Adobe Primetime DRM-licensservern
 * Policygenerering med [!DNL AdobePolicyManager] verktyget
 * Paketera DRM-skyddat innehåll med Adobe Media Server eller Primetime OfflinePackager
 
