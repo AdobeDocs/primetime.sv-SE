@@ -1,18 +1,21 @@
 ---
-seo-title: Jailbreak Enforcement (requires Adobe Primetime)
-title: Jailbreak Enforcement (requires Adobe Primetime)
+seo-title: Jailbreak Enforcement (kräver Adobe Primetime)
+title: Jailbreak Enforcement (kräver Adobe Primetime)
 uuid: 12be7499-c359-406f-ace9-a4aad9e00207
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
 
-# Jailbreak Enforcement (requires Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
+# Jailbreak Enforcement (kräver Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
 På plattformar som stöder jailbreak-identifiering (till exempel Android- och iOS-mobilenheter), kan du aktivera tvångsuppföljning av jailbreak-attacker och inaktivera uppspelning av innehåll om det [!DNL jailbreak/root] har identifierats på enheten.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den här användningsregeln stöds av Adobe Access-klienter version 4.0 och senare, men har ingen effekt på plattformar som inte stöder jailbreak-identifiering. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern.
 
