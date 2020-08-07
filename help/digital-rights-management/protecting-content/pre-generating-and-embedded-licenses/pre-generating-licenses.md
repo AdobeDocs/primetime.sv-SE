@@ -1,18 +1,21 @@
 ---
-description: Om du använder Adobe Primetime DRM Professional kan du förgenerera licenser och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
-seo-description: Om du använder Adobe Primetime DRM Professional kan du förgenerera licenser och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
+description: Om du använder Adobe Primetime DRM Professional kan du generera licenser i förväg och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
+seo-description: Om du använder Adobe Primetime DRM Professional kan du generera licenser i förväg och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
 seo-title: Förgenererande licenser
 title: Förgenererande licenser
 uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
 
 # Förgenererande licenser {#pre-generating-licenses}
 
-Om du använder Adobe Primetime DRM Professional kan du förgenerera licenser och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
+Om du använder Adobe Primetime DRM Professional kan du generera licenser i förväg och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
 
 Om du vill förgenerera licenser måste du använda `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` för att hämta en instans av `LicenseFactory`. Du måste ange en autentiseringsuppgift för licensservern för att signera de licenser som genereras av den här fabriken. Den här klassen har stöd för generering av Leaf-licenser utan licenssammanlänkning samt Leaf- och Root-licenser med den [förbättrade licenskolänkningen](../../protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md).
 
@@ -20,9 +23,9 @@ När du genererar en Leaf-licens måste du ange de innehålls-metadata som gäll
 
 När du genererar en rotlicens måste du ange innehållets metadata enligt beskrivningen ovan. Du kan också generera en rotlicens genom att tillämpa en DRM-princip ( `setSelectedPolicy()`) och en licensserver-URL ( `setLicenseServerURL()`) i stället för metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->En licensserver-URL krävs även om det inte finns någon Adobe Primetime DRM-licensserver från vilken klienterna kan begära en licens. I så fall ska licensserverns URL ange en URL som identifierar licensutfärdaren.
+>En licensserver-URL krävs även om det inte finns någon Adobe Primetime DRM-licensserver från vilken klienterna kan begära en licens. I det här fallet ska licensserverns URL ange en URL som identifierar licensutfärdaren.
 
 Om DRM-principen använder Förbättrad licenskodning måste du ange en autentiseringsuppgift för licensservern för att dekryptera rotkrypteringsnyckeln i DRM-principen ( `setRootKeyRetrievalInfo()`).
 
