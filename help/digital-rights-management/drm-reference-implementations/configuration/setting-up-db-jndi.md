@@ -5,7 +5,10 @@ seo-title: Konfigurera licensserverdatabasen
 title: Konfigurera licensserverdatabasen
 uuid: aa6185f2-8e9d-4b65-971a-b7534d910580
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Referensimplementeringslicensservern kräver en databas som stöder följande:
 
 Anonym licensköp kräver inte att databasen körs.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den här proceduren gäller endast Microsoft Windows. Andra operativsystem hittar du i dokumentationen för ditt operativsystem eller i MySQL-dokumentationen.
 
@@ -42,7 +45,7 @@ Om du vill köra licensservern måste du installera och konfigurera MySQL:
       Exempel: *systemenhet:*, som finns i [!DNL \Program Files\MySQL\MySQL Server 5.1].
 1. Om du vill installera MySQL JDBC Driver 5.1.7 kopierar du [!DNL mysql-connector-java-5.1.7-bin.jar] filen i [!DNL Third Party\MySQL\Installer\5.1] -mappen på dvd-skivan till [!DNL ...\Tomcat6.0\lib] katalogen på Tomcat-servern.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;
+   >[!NOTE]
    >
    >MySQL JDBC Driver 5.1.7 fungerar med Tomcat 6.0. Äldre versioner av Tomcat stöds inte längre.
 
