@@ -5,7 +5,10 @@ seo-title: Paketera och skydda innehåll
 title: Paketera och skydda innehåll
 uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,9 @@ Konfigurationsfilen för kommandoradsverktyget Adobe Primetime DRM Media Package
 
 I kommandotolken för referensimplementering lagras lösenordet för PKCS12-inloggningsfilen i `flashaccess.properties` filen i klartext. Därför bör du vara extra försiktig när du skyddar datorn som är värd för filen och ser till att datorn är i en säker miljö. Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-Paketeraren använder även transportcertifikaten för licensservern och licensservern, och integriteten och sekretessen för informationen måste skyddas. Endast behöriga enheter bör tillåtas att använda paketeraren. Om dina privata nycklar äventyras ska du informera Adobe Systems Incorporated omedelbart så att certifikatet kan återkallas.
+Paketeraren använder även transportcertifikaten för licensservern och licensservern, och integriteten och sekretessen för informationen måste skyddas. Endast behöriga enheter bör tillåtas att använda paketeraren. Om dina privata nycklar har komprometterats ska du omedelbart informera Adobe Systems Incorporated så att certifikatet kan återkallas.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Med API kan du använda samma nyckel för flera olika typer av innehåll. För att säkerställa högsta säkerhetsnivå bör du bara använda den här funktionen för FMS-innehåll med flera bitars hastighet. Använd inte samma nyckel för flera filer som representerar olika innehåll.
 
@@ -66,4 +69,4 @@ När du paketerar innehåll används licensserverns offentliga nyckel för att k
 >
 >Kontrollera att du har fått licensserverns certifikat som innehåller den offentliga nyckeln från en betrodd källa. På så sätt kan du se till att det är licensserverns nyckel och inte en obehörig offentlig nyckel. Om angriparna ersätter sin offentliga nyckel för licensserverns nyckel kan de dekryptera innehållet.
 
-Mer information om hur du paketerar innehåll finns i [Använda Adobe Primetimes DRM SDK för att skydda innehåll](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
+Mer information om hur du paketerar innehåll finns i [Använda Adobe Primetime DRM SDK för att skydda innehåll](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
