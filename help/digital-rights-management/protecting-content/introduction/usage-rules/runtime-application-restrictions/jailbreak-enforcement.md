@@ -5,7 +5,10 @@ seo-title: Tillämpning av Jailbreak (kräver Adobe Primetime DRM)
 title: Tillämpning av Jailbreak (kräver Adobe Primetime DRM)
 uuid: 5cf8ebbc-17de-44cc-90d2-0857ea62c4a4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '92'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 På plattformar som stöder jailbreak-identifiering, till exempel Android- och iOS-mobilenheter, kan du aktivera tvångsuppspelning för att förhindra uppspelning av innehåll om det [!DNL jailbreak/root] har upptäckts på enheten.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Den här användningsregeln stöds av Adobe Primetime DRM-klientversion 4.0 eller senare. Det påverkar dock inte plattformar som saknar stöd för jailbreak-identifiering. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern.
 
