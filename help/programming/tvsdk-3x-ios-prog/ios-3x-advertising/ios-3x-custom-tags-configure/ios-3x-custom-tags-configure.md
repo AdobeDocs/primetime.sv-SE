@@ -5,7 +5,10 @@ seo-title: Egna taggar
 title: Egna taggar
 uuid: 103f4fff-2218-4d44-90bc-b80da467f282
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ TVSDK har körklart stöd för specifika #EXT-annonstaggar. Ditt program kan anv
 >
 >Du kan prenumerera på anpassade taggar både för VOD och live/linear-strömmar.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
 >När HLS spelas upp med videotaggen i Safari, och inte med Flash Fallback, är den här funktionen inte tillgänglig i Safari.
 
@@ -65,6 +68,6 @@ Programmet kan konfigurera följande scenarier:
 * Ett meddelande när det finns `#EXT-X-ASSET` taggar, eller andra uppsättningar anpassade taggnamn som du prenumererar på, i filen.
 * Infoga annonser när en `#EXT-X-AD` tagg eller något annat anpassat taggnamn hittas i strömmen.
 
-Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`.. Du meddelas om en `TimedMetadata` händelse under parsning av manifestfiler.
+Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Du meddelas om en `TimedMetadata` händelse under parsning av manifestfiler.
 
 Det finns några reklamtaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` egenskapen.
