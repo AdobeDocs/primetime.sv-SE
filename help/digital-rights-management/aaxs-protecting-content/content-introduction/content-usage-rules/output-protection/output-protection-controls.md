@@ -3,7 +3,10 @@ seo-title: Skydd av utdata
 title: Skydd av utdata
 uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '635'
+ht-degree: 0%
 
 ---
 
@@ -26,32 +29,32 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoriskt</b> - AVS-utdataskydd (Analog Copy Protection) eller CGMS-A-utdataskydd (Copy Generation Management System) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Adobe Access-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker Adobe Access 3.0-klienterna aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoriskt</b> - AVS-utdataskydd (Analog Copy Protection) eller CGMS-A-utdataskydd (Copy Generation Management System) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Adobe Access-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker klienterna i Adobe Access 3.0 aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Krävs</b> för AVS-stater - AVS-stater måste ha skydd för utdata. Uppspelning tillåts inte på CGMS-A. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet Ingen uppspelning hade angetts. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Krävs</b> för AVS-stater - AVS-stater måste ha skydd för utdata. Uppspelning tillåts inte på CGMS-A. Adobe Access 2.0-klienter stöder inte det här alternativet. Om den anges fungerar en Adobe Access 2.0-klient som om alternativet Ingen uppspelning hade angetts. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A krävs</b> - CGMS-A-utdataskydd krävs. Uppspelning tillåts inte på AVS. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet Ingen uppspelning hade angetts. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A krävs</b> - CGMS-A-utdataskydd krävs. Uppspelning tillåts inte på AVS. Adobe Access 2.0-klienter stöder inte det här alternativet. Om den anges fungerar en Adobe Access 2.0-klient som om alternativet Ingen uppspelning hade angetts. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd om tillgängligt</b> - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Adobe Access 3.0-klienter kommer att försöka aktivera både ACP och CGMS-A om möjligt. Adobe Access 2.0-klienter försöker bara aktivera antingen ACP eller CGMS-A. Adobe Access-klienten kommer till exempel att försöka aktivera antingen ACP eller CGMS-A. Om försöket lyckas aktiveras inte det andra alternativet. Om försöket misslyckas görs ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet ändå upp. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd om tillgängligt</b> - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Klienter med Adobe Access 3.0 kommer att försöka aktivera både ACP och CGMS-A om möjligt. Adobe Access 2.0-klienter försöker bara aktivera antingen AVS eller CGMS-A. Adobe Access-klienten kommer till exempel att försöka aktivera antingen ACP eller CGMS-A. Om försöket lyckas aktiveras inte det andra alternativet. Om försöket misslyckas görs ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet ändå upp. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd ACP om det finns</b> - försök att aktivera AVS-utdataskydd om tillgängligt, men tillåt uppspelning om det inte finns tillgängligt. Skydd är inte tillgängligt på CGMS-A. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet Inget skydd angavs. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd ACP om det finns</b> - försök att aktivera AVS-utdataskydd om tillgängligt, men tillåt uppspelning om det inte finns tillgängligt. Skydd är inte tillgängligt på CGMS-A. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet "Inget skydd" angavs. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd CGMS-A om det är tillgängligt </b>- Försök att aktivera CGMS-A-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på AVS. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet Inget skydd angavs. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd CGMS-A om det är tillgängligt </b>- Försök att aktivera CGMS-A-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på AVS. Adobe Access 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Adobe Access 2.0-klient som om alternativet "Inget skydd" angavs. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
@@ -68,7 +71,7 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Dessa regler används konsekvent på alla plattformar, men för närvarande går det bara att på ett säkert sätt aktivera utdataskydd på Windows-plattformar. På andra plattformar (till exempel Macintosh och Linux) finns det inga operativsystemsfunktioner som stöds tillgängliga för tredjepartsprogram.
 
