@@ -3,9 +3,9 @@ seo-title: Köra DRM-servern för skyddad direktuppspelning
 title: Köra DRM-servern för skyddad direktuppspelning
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Köra DRM-servern för skyddad direktuppspelning {#running-the-drm-server-for-protected-streaming}
 
-Innan du kan starta Adobe Primetime DRM-servern för skyddad direktuppspelning rekommenderar vi att du kontrollerar att inställningarna i konfigurationsfilerna är giltiga.
+Innan du kan starta Adobe Primetime DRM Server for Protected Streaming rekommenderar vi att du kontrollerar att inställningarna i konfigurationsfilerna är giltiga.
 
 Du kan kontrollera att inställningarna är giltiga med hjälp av de verktyg som finns på licensservern. (Se *Konfigurationsvalideraren* i den här handboken.)
 
@@ -25,7 +25,7 @@ När servern har startats måste du verifiera att den har konfigurerats korrekt 
 
 Loggfilerna som genereras av Adobe Primetime DRM Server för Skyddad strömning finns i den katalog som anges av LicenseServer.LogRoot.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Om de aktuella loggfilerna tas bort eller flyttas medan servern körs, kanske loggfilen inte skapas på nytt. Därför kan viss logginformation tas bort.
 
@@ -50,7 +50,7 @@ Loggkataloger är strukturerade för att vara lätta att använda. Loggkatalogen
 
 ### Global loggfil {#section_1CFA90748142439C9F3BE380969539DA}
 
-Den globala loggfilen [!DNL flashaccess-global.log]finns i *LicenseServer.LogRoot*. Loggen kan innehålla loggmeddelanden som Adobe Primetime DRM Java SDK eller loggmeddelanden kan ha genererats när servern har initierats.
+Den globala loggfilen [!DNL flashaccess-global.log]finns i *LicenseServer.LogRoot*. Loggen kan innehålla loggmeddelanden om att Adobe Primetime DRM Java SDK eller loggmeddelanden kan ha genererats under den tid som servern har initierats.
 
 ### Partitionsloggfil {#section_5660137CD6AA40519E72A4315534846B}
 
@@ -84,4 +84,4 @@ Du kan när som [!DNL flashaccess-global.xml] helst ändra HSM-lösenordet i. Ä
 
 ### Uppdaterar klientkonfigurationsfilen {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och paketeraren tillåter listcertifikatfiler som refereras i klientkonfigurationsfilen.
+Du kan när som helst ändra alla värden som anges i [!DNL flashaccess-tenant.xml] filen. Ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler ( [!DNL .pfx]) och tillåtelselista-certifikatfiler för paketerare som refereras i klientkonfigurationsfilen.
