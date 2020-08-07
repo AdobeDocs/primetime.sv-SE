@@ -3,7 +3,10 @@ seo-title: 'Kommandoradsverktyg för att paketera innehåll och skapa ändringsl
 title: 'Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Följande krav gäller för kommandoradsverktygen i referensimplementeringarna:
 * Alla kommandoradsverktyg kräver Java 1.5 eller senare.
 * Autentiseringsuppgifter för Packager och License Server (certifikat och lösenord) som utfärdas av Adobe. Du behöver autentiseringsuppgifter för att kryptera och signera videofiler, för att signera principuppdaterings- och återkallningslistor samt för att generera licenser i förväg.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >På grund av ett Java-fel får argument som används på kommandoraden (t.ex. filnamn, principnamn eller beskrivningar) endast använda tecken från operativsystemets standardteckenuppsättning.
 
@@ -44,7 +47,7 @@ Konfigurationsfilen använder Java-egenskapens filformat. Om värden för någon
 
 Ange värden för egenskaper i konfigurationsfilen innan du kör verktygen. För vissa kommandoradsverktyg kan du ange värden för vissa alternativ antingen via kommandoraden eller konfigurationsfilen. I dessa fall prioriteras värden som ställs in via kommandoraden framför värden i konfigurationsfilen.
 
-## Installera kommandoradsverktygen {#installing-the-command-line-tools}
+## Installera kommandoradsverktygen  {#installing-the-command-line-tools}
 
 Du kan kopiera de filer du behöver från [!DNL \Reference Implementation\Command Line Tools] katalogen på dvd-skivan, som innehåller [!DNL flashaccesstools.properties] standardkonfigurationsfilen, och en [!DNL libs] katalog som innehåller JAR-filerna för verktygen.
 
