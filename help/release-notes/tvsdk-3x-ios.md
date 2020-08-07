@@ -2,7 +2,7 @@
 title: Versionsinformation om TVSDK 3.12 för iOS
 description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -173,23 +173,25 @@ Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska hindren för `VideoHeartbea
 
 **Nätverksannonsinformation**
 
-TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klasser som är tillgängliga via en Ad Asset- `networkAdInfo` egenskap. Den här informationen kan användas för integrering med andra Ad Analytics-plattformar som **Moat Analytics**.
+TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klasser som är tillgängliga via en Ad Asset- `networkAdInfo` egenskap. Den här informationen kan användas för att integrera med andra annonseringsplattformar som **Moat Analytics**.
 
 **Version 1.4.31**
 
 * **Faktureringsstatistik** För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsstatistik och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 
-   Varje gång TVSDK genererar en direktuppspelningshändelse börjar spelaren skicka HTTP-meddelanden regelbundet till Adobes faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men avtalet med Adobe avgör de faktiska värdena.
+   Varje gång TVSDK genererar en direktuppspelningshändelse börjar spelaren att skicka HTTP-meddelanden regelbundet till Adobe faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men ditt kontrakt med Adobe avgör de faktiska värdena.
 
-* **Multi-CDN-stöd för CRS Ads** TVSDK har nu stöd för Multi-CDN för CRS-annonser. Genom att ange FTP-information för CRS-annonser kan du ange andra CDN-platser än standardplatsen för Adobe-ägd CDN, till exempel Akamai.
+* **Multi-CDN-stöd för CRS Ads** TVSDK har nu stöd för Multi-CDN för CRS-annonser. Genom att ange FTP-information för CRS-annonser kan du ange CDN-platser, andra än det Adobe-ägda standardnätverket för CDN, till exempel Akamai.
 
 **Version 1.4.29**
 
 I `PTSDKConfig` klassen har API:t forceHTTPS lagts till.
 
-Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Analytics-servrar för Adobe Primetime-annonsering, DRM och Video. `PTSDKConfig` Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
+Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Adobe Primetime annonsbeslutsservrar, DRM- och Video Analytics-servrar. `PTSDKConfig` Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
 
->[!NOTE] Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
+>[!NOTE]
+>
+>Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
 
 **Version 1.4.18**
 
@@ -217,13 +219,15 @@ Primetime iOS TVSDK har nu stöd för VPAID 2.0 Javascript-kreatörer för en in
 
 * Följande funktioner stöds för närvarande inte:
 
-   * DRM (Digital Rights Management)
+   * Digital Rights Management (DRM)
    * Annonsbanners
    * TV Markup Language (TVML)
 
 **Version 1.4.13**
 
->[!NOTE] Nielsen-modulen har tagits bort från TVSDK-bygget och TVSDK kommer inom kort att uppdateras med en ny Nielsen-integreringsmodul.
+>[!NOTE]
+>
+>Nielsen-modulen har tagits bort från TVSDK-bygget och TVSDK kommer inom kort att uppdateras med en ny Nielsen-integreringsmodul.
 
 **Ad Fallback, Daisy chaining in ad ad selection logic (Zendesk #3103)**
 
@@ -247,7 +251,7 @@ Som en del av uppdateringen 1.4 TVSDK stöder vi nu också att man går in i och
 
 * **Individuellt stöd**
 
-Stöd för lokala installationer av Adobe Individualization Server för att anpassa kundens begäran om individualisering och gå till en annan slutpunkt.
+Stöd för lokala installationer av Adobe Individualization Server för att anpassa klientens individualiseringsbegäran och gå till en annan slutpunkt.
 
 * **Upplösningsbaserat utdataskydd**
 
@@ -257,10 +261,10 @@ DRM-profiler kan nu ange den högsta tillåtna upplösningen, beroende på enhet
 
 * **Video Heartbeats Library (VHL) update to version 1.4.1.1**
 
-   * Lagt till möjlighet att paketera olika användningsfall för analys, från andra SDK:er eller spelare, med Adobe Analytics Video Essentials.
+   * Lagt till möjlighet att paketera olika analysanvändningsfall, från andra SDK:er eller spelare, med Adobe Analytics Video Essentials.
    * Annonsuppföljning har optimerats genom att metoderna `trackAdBreakStart` och `trackAdBreakComplete` har tagits bort. Annonsbrytningen härleds från anropen `trackAdStart` och `trackAdComplete` metoden.
    * Egenskapen behövs inte längre `playhead` när annonser spåras.
-   * Stöd för Marketing Cloud Visitor ID har lagts till.
+   * Stöd för Marketing Cloud Visitor-ID har lagts till.
 
 * **Integration med Nielsen SDK**
 
@@ -589,7 +593,7 @@ Problemet löstes genom att resursinläsningen uppdaterades för att se från al
 
 * (ZD# 27460) Midroll first Ad call - POST to `cdn.auditude.com` return 403.
 
-Det nya CDN-kontot kan inte hantera en POST CDN-begäran. Problemet löstes genom att koden uppdaterades så att annonsbegäran `cdn.auditude.com` skulle vara GET istället för POST.
+Det nya CDN-kontot kan inte hantera en CDN-begäran för POST. Problemet löstes genom att koden uppdaterades så att annonsbegäran `cdn.auditude.com` blev GET istället för POST.
 
 **Version 1.4.32** (1.4.32.792 för iOS 6.0+)
 
@@ -631,9 +635,9 @@ Problemet löstes genom en tillfällig lösning för strömmar som inte har ett 
 
 Följande problem löstes för TVSDK i den här versionen:
 
-* (ZD# 24180) Lägg till en anpassad rubrik för listan Tillåt.
+* (ZD# 24180) Lägg till en anpassad rubrik i tillåtelselista.
 
-Ett nytt anpassat huvud har lagts till i listan över tillåtna för TVSDK.
+En ny anpassad rubrik har lagts till i TVSDK tillåtelselista.
 
 * (ZD# 25016) Redundansström väljs slumpmässigt när ABR-kontrollparametrar anges
 
@@ -653,19 +657,19 @@ När den sista starttiden för en annonsbrytning från VMAP infaller innan den t
 
 * VHL (Video Heartbeat Library) har uppdaterats till version 1.5.9 för att lösa följande problem:
 
-* (ZD #22351) VHL - Analytics: Varaktighet för livevideoresurs
+* (ZD #22351) VHL - Analys: Varaktighet för livevideoresurs
 
 Problemet löstes genom att ett objekt-Duration-API lades till i PTVideoAnalyticsTrackingMetadata för att uppdatera resursens varaktighet för live-/linjära strömmar och tillhandahålla en logik för att kontrollera liveströmmen.
 
-* (ZD# 22675) VHL - Analytics: Uppdaterar livevideoresursens varaktighet
+* (ZD# 22675) VHL - Analys: Uppdaterar livevideoresursens varaktighet
 
 Problemet är detsamma som ZD #22351.
 
-* (ZD #25908) VHL - Analytics: Adobe Heartbeat Event Crash
+* (ZD #25908) VHL - Analys: Händelsekrasch för pulsslag i Adobe
 
 Problemet löstes genom att implementeringen uppdaterades för att använda den senaste versionen av VHL för iOS version 1.5.9 för att förbättra stabilitet och prestanda.
 
-* (ZD #25956) VHL - Analytics: Krasch vid upprepad uppspelning av videoklipp
+* (ZD #25956) VHL - Analys: Krasch vid upprepad uppspelning av videoklipp
 
 Problemet är detsamma som ZD #25908.
 
@@ -777,7 +781,7 @@ Problemet löstes genom att logiken uppdaterades för att visa spelarvyn om en V
 
 Problemet löstes genom att VideoAnalyticsTracker uppdaterades för att korrekt identifiera inledande/slutförande av kapitel vid övergång mellan kapitelgränser och icke-kapitelgränser.
 
-* (ZD #20784) - Analytics: Utlösande av innehåll för live-videoövergångar
+* (ZD #20784) - Analys: Utlösande av innehåll för live-videoövergångar
 
 Problemet löstes genom att en logik lades till för att manuellt aktivera slutförandet av innehåll under en videospårningssession.
 
@@ -816,7 +820,7 @@ Problemet löstes genom att ge ytterligare skydd mot samtidiga problem som orsak
 
 * (ZD #21782) - iOS-felkod 10100
 
-Problemet där TVSDK returnerade ett 101000-fel när uppspelningen av Adobe Access-DRM-strömmar har åtgärdats.
+Problemet där TVSDK returnerade ett 101000-fel när uppspelningen av DRM-strömmar i Adobe Access har åtgärdats.
 
 * (ZD #21889) - Uppspelning av onlineannonser och offlineinnehåll misslyckas
 
@@ -828,13 +832,13 @@ Problemet löstes genom att hanteringen av VAST-annonstaggar från tredje part m
 
 * (ZD #22257) - TVSDK kan inte spela upp DRM-strömmen
 
-Problemet där TVSDK som returnerade ett 101000-fel när uppspelningen av Adobe Access-DRM-strömmar startades har åtgärdats.
+Problemet där TVSDK som returnerade ett 101000-fel när uppspelningen av DRM-strömmar för Adobe Access har åtgärdats.
 
 **Version 1.4.22** (1.4.22.627) för iOS 6.0+
 
 * (ZD #18709) - Krasch i TVSDK för iOS
 
-Problemet med att en krasch inträffar i vissa Adobe Access DRM-skyddade strömmar har åtgärdats.
+Problemet med en krasch som inträffar på vissa DRM-skyddade dataströmmar med Adobe Access har åtgärdats.
 
 * (ZD #18850) - Uppdatera logik för kreativt urval baserat på CRS-regler
 
@@ -991,7 +995,7 @@ TVSDK kraschade i operativsystemet Android M när TSDK-biblioteket använder neo
 
 * (Zendesk #18072) - Android M - Application Crash
 
-Den här kraschen inträffar när API:erna MediaCodecList och MediaCodecInfo anropas när profilen och nivån kontrolleras. Adobe söker Googles support för ytterligare information. Problemet löstes genom att en temporär lösning skapades genom att all kodekinformation lästes in i förväg för att undvika att anropa dessa API:er endast när kodekinformation behövs.
+Den här kraschen inträffar när API:erna MediaCodecList och MediaCodecInfo anropas när profilen och nivån kontrolleras. Adobe söker Googles stöd för ytterligare insikter. Problemet löstes genom att en temporär lösning skapades genom att all kodekinformation lästes in i förväg för att undvika att anropa dessa API:er endast när kodekinformation behövs.
 
 * (Zendesk #18074) - Arabiska undertexter som inte fungerar på Nexus med Android 6.0
 
@@ -1092,7 +1096,7 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 
 **Version 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Analytics-implementering för TreeHouse-appen, lade till biblioteket för att skapa paket `AdobeAnalyticsPlugin.a` .
+* (ZD #2141) Analysimplementering för TreeHouse-appen, bibliotek som lagts till för att skapa paket har lagts till `AdobeAnalyticsPlugin.a` .
 * Video Heartbeats Library update to 1.4.1.2
 * [PTPALY-4226] [relaterat till ZD #2423) Om du utför DRM-återställning kan programdokumentdata tas bort.
 
@@ -1141,7 +1145,7 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 
 * TVSDK 1.4.28 har certifierats för iOS 10 Beta 7.
 * DRM-stöd som tvingar HTTPS genom att lägga till `forceHTTPS` och `isForcingHTTPS` API:er.
-* Uppdaterade VHL-bibliotek till 1.5.8, Adobe Mobile-bibliotek till 4.8.4 och loggningsverktygsbiblioteket till version 7.0-distributionsmålet.
+* VHL-bibliotek har uppdaterats till 1.5.8, Adobe Mobile-bibliotek till 4.8.4 och loggningsverktygsbiblioteket till version 7.0-distributionsmålet.
 
 **Version 1.4.19**
 
@@ -1155,7 +1159,7 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 
    **Obs**: Kom ihåg följande riktlinjer för kompilering:
 
-   * Stödet för TVSDK-tv är begränsat till DRM-krypterade strömmar som inte är från Adobe. Du måste ta bort referensen till drmNativeInterface.framework i inställningarna för tvOS-bygget. AES-krypterade strömmar stöds fortfarande.
+   * Stödet för tvOs i TVSDK är begränsat till DRM-krypterade strömmar som inte är Adobe. Du måste ta bort referensen till drmNativeInterface.framework i inställningarna för tvOS-bygget. AES-krypterade strömmar stöds fortfarande.
    * Apple kräver att alla Apple TV-program är bitkodsaktiverade, så du måste aktivera den här flaggan i dina projektinställningar.
 
 ## Kända fel och begränsningar {#known-issues-and-limitations}
@@ -1169,7 +1173,7 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 * Det kan hända att licensrotationsvideo inte spelas upp på iOS 11 och att den spelas upp korrekt på iOS 9.x och iOS 10.x.
 * Om uppspelningen är aktiv över AirPlay hoppas VPAID-annonser över i VPAID 2.0-stödet.
 * drmNativeInterface.framework länkar inte korrekt när minimimålet är iOS7 (eller senare).
-Tillfällig lösning: Ange uttryckligen biblioteket libstdc+.6.dylib enligt följande: Gå till Target->Bygg faser->Länka binärt med bibliotek och lägg till libstdc++.6.dylib.
+Tillfällig lösning: Ange uttryckligen biblioteket libstdc+.6.dylib enligt följande: Gå till Mål->Bygg faser->Länka binärt med bibliotek och lägg till libstdc++.6.dylib.
 * Det gick inte att infoga post-roll-API:t för ersättning.
 * Om du söker efter en annonsbrytning (utan att komma ut ur den) utfärdas en dubblett av meddelanden om annonsstart och annonsbrytningar
 * Inställning av currentTimeUpdateInterval har ingen effekt.
@@ -1193,4 +1197,4 @@ Obs! I vissa iOS-versioner läser operativsystemet inte in resurserna i PSDKLili
 
 * [TVSDK 3.4 for iOS Programmer&#39;s Guide](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-for-ios/introduction/ios-3x-overview.html)
 * [API-referens för TVSDK iOS 3.4](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
