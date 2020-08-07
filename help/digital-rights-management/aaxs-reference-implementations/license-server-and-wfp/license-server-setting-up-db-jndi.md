@@ -3,7 +3,10 @@ seo-title: Konfigurera databasen och konfigurera JNDI-datakällan
 title: Konfigurera databasen och konfigurera JNDI-datakällan
 uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Referensimplementeringslicensservern kräver en databas som stöder följande fu
 
 Anonym licensköp kräver inte att en databas körs.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Instruktionerna i det här avsnittet gäller Microsoft Windows-plattformen. Andra operativsystem hittar du i dokumentationen för ditt operativsystem eller i MySQL-dokumentationen.
 
@@ -37,7 +40,7 @@ Om du vill köra licensservern måste du installera och konfigurera MySQL 5.1.34
 
 Därefter måste du installera MySQL JDBC Driver 5.1.7. Det gör du genom att kopiera [!DNL mysql-connector-java-5.1.7-bin.jar] (finns i [!DNL Third Party\MySQL\Installer\5.1] mappen på dvd-skivan) till Tomcat Server lib-katalogen: [!DNL ...\Tomcat6.0\lib].
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >MySQL JDBC Driver 5.1.7 fungerar med Tomcat 6.0. Äldre versioner av Tomcat stöds inte.
 
@@ -53,7 +56,7 @@ Konfigurera exempeldatabasen genom att konfigurera databasschemat och fylla i da
 1. Redigera skriptet som fyller i exempeldata i tabellerna för att inkludera data i testsyfte: [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql].
 1. Kör det här skriptet för att fylla i data som du gjorde i steg 2.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Första gången du kör skriptet får du följande fel [!DNL CreateSampleDB.sql] :
 
