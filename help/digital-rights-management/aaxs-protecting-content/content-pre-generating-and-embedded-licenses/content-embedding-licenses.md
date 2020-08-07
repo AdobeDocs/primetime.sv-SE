@@ -3,7 +3,10 @@ seo-title: Bädda in licenser
 title: Bädda in licenser
 uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Om du vill bädda in en licens hämtar du en instans av `com.adobe.flashaccess.s
 
 Exempelkod som visar inbäddade licenser finns `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` i katalogen&quot;Exempel&quot; för kommandoradsverktygen för referensimplementering.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Adobe Access 2.0-klienter ignorerar alla licenser som är inbäddade i innehållet och försöker hämta en licens från den licensserver som anges i metadata. Om metadata anger att ingen licensserver är tillgänglig måste en Adobe Access 2.0-klient uppgradera för att kunna se innehållet.
+>Adobe Access 2.0-klienter ignorerar alla licenser som är inbäddade i innehållet och försöker hämta en licens från den licensserver som anges i metadata. Om metadata anger att ingen licensserver är tillgänglig måste en Adobe Access 2.0-klient uppgradera för att kunna visa innehållet.
 
 Se [Utökade licenser](../../aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md).
