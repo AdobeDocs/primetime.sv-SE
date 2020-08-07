@@ -5,7 +5,10 @@ seo-title: Metadata för Primetime och server
 title: Metadata för Primetime och server
 uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 
->[!NOTE] {othertype=&quot;Prequired&quot;}
+>[!NOTE]
 >
 >Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 >
@@ -22,6 +25,7 @@ TVSDK stöder lösning och infogning av annonser för VOD och live/linear stream
 >* Din `zoneID`, som identifierar ditt företag eller din webbplats.
 >* Din annonsserverdomän, som anger domänen för den tilldelade annonsservern.
 >* Andra parametrar för målinriktning.
+
 >
 
 
@@ -78,7 +82,7 @@ För direktsänt innehåll använder TVSDK metadata/cues i manifestet för att a
 
 Programmet måste informera TVSDK om innehållet är live eller VOD genom att ange `PTAdSignalingMode`.
 
-För en FER-ström bör Adobe Primetime-annonsservern inte innehålla en lista över annonsbrytningar som måste infogas på tidslinjen innan uppspelningen startar. Detta är den typiska processen för VOD-innehåll. Om du anger ett annat signeringsläge läser TVSDK i stället alla referenspunkter från FER-manifestet och går till annonsservern för varje referenspunkt för att begära en annonsbrytning. Den här processen liknar live-/DVR-innehåll.
+För en FER-ström bör Adobe Primetime annonsbeslutsserver inte innehålla en lista över annonsbrytningar som måste infogas på tidslinjen innan uppspelningen startar. Detta är den typiska processen för VOD-innehåll. Om du anger ett annat signeringsläge läser TVSDK i stället alla referenspunkter från FER-manifestet och går till annonsservern för varje referenspunkt för att begära en annonsbrytning. Den här processen liknar live-/DVR-innehåll.
 
 Förutom varje begäran som är associerad med en referenspunkt gör TVSDK en extra annonsbegäran för annonser före rullning.
 
