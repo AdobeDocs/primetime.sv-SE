@@ -3,7 +3,10 @@ seo-title: Förbättrad kedja av licenser
 title: Förbättrad kedja av licenser
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Primetime DRM 2.0 har stöd för licenssammanlänkning där både löv- och rotl
 
 Om du vill aktivera förbättrad licenssammanlänkning måste du tilldela en rotkrypteringsnyckel till en Primetime DRM-princip. Rotkrypteringsnyckeln används för att kryptografiskt binda bladlicensen till rotlicensen.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Förbättrad kedja av licenser stöds av Primetime DRM-klienter version 3.0 eller senare. Om en äldre klient begär en licens för innehåll som har stöd för den förbättrade licenskedjan kan licensservern fortfarande utfärda en licens till den här klienten genom att använda den licenssammankoppling som stöds av Primetime DRM 2.0.
 
