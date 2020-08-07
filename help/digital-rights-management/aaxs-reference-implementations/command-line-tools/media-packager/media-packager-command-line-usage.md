@@ -3,14 +3,17 @@ seo-title: Användning av kommandorad
 title: Användning av kommandorad
 uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 
 # Användning av kommandorad {#command-line-usage}
 
-Innan du använder Media Packager måste du kontrollera att du uppfyller kraven som anges i Krav och att konfigurationsfilen innehåller den information som krävs (se Konfigurationsfilen i *Använda referensimplementeringar* för Adobe Access).
+Innan du använder Media Packager måste du se till att du uppfyller de krav som anges i Krav och att konfigurationsfilen innehåller den information som krävs (se Konfigurationsfilen i *Använda referensimplementeringar* för Adobe Access).
 
 Media Packager finns i [!DNL \Reference Implementation\Command Line tools] katalogen på DVD:n. Om du vill kryptera en enskild fil använder du följande syntax:
 
@@ -67,7 +70,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` är en [!DNL .metadata] fil som innehåller DRM-metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Under paketeringen genereras inte längre en .header-fil som standard. Om du vill generera den här filen använder du `-h` alternativet under paketeringen.
 
