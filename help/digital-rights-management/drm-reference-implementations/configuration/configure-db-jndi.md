@@ -5,7 +5,10 @@ seo-title: Konfigurera licensserverdatabasen
 title: Konfigurera licensserverdatabasen
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Så här konfigurerar du exempeldatabasen genom att konfigurera databasschemat o
    Skriptet finns i `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` mappen.
 1. Kör skriptet för att fylla i data som du gjorde i steg 2 [!DNL PopulateSampleDB] .
 
-   >[!NOTE] {class=&quot;- topic/note &quot;
+   >[!NOTE]
    >
    >Första gången du kör skriptet inträffar följande fel: [!DNL CreateSampleDB.sql]
 
