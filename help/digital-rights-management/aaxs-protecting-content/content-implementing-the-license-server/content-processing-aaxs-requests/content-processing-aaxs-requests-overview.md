@@ -3,7 +3,10 @@ seo-title: Översikt
 title: Översikt
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Basklassen som används för att hantera en begäran/svar-interaktion är `com.a
 
 Om begäran lyckas, ange svarsdata. Anropar annars `RequestMessageBase.setErrorData()` vid fel. Avsluta alltid implementeringen genom att anropa `close()` metoden (det rekommenderas att `close()` anropas i `finally` blocket för en `try` programsats). I API-referensdokumentationen finns ett exempel `MessageHandlerBase` på hur du anropar hanteraren.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >HTTP-statuskod 200 (OK) ska skickas som svar på alla begäranden som behandlas av hanteraren. Om hanteraren inte kunde skapas på grund av ett serverfel kan servern svara med en annan statuskod, till exempel 500 (Internt serverfel).
 
