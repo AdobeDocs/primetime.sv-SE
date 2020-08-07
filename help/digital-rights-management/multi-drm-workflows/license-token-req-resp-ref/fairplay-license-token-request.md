@@ -5,7 +5,10 @@ seo-title: FairPlay-licenstokenbegäran/svar
 title: FairPlay-licenstokenbegäran/svar
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -45,14 +48,14 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
 
 **Frågeparametrar för begäran**
 
-**Tabell 4: Parametrar för tokenfråga**
+**Tabell 3: Parametrar för tokenfråga**
 
 | Frågeparameter | Beskrivning | Obligatoriskt? |
 |--- |--- |--- |
 | customerAuthenticator Customer authenticator as query parameter customerAuthenticator FairPlay | Det här är er API-nyckel för era kunder, en för era produktions- och testmiljöer. Det finns på fliken Admin Dashboard för ExpressPlay. | Ja |
 | errorFormat | Antingen html eller json. Om html (standard) anges en HTML-representation av eventuella fel i svarets entitetstext. Om json anges returneras ett strukturerat svar i JSON-format. Mer information finns i [JSON-fel](https://www.expressplay.com/developer/restapi/#json-errors) . MIME-typen för svaret är antingen text/uri-list on success, text/html for HTML error format eller application/json for JSON error format. | Nej |
 
-**Tabell 3: Parametrar för licensfråga**
+**Tabell 4: Parametrar för licensfråga**
 
 | **Frågeparameter** | **Beskrivning** | **Obligatoriskt?** |
 |---|---|---|
