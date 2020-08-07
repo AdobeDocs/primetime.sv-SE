@@ -5,7 +5,10 @@ seo-title: Översikt
 title: Översikt
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -77,11 +80,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` är en [!DNL .metadata] fil som innehåller DRM-metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Under paketeringen kan Media Packager inte längre generera en [!DNL .header] fil som standard. Om du vill generera en [!DNL .header] fil använder du `-h` alternativet under paketeringen.
 
-**Tabell 4: Alternativ**
+**Tabell 3: Alternativ**
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4">  
  <thead class="- topic/thead "> 
@@ -168,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. </p> <p class="- topic/p ">Värdet <span class="codeph"> high</span> används för att kryptera allt videoinnehåll, medan värden för <span class="codeph"> medium</span> och <span class="codeph"> low</span> används för att kryptera delar av videoinnehållet för mp4-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| låg</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. </p> <p class="- topic/p ">Värdet <span class="codeph"> high</span> används för att kryptera allt videoinnehåll, medan värden för <span class="codeph"> medium</span> och <span class="codeph"> low</span> används för att kryptera delar av videoinnehållet för mp4-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | låg</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypted</span> </td> 
@@ -200,7 +203,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. </p> <p class="- topic/p ">Ange x (för Primetime DRM x.0) där x representerar ett större versionsnummer. Eventuella serverversioner före Adobe Primetime version 3.0 stöder inte den här inställningen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. </p> <p class="- topic/p ">Ange x (för Primetime DRM x.0) där x representerar ett större versionsnummer. Eventuella versioner av servrar före Adobe Primetime version 3.0 stöder inte den här inställningen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.flyttcert </span> </td> 
@@ -212,7 +215,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. </p> <p class="- topic/p ">Om värdet är false, vilket är standardinställningen, inaktiveras tangentrotation och huvud-CEK används för att kryptera alla exempel i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera segment av vilket innehåll som helst. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. </p> <p class="- topic/p ">Om värdet är false, vilket är standardinställningen, inaktiveras tangentrotation och den överordnad CEK används för att kryptera alla samplingar i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera segment av vilket innehåll som helst. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
