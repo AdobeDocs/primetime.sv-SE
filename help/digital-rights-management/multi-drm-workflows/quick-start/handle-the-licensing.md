@@ -5,7 +5,10 @@ seo-title: Licenser
 title: Licenser
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
 
-Innan din app eller webbsida på en slutanvändares enhet kan spela upp DRM-skyddat innehåll måste den hämta en token från en berättigande- eller butiksserver som du, kunden, använder. Adobe tillhandahåller en exempelserver för detta: [Referensserver: Exempel på ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Innan din app eller webbsida på en slutanvändares enhet kan spela upp DRM-skyddat innehåll måste den hämta en token från en berättigande- eller butiksserver som du, kunden, använder. Adobe tillhandahåller en exempelreferensserver för detta ändamål: [Referensserver: Exempel på ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 Din berättigande- eller butiksserver begär en licenstoken från den relevanta ExpressPlay-servern först efter att ha kontrollerat med dina egna bakomliggande system för att avgöra om den specifika användaren har rätt att titta på det begärda innehållet. Svaret som returneras från licenstokenbegäran är antingen en färdig URL för licensservern, eller så innehåller svaret URL:en i en JSON-struktur, beroende på vilken DRM-lösning du arbetar med.
 
