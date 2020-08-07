@@ -3,7 +3,10 @@ seo-title: Översikt över inställningar
 title: Översikt över inställningar
 uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Med undantag för Packager Server-URL:en lagras alla inställningar som anges nedan i [!DNL flashaccess-refimpl-packager.properties] filen på servern. Alla inställningar kan ändras antingen direkt i egenskapsfilen eller via AIR-programmet. Lösenord krypteras när de lagras i egenskapsfilen på servern. Skriv det okrypterade lösenordet i användargränssnittet, så krypteras det innan det lagras i filen.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Alla kataloger och sökvägar refererar till kataloger på paketerarservern, inte på klienten som kör AIR-programmet.
 
