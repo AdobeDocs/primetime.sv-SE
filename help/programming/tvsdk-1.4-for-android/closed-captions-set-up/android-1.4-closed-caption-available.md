@@ -5,7 +5,10 @@ seo-title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
@@ -41,13 +44,12 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
    for (int i = 0; i < ccTracks.size(); i++) { 
        ClosedCaptionsTrack track = ccTracks.get(i); 
        if (track.getName().equals(INITIAL_CC_TRACK)) { 
-   
-<b>mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track);</b>
-selectedClosedCaptionsIndex = i;
-}}
+           mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track); 
+           selectedClosedCaptionsIndex = i; 
+       } 
+   }
+   ```
 
-```
-1. Implement a listener for the event that indicates that more tracks are available. When TVSDK dispatches the event, retrieve the current list of available tracks.
+1. Implementera en avlyssnare för händelsen som anger att fler spår är tillgängliga. När TVSDK skickar händelsen hämtar du den aktuella listan med tillgängliga spår.
 
-Retrieve the list each time that the event occurs to ensure that you always have the most current list.
-
+   Hämta listan varje gång händelsen inträffar för att se till att du alltid har den senaste listan.
