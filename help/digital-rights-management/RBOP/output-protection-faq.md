@@ -5,9 +5,9 @@ seo-title: Vanliga frågor om RBOP
 title: Vanliga frågor om RBOP
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
 
    * 720P - HDCP krävs
    * 480P - ingen OP
+
    Följande regler gäller för varje variant.
 
    **Strömmar:**
@@ -56,18 +57,27 @@ Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
 
    ```
    { 
-       "maxPixel":  
-   
-<b>800</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>532</b>,&quot;digital&quot;: [{&quot;output&quot;: &quot;REQUIRED&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1,&quot;minor&quot;: {0}}],&quot;analog&quot;: {&quot;output&quot;: &quot;REQUIRED&quot;}},..
+       "maxPixel": 800, 
+       "pixelConstraints": [ 
+           { "pixelCount": 532, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
 
-```
-to: 
-```
-{&quot;maxPixel&quot;:\
-<b>820</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>552</b>,&quot;digital&quot;: [{&quot;output&quot;: &quot;REQUIRED&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1,&quot;minor&quot;: {0}}],&quot;analog&quot;: {&quot;output&quot;: &quot;REQUIRED&quot;}},..
+   till:
 
-```
-throughout, for all instances of `maxPixel` and `pixelCount`.
+   ```
+   { 
+       "maxPixel": 820, 
+       "pixelConstraints": [ 
+           { "pixelCount": 552, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
+
+   genomgående för alla instanser av `maxPixel` och `pixelCount`.
 
