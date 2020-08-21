@@ -2,7 +2,7 @@
 title: Versionsinformation om TVSDK 3.12 för iOS
 description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -416,7 +416,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 
    Öka det maximala antalet samtidiga för `CustomAVAssetLoaderOperations`så att manifestläsningarna kan fortsätta att köras.
 
-* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
+* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
 
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
@@ -541,7 +541,7 @@ Uppspelningsproblem när taggen # EXT-X-PLAYLIST-TYPE i strömmen är inställd 
 
 Användning av Creative Id och AdSystem i CRS-begäran baserat på CRS-normaliseringsregler.
 
-* [ ZD #29462] - TremorHub-annons i A&amp;E VOD orsakar en krasch i iOS-appar
+* (ZD #29462) - TremorHub-annons i A&amp;E VOD orsakar en krasch i iOS-appar
 
 **Version 1.4.36 (1.4.36.835)**
 
@@ -1098,7 +1098,7 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 
 * (ZD #2141) Analysimplementering för TreeHouse-appen, bibliotek som lagts till för att skapa paket har lagts till `AdobeAnalyticsPlugin.a` .
 * Video Heartbeats Library update to 1.4.1.2
-* [PTPALY-4226] [relaterat till ZD #2423) Om du utför DRM-återställning kan programdokumentdata tas bort.
+* (PTPALY-4226) (relaterat till ZD #2423) Om du utför DRM-återställning kan programdokumentdata tas bort.
 
 **Version 1.4.4** (1.4.4.242)
 
