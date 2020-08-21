@@ -5,7 +5,10 @@ seo-title: Använd standardbeteendet för uppspelning
 title: Använd standardbeteendet för uppspelning
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -40,19 +43,20 @@ Så här anpassar du annonsbeteenden:
 1. Implementera `AdPolicySelector` gränssnittet och alla dess metoder.
 1. Tilldela principinstansen som ska användas av TVSDK via reklamfabriken.
 
->[!NOTE]
->class CustomContentFactory extends ContentFactory {
->...
->@Åsidosätt
->public AdPolicySelector retrieveAdPolicySelector>(MediaPlayerItem mediaPlayerItem) {
->return new CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->// registrera den anpassade innehållsfabriken med mediespelaren
->MediaPlayerItemConfig config = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// den här konfigurationen skickas senare när >resursen läses in
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >Klassen CustomContentFactory utökar ContentFactory &amp;lbrace;
+   >...
+   >@Åsidosätt
+   >public AdPolicySelector retrieveAdPolicySelector>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >return new CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rbrace;
+   >...
+   >&amp;rbrace;
+   >// registrera den anpassade innehållsfabriken med mediespelaren
+   >MediaPlayerItemConfig config = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// den här konfigurationen skickas senare när >resursen läses in
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Implementera dina anpassningar.
