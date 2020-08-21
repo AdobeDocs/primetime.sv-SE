@@ -13,7 +13,10 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '2430'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
 
 ## Översikt över felsökningsverktyget {#overview-of-debugging-tool}
 
-Med felsökningsverktyget kan utgivaren undersöka eventuella kostsamma problem med annonsinfogning genom att undersöka felsökningsinformation som returnerats i realtid av manifestservern i HTTP-huvuden eller, när mer detaljerad information behövs, undersöka sessionsloggar efter felet. Adobe-partners som Akamai kan använda verktyget för att felsöka integreringar med Primetimes annonsbeslut.
+Med felsökningsverktyget kan utgivaren undersöka eventuella kostsamma problem med annonsinfogning genom att undersöka felsökningsinformation som returnerats i realtid av manifestservern i HTTP-huvuden eller, när mer detaljerad information behövs, undersöka sessionsloggar efter felet. Adobe partners som Akamai kan använda verktyget för att felsöka integreringar med Primetimes annonsbeslut.
 
 Verktyget har stöd för felsökning och infogningsproblem i alla huvudkonfigurationer för manifestservrar och spårning:
 
@@ -85,7 +88,7 @@ Varje loggpost har en typ och en uppsättning fält, varav vissa kan vara valfri
 
 Strukturen för en loggpost är följande:
 
-`datetime request_id session_id zone_id record_type` andra *fält.*
+`datetime request_id session_id zone_id record_type` *andra fält.*
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -127,7 +130,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 
 ### TRACE_HTTP_HEADER-poster {#trace-http-header-records}
 
-Poster av den här typen loggar HTTP-huvuden som utbyts under HTTP-anrop mellan manifestservern och klienten, annonsservern eller innehållsservern. Fält utanför TRACE_HTTP_HEADER visas i den ordning som de visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar HTTP-huvuden som utbyts under HTTP-anrop mellan manifestservern och klienten, annonsservern eller innehållsservern. Fält utanför TRACE_HTTP_HEADER visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -192,7 +195,7 @@ Ett exempel:
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### posterna TRACE_AD_INSERT, TRACE_AD_RESOLVE och TRACE_AD_REDIRECT {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### TRACE_AD_INSERT-, TRACE_AD_RESOLVE- och TRACE_AD_REDIRECT-poster {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 Poster av den här typen loggar resultaten av annonsförfrågningarna som anges av posttypen. Fält utanför posttypen visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
@@ -259,11 +262,11 @@ Poster av den här typen loggar en annonsbyrå som saknas. Det enda fältet efte
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
-| ad_id | string | Fullständigt annons-ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]`] Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]`] PROTOKOLL: AUDITUDE,VAST) |
+| ad_id | string | Fullständigt kvalificerat annons-ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOKOLL: GRANSKNING,VAST`)` |
 
 ### TRACE_TRANSCODING_REQUESTED records {#trace-transcoding-requested-records}
 
-Poster av den här typen loggar resultaten av omkodningsbegäranden som manifestservern skickar till CRS. Fält efter TRACE_TRANSCODING_REQUESTED visas i den ordning som de visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar resultaten av omkodningsbegäranden som manifestservern skickar till CRS. Fält efter TRACE_TRANSCODING_REQUESTED visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -283,7 +286,7 @@ Poster av den här typen indikerar en begäran om att utföra spårning på serv
 | start | float | Starttid för PTS-fragment (sekunder med millisekundprecision) |
 | end | float | Sluttid för PTS-fragment (sekunder med millisekundprecision) |
 
-### TRACE_TRACKING_REQUEST_URL records {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL-poster {#trace-tracking-request-url-records}
 
 Poster av den här typen har en spårnings-URL för spårning på serversidan. Fält efter TRACE_TRACKING_REQUEST_URL visas i den ordning som de visas i tabellen, avgränsade med tabbar.
 
@@ -306,7 +309,7 @@ Poster av den här typen loggar begär att manifestservern skapar WEBVTT-bildtex
 
 ### TRACE_WEBVTT_RESPONSE-poster {#trace-webvtt-response-records}
 
-Spelar in ``of ``den här ``type ``loggen ``responses ``som ``manifest ``servern ``sends ``ska ``clients ``logga in `` `answer` ``på ``requests ```for` ``WEBVTT ``bildtexter. Fält efter TRACE_WEBVTT_RESPONSE visas i den ordning som de visas i tabellen, med separerade `by`flikar.
+Spelar in ``of ``den här ``type ``loggen ``responses ``som ``manifest ``servern ``sends ``ska ``clients ``logga in `` `answer` ``på ``requests ```for` ``WEBVTT ``bildtexter. Fält efter TRACE_WEBVTT_RESPONSE visas i den ordning som de visas i tabellen, med separerade `by`tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -338,19 +341,19 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Anropad URL: URL *returneras: svarskod*. (Live-URL)
 * Anropad URL: URL- *returkod: svarskod*. ( VOD URL)
 * Konflikt vid lösning av annonser: antingen en av - mittrullstart eller mittrullslut ligger inom pre-roll eller pre-roll som finns i mittrullen (VOD).
-* Ett ohanterat undantag upptäcktes som genererades av hanteraren för URI: URL för *begäran*.
+* Ett ohanterat undantag upptäcktes som genererades av hanteraren för URI: *begärande-URL*.
 * Genereringen av variantmanifest har slutförts. (Variant)
 * Genereringen av variantmanifest har slutförts.
 * Undantag vid hantering av VAST-omdirigering *omdirigerings-URL *fel: *felmeddelande*.
 * Det gick inte att hämta annonsens spellista för *annonsens manifest-URL*.
 * Det gick inte att generera målmanifestet. (HLSManifestResolver)
 * Det gick inte att tolka första annonssamtalssvaret: *felmeddelande*.
-* Det gick inte att bearbeta *GET|POST *begäran om sökväg: URL för *begäran*. (Live/VOD)
-* Det gick inte att bearbeta begäran om livemanifest: URL för *begäran*. (Live)
+* Det gick inte att bearbeta *GET|POST *sökvägsbegäran: *begärande-URL*. (Live/VOD)
+* Det gick inte att bearbeta begäran om livemanifest: *begärande-URL*. (Live)
 * Det gick inte att returnera ett variantmanifest: *felmeddelande*.
 * Det gick inte att verifiera grupp-ID: *grupp-ID*.
 * Hämtar raw-manifest: *innehålls-URL*. (Live)
-* Efter VAST-omdirigering: URL för *omdirigering*.
+* Efter VAST-omdirigering: *omdirigerings-URL*.
 * Tomma tillgängliga. (VOD)
 * Hittade *nummer *annonser. (VOD)
 * HTTP-begäran har tagits emot. (Mycket första meddelande)
@@ -368,9 +371,9 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Ogiltig begäran. Spårningsbegäran måste göras efter att sessionen har upprättats. (VOD)
 * Ogiltig serverinstans för överlagringsgrupp-ID: *grupp-ID*. (Live)
 * Gränsen för VAST-omdirigeringar har uppnåtts - *antal*.
-* Ring annonser: Anropa *URL*.
+* Ring annonser: *och anropa URL*.
 * Inget manifest hittades för: *innehålls-URL*. (Live)
-* Det gick inte att hitta någon matchande tillgänglig för användar-ID: *Tillgängligt ID*. (HLSManifestResolver)
+* Det gick inte att hitta någon matchande tillgänglig för användar-ID: *användar-ID*. (HLSManifestResolver)
 * Ingen uppspelningssession hittades. (HLSManifestResolver)
 * Bearbetar VOD-begäran för manifestets *innehålls-URL*.
 * Bearbetar variant.
@@ -378,19 +381,19 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Bearbetar spårningsbegäran. (VOD)
 * Omdirigering av annonssvar är tom. ( VASTStAX)
 * Begär: *URL*.
-* Returnerar felsvar för GET-begäran eftersom ingen uppspelningssession hittades. (VOD)
+* Returnerat felsvar för GET-begäran eftersom ingen uppspelningssession hittades. (VOD)
 * Returnerar felsvar för GET-begäran på grund av ett internt serverfel.
-* Returnerat felsvar för GET-begäran som anger en ogiltig resurs: ID för *annonsbegäran*. (VOD)
+* Returnerat felsvar för GET-begäran som anger en ogiltig resurs: *ID för annonsförfrågan*. (VOD)
 * Returnerat felsvar för GET-begäran som anger ett ogiltigt eller tomt grupp-ID: *grupp-ID*. (VOD)
-* Returnerar felsvar för GET-begäran som anger ett ogiltigt värde för spårningsposition. (VOD)
-* Returnerar felsvar för GET-begäran med ogiltig syntax - *begärande-URL*. (Live/VOD)
+* Returnerat felsvar för GET-begäran som anger ett ogiltigt värde för spårningsposition. (VOD)
+* Returnerat felsvar för GET-begäran med ogiltig syntax - *begäran-URL*. (Live/VOD)
 * Returnerar felsvar för begäran med en HTTP-metod som inte stöds: *GET|POST*. (Live/VOD)
 * Returnerar manifest från cache. (VOD)
 * Servern är överbelastad. Fortsätt utan en förfrågan om sammanfogning. (Variant)
 * Börja generera målmanifest. (HLSManifestResolver)
 * Börja generera variantmanifest från: *innehålls-URL*. (Variant)
 * Sätt ihop annonser i manifest. (VODHLSResolver)
-* Försöker sy ihop och på *HH:MM:SS*: AdPlacement [adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
+* Försöker sy ihop och på *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
 * Det går inte att hämta annonser på grund av ogiltig tidslinje - returnerade innehållet utan annonser. (VOD)
 * Det går inte att hämta annonser - returnerade innehållet utan annonser. (VOD)
 * Det gick inte att hämta annonsfrågan och ingen innehålls-URL angavs. (VOD)
@@ -410,7 +413,7 @@ Manifestservern genererar poster av den här typen efter att ha anropat en spår
 
 ### TRACE_PLAYBACK_PROGRESS-poster {#trace-playback-progress-records}
 
-Manifestservern genererar poster av den här typen när den tar emot en signal om uppspelningsförloppet under arbetsflödet för spårning på serversidan. Fält efter TRACE_PLAYBACK_PROGRESS visas i den ordning som de visas i tabellen, avgränsade med tabbar.
+Manifestservern genererar poster av den här typen när den tar emot en signal om uppspelningsförloppet under arbetsflödet för spårning på serversidan. Fält efter TRACE_PLAYBACK_PROGRESS visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -430,4 +433,4 @@ Manifestservern genererar poster av den här typen när den tar emot en signal o
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
