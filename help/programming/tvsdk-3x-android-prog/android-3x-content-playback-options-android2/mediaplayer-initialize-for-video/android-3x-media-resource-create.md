@@ -5,7 +5,10 @@ seo-title: Skapa en medieresurs
 title: Skapa en medieresurs
 uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> En instans av <span class="codeph"> Metadata- </span> klassen (en ordlisteliknande struktur), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Om du använder annonsering ställer du in <span class="codeph"> AuditudeSettings </span> innan du använder konstruktorn (se href=Ad insertion metadata](../../android-3.5-advertising/ad-insertion/ad-insertion-metadata/android-3.5-ad-insertion-metadata.md). </td> 
+      <td colname="col2"> En instans av <span class="codeph"> Metadata- </span> klassen (en ordlisteliknande struktur), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Om du använder annonsering ska du ställa in <span class="codeph"> AuditudeSettings </span> innan du använder den här konstruktorns <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> metadata för annonsinfogning </a>. </td> 
    </tr> 
    </tbody> 
    </table>
@@ -70,6 +73,7 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
 
    * MediaPlayer-instansen.
    * `MediaPlayerItemLoader` Mer information finns i [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >Läs inte in medieresursen på en bakgrundstråd. De flesta TVSDK-åtgärder måste köras på huvudtråden, och om de körs på en bakgrundstråd kan åtgärden orsaka ett fel och avsluta åtgärden.
