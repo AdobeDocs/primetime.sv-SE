@@ -5,7 +5,10 @@ seo-title: Frågeparametrar för Manifest-server
 title: Frågeparametrar för Manifest-server
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '790'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Manifestservern känner igen följande parametrar. De bearbetas eller skickas, t
 | ptassetid | Unikt ID för innehållet som tilldelas och underhålls av utgivaren. | Akamai Ad Scaler | URL-säker sträng |
 | ptcdn | Lista över ett eller flera CDN:er som ska vara värd för omkodade resurser. Se [Multi CDN-stöd](../../creative-repackaging-service/multi-cdn-supportt.md). | Nej (default=Akamai) | Exempel: Akamai, Level3, Limelight, Comcast |
 | ptcueformat | Namnet på det anpassade annonsreferenformatet som finns i M3U8. | Nej | DPISimple, DPIScte35, Elemental, NBC, NFL eller Turner |
-| ptfailover | Signalerar manifestservern för att identifiera primära strömmar och failover-strömmar som anges i huvudspelningslistan och för att behandla dem som osammanhängande uppsättningar. Detta underlättar redundans och förhindrar timingfel. (Endast för Apple HLS-enheter.) Se [Underlätta växling](../../msapi-topics/ms-insert-ads/hls-switching-to-failover.md) av HLS-spelare. | Nej | true |
+| ptfailover | Signalerar manifestservern för att identifiera primära strömmar och failover-strömmar som anges i den överordnad spellistan och för att behandla dem som osammanhängande uppsättningar. Detta underlättar redundans och förhindrar timingfel. (Endast för Apple HLS-enheter.) Se [Underlätta växling](../../msapi-topics/ms-insert-ads/hls-switching-to-failover.md) av HLS-spelare. | Nej | true |
 | ptmulticall | Om värdet är true görs flera Auditude-annonser för FER. en för varje annonsbrytning.  Om värdet är false eller om det inte finns något annonsanrop görs ett anrop till granskning för FER. | Nej | Boolean Note:  Följande krav: <ul><li>ptcueformat-parametern måste anges till nbc</li><li>parametern pttimeline ignoreras.</li></ul> |
 | ptplayer | Spelare som gör begäran. | iOS/Safari | ios-mobileweb |
 | ptrendition | Automatiskt genererad genom annonsinfogning och används av Akamai. Lägg inte till eller ta bort. | Akamai Ad Scaler |  |
@@ -45,5 +48,5 @@ Manifestservern känner igen följande parametrar. De bearbetas eller skickas, t
 | pttrackingposition | Instruerar manifestservern att endast returnera annonsspårningsinformation. Ange inte den här parametern i Bootstrap-begäran. | Spårning på klientsidan | Alfanumerisk anteckning:  Manifestservern ignorerar alla skickade värden. Om du skickar en null-sträng eller tom sträng returnerar manifestservern M3U8 i stället för spårningsinformation. |
 | pttrackingversion | Formatversionen av spårningsinformationen på klientsidan. | Spårning på klientsidan | v1, v2, v3 eller vmap |
 | scteTracking | Hämta M3U8 innan SCTE-spårningsinformation kan hämtas i JSON V2-sidecar.  <br/>Den här parametern anger för manifestservern att spelaren som hämtar M3U8 behöver SCTE-tagginformation för att kunna hämtas. | Nej (standard:  false ) | true eller false Note:  SCTE-35-data returneras i JSON-sidecar med följande kombination av frågeparametervärden: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
-| veargetmultiplikator | Antalet segment från direktpunkten Förskjutningen före rullning konfigureras med:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength` Obs <br/><br/>****:  Endast live/linjär | Nej (standard:  3.0 ) | Float |
+| veargetmultiplikator | Antalet segment från direktpunkten Förskjutningen före rullning konfigureras med:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Obs**:  Endast live/linjär | Nej (standard:  3.0 ) | Float |
 | vebufferLength | Antal sekunder från live-punkten Obs!  Endast live/linjär | Nej (standard:  3.0 ) | Float |
