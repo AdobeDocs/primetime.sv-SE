@@ -5,7 +5,10 @@ seo-title: Arbeta med cookies
 title: Arbeta med cookies
 uuid: f060b520-ceec-48ca-929f-683566fe6ae7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -45,22 +48,21 @@ Så här arbetar du med cookies:
 
    Ett annat alternativ är att använda `cookieHeaders` i `NetworkConfiguration` för att ange en godtycklig cookie-huvudsträng som ska användas för begäranden. Denna cookie-rubrik skickas som standard endast med nyckelbegäranden. Om du vill skicka cookie-huvudet med alla begäranden använder du `NetworkConfiguration` metoden `setUseCookieHeadersForAllRequests`:
 
-   ```java
+```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
-   
+    
    Metadata cookie = new MetadataNode(); 
    cookie.setValue("reqPayload", “1234567”); 
    networkConfiguration.setCookieHeaders(cookie); 
    networkConfiguration.setUseCookieHeadersForAllRequests( true ); 
-   
+    
    // Set NetworkConfiguration as Metadata:                                                                   
-   MetadataNode resourceMetadata = new MetadataNode();  
+   MetadataNode resourceMetadata = new MetadataNode(); 
    resourceMetadata.setNode(DefaultMetadataKeys.NETWORK_CONFIGURATION.getValue(),  
                             networkConfiguration); 
-   
+    
    // Call MediaResource.createFromURL to set the metadata: 
    MediaResource resource = MediaResource.createFromURL(url, resourceMetadata); 
-    // Load the resource 
+   // Load the resource 
    mediaPlayer.replaceCurrentItem(resource);
-   ```
-
+```
