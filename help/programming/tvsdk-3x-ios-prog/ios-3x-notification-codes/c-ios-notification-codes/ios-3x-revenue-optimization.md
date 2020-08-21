@@ -4,7 +4,10 @@ seo-description: 'Tabellen innehåller detaljerad information om meddelanden om 
 seo-title: Kod för intäktsoptimering
 title: Kod för intäktsoptimering
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 0%
 
 ---
 
@@ -15,12 +18,15 @@ I den här tabellen finns detaljerad information om INTÄKTOPTIMERINGSmeddelande
 
 ## Aktivera rapportering av intäktsoptimering {#enable-revenue-optimization-reporting}
 
-Aktivera den här rapporteringen genom att använda PTMediaPlayer-API: `[mediaPlayer
-setRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
+Aktivera den här rapporteringen genom att använda PTMediaPlayer-API: `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 
-[!NObs]: De flesta informationsmeddelanden innehåller relevanta metadata, till exempel URL:en för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
+>[!NOTE]
+>
+>De flesta informationsmeddelanden innehåller relevanta metadata, till exempel URL:en för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
 
-|Kod|Namn|Inre meddelande|Metadatanycklar|Kommentarer||—|—|—|—|—|—||401001| REVENUE_OPTIMIZATION_REPORTING| Ingen| Se tabellen nedan för metadatanycklar baserade på olika händelser. | Ingen|
+|Kod |Namn |Inre meddelande |Metadatanycklar |Kommentarer |
+|—|—|—|—|—|—|
+|401001 | REVENUE_OPTIMIZATION_REPORTING | Ingen | Se tabellen nedan för metadatanycklar baserade på olika händelser. | Ingen |
 
 | Händelseinformation | ContextMetadata |
 |---|---|
