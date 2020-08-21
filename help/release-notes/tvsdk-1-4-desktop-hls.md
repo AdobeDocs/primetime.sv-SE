@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: a94150abc2afff4af24ee83573e73124f8b3260a
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '5222'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt elle
 
 * **Multi-CDN-stöd för CRS-annonser**
 
-   * Som standard lagras alla omkodade mediefiler på Adobe-ägda CDN på Akamai. I den senaste versionen kan Adobe Creative Repackaging Service (CRS) överföra de trancoded creatives till flera CDN:er enligt kundens specifikationer.
+   * Som standard lagras alla omkodade resurser på ett CDN som ägs av Adobe på Akamai. Med den senaste versionen kan Adobe Creative Repackaging Service (CRS) överföra de trancoded creatives till flera CDN:er enligt kundens specifikationer.
    * Nya API:er läggs till i TVSDK för att göra det möjligt att ange den slutliga kreativa URL:en för CRS när standard-URL:en inte används. Läs dokumentationen för att lära dig hur du använder dessa nya API:er.
 
 ### Nya funktioner i tidigare versioner {#new-features-previous}
@@ -39,7 +42,7 @@ För att passa kunder som bara vill betala för det de använder, i stället fö
 
 * **Beständig nätverksanslutning**
 
-Viktigt: Du måste ha minst Adobe Flash Player version 22 eller senare installerat.
+Viktigt: Du måste ha minst Adobe Flash Player version 22 eller senare installerad.
 Beständiga nätverksanslutningar skapar och lagrar en intern lista över nätverksanslutningar som kan återanvändas för flera begäranden i stället för att öppna en ny anslutning för varje nätverksbegäran. Beständiga nätverksanslutningar bör öka effektiviteten och minska latensen i nätverkskoden.
 
 I den här versionen stöds inte den här funktionen i Apple Safari och Mozilla Firefox på Mac.
@@ -47,7 +50,7 @@ I den här versionen stöds inte den här funktionen i Apple Safari och Mozilla 
 **1.4.19**
 
 * Stöd för strömintegritet för VPAID-annonser.
-* Aktiverade alternativet Stäng av ljudet på fliken i Flash Player FP 20.0.0.267 för Firefox 42 och senare genom att åtgärda problemet med hängning.
+* Aktiverade tabbalternativet tyst i Flash Player FP 20.0.0.267 för Firefox 42 och senare genom att åtgärda problemet med hängning.
 
 **1.4.18**
 
@@ -70,7 +73,7 @@ Mer information finns i [Lägg till reserv för VAST- och VMAP-annonser](../prog
 
 * **Individuellt stöd**
 
-Stöd för lokala installationer av Adobe Individualization Server för att anpassa kundens begäran om individualisering och gå till en annan slutpunkt.
+Stöd för lokala installationer av Adobe Individualization Server för att anpassa klientens individualiseringsbegäran och gå till en annan slutpunkt.
 
 **1.4.6**
 
@@ -82,7 +85,7 @@ Samplingsbaserad AES-kryptering stöds nu.
 
 * **Video Heartbeats Library (VHL) update to version 1.4.0.1**
 
-   * Lagt till möjlighet att paketera olika användningsfall för analys, från andra SDK:er eller spelare, med Adobe Analytics Video Essentials.
+   * Lagt till möjlighet att paketera olika analysanvändningsfall, från andra SDK:er eller spelare, med Adobe Analytics Video Essentials.
    * Annonsspårning har optimerats genom att metoderna trackAdBreakStart och trackAdBreakComplete har tagits bort. Annonsbrytningen härleds från metodanropen trackAdStart och trackAdComplete.
    * Spelhuvudegenskapen behövs inte längre när annonser spåras.
 
@@ -129,22 +132,22 @@ Samplingsbaserad AES-kryptering stöds nu.
    Problemet där redan ompaketerade URL:er begärs för omkodning har korrigerats enligt kraven från CRS-serverdelen.
 * Zendesk #26197 - Anamorfisk komprimering spelas inte upp i önskad skärmupplösning.
 
-   **Obs**: Det här problemet kräver Flash Player 24.0.0.194 eller senare.
+   **Obs**: För det här problemet krävs Flash Player 24.0.0.194 eller senare.
 
    Problemet där saknade poster i proportionstabellerna användes för att beräkna utdatabredden har åtgärdats.
 
 * Zendesk #26840 - HDCP-identifiering misslyckas på IE11 + Windows7 efter andra försöket.
 
-   **Obs**: Det här problemet kräver Flash Player 24.0.0.218 eller senare.
+   **Obs**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
 
    Problemet löstes genom att ändra AdobeCP:s huvudmeddelandeköhantering så att den itereras genom hela kön, i stället för att bara blockera det första meddelandet.
 
-* Zendesk #27460 - Det nya Akamai-kontot kan inte hantera en POST CDN-begäran.
+* Zendesk #27460 - Det nya Akamai-kontot kan inte hantera en CDN-begäran för POST.
 
-   Det nya CDN-kontot kan inte hantera en POST CDN-begäran. Problemet löstes genom att koden uppdaterades så att annonsbegäran cdn.audiude.com blev GET i stället för POST.
+   Det nya CDN-kontot kan inte hantera en CDN-begäran för POST. Problemet löstes genom att koden uppdaterades så att annonsbegäran cdn.audiude.com blev GET istället för POST.
 * Zendesk #27619 - Flash kraschar i Windows 10
 
-   **Obs**: Det här problemet kräver Flash Player 24.0.0.218 eller senare.
+   **Obs**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
 
    Problemet löstes genom att ett fel förhindrades på grund av långa URL:er.
 
@@ -168,7 +171,7 @@ Följande problem löstes för TVSDK i den här versionen:
 
 * Zendesk #22898 - Undertexter som saknas ska inte göra att uppspelningen misslyckas.
 
-**Obs**: Det här problemet kräver Flash Player 23.0.0.185 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23.0.0.185 eller senare.
 
 Problemet löstes genom att TVSDK tilläts att fortsätta uppspelningen, även om manifestet saknar WebVTT M3U8, och bara registrera en varning.
 
@@ -178,11 +181,11 @@ Problemet löstes genom att VPAID-annonser hanterades korrekt baserat på inneh�
 
 * Zendesk #24528 - TVSDK Usage Metrics for Billing.
 
-Viktigt: Det här problemet kräver Flash Player 23.0.0.185 eller senare.
+Viktigt: För det här problemet krävs Flash Player 23.0.0.185 eller senare.
 
 * Zendesk # 25432 Closed Caption-problem vid storleksändring av spelaren.
 
-Viktigt: Det här problemet kräver Flash Player 23.0.0.185 eller senare.
+Viktigt: För det här problemet krävs Flash Player 23.0.0.185 eller senare.
 
 Koden för bildtextens visningstexturschema har fixerats för att hantera koordinaterna korrekt när spelaren ändrar storlek.
 
@@ -206,13 +209,13 @@ Problemet löstes genom att man tog hänsyn till att TVSDK kan snabba upp bearbe
 
 * Zendesk #24344 - Inaktivera WebVTT-filer för att förbättra starttiderna.
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Problemet löstes genom att WebVTT-filerna lästes endast in när bildtexter måste visas.
 
 * Zendesk #24994 - Textning för hörselskadade tas bort från spelaren vid återgång från reklamavbrott
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Den falska EOC-koden gjorde att bildtextvisningen försvann. Problemet löstes genom att de 608 bildtexskoderna RU2, RU3 och RU4 tvingades att ge korrekt synlighet i det aktuella aktiva fönstret.
 
@@ -224,25 +227,25 @@ Problemet löstes genom att TVSDK aktiverade att pinga rätt URL för felspårni
 
 * Zendesk #23402 - Ofullständig annonsuppspelning
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Efter att ha fått ett 404-fel på vissa begäranden kan en krasch inträffa. Problemet har lösts genom att anslutningen inte stängs av medan svaret hanteras. Upplösningen ser till att VPAID-annonserna inte räknas felaktigt, så de släpps inte när de hämtas.
 
 * Zendesk #23621 - Nya försök misslyckas på 400 och 404
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Ett problem som orsakade att DRM-metadata skadades vid växling mellan olika profiler har åtgärdats.
 
 * Zendesk #23705 - Video Ads fryser under AdStitched break
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Det här problemet är samma problem som i Zendesk #23621.
 
 * Zendesk #23905 - Vissa annonsbrytningar hoppar över annonsbrytningar
 
-**Obs**: Det här problemet kräver Flash Player 23 eller senare.
+**Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
 Den systemspecifika nätverkskoden för Windows har åtgärdats för att säkerställa att anslutningar inte stänger referenser som för närvarande används av andra anslutningar.
 
@@ -275,7 +278,7 @@ Problemet löstes genom att klienterna fick ange anpassade parametrar separat f�
 
 * Zendesk #19851 - När spelaren anpassas till en annan bithastighet hoppar den tillbaka några bildrutor i tiden på den nya bithastigheten och ger en besvärlig upplevelse
 
-**Obs**: Det här problemet kräver Flash Player 22.0.0.175 eller senare.
+**Obs**: För det här problemet krävs Flash Player 22.0.0.175 eller senare.
 
 Problemet där DRM-kortet återställs efter att en liten del av ett segment har laddats ned har inte återställts korrekt.
 
@@ -305,7 +308,7 @@ Vid adaptiv bithastighet, med den maximala bithastigheten, visas ibland en svart
 
 * Zendesk #2887 - Post-roll ad skipping issue when Ad Rule logic applied to the TVSDK
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.240 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.240 eller senare.
 
 Problemet där annonser efter registrering hoppades över när logiken för annonseringsregler tillämpades på TVSDK har åtgärdats.
 
@@ -315,25 +318,25 @@ Om en stor intern annons har flera mediefiler med en VPAID-annons som första an
 
 * Zendesk #21021 - Late Binding Audio orsakar upprepningar av ljudsegment
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.240 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.240 eller senare.
 
 Det upprepade problemet med ljud har åtgärdats.
 
 * Zendesk #21125 - Return from live/linear ad ad break early
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.240 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.240 eller senare.
 
 Den här versionen har stöd för att gå tillbaka från en annonsbrytning tidigt innan annonsbrytningen spelas upp tills den är klar. Tidig retur anges med en anpassad manifesttagg.
 
 * Zendesk # 21369 Sena ljudbindningar orsakar en inkonsekvent tid
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.240 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.240 eller senare.
 
 Problemet har också åtgärdats genom att ljudet upprepades igen.
 
 * Zendesk #21760, 20921 - Audio Video Desync on Seek.
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.240 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.240 eller senare.
 
 Det upprepade problemet med ljud har åtgärdats.
 
@@ -345,7 +348,7 @@ Problemet där referensspelaren inte spelade någon ström och utlöste ett unda
 
 * Zendesk #17580 - Primetime runtime-fel med kod 3357
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.197 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.197 eller senare.
 
 De slumpmässiga 3357 felen som inträffade genom att enhetens ID initierades korrekt när storeVoucher() anropades har åtgärdats.
 
@@ -357,13 +360,13 @@ I den här versionen har tidsgränsen för global annonsbegäran lagts till.
 
 * Zendesk #19580 TVSDK väntar på att innehållsmatcharen ska slutföras innan `PTTimedMetadataChangedNotification` meddelanden skickas
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.182 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
 Problemet löstes i Skrivbordsreferensspelaren genom att man kunde ställa in Ad-taggar och lägga till en anpassad affärsmöjlighetsgenerator som visar hur man prenumererar på anpassade cues och hur dessa behandlas i en VOD-fil.
 
 * Zendesk #20806 Future mitroll ads in DVR window will not trigger after Swapping cams
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.182 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
 Problemet löstes genom att appen uppdaterades för att ställa in _resource.metadata.setValue(DefaultMetadataKeys.ENABLE_LIVE_PREROLL, &quot;false&quot;) för att inaktivera annonsinfogning före registrering i en PIP-växling, vilket resulterar i att ingen möjlighet skapas före registrering.
 
@@ -371,7 +374,7 @@ En sorteringsfunktion introducerades för att åtgärda den osekventiella annons
 
 * Zendesk #20522: Det går inte att hoppa över VPAID 2.0-annonser
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.182 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
 * Problemet löstes genom att man hoppade över VPAID-annonser när annonserna var giltiga.
 * När adbreak-principen är inställd på att hoppa över, skickas fortfarande händelser för annonsradbrytningar. Spelarläget är inkonsekvent.
@@ -380,7 +383,7 @@ Problemet löstes så att det betedde sig korrekt och inte skickar några hände
 
 * Zendesk #20955 Ange nyckelvärdepar i egenskapen customParameters via affärsmöjlighetsgeneratorn
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.182 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
 Auditude-begäran tolkar AuditudeSettings för anpassade parametrar när en annonsenhet skapas för annonsförfrågningar.
 
@@ -388,7 +391,7 @@ Det här beteendet ändrades för att inkludera anpassade parametrar från objek
 
 * Zendesk #21227 - m3u8 kan inte spelas upp enhetligt
 
-**Obs**: Det här problemet kräver Flash Player 21.0.0.211 eller senare.
+**Obs**: För det här problemet krävs Flash Player 21.0.0.211 eller senare.
 
 Problemet löstes genom att TVSDK kunde ignorera manifestet (HLS-underprofiler) som innehåller AC3-kodeken som TVSDK inte stöder (surround).
 
@@ -396,17 +399,17 @@ Problemet löstes genom att TVSDK kunde ignorera manifestet (HLS-underprofiler) 
 
 * Zendesk #19181 - Trick play fast forward to live point locks up stream.
 
-**Obs**: Det här problemet kräver Flash Player 20.0.0.306 eller senare.
+**Obs**: För det här problemet krävs Flash Player 20.0.0.306 eller senare.
 
 * Zendesk #19286 - Flash Player kraschade vid sökning fram och tillbaka i en FER-ström.
 
-**Obs**: Det här problemet kräver Flash Player 20.0.0.306 eller senare.
+**Obs**: För det här problemet krävs Flash Player 20.0.0.306 eller senare.
 
 De tillfälliga hängningar som uppstod vid sökning i Google Chrome löstes genom att frågorna stängdes av, om frågorna tar för lång tid att få ett svar eller om socketen stängs av.
 
 * Zendesk #19305 - Khoppy-uppspelning påträffades vid uppspelning av en ström med A/V-avbrott.
 
-**Obs**: Det här problemet kräver Flash Player 20.0.0.306 eller senare.
+**Obs**: För det här problemet krävs Flash Player 20.0.0.306 eller senare.
 
 Problemet löstes genom att en varning rapporterades.
 
@@ -424,7 +427,7 @@ Problemet löstes genom att spelardumpen gjordes och manifestet lästes in igen 
 
 **Version 1.4.19** (1.4.19.738)
 
-* Zendesk #18234 - Flash Player kraschar uppspelningen av strömmar med Unicode-strängar i CC
+* Zendesk #18234 - Flash Player kraschar vid uppspelning av strömmar med Unicode-strängar i CC
 
 Det här problemet kräver Flash Player FP 20.0.0.267 eller senare och löstes genom att Unicode-strängen hanterades korrekt.
 
@@ -434,13 +437,13 @@ Den här funktionen kräver Flash Player FP 20.0.0.267 eller senare och introduc
 
 * Zendesk #18766 - Referensspelaren kan inte visa icke-latinska unicode-tecken i CC-spårnamn
 
-Den här funktionen kräver Flash Player FP 20.0.0.267 eller senare och den korrigerades genom att Unicode-strängen hanterades korrekt.
+Den här funktionen kräver Flash Player FP 20.0.0.267 eller senare och har korrigerats genom att Unicode-strängen hanterades korrekt.
 
 * Zendesk #18804 - Spelaren kraschar i Firefox 42
 
 Det här problemet kräver Flash Player FP 20.0.0.235 eller senare och är samma problem som Zendesk #18723.
 
-* Zendesk #18864 - Flash Player, fullständig plugin-krasch
+* Zendesk #18864 - Insticksprogrammet Flash Player kraschar
 
 Det här problemet kräver Flash Player FP 20.0.0.235 eller senare och är samma som Zendesk #18723.
 
@@ -458,7 +461,7 @@ Problemet löstes genom att spelaren kunde uppdatera playbackMetrics-tiden, mini
 
 * Zendesk #19102 - Issues with FER and trick mode
 
-Det här problemet kräver Flash Player FP 20.0.0.267 eller senare och löstes genom att fel inställning av advertisingMetadata.adSignalingMode angavs.
+Det här problemet kräver Flash Player FP 20.0.0.267 eller senare och löstes genom att fel anges för advertisingMetadata.adSignalingMode.
 
 * Zendesk #19175 - Ibland visas inte annonser som spelas upp första gången.
 
@@ -502,7 +505,7 @@ Problemet löstes genom att överrullning upptäcktes och diskontinuiteten per n
 
 Problemet löstes genom att spårningsfunktionen för pulsslag återinitierades under en linjär direktuppspelningssession.
 
-* Zendesk #17427 - Adobe Stream Integrity fungerar inte via en proxy i Chrome (Win7) ()
+* Zendesk #17427 - Adobe Stream Integrity not working through a proxy on Chrome (Win7) ()
 
 **Obs**: Upplösningen kräver Flash Player FP 19.0.0.207 eller senare.
 
@@ -526,7 +529,7 @@ Problemet löstes genom att strömmar utan ljud hanterades under de första två
 
 Problemet löstes genom hantering av liveströmmar med tidsinterpolering mellan ljud- och videobildrutor på segmentgränser.
 
-* Zendesk #17973 - Senaste Flash Player 19.0.0.185 kraschar under mittrullning
+* Zendesk #17973 - Latest Flash Player 19.0.0.185 kraschar under mittrullning
 
 **Obs**: Upplösningen kräver Flash Player FP 19.0.0.207 eller senare.
 
@@ -546,11 +549,11 @@ Korrigeringen var att lägga till AD_BREAK_SKIPPED om en annons hoppades över.
 
 Korrigeringen var att lägga till stöd för inställning av egenskapen useCookieHeaderForAllRequests för AVNetworkConfiguration via TVSDK.
 
-* Zendesk #17179 - Flash Player kraschar vid flera SAP-ändringar för krypterat innehåll.
+* Zendesk #17179 - Flash-spelaren kraschar vid flera SAP-ändringar för krypterat innehåll.
 
 En krasch under uppspelning av visst krypterat innehåll har åtgärdats.
 
-**Obs**: Korrigeringen kräver Flash Player 19.0.0.200 eller senare.
+**Obs**: Flash Player 19.0.0.200 eller senare krävs för korrigeringen.
 
 * Zendesk #17499 - How do we not remove midrolls after watch but remove preroll from fer content
 
@@ -603,7 +606,7 @@ Korrigerade en krasch vid uppspelning av video i helskärmsläge i Windows.
 
 **1.4.12 **(1.4.12.656)
 
-* Zendesk #2751 - CSAI and CRS| Förbättra: Hantera dynamiska element i vissa URL-adresser för mediefiler.
+* Zendesk #2751 - CSAI and CRS | Förbättra: Hantera dynamiska element i vissa URL-adresser för mediefiler.
 
 Uppdaterad Creative Repackaging Service för att hantera annonser med dynamiska kreativa URL:er.
 
@@ -622,7 +625,7 @@ TrickPlay godkänner nu frekvenser över 16x: +/- 32, +/-64 och +/-128.
 Korrigerad krasch vid försök att spela upp en omdirigeringsannons i Mac Firefox.
 
 * Zendesk #4037 - Inget användbart profilfel
-* Zendesk #4262 - Adobe Primetime-spelaren kraschar i Windows 10
+* Zendesk #4262 - Adobe Primetime Player kraschar i Windows 10
 
 Korrigerad krasch i Windows Firefox vid uppspelning i helskärmsläge.
 
@@ -641,9 +644,9 @@ Tillåt att bildtextstorlekar används i WebVTT-bildtextkod.
 
 InvalidateProfiles i ThreadSeek när en ny period identifieras.
 
-* Zendesk #3896 - Flash Player kraschar med Stream Integrity inställt på ON i Chrome (kräver Flash Player 18.0.0.200)
+* Zendesk #3896 - Flash Player kraschar med strömintegriteten inställd på ON i Chrome (kräver Flash Player 18.0.0.200)
 
-Korrigerad krasch i inbyggt nätverksläge i pepper 
+Korrigerad krasch i inbyggt nätverksläge i pepper
 
 * Zendesk #3905 - TVSDK-spelaren läses inte in när den finns på CDN
 
@@ -651,9 +654,9 @@ Ett problem med att hitta jokertecken när pageDomain inte är samma som swf-dom
 
 **Version 1.4.10** (1.4.10.642)
 
-* Zendesk #3249 - TVSDK Web Player kraschar i Flash i Firefox
+* Zendesk #3249 - TVSDK Web Player kraschar Flash i Firefox
 
-Korrigerade en tillfällig Flash Player-krasch med Firefox på Mac när en direktuppspelning på en extern bildskärm skulle växla till en ström med högre bithastighet.(kräver Flash Player 18.0.0.160)
+Korrigerade en tillfällig Flash Player-krasch med Firefox på Mac när en direktuppspelning på en extern bildskärm skulle växla till en strömning med högre bithastighet.(kräver Flash Player 18.0.0.160)
 
 * Zendesk #3268 - Desktop: Videospelaren flimrar efter `+-` 40/50 sekunder och börjar bli svart efter `+-` 90 sekunder
 
@@ -674,9 +677,9 @@ Korrigerade ett problem i Mac Chrome där strömmen skulle börja flimra och slu
 
 * Zendesk #2615 - issue removing HLS view from desktop display
 
-Metoden clearVideo() har lagts till i MediaPlayer. Rensar den visade videobildrutan genom att rensa AVStream från StageVideo-objektet. Ska bara anropas om videon pausas och replaceCurrentResource eller replaceCurrentItem måste anropas innan play() kan anropas igen. 
+Metoden clearVideo() har lagts till i MediaPlayer. Rensar den visade videobildrutan genom att rensa AVStream från StageVideo-objektet. Ska bara anropas om videon pausas och replaceCurrentResource eller replaceCurrentItem måste anropas innan play() kan anropas igen.
 
-* Zendesk #3169 - Uppdatera referensspelaren med Adobe Analytics-integrering
+* Zendesk #3169 - Uppdatera referensspelare med Adobe Analytics-integrering
 
 Referensspelaren har uppdaterats med Adobe Analytics-integrering
 
@@ -701,9 +704,9 @@ Mime-typer för HLS-formatet var skiftlägeskänsliga, vilket var felaktigt och 
 
 **Version 1.4.5**
 
-* Zendesk #2256 - Åtkomst till Master Playlist, uppdaterad PSDK för att skicka timedMetadata-händelser för prenumerationstaggar i huvudspellistan. (kräver Flash Player version 17.0.0.134)
+* Zendesk #2256 - Åtkomst till Överordnad Playlist, uppdaterad PSDK för att skicka timedMetadata-händelser för prenumerationstaggar i den överordnad spellistan. (kräver Flash Player version 17.0.0.134)
 * Zendesk #2417 - spelaren som försökte hämta undertexter innan uppspelningen startades använde WebVTT fel segmentnummervariabel för segmentnummermatchning. Fel visas bara för media med segmentindex som börjar på noll. (kräver Flash Player version 17.0.0.134)
-* Zendesk #2537 - Flash Player kraschar när pepper-plugin används med Chrome (kräver Flash Player version 17.0.0.134)
+* Zendesk #2537 - Flash-spelaren kraschar när pepper-pluginen används med Chrome (kräver Flash Player version 17.0.0.134)
 * Zendesk #2547 - Arabiska undertexter: Texten ska justeras åt höger (kräver Flash Player version 17.0.0.134)
 
 **Version 1.4.4**
@@ -712,13 +715,13 @@ Mime-typer för HLS-formatet var skiftlägeskänsliga, vilket var felaktigt och 
 * Zendesk #2197 - `[Ads]` Spårning och fel
 * Zendesk #2286 - Feature Request: Ange information om annonsinläsningsstatus (VPAID)
 * Zendesk #2285 - Feature Request: Hoppa över och efter en angiven tidsgräns
-* Fel 3921755 - uppdatering av OpenSSL-bibliotek till version 1.0.1L i Flash Player (kräver Flash Player version 16.0.0.305 eller senare)
+* Fel 3921755 - Uppdatering av OpenSSL-biblioteket till version 1.0.1L i Flash Player (kräver Flash Player version 16.0.0.305 eller senare)
 
 **Version 1.4.2**
 
 * Zendesk #1303 - Vertical Offset for Closed Caption (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
 * Zendesk #1870 - Closed Caption Turning On &amp; Off (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
-* Zendesk #2110 - Uppspelningen fastnar efter försök att aktivera helskärmsläge under en VPAID-annons (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
+* Zendesk #2110 - Uppspelningen fastnar efter försök att gå in i helskärmsläge under en VPAID-annons (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
 * Zendesk #2199 - `[VPAID]` Player svarar inte vid sökning efter tidigare annonsavbrott
 * Zendesk #2358 - Sv: `[Analytics]` Felaktiga kapiteldata
 
@@ -742,16 +745,18 @@ Utan video finns det ingen visningsrutedimension och utan visningsrutedimension 
 * Strömintegriteten är något långsammare i Google Chrome på grund av begränsningar i Chrome-sandlådan.
 * Om du inaktiverar autoPlay i TVSDK 1.4 kan ett DRM-fel uppstå när spelaren är inaktiv i minst en minut. Du kan lösa problemet genom att ändra innehållet `ReferenceCore.as` i `onPlaybackManagerPrepared`:
 
->if (_playbackManager.autoPlay) {
->_playbackManager.play();
->} else {
->_playbackManager.play();
->_playbackManager.pause();
->}
+```
+if (_playbackManager.autoPlay) {
+_playbackManager.play();
+} else {
+_playbackManager.play();
+_playbackManager.pause();
+}
+```
 
 * **Version 1.4.13** PTPLAY-8501 - När VMAP returnerar två direkta MP4-annonser som inte är omkodade, spelas samma fall upp två gånger.
 
-* **Version 1.4.2** I Flash Player version 16 identifierades ett problem med ABR-logiken för&quot;nedbrytning&quot; efter att spelaren har försatts i en tom buffringshändelse. Problemet förhindrar att bithastigheten ändras i miljöer med dålig bandbredd när spelaren försätts i buffertläge. Om du vill undvika problemet kan du låta appen vara inställd på `BufferControlParameters.initialBufferTime` att vara densamma som `BufferControlParameters.playbackBufferTime` tillfälligt under buffringsläget (d.v.s. i en `BufferEvent.BUFFERING_BEGIN` händelse) och sedan återställa den till de angivna värdena för `BufferEvent.BUFFERING_END` händelsen. Åtgärdsproblemet kommer i nästa patchversion av Flash Player version 16.
+* **Version 1.4.2** I version 16 av Flash Player identifierades ett problem med ABR-logiken för&quot;nedbrytning&quot; efter att spelaren försatts i en tom buffringshändelse. Problemet förhindrar att bithastigheten ändras i miljöer med dålig bandbredd när spelaren försätts i buffertläge. Om du vill undvika problemet kan du låta appen vara inställd på `BufferControlParameters.initialBufferTime` att vara densamma som `BufferControlParameters.playbackBufferTime` tillfälligt under buffringsläget (d.v.s. i en `BufferEvent.BUFFERING_BEGIN` händelse) och sedan återställa den till de angivna värdena för `BufferEvent.BUFFERING_END` händelsen. Fixen till det här problemet kommer att finnas i nästa patch-version av Flash Player 16.
 
 * **Version 1.4.0**
 
@@ -767,4 +772,4 @@ Utan video finns det ingen visningsrutedimension och utan visningsrutedimension 
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
