@@ -5,7 +5,10 @@ seo-title: Infoga annonser
 title: Infoga annonser
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -93,11 +96,11 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
 
 1. Om programmet delar samma cue för att indikera cue-out/splice-out och cue-in/splice-in, utökar `PTDefaultAdOpportunityResolver` och implementerar `preparePlacementOpportunity` metoden.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >I följande kod antas att programmet har en implementering för `isCueInOpportunity` metoden.
 
-   I följande kod antas att programmet har en implementering för `isCueInOpportunity` metoden.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Registrera den utökade lösaren för affärsmöjlighet på `PTDefaultMediaPlayerClientFactory` instansen.
 
