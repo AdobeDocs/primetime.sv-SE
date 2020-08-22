@@ -2,9 +2,10 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Hjälp om Digital Rights Management i Primetime
+user-guide-title: Hjälp om Primetime Digital Rights Management
+user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Hjälp om hantering av digitala rättigheter {#drm}
+# Hjälp om Digital Rights Management {#drm}
 
 + [DRM-översikt](home.md)
 + Handbok för registrering av certifikat {#certificate-enrollment-guide}
@@ -82,10 +83,10 @@ ht-degree: 0%
    + [Skapa anpassade DRM-profiler (valfritt)](cloud-quick-start/creating-custom-drm-policies/creating-custom-drm-policies.md)
    + [Uppdatera befintligt DRM-innehåll till molnbaserad DRM (valfritt)](cloud-quick-start/update-existing-drm-to-cloud.md)
    + [Direktuppspelning till Xbox360 (tillval)](cloud-quick-start/streaming-to-xbox360.md)
-+ Använda nyckelservern Adobe Primetime DRM {#using-key-server}
++ Använda Adobe Primetime DRM Key Server {#using-key-server}
    + [Krav för att använda Primetime DRM Key Server](using-the-drm-key-server/requirements.md)
    + [Distribuera Primetime DRM Key Server](using-the-drm-key-server/deployment-overview.md)
-   + [Paketera innehåll](using-the-drm-key-server/packaging-content.md)
+   + [Prickande innehåll](using-the-drm-key-server/packaging-content.md)
 + Riktlinjer för säker driftsättning av Adobe Primetime DRM {#guidelines}
    + Introduktion till nätverkstopologi {#introduction}
       + [Översikt](secure-deployment-guidelines/overview/network-topology.md)
@@ -97,7 +98,7 @@ ht-degree: 0%
    + [Leverantörsspecifik säkerhetsinformation](secure-deployment-guidelines/vendor-specific-sec-info.md)
    + [Fysisk säkerhet och åtkomst](secure-deployment-guidelines/physical-sec-and-access.md)
    + [Paketera och skydda innehåll](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content.md)
-   + [Säkerställa kompatibilitet med Flash Media Rights Management Server 1.x](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
+   + [Säkerställer kompatibilitet med Flash Media Rights Management Server 1.x](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
    + Utfärda och skydda licensservern {#issuing-licenses}
       + [Skydda licensservern](secure-deployment-guidelines/issuing-licenses/issuing-licenses-protect-license-server.md)
       + [Förgenererande licenser](secure-deployment-guidelines/issuing-licenses/issuing-licenses-pre-gen.md)
@@ -117,7 +118,7 @@ ht-degree: 0%
       + [Arbetsflöde med flera DRM-DRM för FairPlay](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [Paketera ditt innehåll med Bento4](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
-      + [Paketera innehållet med Adobe Offline Packager](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
+      + [Paketera ditt innehåll med Adobe Offline Packager](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
       + [Använda skyddsprofiler för utdata](multi-drm-workflows/p-l-and-p/setting-policies-widevine.md)
       + [Översikt över arbetsflödet Klientnyckelbegäran](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-overview.md)
       + [Uttryckstoken](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-expressplay-tokens.md)
@@ -163,9 +164,9 @@ ht-degree: 0%
    + [Om användningsregler](protected-streaming/usage-rules.md)
    + [Krav](protected-streaming/requirements.md)
    + Förstå distribution {#understanding-deployment}
-      + [Distribuera Adobe Primetime DRM-servern för skyddad strömning](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
+      + [Driftsätta Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
       + [Java-systemegenskaper](protected-streaming/understanding-deployment/java-system-properties.md)
-      + [Om DRM-autentiseringsuppgifter för Adobe Primetime](protected-streaming/understanding-deployment/drm-credentials.md)
+      + [Om Adobe Primetime DRM-autentiseringsuppgifter](protected-streaming/understanding-deployment/drm-credentials.md)
       + [HSM-konfiguration](protected-streaming/understanding-deployment/hsm-configuration.md)
       + Konfigurera konfigurationsfilerna för licensservern {#configuration-files}
          + [Konfigurationsfiler för licensserver](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-license-server-config-files.md)
@@ -175,7 +176,7 @@ ht-degree: 0%
       + [DRM-principfil för korsdomän](protected-streaming/understanding-deployment/drm-crossdomain-policy-file.md)
       + [Anpassade auktoriseringstillägg](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [Prestandajustering](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
-      + [Uppgradera Adobe Primetime DRM-servern för skyddad direktuppspelning](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
+      + [Uppgraderar Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
       + [Köra DRM-servern för skyddad direktuppspelning](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [Paketera innehåll](protected-streaming/understanding-deployment/packaging-content.md)
       + DRM Server for Protected Streaming Utilities {#drm-for-protected-streaming-utilities}
@@ -190,7 +191,7 @@ ht-degree: 0%
       + [Krav för synkronisering](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Körnings- och programbegränsningar {#runtime-application-restrictions}
       + [Tillåtelselista för Primetimes DRM-program tillåter uppspelning av skyddat innehåll...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
-      + [Tillåtelselista för Adobe® Flash® Player SWF-filer](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Tillåtelselista för SWF-filer för Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
       + [Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
       + [Blockeringslista i programkörningar](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Minsta säkerhetsnivå för DRM och körningsmiljöer](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
@@ -234,7 +235,7 @@ ht-degree: 0%
    + Implementera en licensserver {#implementing-the-license-server}
       + [Översikt](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [Distributionsalternativ för licensserver](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
-      + [Bearbeta DRM-begäranden från Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
+      + [Bearbeta Adobe Primetime DRM-begäranden](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Hantera begäranden om hämtning av serverversion](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
       + [Hantera begäran om domänregistrering](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
       + [Hantera begäranden om domänavregistrering](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
@@ -254,7 +255,7 @@ ht-degree: 0%
          + [Förbättrad licenskedja](protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md)
       + [Hantera synkroniseringsbegäranden](protecting-content/implementing-the-license-server/handling-synch-reqs.md)
       + [Hantera FMRMS-kompatibilitet](protecting-content/implementing-the-license-server/handling-fmrms-compatibility.md)
-      + [Hantera certifikatuppdateringar när Adobe-utfärdade certifikat upphör att gälla](protecting-content/implementing-the-license-server/handling-cert-updates.md)
+      + [Hantera certifikatuppdateringar när certifikat som utfärdas av Adobe upphör att gälla](protecting-content/implementing-the-license-server/handling-cert-updates.md)
       + [Prestandajustering](protecting-content/implementing-the-license-server/performance-tuning.md)
    + Återkalla klientautentiseringsuppgifter {#revoking-client-creds}
       + [Översikt](protecting-content/revoking-client-creds/revoking-creds-overview.md)
@@ -346,13 +347,13 @@ ht-degree: 0%
    + [Externt CEK-arbetsflöde för AXS DRM](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
    + [Använda externt CEK för att sälja och paketera licenser](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
 + Använda Adobe Access Server för skyddad strömning {#adobe-access-server}
-   + [Om Adobe Access Server for Protected Streaming](aaxs-protected-streaming/about-aaxs-protect-stream.md)
+   + [Om Adobe Access Server för skyddad strömning](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [Användningsregler](aaxs-protected-streaming/usage-rules.md)
    + [Krav](aaxs-protected-streaming/requirements.md)
    + Distribuera Adobe Access Server för skyddad strömning {#deploying-aaxs-protect-stream}
-      + [Distribuera Adobe Access Server for Protected Streaming - översikt](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
+      + [Distribuera Adobe Access Server för skyddad strömning - översikt](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Java-systemegenskaper](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
-      + [Adobe Access-inloggningsuppgifter](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
+      + [Adobe Access-autentiseringsuppgifter](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
       + [HSM-konfiguration](aaxs-protected-streaming/deplying-aaxs-protect-stream/hsm-configuration.md)
    + Konfigurationsfiler för licensserver {#aaxs-license-server-config-files}
       + [Struktur för konfigurationskatalog](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)
@@ -363,7 +364,7 @@ ht-degree: 0%
    + Prestandajustering {#performance-tuning}
       + [Global konfigurationsfil](aaxs-protected-streaming/performance-tuning/global-configuration-file.md)
    + Uppgradera Adobe Access Server för skyddad strömning {#upgrading-the-license-server}
-      + [Köra Adobe Access Server för skyddad direktuppspelning](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
+      + [Köra Adobe Access Server för skyddad strömning](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
       + [Loggfiler](aaxs-protected-streaming/upgrading-the-license-server/log-files.md)
       + [Loggkatalogstruktur](aaxs-protected-streaming/upgrading-the-license-server/log-directory-structure.md)
       + [Global loggfil](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
@@ -393,11 +394,11 @@ ht-degree: 0%
       + [Säker paketering av innehåll](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-pkging.md)
       + [Lagra profiler på ett säkert sätt](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-storing-policies.md)
       + [Asymmetrisk nyckelkryptering](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ake.md)
-      + [Säkerställa kompatibilitet med Flash Media Rights Management Server 1.x](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
-   + Skydda och utfärda licenser {#issuing-licenses}
+      + [Säkerställer kompatibilitet med Flash Media Rights Management Server 1.x](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
+   + Protect och utfärda licenser {#issuing-licenses}
       + [Använda lokalt genererade listor över återkallade certifikat](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
       + [Använda listor över återkallade certifikat som publicerats av Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
-      + [Generera listor över återkallade certifikat som kompletterar dem som publicerats av Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
+      + [Generera listor över återkallade certifikat som kompletterar dem som Adobe har publicerat](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [Återställningsigenkänning](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Antal datorer när licenser utfärdas](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Uppspelningsskydd](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
@@ -425,12 +426,12 @@ ht-degree: 0%
    + [Tidsbaserade regler](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Körnings- och programbegränsningar {#runtime-and-application-restrictions}
       + [Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
-      + [Tillåtelselista för Adobe® Flash® Player SWF-filer kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Tillåtelselista för SWF-filer för Adobe® Flash® Player som kan spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
       + [Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
       + [Blockeringslista i programkörningsmiljön hindras från att komma åt skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Minsta säkerhetsnivå för DRM och körningsmiljöer](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Enhetsfunktioner som krävs för att spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
-      + [Jailbreak Enforcement (requires Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
+      + [Jailbreak Enforcement (kräver Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
    + Andra policyalternativ {#content-other-policy-options}
       + [Förbättrad kedja av licenser](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
       + [Flera uppspelningsrättigheter](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
@@ -448,7 +449,7 @@ ht-degree: 0%
       + [Flera profiler](aaxs-protecting-content/content-introduction/packaging-options/content-multiple-policies.md)
    + Konfigurera SDK {#setting-up-the-sdk}
       + [Konfigurera utvecklingsmiljön](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
-      + [Adobe Access-inloggningsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
+      + [Adobe Access-autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
       + [Begär certifikat](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [Lagra autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
    + Arbeta med politik {#working-with-policies}
@@ -566,11 +567,11 @@ ht-degree: 0%
    + [Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
    + [Uppgraderar befintliga distributioner](aaxs-reference-implementations/license-server-upgrading-existing-deplys.md)
    + [Konfigurera en domänserver](aaxs-reference-implementations/license-server-upgrading-existing-deplys-setup-ds.md)
-   + Användning av AIR-program i Flash Access Manager {#flash-access-manager-air-app-usage}
+   + Användning av Flash Access Manager AIR-program {#flash-access-manager-air-app-usage}
       + Flash Access Manager-komponenter {#flash-manager-components}
          + [Skapar Packager Server och AIR-programmet](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-overview.md)
          + [Skapar Packager Server](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-pkg-srv.md)
-         + [Bygga AIR-programmet för Flash Access Manager](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
+         + [Skapa AIR-programmet för Flash Access Manager](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
       + [Inledande konfiguration av Flash Access Manager](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
       + Ange inställningar {#setting-preferences}
          + [Översikt över inställningar](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
