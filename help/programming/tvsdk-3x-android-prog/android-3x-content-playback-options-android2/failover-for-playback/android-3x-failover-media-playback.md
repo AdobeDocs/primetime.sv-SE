@@ -5,7 +5,10 @@ seo-title: Medieuppspelning och failover
 title: Medieuppspelning och failover
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,12 @@ När TVSDK inte kan hämta ett alternativt segment utlöses ett `CONTENT_ERROR` 
 
 Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinuerliga segmenthopp till 5, varefter uppspelningen stoppas och TVSDK utfärdar en kod `NATIVE_ERROR` med koden 5.
 
->[!RBegränsningar]
+>[!NOTE]
+>
+>**Begränsningar**
 >
 >Här är några begränsningar som du bör känna till:
+>
 >* ABR-styrparametrarna (Adaptive bit rate) beaktas inte när en växling vid fel inträffar.
 >
 >  
