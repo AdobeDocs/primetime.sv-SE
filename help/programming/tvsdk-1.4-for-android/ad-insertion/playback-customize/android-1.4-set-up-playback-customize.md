@@ -5,7 +5,10 @@ seo-title: Konfigurera anpassad uppspelning
 title: Konfigurera anpassad uppspelning
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Så här anpassar du annonsbeteenden:
 
 1. Tilldela principinstansen som ska användas av TVSDK via reklamfabriken.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >Anpassade annonsprinciper som registreras i början av >uppspelning rensas när MediaPlayer-instansen >avallokeras. Programmet måste registrera en princip >väljarinstansen varje gång en ny uppspelningssession skapas.
 
