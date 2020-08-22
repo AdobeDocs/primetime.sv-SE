@@ -2,20 +2,25 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Dynamic Ad Insertion Help
+user-guide-title: Hjälp om Primetime Dynamic Ad Insertion
+user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
 
-# Hjälp för dynamisk annonsinfogning {#ad-insertion}
+# Hjälp för Dynamic Ad Insertion {#ad-insertion}
 
-+ [Översikt över dynamisk annonsinfogning](home.md)
-+ [Versionsinformation om dynamisk annonsinfogning](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [Översikt över Dynamic Ad Insertion](home.md)
++ [Versionsinformation för Dynamic Ad Insertion](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Manifest Server Debugging Tool](manifest-server-debugging-tool.md)
+
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
-+ Manifest Server-API för annonsinfogning {#manifest-server}
++ Manifest Server-API för Ad Insertion {#manifest-server}
    + [Översikt över Manifest Server-interaktioner](msapi-topics/ms-overview.md)
    + Kom igång med Manifest Server {#get-started}
       + [Skicka ett kommando till manifestservern](msapi-topics/ms-getting-started/ms-sending-cmd.md)
