@@ -5,7 +5,10 @@ seo-title: Överväganden och bästa praxis
 title: Överväganden och bästa praxis
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vis
 
 Kom ihåg följande information när du använder TVSDK:
 
-* Adobe Primetime fungerar inte i iOS-simulatorer.
+* Adobe Primetime fungerar inte med iOS-simulatorer.
 
    Du måste använda riktiga enheter för testning.
 
@@ -54,6 +57,6 @@ Här följer rekommenderad praxis för TVSDK:
 
 Mer information finns i metoderna forceHTTPS och isForcingHTTPS i den här klassen.
 
-[!IMPORTANT]
-
-Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande begäranden ändras inte. Innehållsleverantörerna och annonsservrarna ansvarar för att tillhandahålla URL:er som stöds via HTTPS.
+>[!IMPORTANT]
+>
+>Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande begäranden ändras inte. Innehållsleverantörerna och annonsservrarna ansvarar för att tillhandahålla URL:er som stöds via HTTPS.
