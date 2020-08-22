@@ -5,7 +5,10 @@ seo-title: Styr textningsformat
 title: Styr textningsformat
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -123,20 +126,22 @@ Du kan formatera undertexttexten med TVSDK-metoder.
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextningsfärger med en hexadecimal sträng som representerar RGB-färgvärden. RGB hex-färgåtergivningen är den välkända 6 byte-strängen som du använder i program som Photoshop:
+      >
+      >* FFFFFF = Svart
+      >* 000000 = Vit
+      >* FF0000 = röd
+      >* 00FF00 = Grön
+      >* 0000FF = Blå
+         >och så vidare.
 
-      **Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextningsfärger med en hexadecimal sträng som representerar RGB-färgvärden. RGB hex-färgåtergivningen är den välkända 6 byte-strängen som du använder i program som Photoshop:
+      >
+      >När du skickar färgformatsinformation till `TextFormatBuilder`programmet använder du uppräkningen som tidigare, men nu måste du lägga `Color` `getValue()` till färgen för att få värdet som en sträng. Exempel:
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFFF = Black
-          * 00000 = White
-          * FF0000 = Red
-          * 00FF00 = Green
-          * 0000FF = Blue
-      och så vidare.
-
-      När du skickar färgformatsinformation till `TextFormatBuilder`programmet använder du uppräkningen som tidigare, men nu måste du lägga `Color` `getValue()` till färgen för att få värdet som en sträng. Exempel:
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 Att ställa in stilen för undertexter är en asynkron åtgärd, så det kan ta upp till några sekunder innan ändringarna visas på skärmen.
