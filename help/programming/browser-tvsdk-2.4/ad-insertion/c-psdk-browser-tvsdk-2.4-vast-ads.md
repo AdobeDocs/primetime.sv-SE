@@ -5,7 +5,10 @@ seo-title: VAST-annonser
 title: VAST-annonser
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -56,14 +59,18 @@ Här finns mer information om annonstyperna:
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-I det här elementet stöds attributen `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` .
+
+         >[!TIP]
+         >
+         >I det här elementet stöds attributen `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` .
 
 * **Annonser** som inte är linjära: Följande element stöds:
 
    * `Non-linear`
-      [!TIP]
-I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` .
+
+      >[!TIP]
+      >
+      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` .
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, 
 * **Tilläggsannonser** Följande element stöds:
 
    * `Companion`
-      [!TIP]
-I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` .
+
+      >[!TIP]
+      >
+      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` .
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, 
 
 ## Tillägg {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Endast Auditude-specifika tillägg stöds.
+>[!TIP]
+>
+>Endast Auditude-specifika tillägg stöds.
 
 * `Extension`
