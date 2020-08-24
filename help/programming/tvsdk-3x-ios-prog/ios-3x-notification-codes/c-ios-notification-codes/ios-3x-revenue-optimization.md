@@ -4,9 +4,9 @@ seo-description: 'Tabellen innehåller detaljerad information om meddelanden om 
 seo-title: Kod för intäktsoptimering
 title: Kod för intäktsoptimering
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Aktivera den här rapporteringen genom att använda PTMediaPlayer-API: `[mediaPl
 >
 >De flesta informationsmeddelanden innehåller relevanta metadata, till exempel URL:en för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
 
-|Kod |Namn |Inre meddelande |Metadatanycklar |Kommentarer |
-|—|—|—|—|—|—|
-|401001 | REVENUE_OPTIMIZATION_REPORTING | Ingen | Se tabellen nedan för metadatanycklar baserade på olika händelser. | Ingen |
+| Code | Namn | Inre meddelande | Metadatanycklar | Kommentarer |
+|---|---|---|---|---|
+| 401001 | REVENUE_OPTIMIZATION_REPORTING | Ingen | Se tabellen nedan för metadatanycklar baserade på olika händelser. | Ingen |
 
 | Händelseinformation | ContextMetadata |
 |---|---|
