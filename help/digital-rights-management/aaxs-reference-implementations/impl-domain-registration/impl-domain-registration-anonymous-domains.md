@@ -3,14 +3,17 @@ seo-title: Anonyma domäner
 title: Anonyma domäner
 uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 0%
 
 ---
 
 
 # Anonyma domäner {#anonymous-domains}
 
-I det här fallet tillhör ett stort antal enheter en enda domän och autentisering kanske inte krävs. Om du vill använda den här typen av domän med referensimplementeringen skapar du principen som anger att domänregistrering krävs. Ange domänserverns URL som [*!DNL https:// host:port/flashaccess/domainserver/domainname/*] och ange anonym autentisering.
+I det här fallet tillhör ett stort antal enheter en enda domän och autentisering kanske inte krävs. Om du vill använda den här typen av domän med referensimplementeringen skapar du principen som anger att domänregistrering krävs. Ange domänserverns URL som `https:// host:port/flashaccess/domainserver/domainname/` och ange anonym autentisering.
 
 Referensimplementeringen implementerar följande logik för domänregistrering:
 
