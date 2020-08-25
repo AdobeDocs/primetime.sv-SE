@@ -5,7 +5,10 @@ seo-title: Metadata för Primetime och server
 title: Metadata för Primetime och server
 uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 
-[!PREREQUISITE] {othertype=&quot;Prequired&quot;}
+## Förutsättning
 
 Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 
