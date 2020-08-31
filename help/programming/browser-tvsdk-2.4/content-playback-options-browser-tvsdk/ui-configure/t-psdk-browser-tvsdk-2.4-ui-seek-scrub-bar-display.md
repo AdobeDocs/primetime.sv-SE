@@ -5,7 +5,10 @@ seo-title: Hantera sökning när sökfältet används
 title: Hantera sökning när sökfältet används
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
 
 1. Vänta tills webbläsarens TVSDK är i ett giltigt söktillstånd.
 
-   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om mediaresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge genereras ett `IllegalStateException`fel om du försöker anropa följande metoder.
+   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om medieresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge genereras ett `IllegalStateException`fel om du försöker anropa följande metoder.
 
    Du kan till exempel vänta på att webbläsarens TVSDK ska utlösas `AdobePSDK.MediaPlayerStatusChangeEvent` med ett `event.status` av `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
@@ -38,15 +41,15 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
 
 1. Vänta tills Browser TVSDK utlöser `AdobePSDK.PSDKEventType.SEEK_END` händelsen, som returnerar den justerade positionen i händelsens `actualPosition` attribut:
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = function (event) {
-     // event.actualPosition
-     }
-     &quot;
-     
-     Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Vissa av följande regler kan gälla:
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Vissa av följande regler kan gälla:
+
    * Uppspelningsbeteendet påverkas om en sökning, eller annan omplacering, slutar mitt i en annonsbrytning eller hoppar över annonsbrytningar.
    * Du kan bara söka efter resursens sökbara längd. För VOD är det från 0 till tillgångens varaktighet.
 
