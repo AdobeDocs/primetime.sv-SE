@@ -5,7 +5,10 @@ seo-title: Initiera och konfigurera videoanalys
 title: Initiera och konfigurera videoanalys
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td> 
-   <td colname="col2"> URL:en för den bakomliggande samlingens slutpunkt i Adobe Analytics (tidigare SiteCatalyst). </td> 
+   <td colname="col2"> URL:en för Adobe Analytics (tidigare SiteCatalyst) back-end-samlingens slutpunkt. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
@@ -39,7 +42,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
    <td colname="col2"> Kallas även Report Suite-ID (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Organisations-ID för Marketing Cloud </td> 
+   <td colname="col1"> Marketing Cloud organisation-ID </td> 
    <td colname="col2"> Ett strängvärde som krävs för att instansiera Visitor-komponenten. </td> 
   </tr> 
  </tbody> 
@@ -49,38 +52,39 @@ Så här konfigurerar du videospårning i spelaren:
 
 1. Kontrollera att alternativen för inläsningstid i `ADBMobileConfig.json` resursfilen är korrekta.
 
-       &quot;
-     {
-    &quot;version&quot; : &quot;1.1&quot;,
- &quot;     analys&quot; : {
-    &quot;rsids&quot; : &quot;adobedevelopment&quot;,
-     &quot;server&quot; : &quot;10.131.129.149:3000&quot;,
-     &quot;charset&quot; : &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot;: false,
-     &quot;lifecycleTimeout&quot;: 5,
-     &quot;batchLimit&quot;: 50,
-     &quot;privacyDefault&quot;: &quot;optedin&quot;,
- &quot;     poi&quot; : []
-     },
-     &quot;marketingCloud&quot;: {
-    &quot;org&quot;: &quot;ADOBE PROVIDED VALUE&quot;
-     },
-     &quot;target&quot;: {
-    &quot;clientCode&quot; : &quot;&quot;,
-     &quot;timeout&quot; : 5
-     },
-     &quot;publikManager&quot;: {
-    &quot;server&quot; : &quot;&quot;
-     }
-     }
-     &quot;
-     
-     Den här JSON-formaterade konfigurationsfilen paketeras som en resurs med TVSDK. Spelaren läser endast dessa värden vid inläsningen och värdena förblir konstanta medan programmet körs.
-       
- Så här     konfigurerar du inläsningsalternativ:
-   
-   1. Kontrollera att `ADBMobileConfig.json` filen innehåller rätt värden (från Adobe).
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Den här JSON-formaterade konfigurationsfilen paketeras som en resurs med TVSDK. Spelaren läser endast dessa värden vid inläsningen och värdena förblir konstanta medan programmet körs.
+
+   Så här konfigurerar du inläsningsalternativ:
+
+
+   1. Kontrollera att `ADBMobileConfig.json` filen innehåller rätt värden (tillhandahålls av Adobe).
    1. Kontrollera att filen finns i `assets/` mappen.
 
       Mappen måste finnas i roten för programkällträdet.
