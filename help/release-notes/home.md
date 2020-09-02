@@ -4,9 +4,9 @@ seo-title: Versionsinformation för Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: ca603507f696f75a32b4a4fc8cc35f9e1c14c214
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
-## Förbättringar och korrigeringar i PTAI 20.8.1
+## Förbättringar och korrigeringar i PTAI 20.9.1
 
-Versionen fokuserade på underhållsuppdateringar.
+Versionen fokuserade på att åtgärda det vanligaste kundproblemet, där EXT-X-MAP saknade CDN-token eller EXT-X-MAP-taggar som felaktigt tagits bort från DVR-fönstret.
 
 Mer information om den aktuella versionen av Dynamic Ad Insertion finns i [PTAI versionsinformation](ptai-20x-release-notes.md).
 
