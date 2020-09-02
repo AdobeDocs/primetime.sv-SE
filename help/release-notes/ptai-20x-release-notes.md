@@ -1,28 +1,44 @@
 ---
-title: Versionsinformation om PTAI 20.8.1
-description: Versionsinformation om PTAI 20.8.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
+title: Versionsinformation om PTAI 20.9.1
+description: Versionsinformation om PTAI 20.9.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: f17a9fdf2a7c22d1d7b0833c7eac8f1202cebe87
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Primetime Dynamic Ad Insertion 20.8.1
+# Versionsinformation om Primetime Dynamic Ad Insertion 20.9.1
 
-Versionsinformationen för Dynamic Ad Insertion 20.8.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
+Versionsinformationen för Dynamic Ad Insertion 20.9.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
 
-## Nyheter i PTAI 20.8.1
+## Nyheter i PTAI 20.9.1
+
+**När:** Tisdagen den 1 september 2020 från 3:30 till 19:30 Eastern Time
+
+**Korrigeringar**
+
+・ Korrigerade problemet för kunder som använde HLS/CMAF, där EXT-X-MAP ibland saknade CDN-token eller EXT-X-MAP-taggar ibland felaktigt placerade ut från DVR-fönstret.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 20.8.4
+
+**När:** Onsdagen den 19 augusti 2020 från 03:30 till 07:30 Eastern Time
+
+**Förbättringar och korrigeringar**
+
+Underhållsuppdateringar.
+
+#### Version 20.8.1
 
 **När:** Tisdagen den 4 augusti 2020 från kl. 3.00 till kl. 18.00 (Eastern Time)
 
 **Förbättringar och korrigeringar**
 
 Underhållsuppdateringar.
-
-### Förbättringar och korrigeringar i tidigare versioner
 
 #### Version 20.7.1
 
