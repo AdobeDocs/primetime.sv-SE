@@ -5,7 +5,10 @@ seo-title: QoS-klasser
 title: QoS-klasser
 uuid: fc175269-ec4a-415e-91f3-7fa036290fa6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
@@ -36,17 +39,17 @@ Dessa klasser innehåller information som hjälper dig att avgöra hur bra spela
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> Innehåller information om hur uppspelningen fungerar. Detta inkluderar bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videobildfragmentet, den tid det tog att återge den första bildrutan, den för närvarande buffrade längden och bufferttiden. </td> 
+   <td colname="2"> Innehåller information om hur uppspelningen fungerar. Detta inkluderar bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videobildfragmentet, den tid det tog att återge den första bildrutan, den buffertlängd som för tillfället används och bufferttiden. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Tillhandahåller viktiga QoS-mått för både uppspelning och enheten.
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       Providerklass för QOS-information.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
