@@ -1,11 +1,11 @@
 ---
-seo-title: Distribuera en översikt över nyckelservern Primetime DRM
-title: Distribuera en översikt över nyckelservern Primetime DRM
+seo-title: Distribuera översikten över Primetime DRM Key Server
+title: Distribuera översikten över Primetime DRM Key Server
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Primetime DRM-autentiseringsuppgifter {#primetime-drm-credentials}
 
-Om du vill bearbeta nyckelbegäranden från Primetime DRM iOS- och Xbox 360-klienter måste Primetime DRM Key Server konfigureras med en uppsättning autentiseringsuppgifter som utfärdats av Adobe. Dessa inloggningsuppgifter kan antingen lagras i PKCS#12-filer ( [!DNL .pfx]) eller på en HSM-fil.
+Om du vill bearbeta nyckelbegäranden från Primetime DRM iOS- och Xbox 360-klienter måste Primetime DRM Key Server konfigureras med en uppsättning autentiseringsuppgifter som utfärdas av Adobe. Dessa inloggningsuppgifter kan antingen lagras i PKCS#12-filer ( [!DNL .pfx]) eller på en HSM-fil.
 
 Filerna kan [!DNL .pfx] finnas var som helst, men för att underlätta konfigurationen rekommenderar Adobe att du placerar [!DNL .pfx] filerna i klientens konfigurationskatalog. Mer information finns i [Konfigurationsfiler](#key-server-configuration-files)för nyckelservrar.
 
 ### HSM-konfiguration {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Om du väljer att använda en HSM för att lagra serverinloggningsuppgifterna måste du läsa in de privata nycklarna och certifikaten till HSM och skapa en *konfigurationsfil för pkcs11.cfg* . Filen måste finnas i katalogen *KeyServer.ConfigRoot* . Se [!DNL <Primetime DRM Key Server>/configs] katalog för en exempelkonfigurationsfil för PKCS 11. Mer information om formatet för [!DNL pkcs11.cfg]finns i dokumentationen till Sun PKCS11-providern.
+Om du väljer att använda en HSM för att lagra serverinloggningsuppgifterna måste du läsa in de privata nycklarna och certifikaten till HSM och skapa en *konfigurationsfil för pkcs11.cfg* . Filen måste finnas i katalogen *KeyServer.ConfigRoot* . Se `<Primetime DRM Key Server>/configs` katalogen för ett exempel på en PKCS 11-konfigurationsfil. Mer information om formatet för [!DNL pkcs11.cfg]finns i dokumentationen till Sun PKCS11-providern.
 
 För att verifiera att konfigurationsfilerna för HSM och Sun PKCS11 är korrekt konfigurerade kan du använda följande kommando från den katalog där [!DNL pkcs11.cfg] filen finns ( [!DNL keytool] installeras med Java JRE och JDK):
 
@@ -112,7 +112,7 @@ Nyckelservern Primetime DRM kräver två typer av konfigurationsfiler:
 
 Om konfigurationsfilerna ändras måste servern startas om för att ändringarna ska börja gälla.
 
-För att undvika att göra lösenord tillgängliga i klartext i konfigurationsfilerna måste alla lösenord som anges i den globala konfigurationsfilen och klientkonfigurationsfilen krypteras. Mer information om kryptering av lösenord finns i [*Lösenordssparare *i* Använda Primetime DRM-servern för skyddad direktuppspelning *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md).
+För att undvika att göra lösenord tillgängliga i klartext i konfigurationsfilerna måste alla lösenord som anges i den globala konfigurationsfilen och klientkonfigurationsfilen krypteras. Mer information om kryptering av lösenord finns i [*Lösenordssparare* i *Använda Primetime DRM-servern för skyddad direktuppspelning*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md).
 
 ## Konfigurationskatalogstruktur {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ Konfigurationsfilen innehåller [!DNL flashaccess-keyserver-global.xml] inställ
 * Loggning - Anger loggningsnivån och hur ofta loggfiler rullas.
 * HSM-lösenord - Krävs endast om en HSM används för att lagra serverautentiseringsuppgifter.
 
-Se kommentarerna i den globala konfigurationsfilen som finns i [!DNL <Primetime DRM Key Server>/configs] för mer information.
+Mer information finns i kommentarerna i den globala konfigurationsfilen som finns i `<Primetime DRM Key Server>/configs` .
 
 ## Konfigurationsfiler för innehavare {#tenant-configuration-files}
 
@@ -156,7 +156,7 @@ Konfigurationsfilen för **Xbox 360** -klientorganisationen innehåller:
 
 * XSTS-autentiseringsuppgifter - Anger programutvecklarens autentiseringsuppgifter som används för att dekryptera XSTS-token
 * XSTS-signeringscertifikat - Anger det certifikat som används för att verifiera signaturen på XSTS-tokens.
-* Listan Tillåt i Packager - Packager-certifikat som är betrodda av nyckelservern. Om det inte finns några paketerarcertifikat i listan betraktas alla paketerarcertifikat som tillförlitliga.
+* Packager Tillåtelselista - Packager-certifikat som är betrodda av nyckelservern. Om det inte finns några paketerarcertifikat i listan betraktas alla paketerarcertifikat som tillförlitliga.
 
 ## Loggfiler {#log-files}
 
