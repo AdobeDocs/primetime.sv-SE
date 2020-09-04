@@ -3,7 +3,10 @@ seo-title: Information om NATIVE_ERROR-meddelandet
 title: Information om NATIVE_ERROR-meddelandet
 uuid: 18c4da57-59de-41a8-a2ea-fef800565207
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
   <tr> 
    <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
-    <ph>
+    <pre>
       Inbyggd felkod från AVE. 
-    </ph> Dessa koder representerar följande: 
+    </pre> Dessa koder representerar följande: 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
-     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande Flash Player-felkoder. </li> 
+     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder för Flash Player. </li> 
      <li id="li_98A571480C154CF0AE1DC101FF0834C4">Videouppspelningsfel (-1 till 89). </li> 
      <li id="li_D7C19955DEF94DA88B822C8C57D6D2F4">Kryptografifel (300 till 307). </li> 
     </ul> </td> 
@@ -55,4 +58,4 @@ TVSDK tar emot dessa felkoder och strängar från videomotorn.
 
 >[!IMPORTANT]
 >
->En fullständig lista över Adobe Primetime DRM-klientfelkoder finns i [Felmeddelandereferens](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)för DRM-klient.
+>En fullständig lista över felkoder för Adobe Primetime DRM-klienter finns i [Felmeddelandereferens](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)för DRM-klient.
