@@ -2,7 +2,7 @@
 title: Versionsinformation om TVSDK 3.12 för iOS
 description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -288,19 +288,19 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -1129,7 +1129,7 @@ Stöd för pingning av tomma URL:er för annonsspårning. TVSDK kommer nu att ve
 >
 >Följande funktioner stöds **inte** i TVSDK:
 >
->* Långsam rörelse på alla plattformar och versioner.
+>* Långsam rörelse, oavsett plattform eller version.
 >* Livetrick.
 
 
@@ -1174,7 +1174,7 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 * Om uppspelningen är aktiv över AirPlay hoppas VPAID-annonser över i VPAID 2.0-stödet.
 * drmNativeInterface.framework länkar inte korrekt när minimimålet är iOS7 (eller senare).
 Tillfällig lösning: Ange uttryckligen biblioteket libstdc+.6.dylib enligt följande: Gå till Mål->Bygg faser->Länka binärt med bibliotek och lägg till libstdc++.6.dylib.
-* Det gick inte att infoga post-roll-API:t för ersättning.
+* Det gick inte att infoga post-roll för ersättnings-API.
 * Om du söker efter en annonsbrytning (utan att komma ut ur den) utfärdas en dubblett av meddelanden om annonsstart och annonsbrytningar
 * Inställning av currentTimeUpdateInterval har ingen effekt.
 Obs! I vissa iOS-versioner läser operativsystemet inte in resurserna i PSDKLilibrary.framework automatiskt. Det är viktigt att manuellt kopiera PSDKResources.bundle till programmets paketresurser: Gå till&quot;Bygg faser&quot; och kopiera paketresurser.
