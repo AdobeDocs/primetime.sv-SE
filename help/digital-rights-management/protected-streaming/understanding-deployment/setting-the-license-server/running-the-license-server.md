@@ -3,9 +3,9 @@ seo-title: Köra DRM-servern för skyddad direktuppspelning
 title: Köra DRM-servern för skyddad direktuppspelning
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Du kan kontrollera att inställningarna är giltiga med hjälp av de verktyg som
 
 Om du vill starta Tomcat och licensservern måste du köra [!DNL catalina.bat start] eller [!DNL catalina.sh start] från Tomcat&#39;s [!DNL bin] -katalog.
 
-När servern har startats måste du verifiera att den har konfigurerats korrekt genom att öppna [!DNL https://<lic<span></span>ense-server-host:port>/flashaccesserver/<tenant-name>/flashaccess/license/v1] i ett webbläsarfönster. Om klientkonfigurationen har lästs in visas ett bekräftelsemeddelande.
+När servern har startats måste du verifiera att den har konfigurerats korrekt genom att öppna den `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` i ett webbläsarfönster. Om klientkonfigurationen har lästs in visas ett bekräftelsemeddelande.
 
 ## Loggfiler {#log-files}
 
@@ -54,11 +54,11 @@ Den globala loggfilen [!DNL flashaccess-global.log]finns i *LicenseServer.LogRoo
 
 ### Partitionsloggfil {#section_5660137CD6AA40519E72A4315534846B}
 
-Partitionsloggfilen, [!DNL flashaccess-partition.log], finns i [!DNL <LicenseServer.LogRoot>/flashaccesserver] katalogen. Den innehåller loggmeddelanden som har genererats under bearbetning av en licensbegäran.
+Partitionsloggfilen, [!DNL flashaccess-partition.log], finns i `<LicenseServer.LogRoot>/flashaccesserver` katalogen. Den innehåller loggmeddelanden som har genererats under bearbetning av en licensbegäran.
 
 ### Klientloggfil {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Varje klientorganisations loggfil, [!DNL flashaccess-tenant.log], finns i [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>]. Klientloggen innehåller granskningsinformation som beskriver varje licens som skapas för den här klienten.
+Varje innehavares loggfil, [!DNL flashaccess-tenant.log], finns i `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Klientloggen innehåller granskningsinformation som beskriver varje licens som skapas för den här klienten.
 
 ## Konfigurationsfiler uppdateras {#updating-configuration-files}
 
