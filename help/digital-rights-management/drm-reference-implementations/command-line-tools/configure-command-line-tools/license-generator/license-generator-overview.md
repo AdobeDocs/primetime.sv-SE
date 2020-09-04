@@ -3,7 +3,10 @@ seo-title: Översikt
 title: Översikt
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 </i class="+ topic>
 ```
 
-* `metadata` - Innehåller DRM-metadata för Adobe Primetime.
+* `metadata` - Innehåller Adobe Primetime DRM-metadata.
 
    Du kan hämta den här filen från skyddat innehåll med `-d -m` alternativen i Media Packager.
 
@@ -39,7 +42,7 @@ java -jar AdobeLicenseGenerator.jar -d
 </i class="+ topic>
 ```
 
-* `license` - Innehåller en Adobe Primetime DRM-licens som genereras av licensgeneratorn.
+* `license` - Innehåller en Adobe Primetime DRM-licens som genererats av licensgeneratorn.
 
 **Tabell 6: Alternativ**
 
@@ -112,7 +115,7 @@ Innan du kör licensgeneratorn måste du ange värden för licensgeneratoregensk
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Key Server Certificate, som är ett av Adobe utfärdat licensservercertifikat som används av Key Server. Det här certifikatet används endast om metadata-/DRM-principen anger att en nyckelserver krävs för nyckelleverans till iOS-enheter. </td> 
+   <td colname="2" class="- topic/entry "> Key Server-certifikat, som är ett Adobe-utfärdat licensservercertifikat som används av Key Server. Det här certifikatet används endast om metadata-/DRM-principen anger att en nyckelserver krävs för nyckelleverans till iOS-enheter. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
@@ -128,16 +131,14 @@ Innan du kör licensgeneratorn måste du ange värden för licensgeneratoregensk
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-fil (tillval) som innehåller ytterligare autentiseringsuppgifter för licensservern för dekryptering av CEK i metadata och DRM-principen. Du kan konfigurera ytterligare autentiseringsuppgifter om innehåll tidigare har paketerats med ett annat licensservercertifikat än de autentiseringsuppgifter som har angetts med <span class="codeph"> licensegen.sign.certfile</span>. Den här egenskapen måste referera till en <span class="filepath"> .pfx</span> -fil som innehåller ett certifikat och en privat nyckel. <span class="codeph">n</span> måste öka monotont, med början från 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>Lösenordet används för att skydda filen som du har angett med<span class="+ topic/ph pr-d/codeph codeph"> egenskapen licensegen.keys.asymmetric.licenseServerCredential.n</span> . </p> </td> 
   </tr> 
  </tbody> 
