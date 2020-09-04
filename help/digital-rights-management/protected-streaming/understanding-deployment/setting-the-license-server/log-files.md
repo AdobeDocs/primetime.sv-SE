@@ -5,9 +5,9 @@ seo-title: Loggfiler
 title: Loggfiler
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,12 @@ Loggkataloger är strukturerade för att vara lätta att använda. Loggkatalogen
 
 ## Global loggfil {#section_1CFA90748142439C9F3BE380969539DA}
 
-Den globala loggfilen [!DNL flashaccess-global.log]finns i *LicenseServer.LogRoot*. Loggen kan innehålla loggmeddelanden om att Adobe Primetime DRM Java SDK eller loggmeddelanden kan ha genererats under den tid som servern har initierats.
+Den globala loggfilen `flashaccess-global.log`finns i *LicenseServer.LogRoot*. Loggen kan innehålla loggmeddelanden om att Adobe Primetime DRM Java SDK eller loggmeddelanden kan ha genererats under den tid som servern har initierats.
 
 ## Partitionsloggfil {#section_5660137CD6AA40519E72A4315534846B}
 
-Partitionsloggfilen, [!DNL flashaccess-partition.log], finns i [!DNL <LicenseServer.LogRoot>/flashaccesserver] katalogen. Den innehåller loggmeddelanden som har genererats under bearbetning av en licensbegäran.
+Partitionsloggfilen, `flashaccess-partition.log`, finns i `<LicenseServer.LogRoot>/flashaccesserver` katalogen. Den innehåller loggmeddelanden som har genererats under bearbetning av en licensbegäran.
 
 ## Klientloggfil {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Varje klientorganisations loggfil, [!DNL flashaccess-tenant.log], finns i [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>]. Klientloggen innehåller granskningsinformation som beskriver varje licens som skapas för den här klienten.
+Varje innehavares loggfil, `flashaccess-tenant.log`, finns i `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Klientloggen innehåller granskningsinformation som beskriver varje licens som skapas för den här klienten.
