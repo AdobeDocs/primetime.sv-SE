@@ -5,7 +5,10 @@ seo-title: Meddelandekoder
 title: Meddelandekoder
 uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -36,9 +39,9 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
      <li id="li_11AE91D1325E4F718228E662C9C55F9A">Varningsmeddelandehändelser, från 200000 till 299999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Informationshändelser, från 300000 till 399999 </li> 
     </ul> <p>Varje intervall på den översta nivån, t.ex. fel, delas upp i underintervall, t.ex. 101000 till 101999, som representerar uppspelningsfel. </p>
-    <ph>
+    <pre>
      Uppräkningen <span class="codeph"> mediacore.PSDKErrorCode</span> visar möjliga värden.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> name </td> 
