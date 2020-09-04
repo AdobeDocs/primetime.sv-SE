@@ -5,7 +5,10 @@ seo-title: MediaPlayer-attribut för åtkomst till MediaResource-information
 title: MediaPlayer-attribut för åtkomst till MediaResource-information
 uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -53,9 +56,9 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
-    <ph>
+    <pre>
       Hämtar det markerade ljudspåret som markerades med <span class="codeph"> selectAudioTrack </span>. 
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Tidsbestämda metadata </td> 
