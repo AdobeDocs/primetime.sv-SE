@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -182,7 +182,7 @@ DRM-profiler kan nu ange den högsta tillåtna upplösningen, beroende på enhet
 >
 >Följande funktioner stöds **inte** i TVSDK:
 >
->* Långsam rörelse på alla plattformar och versioner.
+>* Långsam rörelse, oavsett plattform eller version.
 >* Livetrick.
 
 
@@ -221,10 +221,10 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -247,7 +247,7 @@ Comment Type: draft
 * Biljett nr 36321 - En avvikelse har observerats i sökbart intervall mellan PTMediaPlayer- och AVPlayer-instansen i läget&quot;Spelas upp&quot;.
 * Biljett nr 36493 - stöd `libstdc++` för iOS 12
 
-   * Åtgärdade kompileringsproblem med TVSDK på iOS 12. Appar som bygger på TVSDK för iOS 1.4.45 och framåt kräver ett lägsta distributionsmål som iOS 7.0
+   * Åtgärdade kompileringsproblem med TVSDK på iOS 12. Appar som byggs på TVSDK för iOS 1.4.45 och framåt kräver lägsta distributionsmål som iOS 7.0
 
 **Version 1.4.44**
 
@@ -302,7 +302,7 @@ Comment Type: draft
 * (ZD #30371) - Starttiden för AdBreak ändras när vi infogar mer än 2 annonser i linjär ström
 
    Korrigerade felet vid uppspelning av innehåll på Apple TV, vilket förhindrar uppspelning helt
-* (ZD #32146) - Inget PTMediaPlayerStatusError har tagits emot för HLS Live-innehåll när iOS 11 dev-betaversion blockeras
+* (ZD #32146) - Inget PTMediaPlayerStatusError har tagits emot för HLS Live-innehåll som blockerar iOS 11 dev beta
 
    Inget PTMediaPlayerStatusError har tagits emot för HLS Live- och VOD-innehåll som blockeras med Charles (Drop connection and 403)
 * (ZD #29242) - Airplay-videouppspelning misslyckas med annonser aktiverade
