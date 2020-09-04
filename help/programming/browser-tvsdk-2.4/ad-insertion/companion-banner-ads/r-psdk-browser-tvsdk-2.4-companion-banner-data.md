@@ -5,7 +5,10 @@ seo-title: Kompletterande banderolldata
 title: Kompletterande banderolldata
 uuid: b2c709da-9d19-49d1-8116-9c947371b77c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 0%
 
 ---
 
@@ -46,9 +49,9 @@ Var och en `AdBannerAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1">
-    <ph>
+    <pre>
       banderolldata
-    </ph> </td> 
+    </pre> </td> 
    <td colname="col2"> Data av den typ som anges av <span class="codeph"> resourceType</span> för den här tilläggsbanderollen. </td> 
   </tr> 
   <tr> 
