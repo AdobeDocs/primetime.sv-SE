@@ -5,7 +5,10 @@ seo-title: Tidslinjeannonsklasser
 title: Tidslinjeannonsklasser
 uuid: b36d128f-7f13-4c61-b925-dfa5cd94e255
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -25,40 +28,40 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAd.html" format="html" scope="external"> PTAd</a> </td> 
    <td colname="2">En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och en MediaResource-kod. MediaResource innehåller den URL där annonsinnehållet finns. 
-    <ph>
+    <pre>
       Representerar en primär linjär resurs som delas upp i innehållet. Det kan också innehålla en array med tillhörande resurser som måste visas tillsammans med den linjära resursen.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdAsset.html" format="html" scope="external"> PTAdAsset</a> </td> 
    <td colname="2">En klass som representerar en resurs som ska visas. 
-    <ph>
+    <pre>
       Representerar en resurs som ska visas.
-    </ph> 
-    <ph>
+    </pre> 
+    <pre>
       En klass som representerar en annonsresurs.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBannerView.html" format="html" scope="external"> PTAdBannerView</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Visar en banderollresurs. Programmet måste skapa en ny instans av den här verktygsklassen, ange banderollresursen och lägga till den i en vy. Tryckningen och klickspårningen för banderollen hanteras internt av den här klassen.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
-   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. 
-    <ph>
+   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. 
+    <pre>
       Representerar en kontinuerlig sekvens med annonser som delas upp i innehållet.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdClick.html" format="html" scope="external"> PTAdClick</a> </td> 
    <td colname="2">En klass som representerar en klickinstans som är associerad med en resurs. Den här instansen innehåller information om klicknings-URL:en och rubriken som kan användas för att ge användaren mer information. 
-    <ph>
+    <pre>
       Representerar en klickinstans som är associerad med en resurs. Den här instansen innehåller information om klicknings-URL:en och rubriken som kan användas för att ge användaren mer information.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdPolicyInfo.html" format="html" scope="external"> PTAdPolicyInfo</a> </td> 
@@ -74,10 +77,10 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 
-    <ph>
+    <pre>
      <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> Klassen PTContentResolver</a> , <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> protokollet PTContentResolver</a>
-    </ph> </td> 
-   <td colname="2"> En klass som hanterar annonsupplösningsdelen i Adobe Primetimes annonsbeslutsprocess. </td> 
+    </pre> </td> 
+   <td colname="2"> En klass som hanterar annonsupplösningsdelen i Adobe Primetime annonsbeslutsprocess. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
