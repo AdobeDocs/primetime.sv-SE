@@ -5,7 +5,10 @@ seo-title: Meddelandekoder
 title: Meddelandekoder
 uuid: 8a332057-8fda-4497-9264-a2caac92e900
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -26,10 +29,10 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span></td> 
-   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräknad typ med möjliga värden för 
-    <ph>
+   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräkningstyp med möjliga värden för 
+    <pre>
       INFORMATION, VARNING eller FEL. Det här är den översta grupperingen för meddelanden.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> kod</span></td> 
