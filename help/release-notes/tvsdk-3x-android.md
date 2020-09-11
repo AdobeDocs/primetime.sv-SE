@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -171,14 +171,14 @@ Uppdaterad `targetSdkVersion` från 19 till 27 för smidig funktion.
 
 * **alwaysUseAudioOutputLatency(booleskt val) i klassen MediaPlayer**
 
-Använd fördröjning för utdata vid beräkning av ljudtidsstämpel.
+Använd fördröjning för utdata vid beräkning av ljudtidsstämpling.
 Booleska parametrar val - True använder fördröjning för ljudutgång vid beräkning av ljudtidsstämpling.
 
 * **Optimerad för att få bästa möjliga uppspelningsupplevelse även om bandbredden plötsligt faller av**
 
 TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växlar dynamiskt till lämplig återgivning. Detta görs genom att du sömlöst växlar mellan bithastigheterna utan avbrott.
 
-**Version 2.5.5**
+**Version 1.5.5**
 
 * **Inläggning av delvis annonsbrytning**
 
@@ -250,7 +250,7 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
 Android TVSDK v2.5.2 innehåller viktiga felkorrigeringar och några API-ändringar.
 
-**Version 2.5.1**
+**Version 1.5.1**
 
 De viktiga nya funktionerna i Android 2.5.1.
 
@@ -712,7 +712,7 @@ WebViewDebbuging är som standard inställt på False. Om du vill aktivera fels�
 
    * DRM stöds inte
    * Stöd för CC (CEA 608/708) har inte verifierats
-   * Stöd för 4K finns ännu inte
+   * 4K-stöd finns ännu inte
    * Stöd för ID3-taggar har inte verifierats
 
 * För annonsförloppshändelser kanske tidslinjens fält inte visar 100 % korrekt annonsuppspelningstid. Som en tillfällig lösning kan man använda `adcompleteevent` för att lära sig hur annonsuppspelningen slutförs och för att uppdatera användargränssnittet i olika syften, som att uppdatera tidslinjefältet, ta bort och relaterat användargränssnitt osv.
