@@ -5,7 +5,10 @@ seo-title: Infoga annonser
 title: Infoga annonser
 uuid: 6fffb340-65ea-4c47-a55b-c0ec4917d37c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -98,10 +101,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
       >I följande kod antas att programmet har en implementering för `isCueInOpportunity` metoden.
       >
       >
-      >
-      >
-      >
-      ```>
+      ```
       >- (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
       >{ 
       >       if ([self isCueInOpportunity:timedMetadata]) 
@@ -113,10 +113,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
       >               return [super preparePlacementOpportunity:timedMetadata]; 
       >       } 
       >}
-      >```       >
-      >
-
-
+      >```
 
    1. Registrera den utökade lösaren för affärsmöjlighet på `PTDefaultMediaPlayerClientFactory` instansen.
 
