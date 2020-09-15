@@ -5,7 +5,10 @@ seo-title: Timed metadata, klass
 title: Timed metadata, klass
 uuid: 45bd0d9f-3641-4041-905a-a36658c8c9ce
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
@@ -65,16 +68,13 @@ Kom ihåg följande:
 
    >[!TIP]
    >
-   >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Exempel:   >
+   >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Exempel:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url= 
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Om extraheringen misslyckas på grund av ett anpassat taggformat, kommer metadataegenskapen att vara tom och programmet måste extrahera den faktiska informationen. I det här fallet genereras inget fel.
 
@@ -91,7 +91,7 @@ Kom ihåg följande:
    <td colname="col2"> <p>Möjliga typer för tidsbestämda metadata. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type, long time, long id, String name, Metadata metadata); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type, long time, long id, String name, Metadata); </span> </td> 
    <td colname="col2"> <p>Standardkonstruktor (time är lokal direktuppspelningstid). </p> </td> 
   </tr> 
   <tr> 
