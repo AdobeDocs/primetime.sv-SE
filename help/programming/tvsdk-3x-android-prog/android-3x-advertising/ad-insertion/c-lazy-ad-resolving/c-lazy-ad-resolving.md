@@ -6,7 +6,10 @@ seo-title: Just-in-time Ad Resolving
 title: Just-in-time Ad Resolving
 uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,7 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
    1. TVSDK hämtar ett manifest (spellista) och *löser* alla annonser.
    1. TVSDK *läser* in alla annonser och placerar dem på tidslinjen.
    1. TVSDK flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
+
    Spelaren använder URL:erna i manifestet för att hämta annonsinnehållet (kreatörerna), ser till att annonsinnehållet är i ett format som TVSDK kan spela upp, och TVSDK placerar annonserna på tidslinjen. Denna grundläggande process för att lösa och läsa in annonser kan orsaka en orimligt lång fördröjning för en användare som väntar på att spela upp sitt innehåll, särskilt om manifestet innehåller flera annons-URL:er.
 
 * *Lazy Ad Loading*:
@@ -27,6 +31,7 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
    1. TVSDK hämtar en spellista och *löser* alla annonser.
    1. TVSDK *läser* in pre-roll-annonser, flyttar spelaren till PREPARED-status och innehållsuppspelningen börjar.
    1. TVSDK *läser* in de återstående annonserna och placerar dem på tidslinjen när uppspelningen sker.
+
    Den här funktionen förbättrar den grundläggande processen genom att ge spelaren statusen FÖRBEREDD innan alla annonser har lästs in.
 
 * *Lazy Ad Resolving*:
@@ -43,7 +48,8 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 
 >[!IMPORTANT]
 >
->**Faktorer att tänka på när det gäller Lazy Ad Resolving:** >
+>**Faktorer att tänka på när det gäller Lazy Ad Resolving:**
+>
 >* Lazy Ad Resolving stöds bara för VOD-strömmar med lägena SERVER_MAP och MANIFEST_CUES.
 >* Lazy Ad Resolving är inte aktiverat som standard. Om det är inaktiverat löses alla annonser i VOD-strömmar innan uppspelningen startar.
 >* Lazy Ad Resolving är inte kompatibelt med funktionen Instant On. Mer information om Direkt på finns i Direkt på.
@@ -52,6 +58,7 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 >* Vi rekommenderar inte att du minskar värdet för *setDelayAdLoadingTolerance() *under standardvärdet (5 sekunder). Om du gör det kan spelaren buffras i onödan.
 >* Lazy Ad Resolving påverkar inte pre-roll-ads.
 >* Lazy Ad Resolving stöds för närvarande av Auditude-Plugin. Vi rekommenderar att du inte anger ** setDelayAdLoader till true om du använder en anpassad lösare.
+
 >
 
 
