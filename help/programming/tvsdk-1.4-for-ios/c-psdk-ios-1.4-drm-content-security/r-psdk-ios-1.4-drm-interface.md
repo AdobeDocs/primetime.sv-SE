@@ -5,9 +5,9 @@ seo-title: Översikt över Primetime DRM-gränssnittet
 title: Översikt över Primetime DRM-gränssnittet
 uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -47,14 +47,14 @@ Om den DRM-skyddade strömmen är kodad med flera bithastigheter (MBR), bör de 
 
 >[!TIP]
 >
->När du refererar till DRM-skyddade resurs-URL:er i din iOS-app, `?faxs=1` måste frågesträngsparametern läggas till i (MBR)-URL:en på angiven nivå. Exempel: >
+>När du refererar till DRM-skyddade resurs-URL:er i din iOS-app, `?faxs=1` måste frågesträngsparametern läggas till i (MBR)-URL:en på angiven nivå. Exempel:
 >
-```>
+>
+```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
->```>
->The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. You can also append the `faxs=1` tag on DRM-protected HLS asset URLs that are destined for other platforms; it is observed as required on iOS or treated as a non-op in players on other platforms.
-
-
+>```
+>
+>Frågesträngsparametern signalerar att innehållet är DRM-skyddat och utlöser DRM-dekrypteringsarbetsflödet i iOS TVSDK. `faxs=1` Du kan också lägga till taggen på webbadresser för DRM-skyddade HLS-resurser som är avsedda för andra plattformar. `faxs=1` det observeras som nödvändigt på iOS eller behandlas som icke-aktiv i spelare på andra plattformar.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
