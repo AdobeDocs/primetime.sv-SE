@@ -5,7 +5,10 @@ seo-title: Styr textningsformat
 title: Styr textningsformat
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
       >[!IMPORTANT]
       >
-      >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextningsfärger med en hexadecimal sträng som representerar RGB-färgvärden. RGB hex-färgåtergivningen är den välkända 6 byte-strängen som du använder i program som Photoshop:       >
+      >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextningsfärger med en hexadecimal sträng som representerar RGB-färgvärden. RGB hex-färgåtergivningen är den välkända 6 byte-strängen som du använder i program som Photoshop:
       >
       >    * FFFFFF = Svart
       >    * 000000 = Vit
       >    * FF0000 = röd
       >    * 00FF00 = Grön
       >    * 0000FF = Blå
+
       >
       >och så vidare.
       >
       >När du skickar färgformatsinformation till `TextFormatBuilder`programmet använder du uppräkningen som tidigare, men nu måste du lägga `Color` `getValue()` till färgen för att få värdet som en sträng. Exempel:
-      >
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen som var när bildtexten ursprungligen angavs.
+I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen som var när bildtexten ursprungligen angavs.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
