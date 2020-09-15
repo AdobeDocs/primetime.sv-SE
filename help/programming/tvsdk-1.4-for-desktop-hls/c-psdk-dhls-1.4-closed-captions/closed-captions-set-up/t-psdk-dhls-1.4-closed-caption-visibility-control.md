@@ -5,7 +5,10 @@ seo-title: Kontrollera synlighet för undertexter
 title: Kontrollera synlighet för undertexter
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 
 >[!NOTE]
 >
->Synlighetsvärdena för undertexter definieras i `ClosedCaptionsVisibility`. >
+>Synlighetsvärdena för undertexter definieras i `ClosedCaptionsVisibility`.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Vänta tills `MediaPlayer` statusen FÖRBEREDD är minst (se [Vänta på ett giltigt tillstånd](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
