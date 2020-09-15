@@ -5,7 +5,10 @@ seo-title: Anpassade skal
 title: Anpassade skal
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -41,14 +44,11 @@ Du kan göra följande typer av ändringar:
 
       >[!TIP]
       >
-      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Om du till exempel vill använda `overlay-text`lägger du till följande rader i `BufferOverlay.js` filen:       >
+      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Om du till exempel vill använda `overlay-text`lägger du till följande rader i `BufferOverlay.js` filen:
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 
