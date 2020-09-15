@@ -5,7 +5,10 @@ seo-title: Adaptiva bithastigheter (ABR) för videokvalitet
 title: Adaptiva bithastigheter (ABR) för videokvalitet
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 0%
 
 ---
 
@@ -80,20 +83,17 @@ Den här klassen innehåller även `toABRControlParameters()` hjälpmetoden. Anv
 
    >[!NOTE]
    >
-   >I följande exempel initieras alla parametrar till standardvärdena, och sedan anges endast principen till konservativ och den maximala bithastigheten begränsas till 100000:    >
+   >I följande exempel initieras alla parametrar till standardvärdena, och sedan anges endast principen till konservativ och den maximala bithastigheten begränsas till 100000:
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. Ändra enskilda ABR-parametrar vid körning.
 
