@@ -5,7 +5,10 @@ seo-title: Distribuera licensservern
 title: Distribuera licensservern
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Om du tidigare har distribuerat licensserverns WAR-filer kan du behöva ta bort de opackade WAR-katalogerna i [!DNL webapps] katalogen på Tomcat-servern:        >
+   >Om du tidigare har distribuerat licensserverns WAR-filer kan du behöva ta bort de opackade WAR-katalogerna i [!DNL webapps] katalogen på Tomcat-servern:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -28,7 +31,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Distribuera inte [!DNL edsws.war] såvida du inte behöver bakåtkompatibilitet med FMRMS v1.5-innehåll (Flash Media Rights Management). (Detta är ett mycket sällsynt krav.)
+   >Distribuera inte [!DNL edsws.war] om du inte behöver bakåtkompatibilitet med FMRMS v1.5-innehåll (Flash Media Rights Management). (Detta är ett mycket sällsynt krav.)
    >
    >Om du föredrar att hindra Tomcat från att packa upp WAR-filer redigerar du `server.xml` i `conf` katalogen och anger `unpackWARs` till `false`.
 
@@ -39,7 +42,8 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] - Licensserverns egenskapsfil.
    * [!DNL log4j.xml] - Loggningskonfiguration för licensserver
    * [!DNL *.pol] - Exempel på DRM-principfiler.
-   Dessutom kan du välja att kopiera Adobes certifieringsfiler till den här platsen.
+
+   Dessutom kan du välja att kopiera Adobe-certifieringsfilerna till den här platsen.
 
 1. Ändra licensserverinställningarna i [!DNL flashaccesstools.properties] för att återspegla serverkonfigurationen.
 
