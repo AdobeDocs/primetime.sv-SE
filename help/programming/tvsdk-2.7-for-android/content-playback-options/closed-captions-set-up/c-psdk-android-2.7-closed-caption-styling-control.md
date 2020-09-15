@@ -5,7 +5,7 @@ seo-title: Styr textningsformat
 title: Styr textningsformat
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -143,10 +143,11 @@ Du kan formatera undertexttexten med TVSDK-metoder.
       >och så vidare.
       >
       >När du skickar färgformatsinformation till `TextFormatBuilder`programmet använder du uppräkningen som tidigare, men nu måste du lägga `Color` `getValue()` till färgen för att få värdet som en sträng. Exempel:
-
+      >
+      >
       ```
-      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      ```
+      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      >```
 
 
 
@@ -174,7 +175,8 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
-I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen som var när bildtexten ursprungligen angavs.
+>
+>I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen som var när bildtexten ursprungligen angavs.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
