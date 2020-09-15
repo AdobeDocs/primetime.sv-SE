@@ -5,7 +5,10 @@ seo-title: DASH-funktioner som stöds
 title: DASH-funktioner som stöds
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Webbläsare-TVSDK har stöd för ett antal DASH-funktioner som du kan implemente
 
 >[!TIP]
 >
->I funktionens matristabeller nedan, ![](assets/supported15.png)>
+>I tabellen nedan i funktionsmatrisen  ![](assets/supported15.png)
 >betyder att funktionen stöds i den aktuella versionen.
 
 Följande funktioner stöds:
@@ -91,26 +94,26 @@ Följande funktioner stöds:
 
 | Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Annonsinfogning | VOD | Endast annons | Stöds inte |
-| Annonsinfogning | VOD | Målparametrar | Endast VOD |
-| Annonsinfogning | VOD | Egna parametrar | Endast VOD |
-| Annonsinfogning | VOD + Live | Anpassad annonspolicy | Stöds inte |
-| Annonsinfogning | VOD + Live | Lazy och laddning | Stöds inte |
-| Annonsinfogning | VOD | Annonser, banners och klickbara annonser | Stöds inte |
-| Annonsinfogning | VOD | VPAID 2.0 | Stöds inte |
+| Ad Insertion | VOD | Endast annons | Stöds inte |
+| Ad Insertion | VOD | Målparametrar | Endast VOD |
+| Ad Insertion | VOD | Egna parametrar | Endast VOD |
+| Ad Insertion | VOD + Live | Anpassad annonspolicy | Stöds inte |
+| Ad Insertion | VOD + Live | Lazy och laddning | Stöds inte |
+| Ad Insertion | VOD | Annonser, banners och klickbara annonser | Stöds inte |
+| Ad Insertion | VOD | VPAID 2.0 | Stöds inte |
 
 ## Funktioner för infogning av annonser i DASH-kärnan (CSAI) {#dash-core-ad-insertion}
 
 | Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Annonsinfogning | VOD + Live | Före rullning | Endast VOD |
-| Annonsinfogning | VOD + Live | Mid-roll | Endast VOD |
-| Annonsinfogning | VOD + Live | Efterrullning | Endast VOD |
-| Annonsinfogning | FER VOD | Annonsupplösning och beteenden | Stöds inte |
-| Annonsinfogning | VOD + Live | Standardannonspolicy | Endast VOD |
-| Annonsinfogning | VOD + Live | VAST 2.0/3.0 | Endast VOD |
-| Annonsinfogning | VOD + Live | VMAP 1.0 | Endast VOD |
-| Annonsinfogning | VOD + Live | CRS v3.1 | Endast VOD |
+| Ad Insertion | VOD + Live | Före rullning | Endast VOD |
+| Ad Insertion | VOD + Live | Mid-roll | Endast VOD |
+| Ad Insertion | VOD + Live | Efterrullning | Endast VOD |
+| Ad Insertion | FER VOD | Annonsupplösning och beteenden | Stöds inte |
+| Ad Insertion | VOD + Live | Standardannonspolicy | Endast VOD |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | Endast VOD |
+| Ad Insertion | VOD + Live | VMAP 1.0 | Endast VOD |
+| Ad Insertion | VOD + Live | CRS v3.1 | Endast VOD |
 
 ## Skyddsfunktioner för DASH-innehåll {#dash-content-protection}
 
