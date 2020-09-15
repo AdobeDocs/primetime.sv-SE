@@ -5,7 +5,10 @@ seo-title: Meddelanden och händelser för spelarstatus, aktivitet, fel och logg
 title: Meddelanden och händelser för spelarstatus, aktivitet, fel och loggning
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -65,18 +68,17 @@ Med meddelandesystemet kan du samla in loggnings- och felsökningsinformation f�
 >
 >Återloggningen är inte en del av en produktionskonfiguration och förväntas inte hantera trafik med hög belastning. Om implementeringen inte behöver vara helt fullständig bör du tänka på hur effektiv dataöverföringen är för att undvika att överbelasta systemet.
 
-Här följer ett exempel på hur du hämtar meddelanden:
+Här är ett exempel på hur du hämtar meddelanden:
 
 1. Skapa en timerbaserad körningstråd för videoprogrammet som regelbundet frågar efter data som samlats in av TVSDK-meddelandesystemet.
 1. Om timerns intervall är för stort och händelselistans storlek är för liten, kommer meddelandehändelselistan att flöda över.
 
    >[!NOTE]
    >
-   >Gör något av följande för att undvika detta spill:    >
-   >    
-   >    
-   >    1. Minska tidsintervallet som styr tråden som avfrågar efter nya händelser.
-   >    1. Öka storleken på meddelandelistan.
+   >Gör något av följande för att undvika detta spill:
+   >
+   >1. Minska tidsintervallet som styr tråden som avfrågar efter nya händelser.
+   >1. Öka storleken på meddelandelistan.
 
 
 1. Serialisera de senaste meddelandehändelseposterna i JSON-format och skicka posterna till en fjärrserver för efterbearbetning.
