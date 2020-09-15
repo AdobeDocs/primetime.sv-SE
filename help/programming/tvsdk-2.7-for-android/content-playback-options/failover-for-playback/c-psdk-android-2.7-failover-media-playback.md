@@ -5,7 +5,10 @@ seo-title: Medieuppspelning och failover
 title: Medieuppspelning och failover
 uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,8 @@ Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinue
 
 >[!NOTE]
 >
->Här är några begränsningar som du bör känna till: >
+>Här är några begränsningar som du bör känna till:
+>
 >* ABR-styrparametrarna (Adaptive bit rate) beaktas inte när en växling vid fel inträffar.
 >
 >  
