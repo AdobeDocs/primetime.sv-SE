@@ -5,7 +5,7 @@ seo-title: Styr textningsformat
 title: Styr textningsformat
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Du kan formatera undertexttexten med TVSDK-metoder.
       >
       >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextningsfärger med en hexadecimal sträng som representerar RGB-färgvärden. RGB hex-färgåtergivningen är den välkända 6 byte-strängen som du använder i program som Photoshop:
       >
-      >    * FFFFFF = Svart
-      >    * 000000 = Vit
-      >    * FF0000 = röd
-      >    * 00FF00 = Grön
-      >    * 0000FF = Blå
+      >* FFFFFF = Svart
+      >* 000000 = Vit
+      >* FF0000 = röd
+      >* 00FF00 = Grön
+      >* 0000FF = Blå
 
       >
       >och så vidare.
