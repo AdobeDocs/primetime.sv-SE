@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Provides release-specific information, system requirements, limitations, fixed issues, and known issues.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 + [Översikt över versionsinformation](home.md)
 + Primetime Dynamic Ad Insertion {#ptai}
-   + [Versionsinformation om PTAI 20.9.2](ptai-20x-release-notes.md)
+   + [Versionsinformation om PTAI 20.9.3](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK för iOS {#tvsdk-ios}
    + [Versionsinformation om TVSDK 3.12 för iOS](tvsdk-3x-ios.md)
