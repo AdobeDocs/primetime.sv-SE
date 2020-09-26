@@ -1,20 +1,30 @@
 ---
-title: Versionsinformation om PTAI 20.9.2
-description: Versionsinformationen för PTAI 20.9.2 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
+title: Versionsinformation om PTAI 20.9.3
+description: Versionsinformationen för PTAI 20.9.3 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Primetime Dynamic Ad Insertion 20.9.2
+# Versionsinformation om Primetime Dynamic Ad Insertion 20.9.3
 
-Versionsinformationen för Dynamic Ad Insertion 20.9.2 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
+Versionsinformationen för Dynamic Ad Insertion 20.9.3 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
 
-## Nyheter i PTAI 20.9.2
+## Nyheter i PTAI 20.9.3
+
+**När:** Onsdagen den 30 september 2020 kl. 3:30 till 18:30 Eastern Time
+
+**Ändringar**
+
+* Bootstrap API-parameter har lagts till `ptparallelstream`. Detta gör att kunder med spelare som begär CMAF-demuxade ljud- eller videoströmmar parallellt kan säkerställa att annonserna i ljud- och videospår är enhetliga. Ange parametervärdet som true om du vill aktivera den här funktionen eller utelämna om du vill inaktivera den.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 20.9.2
 
 **När:** Tisdagen den 15 september 2020 från kl. 3:30 till kl. 18:30 Eastern Time
 
@@ -28,8 +38,6 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
    >[!NOTE]
    >
    >Den här tidsgränsen gäller endast för annonsförfrågningar, inte för annonsförfrågningar.
-
-### Förbättringar och korrigeringar i tidigare versioner
 
 #### Version 20.9.1
 
