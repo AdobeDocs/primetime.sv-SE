@@ -5,9 +5,9 @@ seo-title: Frågeparametrar för Manifest-server
 title: Frågeparametrar för Manifest-server
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 Frågeparametrar talar om för manifestservern vilken typ av klient som skickade begäran och vad klienten vill att manifestservern ska göra. Vissa är obligatoriska och andra har särskilda godkända format eller värden.
 
-Den fullständiga URL:en består av bas-URL:en följt av ett frågetecken och sedan `parameterName=value` argument, avgränsade med et-tecken: `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+Den fullständiga URL:en består av bas-URL:en följt av ett frågetecken och sedan `parameterName=value` argument, avgränsade med et-tecken: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Identifierade parametrar {#section_072845B7FA94468C8068E9092983C9E6}
+## Identifierade parametrar {#recognized-parameters}
 
 Manifestservern känner igen följande parametrar. De bearbetas eller skickas, tillsammans med alla okända parametrar, till annonsservern.
 
 | Nyckel | Beskrivning | Obligatoriskt | Giltiga värden |
 |--- |--- |--- |--- |
 | `__sid__` | Unikt ID som manifestservern använder för att generera sessions-ID. | Ja | Alfanumerisk |
-| g | Typ av klientenhet | När målningsregler är beroende av enhetstyp | Se listan under [Klienttyper](https://adobeprimetime.zendesk.com) (kräver Zendesk-åtkomst) |
+| g | Typ av klientenhet | När målregler är beroende av enhetstyp | Se listan under [Klienttyper](https://adobeprimetime.zendesk.com) (kräver Zendesk-åtkomst) |
 | k | Nyckelord för anpassad annonsinriktning | Nej | URL-säker sträng i formatet nyckel1=värde1;nyckel2=värde2;. . . |
 | u | Tillgångs-ID för Primetime och infogning. | Ja | MD5 Hash-värde |
 | z | Primetime och infogningszon-ID för resursen. | Ja | Heltal |
@@ -50,3 +50,5 @@ Manifestservern känner igen följande parametrar. De bearbetas eller skickas, t
 | scteTracking | Hämta M3U8 innan SCTE-spårningsinformation kan hämtas i JSON V2-sidecar.  <br/>Den här parametern anger för manifestservern att spelaren som hämtar M3U8 behöver SCTE-tagginformation för att kunna hämtas. | Nej (standard:  false ) | true eller false Note:  SCTE-35-data returneras i JSON-sidecar med följande kombination av frågeparametervärden: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | veargetmultiplikator | Antalet segment från direktpunkten Förskjutningen före rullning konfigureras med:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Obs**:  Endast live/linjär | Nej (standard:  3.0 ) | Float |
 | vebufferLength | Antal sekunder från live-punkten Obs!  Endast live/linjär | Nej (standard:  3.0 ) | Float |
+| ptadtimeout | Om leverantörerna tar för lång tid på sig att svara för att begränsa den totala tiden för annonsupplösning. | Ja, för att aktivera | värde i millisekunder |
+| ptparallelstream | Gör det möjligt för kunder med spelare som begär CMAF-demultiplexade ljud- eller videoströmmar parallellt för att säkerställa att annonserna i ljud- och videospår är enhetliga. | Ja, om du vill aktivera funktionen eller utelämna den. | true |
