@@ -5,7 +5,10 @@ seo-title: Apple FairPlay i TVSDK-applikationer
 title: Apple FairPlay i TVSDK-applikationer
 uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Resursinläsarkoden ansvarar för följande åtgärder:
 1. Formatera förfrågan.
 1. Ange nödvändig information till servern så att servern kan avgöra om begäran ska tillåtas.
 
-Om du till exempel använder Adobes Primetime Cloud DRM som drivs av ExpressPlay skickar din Resource Loader begäran till:
+Om du till exempel använder Adobe Primetime Cloud DRM som drivs av ExpressPlay skickar din Resource Loader begäran till:
 
 ```
 https://fp-gen.service.expressplay.com
