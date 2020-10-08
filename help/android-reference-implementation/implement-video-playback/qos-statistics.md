@@ -5,7 +5,10 @@ seo-title: Visa QoS-uppspelning och enhetsstatistik
 title: Visa QoS-uppspelning och enhetsstatistik
 uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,11 @@ Spåra QoS-statistik genom att hämta enhetsinformation, ansluta till mediespela
 
    * Så här skapar du en QosManager:
       * Det här programmet måste använda arbetsflödesfunktionen för annonsering
+
    QoSManager qosManager = new QosManagerOn();
 
    * Så här använder du en ManagerFactory för att aktivera visning av QoS-statistik:
+
    qosManager = ManagerFactory.getQosManager()
    <b>true</b>, config, mediaPlayer);
 
