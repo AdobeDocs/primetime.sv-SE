@@ -1,28 +1,36 @@
 ---
-title: Versionsinformation om PTAI 20.9.3
-description: Versionsinformationen för PTAI 20.9.3 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Dynamic Ad Insertion år 2020.
+title: Versionsinformation om PTAI 20.10.1
+description: Versionsinformationen för PTAI 20.10.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Primetime Dynamic Ad Insertion 20.9.3
+# Versionsinformation om Primetime Ad Insertion 20.10.1
 
-Versionsinformationen för Dynamic Ad Insertion 20.9.3 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetime Dynamic Ad Insertion år 2020.
+Versionsinformationen för Primetime Ad Insertion 20.10.1 beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2020.
 
-## Nyheter i PTAI 20.9.3
+## Nyheter i PTAI 20.10.1
+
+**När:** Tisdagen den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
+
+**Ändringar**
+
+* Underhållsuppdateringar.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 20.9.3
 
 **När:** Onsdagen den 30 september 2020 kl. 3:30 till 18:30 Eastern Time
 
 **Ändringar**
 
 * Bootstrap API-parameter har lagts till `ptparallelstream`. Detta gör att kunder med spelare som begär CMAF-demuxade ljud- eller videoströmmar parallellt kan säkerställa att annonserna i ljud- och videospår är enhetliga. Ange parametervärdet som true om du vill aktivera den här funktionen eller utelämna om du vill inaktivera den.
-
-### Förbättringar och korrigeringar i tidigare versioner
 
 #### Version 20.9.2
 
@@ -220,6 +228,6 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 ## Kända fel och begränsningar
 
-**PTAI 20.3.3**
+**PTAI 20.10.1**
 
 Ingen ny begränsning har lagts till.
