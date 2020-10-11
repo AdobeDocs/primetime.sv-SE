@@ -2,9 +2,9 @@
 title: Kom igång med Adobe Primetime Ad Insertion
 description: Komma igång med Adobe Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 2a9bb089cda2b315f91b30d5cab0db9b3e372799
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ När systemet har konfigurerats korrekt kan ett typiskt arbetsflöde se ut så h
 
 1. Primetime Ad Insertion hämtar de begärda strömmarna från CDN-innehållet, tolkar/läser eventuell referensuppgifter, anropar annonsservern och ersätter annonsbrytningar efter behov.
 
-1. Primetime Ad Insertion normaliserar manifestet genom att skriva om resurs-URL:er och identifiera om annonskreatörer behöver omkodning, se [Just-in-time-annonsomkodning](just-in-time-transcoding.md) och [paketering](just-in-time-repackaging.md).
+1. Primetime Ad Insertion normaliserar manifestet genom att skriva om resurs-URL:er och identifiera om annonskreatörer behöver omkodning. <!-- see [Just-in-time ad transcoding](just-in-time-transcoding.md) and [packaging](just-in-time-repackaging.md).-->
 
 1. Primetime Ad Insertion hämtar de annonskreatörer som behövs och infogar lämpliga fragment i manifesten.
 
