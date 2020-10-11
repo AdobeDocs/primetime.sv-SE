@@ -1,18 +1,18 @@
 ---
 title: Versionsinformation om PTAI 19.11.1
-description: Versionsinformationen för PTAI 19.11.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetimes dynamiska annonsinfogning 2019.
+description: Versionsinformationen för PTAI 19.11.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2019.
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om dynamisk annonsinfogning för Primetime 19.11.1
+# Versionsinformation om Primetime Ad Insertion 19.11.1
 
-Versionsinformation om dynamisk annonsinfogning 19.11.1 beskriver vad som är nytt eller ändrat, vad som är löst och vad som är känt i Primetimes dynamiska annonsinfogning 2019.
+Versionsinformationen för Primetime Ad Insertion 19.11.1 beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2019.
 
 ## Nyheter i PTAI 19.11.1
 
@@ -88,6 +88,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
    * Lagt till regel för normalisering av kreativ URL för Innovid, som används av SSAI
    * Den normaliseringsregel som används av CRS har lagts till i en tidigare version
    * TVSDK: Den normaliseringsregel som ska läggas till i JSON för CRS-regler tillhandahölls efter en tidigare version, men för att vara säker, kan du tala med din tekniska kontohanterare för att granska alla normaliseringsregler du har.
+
       >[!NOTE]
       >
       >De flesta inspirerande URL:er kommer att kodas om och sammanfogas utan normaliseringsregeln. Ibland kan det dock hända att inaktiva kreativa URL:er med dynamiska parametrar påträffas. Normaliseringsregeln behövs för att hantera de här instanserna.
@@ -102,7 +103,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
    * CRS: Lagt till arbetsflöde för att paketera om annonser i CMAF-format (HLS/fMP4)
 * SSAI: Ett problem har korrigerats som förhindrade att onumxade annonser infogades i omultiplexat innehåll, när både innehållet och annonsen inte har ström med enbart ljud (EXT-X-STREAM-INF)
 * SSAI: Stöd har lagts till för CDN-tokens för Limelight (LLNW) för innehållssegment
-   * När `pttoken=limelight` eller `pttoken=llnw` läggs till i bootstrap-URL:en lägger vi till ett hemligt huvud när vi hämtar källhuvudspellistan. Därefter lägger vi till frågeparametrarna från LLNW:s X-Adobe-Sign-huvud i innehållssegmenten
+   * När `pttoken=limelight` eller `pttoken=llnw` läggs till i bootstrap-URL:en lägger vi till ett hemligt huvud när vi hämtar den överordnad källspellistan. Därefter lägger vi till frågeparametrarna från LLNW:s X-Adobe-Sig-huvud i innehållssegmenten
 * SSAI: Ytterligare ett token-värde (`pttoken=centurylink`) för stöd för CenturyLink CDN auth token, som släpptes 30 juli 2018
    * `pttoken=centurylink` har samma beteende som `pttoken=level3`, och båda värdena är giltiga
 
@@ -119,9 +120,9 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 **När:** Onsdag 10 april 2:30 Eastern Time to onsdag, 10 april 04:30 Eastern Time
 
-* CRS: CRS Repackaging API har inte längre stöd för HTTP POST-kommandon. API:t för CRS-ompackning dirigerar automatiskt om (301) HTTP POST-kommandon till HTTPS
-   * Från och med 20 maj kommer HTTP->HTTPS-omdirigering för HTTP POST-kommandon att inaktiveras
-   * Om du använder API:t för CRS-ompackning för att paketera om annonser i förväg, ska du byta POST-kommandona till HTTPS senast 20 maj
+* CRS: CRS Repackaging API har inte längre stöd för HTTP-POST-kommandon. API:t för CRS-ompaketering dirigerar automatiskt om (301) HTTP-POST-kommandon till HTTPS
+   * Från och med 20 maj inaktiveras HTTP->HTTPS-omdirigering för HTTP-POST-kommandon
+   * Om du använder API:t för CRS-ompackning för att paketera om annonser i förväg, ska du byta POST till HTTPS senast 20 maj
 * CRS: Arkitekturen och arbetsflödet för överföring av CRS-resurser till kundernas CDN-ursprung har omarbetats
    * Jobbprocesserna per CDN-ursprung separeras, så överförda flaskhalsar för ett CDN-ursprung påverkar inte överföringar till andra CDN-ursprung
    * Andra fördelar: CRS-jobbbearbetningstider och överföringshastigheten till kundernas CDN-ursprung har förbättrats
@@ -174,13 +175,13 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
    * Struktur för gammal söknyckel: Zon-, annonssystem-, annons-ID-, Creative-ID-, Creative-URL- och formatparametrar (målvaraktighet, utdataformat, mål-CDN)
    * Uppslagsnycklarna för befintliga CRS-resurser kommer att uppdateras för att matcha den nya strukturen före produktionsreleasen, men observera att nya tillgångar som omkodats mellan uppslagsnyckeluppdateringen och produktionsreleasen kan missas. I så fall initierar de en ny CRS-begäran nästa gång de påträffas efter releasen
 
-* CRS: Lagt till möjlighet att blockera lista/tillåt lista över CRS-förfrågningar från specifika annonssystem, annons-ID, kreativa ID:n, kreativa URL:er och/eller kreativa format
+* CRS: Lagt till möjlighet att begära CRS från blockeringslista/tillåtelselista från specifika annonssystem, annons-ID, kreativa ID:n, kreativa URL:er och/eller kreativa format
 
    >Anteckning
    >
-   >Adobe lägger till blocklisteregler när annonsleverantörer med dynamiska värden (t.ex. dynamisk parameter i URL) för samma annons hittas. Sådana blocklisteregler inaktiveras när den dynamiska komponenten har lösts, antingen av providern eller via en normaliseringsregel.
+   >Adobe lägger till blockeringslista regler när annonsleverantörer med dynamiska värden (t.ex. dynamiska parametrar i URL) för samma annons hittas. Sådana blockeringslista-regler inaktiveras när den dynamiska komponenten har lösts, antingen av providern eller via en normaliseringsregel.
 
-   * Om du vill lägga till en blockeringslista eller tillåta listregel för din zon kan du kontakta din tekniska kontohanterare för att få hjälp.
+   * Om du vill lägga till en blockeringslista- eller tillåtelselista-regel för din zon kan du kontakta din tekniska kontoansvarige för att få hjälp.
 
 ### Version 19.1.1
 
