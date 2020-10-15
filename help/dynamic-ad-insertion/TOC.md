@@ -2,20 +2,20 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Hjälp om Primetime Dynamic Ad Insertion
-user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
+user-guide-title: Hjälp om Primetime Ad Insertion
+user-guide-description: Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
 
-# Hjälp för Dynamic Ad Insertion {#ad-insertion}
+# Hjälp om Primetime Ad Insertion {#ad-insertion}
 
-+ [Översikt över Dynamic Ad Insertion](home.md)
++ [Primetime Ad Insertion - översikt](home.md)
 + Kom igång med Primetime Ad Insertion{#get-started}
    + [Översikt](get-started-ptai.md)
    + [Förbered användning av Primetime Ad Insertion](setup-ptai.md)
@@ -24,7 +24,7 @@ ht-degree: 0%
    + [Använda annonsinfogning i live/linjär strömning](ad-insertion-live-linear-stream.md)
    + [Använd annonsinfogning för VOD](ad-insertion-vod.md)
    + [Ställ in annonsspårning](set-up-ad-tracking.md)
-+ [Versionsinformation för Dynamic Ad Insertion](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [Versionsinformation om Primetime Ad Insertion](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Manifest Server Debugging Tool](manifest-server-debugging-tool.md)
 
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
