@@ -1,10 +1,13 @@
 ---
-title: Inläggning av dynamisk annonsering i Primetime
-seo-title: Hjälp om dynamisk annonsinfogning i Adobe Primetime
+title: Primetime Ad Insertion
+seo-title: Hjälp om Adobe Primetime Ad Insertion
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 115df527472bb0ac6b7d9bae921e80d4c92ddfd7
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
+workflow-type: tm+mt
+source-wordcount: '426'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,9 @@ source-git-commit: 115df527472bb0ac6b7d9bae921e80d4c92ddfd7
 
 Dina tittare tittar inte bara på tv utan också på telefoner, surfplattor, bärbara datorer och andra enheter. Men de förväntar sig ändå en upplevelse av tv-kvalitet. Därför är det viktigt att leverera en sådan upplevelse även i komplexa situationer som sportevenemang och när ni använder programmatisk annonseringsbeslut i realtid. Eftersom annonslagret är lättåtkomligt har du inte råd att låta tekniken misslyckas ens för ett ögonblick.
 
-Adobe Primetimes dynamiska annonsinfogning hjälper er att skapa riktade annonsupplevelser utan buffrings- eller uppspelningsfel. Ni kan infoga annonser i direktsänt, linjärt eller VOD-innehåll. Ni kan också minimera komplexiteten genom att utnyttja Primetimes befintliga integreringar med ledande annonsservrar. Leverera överlägsna annonsupplevelser med synlighet och stöd för Hoppa över VAST Ads. Säkerställ ökat engagemang och större intäkter för er genom att leverera bättre tittarupplevelser till era kunder på olika enheter.
+Adobe Primetime Ad Insertion hjälper er att skapa riktade annonsupplevelser utan buffrings- eller uppspelningsfel. Ni kan infoga annonser i direktsänt, linjärt eller VOD-innehåll. Ni kan också minimera komplexiteten genom att utnyttja Primetimes befintliga integreringar med ledande annonsservrar. Leverera överlägsna annonsupplevelser med synlighet och stöd för Hoppa över VAST Ads. Säkerställ ökat engagemang och större intäkter för er genom att leverera bättre tittarupplevelser till era kunder på olika enheter.
 
-## Hjälp om dynamisk annonsinfogning i Primetime {#ad-insertion-user-guide}
+## Hjälp om Primetime Ad Insertion {#ad-insertion-user-guide}
 
 Den här självhjälpsguiden förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarriktade dynamiska annonser på servern och engagera målgrupper med personaliserade annonser. Använd navigeringen till vänster för att gå ned och lära dig hur olika konfigurationer interagerar och hur ni spårar annonsinfogningar.
 
@@ -23,7 +26,7 @@ Den här självhjälpsguiden förklarar hur ni kan tjäna pengar på innehåll g
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Versionsinformation om dynamisk annonsinfogning](../release-notes/ptai-19x-release-notes.md) | Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel. |
+| [Versionsinformation om Primetime Ad Insertion](../release-notes/ptai-19x-release-notes.md) | Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel. |
 | [Översikt över Manifest Server-interaktioner](msapi-topics/ms-overview.md) | Ger en översikt över manifestservern och hur koordinerar den de olika systemen. |
 | [Manifest Server Debugging Tool](manifest-server-debugging-tool.md) | Ger en inblick i Manifest Server-felsökningsverktyget och den felsökningsinformation som finns för att undersöka problem med annonsinfogning. |
 | [Översikt över tjänsten Creative Repackaging](creative-repackaging-service/crs-overview.md) | Beskriver hur CRS ser till att icke-HLS och kreativa uppspelningar spelas upp korrekt i HLS-strömmar. |
@@ -49,4 +52,4 @@ Den här självhjälpsguiden förklarar hur ni kan tjäna pengar på innehåll g
 
 * [Adobe Primetime DRM-forum](https://forums.adobe.com/community/adobe_access)
 
-* [Resurser för Adobe Primetime-utvecklare](https://www.adobe.com/devnet/primetime.html)
+* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)
