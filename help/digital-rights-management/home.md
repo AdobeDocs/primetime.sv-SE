@@ -1,15 +1,18 @@
 ---
-title: Hjälp om Digital Rights Management i Primetime
-seo-title: Adobe Digital Rights Management - hjälp
+title: Hjälp om Primetime Digital Rights Management
+seo-title: Hjälp om Adobe Digital Rights Management
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8b1ae9a5258600c317aa073ec37567323fd0a309
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
 
-# Hjälp om DRM (Primetime Digital Rights Management)
+# Hjälp om Primetime Digital Rights Management (DRM)
 
 Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De dokument som visas i den vänstra navigeringen är de viktigaste funktionerna för distribution av digitalt innehåll.
 
@@ -21,7 +24,7 @@ Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De doku
 | [Hjälp om Primetime-programmering](/help/programming/home.md) | Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter. |
 | [Hjälp om migrering och konvertering av Primetime](/help/migration-guides/home.md) | Beskriver konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generations programsvit. |
 | [Referensimplementering](/help/android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
-| [Hjälp för dynamisk annonsinfogning](/help/dynamic-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
+| [Hjälp om Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
 
@@ -35,4 +38,4 @@ Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De doku
 
 * [Adobe Primetime DRM-forum](https://forums.adobe.com/community/adobe_access)
 
-* [Resurser för Adobe Primetime-utvecklare](https://www.adobe.com/devnet/primetime.html)
+* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)
