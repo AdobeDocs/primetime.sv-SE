@@ -3,11 +3,11 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Hjälp om Primetime Digital Rights Management
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-description: Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM).
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 0%
 + Använda Adobe Primetime DRM Key Server {#using-key-server}
    + [Krav för att använda Primetime DRM Key Server](using-the-drm-key-server/requirements.md)
    + [Distribuera Primetime DRM Key Server](using-the-drm-key-server/deployment-overview.md)
-   + [Prickande innehåll](using-the-drm-key-server/packaging-content.md)
+   + [Paketera innehåll](using-the-drm-key-server/packaging-content.md)
 + Riktlinjer för säker driftsättning av Adobe Primetime DRM {#guidelines}
    + Introduktion till nätverkstopologi {#introduction}
       + [Översikt](secure-deployment-guidelines/overview/network-topology.md)
@@ -176,7 +176,7 @@ ht-degree: 0%
       + [DRM-principfil för korsdomän](protected-streaming/understanding-deployment/drm-crossdomain-policy-file.md)
       + [Anpassade auktoriseringstillägg](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [Prestandajustering](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
-      + [Uppgraderar Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
+      + [Uppgradera Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
       + [Köra DRM-servern för skyddad direktuppspelning](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [Paketera innehåll](protected-streaming/understanding-deployment/packaging-content.md)
       + DRM Server for Protected Streaming Utilities {#drm-for-protected-streaming-utilities}
