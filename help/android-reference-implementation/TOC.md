@@ -3,11 +3,11 @@ cloud: experience-cloud
 product: primetime
 audience: end-user
 user-guide-title: Hjälp om implementering av Primetime Reference
-user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
+user-guide-description: Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
