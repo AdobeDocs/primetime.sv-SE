@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt elle
 
 **1.4.30**
 
-* **Faktureringsmått**
+* **Faktureringsstatistik**
 
 För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 
@@ -734,9 +734,6 @@ Mime-typer för HLS-formatet var skiftlägeskänsliga, vilket var felaktigt och 
 * Zendesk #1024 - Funktion för att ta bort annonser från strömmen via manifest
 * Zendesk #1423 - HLS-uppspelningsfel låser Flash Player (inget fel rapporteras)
 * Zendesk #1674 - ClosedCaption visas inte. Korrigera 708-bildtextvisningen när 0x03 ETX-koder saknas.
-
-</p>
-</details>
 
 ## Kända fel {#known-issues}
 
