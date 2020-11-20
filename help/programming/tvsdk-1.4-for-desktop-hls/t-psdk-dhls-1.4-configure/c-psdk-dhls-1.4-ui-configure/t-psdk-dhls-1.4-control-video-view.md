@@ -37,8 +37,7 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan 
    >
    >Exempel:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
