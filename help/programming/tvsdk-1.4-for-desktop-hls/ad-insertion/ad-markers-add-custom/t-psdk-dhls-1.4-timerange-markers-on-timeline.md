@@ -5,7 +5,10 @@ seo-title: Placera markörer för TimeRange på tidslinjen
 title: Placera markörer för TimeRange på tidslinjen
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
@@ -26,10 +29,9 @@ I det här exemplet visas det rekommenderade sättet att inkludera TimeRange-spe
 
 * Det antas att mediespelarobjektet som läses in pekar på en VOD-resurs. TVSDK kontrollerar detta varje gång programmet försöker läsa in en medieresurs vars metadata innehåller `TimeRange` specifikationer som bara kan användas i kontexten för den anpassade funktionen annonsmarkörer. Om den underliggande tillgången inte är av typen VOD genererar TVSDK-biblioteket ett undantag.
 
-* När TVSDK hanterar anpassade annonseringsmarkörer inaktiverar det andra annonslösningsmekanismer (via Adobe Primetimes annonsbeslut (tidigare Auditude) eller något annat annonsprovisioneringssystem). Du kan använda någon av de olika annonslösningsmodulerna i TVSDK eller den anpassade annonseringsmekanismen. När du använder det anpassade API:t för annonsmarkörer anses annonsinnehållet vara löst och placerat på tidslinjen.
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
+* När TVSDK hanterar anpassade annonseringsmarkörer inaktiverar det andra annonslösningsmekanismer (via Adobe Primetime annonsbeslut (tidigare Auditude) eller något annat annonsprovisioneringssystem). Du kan använda någon av de olika annonslösningsmodulerna i TVSDK eller den anpassade annonseringsmekanismen. När du använder det anpassade API:t för annonsmarkörer anses annonsinnehållet vara löst och placerat på tidslinjen.
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 Följande kodfragment innehåller ett enkelt exempel där en uppsättning med tre `TimeRange` specifikationer placeras på tidslinjen som anpassade annonsmarkörer.
 
