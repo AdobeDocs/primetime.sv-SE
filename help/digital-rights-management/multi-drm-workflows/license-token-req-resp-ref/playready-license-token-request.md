@@ -6,6 +6,9 @@ title: PlayReady-licenstokenbegäran/svar
 uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +51,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
                "token":"<base64-encoded ExpressPlay token>"}
    ```
 
-## Frågeparametrar för begäran {#section_26F8856641A64A46A3290DBE61ACFAD2}
+## Frågeparametrar {#section_26F8856641A64A46A3290DBE61ACFAD2}
 
 **Tabell 9: Parametrar för tokenfråga**
 
@@ -68,7 +71,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td>Antingen <span class="codeph"> html</span> eller <span class="codeph"> json</span>. Om <span class="codeph"> html</span> (standard) anges en HTML-representation av eventuella fel i svarets entitetstext. <p>Om <span class="codeph"> json</span> anges returneras ett strukturerat svar i JSON-format. Mer information finns i <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel</a> . </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list</span> on success, <span class="codeph"> text/html</span> for HTML error format eller <span class="codeph"> application/json</span> for JSON error format. </p> </td> 
+   <td>Antingen <span class="codeph"> html</span> eller <span class="codeph"> json</span>. Om <span class="codeph"> html</span> (standard) anges en HTML-representation av eventuella fel i svarets entitetstext. <p>Om <span class="codeph"> json</span> anges returneras ett strukturerat svar i JSON-format. Mer information finns i <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel</a>. </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list</span> för lyckad, <span class="codeph"> text/html</span> för HTML-felformat eller <span class="codeph"> application/json</span> för JSON-felformat. </p> </td> 
    <td> Nej </td> 
   </tr> 
  </tbody> 
@@ -87,7 +90,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
  <tbody> 
   <tr> 
    <td><span class="codeph"> generalFlags</span> </td> 
-   <td>En hexadecimal sträng på 4 byte som representerar licensflaggorna. Den måste anges till"00000001" för en permanent licens. <p>Obs! Uthyrningslicenser (<span class="codeph"> rightsType=Uthyrning</span>) MÅSTE vara permanenta. </p> </td> 
+   <td>En hexadecimal sträng på 4 byte som representerar licensflaggorna. Den måste anges till"00000001" för en permanent licens. <p>Obs! Uthyrningslicenser (<span class="codeph"> rightsType=Uthyrning</span>) MÅSTE vara beständiga. </p> </td> 
    <td> Nej </td> 
   </tr> 
   <tr> 
@@ -97,7 +100,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td><span class="codeph"> grabb</span> </td> 
-   <td>En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng <span class="codeph"> ^Någon</span>sträng. Längden på strängen följt av '^' får inte vara längre än 64 tecken. </td> 
+   <td>En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng <span class="codeph"> ^some string'</span>. Längden på strängen följt av '^' får inte vara längre än 64 tecken. </td> 
    <td> Ja </td> 
   </tr> 
   <tr> 
@@ -108,21 +111,21 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   <tr> 
    <td><span class="codeph"> contentKey</span> </td> 
    <td> En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln </td> 
-   <td>Ja, såvida inte <span class="codeph"> kek</span> och <span class="codeph"> ek</span> eller <span class="codeph"> child</span> tillhandahålls </td> 
+   <td>Ja, om inte <span class="codeph">-tangenten</span> och <span class="codeph"> ek</span> eller <span class="codeph"> child</span> anges </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
-   <td>Anger typen av rättigheter. Måste vara <span class="codeph"> BuyToOwn</span> eller <span class="codeph"> Hyr</span>. </td> 
+   <td>Anger typen av rättigheter. Måste vara <span class="codeph"> BuyToOwn</span> eller <span class="codeph"> uthyrning</span>. </td> 
    <td> Ja </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> hyrtidSluttid</span> </td> 
-   <td>Uthyrningens slutdatum. Detta värde MÅSTE vara i formatet"RFC 3339" _ datum/tid i formatet"Z" zonbeteckning ("Zulu time") eller ett heltal föregånget av tecknet"+". <p>Om värdet är ett <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339</a> -datum/tid-format representerar det ett absolut förfallodatum/tid för licensen. Ett exempel på ett RFC 3339-datum/tid är 2006-04-14T12:01:10Z. </p> <p> Om värdet är ett heltal som föregås av ett plustecken (+) tas det som ett relativt antal sekunder från den tidpunkt då variabeln utfärdas. Innehållet kan inte spelas upp efter den här tiden. Endast giltigt om <span class="codeph"> rightsType</span> är <span class="codeph"> hyrd</span>. </p> </td> 
-   <td>Ja, när <span class="codeph"> rightsType</span> är <span class="codeph"> uthyrning</span>. </td> 
+   <td>Uthyrningens slutdatum. Detta värde MÅSTE vara i formatet"RFC 3339" _ datum/tid i formatet"Z" zonbeteckning ("Zulu time") eller ett heltal föregånget av tecknet"+". <p>Om värdet är ett <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> datum-/tidsformat representerar det ett absolut förfallodatum/tid för licensen. Ett exempel på ett RFC 3339-datum/tid är 2006-04-14T12:01:10Z. </p> <p> Om värdet är ett heltal som föregås av ett plustecken (+) tas det som ett relativt antal sekunder från den tidpunkt då variabeln utfärdas. Innehållet kan inte spelas upp efter den här tiden. Endast giltigt om <span class="codeph"> rightsType</span> är <span class="codeph"> uthyrning</span>. </p> </td> 
+   <td>Ja, när <span class="codeph"> rightsType</span> är <span class="codeph"> hyra</span>. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> hyrtid.playDuration</span> </td> 
-   <td>Tid i sekunder som innehållet kan spelas upp när uppspelningen har startat. Endast giltigt om <span class="codeph"> rightsType</span> är hyrd. </td> 
+   <td>Tid i sekunder som innehållet kan spelas upp när uppspelningen har startat. Endast giltigt om <span class="codeph"> rightsType</span> är Hyra. </td> 
    <td> Nej </td> 
   </tr> 
   <tr> 
@@ -152,7 +155,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td><span class="codeph"> unknownOutputBehavior</span> </td> 
-   <td>Nödvändigt beteende när utdata är okända. Tillåtna värden: <span class="codeph"> Tillåt</span>, <span class="codeph"> Tillåt</span> inte eller <span class="codeph"> Gör endast om</span> </td> 
+   <td>Nödvändigt beteende när utdata är okända. Tillåtna värden: <span class="codeph"> Tillåt</span>, <span class="codeph"> Tillåt inte</span> eller <span class="codeph"> SDOnly</span> </td> 
    <td> Nej </td> 
   </tr> 
   <tr> 
@@ -168,7 +171,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   <tr> 
    <td><span class="codeph"> extensionPayload</span> </td> 
    <td> En base64-kodad sträng i tillägget. </td> 
-   <td>Ja, när <span class="codeph"> extensionType</span> anges. </td> 
+   <td>Ja, när <span class="codeph"> extensionType</span> har angetts. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -180,10 +183,10 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
 | **HTTP-statuskod** | **Beskrivning** | **Content-Type** | **Entitetstexten innehåller** |
 |---|---|---|---|
 | `200 OK` | Inget fel. | `text/uri-list` | URL och token för licenshämtning |
-| `400 Bad Request` | Ogiltiga argument | `text/html` eller `application/json` | Felbeskrivning |
-| `401 Unauthorized` | Autentisering misslyckades | `text/html` eller `application/json` | Felbeskrivning |
-| `404 Not found` | Felaktig URL | `text/html` eller `application/json` | Felbeskrivning |
-| `50x Server Error` | Serverfel | `text/html` eller `application/json` | Felbeskrivning |
+| `400 Bad Request` | Ogiltiga argument | `text/html` eller  `application/json` | Felbeskrivning |
+| `401 Unauthorized` | Autentisering misslyckades | `text/html` eller  `application/json` | Felbeskrivning |
+| `404 Not found` | Felaktig URL | `text/html` eller  `application/json` | Felbeskrivning |
+| `50x Server Error` | Serverfel | `text/html` eller  `application/json` | Felbeskrivning |
 
 **Tabell 12: Felkoder för händelse**
 
@@ -277,7 +280,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> OutputControlFlag</span> måste koda 4 byte </td> 
+   <td><span class="codeph"> </span> OutputControlFlagmåste vara kodad med 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -289,7 +292,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td>Saknat <span class="codeph"> barn</span> </td> 
+   <td><span class="codeph"> barn</span> saknas </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -297,19 +300,19 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> child</span> måste vara 32 hexadecimala tecken långa </td> 
+   <td><span class="codeph"> </span> njure måste vara 32 hexadecimala tecken långt </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> barn</span> måste vara 64 tecken långt efter ^ </td> 
+   <td><span class="codeph"> </span> måste vara 64 tecken långt efter ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td>Ogiltigt <span class="codeph"> barn</span> </td> 
+   <td>Ogiltig <span class="codeph">-grabb</span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Ogiltig krypterad <span class="codeph"> nyckel</span> eller nyckel </td> 
+   <td>Ogiltig krypterad <span class="codeph">-nyckel</span> eller nyckel </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -337,7 +340,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -5007 </td> 
-   <td>Endast en av <span class="codeph"> kek</span> eller <span class="codeph"> contentKey</span> kan anges </td> 
+   <td>Endast en av <span class="codeph">-nycklarna</span> eller <span class="codeph"> contentKey</span> kan anges </td> 
   </tr> 
  </tbody> 
 </table>
