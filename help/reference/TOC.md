@@ -14,6 +14,6 @@ ht-degree: 0%
 ---
 
 
-# Referens för Primetime {#reference}
+# Primetime-referens {#reference}
 
 + [API-referenser](api-references.md)
