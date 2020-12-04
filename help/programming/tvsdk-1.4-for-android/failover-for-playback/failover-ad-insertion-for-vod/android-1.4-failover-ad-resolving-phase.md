@@ -1,18 +1,21 @@
 ---
-description: TVSDK kontaktar en annonsleveranstjänst, till exempel Adobe Primetimes annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
-seo-description: TVSDK kontaktar en annonsleveranstjänst, till exempel Adobe Primetimes annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
+description: TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetime annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
+seo-description: TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetime annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
 seo-title: Ad-resolving phase
 title: Ad-resolving phase
 uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 0%
 
 ---
 
 
 # Ad-resolving phase{#ad-resolving-phase}
 
-TVSDK kontaktar en annonsleveranstjänst, till exempel Adobe Primetimes annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
+TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetime annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
 
 TVSDK har stöd för följande typer av annonsleverantörer:
 
