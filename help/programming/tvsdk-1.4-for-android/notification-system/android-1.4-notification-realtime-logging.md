@@ -6,6 +6,9 @@ title: Lägg till loggning och felsökning i realtid
 uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Här är ett exempel på hur du hämtar meddelanden.
    Fjärrservern kan sedan grafiskt visa de data som tillhandahålls i realtid.
 1. Om du vill identifiera förlust av meddelandehändelser ska du leta efter luckor i sekvensen med händelseindexvärden.
 
-   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av `session.NotificationHistory` klassen.
+   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av klassen `session.NotificationHistory`.
