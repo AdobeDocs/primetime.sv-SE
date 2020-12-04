@@ -31,7 +31,7 @@ Du kan styra synligheten för undertexter. När synlighet har aktiverats visas d
 >}
 >```
 
-1. Vänta tills `MediaPlayer` statusen PREPARED är minst. Mer information finns i [Vänta på en giltig status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
+1. Vänta tills `MediaPlayer` har statusen PREPARED. Mer information finns i [Vänta på en giltig status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
 1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
 
