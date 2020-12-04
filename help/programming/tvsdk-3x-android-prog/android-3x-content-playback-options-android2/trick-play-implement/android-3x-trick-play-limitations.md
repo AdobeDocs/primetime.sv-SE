@@ -6,6 +6,9 @@ title: Begränsningar och beteenden för trick play
 uuid: c28cc8db-3f45-488e-ab72-b102b3a1fab2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Begränsningar för uppspelningsläge för trick:
 
-* Huvudspelningslistan måste innehålla segment som bara är för Iframe.
+* Den överordnad spelningslistan måste innehålla segment som bara är för Iframe.
 
    Endast nyckelbildrutorna från Iframe-spåret visas på skärmen.
 * Ljudspåret och undertexter är inaktiverade.
@@ -30,7 +33,7 @@ Begränsningar för uppspelningsläge för trick:
    * Det aktuella tidsvärdet hoppar framåt (snabbt framåt) eller bakåt (vid snabb tillbakaspolning) med varaktigheten för den överhoppade annonsbrytningen.
 
       Detta hoppbeteende för den aktuella tiden gör att strömmens varaktighet förblir oförändrad under trippelning. Spelaren kan bara spåra tiden i förhållande till huvudinnehållet. Inga tidshopp utförs för de värden som returneras för lokal tid när en annons hoppas över.
-   * Händelsen `MediaPlayerEvent.AD_BREAK_SKIPPED` skickas omedelbart innan en annonsbrytning håller på att hoppas över.
+   * `MediaPlayerEvent.AD_BREAK_SKIPPED`-händelsen skickas omedelbart innan en annonsbrytning håller på att hoppas över.
 
       Spelaren kan använda den här händelsen för att implementera anpassad logik som är relaterad till de överhoppade annonsbrytningarna.
 
