@@ -6,6 +6,9 @@ title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -24,5 +27,5 @@ TVSDK har stöd för återgivning av följande format:
 Du kan:
 
 * Välj ett tillgängligt bildtextspår som aktuellt spår och lyssna efter händelser som indikerar ytterligare tillgängliga spår.
-* Aktivera eller inaktivera undertextning (synlig eller inte synlig) med hjälp av `MediaPlayer` gränssnittet.
-* Välj formatalternativ som anger hur undertexter återges av den underliggande videomotorn. Använd `MediaPlayerItem` gränssnittet för att välja format som teckensnitt eller teckenfärg.
+* Aktivera eller inaktivera undertextning (synlig eller inte synlig) med `MediaPlayer`-gränssnittet.
+* Välj formatalternativ som anger hur undertexter återges av den underliggande videomotorn. Använd gränssnittet `MediaPlayerItem` för att välja format som teckensnitt eller teckenfärg.
