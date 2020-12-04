@@ -6,19 +6,22 @@ title: Visa undertexter
 uuid: 657ab9c7-b205-4d13-81a7-51bc8e7d5ee2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
 
-# Visa undertexter {#expose-subtitles}
+# Visa underrubriker {#expose-subtitles}
 
 TVSDK meddelar spelarklienten om att det finns interna AVAsset-objekt tillgängligaMediaCharacpropertiesWithMediaSelectionOptions med hjälp av PTMediaPlayerMediaSelectionOptionsAvailableNotification-meddelandet.
 
-Du kan komma åt tillgängliga undertexter via `PTMediaPlayerItem` egenskapens `subtitlesOptions`.
+Du kommer åt tillgängliga undertexter via `PTMediaPlayerItem`-egenskapens `subtitlesOptions`.
 
 Visa undertexter:
 
-1. Registrera klienten som avlyssnare för `PTMediaPlayerMediaSelectionOptionsAvailableNotification` meddelandet.
+1. Registrera klienten som avlyssnare för `PTMediaPlayerMediaSelectionOptionsAvailableNotification`-meddelandet.
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -27,7 +30,7 @@ Visa undertexter:
    ```
 
    När klienten får det här meddelandet är undertexterna klara i `PTMediaPlayerItem`.
-1. Implementera metoden som `onMediaPlayerItemMediaSelectionOptionsAvailable` liknar följande exempel:
+1. Implementera metoden `onMediaPlayerItemMediaSelectionOptionsAvailable` som i följande exempel:
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
