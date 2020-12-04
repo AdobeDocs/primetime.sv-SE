@@ -6,18 +6,21 @@ title: Implementera en anpassad innehållshanterare
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
 
-# Implementera en anpassad innehållshanterare{#implement-a-custom-content-resolver}
+# Implementera en anpassad innehållslösare{#implement-a-custom-content-resolver}
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När TVSDK identifierar en ny möjlighet itererar företaget genom den registrerade innehållslösningen och söker efter en som kan matcha den möjligheten med hjälp av `canResolve` metoden . Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
+När TVSDK identifierar en ny affärsmöjlighet itererar programmet igenom den registrerade innehållslösaren och söker efter en som kan matcha affärsmöjligheten med hjälp av metoden `canResolve`. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
 
-* Innehållslösaren anropar `client.place` för att ange vilken tidslinjeåtgärd som TVSDK måste utföra (vanligtvis en annonsbrytningsplacering).
-* Innehållslösaren anropar `client.notifyCompleted` om lösningsprocessen lyckas eller `client.notifyFailed` om processen misslyckas.
+* Innehållslösaren anropar `client.place` för att ange vilken tidslinjeåtgärd TVSDK behöver för att köra (vanligtvis en annonsbrytningsplacering).
+* Innehållslösaren anropar `client.notifyCompleted` om lösningsprocessen lyckas, eller `client.notifyFailed` om processen misslyckas.
 
 1. Skapa en anpassad lösare för affärsmöjligheter.
 
