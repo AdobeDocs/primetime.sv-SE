@@ -6,6 +6,9 @@ title: Adaptiva bithastigheter (ABR) för videokvalitet
 uuid: e5752d7e-fa7d-407c-96df-c3830a35c66e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -72,7 +75,7 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Uppdatera din `PTMediaPlayer` instans med den konfigurerade `PTABRControlParameters` instansen.
+1. Uppdatera din `PTMediaPlayer`-instans med den konfigurerade `PTABRControlParameters`-instansen.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,10 +84,10 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
 
 Kom ihåg följande:
 
-* Programmet måste ange egenskapen `abrControlParameters` på `PTMediaPlayer` innan en `PTMediaPlayerItem` instans konfigureras för att de inledande och lägsta bithastighetsinställningarna ska börja gälla.
+* Programmet måste ställa in egenskapen `abrControlParameters` på `PTMediaPlayer` innan en `PTMediaPlayerItem`-instans konfigureras för att de inledande och lägsta bithastighetsinställningarna ska börja gälla.
 
    När uppspelningen av innehållet startar påverkas inställningen för en ny instans bara den maximala bithastigheten.
 
-* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters` instans och anger den på spelarinstansen.
-* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. I tidigare versioner används det `maxBitrate` värde som ställdes in innan uppspelningen av innehåll startades.
+* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters`-instans och anger den på spelarinstansen.
+* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. I tidigare versioner används det `maxBitrate`-värde som angavs innan innehållsuppspelningen startades.
 
