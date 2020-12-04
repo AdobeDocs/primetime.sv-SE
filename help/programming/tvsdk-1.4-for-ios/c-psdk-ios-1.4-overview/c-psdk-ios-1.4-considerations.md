@@ -6,6 +6,9 @@ title: Överväganden och bästa praxis
 uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vis
 
 Kom ihåg följande information när du använder TVSDK:
 
-* Adobe Primetime fungerar inte i iOS-simulatorer.
+* Adobe Primetime fungerar inte med iOS-simulatorer.
 
    Du måste använda riktiga enheter för testning.
 * Uppspelning stöds endast för HTTP-direktuppspelning (HLS).
@@ -42,9 +45,9 @@ Här följer rekommenderad praxis för TVSDK:
 
 * Använd HLS version 3.0 eller senare för programinnehåll.
 * Använd Apples mediastreamvalidator för att validera VOD-strömmar.
-* Klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Primetimes annonsbesluts-, DRM- och Video Analytics-servrar. `PTSDKConfig`
+* Klassen `PTSDKConfig` innehåller metoder för att framtvinga SSL på begäranden som görs till Primetimes annonsservrar, DRM- och Video Analytics-servrar.
 
-   Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen.
+   Mer information finns i metoderna `forceHTTPS` och `isForcingHTTPS` i den här klassen.
 
    >[!IMPORTANT]
    >
