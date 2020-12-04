@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Implementera översikten över användningsmodeller {#implementing-the-usage-models-overview}
+# Implementera översikten över användningsmodellerna {#implementing-the-usage-models-overview}
 
 Referensimplementeringen innehåller affärslogik som visar hur du aktiverar följande fyra olika användningsmodeller för ett paketerat innehåll:
 
@@ -20,7 +20,7 @@ Referensimplementeringen innehåller affärslogik som visar hur du aktiverar fö
 * Prenumeration (all-du-can-eat)
 * Reklamfinansierad
 
-Om du vill aktivera demonstrationen av användningsmodellen anger du den anpassade egenskapen `RI_UsageModelDemo=true` vid paketering. Om du paketerar innehåll med kommandoradsverktyget för Media Packager anger du:
+Om du vill aktivera demonstrationen av användningsmodellen anger du den anpassade egenskapen `RI_UsageModelDemo=true` vid paketeringstid. Om du paketerar innehåll med kommandoradsverktyget för Media Packager anger du:
 
 ```
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
@@ -32,21 +32,21 @@ Om du vill aktivera demonstrationen av användningsmodellen anger du den anpassa
 
 I filmen styr serverns affärslogik de faktiska attributen för de genererade licenserna. Vid paketeringen får innehållet endast innehålla minimal policyinformation. Principen behöver bara ange om autentisering krävs för att få tillgång till innehållet. Om du vill aktivera alla fyra användningsmodellerna inkluderar du en policy som tillåter anonym åtkomst (för den annonsfinansierade modellen) och en princip som kräver autentisering av användarnamn/lösenord (för de övriga tre användningsmodellerna). När ett klientprogram begär en licens kan det avgöra om användaren ska tillfrågas om autentisering baserat på autentiseringsinformationen i profilerna.
 
-För att styra den användningsmodell som en viss användare ska få en licens enligt kan poster läggas till i databasen för referensimplementering. Tabellen `Customer` innehåller användarnamn och lösenord för autentisering av användare. Det anger också om användaren har en prenumeration. Användare med prenumerationer får licenser enligt *prenumerationsmodellen* . Om du vill ge en användare åtkomst under *Hämta till egen* eller *Video på begäran* kan en post läggas till i `CustomerAuthorization` tabellen, som anger varje del av innehållet som användaren har åtkomst till och användningsmodellen. Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql] skriptet.
+För att styra den användningsmodell som en viss användare ska få en licens enligt kan poster läggas till i databasen för referensimplementering. Tabellen `Customer` innehåller användarnamn och lösenord för autentisering av användare. Det anger också om användaren har en prenumeration. Användare med prenumerationer får licenser enligt *prenumerationsmodellen*. Om du vill ge en användare åtkomst under användningsmodellerna *Ladda ned till Own* eller *Video on Demand* kan en post läggas till i tabellen `CustomerAuthorization`, som anger varje innehållsdel som användaren har åtkomst till och användningsmodellen. Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql]-skriptet.
 
-När en användare begär en licens kontrollerar Reference Implementation-servern de metadata som klienten skickade för att avgöra om innehållet paketerades med `RI_UsageModelDemo` egenskapen. I så fall används följande affärsregler:
+När en användare begär en licens kontrollerar Reference Implementation-servern de metadata som klienten skickade för att avgöra om innehållet paketerades med egenskapen `RI_UsageModelDemo`. I så fall används följande affärsregler:
 
 * Om någon av profilerna kräver autentisering:
 
    * Om begäran innehåller en giltig autentiseringstoken söker du efter användaren i kunddatabastabellen. Om användaren hittades:
 
-      * Om `Customer.IsSubscriber` egenskapen är `true`genererar du en licens för *prenumerationsanvändningsmodellen* och skickar den till användaren.
+      * Om egenskapen `Customer.IsSubscriber` är `true` skapar du en licens för *prenumerationsmodellen* och skickar den till användaren.
 
-      * Leta efter en post i databastabellen för den här användaren och innehålls-ID:t `CustomerAuthorization` . Om en post hittades:
+      * Leta efter en post i databastabellen `CustomerAuthorization` för den här användaren och innehålls-ID:t. Om en post hittades:
 
-         * Om `CustomerAuthorization.UsageType` så är `DTO`fallet genererar du en licens för *Ladda ned till egen* modell och skickar den till användaren.
+         * Om `CustomerAuthorization.UsageType` är `DTO` skapar du en licens för *Hämta till egen*-användningsmodell och skickar den till användaren.
 
-         * Om `CustomerAuthorization.UsageType` så är `VOD`fallet genererar du en licens för *Video On Demand* -användningsmodellen och skickar den till användaren.
+         * Om `CustomerAuthorization.UsageType` är `VOD` skapar du en licens för användningsmodellen *Video On Demand* och skickar den till användaren.
    * Om ingen av profilerna tillåter anonym åtkomst:
 
       * Om det inte finns någon giltig autentiseringstoken i begäran returnerar du felet &quot;autentisering krävs&quot;.
@@ -55,7 +55,7 @@ När en användare begär en licens kontrollerar Reference Implementation-server
 
 * Om någon av profilerna tillåter anonym åtkomst skapar du en licens för den annonsfinansierade användningsmodellen och skickar den till användaren.
 
-Innan referensimplementeringsservern kan utfärda licenser för demonstrationen av användningsmodellen måste servern konfigureras för att ange hur licenser ska genereras för var och en av de fyra användningsmodellerna. Detta görs genom att ange en profil för varje användningsmodell. Referensimplementeringen innehåller fyra exempelprinciper ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) eller så kan du byta ut dina egna policyer. I [!DNL flashaccess-refimpl.properties]anger du följande egenskaper för att ange vilken profil som ska användas för varje användningsmodell och placerar principfilerna i den katalog som anges av `config.resourcesDirectory` egenskapen:
+Innan referensimplementeringsservern kan utfärda licenser för demonstrationen av användningsmodellen måste servern konfigureras för att ange hur licenser ska genereras för var och en av de fyra användningsmodellerna. Detta görs genom att ange en profil för varje användningsmodell. Referensimplementeringen innehåller fyra exempelprinciper ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) eller så kan du ersätta dina egna principer. I [!DNL flashaccess-refimpl.properties] anger du följande egenskaper för att ange vilken princip som ska användas för varje användningsmodell och placerar principfilerna i den katalog som anges av egenskapen `config.resourcesDirectory`:
 
 ```
 # Policy file name for Download To Own usage  
