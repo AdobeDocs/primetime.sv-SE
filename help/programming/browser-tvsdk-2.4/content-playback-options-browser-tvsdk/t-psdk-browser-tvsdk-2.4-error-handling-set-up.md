@@ -6,6 +6,9 @@ title: Konfigurera felhantering
 uuid: 9e650ea7-86cb-4489-a3fd-80cd2ccef41f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 2%
 
 ---
 
@@ -23,13 +26,13 @@ Du kan konfigurera en plats i programmet för att utföra felhantering som svar 
                            onStatusChange);
    ```
 
-1. I händelseavlyssnaren anger du den logik som ska användas för att hantera alla fel när `event.status` den är `AdobePSDK.MediaPlayerStatus.ERROR`.
-1. Återställ objektet eller läs in en ny medieresurs när felet har hanterats. `MediaPlayer`
+1. När `event.status` är `AdobePSDK.MediaPlayerStatus.ERROR` i händelseavlyssnaren anger du den logik som ska hantera alla fel.
+1. När felet har hanterats återställer du objektet `MediaPlayer` eller läser in en ny medieresurs.
 
        När MediaPlayer-objektet är i feltillstånd kan det inte avsluta det här läget förrän du utför någon av följande åtgärder:
    
-   * Återställ MediaPlayer-objektet med hjälp av `MediaPlayer.reset` metoden.
-   * Läs in en ny medieresurs med `MediaPlayer.replaceCurrentResource` metoden .
+   * Återställ MediaPlayer-objektet med metoden `MediaPlayer.reset`.
+   * Läs in en ny medieresurs med metoden `MediaPlayer.replaceCurrentResource`.
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 
