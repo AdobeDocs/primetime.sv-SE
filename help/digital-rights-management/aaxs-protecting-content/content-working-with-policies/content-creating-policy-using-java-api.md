@@ -4,6 +4,9 @@ title: Skapa en profil med Java API
 uuid: c653548d-4abf-46b9-8669-d68b966da359
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Så här skapar du en profil med hjälp av Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i ditt projekt.
-1. Skapa ett `com.adobe.flashaccess.sdk.policy.Policy` objekt och ange dess egenskaper, till exempel rättigheter, varaktighet för licenscache och principslutdatum.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i projektet.
+1. Skapa ett `com.adobe.flashaccess.sdk.policy.Policy`-objekt och ange dess egenskaper, till exempel rättigheter, varaktighet för licenscache och principslutdatum.
 
    ```java
      // Create a new Policy object.  
@@ -49,7 +52,7 @@ Så här skapar du en profil med hjälp av Java API:
      }
    ```
 
-1. Serialisera `Policy` objektet och lagra det i en fil eller databas.
+1. Serialisera `Policy`-objektet och lagra det i en fil eller databas.
 
    ```java
      // Serialize the policy  
@@ -63,4 +66,4 @@ Så här skapar du en profil med hjälp av Java API:
      out.close();
    ```
 
-Den fullständiga källan till den här exempelkoden finns i *com.adobe.flashaccess.samples.policy.CreatePolicy* i katalogen&quot; [!DNL samples]&quot; för kommandoradsverktygen för referensimplementering.
+Den fullständiga källan till den här exempelkoden finns i *com.adobe.flashaccess.samples.policy.CreatePolicy* i katalogen Reference Implementation Command Line Tools &quot;[!DNL samples]&quot;.
