@@ -6,6 +6,9 @@ title: Produktöversikt, målgrupp och den här guiden
 uuid: 638bafbe-e518-4891-b792-29f765c3c0d7
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -32,10 +35,10 @@ Den här guiden förutsätter att du förstår hur du utvecklar program och vide
 
 Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare med Java på Android-enheter.
 
-## Namnområdesnotering i den här handboken {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namnområdesnotering i den här guiden {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Namnområdesprefixet för TVSDK-API [!DNL com.adobe.mediacore] utelämnas ofta av utrymmesskäl.
+>API-namnområdesprefixet [!DNL com.adobe.mediacore] för TVSDK utelämnas ofta av utrymmesskäl.
 >
 >Många API-element refereras utan sin överordnade klassbeteckning om kontexten är klar.
