@@ -6,6 +6,9 @@ title: Initiera och konfigurera videoanalys
 uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
@@ -22,18 +25,18 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
  <tbody>
   <tr>
    <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td>
-   <td colname="col2"> URL:en för den bakomliggande samlingens slutpunkt i Adobe Analytics (tidigare SiteCatalyst). </td>
+   <td colname="col2"> URL:en för Adobe Analytics (tidigare SiteCatalyst) back-end-samlingens slutpunkt. </td>
   </tr>
   <tr>
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td>
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar Visitor ID-tjänsten finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementera ID-tjänst </a>. </p> </td>
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Kontonamn </td>
    <td colname="col2"> Kallas även Report Suite-ID (RSID). </td>
   </tr>
   <tr>
-   <td colname="col1"> Organisations-ID för Marketing Cloud </td>
+   <td colname="col1"> Marketing Cloud organisation-ID </td>
    <td colname="col2"> Ett strängvärde som krävs för att instansiera Visitor-komponenten. </td>
   </tr>
   <tr>
@@ -53,13 +56,13 @@ Så här konfigurerar du videospårning i spelaren:
 
        Tänk på följande:
    
-   * Instansieringen kräver en indataparameter för Marketing Cloud-organisation som tillhandahålls av Adobe.
+   * Instansieringen kräver en indataparameter för Marketing Cloud organisation-ID som tillhandahålls av Adobe.
 
       Detta är ett strängvärde.
    * Det enda konfigurationsalternativet för VisitorAPI-biblioteket är URL:en för serverslutpunkten som innehåller den unika identifieraren för den aktuella användaren.
    * URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern.
 
-      Mer information om hur du implementerar Visitor ID-tjänsten finns i Implementering av [Visitor ID-tjänst](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Information om hur du implementerar Visitor ID-tjänsten finns i [Implementering av Visitor ID-tjänst](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -68,7 +71,7 @@ Så här konfigurerar du videospårning i spelaren:
 
 2. Instansiera och konfigurera komponenten AppMeasurement.
 
-   AppMeasurement-instansen har många konfigurationsalternativ. Mer information finns i dokumentationen till [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) . Alternativen i följande exempelkod (, `account`, `visitorNamespace`och `trackingServer`) är obligatoriska och värdena tillhandahålls av Adobe.
+   AppMeasurement-instansen har många konfigurationsalternativ. Mer information finns i [dokumentationen för Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Alternativen i följande exempelkod ( `account`, `visitorNamespace` och `trackingServer`) krävs, och värdena tillhandahålls av Adobe.
 
    >[!IMPORTANT]
    >
@@ -86,7 +89,7 @@ Så här konfigurerar du videospårning i spelaren:
 
    >[!IMPORTANT]
    >
-   >Kontrollera att `appMeasurementObject.visitor` filen är ifylld innan du startar videoanalysflödet i programmet, annars kanske du inte får några spårningsresultat. Dessa resultat indikeras av meddelandena i loggen. Du kan lägga till ett tomt spåranrop ( `appMeasurementObject.track`), avfråga `visitor` egenskapen tills den fylls i och initiera videoanalys.
+   >Kontrollera att `appMeasurementObject.visitor` är ifyllt i programmet innan du startar videoanalysflödet, annars kanske du inte får några spårningsresultat. Dessa resultat indikeras av meddelandena i loggen. Du kan lägga till ett tomt spåranrop ( `appMeasurementObject.track`), avfråga egenskapen `visitor` tills den har fyllts i och starta videoanalys.
 
 3. Initiera och konfigurera metadata för spårning av pulsslag.
 
