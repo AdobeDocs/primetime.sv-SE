@@ -6,11 +6,14 @@ title: Konfig-klassmetoder för taggar
 uuid: 27f1df0a-bbd3-4d80-820e-b659f2f33069
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
 
-# Konfig-klassmetoder för taggar {#config-class-methods-for-tags}
+# Konfigurationsklassmetoder för taggar {#config-class-methods-for-tags}
 
 Du kan konfigurera anpassade taggnamn i TVSDK globalt med klassen PTSDKConfig.
 
