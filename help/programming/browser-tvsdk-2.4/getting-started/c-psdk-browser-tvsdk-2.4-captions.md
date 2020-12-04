@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Du kan visa beskrivningar när du spelar upp videoinnehåll.
 
-Om du vill hantera beskrivningar måste du lägga till `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` händelseavlyssnaren:
+Om du vill hantera beskrivningar måste du lägga till händelseavlyssnaren `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
 ```js
 ... 
