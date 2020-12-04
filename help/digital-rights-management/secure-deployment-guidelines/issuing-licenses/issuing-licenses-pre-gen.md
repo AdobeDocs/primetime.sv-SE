@@ -6,6 +6,9 @@ title: Förgenererande licenser
 uuid: 9d2c3b9a-455f-4ac9-aa15-b9b2a3267c9b
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
