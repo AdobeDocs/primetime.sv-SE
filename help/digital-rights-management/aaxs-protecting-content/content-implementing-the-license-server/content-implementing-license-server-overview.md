@@ -4,6 +4,9 @@ title: Översikt
 uuid: f4ae10ca-6e2a-4313-80a0-4c7377dba000
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ För att kunna utfärda licenser till klienter måste du distribuera en Adobe Ac
 
 Dessutom måste servern tillhandahålla affärslogik för autentisering av användare, avgöra om användare har behörighet att visa innehåll och eventuellt spåra licensanvändning.
 
-Mer information om Java API som behandlas i det här kapitlet finns i API-referens *för* Adobe Access.
+Mer information om Java API som diskuteras i det här kapitlet finns i *API-referens för Adobe Access*.
