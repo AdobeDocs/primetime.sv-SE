@@ -39,4 +39,4 @@ Så här förbereder du lösenordet för dina autentiseringsuppgifter:
 >
 >I föregående exempel används ett semikolon (;) som avgränsare. För andra plattformar än Microsoft Windows använder du kolon (:) som avgränsare.
 
-Verktyget matar ut det krypterade lösenordet, som du måste kopiera till [!DNL .properties] filen.
+Verktyget matar ut det krypterade lösenordet, som du måste kopiera till filen [!DNL .properties].
