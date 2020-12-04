@@ -4,6 +4,9 @@ title: Licensserver och bevakad mapppaketerare - översikt
 uuid: 3dd6f699-a5c0-44c4-897a-34e06abe3d71
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Referensimplementeringsservern kan hjälpa dig att skapa en licensserver med hj�
 
 Referensimplementeringsservern innehåller även en bevakad mappimplementering av paketeraren. Komponenten kan distribueras tillsammans med licensservern eller på en separat dator. Med den här paketeringsimplementeringen kan du skapa flera bevakade mappar. När innehåll släpps i den bevakade mappen paketeras innehållet automatiskt.
 
-Licensservern och paketeraren distribueras som separata WAR-filer, så du kan välja om du vill köra dem på separata servrar eller i en enda Apache Tomcat®-instans. Licensservern finns i [!DNL flashaccess.war] och paketeraren finns i [!DNL flashaccess-packager.war]. Tillvalet [!DNL edcws.war] innehåller stöd för licensbegäranden från FMRMS 1.x-klienter.
+Licensservern och paketeraren distribueras som separata WAR-filer, så du kan välja om du vill köra dem på separata servrar eller i en enda Apache Tomcat®-instans. Licensservern finns i [!DNL flashaccess.war] och paketeraren är i [!DNL flashaccess-packager.war]. Det valfria [!DNL edcws.war] innehåller stöd för licensbegäranden från FMRMS 1.x-klienter.
 
 Exemplskoden för referensimplementering visar följande funktioner:
 
@@ -34,9 +37,9 @@ Exemplskoden för referensimplementering visar följande funktioner:
    * Begränsa DRM-/körningsversioner som tillåts göra förfrågningar till licensservern
    * Inställningar för klientens klockfönster
    * Begränsa tidsskillnaden mellan begärandetid och servertid (för att förhindra repetitionsattacker)
-   * Hantera förfrågningar från FMRMS 1.x-klienter (utlöser en uppgradering till Adobe Access 2.0 eller senare från FMRMS 1.x-klienten)
+   * Hantera begäranden från FMRMS 1.x-klienter (utlöser en uppgradering till Adobe Access 2.0 eller senare från FMRMS 1.x-klienten)
    * Konvertera FMRMS 1.x-metadata till Adobe Access-metadata direkt med hjälp av FMRMS 1.x-licensinformation som lagras i en databas
-   * Exempelkod för konvertering av FMRMS 1.x-profiler till Adobe Access-profiler
+   * Exempelkod för konvertering av FMRMS 1.x-principer till Adobe Access-principer
    * Exempelskript för import av FMRMS 1.x-licensinformation från en befintlig databas
    * Hämta serverversion
    * Domänregistrering
