@@ -6,6 +6,9 @@ title: Återställa eller återanvända en MediaPlayer-instans
 uuid: 72cc4511-8ab0-44e5-b93c-b36f0321bba8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
@@ -18,17 +21,17 @@ När du återställer en MediaPlayer-instans återgår den till det oinitierade 
 
 Den här åtgärden är användbar i följande fall:
 
-* Du vill återanvända en `MediaPlayer` instans men måste läsa in ett nytt `MediaResource` (videoinnehåll) och ersätta föregående instans.
+* Du vill återanvända en `MediaPlayer`-instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta den tidigare instansen.
 
-   Om du återställer kan du återanvända `MediaPlayer` instansen utan att behöva frigöra resurser, återskapa `MediaPlayer`och omfördela resurser.
+   Om du återställer kan du återanvända `MediaPlayer`-instansen utan att behöva frigöra resurser, återskapa `MediaPlayer` och omallokera resurser.
 
-* När `MediaPlayer` är i ett FEL-läge och måste rensas.
+* När `MediaPlayer` är i ett FEL-tillstånd och måste rensas.
 
    >[!IMPORTANT]
    >
    >Det här är det enda sättet att återställa efter FELstatus.
 
-1. Anropa `reset` för att returnera `MediaPlayer` instansen till dess oinitierade tillstånd:
+1. Anropa `reset` för att returnera `MediaPlayer`-instansen till dess oinitierade tillstånd:
 
    ```java
    void reset() throws IllegalStateException; 
@@ -38,20 +41,20 @@ Den här åtgärden är användbar i följande fall:
 
    >[!TIP]
    >
-   >Om du vill ta bort ett fel läser du in samma `MediaResource`.
+   >Läs in samma `MediaResource` om du vill ta bort ett fel.
 
-1. Starta uppspelningen när du tar emot `STATUS_CHANGED` händelseåteranropet med statusen PREPARED.
+1. Starta uppspelningen när du får `STATUS_CHANGED`-händelseåteranropet med statusen PREPARED.
 
 ## Släpp en MediaPlayer-instans och resurser{#release-a-mediaplayer-instance-and-resources}
 
 Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
 
-När du frigör ett `MediaPlayer` objekt frigörs de underliggande maskinvaruresurserna som är kopplade till det här `MediaPlayer` objektet.
+När du frisläpper ett `MediaPlayer`-objekt frigörs de underliggande maskinvaruresurserna som är kopplade till det här `MediaPlayer`-objektet.
 
 Här är några skäl att släppa en MediaPlayer:
 
 * Om du har onödiga resurser kan det påverka prestandan.
-* Om du lämnar ett onödigt `MediaPlayer` objekt kan det leda till kontinuerlig batteriförbrukning för mobila enheter.
+* Om du lämnar ett onödigt `MediaPlayer`-objekt kan det leda till kontinuerlig batteriförbrukning för mobila enheter.
 * Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
 
 1. Släpp `MediaPlayer`.
@@ -60,4 +63,4 @@ Här är några skäl att släppa en MediaPlayer:
    void release() throws IllegalStateException;
    ```
 
-När `MediaPlayer` instansen har släppts kan du inte längre använda den. Om någon metod i `MediaPlayer` gränssnittet anropas efter att det har släppts `IllegalStateException` genereras ett fel.
+När `MediaPlayer`-instansen har släppts kan du inte längre använda den. Om någon metod i `MediaPlayer`-gränssnittet anropas efter att det har släppts genereras ett `IllegalStateException`.
