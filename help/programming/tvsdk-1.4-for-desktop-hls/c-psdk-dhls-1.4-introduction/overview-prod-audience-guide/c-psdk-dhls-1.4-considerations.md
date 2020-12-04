@@ -6,6 +6,9 @@ title: Överväganden och bästa praxis
 uuid: 62a5d641-6f37-4e4d-bbc2-414bf3681d9c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
@@ -43,5 +46,5 @@ Här är de rekommenderade metoderna för TVSDK:
 * Använd HLS version 3.0 eller senare för programinnehåll.
 * För TVSDK 1.4 för DHLS är lat och inläsning aktiverat som standard.
 
-   För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ännu mer.
+   För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ytterligare.
 
