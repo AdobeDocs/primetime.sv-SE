@@ -6,6 +6,9 @@ title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 uuid: d582779a-2789-4e2a-85f6-1a0b9b847382
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
@@ -14,12 +17,12 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir det aktuella spåret, som visas när synligheten är aktiverad. Vissa spår kanske inte är tillgängliga från början, så lyssna efter händelsen som anger att fler har blivit tillgängliga.
 
-1. Vänta tills mediespelaren har minst `PREPARED` status.
+1. Vänta tills mediespelaren har minst statusen `PREPARED`.
 1. Lyssna efter dessa händelser:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZED`: Den inledande listan med spår för undertextning är tillgänglig.
+   * `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`: Den inledande listan med spår för undertextning är tillgänglig.
 
-1. Hämta en lista över alla tillgängliga undertextningsspår.
+1. Hämta en lista med alla tillgängliga undertextningsspår.
 
    Exempel:
 
