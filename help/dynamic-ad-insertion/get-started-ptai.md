@@ -32,6 +32,6 @@ När systemet har konfigurerats korrekt kan ett typiskt arbetsflöde se ut så h
 
 1. Primetime Ad Insertion levererar de färdiga stygna manifesten, inklusive annonser, till klientprogrammet för uppspelning.
 
-1. Annonsleverans och visningsbarhet kan mätas antingen via klient- eller serversidesannonsspårning, se [Konfigurera annonsspårning](set-up-ad-tracking.md).
+1. Annonsleverans och visningsbarhet kan mätas antingen via klient- eller serverannonsspårning, se [Konfigurera annonsspårning](set-up-ad-tracking.md).
 
 Primetime Ad Insertion stöder de flesta klientkonfigurationer för HLS/DASH.
