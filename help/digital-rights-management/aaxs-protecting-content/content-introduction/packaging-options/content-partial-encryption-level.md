@@ -19,7 +19,7 @@ Anger om alla bildrutor, eller bara en delmängd av bildrutor, ska krypteras. De
 >
 >Endast för videospår i F4V-/H.264-filer.
 
-Delvis kryptering är utformat för att ge innehållsleverantörer granularitet för att koda innehållet i delar. Kryptering av innehåll lägger till processorkapacitet till den enhet som dekrypterar och visar innehållet. Använd partiell kryptering för att minska CPU-belastningen samtidigt som mycket starkt skydd av innehållet bibehålls. Ett motiverat exempel på hur den här funktionen används är en enda del av innehållet som är avsett att spelas upp på enheter med låg-, medel- och hög strömförbrukning.
+Delvis kryptering är utformat för att ge innehållsleverantörer granularitet för att koda innehållet i delar. Kryptering av innehåll lägger till processorkapacitet till den enhet som dekrypterar och visar innehållet. Använd partiell kryptering för att minska CPU-belastningen samtidigt som mycket starkt skydd av innehållet bibehålls. Ett motiverat exempel på hur den här funktionen används är en enda innehållsdel som är avsedd att spelas upp på enheter med låg, medel och hög strömförsörjning.
 
 På grund av videokodningens natur är det inte nödvändigt att kryptera 100 % av videon för att den ska bli ospelbar om den blir stulen. Delvis kryptering har tre inställningar, låg, medel och hög, och de associerade procentsatserna för kryptering beror på hur videon kodas. På grund av det här kodningsberoendet ligger den procentandel av ditt innehåll som är krypterat inom följande intervall:
 
