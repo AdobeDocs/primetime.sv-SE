@@ -2,6 +2,9 @@
 uuid: 2d927ae8-4c4b-4b64-88b8-9c86430e226c
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -30,9 +33,9 @@ Filnamn för en CEK visas som:
 
 CEK:n kan lagras i ett nyckelhanteringssystem samt krypteras. Den här guiden refererar till lagringsindexet CEK Storage ID CEKSID. Termen Nyckelkrypteringsnyckel (KEK) refererar till krypteringsnyckeln på den andra nivån och termen `ek` refererar till krypteringsvärdet.
 Vissa samtal använder både CEK och CEK Storage ID CEKSID, och CEK som hämtas från lagring måste matcha CEK som tillhandahålls i samtalet.
-För HLS Offline med FairPlay finns det också ett värde `persistentContentKey` som kan förfalla.
+För HLS Offline med FairPlay finns också ett `persistentContentKey`-värde som kan förfalla.
 
-## Lagrings-ID för innehållskrypteringsnyckel {#content-encryption-key-storage-id}
+## Lagring-ID för innehållskrypteringsnyckel {#content-encryption-key-storage-id}
 
 CSID (Content Encryption Key Storage ID) är ett ID som används för att hämta en innehållskrypteringsnyckel från ett nyckelhanteringssystem.
 
@@ -41,6 +44,6 @@ CEKSID kallas också
 * Innehålls-ID
 * `&kid`
 
-## Kundautentisering {#customer-authenticator}
+## Kundens autentisering {#customer-authenticator}
 
 En nyckel för autentisering i begäranden till API:t för uttryck. Förfrågningar kan innehålla förfrågningar om tokens.
