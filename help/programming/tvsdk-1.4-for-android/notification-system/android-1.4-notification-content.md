@@ -6,6 +6,9 @@ title: Meddelandeinnehåll
 uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Du implementerar händelseavlyssnare för att hämta och svara på händelser. M
 
 `MediaPlayerNotification` innehåller information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista över `MediaPlayerNotification` meddelanden. Varje anmälan innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification`-meddelanden. Varje anmälan innehåller följande information:
 
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
@@ -30,7 +33,7 @@ TVSDK tillhandahåller en kronologisk lista över `MediaPlayerNotification` medd
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
 
-   * `innerNotification`: En referens till ett annat `MediaPlayerNotification` objekt som direkt påverkar det här meddelandet.
+   * `innerNotification`: En referens till ett annat  `MediaPlayerNotification` objekt som direkt påverkar det här meddelandet.
 
 Du kan lagra informationen lokalt för senare analys eller skicka den till en fjärrserver för loggning och grafisk representation.
 
@@ -38,7 +41,7 @@ Du kan lagra informationen lokalt för senare analys eller skicka den till en fj
 
 Du kan lyssna efter meddelanden och lägga till egna meddelanden i meddelandehistoriken.
 
-Kärnan i Primetime Players meddelandesystem är `Notification` klassen, som representerar ett fristående meddelande.
+Kärnan i Primetime Players meddelandesystem är klassen `Notification`, som representerar ett fristående meddelande.
 
 Klassen `NotificationHistory` innehåller en mekanism för att samla in meddelanden. Den lagrar en logg med meddelandeobjekt (NotificationHistoryItem) som representerar en samling meddelanden.
 
@@ -48,11 +51,11 @@ Så här tar du emot meddelanden:
 * Lägg till meddelanden i meddelandehistoriken
 
 1. Lyssna efter tillståndsändringar.
-1. Implementera `MediaPlayer.PlaybackEventListener.onStateChanged` återanropet.
+1. Implementera `MediaPlayer.PlaybackEventListener.onStateChanged`-återanropet.
 1. TVSDK skickar två parametrar till återanropet:
 
    * Det nya läget ( `MediaPlayer.PlayerState`)
-   * Ett `MediaPlayerNotification` objekt
+   * Ett `MediaPlayerNotification`-objekt
 
 ## Lägg till loggning och felsökning i realtid {#add-real-time-logging-and-debugging}
 
@@ -78,7 +81,7 @@ Här är ett exempel på hur du hämtar meddelanden.
    Fjärrservern kan sedan grafiskt visa de data som tillhandahålls i realtid.
 1. Om du vill identifiera förlust av meddelandehändelser ska du leta efter luckor i sekvensen med händelseindexvärden.
 
-   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av `session.NotificationHistory` klassen.
+   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av klassen `session.NotificationHistory`.
 
 ## ID3-taggar {#id-tags}
 
@@ -95,13 +98,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * NAME = finns inte
 * ID = 0
 
-1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med `MediaPlayer` objektet.
+1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med objektet `MediaPlayer`.
 
    TVSDK anropar den här avlyssnaren när ID3-metadata identifieras.
 
    >[!NOTE]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata` händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
+   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
 
 1. Hämta metadata.
 
