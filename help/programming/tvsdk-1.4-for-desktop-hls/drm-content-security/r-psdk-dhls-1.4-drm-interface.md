@@ -6,11 +6,14 @@ title: Översikt över Primetime DRM-gränssnittet
 uuid: 01714ee6-a937-4ca3-b535-6a6ef681ee6d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
-# Översikt över Primetime DRM-gränssnittet{#primetime-drm-interface-overview}
+# Översikt över DRM-gränssnittet i Primetime{#primetime-drm-interface-overview}
 
 Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
 
@@ -18,7 +21,7 @@ Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Managemen
 
 Primetime DRM ger ett skalbart och effektivt arbetsflöde för att implementera innehållsskydd i TVSDK-program. Du skyddar och hanterar rättigheterna till ditt videoinnehåll genom att skapa en licens för varje digital mediefil.
 
-TVSDK stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Det innebär att programmet måste implementera arbetsflödena för DRM-autentisering innan det kan spela upp strömmen med Flash `DRMManager`. Om du vill aktivera detta får du tillgång till DRM-hanteraren för autentisering. `MediaPlayer`
+TVSDK stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Detta innebär att ditt program måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp med Flash `DRMManager`. Om du vill aktivera det här anger `MediaPlayer` DRM-hanteraren för autentisering.
 
 Detta är de viktigaste API-elementen för att arbeta med DRM:
 
