@@ -6,6 +6,9 @@ title: Hantera klickbara annonser
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ MediaPlayer utlöser följande händelser när en klickbar annons spelas upp:
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-Den `AdClickedEvent` innehåller den information som behövs för att bearbeta genomklickningsfunktionen.
+`AdClickedEvent` innehåller den information som krävs för att bearbeta genomklickningsfunktionen.
 
 1. Ge användarna en kontroll i spelaren så att de kan klicka på klickbara annonser.
 
@@ -36,7 +39,7 @@ Den `AdClickedEvent` innehåller den information som behövs för att bearbeta g
 
 1. Lägg till en hanterare för användarens click-händelse.
 
-   Hanteraren måste uppmana MediaPlayer att utlösa `AdClicked` händelsen.
+   Hanteraren måste uppmana MediaPlayer att utlösa händelsen `AdClicked`.
 
    ```
    onAdClick = function (event) { 
