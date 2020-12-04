@@ -6,11 +6,14 @@ title: Klasser för systemavkodare
 uuid: b333166b-3a13-48c5-a5d7-d8a64f0cd736
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '128'
+ht-degree: 1%
 
 ---
 
 
-# Klasser för systemavkodare {#system-decoders-classes}
+# Systemavkodare, klasser {#system-decoders-classes}
 
 Dessa klasser innehåller avkodning och parsning för paket och taggar.
 
