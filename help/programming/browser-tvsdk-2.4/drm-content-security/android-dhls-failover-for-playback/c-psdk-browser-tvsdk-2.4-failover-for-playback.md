@@ -6,6 +6,9 @@ title: Uppspelning och failover
 uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta de
 
 Browser TVSDK väljer snabbt den högupplösta spellistan med bithastighet och tillhörande media och fortsätter nedladdningen.
 
-## Redundans för spelningslista saknas {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## Misslyckad spelningslista {#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 När en hel spelningslista saknas, till exempel när M3U8-filen som anges i en manifestfil på den översta nivån inte hämtas, försöker webbläsaren TVSDK att återställas. Om det inte kan återställas bestäms nästa steg av programmet.
 
