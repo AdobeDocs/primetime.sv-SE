@@ -7,7 +7,7 @@ uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 Du kan ställa in spelaren så att den läser uppspelnings- och enhetsstatistik från QoSProvider så ofta som behövs.
 
-Klassen innehåller olika statistik, bland annat bildrutefrekvens, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videofragmentet, den tid det tog att återge den första bildrutan, den buffertlängd som för tillfället används och bufferttiden. `QoSProvider`
+Klassen `QoSProvider` innehåller olika statistik, bland annat bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videofragmentet, den tid det tog att återge den första bildrutan, den för närvarande buffrade längden och bufferttiden.
 
-Referensimplementeringen innehåller en `QoSManager` klass där du kan aktivera visning av QoS-övertäckningen. Du kan även aktivera QoS-synligheten i användargränssnittet för inställningar:
+Referensimplementeringen innehåller en `QoSManager`-klass där du kan aktivera visning av QoS-övertäckningen. Du kan även aktivera QoS-synligheten i användargränssnittet för inställningar:
 
 ![](assets/qos-configuration.jpg)
 
-Spåra QoS-statistik genom att hämta enhetsinformation, ansluta till mediespelaren och uppdatera med den senaste QoS-informationen. `QoSManager`
+`QoSManager` spårar QoS-statistik genom att hämta enhetsinformation, ansluta till mediespelaren och uppdatera med den senaste QoS-informationen.
 
 **Aktivera eller inaktivera rapportering av QoS-statistik**
 
