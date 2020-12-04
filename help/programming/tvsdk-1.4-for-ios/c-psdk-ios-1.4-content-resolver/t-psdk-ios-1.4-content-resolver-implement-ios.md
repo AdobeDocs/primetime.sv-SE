@@ -6,11 +6,14 @@ title: Implementera en anpassad lösning för affärsmöjlighet/innehåll
 uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# Implementera en anpassad lösning för affärsmöjlighet/innehåll{#implement-a-custom-opportunity-content-resolver}
+# Implementera en anpassad matchare för affärsmöjlighet/innehåll{#implement-a-custom-opportunity-content-resolver}
 
 Du kan implementera dina lösningar baserat på standardlösare.
 
@@ -18,13 +21,13 @@ Du kan implementera dina lösningar baserat på standardlösare.
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Utveckla en anpassad annonslösare genom att utöka den `PTContentResolver` abstrakta klassen.
+1. Utveckla en anpassad annonslösare genom att utöka den abstrakta klassen `PTContentResolver`.
 
    `PTContentResolver` är ett gränssnitt som måste implementeras av en innehållslösningsklass. En abstrakt klass med samma namn är också tillgänglig och hanterar konfigurationen automatiskt (hämtar delegaten).
 
    >[!TIP]
    >
-   >`PTContentResolver` exponeras genom `PTDefaultMediaPlayerClientFactory` klassen. Klienter kan registrera en ny innehållsupplösare genom att utöka den `PTContentResolver` abstrakta klassen. Som standard, och om det inte tas bort specifikt, `PTDefaultAdContentResolver` registreras ett objekt i `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` exponeras genom  `PTDefaultMediaPlayerClientFactory` klassen. Klienter kan registrera en ny innehållslösare genom att utöka den abstrakta klassen `PTContentResolver`. Som standard, och om den inte tas bort specifikt, registreras en `PTDefaultAdContentResolver` i `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -58,21 +61,22 @@ Du kan implementera dina lösningar baserat på standardlösare.
 
        Nedan finns användbar information om tidslinjer:
    
-   * Det kan finnas flera `PTAdBreak`typer av för- och efterrullning, mittrullar och postrullar.
+   * Det kan finnas flera `PTAdBreak`s för-, mitt- och post-roll-typer.
 
-      * A `PTAdBreak` har följande:
+      * En `PTAdBreak` har följande:
 
          * A `CMTimeRange` med brytningens starttid och varaktighet.
 
-            Detta anges som intervallegenskap för `PTAdBreak`.
+            Detta anges som intervallegenskapen för `PTAdBreak`.
 
-         * `NSArray` av `PTAd`s.
+         * `NSArray` av  `PTAd`s.
 
             Detta anges som egenskapen ads för `PTAdBreak`.
-   * A `PTAd` representerar annonsen och var och en `PTAd` har följande:
+   * En `PTAd` representerar annonsen och varje `PTAd` har följande:
 
-      * En uppsättning som `PTAdHLSAsset` primär tillgångsegenskap för annonsen.
-      * Det kan finnas flera `PTAdAsset` instanser som klickbara annonser eller bannerannonser.
+      * En `PTAdHLSAsset`-uppsättning som primär resursegenskap för annonsen.
+      * Det kan finnas flera `PTAdAsset`-instanser som klickbara annonser eller bannerannonser.
+
    Exempel:
 
    ```
@@ -102,8 +106,8 @@ Du kan implementera dina lösningar baserat på standardlösare.
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Samtal `didFinishResolvingPlacementOpportunity`, som tillhandahåller `PTTimeline`.
-1. Registrera din anpassade content/ad resolver på standardmedieuppspelningsfabriken genom att ringa `registerContentResolver`.
+1. Anropa `didFinishResolvingPlacementOpportunity`, som tillhandahåller `PTTimeline`.
+1. Registrera din anpassade content/ad resolver till standardmediespelarfabriken genom att ringa `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
