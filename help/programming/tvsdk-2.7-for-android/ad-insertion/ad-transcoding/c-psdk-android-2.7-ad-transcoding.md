@@ -27,7 +27,7 @@ Om du vill aktivera den här valfria CRS-funktionen kontaktar du Adobe.
 >
 >För kunder med CRS version 3.0 (och tidigare) har följande ändringar förbättrats både vad gäller säkerhet och prestanda:
 >
->* CRS 3.1 fortsätter med `https:` om innehållet som packas om används `https:`. Detta minskar vissa spelares potential att presentera osäkert innehåll.
+>* CRS 3.1 fortsätter med `https:` om innehållet som packas om använder `https:`. Detta minskar vissa spelares potential att presentera osäkert innehåll.
    >
    >
 * CRS 3.1 minimerar nätverksanrop avsevärt, vilket förbättrar videons starttid.
