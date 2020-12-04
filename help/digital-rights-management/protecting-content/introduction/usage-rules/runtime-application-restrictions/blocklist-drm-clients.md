@@ -27,7 +27,7 @@ En Primetime DRM-klientversion kan identifieras av de attribut som anges i följ
 | OS | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Exakt matchning | Plattform |
 | Arkitektur | `“32”, “64”` | Exakt matchning | 32-bitars eller 64-bitars |
 | Skärmtyp | `“PC”, “Mobile”, “TV”` | Exakt matchning |  |
-| Körningsmiljöversioner | Ett giltigt versionsnummer. Till exempel `“2.0.0”, "3.0", "4.0", "11.0"`osv. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
+| Körningsmiljöversioner | Ett giltigt versionsnummer. Till exempel `“2.0.0”, "3.0", "4.0", "11.0"`. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
 | Primetime DRM Library-version | Ett giltigt versionsnummer. Till exempel `“2.0.0”`. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
 | OEM-leverantör | OEM-leverantörssträng som kan hittas i det körningscertifikat som utfärdades till en kund som portade Primetime DRM till en enhet. | Exakt matchning | Identifieringssträng för OEM-leverantör för enheten med porteringsverktyget. |
 | Modell | Modellsträng som kan hittas i körningscertifikatet som utfärdades till en kund som portade Primetime DRM till en enhet. Exempel: `"iOS_Mobile", "Android_Mobile", "Chrome", "ChromeOS_ARM", "WindowsOnARM", "AVE"` | Exakt matchning | Identifieringssträng för enhetsmodell för enheten med porteringssatsen. |
