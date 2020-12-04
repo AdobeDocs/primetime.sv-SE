@@ -16,7 +16,7 @@ Versionsinformationen för Primetime Ad Insertion 20.10.1 beskriver vad som är 
 
 ## Nyheter i PTAI 20.10.1
 
-**När:** Tisdagen den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
+**När:** tisdag den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
 
 **Ändringar**
 
@@ -26,22 +26,22 @@ Versionsinformationen för Primetime Ad Insertion 20.10.1 beskriver vad som är 
 
 #### Version 20.9.3
 
-**När:** Onsdagen den 30 september 2020 kl. 3:30 till 18:30 Eastern Time
+**När:** onsdag den 30 september 2020 kl. 3:30 till 18:30 Eastern Time
 
 **Ändringar**
 
-* Bootstrap API-parameter har lagts till `ptparallelstream`. Detta gör att kunder med spelare som begär CMAF-demuxade ljud- eller videoströmmar parallellt kan säkerställa att annonserna i ljud- och videospår är enhetliga. Ange parametervärdet som true om du vill aktivera den här funktionen eller utelämna om du vill inaktivera den.
+* Bootstrap API-parameter `ptparallelstream` har lagts till. Detta gör att kunder med spelare som begär CMAF-demuxade ljud- eller videoströmmar parallellt kan säkerställa att annonserna i ljud- och videospår är enhetliga. Ange parametervärdet som true om du vill aktivera den här funktionen eller utelämna om du vill inaktivera den.
 
 #### Version 20.9.2
 
-**När:** Tisdagen den 15 september 2020 från kl. 3:30 till kl. 18:30 Eastern Time
+**När:** tisdag den 15 september 2020 från kl. 3:30 till kl. 18:30 (östtid)
 
 **Förbättringar**
 
-* Stöd för inkluderande av icke-linjära annonstyper med hjälp av `EXT-X-MARKER` -taggar.
+* Tillhandahöll stöd för inkludering av icke-linjära annonstyper med `EXT-X-MARKER`-taggar.
 Kontakta en supporttekniker om du vill ha mer information eller vill aktivera den här funktionen.
 
-* Tillhandahåller stöd för att begränsa den totala tiden för annonsupplösning om leverantörerna tar för lång tid att svara. Om du vill aktivera begränsning anger du ett värde i millisekunder `ptadtimeout` för bootstrap-API-parametern.
+* Tillhandahåller stöd för att begränsa den totala tiden för annonsupplösning om leverantörerna tar för lång tid att svara. Om du vill aktivera begränsning anger du ett värde i millisekunder för bootstrap-API-parametern `ptadtimeout`.
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 #### Version 20.9.1
 
-**När:** Tisdagen den 1 september 2020 från 3:30 till 19:30 Eastern Time
+**När:** tisdag den 1 september 2020 mellan kl. 3:30 och kl. 19:30 Eastern Time
 
 **Ändringar**
 
@@ -57,7 +57,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 #### Version 20.8.4
 
-**När:** Onsdagen den 19 augusti 2020 från 03:30 till 07:30 Eastern Time
+**När:** onsdag den 19 augusti 2020 från 03:30 till 07:30 Eastern Time
 
 **Förbättringar och korrigeringar**
 
@@ -65,7 +65,7 @@ Underhållsuppdateringar.
 
 #### Version 20.8.1
 
-**När:** Tisdagen den 4 augusti 2020 från kl. 3.00 till kl. 18.00 (Eastern Time)
+**När:** tisdag den 4 augusti 2020 mellan kl. 3:00 och kl. 18:00 Eastern Time
 
 **Förbättringar och korrigeringar**
 
@@ -73,7 +73,7 @@ Underhållsuppdateringar.
 
 #### Version 20.7.1
 
-**När:** Torsdag 9 juli 2020 från 03:00 till 05:00 Eastern Time
+**När:** Torsdag den 9 juli 2020 från 03:00 till 05:00 Eastern Time
 
 **Nya funktioner och förbättringar**
 
@@ -87,15 +87,15 @@ Underhållsuppdateringar.
 
 #### Version 20.6.2
 
-**När:** Torsdagen den 18 juni 2020 från 03:00 till 04:00 Eastern Time
+**När:** torsdagen den 18 juni 2020 från 03:00 till 04:00 Eastern Time
 
 **Förbättringar**
 
-Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support om du vill aktivera millisekundsprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
+Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support om du vill aktivera millisekundprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Version 20.6.1
 
-**När:** Tisdagen den 2 juni 2020 från 03:00 till 05:00 Eastern Time
+**När:** tisdag den 2 juni 2020 från 03:00 till 05:00 Eastern Time
 
 **Nya funktioner**
 
@@ -113,7 +113,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.5.1
 
-**När:** Tisdagen den 5 maj 2020 från 04:00 till 05:00 Eastern Time
+**När:** tisdag den 5 maj 2020 från 04:00 till 05:00 Eastern Time
 
 * Ett problem har korrigerats som säkerställer att korrekta CORS-huvuden anges när rubrikerna If-Modified-Since skickas.
 
@@ -123,7 +123,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.3.4
 
-**När:** Onsdagen den 1 april 2020 från 03:00 till 04:00 Eastern Time
+**När:** onsdag den 1 april 2020 från 03:00 till 04:00 Eastern Time
 
 * Korrigerade ett problem som gjorde att undertexter inte synkroniserades efter att annonsen infogats i VOD/WebVTT.
 
@@ -131,7 +131,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.3.3
 
-**När:** Torsdagen den 26 mars 2020 från 03:00 till 04:00 Eastern Time
+**När:** torsdag den 26 mars 2020 från 03:00 till 04:00 Eastern Time
 
 * SSAI 4XX- och 5XX-svar ger nu korrekt CORS-relaterade rubriker, vilket gör att JavaScript-webbvyklienter kan läsa felsvar.
 
@@ -141,7 +141,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.3.2
 
-**När:** Onsdagen den 11 mars 2020 från 05:30 till 07:00 Eastern Time
+**När:** onsdag den 11 mars 2020 från 05:30 till 07:00 Eastern Time
 
 * Förbättrad SCTE35-signalhantering.
 
@@ -149,7 +149,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.3.1
 
-**När:** Torsdagen den 5 mars 2020 från 02:30 till 04:30 Eastern Time
+**När:** torsdag den 5 mars 2020 från 02:30 till 04:30 Eastern Time
 
 * Prestandaförbättringar:
 
@@ -161,18 +161,18 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.2.1
 
-**När:** Torsdag 13 februari 2020 från 04:30 till 05:30 Eastern Time
+**När:** torsdag den 13 februari 2020 från 04:30 till 05:30 Eastern Time
 
 * Stöd för sammanslagning av annonsmaterial som innehåller flera strömmar med enbart ljud baserat på språk/kodek/bithastighet.
 * Mindre prestandaförbättringar och underhållsuppdateringar.
 
 #### Version 20.1.3
 
-**När:** Tisdagen den 28 januari 2020 från kl. 02:00 till kl. 03:00 Eastern Time
+**När:** tisdag den 28 januari 2020 från kl. 2:00 till kl. 03:00 Eastern Time
 
 * **VMAP med FER-stöd för nbc CueFormat**
 
-   Konvertera Cues från FER-ström till parametrar för åsidosättning av tidslinje för FW, när `ptcueformat=nbc` används och strömmen är en VOD-ström med in-manifest cues och inbakade annonser.
+   Konvertera Cues från FER-ström till parametrar för åsidosättning av tidslinje för FW när `ptcueformat=nbc` används och strömmen är en VOD-ström med in-manifest-cues och inbakade annonser.
 
 * Anpassa fältet för användaragent i HTTP Header innan det vidarebefordras till tredjeparts annonsleverantörer/ CDN.
 
@@ -182,13 +182,13 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 #### Version 20.1.2 (programfix)
 
-**När:** Måndagen den 20 januari 2020 från 02:00 till 03:00 Eastern Time
+**När:** Måndag den 20 januari 2020 från 02:00 till 03:00 Eastern Time
 
 * Underhållsuppdateringar.
 
 #### Version 20.1.1
 
-**När:** Onsdagen den 15 januari 2020 från 04:00 till 05:00 Eastern Time
+**När:** onsdag den 15 januari 2020 från 04:00 till 05:00 Eastern Time
 
 * Tjänsten Creative Repackaging erbjuder nu snabbare annonsinfogning genom att automatiskt blockera listor över felaktigt utformade kreatörer.
 
