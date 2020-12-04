@@ -17,4 +17,4 @@ Som en del av processen att skapa en AIR-fil genererar AIR Developer Tool (ADT) 
 
 >[!NOTE]
 >
->Utgivar-ID:t, som används för att använda AIR tillåtelselista, är inte detsamma som det utgivar-ID som anges av programutgivaren i programmets [!DNL application.xml] fil.
+>Utgivar-ID:t, som används för att använda AIR tillåtelselista, är inte detsamma som det utgivar-ID som anges av programutgivaren i programmets [!DNL application.xml]-fil.
