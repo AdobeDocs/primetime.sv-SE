@@ -17,18 +17,18 @@ ht-degree: 1%
 
 Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 
-Om du vill använda de här sparade `TimedMetadata` objekten under uppspelning använder du de sparade `ArrayList` från [Store tidsbestämda metadataobjekt när de skickas](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Om du vill använda de här sparade `TimedMetadata`-objekten under uppspelningen använder du de sparade `ArrayList` från [Lagra tidsbestämda metadataobjekt när de skickas](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Kör en timer och fråga den aktuella uppspelningstiden upprepade gånger.
-1. Hitta alla `TimedMetadata` objekt med starttider som matchar den aktuella uppspelningstiden.
+1. Hitta alla `TimedMetadata`-objekt med starttider som matchar den aktuella uppspelningstiden.
 
    Du kan använda dessa objekt för att slutföra olika åtgärder.
 
    >[!IMPORTANT]
    >
-   >När du kontrollerar om den aktuella uppspelningstiden matchar några `TimedMetadata` objekt ska du inkludera `shouldTriggerSubscribedTagEvent` som villkor.
+   >När du kontrollerar om den aktuella uppspelningstiden matchar några `TimedMetadata`-objekt ska du ta med `shouldTriggerSubscribedTagEvent` som villkor.
 
-   Tidslinjen kan ändras på grund av olika annonsbeteenden. En eller flera annonsbrytningar kan till exempel flyttas från sina ursprungliga positioner på tidslinjen, men `shouldTriggerSubscribedTagEvent` ser till att `TimeMetadata` objektets starttid matchar den aktuella uppspelningstiden.
+   Tidslinjen kan ändras på grund av olika annonsbeteenden. En eller flera annonsbrytningar kan till exempel flyttas från sina ursprungliga positioner på tidslinjen, men med `shouldTriggerSubscribedTagEvent` säkerställer du att starttiden för `TimeMetadata`-objektet matchar den aktuella uppspelningstiden.
 
    Exempel:
 
@@ -62,4 +62,4 @@ Om du vill använda de här sparade `TimedMetadata` objekten under uppspelning a
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Justera regelbundet inaktuella `TimedMetadata` instanser från listan för att förhindra att minnet växer kontinuerligt.
+1. Justera regelbundet inaktuella `TimedMetadata`-instanser från listan för att förhindra att minnet växer kontinuerligt.
