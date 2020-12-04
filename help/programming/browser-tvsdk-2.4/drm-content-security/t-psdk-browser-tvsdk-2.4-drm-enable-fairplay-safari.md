@@ -6,6 +6,9 @@ title: Aktivera FairPlay för Safari HLS
 uuid: 6a250a31-cc4b-4c4b-b1e9-893ee3ca5d78
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +24,11 @@ Kontrollera att du har följande:
    Exempelappen måste kunna spela upp FairPlay-skyddat innehåll med licensieringen hanterad via Primetime DRM från ExpressPlay.
 * Exempel på HLS-innehåll (ett M3U8-manifest) som paketerats med FairPlay-skydd.
 
-Om du vill använda informationen här till fullo kan du lära dig mer om arbetsflöden med flera DRM från och med [referensservern för underavsnitt: Exempel på ExpressPlay Entitlement Server (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) i Multi-DRM Workflows guide. Läs först dokumentationen om hur du konfigurerar ditt berättigande och nyckelservern, och informationen nedan blir mycket mer användbar.
+Om du vill använda informationen här till fullo kan du lära dig mer om arbetsflöden med flera DRM från och med underavsnittet [Referensserver: Exempel på ExpressPlay Entitlement Server (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) i Multi-DRM Workflows Guide. Läs först dokumentationen om hur du konfigurerar ditt berättigande och nyckelservern, och informationen nedan blir mycket mer användbar.
 Du behöver följande objekt:
 
-* Din *produktions* kundautentiserare från ExpressPlay
-* Samma innehållsnyckel och `iv` med vilken innehållet paketerades.
+* Din *produktion* kundautentiserare från ExpressPlay
+* Samma innehållsnyckel och `iv` som innehållet paketerades med.
 * Platsen för det publika nyckelcertifikatet för FairPlay.
 
 Så här ändrar du din FairPlay-/Safari-app:
@@ -38,7 +41,7 @@ Så här ändrar du din FairPlay-/Safari-app:
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. Utför en manuell *tokenbegäran* för FairPlay-licens för ExpressPlay för att erhålla en licenstoken-URL.
+1. Utför en manuell FairPlay-licens *token*-begäran till ExpressPlay för att erhålla en licenstoken-URL.
 
        Du kan slutföra det här steget på något av följande sätt:
    
@@ -71,11 +74,11 @@ Så här ändrar du din FairPlay-/Safari-app:
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. Ändra URL-schemat för innehållet från `skd://` till `https://`innan appen kan spela upp skyddat innehåll.
+1. Ändra URL-schemat för innehållet från `skd://` till `https://` innan appen kan spela upp skyddat innehåll.
 
    Du måste lägga till den här URL-schemaändringen i appen innan du anropar licensservern som tillåter uppspelning.
 
-   Protokollen måste ändras eftersom innehålls-ID, som ger åtkomst till innehållsnyckeln i nyckelhanteringssystemet, paketeras i M3U8-manifestet med `skd://` protokollet. När spelaren är redo att hämta licensen för att spela upp det skyddade innehållet måste den först byta protokoll för att kunna kommunicera med ExpressPlay-licensservern. I exemplet nedan `myServerProcessSPCPath` ändras URL-schemat för licensserverbegäran:
+   Protokollen måste ändras eftersom innehålls-ID, som ger åtkomst till innehållsnyckeln i nyckelhanteringssystemet, paketeras i M3U8-manifestet med `skd://`-protokollet. När spelaren är redo att hämta licensen för att spela upp det skyddade innehållet måste den först byta protokoll för att kunna kommunicera med ExpressPlay-licensservern. I exemplet nedan ändras `myServerProcessSPCPath` så att det innehåller rätt URL-schema för licensserverbegäran:
 
    ```js
    extractContentId(initData) {  
