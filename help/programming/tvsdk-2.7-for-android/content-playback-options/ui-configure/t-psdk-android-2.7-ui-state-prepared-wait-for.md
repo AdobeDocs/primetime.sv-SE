@@ -6,6 +6,9 @@ title: Vänta på en giltig status
 uuid: ffa63ad6-84d3-4eb2-aa99-026418d86528
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '158'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Med TVSDK kan du styra den grundläggande uppspelningen för live och on demand-
 
 Innan du kan använda de flesta TVSDK-spelarmetoderna måste spelaren ha en giltig status.
 
-Om du väntar på att spelaren ska ha rätt status ser du till att medieresursen har lästs in. Om spelaren inte har minst den status som krävs, kommer många spelarmetoder att generera `MediaPlayerException`.
+Om du väntar på att spelaren ska ha rätt status ser du till att medieresursen har lästs in. Om spelaren inte har minst rätt status kommer många spelarmetoder att returnera `MediaPlayerException`.
 
-Den obligatoriska statusen är vanligtvis FÖRBEREDD. När detta inträffar körs callback-rutinen för `StatusChangeEventListener.onStatusChanged()` .
+Den obligatoriska statusen är vanligtvis FÖRBEREDD. När detta inträffar körs callback-rutinen för `StatusChangeEventListener.onStatusChanged()`.
 
-1. Kontrollera att statusen är `PREPARED`aktuell `MediaPlayer.MediaPlayerStatus`.
+1. Kontrollera `MediaPlayer.MediaPlayerStatus` för att bekräfta att statusen är `PREPARED`.
