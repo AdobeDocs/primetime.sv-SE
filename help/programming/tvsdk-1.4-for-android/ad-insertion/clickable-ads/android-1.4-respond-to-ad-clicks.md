@@ -6,11 +6,14 @@ title: Svara på klickningar på annonser
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Svara på klickningar på annonser{#respond-to-clicks-on-ads}
+# Svara på klick på annonser{#respond-to-clicks-on-ads}
 
 När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
 
@@ -18,12 +21,12 @@ När en användare klickar på en annons eller en relaterad knapp måste program
 
    När en användare klickar på en annons eller en relaterad knapp skickar TVSDK det här meddelandet, inklusive information om klickningens mål.
 1. Övervaka användarinteraktioner i klickbara annonser.
-1. När användaren rör vid eller klickar på annonsen eller knappen kan du kontakta TV SDK `notifyClick` på `MediaPlayerView`.
-1. Lyssna efter `onAdClick(AdClickEvent event)` eventet från TVSDK.
-1. Om du vill hämta klicknings-URL:en och relaterad information använder du metoderna för `AdClickEvent` instansen.
+1. När användaren vidrör eller klickar på annonsen eller knappen ringer du `notifyClick` på `MediaPlayerView` för att meddela TVSDK.
+1. Lyssna efter händelsen `onAdClick(AdClickEvent event)` från TVSDK.
+1. Om du vill hämta klicknings-URL:en och relaterad information använder du get-metoderna för `AdClickEvent`-instansen.
 1. Pausa videon.
 
-   Mer information om hur du pausar videon finns i [Pausa och återuppta uppspelning.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
+   Mer information om hur du pausar videon finns i [Pausa och återuppta uppspelningen.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
 1. Använd klickningsinformationen för att visa webbadressen för annonsklickningen och relaterad information.
 
        Du kan till exempel visa informationen på något av följande sätt:
