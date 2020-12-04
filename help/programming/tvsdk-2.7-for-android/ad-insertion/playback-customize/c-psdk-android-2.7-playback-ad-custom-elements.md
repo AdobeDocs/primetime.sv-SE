@@ -6,6 +6,9 @@ title: API-element för annonsuppspelning
 uuid: 5e21e709-8446-4fed-8711-aa4f629f1147
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Följande API-element är användbara för att anpassa uppspelning:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="apiname"> AdvertisingMetadata </span> </td> 
+   <td colname="col1"><span class="apiname"> AdvertisingMetadata  </span> </td> 
    <td colname="col2">Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta den bevakade profilen med <span class="codeph"> setAdBreakAsWatched</span> och <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
@@ -37,11 +40,11 @@ Följande API-element är användbara för att anpassa uppspelning:
    <td colname="col2"> Räknar upp möjliga uppspelningsprinciper för annonser. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="apiname"> AdPolicySelector </span> </td> 
+   <td colname="col1"><span class="apiname"> AdPolicySelector  </span> </td> 
    <td colname="col2"> Gränssnitt som gör det möjligt att anpassa annonsbeteendet i TVSDK. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="apiname"> DefaultAdPolicySelector </span> </td> 
+   <td colname="col1"><span class="apiname"> DefaultAdPolicySelector  </span> </td> 
    <td colname="col2"> En klass som implementerar TVSDK-standardbeteendet. Programmet kan åsidosätta den här klassen för att anpassa standardbeteendena utan att implementera hela gränssnittet. </td> 
   </tr> 
   <tr> 
@@ -51,11 +54,11 @@ Följande API-element är användbara för att anpassa uppspelning:
      <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span> <p>Detta är den lokala tidpunkten för uppspelningen, exklusive de monterade annonsbrytningarna. </p> </li> 
      <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> seekToLocal</span>. <p>Här sker sökningen i förhållande till en lokal tid i strömmen. </p> </li> 
      <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>Den virtuella positionen på tidslinjen konverteras till den lokala positionen. </p> </li> 
-    </ul> <p>Viktigt:  <span class="codeph"> getLocalTime</span> i <span class="codeph"> MediaPlayer</span> returnerar den aktuella tiden i förhållande till det ursprungliga innehållet, utan dynamiskt uppdelade annonser. <span class="codeph"> getLocalTime</span> i <span class="codeph"> AdBreak</span> returnerar brytningens starttid i förhållande till det ursprungliga innehållet. </p> </td> 
+    </ul> <p>Viktigt:  <span class="codeph"> getLocalTime</span> i <span class="codeph"> MediaPlayer</span> returnerar den aktuella tiden i förhållande till det ursprungliga innehållet, utan dynamiskt uppdelade annonser. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakreturns the start time of the break relative to the original content. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> isWatched</span> , egenskap. Anger om tittaren har tittat på annonsen. </td> 
+   <td colname="col2"><span class="codeph"> </span> isWatchedproperty. Anger om tittaren har tittat på annonsen. </td> 
   </tr> 
  </tbody> 
 </table>
