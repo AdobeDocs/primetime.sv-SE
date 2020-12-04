@@ -6,6 +6,9 @@ title: API-element för svart
 uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,11 @@ Du kan använda följande när du implementerar en svartpunkt i din spelare.
 
    * `unregisterCurrentBackgroundItem`  Rensar den angivna bakgrundsresursen och avbryter hämtning och tolkning av bakgrundsmanifestet.
 
-* **BlackoutMetadata** En metadatatyp som är specifik för strömavbrott.
+* **** BlackoutMetadataEn metadatatyp som är specifik för strömavbrott.
 
-   På så sätt kan du ange intervall som inte kan sökas (ett extra `TimeRange` attribut med namnet `nonseekableRange`) på TVSDK. TVSDK söker efter dessa intervall (om den önskade sökpositionen ligger inom ett intervall `nonseekableRange`) varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas, tvingar TVSDK användaren till sluttiden för `seekableRange`.
+   På så sätt kan du ange intervall som inte kan sökas (ett ytterligare `TimeRange`-attribut med namnet `nonseekableRange`) på TVSDK. TVSDK söker efter dessa intervall (om den önskade sökpositionen ligger inom `nonseekableRange`) varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas tvingar TVSDK användaren till sluttiden för `seekableRange`.
 
-* **START HERE NEXT** **DefaultMetadataKeys** Aktivera eller inaktivera förhandsgranskning i en direktström genom att ange `ENABLE_LIVE_PREROLL` värdet true eller false. Om värdet är false gör inte TVSDK något explicit annonsserveranrop för pre-roll-annonser före innehållsuppspelningen och spelar därför inte upp pre-roll. Detta påverkar inte mittrullarna. Standardvärdet är true.
+* **START HERE** **** NEXTDefaultMetadataKeysAktivera eller inaktivera förhandsgranskning i en liveström genom  `ENABLE_LIVE_PREROLL` att ange värdet true eller false. Om värdet är false gör inte TVSDK något explicit annonsserveranrop för pre-roll-annonser före innehållsuppspelningen och spelar därför inte upp pre-roll. Detta påverkar inte mittrullarna. Standardvärdet är true.
 
 * **TimedMetadataEvent**
 
