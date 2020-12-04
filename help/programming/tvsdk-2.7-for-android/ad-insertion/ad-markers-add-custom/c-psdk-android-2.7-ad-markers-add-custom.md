@@ -6,6 +6,9 @@ title: Lägga till egna annonsmärken
 uuid: 712da406-094a-49b2-b21d-4d5d73fff8cf
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '318'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Den här funktionen är mest användbar när innehåll spelas in, till exempel f
 
 Ni kan kanske få den information som är relaterad till positioneringen av annonsinnehållsperioderna från andra källor utanför bandet, som externa CMS-system. Du kan definiera anpassade markörer, genom vilka den här out-of-band-informationen kan skickas till undersystemet för tidslinjehantering. Avsikten är att markera de avsnitt av innehållet som matchar det angivna annonsrelaterade innehållet på ett sådant sätt att alla annonsspecifika uppspelningshändelser utlöses på samma sätt som om dessa anpassade annonsperioder uttryckligen placerades på spelarens tidslinje.
 
-Annonsuppföljning hanteras inte internt av TVSDK, till exempel när annonser löses av Adobe Primetimes annonsbeslut. TVSDK innehåller dock följande abstraktioner som definierar hur annonsrelaterat innehåll visas på tidslinjen:
+Annonsuppföljning hanteras inte internt av TVSDK, till exempel när annonser löses genom Adobe Primetime annonsbeslut. TVSDK innehåller dock följande abstraktioner som definierar hur annonsrelaterat innehåll visas på tidslinjen:
 
 * Annonsbrytning
 
@@ -27,4 +30,4 @@ Annonsuppföljning hanteras inte internt av TVSDK, till exempel när annonser l�
 
 Uppspelningshändelser utlöses separat för annonsbrytningar och annonser vid start- och slutpunkten för varje annons.
 
-TVSDK skickar annonsuppföljningshändelser till ditt program, så att du kan implementera din egen spårningslogik. Om du ställer in anpassade annonsmarkörer får du händelserna `onAdBreakStart`, `onAdStart`, `onAdProgress`, `onAdComplete`och `onAdBreakComplete` .
+TVSDK skickar annonsuppföljningshändelser till ditt program, så att du kan implementera din egen spårningslogik. Om du ställer in anpassade annonsmarkörer får du händelserna `onAdBreakStart`, `onAdStart`, `onAdProgress`, `onAdComplete` och `onAdBreakComplete`.
