@@ -6,6 +6,9 @@ title: Implementera en anpassad innehållshanterare
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,7 @@ Du kan implementera egna innehållslösningar baserat på standardlösare.
 
 När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade innehållsmatcharna och letar efter en som kan lösa den möjligheten. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom processen för innehållsupplösning vanligtvis är asynkron ansvarar innehållshanteraren för att meddela när processen har slutförts.
 
-1. Skapa en anpassad `AdvertisingFactory` instans och åsidosätt `createContentResolver`.
+1. Skapa en anpassad `AdvertisingFactory`-instans och åsidosätt `createContentResolver`.
 
    Exempel:
 
@@ -43,7 +46,7 @@ När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade
    }
    ```
 
-1. Registrera annonsklientfabriken hos `MediaPlayer`kunden.
+1. Registrera annonsklientfabriken på `MediaPlayer`.
 
    Exempel:
 
@@ -53,9 +56,9 @@ När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Skicka ett `AdvertisingMetadata` objekt till TVSDK enligt följande:
-   1. Skapa ett `AdvertisingMetadata` objekt och ett `MetadataNode` objekt.
-   1. Spara `AdvertisingMetadata` objektet i `MetadataNode`.
+1. Skicka ett `AdvertisingMetadata`-objekt till TVSDK enligt följande:
+   1. Skapa ett `AdvertisingMetadata`-objekt och `MetadataNode`-objekt.
+   1. Spara `AdvertisingMetadata`-objektet till `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +66,7 @@ När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade
                   advertisingMetadata);
    ```
 
-1. Skapa en anpassad annonsupplösarklass som utökar `ContentResolver` klassen.
+1. Skapa en anpassad annonsupplösarklass som utökar klassen `ContentResolver`.
    1. Åsidosätt den här skyddade funktionen i den anpassade annonslösaren:
 
       ```java
@@ -71,9 +74,9 @@ När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Metadata innehåller dina `AdvertisingMetada`data. Använd den för följande `TimelineOperation` vektorgenerering.
+      Metadata innehåller din `AdvertisingMetada`. Använd den för följande `TimelineOperation`-vektorgenerering.
 
-   1. Skapa en `Vector<TimelineOperation>`för varje placeringsmöjlighet.
+   1. Skapa en `Vector<TimelineOperation>` för varje placeringsmöjlighet.
 
       Vektorn kan vara tom, men inte null.
 
@@ -94,6 +97,7 @@ När TVSDK upptäcker en ny möjlighet itererar företaget genom de registrerade
 
       * Om annonsen lyckas: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Om annonsen inte lyckas: `notifyResolveError(Error error)`
+
       Om det till exempel misslyckas:
 
       ```java
