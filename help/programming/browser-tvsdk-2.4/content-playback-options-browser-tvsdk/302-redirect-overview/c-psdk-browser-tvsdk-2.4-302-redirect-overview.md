@@ -6,6 +6,9 @@ title: Omdirigeringsoptimering för HTTP 302
 uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +21,9 @@ Om en huvudmanifestbegäran omdirigeras och 302-optimering aktiveras i spelaren 
 
 >[!IMPORTANT]
 >
->Den här funktionen stöds bara i de certifierade webbläsare som stöder egenskapen `responseURL` i `XMLHttpRequest` objektet.
+>Den här funktionen stöds bara i de certifierade webbläsare som stöder egenskapen `responseURL` i `XMLHttpRequest`-objektet.
 
-Kom ihåg följande information för Flash-reservlösningar:
+Kom ihåg följande information för Flash fallback:
 
 * Slutanvändarna måste ha Adobe Flash Player version 23 eller senare installerat.
 * Om dataströmmens integritet är inaktiverad stöds 302-omdirigering endast i certifierade webbläsare.
