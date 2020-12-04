@@ -37,7 +37,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder klientAPI:er för Adobe Access för att utföra användarautentisering. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder Adobe Access-klient-API:er för att utföra användarautentisering. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -99,7 +99,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
 
 Licensservern kräver åtkomst via brandväggen för att hämta följande listor över återkallade certifikat från Adobe:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
