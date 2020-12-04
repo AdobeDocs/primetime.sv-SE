@@ -6,6 +6,9 @@ title: Konfigurera meddelanden
 uuid: b178b2eb-da40-456b-997a-46ae18d635fa
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Spelaren kan lyssna efter en rad händelser som anger spelarens tillstånd.
 
-Om det `PTMediaPlayer` är en egenskap för klientspelaren representerar `self.player` i följande exempel `PTMediaPlayer` instansen. I följande exempel implementeras den metod `addObservers` som visas i instruktionerna för konfiguration av PTMediaPlayer och de flesta meddelanden ingår:
+Om `PTMediaPlayer` är en egenskap för klientspelaren representerar `self.player` instansen `PTMediaPlayer` i följande exempel. I följande exempel implementeras metoden `addObservers` som visas i konfigurationsinstruktionerna för PTMediaPlayer och som innehåller de flesta meddelanden:
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -54,115 +57,115 @@ Om det `PTMediaPlayer` är en egenskap för klientspelaren representerar `self.p
    <td colname="2"> <b>Betydelse</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification  </span> </td> 
    <td colname="2"> En annonsbrytning tog slut. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification  </span> </td> 
    <td colname="2"> En annonsbrytning började. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification  </span> </td> 
    <td colname="2"> En användare klickade på en banners. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification  </span> </td> 
    <td colname="2"> En enskild annons slutade. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification  </span> </td> 
    <td colname="2"> En annons fortskrider. skickas kontinuerligt medan en annons spelas upp. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification  </span> </td> 
    <td colname="2"> En enskild annons började. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification  </span> </td> 
    <td colname="2"> Det gick inte att hämta bakgrundsmanifestet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification  </span> </td> 
    <td colname="2"> Buffring har slutförts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification  </span> </td> 
    <td colname="2"> Mediespelaren försätts i buffertläge. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted </span> </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted  </span> </td> 
    <td colname="2"> En ändring av ljudspåret för de media som spelas upp har slutförts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted </span> </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted  </span> </td> 
    <td colname="2"> En ändring av ljudspåret för det media som spelas upp initieras. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification  </span> </td> 
    <td colname="2"> En annan <span class="codeph"> PTMediaPlayerItem </span> för <span class="codeph"> PTMediaPlayer </span> har angetts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged  </span> </td> 
    <td colname="2"> DRM-metadata har ändrats. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification  </span> </td> 
    <td colname="2"> Det finns nya undertexter och alternativa ljudspår ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification </span> </td> 
-   <td colname="2"> En ny <span class="codeph"> PTNotification </span> har lagts till i <span class="codeph"> PTNotificationHistoryItem </span> för den aktuella <span class="codeph"> </span>PTMediaPlayerItem, d.v.s. när en meddelandehändelse läggs till i meddelandehistoriken. </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification  </span> </td> 
+   <td colname="2"> Ett nytt <span class="codeph"> PTNotification </span> har lagts till i <span class="codeph"> PTNotificationHistoryItem </span> i aktuell <span class="codeph"> PTMediaPlayerItem </span>, det vill säga när en meddelandehändelse läggs till i meddelandehistoriken. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification  </span> </td> 
    <td colname="2"> Medieuppspelningen har avslutats. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification  </span> </td> 
    <td colname="2"> Sökningen har slutförts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification  </span> </td> 
    <td colname="2"> Den aktuella sökåtgärden misslyckades. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification  </span> </td> 
    <td colname="2"> Sökningen startar. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification  </span> </td> 
    <td colname="2"> Uppspelningen har startats. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification  </span> </td> 
    <td colname="2"> Spelarstatusen har ändrats. Möjliga statusvärden är: 
     <ul id="ul_DDBE8CAD5D5A46D2AAA6B98F0754A881"> 
-     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusSkapad </span> </p> </li> 
-     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing </span> </p> </li> 
-     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized </span> </p> </li> 
-     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady </span> </p> </li> 
-     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusSpela upp </span> </p> </li> 
-     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused </span> </p> </li> 
-     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStoppad </span> </p> </li> 
-     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusSlutförd </span> </p> </li> 
-     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError </span> </p> </li> 
+     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusSkapad  </span> </p> </li> 
+     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing  </span> </p> </li> 
+     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized  </span> </p> </li> 
+     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady  </span> </p> </li> 
+     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusSpela upp  </span> </p> </li> 
+     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused  </span> </p> </li> 
+     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStoppad  </span> </p> </li> 
+     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusSlutförd  </span> </p> </li> 
+     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError  </span> </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification  </span> </td> 
    <td colname="2"> Uppspelningens aktuella tid har ändrats. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification  </span> </td> 
    <td colname="2"> Den aktuella spelarens tidslinje har ändrats. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification </span> </td> 
+   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification  </span> </td> 
    <td colname="2"> TVSDK påträffade den första förekomsten av en prenumerationstagg. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification </span> </td> 
-   <td colname="2"> <p>En prenumerationstagg identifieras i bakgrundsmanifestet och en ny <span class="codeph"> PTTimedMetadata- </span> instans förbereds utifrån den. </p> </td> 
+   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
+   <td colname="2"> <p>En prenumerationstagg identifieras i bakgrundsmanifestet och en ny PTTimedMetadata <span class="codeph">-instans förbereds från den.</span> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -171,7 +174,7 @@ Om det `PTMediaPlayer` är en egenskap för klientspelaren representerar `self.p
 
 Följande kodfragment illustrerar några av de sätt som du kan använda meddelanden på.
 
-Hämta `PTAdBreak` instansen med `PTMediaPlayerAdBreakKey`:
+Hämta `PTAdBreak`-instansen med `PTMediaPlayerAdBreakKey`:
 
 ```
  - (void) onMediaPlayerAdBreakStarted:(NSNotification *) notification { 
@@ -194,7 +197,7 @@ Ange `subtitlesOptions` och `audioOptions`:
 } 
 ```
 
-Hämta `PTAd` instansen med `PTMediaPlayerAdKey`:
+Hämta `PTAd`-instansen med `PTMediaPlayerAdKey`:
 
 ```
  - (void) onMediaPlayerAdPlayStarted:(NSNotification \*)  notification { 
