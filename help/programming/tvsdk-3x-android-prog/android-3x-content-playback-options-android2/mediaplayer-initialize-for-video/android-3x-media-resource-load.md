@@ -6,31 +6,35 @@ title: Läsa in en medieresurs i mediespelaren
 uuid: 1a27b83b-afa6-48c7-a701-e11b2d280810
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
 
-# Läsa in en medieresurs i mediespelaren {#load-a-media-resource-in-the-media-player}
+# Läs in en medieresurs i mediespelaren {#load-a-media-resource-in-the-media-player}
 
 Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 
 1. Ställ in mediespelaren så att den spelar upp den nya resursen.
 
-   Ersätt det objekt som spelas upp just nu genom att anropa `MediaPlayer.replaceCurrentResource()` och skicka en befintlig `MediaResource` instans.
+   Ersätt det uppspelningsbara objektet genom att anropa `MediaPlayer.replaceCurrentResource()` och skicka en befintlig `MediaResource`-instans.
 
    Detta startar resursinläsningsprocessen.
 
-1. Registrera `MediaPlayerEvent.STATUS_CHANGED` händelsen med `MediaPlayer` instansen. Kontrollera om det finns minst följande statusvärden i återanropet:
+1. Registrera händelsen `MediaPlayerEvent.STATUS_CHANGED` med instansen `MediaPlayer`. Kontrollera om det finns minst följande statusvärden i återanropet:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
-   Genom de här händelserna meddelar `MediaPlayer` objektet programmet när mediaresursen har lästs in.
-1. När statusen för mediespelaren ändras till `INITIALIZED`kan du ringa `MediaPlayer.prepareToPlay()`.
 
-   Den här statusen anger att mediet har lästs in. Det nya `MediaPlayerItem` är klart för uppspelning. Anrop `prepareToPlay()` startar upplösningen av annonsen och placeringsprocessen, om det finns någon.
+   Genom dessa händelser meddelar `MediaPlayer`-objektet ditt program när mediaresursen har lästs in.
+1. När mediespelarens status ändras till `INITIALIZED` kan du ringa `MediaPlayer.prepareToPlay()`.
 
-Om ett fel inträffar växlar mediespelaren till `ERROR` status.
+   Den här statusen anger att mediet har lästs in. Den nya `MediaPlayerItem` är klar för uppspelning. Om du anropar `prepareToPlay()` startar du annonsupplösningen och placeringsprocessen, om det finns någon.
+
+Om ett fel inträffar växlar mediespelaren till `ERROR`-status.
 
 Följande förenklade exempelkod visar processen för inläsning av en medieresurs:
 
