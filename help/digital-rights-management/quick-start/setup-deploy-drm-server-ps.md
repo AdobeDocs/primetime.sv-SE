@@ -4,6 +4,9 @@ title: Konfigurera och distribuera servern för skyddad direktuppspelning
 uuid: 300a1b63-0bf0-48a8-977d-212563025c19
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,15 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 1. Konfigurera konfigurationsmappen på Primetime DRM DVD:
 
    `\Adobe Access Server for Protected Streaming\configs\`
-1. Kopiera exempelmappen `configs` till din `<Tomcat_installation_dir>` mapp och byt namn på den kopierade mappen till `licenseserver`.
+1. Kopiera exempelmappen `configs` till din `<Tomcat_installation_dir>` och byt namn på den kopierade mappen till `licenseserver`.
 
    Sökvägen till konfigurationsmappen bör nu vara `<Tomcat_install_dir>\licenseserver\`.
-1. Kör `Scrambler.bat` för att hämta krypterade lösenord för transport- och licensserverns PFX-filer i Primetimes DRM- `<DVD>``\Adobe Access Server for Protected Streaming\` katalog:
+1. Kör `Scrambler.bat` för att erhålla krypterade lösenord för transport- och licensserverns PFX-filer i katalogen Primetime DRM `<DVD>` `\Adobe Access Server for Protected Streaming\`:
 
    * `Scrambler.bat <Adobe-provided transport credential password>`
    * `Scrambler.bat <Adobe-provided license server credential password>`
 
-1. Kopiera PFX-filerna till `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\` katalogen.
+1. Kopiera PFX-filerna till katalogen `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\`.
 1. Redigera motsvarande klientkonfiguration i `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\sampletenant\flashaccess-tenant.xml`, med följande inställningar:
 
    ```
@@ -37,7 +40,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    Validator.bat -g -r <absolute-path-to TomcatInstallDir\licenseserver>
    ```
 
-1. Kopiera `flashaccessserver.war` filen från CD:n till `<TomcatInstallDir>\webapps\` katalogen.
+1. Kopiera filen `flashaccessserver.war` från cd:n till katalogen `<TomcatInstallDir>\webapps\`.
 1. Om Tomcat körs stoppar du den Tomcat-instans som körs genom att trycka på `<CTRL-C>` i kommandofönstret (om den startades från kommandofönstret). Du kan också stoppa servern från Windows Services-programmet om Tomcat installerades som en Windows-tjänst.
 1. Starta Tomcat genom att ange följande kommando:
 
