@@ -26,13 +26,13 @@ Du kan göra följande typer av ändringar:
 
 * Förgrundsfärg för knappar och text
 
-   Alla kontroller som har en förgrund använder `vid-skin-fgcolor` klassen. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med `vid-skin-fgcolor` klassen och anger önskad färg.
+   Alla kontroller som har en förgrund använder klassen `vid-skin-fgcolor`. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med klassen `vid-skin-fgcolor` och anger önskad färg.
 * Bakgrundsfärg för knappar och text
 
-   Alla kontroller som har en förgrund använder `vid-skin-bgcolor` klassen. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med `vid-skin-bgcolor` klassen och anger önskad färg.
+   Alla kontroller som har en förgrund använder klassen `vid-skin-bgcolor`. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med klassen `vid-skin-bgcolor` och anger önskad färg.
 * Spelhuvudets form
 
-   Spelhuvudet kan vara fyrkantigt eller runt. Om du vill ändra spelhuvudet lägger du till `square` eller `round` klassen i `playhead` elementet.
+   Spelhuvudet kan vara fyrkantigt eller runt. Om du vill ändra spelhuvudet lägger du till `square` eller `round`-klassen i `playhead`-elementet.
 * Buffertspinnarnas format
 
    Referensspelaren innehåller följande stilar för att dela upp när spelaren buffrar innehåll:
@@ -40,11 +40,11 @@ Du kan göra följande typer av ändringar:
    * Överläggningstext ( `overlay-text`)
    * Rektangulär snurra ( `spinner`)
    * Signal ( `signal`)
-   * Lodräta streck ( `vertical`)
+   * Lodräta staplar ( `vertical`)
 
       >[!TIP]
       >
-      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Om du till exempel vill använda `overlay-text`lägger du till följande rader i `BufferOverlay.js` filen:
+      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Om du till exempel vill använda `overlay-text` lägger du till följande rader i `BufferOverlay.js`-filen:
       >
       >
       ```js
