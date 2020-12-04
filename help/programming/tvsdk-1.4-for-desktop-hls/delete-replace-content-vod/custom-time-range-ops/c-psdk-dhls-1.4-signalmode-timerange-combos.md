@@ -6,6 +6,9 @@ title: Signeringsläge och tidsintervall
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARK </th> 
-   <th class="entry"> TA BORT </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> ERSÄTT </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -42,7 +45,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Signeringsläge </span> för ServerMap </td> 
+   <td> <span class="codeph"> ServerMap- </span> signaleringsläge </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> Ej tillämpligt (automatiskt CustomRange-signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> AnpassatRange- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> Anpassat  </span> signaleringsläge </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,13 +139,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARK </th> 
-   <th class="entry"> TA BORT </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> ERSÄTT </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -161,7 +164,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Signeringsläge för </span> serverkarta </td> 
+   <td> <span class="codeph"> SeverMap- </span> signaleringsläge </td> 
    <td> Finns inte (annonsen är inaktiverad). </td> 
    <td> 
     <code>
@@ -172,7 +175,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> Ej tillämpligt (automatiskt <span class="codeph"> anpassatRange- </span> signaleringsläge) </td> 
+   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span>-signaleringsläge) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> ManifestCue- </span> signaleringsläge </td> 
@@ -186,10 +189,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> Ej tillämpligt (automatiskt <span class="codeph"> anpassatRange- </span> signaleringsläge) </td> 
+   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span>-signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> AnpassatRange- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> Anpassat  </span> signaleringsläge </td> 
    <td> Finns inte (annonsen är inaktiverad). </td> 
    <td> Ingen </td> 
    <td> Ingen (hanteras i <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
