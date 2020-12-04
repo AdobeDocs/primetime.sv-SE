@@ -4,6 +4,9 @@ title: Uppdaterar översikt över konfigurationsfiler
 uuid: e9be21cf-ad23-4ed6-8bef-f194bc1fd749
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ När licensservern har läst någon av licensserverkonfigurationsfilerna (global
 
 För att kunna läsa in konfigurationen igen när ändringar görs lagrar licensservern den tid då filen senast ändrades. Vid ett konfigurerbart intervall kontrollerar servern om ändringstiden för filen har ändrats och läser i så fall in filens innehåll igen.
 
-Om du vill styra hur ofta servern söker efter uppdateringar anger du attributet i Caching-elementet i den globala konfigurationsfilen `refreshDelaySeconds` . Om `refreshDelaySeconds` till exempel är inställt på 3 600 sekunder tar det högst en timme från den tidpunkt då filen uppdateras för att eventuella konfigurationsuppdateringar ska identifieras av servern. Om värdet `refreshDelaySeconds` är 0 söker servern efter konfigurationsuppdateringar för varje begäran. Du bör inte ange `refreshDelaySeconds` ett lågt värde för produktionsmiljöer eftersom det kan påverka prestandan.
+Om du vill styra hur ofta servern söker efter uppdateringar anger du attributet `refreshDelaySeconds` i cachelagringselementet i den globala konfigurationsfilen. Om till exempel `refreshDelaySeconds` är inställt på 3600 sekunder tar det högst en timme från den tidpunkt då filen uppdateras för att konfigurationsuppdateringar ska identifieras av servern. Om `refreshDelaySeconds` är inställt på 0 söker servern efter konfigurationsuppdateringar för varje begäran. Du bör inte ange `refreshDelaySeconds` till ett lågt värde för produktionsmiljöer eftersom det kan påverka prestanda.
 
 Caching-elementet styr också hur många klientkonfigurationer som cachelagras samtidigt. Du kan ange det här värdet till ett tal som är mindre än det totala antalet klientorganisationer för att begränsa mängden minne som används för att cachelagra konfigurationsinformationen. Om en begäran tas emot för en klientorganisation som inte finns i cachen, läses konfigurationen in innan begäran kan behandlas. Om cacheminnet är fullt tas den senast använda klientorganisationen bort från cacheminnet.
 
