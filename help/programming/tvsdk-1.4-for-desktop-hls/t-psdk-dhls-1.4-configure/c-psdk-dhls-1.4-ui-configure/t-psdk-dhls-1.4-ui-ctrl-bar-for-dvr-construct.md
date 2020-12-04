@@ -6,6 +6,9 @@ title: Skapa ett kontrollfält förbättrat för DVR
 uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
 
       För ett kontrollfält:
    1. Lägg till en övertäckning i kontrollfältet som representerar uppspelningsintervallet.
-   1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med hjälp av egenskapen `MediaPlayer.seekableRange` .
+   1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med egenskapen `MediaPlayer.seekableRange`.
 
       Exempel:
 
@@ -49,7 +52,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
       }
       ```
 
-      Du kan också välja att söka till klientens direktpunkt med hjälp av `MediaPlayer.LIVE_POINT` -konstanten.
+      Du kan också välja att söka till klientens direktpunkt med konstanten `MediaPlayer.LIVE_POINT`.
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
