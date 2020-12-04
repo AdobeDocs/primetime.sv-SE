@@ -6,11 +6,14 @@ title: Bygg Primetimes referensimplementering
 uuid: ab12660a-1563-49a4-82d9-1ab13f8a92be
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 1%
 
 ---
 
 
-# Bygg Primetimes referensimplementering {#build-the-primetime-reference-implementation}
+# Bygg implementeringen av Primetime-referensen {#build-the-primetime-reference-implementation}
 
 TVSDK Primetime Reference är en Android-applikation som byggts runt ramverken TVSDK och AVE.
 
@@ -21,8 +24,8 @@ Så här konfigurerar och skapar du Primetime Reference-projektet i Eclipse:
 1. Välj **[!UICONTROL File]** > **[!UICONTROL Import]**.
 1. Välj **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**.
 1. Klicka på **[!UICONTROL Next]**.
-1. Använd **[!UICONTROL Browse]** knappen för att fylla i **[!UICONTROL Root Directory]** fältet med katalogen under [!DNL samples/PrimetimeReference/src] vilken du packade upp TSDK Android-zip-filen.
-1. Välj följande projekt att importera: **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**..
+1. Använd knappen **[!UICONTROL Browse]** för att fylla i fältet **[!UICONTROL Root Directory]** med katalogen under [!DNL samples/PrimetimeReference/src] som du packade upp TSDK Android-zip-filen till.
+1. Välj följande projekt att importera: **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**.
 1. Klicka på **[!UICONTROL Finish]**.
 1. Välj **[!UICONTROL Project]** > **[!UICONTROL Build Project]** för att skapa projektet.
 
@@ -33,12 +36,12 @@ Så här konfigurerar och skapar du Primetime Reference-projektet i Eclipse:
    1. Klicka på **[!UICONTROL Finish]**.
 
       Testprojektet är beroende av CatalogActivity-projektet, så du måste associera testprojektet med CatalogActivity-projektet.
-   1. Högerklicka **[!UICONTROL tests]** och välj **[!UICONTROL Properties]**.
+   1. Högerklicka på **[!UICONTROL tests]** och välj **[!UICONTROL Properties]**.
    1. Välj fliken **[!UICONTROL Projects]** under Java Build Path.
    1. Klicka på **[!UICONTROL Add...]**
    1. Välj Katalogaktivitet.
-   1. Klicka **[!UICONTROL OK]** för att lägga till projektet.
-   1. Klicka **[!UICONTROL OK]** för att stänga sidan Egenskaper.
+   1. Klicka på **[!UICONTROL OK]** för att lägga till projektet.
+   1. Klicka på **[!UICONTROL OK]** för att avsluta sidan Egenskaper.
    1. Välj **[!UICONTROL Project]** > **[!UICONTROL Build Project]** för att skapa projektet.
 
       Det här steget är inte nödvändigt om projektet är konfigurerat att byggas automatiskt.
