@@ -6,6 +6,9 @@ title: Konfigurera anpassad uppspelning
 uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
 source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -17,11 +20,11 @@ Du kan anpassa eller åsidosätta annonsbeteenden.
 Innan du kan anpassa eller åsidosätta annonsbeteenden måste du registrera annonsprincipinstansen med .
 Gör något av följande om du vill anpassa annonsbeteenden:
 
-* Implementera `AdPolicySelector` gränssnittet och alla dess metoder.
+* Implementera gränssnittet `AdPolicySelector` och alla dess metoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
+   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteendena för annonser.
 
-* Utöka `DefaultAdPolicySelector` klassen och tillhandahålla implementeringar för endast de beteenden som kräver anpassning.
+* Utöka klassen `DefaultAdPolicySelector` och tillhandahåll implementeringar för endast de beteenden som kräver anpassning.
 
    Det här alternativet rekommenderas om du bara behöver åsidosätta **vissa** av standardbeteendena.
 
@@ -63,4 +66,4 @@ Utför följande uppgifter för båda alternativen:
 
    >[!TIP]
    >
-   >Om den anpassade innehållsfabriken registrerades för en viss ström via `MediaPlayerItemConfig` klassen rensas den när `MediaPlayer` instansen frigörs. Programmet måste registrera det varje gång en ny uppspelningssession skapas.
+   >Om den anpassade innehållsfabriken registrerades för en specifik ström via klassen `MediaPlayerItemConfig` rensas den när instansen `MediaPlayer` tas bort. Programmet måste registrera det varje gång en ny uppspelningssession skapas.
