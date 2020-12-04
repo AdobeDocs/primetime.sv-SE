@@ -6,6 +6,9 @@ title: Klasser för mediespelare
 uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ Dessa klasser beskriver din mediespelare och dess resurser.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDefaultMediaPlayerClientFactory.html" format="html" scope="external"> PTDefaultMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Standardimplementering av <span class="codeph"> PTMediaPlayerClientFactory</span> i TVSDK. Den innehåller tillgängliga instanser av <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span>och <span class="codeph"> PTAdPolicySelector</span> . </td> 
+   <td colname="2"> Standardimplementering av <span class="codeph"> PTMediaPlayerClientFactory</span> i TVSDK. Den innehåller tillgängliga instanser av <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span> och <span class="codeph"> PTAdPolicySelector</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html" format="html" scope="external"> PTMediaPlayer</a></span> </td> 
@@ -41,7 +44,7 @@ Dessa klasser beskriver din mediespelare och dess resurser.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Protokoll som beskriver de metoder som en anpassad mediespelarklientfabrik ska implementera för att tillhandahålla tillgängliga <span class="codeph"> PTOpportunityResolver</span> -, <span class="codeph"> PTContentResolver</span> - och <span class="codeph"> PTAdPolicySelector</span> -instanser. </td> 
+   <td colname="2"> Protokoll som beskriver de metoder som en anpassad mediaspelarklientfabrik ska implementera för att tillhandahålla tillgängliga instanser av <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span> och <span class="codeph"> PTAdPolicySelector</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -65,12 +68,12 @@ Dessa klasser beskriver din mediespelare och dess resurser.
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> - </span> klass, <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> -protokoll</span> </td> 
-   <td colname="2"> En klass som används för att bearbeta in-manifest-cues som ska användas som ersättning för annonseringsprocessen i Adobe Primetime. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> </a> </span> PTOpportunityResolverClass,  <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> </a> PTOpportunityResolverProtocol</span> </td> 
+   <td colname="2"> En klass som används för att bearbeta in-manifest-referenser som ska användas som placeringar för Adobe Primetime annonsbeslutsprocess. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOpportunityResolverDelegate</a></span> </td> 
-   <td colname="2"> Protokoll som beskriver de metoder som den anpassade affärsmöjlighetslösaren ( <span class="codeph"> PTOpportunityResolver</span> ) ska använda för att kommunicera status för matchningen av affärsmöjligheten till delegaten. </td> 
+   <td colname="2"> Protokoll som beskriver de metoder som den anpassade affärsmöjlighetslösaren ( <span class="codeph"> PTOpportunityResolver</span>) ska använda för att kommunicera status för matchningen av affärsmöjligheten till delegaten. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTSDK.html" format="html" scope="external"> PTSDK</a></span> </td> 
