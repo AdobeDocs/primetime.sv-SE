@@ -4,11 +4,14 @@ title: Användning av kommandorad
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
 
-# Användning av kommandorad {#command-line-usage}
+# Kommandoradsanvändning {#command-line-usage}
 
 Använd följande syntax för att generera en licens:
 
@@ -22,7 +25,7 @@ Använd följande syntax för att generera en licens:
 </i class="+ topic>
 ```
 
-`metadata` är en .metadata-fil som innehåller DRM-metadata för Adobe Access. Den här filen kan hämtas från skyddat innehåll med `-d -m` alternativet Media Packager.
+`metadata` är en .metadata-fil som innehåller DRM-metadata för Adobe Access. Den här filen kan hämtas från skyddat innehåll med alternativet `-d -m` i Media Packager.
 
 Om du vill visa en tidigare genererad licens använder du följande syntax:
 
@@ -63,7 +66,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte är inställd returneras ett fel. </td> 
+   <td colname="2" class="- topic/entry ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte har angetts returneras ett fel. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -75,7 +78,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Generera en licens för den angivna mottagaren. Ett enhets- eller domäncertifikat kan användas. Flera <span class="+ topic/ph pr-d/codeph codeph"> -r- </span>alternativ kan anges för att skapa en licens för flera mottagare. </td> 
+   <td colname="2" class="- topic/entry ">Generera en licens för den angivna mottagaren. Ett enhets- eller domäncertifikat kan användas. Flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>alternativ kan anges för att skapa en licens för flera mottagare. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 
