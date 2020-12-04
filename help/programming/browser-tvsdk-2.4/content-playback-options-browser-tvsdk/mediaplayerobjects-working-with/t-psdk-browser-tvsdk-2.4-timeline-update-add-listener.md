@@ -6,15 +6,18 @@ title: Lägga till avlyssnare för TimelineUpdatedEvent
 uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
-# Lägga till avlyssnare för TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
+# Lägg till avlyssnare för TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
 
 Registrera lämpliga händelseavlyssnare om du vill få meddelanden om tidslinjeuppdateringar.
 
-Varje gång tidslinjen uppdateras skickas `MediaPlayer` texten `AdobePSDK.TimelineEvent` med text `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Varje gång tidslinjen uppdateras skickas `MediaPlayer` `AdobePSDK.TimelineEvent` med typen `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implementera lämpliga avlyssnare.
 
    ```js
