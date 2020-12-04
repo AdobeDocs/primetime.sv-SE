@@ -6,15 +6,18 @@ title: Implementera en anpassad innehållshanterare
 uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# Implementera en anpassad innehållshanterare{#implement-a-custom-content-resolver}
+# Implementera en anpassad innehållslösare{#implement-a-custom-content-resolver}
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När Browser TVSDK identifierar en ny affärsmöjlighet itereras den igenom det registrerade innehållet för att hitta en som kan lösa den affärsmöjligheten med hjälp av `canResolve` metoden. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela webbläsarens TVSDK när processen har slutförts.
+När Browser TVSDK identifierar en ny affärsmöjlighet itereras den igenom det registrerade innehållet matchare som söker efter en som kan matcha den affärsmöjligheten med hjälp av metoden `canResolve`. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela webbläsarens TVSDK när processen har slutförts.
 
 Kom ihåg följande information:
 
