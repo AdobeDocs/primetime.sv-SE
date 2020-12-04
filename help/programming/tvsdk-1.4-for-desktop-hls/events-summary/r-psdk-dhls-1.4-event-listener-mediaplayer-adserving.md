@@ -6,15 +6,18 @@ title: Ad-servning/tidsbestämda metadatahändelser
 uuid: fd50a937-0c9b-4c47-acb2-1ffc0592ad54
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
 
-# Ad-servning/tidsbestämda metadatahändelser{#ad-serving-timed-metadata-events}
+# Ad-servering/tidsbestämda metadatahändelser{#ad-serving-timed-metadata-events}
 
 TVSDK skickar händelser för annonsvisning som svar på tidsbestämda metadataåtgärder.
 
-Om du vill få information om alla sådana relaterade händelser registrerar du händelseavlyssnare med objektet för `MediaPlayer` följande händelser.
+Om du vill få meddelanden om alla sådana relaterade händelser registrerar du händelseavlyssnare med `MediaPlayer`-objektet för följande händelser.
 
 | Händelse | Betydelse |
 |---|---|
