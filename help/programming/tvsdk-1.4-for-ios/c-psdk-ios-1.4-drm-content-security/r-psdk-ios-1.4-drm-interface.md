@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Översikt över Primetime DRM-gränssnittet {#primetime-drm-interface-overview}
+# Översikt över gränssnittet för Primetime DRM {#primetime-drm-interface-overview}
 
 Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad Primetime DRM-lösning.
 
@@ -39,7 +39,7 @@ Detta är de viktigaste API-elementen för att arbeta med DRM:
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-TVSDK skickar ett `PTMediaPlayerItemDRMMetadataChanged` meddelande när DRM-metadata ändras. Dessa metadata används som indata för nästan alla funktioner i `DRMManager` klassen.
+TVSDK utfärdar ett `PTMediaPlayerItemDRMMetadataChanged`-meddelande när DRM-metadata ändras. Dessa metadata används som indata för nästan alla funktioner i klassen `DRMManager`.
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -47,14 +47,14 @@ Om den DRM-skyddade strömmen är kodad med flera bithastigheter (MBR), bör de 
 
 >[!TIP]
 >
->När du refererar till DRM-skyddade resurs-URL:er i din iOS-app, `?faxs=1` måste frågesträngsparametern läggas till i (MBR)-URL:en på angiven nivå. Exempel:
+>När du refererar till DRM-skyddade resurs-URL:er i din iOS-app måste frågesträngsparametern `?faxs=1` läggas till i (MBR) set-level M3U8-URL:en. Exempel:
 >
 >
 ```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >
->Frågesträngsparametern signalerar att innehållet är DRM-skyddat och utlöser DRM-dekrypteringsarbetsflödet i iOS TVSDK. `faxs=1` Du kan också lägga till taggen på webbadresser för DRM-skyddade HLS-resurser som är avsedda för andra plattformar. `faxs=1` det observeras som nödvändigt på iOS eller behandlas som icke-aktiv i spelare på andra plattformar.
+>Frågesträngsparametern `faxs=1` signalerar att innehållet är DRM-skyddat och utlöser DRM-dekrypteringsarbetsflödet i iOS TVSDK. Du kan också lägga till taggen `faxs=1` på webbadresser för DRM-skyddade HLS-resurser som är avsedda för andra plattformar. det observeras som nödvändigt på iOS eller behandlas som icke-aktiv i spelare på andra plattformar.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
