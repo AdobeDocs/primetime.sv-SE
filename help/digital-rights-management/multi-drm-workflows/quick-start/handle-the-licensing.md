@@ -30,7 +30,7 @@ Din berättigande- eller butiksserver begär en licenstoken från den relevanta 
 
 1. Gör en begäran om licenstoken.
 
-   I ett snabbstartsscenario där du bara vill försäkra dig om att de olika komponenterna fungerar tillsammans, kanske du vill använda något som liknar din licensbegäran (till skillnad från att först skaffa ett program som körs och testa samtal därifrån). [!DNL curl] Exempel:
+   I ett snabbstartsscenario där du bara vill försäkra dig om att de olika komponenterna fungerar tillsammans, kanske du vill använda något som [!DNL curl] för att göra din licensförfrågan (till skillnad från att först få igång ett program och testa anrop därifrån). Exempel:
 
    * WideVM:
 
