@@ -6,17 +6,20 @@ title: Avgränsa klickbara annonser
 uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Avgränsa klickbara annonser {#separate-the-clickable-ad-process}
+# Separera den klickbara annonseringsprocessen {#separate-the-clickable-ad-process}
 
 Du bör separera spelarens gränssnittslogik från processen som hanterar och klickar. Ett sätt att göra detta är att implementera flera fragment för en aktivitet.
 
 1. Implementera ett fragment som ska innehålla `MediaPlayer`.
 
-   Detta fragment ska anropa `notifyClick()` och ska ansvara för videouppspelning.
+   Detta fragment ska anropa `notifyClick()` och ansvarar för videouppspelning.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -30,7 +33,7 @@ Du bör separera spelarens gränssnittslogik från processen som hanterar och kl
 
 1. Implementera ett annat fragment för att visa ett UI-element som anger att en annons är klickbar, övervaka det UI-elementet och kommunicera användarklickningar till det fragment som innehåller `MediaPlayer`.
 
-   Detta fragment ska deklarera ett gränssnitt för fragmentkommunikation. Fragmentet hämtar gränssnittsimplementeringen under dess `onAttach()` livscykel och kan anropa gränssnittsmetoderna för att kommunicera med aktiviteten.
+   Detta fragment ska deklarera ett gränssnitt för fragmentkommunikation. Fragmentet fångar gränssnittsimplementeringen under sin `onAttach()`-livscykelmetod och kan anropa gränssnittsmetoderna för att kommunicera med aktiviteten.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
