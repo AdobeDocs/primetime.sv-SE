@@ -19,7 +19,7 @@ Du kan välja att använda standardbeteenden för annonser.
 
 Så här använder du standardbeteenden:
 
-* Om du implementerar din egen `ContentFactory` klass returnerar du en ny instans av `DefaultAdPolicySelector` i implementeringen av `doRetrieveAdPolicySelector`.
+* Om du implementerar en egen `ContentFactory`-klass returnerar du en ny instans av `DefaultAdPolicySelector` i implementeringen av `doRetrieveAdPolicySelector`.
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -38,4 +38,4 @@ Så här använder du standardbeteenden:
    }
    ```
 
-* Om du inte har någon anpassad implementering för `ContentFactory` klassen använder TVSDK `DefaultAdPolicySelector`.
+* Om du inte har någon anpassad implementering för klassen `ContentFactory` använder TVSDK `DefaultAdPolicySelector`.
