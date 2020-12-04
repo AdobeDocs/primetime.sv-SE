@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# Använd Ad Insertion i Live-/Linear-ström {#ad-insertion-live-linear-stream}
+# Använd Ad Insertion i Live/Linear-ström {#ad-insertion-live-linear-stream}
 
 Primetime Ad Insertion ger utgivaren möjlighet att hantera vanliga och komplexa annonsinfogningssituationer som inträffar under live/linjära strömmar.
 
-## Cue-format som stöds {#cue-formats-supported}
+## Cue-format {#cue-formats-supported} som stöds
 
 Primetime Ad Insertion har stöd för ett stort antal standardformat och icke-standardformat för cue, bland annat:
 
