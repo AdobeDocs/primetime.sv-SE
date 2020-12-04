@@ -6,11 +6,14 @@ title: Stöd för VPAID 2.0
 uuid: 6485e387-2a13-476f-a0fd-91c6e19fd385
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
 
-# Stöd för VPAID 2.0 {#vpaid-ad-support}
+# Stöd för VPAID 2.0 och {#vpaid-ad-support}
 
 VPAID 2.0 (Video Player ad-sting interface definition) ger ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 
@@ -37,7 +40,7 @@ Följande funktioner stöds inte:
 
 Följande API-element stöder VPAID 2.0-annonser:
 
-* Metoden `getCustomAdView` för att `MediaPlayer` returnera ett `CustomAdView` objekt, som representerar den webbvy som återger VPAID-annonsen (se [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
+* Metoden `getCustomAdView` i `MediaPlayer` returnerar ett `CustomAdView`-objekt, som representerar webbvyn som återger VPAID-annonsen (se [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` anger timeout för VPAID-inläsningsprocessen. Standardvärdet för timeout är 10 sekunder.
 
