@@ -20,8 +20,8 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 
 * Grundläggande annonslösning och inläsningsprocess:
 
-   1. TVSDK hämtar ett manifest (spellista) och *löser* alla annonser.
-   1. TVSDK *läser* in alla annonser och placerar dem på tidslinjen.
+   1. TVSDK hämtar ett manifest (playlist) och *löser* alla annonser.
+   1. TVSDK *läser in* alla annonser och placerar dem på tidslinjen.
    1. TVSDK flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
 
    Spelaren använder URL:erna i manifestet för att hämta annonsinnehållet (kreatörerna), ser till att annonsinnehållet är i ett format som TVSDK kan spela upp, och TVSDK placerar annonserna på tidslinjen. Denna grundläggande process för att lösa och läsa in annonser kan orsaka en orimligt lång fördröjning för en användare som väntar på att spela upp sitt innehåll, särskilt om manifestet innehåller flera annons-URL:er.
@@ -29,8 +29,8 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 * *Lazy Ad Loading*:
 
    1. TVSDK hämtar en spellista och *löser* alla annonser.
-   1. TVSDK *läser* in pre-roll-annonser, flyttar spelaren till PREPARED-status och innehållsuppspelningen börjar.
-   1. TVSDK *läser* in de återstående annonserna och placerar dem på tidslinjen när uppspelningen sker.
+   1. TVSDK *läser in* pre-roll-ads, flyttar spelaren till PREPARED-status och innehållsuppspelningen startar.
+   1. TVSDK *läser in* återstående annonser och placerar dem på tidslinjen när uppspelningen sker.
 
    Den här funktionen förbättrar den grundläggande processen genom att ge spelaren statusen FÖRBEREDD innan alla annonser har lästs in.
 
@@ -57,7 +57,7 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 >* Om det finns flera annonsbrytningar samtidigt i Lazy Ad-lösningen (VMAP) kommer de att lösas samtidigt.
 >* Vi rekommenderar inte att du minskar värdet för *setDelayAdLoadingTolerance() *under standardvärdet (5 sekunder). Om du gör det kan spelaren buffras i onödan.
 >* Lazy Ad Resolving påverkar inte pre-roll-ads.
->* Lazy Ad Resolving stöds för närvarande av Auditude-Plugin. Vi rekommenderar att du inte anger ** setDelayAdLoader till true om du använder en anpassad lösare.
+>* Lazy Ad Resolving stöds för närvarande av Auditude-Plugin. Du bör inte ställa in *setDelayAdLoading* på true om du använder en anpassad lösare.
 
 >
 
