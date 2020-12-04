@@ -1,25 +1,28 @@
 ---
-description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
+description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
 keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
-seo-description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
+seo-description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
 seo-title: Pausa och återställa MediaPlayer
 title: Pausa och återställa MediaPlayer
 uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
-# Pausa och återställa MediaPlayer {#suspend-and-restore-mediaplayer}
+# Pausa och återställ MediaPlayer {#suspend-and-restore-mediaplayer}
 
-Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
+Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
 
-Du kan hantera pausa och återställa åtgärder på `MediaPlayer` insidan av Androids sändningsmottagare för att aktivera/inaktivera skärmen.
+Du kan hantera pausa- och återställningsåtgärder på `MediaPlayer` inuti Androids sändningsmottagare för skärm på/av.
 
-TVSDK kan inte avgöra när ett fragment (eller en aktivitet) finns i bakgrunden eller förgrunden. Dessutom tas Android `SurfaceView` inte bort när enhetsskärmen stängs av (men aktiviteten pausas). Men `SurfaceView` förstörs *inte* när enheten placerar programmet i bakgrunden. TVSDK kan inte identifiera någon av dessa ändringar, så de måste hanteras av ditt program.
+TVSDK kan inte avgöra när ett fragment (eller en aktivitet) finns i bakgrunden eller förgrunden. Dessutom tas Android `SurfaceView` inte bort när enhetsskärmen är inaktiverad (men aktiviteten är pausad). `SurfaceView` *förstörs dock när enheten placerar programmet i bakgrunden.* TVSDK kan inte identifiera någon av dessa ändringar, så de måste hanteras av ditt program.
 
-Följande exempelkod för hur programmet kan hantera uppehåll och återställning av enheten `MediaPlayer` när enhetsskärmen är påslagen och av på programnivå:
+Följande exempelkod visar hur programmet kan hantera uppehåll och återställning av `MediaPlayer` när enhetsskärmen är påslagen och inaktiverad på programnivå:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
