@@ -1,16 +1,19 @@
 ---
 description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av TVSDK. Detta är mest användbart när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
 seo-description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av TVSDK. Detta är mest användbart när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
-seo-title: Inspektera tidslinjen för uppspelning
-title: Inspektera tidslinjen för uppspelning
+seo-title: Inspect tidslinjen för uppspelning
+title: Inspect tidslinjen för uppspelning
 uuid: 2f903493-2d88-4af2-ac71-36300b49735b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# Inspektera tidslinjen för uppspelning{#inspect-the-playback-timeline}
+# Inspect tidslinjen för uppspelning{#inspect-the-playback-timeline}
 
 Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av TVSDK. Detta är mest användbart när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
 
@@ -19,9 +22,9 @@ Här är ett exempel på implementering som visas i följande skärmbild.
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. Du kommer åt `Timeline` objektet i `MediaPlayer` med hjälp av `get` metoden.
+1. Kom åt `Timeline`-objektet i `MediaPlayer` med metoden `get`.
 
-   Klassen `Timeline` kapslar in den information som är relaterad till innehållet på tidslinjen som är associerad med mediaobjektet som för närvarande läses in av `MediaPlayer` instansen. Klassen ger `Timeline` åtkomst till en skrivskyddad vy av den underliggande tidslinjen. Klassen innehåller en get-metod för att hämta alla placerade `Timeline` `TimelineMarker` objekt.
+   Klassen `Timeline` kapslar in informationen som är relaterad till innehållet i tidslinjen som är associerad med mediaobjektet som för närvarande är inläst av `MediaPlayer`-instansen. Klassen `Timeline` ger åtkomst till en skrivskyddad vy av den underliggande tidslinjen. Klassen `Timeline` innehåller en get-metod för att hämta alla monterade `TimelineMarker`-objekt.
 
 1. Iterera genom listan med `TimelineMarkers` och använd den returnerade informationen för att implementera tidslinjen.
 
