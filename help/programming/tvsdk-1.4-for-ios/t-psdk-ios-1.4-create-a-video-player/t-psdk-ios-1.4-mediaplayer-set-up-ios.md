@@ -6,6 +6,9 @@ title: Konfigurera PTMediaPlayer
 uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Använd plattformens verktyg för att skapa en spelare och ansluta den till medi
 
 PTMediaPlayer-gränssnittet kapslar in funktionaliteten och beteendet i ett mediespelarobjekt.
 
-Så här konfigurerar du `PTMediaPlayer`:
+Så här konfigurerar du din `PTMediaPlayer`:
 
 1. Hämta mediets URL från användargränssnittet, till exempel, i ett textfält.
 
@@ -28,13 +31,13 @@ Så här konfigurerar du `PTMediaPlayer`:
 
 1. Skapa `PTMetadata`.
 
-   Anta att metoden `createMetada` förbereder metadata (se [Annonsering](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Anta att din metod `createMetada` förbereder metadata (se [Advertising](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Skapa `PTMediaPlayerItem` med din `PTMetadata` instans.
+1. Skapa `PTMediaPlayerItem` genom att använda din `PTMetadata`-instans.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -47,7 +50,7 @@ Så här konfigurerar du `PTMediaPlayer`:
    [self addObservers]
    ```
 
-1. Skapa `PTMediaPlayer` med ditt nya `PTMediaPlayerItem`program.
+1. Skapa `PTMediaPlayer` med din nya `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +58,7 @@ Så här konfigurerar du `PTMediaPlayer`:
 
 1. Ange egenskaper för spelaren.
 
-   Här är några av de tillgängliga `PTMediaPlayer` egenskaperna:
+   Här är några av de tillgängliga `PTMediaPlayer`-egenskaperna:
 
    ```
    player.autoPlay                    = YES;  
@@ -84,7 +87,7 @@ Så här konfigurerar du `PTMediaPlayer`:
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Anropa `play` för att starta medieuppspelningen.
+1. Ring `play` för att starta medieuppspelningen.
 
    ```
    [player play];
