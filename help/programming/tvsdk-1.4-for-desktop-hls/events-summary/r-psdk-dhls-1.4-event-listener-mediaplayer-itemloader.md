@@ -6,6 +6,9 @@ title: Loader-händelser
 uuid: 0ad37715-14b1-457c-892f-0db0d6220f0c
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK skickar mediespelarobjektshändelser som svar på inläsning av ett mediaobjekt.
 
-Dessa händelser utgör ett alternativt arbetsflöde. Du behöver inte implementera det här gränssnittet när du skapar en `MediaPlayer`. Använd den här när du vill ha en `MediaPlayerItemLoader`.
+Dessa händelser utgör ett alternativt arbetsflöde. Du behöver inte implementera det här gränssnittet när du skapar en `MediaPlayer`. Använd detta när du vill ha en `MediaPlayerItemLoader`.
 
-Om du vill få meddelanden om händelser som rör inläsning av en mediespelarresurs registrerar du avlyssnare för följande händelser med `MediaPlayerItemLoader` objektet.
+Om du vill få meddelanden om händelser som rör inläsning av en mediespelarresurs registrerar du avlyssnare för följande händelser med objektet `MediaPlayerItemLoader`.
 
 | Händelse | Betydelse |
 |---|---|
