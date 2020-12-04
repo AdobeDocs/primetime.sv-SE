@@ -6,6 +6,9 @@ title: Effekt vid infogning och borttagning av annonser i signeringsläge och me
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
 >
 >När det finns en konflikt mellan tidsintervall och annonseringslägen ger TVSDK tidintervallprioritet.
 
-**Tabell 4: Signeringsläge/Metadatakombinationsbeteenden**
+**Tabell 3: Signeringsläge/Metadatakombinationsbeteenden**
 
 <table>  
  <thead> 
@@ -26,7 +29,7 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
    <th class="entry"> Läge för annonssignalering </th> 
    <th class="entry"> Lägg till metadata </th> 
    <th class="entry"> Skapade lösare </th> 
-   <th class="entry"><span class="codeph"> PlacementInformation</span> har skapats </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationskapad </th> 
    <th class="entry"> Resulterande beteende </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
    <td> Ta bort, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervall borttagna, annonser infogade </td> 
