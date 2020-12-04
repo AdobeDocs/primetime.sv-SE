@@ -6,6 +6,9 @@ title: DRM-autentisering under uppspelning
 uuid: b3ff8edd-a3d4-470e-8899-580eca9fff4a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 När DRM-metadata för en video inkluderas i medieströmmen kan du utföra autentisering under uppspelningen.
 
-Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks används metoderna för att kontrollera om DRM-metadata kräver DRM-autentisering `DRMHelper` .
+Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks används `DRMHelper`-metoderna för att kontrollera om DRM-metadata kräver DRM-autentisering.
 
 >[!TIP]
 >
@@ -35,7 +38,7 @@ Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya D
    };
    ```
 
-1. Använd för `DRMMetadata` att kontrollera om autentisering behövs.
+1. Använd `DRMMetadata` för att kontrollera om autentisering behövs.
 
    * Om autentisering inte krävs behöver du inte göra något, och uppspelningen fortsätter utan avbrott.
    * Om autentisering krävs, slutför DRM-autentisering.
