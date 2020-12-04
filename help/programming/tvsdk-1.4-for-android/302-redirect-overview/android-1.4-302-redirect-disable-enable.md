@@ -6,6 +6,9 @@ title: Inaktivera eller aktivera 302 omdirigeringsoptimering
 uuid: 7561839f-aec6-4a59-a07a-7e4fa043fdc2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ Den här funktionen är aktiverad som standard och du kan ändra den här instä
 
 ## Inaktivera eller aktivera 302 omdirigeringsoptimering{#disable-or-enable-redirect-optimization}
 
-Använd egenskapen `useRedirectedUrl` för att aktivera (true) eller inaktivera (false) omdirigering till 302.
+Använd egenskapen `useRedirectedUrl` för att aktivera (true) eller inaktivera 302 omdirigering (false).
 Exempel:
 
 ```java
