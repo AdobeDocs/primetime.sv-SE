@@ -6,6 +6,9 @@ title: Meddelandeinnehåll
 uuid: d42d2e89-1bdd-4be0-8a69-821fec6bbc75
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ Programmet kan hämta information om meddelanden och status. Du kan också skapa
 
 >[!NOTE]
 >
->TVSDK använder också *`notification`* för att referera till `NSNotifications` meddelanden ( `PTMediaPlayer` meddelanden) *`event`* som skickas för att ge information om spelaraktivitet.
+>TVSDK använder också *`notification`* för att referera till `NSNotifications` ( `PTMediaPlayer`-meddelanden) *`event`*-meddelanden som skickas för att ge information om spelaraktivitet.
 
-TVSDK utfärdar även problem `PTMediaPlayerNewNotificationItemEntryNotification` när det utfärdar `PTNotification`.
+TVSDK utfärdar även `PTMediaPlayerNewNotificationItemEntryNotification` när `PTNotification` utfärdas.
 
 Du implementerar händelseavlyssnare för att hämta och svara på händelser. Många händelser ger `PTNotification` statusmeddelanden.
 
@@ -28,7 +31,7 @@ Du implementerar händelseavlyssnare för att hämta och svara på händelser. M
 
 `PTNotification` innehåller information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista över `PTNotification` meddelanden. Varje anmälan innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `PTNotification`-meddelanden. Varje anmälan innehåller följande information:
 
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
@@ -38,7 +41,7 @@ TVSDK tillhandahåller en kronologisk lista över `PTNotification` meddelanden. 
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
 
-   * `innerNotification`: En referens till ett annat `PTNotification` objekt som direkt påverkar det här meddelandet.
+   * `innerNotification`: En referens till ett annat  `PTNotification` objekt som direkt påverkar det här meddelandet.
 
 Du kan lagra informationen lokalt för senare analys eller skicka den till en fjärrserver för loggning och grafisk representation.
 
@@ -51,7 +54,7 @@ Det finns två implementeringar för `PTNotification`:
 * Att lyssna
 * Lägga till anpassade meddelanden i `PTNotificationHistory`
 
-Om du vill lyssna på meddelanden instansierar TVSDK `PTNotification` klassen och bifogar den till en instans av `PTMediaPlayerItem`som är kopplad till en PTMediaPlayer-instans. Det finns bara en `PTNotificationHistory` instans per `PTMediaPlayer`.
+Om du vill lyssna på meddelanden instansierar TVSDK klassen `PTNotification` och kopplar den till en instans av `PTMediaPlayerItem`, som är kopplad till en PTMediaPlayer-instans. Det finns bara en `PTNotificationHistory`-instans per `PTMediaPlayer`.
 
 >[!IMPORTANT]
 >
@@ -59,9 +62,9 @@ Om du vill lyssna på meddelanden instansierar TVSDK `PTNotification` klassen oc
 
 ## Lyssna på meddelanden {#listen-to-notifications}
 
-Det finns två sätt att lyssna på `PTNotification` meddelandet i `PTMediaPlayer`:
+Det finns två sätt att lyssna på `PTNotification`-meddelandet i `PTMediaPlayer`:
 
-1. Kontrollera manuellt `PTNotificationHistory` om `PTMediaPlayerItem` det finns en timer och kontrollera skillnaderna:
+1. Kontrollera manuellt `PTNotificationHistory` för `PTMediaPlayerItem` med en timer och kontrollera skillnaderna:
 
    ```
    //Access to the PTMediaPlayerItem  
@@ -72,8 +75,8 @@ Det finns två sätt att lyssna på `PTNotification` meddelandet i `PTMediaPlaye
    NSArray *notifications = notificationHistory.notificationItems;
    ```
 
-1. Använd den publicerade [NSN-aviseringen](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) för `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
-1. Registrera dig på `NSNotification` genom att använda instansen av `PTMediaPlayer` varifrån du vill få meddelanden:
+1. Använd den publicerade [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) av `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
+1. Registrera dig på `NSNotification` med hjälp av instansen av `PTMediaPlayer` som du vill få meddelanden från:
 
    ```
    //Register to the NSNotification 
@@ -86,7 +89,7 @@ Det finns två sätt att lyssna på `PTNotification` meddelandet i `PTMediaPlaye
 
 Du kan implementera återanrop för meddelanden.
 
-Implementera callback-funktionen för meddelanden genom att hämta informationen `PTNotification` från `NSNotification` användarinformationen och läsa dess värden med hjälp av `PTMediaPlayerNotificationKey`:
+Implementera återanropet genom att hämta `PTNotification` från `NSNotification`-användarinformationen och läsa dess värden med `PTMediaPlayerNotificationKey`:
 
 ```
 - (void) onMediaPlayerNotification:(NSNotification *) nsnotification { 
@@ -98,7 +101,7 @@ Implementera callback-funktionen för meddelanden genom att hämta informationen
 ## Lägg till anpassade meddelanden {#add-custom-notifications}
 
 Så här lägger du till ett anpassat meddelande:
-Skapa ett nytt `PTNotification` och lägg till det i `PTNotificationHistory` genom att använda det aktuella `PTMediaPlayerItem`:
+Skapa en ny `PTNotification` och lägg till den i `PTNotificationHistory` med aktuell `PTMediaPlayerItem`:
 
 ```
 //Access to the PTMediaPlayerItem  
