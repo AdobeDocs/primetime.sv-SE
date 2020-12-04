@@ -6,6 +6,9 @@ title: Browserify-kompatibel spelare
 uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +19,7 @@ Du kan skapa en Browserify-kompatibel spelare med JS-filer som tillhandahålls a
 
 Webbläsarens TVSDK innehåller två Browserify-kompatibla JS-filer. Den ena är avsedd att användas med modulen AdobePSDK. för utveckling av appar utan UI-ramverket. Den andra är avsedd att användas med modulen UI-Framework. returnerar det PTP-namnutrymme som du använder för att skriva program med UI-ramverket.
 
-Om du vill komma igång med Browserify kör du följande installationskommandon för att skapa [!DNL final.js] filer (din Browserify-paketfil) i [!DNL example] katalogerna under [!DNL samples/browerify/reference] och [!DNL samples/browerify/ui-framework]:
+Om du vill komma igång med Browserify kör du följande installationskommandon för att skapa [!DNL final.js]-filer (din Browserify-paketfil) i [!DNL example]-katalogerna under [!DNL samples/browerify/reference] och [!DNL samples/browerify/ui-framework]:
 
 1. Navigera till [!DNL samples/browserify/reference/build].
 1. Kör följande kommandon:
