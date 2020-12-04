@@ -6,6 +6,9 @@ title: Implementera hantering av strömavbrott
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
    }; 
    ```
 
-1. Hantera `TimedMetadata` objekt när `MediaPlayer` tiden går.
+1. Hantera `TimedMetadata`-objekt när `MediaPlayer`-tiden körs.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -183,7 +186,7 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
 
    >[!NOTE]
    >
-   >För flera liveströmmar med bithastighet kan de justerbara bithastighetsprofilerna (ABR) ibland bli osynkroniserade. Detta orsakar duplicerade `timedMetadata` objekt för samma prenumerationstagg. För att undvika felaktiga beräkningar som inte går att söka efter bör du kontrollera om det finns överlappande icke sökbara intervall efter dina beräkningar, som i följande exempel:
+   >För flera liveströmmar med bithastighet kan de justerbara bithastighetsprofilerna (ABR) ibland bli osynkroniserade. Detta orsakar duplicerade `timedMetadata`-objekt för samma prenumerationstagg. För att undvika felaktiga beräkningar som inte går att söka efter bör du kontrollera om det finns överlappande icke sökbara intervall efter dina beräkningar, som i följande exempel:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
