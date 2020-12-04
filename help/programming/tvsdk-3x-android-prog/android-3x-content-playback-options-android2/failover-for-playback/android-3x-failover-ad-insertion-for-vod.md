@@ -6,6 +6,9 @@ title: Annonsinfogning och failover för VOD
 uuid: 74cc35e6-6479-4572-a3b3-05ff6344272a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Processen för annonsinfogning video-on-demand (VOD) består av faserna för ann
 
 ## Ad-resolving phase {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
-TVSDK kontaktar en annonsleveranstjänst, till exempel Adobe Primetimes annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
+TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetime annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör TVSDK ett HTTP-anrop till den fjärranslutna annonsservern och tolkar serverns svar.
 
 TVSDK har stöd för följande typer av annonsleverantörer:
 
@@ -39,17 +42,17 @@ En av följande redundanssituationer kan uppstå under den här fasen:
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Fas för annonsinfogning {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
+## Ad-insertion phase {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
 
 TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 
 När annonslösningsfasen är klar har TVSDK en ordnad lista över annonsresurser som grupperas i annonsbrytningar. Varje annonsbrytning placeras på huvudinnehållets tidslinje med ett starttidsvärde som uttrycks i millisekunder (ms). Varje annons i en annonsbrytning har en duration-egenskap som också uttrycks i ms. Annonserna i en annonsbrytning är kedjade, och därför är längden på en annonsbrytning lika med summan av varaktigheten för de enskilda dispositionsannonserna.
 
-Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsavbrott kan annonssegmenten överlappa varandra. Den här överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar TVSDK bort den efterföljande annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
+Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsbrytningar kan annonssegmenten överlappa varandra. Den här överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar TVSDK bort den efterföljande annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Ad-uppspelningsfas {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## Annonsuppspelningsfas {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 
@@ -69,4 +72,4 @@ TVSDK skickar de utlösta händelserna till ditt program, inklusive meddelandeh�
 
    Programmet måste vidta rätt åtgärd.
 
-Oavsett om fel inträffar anropar TVSDK `onAdBreakComplete` for each `onAdBreakStart` and `onAdComplete` for every `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.
+Oavsett om fel inträffar anropar TVSDK `onAdBreakComplete` för var `onAdBreakStart` och `onAdComplete` för var `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.
