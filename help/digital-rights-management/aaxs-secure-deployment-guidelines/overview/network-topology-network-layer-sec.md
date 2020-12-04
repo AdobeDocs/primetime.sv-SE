@@ -4,6 +4,9 @@ title: Säkerhet för nätverkslager
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -24,11 +27,11 @@ I den här tabellen beskrivs vanliga tekniker som minskar säkerhetsluckor i nä
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">DMZ (Demilitarized Zone) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Segmentering måste finnas på minst två nivåer med den programserver som används för att köra Adobe Access bakom den inre brandväggen. Skilj det externa nätverket från det DMZ som innehåller webbservrarna, som i sin tur måste separeras från det interna nätverket. Använd brandväggar för att implementera separationslagren. Kategorisera och kontrollera den trafik som passerar genom varje nätverkslager för att säkerställa att endast absolut minimum av nödvändiga data tillåts. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Segmentering måste finnas på minst två nivåer med programservern som används för att köra Adobe Access bakom den inre brandväggen. Skilj det externa nätverket från det DMZ som innehåller webbservrarna, som i sin tur måste separeras från det interna nätverket. Använd brandväggar för att implementera separationslagren. Kategorisera och kontrollera den trafik som passerar genom varje nätverkslager för att säkerställa att endast absolut minimum av nödvändiga data tillåts. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Privata IP-adresser </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Använd NAT (Network Address Translation) med privata RFC 1918-IP-adresser på Adobe Access-programservrar. Tilldela privata IP-adresser (10.0.0.0/8, 172.16.0.0/12 och 192.168.0.0/16) för att göra det svårare för en angripare att dirigera trafik till och från en intern NAT-värd via Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Använd NAT (Network Address Translation) med privata RFC 1918-IP-adresser på programservrar för Adobe Access. Tilldela privata IP-adresser (10.0.0.0/8, 172.16.0.0/12 och 192.168.0.0/16) för att göra det svårare för en angripare att dirigera trafik till och från en intern NAT-värd via Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Brandväggar </p> </td> 
