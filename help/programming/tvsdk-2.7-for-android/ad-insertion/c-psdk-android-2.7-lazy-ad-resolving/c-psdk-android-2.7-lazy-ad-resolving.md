@@ -20,8 +20,8 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 
 * Grundläggande annonslösning och inläsningsprocess:
 
-   1. TVSDK hämtar ett manifest (spellista) och *löser* alla annonser.
-   1. TVSDK *läser* in alla annonser och placerar dem på tidslinjen.
+   1. TVSDK hämtar ett manifest (playlist) och *löser* alla annonser.
+   1. TVSDK *läser in* alla annonser och placerar dem på tidslinjen.
    1. TVSDK flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
 
    Spelaren använder URL:erna i manifestet för att hämta annonsinnehållet (kreatörerna), ser till att annonsinnehållet är i ett format som TVSDK kan spela upp, och TVSDK placerar annonserna på tidslinjen. Denna grundläggande process för att lösa och läsa in annonser kan orsaka en orimligt lång fördröjning för en användare som väntar på att spela upp sitt innehåll, särskilt om manifestet innehåller flera annons-URL:er.
@@ -29,8 +29,8 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 * *Lazy Ad Loading*:
 
    1. TVSDK hämtar en spellista och *löser* alla annonser.
-   1. TVSDK *läser* in pre-roll-annonser, flyttar spelaren till PREPARED-status och innehållsuppspelningen börjar.
-   1. TVSDK *läser* in de återstående annonserna och placerar dem på tidslinjen när uppspelningen sker.
+   1. TVSDK *läser in* pre-roll-ads, flyttar spelaren till PREPARED-status och innehållsuppspelningen startar.
+   1. TVSDK *läser in* återstående annonser och placerar dem på tidslinjen när uppspelningen sker.
 
    Den här funktionen förbättrar den grundläggande processen genom att ge spelaren statusen FÖRBEREDD innan alla annonser har lästs in.
 
@@ -51,12 +51,12 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 
    >
    >    
-   * Spelaren måste vänta på `kEventAdResolutionComplete` händelsen innan sökningen eller tricket kan tillåtas.
-   >    * Om användaren försöker utföra sök- eller tricks-uppspelningsåtgärder medan annonserna fortfarande är lösta, genererar TVSDK `kECLazyAdResolutionInProgress` felet.
-   >    * Om det behövs bör spelaren uppdatera rensningsfältet *efter* att ha tagit emot `kEventAdResolutionComplete` händelsen.
+   * Spelaren måste vänta på händelsen `kEventAdResolutionComplete` innan sökning eller tricks kan tillåtas.
+   >    * Om användaren försöker utföra sök- eller tricks-uppspelningsåtgärder medan annonser fortfarande löses, genererar TVSDK felet `kECLazyAdResolutionInProgress`.
+   >    * Om det behövs bör spelaren uppdatera rensningsfältet *efter* att `kEventAdResolutionComplete`-händelsen har tagits emot.
 >
 >* Lazy Ad Resolving är endast för VOD. Det fungerar inte med LIVE-strömmar.
->* Lazy Ad Resolving är inte kompatibelt med funktionen *Instant On* .
+>* Lazy Ad Resolving är inte kompatibelt med funktionen *Instant On*.
 
 >
 >  
