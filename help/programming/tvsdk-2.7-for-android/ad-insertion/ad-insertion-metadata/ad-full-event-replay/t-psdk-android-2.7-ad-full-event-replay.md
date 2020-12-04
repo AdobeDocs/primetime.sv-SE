@@ -6,19 +6,22 @@ title: Aktivera annonser i repriser vid helhändelse
 uuid: 69244069-ef61-42e4-b2f5-62ae2561d9e1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 0%
 
 ---
 
 
-# Aktivera annonser i repriser vid helhändelse {#enable-ads-in-full-event-replay-overview}
+# Aktivera annonser i repriser för helhändelser {#enable-ads-in-full-event-replay-overview}
 
 Full-event replay (FER) är en VOD-resurs som fungerar som en live/DVR-resurs, så programmet måste vidta åtgärder för att se till att annonserna placeras på rätt sätt.
 
-För direktsänt innehåll använder TVSDK metadata/cues i manifestet för att avgöra var annonserna ska placeras. Ibland liknar dock direktsänt eller linjärt innehåll VOD-innehåll. När det aktiva innehållet är klart läggs till exempel en `EXT-X-ENDLIST` tagg till i det aktiva manifestet. För HLS betyder taggen att `EXT-X-ENDLIST` strömmen är en VOD-ström. För att annonser ska kunna infogas korrekt kan TVSDK inte automatiskt skilja den här strömmen från en vanlig VOD-ström.
+För direktsänt innehåll använder TVSDK metadata/cues i manifestet för att avgöra var annonserna ska placeras. Ibland liknar dock direktsänt eller linjärt innehåll VOD-innehåll. När det aktiva innehållet är klart läggs till exempel en `EXT-X-ENDLIST`-tagg till i det aktiva manifestet. För HLS betyder taggen `EXT-X-ENDLIST` att strömmen är en VOD-ström. För att annonser ska kunna infogas korrekt kan TVSDK inte automatiskt skilja den här strömmen från en vanlig VOD-ström.
 
-Programmet måste informera TVSDK om innehållet är live eller VOD genom att ange `AdSignalingMode`.
+Programmet måste tala om för TVSDK om innehållet är live eller VOD genom att ange `AdSignalingMode`.
 
-För en FER-ström bör Adobe Primetime-annonsservern inte innehålla en lista över annonsbrytningar som måste infogas på tidslinjen innan uppspelningen startar. Detta är den typiska processen för VOD-innehåll. Om du anger ett annat signeringsläge läser TVSDK i stället alla referenspunkter från FER-manifestet och går till annonsservern för varje referenspunkt för att begära en annonsbrytning. Den här processen liknar live-/DVR-innehåll.
+För en FER-ström bör Adobe Primetime annonsbeslutsserver inte innehålla en lista över annonsbrytningar som måste infogas på tidslinjen innan uppspelningen startar. Detta är den typiska processen för VOD-innehåll. Om du anger ett annat signeringsläge läser TVSDK i stället alla referenspunkter från FER-manifestet och går till annonsservern för varje referenspunkt för att begära en annonsbrytning. Den här processen liknar live-/DVR-innehåll.
 
 >[!TIP]
 >
@@ -28,11 +31,11 @@ För en FER-ström bör Adobe Primetime-annonsservern inte innehålla en lista �
 1. Skapa reklamrelaterade metadata.
 1. Om standardbeteendet måste skrivas över anger du `AdSignalingMode` med `AdvertisingMetadata.setSignalingMode`.
 
-   Giltiga värden är `DEFAULT`, `SERVER_MAP`och `MANIFEST_CUES`.
+   Giltiga värden är `DEFAULT`, `SERVER_MAP` och `MANIFEST_CUES`.
 
    >[!IMPORTANT]
    >
-   >Du måste ange annonssignaleringsläget innan du anropar `prepareToPlay`. När TVSDK börjar matcha och placera annonser på tidslinjen ignoreras ändringar av annonseringssigneringsläget. Ange läge när du skapar `AuditudeSettings` objektet.
+   >Du måste ange annonssignaleringsläget innan du anropar `prepareToPlay`. När TVSDK börjar matcha och placera annonser på tidslinjen ignoreras ändringar av annonseringssigneringsläget. Ange läge när du skapar `AuditudeSettings`-objektet.
 
 1. Fortsätt till uppspelningen.
 
