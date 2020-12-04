@@ -6,6 +6,9 @@ title: RBOP-grammatik
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ AnotherRule ::=
     DifferentForm 
 ```
 
-## Använda grammatikregler {#section_A7216BD585FF4EB88737B643B36C2781}
+## Använda grammatikreglerna {#section_A7216BD585FF4EB88737B643B36C2781}
 
 >[!NOTE]
 >
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   kommer följande instans att vara ogiltig eftersom det finns två `foo` par i samma objekt:
+   kommer följande instans att vara ogiltig eftersom det finns två `foo`-par i samma objekt:
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    är giltig eftersom de är oberoende instanser av samma objekt.
 
-1. För definitioner där en eller flera strängsekvenser kan väljas hanterar du strängarna som en uppsättning där dubblettposter behandlas som en enda post. är till exempel `["foo", "bar", "foo", "baz"]` lika med `["foo", "bar", "baz"]`
+1. För definitioner där en eller flera strängsekvenser kan väljas hanterar du strängarna som en uppsättning där dubblettposter behandlas som en enda post. `["foo", "bar", "foo", "baz"]` motsvarar till exempel `["foo", "bar", "baz"]`
 
 1. För att definiera tal används ett mellanrum mellan reglerna (t.ex. `Digit Digits`), men inget sådant mellanrum bör användas när regeln används.
 
-   Om vi till exempel uttrycker talet *etthundrahundratrettio* per regeln NonZeroInteger ska det uttryckas som `123` snarare än `1 2 3`, även om regeln innehåller ett mellanrum mellan NonZeroDigit och Digits.
+   Om vi till exempel uttrycker talet *etthundra3* per regeln NonZeroInteger, ska det uttryckas som `123` i stället för `1 2 3`, även om regeln innehåller ett mellanrum mellan NonZeroDigit och Digits.
 
-1. Vissa regler tillåter flera formulär. I dessa fall avgränsas de olika formerna av `'|'` tecknet.
+1. Vissa regler tillåter flera formulär. I dessa fall avgränsas de olika formerna av tecknet `'|'`.
 
    Den här regeln:
 
@@ -112,7 +115,7 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   betyder att en instans av `Foo` kan ersättas med&quot;A&quot;,&quot;B&quot; eller&quot;C&quot;. Detta ska inte blandas ihop med ett formulär som sträcker sig över flera rader. som gör längre formulär mer läsbara.
+   betyder att en instans av `Foo` kan ersättas med A, B eller C. Detta ska inte blandas ihop med ett formulär som sträcker sig över flera rader. som gör längre formulär mer läsbara.
 
 ## Grammatiken {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Semantik: Juridiska men ogiltiga konfigurationer {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-Avsnittet *Sample Output Protection Configuration* presenterade en giltig konfiguration tillsammans med dess semantiska betydelse. I föregående avsnitt i *det här* avsnittet presenterades grammatikreglerna för konfigurationer. Grammatiken säkerställer syntaktisk korrekthet, men det finns syntaktiskt juridiska konfigurationer som inte är semantiskt korrekta (dvs. de är inte logiska). I det här avsnittet visas konfigurationer som är *syntaktiskt* giltiga, men *semantiskt* felaktiga. Tänk på att exemplen i det här avsnittet har reducerats till den minimistruktur som krävs för att illustrera det scenario som diskuteras.
+Avsnittet *Sample Output Protection Configuration* innehöll en giltig konfiguration tillsammans med dess semantiska betydelse. I föregående avsnitt i *det här* ämnet presenterades grammatikreglerna för konfigurationer. Grammatiken säkerställer syntaktisk korrekthet, men det finns syntaktiskt juridiska konfigurationer som inte är semantiskt korrekta (dvs. de är inte logiska). I det här avsnittet visas konfigurationer som är *syntaktiskt* juridiskt giltiga, men *semantiskt* felaktiga. Tänk på att exemplen i det här avsnittet har reducerats till den minimistruktur som krävs för att illustrera det scenario som diskuteras.
 
 * Det är inte tillåtet att definiera flera pixelbegränsningar med samma pixelantal.
 
