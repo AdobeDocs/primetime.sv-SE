@@ -6,6 +6,9 @@ title: Händelseklasser
 uuid: 5e63d43c-6112-4958-b8cd-ccf123affd08
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +29,9 @@ Paket: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/p
 | [DRMMetadataInfoEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html) | Klass. Nya DRM-metadata är associerade med det aktuella objektet. |
 | [LoadInformationEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/LoadInformationEvent.html) | Klass. Det finns hämtningsinformation för den aktuella medieströmmen som spelas upp. |
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Klass. Ett mediespelarobjekt har skapats. |
-| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Klass. En inläsningsåtgärd har slutförts. Skickas av `MediaPlayerItemLoader` för att meddela sina kunder. |
+| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Klass. En inläsningsåtgärd har slutförts. Skickas av `MediaPlayerItemLoader` för att meddela sina klienter. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Klass. Mediespelarens status har ändrats. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Klass. Klickade `MediaPlayerView` på bilden. |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Klass. Klicka på `MediaPlayerView`. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Klass. Mediespelarens uppspelningshastighet ändras. |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Klass. Mediespelarens adaptiva bytesalgoritm för bithastighet har växlat till en annan profil på grund av nätverks- eller datorförhållanden. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Klass. Spelaren började söka eller sökningen slutfördes. |
