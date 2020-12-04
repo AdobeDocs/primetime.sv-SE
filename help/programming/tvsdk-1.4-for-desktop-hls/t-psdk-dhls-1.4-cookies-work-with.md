@@ -6,6 +6,9 @@ title: Arbeta med cookies
 uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Här följer ett exempel med någon typ av autentisering när begäranden görs 
 
 Så här arbetar du med cookies:
 
-1. Använd egenskapen `cookieHeaders` i `NetworkConfiguration` för att ange en cookie. Egenskapen är ett Metadata-objekt och du kan lägga till nyckelvärdepar till det här objektet som ska inkluderas i cookie-huvudet. `cookieHeaders`
+1. Använd egenskapen `cookieHeaders` i `NetworkConfiguration` för att ange en cookie. Egenskapen `cookieHeaders` är ett Metadata-objekt, och du kan lägga till nyckelvärdepar till det här objektet som ska inkluderas i cookie-huvudet.
 
    Exempel:
 
@@ -35,9 +38,9 @@ Så här arbetar du med cookies:
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   Som standard skickas endast cookie-huvuden med nyckelförfrågningar. Om du vill skicka cookie-huvuden med alla förfrågningar ställer du in egenskapen på `NetworkConfiguration` true `useCookieHeadersForAllRequests` .
+   Som standard skickas endast cookie-huvuden med nyckelförfrågningar. Om du vill skicka cookie-huvuden med alla begäranden anger du egenskapen `NetworkConfiguration` `useCookieHeadersForAllRequests` till true.
 
-1. Om du vill vara säker på att det `NetworkConfiguration` fungerar anger du det som metadata:
+1. Om du vill vara säker på att `NetworkConfiguration` fungerar anger du det som metadata:
 
    ```
    var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
@@ -49,7 +52,7 @@ Så här arbetar du med cookies:
 
 1. Ange metadata från föregående steg när du skapar en `MediaResource`.
 
-   Om du till exempel använder `createFromURL` metoden anger du följande information:
+   Om du till exempel använder metoden `createFromURL` anger du följande information:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
