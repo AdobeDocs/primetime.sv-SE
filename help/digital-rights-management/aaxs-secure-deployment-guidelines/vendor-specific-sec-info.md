@@ -4,6 +4,9 @@ title: Leverantörsspecifik säkerhetsinformation
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ När du skyddar ditt operativsystem ska du noga implementera de åtgärder som b
 * Onödiga tjänster och program tas bort
 * Säkerhetskopiera filer
 
-Säkerhetsinformation om operativsystem som stöds i Adobe Access finns i resurserna i den här tabellen.
+Säkerhetsinformation om operativsystem som stöds av Adobe Access finns i resurserna i den här tabellen.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-ugl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -64,7 +67,7 @@ I följande tabell beskrivs några möjliga strategier för att minimera säkerh
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">NTP (Network Time Protocol) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">För både korrekt drift och kriminalteknisk analys bör du hålla rätt tid på Adobe Access-servrar och Adobe Access-paket. Använd en säker version av NTP för att synkronisera tiden på alla system som är anslutna till Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">För både korrekt drift och kriminalteknisk analys bör du hålla korrekt tid på Adobe Access-servrar och Adobe Access-paket. Använd en säker version av NTP för att synkronisera tiden på alla system som är anslutna till Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
