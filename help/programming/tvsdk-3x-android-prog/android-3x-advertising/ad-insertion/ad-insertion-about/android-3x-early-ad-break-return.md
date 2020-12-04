@@ -6,20 +6,23 @@ title: Implementera en tidig radbrytning
 uuid: 0e77414e-86f5-4979-9caa-eaf2f39144a2
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
 
-# Implementera en tidig radbrytning {#implement-an-early-ad-break-return}
+# Implementera en tidig annonsradbrytning {#implement-an-early-ad-break-return}
 
 För annonsinfogning live-strömmar kan du behöva avsluta en annonsbrytning innan alla annonser i pausen spelas upp tills de är klara.
 
 Till exempel kanske inte längden på annonsbrytningen i vissa sportevenemang är känd innan brytningen börjar. TVSDK anger en standardlängd, men om spelet återupptas innan pausen är slut måste annonsbrytningen avbrytas. Ett annat exempel är en nödsignal under en annonsbrytning i en liveström.
 
-1. Prenumerera på `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`och `#EXT-X-CUE`, som är delningskanten i markörer.
-Mer information om hur du delar ut/in annonsmarkörer finns i [säljprojektsgeneratorer och innehållslösningar](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
-1. Använd en egen `ContentFactory`mall.
-1. I `retrieveGenerators`använder du `SpliceInPlacementOpportunityGenerator`.
+1. Prenumerera på `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` och `#EXT-X-CUE`, som är delningstiden i markörer.
+Mer information om hur du delar ut/in annonsmarkörer finns i [Affärsgeneratorer och innehållslösare](../../ad-insertion/content-resolver/android-3x-content-resolver.md).
+1. Använd en anpassad `ContentFactory`.
+1. I `retrieveGenerators` använder du `SpliceInPlacementOpportunityGenerator`.
 
    Exempel:
 
@@ -31,9 +34,9 @@ Mer information om hur du delar ut/in annonsmarkörer finns i [säljprojektsgene
    }
    ```
 
-   Mer information om hur du använder en anpassad affärsmöjlighet `ContentFactory`finns i steg 1 i [Implementera en anpassad säljprojektsgenerator](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md).
+   Mer information om hur du använder en anpassad `ContentFactory` finns i steg 1 i [Implementera en anpassad affärsmöjlighetsgenerator](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md).
 
-1. Implementera `ContentFactory`och inkludera `retrieveResolvers` och `AuditudeResolver` `SpliceInCustomResolver`.
+1. Implementera `retrieveResolvers` och inkludera `AuditudeResolver` och `SpliceInCustomResolver` på samma anpassade `ContentFactory`.
 
    Exempel:
 
