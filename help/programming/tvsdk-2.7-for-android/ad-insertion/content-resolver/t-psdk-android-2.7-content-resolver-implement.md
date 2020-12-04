@@ -6,6 +6,9 @@ title: Implementera en anpassad innehållshanterare
 uuid: bc0eda17-9b5d-4733-8e93-790758e68df5
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de registrerade innehållsmatcharna och letar efter en som kan lösa den affärsmöjligheten. Den första som returnerar `true` väljs för att lösa affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
+När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de registrerade innehållsmatcharna och letar efter en som kan lösa den affärsmöjligheten. Den första som returnerar `true` markeras för att lösa affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
 
-1. Implementera egna `ContentFactory`funktioner genom att utöka `ContentFactory` gränssnittet och åsidosätta `retrieveResolvers`.
+1. Implementera din egen anpassade `ContentFactory` genom att utöka gränssnittet `ContentFactory` och åsidosätta `retrieveResolvers`.
 
    Exempel:
 
@@ -68,9 +71,9 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
    itemLoader.load(resource, id, config);
    ```
 
-1. Skicka ett `AdvertisingMetadata` objekt till TVSDK enligt följande:
-   1. Skapa ett `AdvertisingMetadata` objekt.
-   1. Spara `AdvertisingMetadata` objektet i `MediaPlayerItemConfig`.
+1. Skicka ett `AdvertisingMetadata`-objekt till TVSDK enligt följande:
+   1. Skapa ett `AdvertisingMetadata`-objekt.
+   1. Spara `AdvertisingMetadata`-objektet till `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,7 +84,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Skapa en anpassad annonsupplösarklass som utökar `ContentResolver` klassen.
+1. Skapa en anpassad annonsupplösarklass som utökar klassen `ContentResolver`.
    1. I den anpassade annonslösaren åsidosätter du `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
@@ -91,7 +94,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
       void doCleanup();
       ```
 
-      Du får ditt `advertisingMetadata` från objektet som skickades `doConfigure`:
+      Du kan hämta din `advertisingMetadata` från objektet som skickades i `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,7 +103,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Skapa en `List<TimelineOperation>`för varje placeringsmöjlighet.
+   1. Skapa en `List<TimelineOperation>` för varje placeringsmöjlighet.
 
       Det här exemplet `TimelineOperation` innehåller en struktur för `AdBreakPlacement`:
 
@@ -115,14 +118,14 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
 
    1. När annonserna är lösta anropar du någon av följande funktioner:
 
-      * Om annonsen lyckas kan du ringa `process(List<TimelineOperation> proposals)` och `notifyCompleted(Opportunity opportunity)` klicka på `ContentResolverClient`
+      * Om annonsen lyckas ringer du `process(List<TimelineOperation> proposals)` och `notifyCompleted(Opportunity opportunity)` på `ContentResolverClient`
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Om annonsen inte lyckas kan du ringa `notifyResolveError` på `ContentResolverClient`
+      * Om annonsupplösningen misslyckas ringer du `notifyResolveError` på `ContentResolverClient`
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
