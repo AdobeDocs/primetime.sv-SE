@@ -4,11 +4,14 @@ title: Användning av kommandorad
 uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
-# Användning av kommandorad {#command-line-usage}
+# Kommandoradsanvändning {#command-line-usage}
 
 Listhanteraren för återkallande finns i katalogen \Reference Implementation\Command Line Tools på dvd:n. Om du vill köra verktyget använder du någon av följande syntaxer:
 
@@ -52,7 +55,7 @@ Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-e datum</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Valfritt) Giltighetsdatumet för listan över återkallade certifikat. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">åååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">åååå-mm-dd-h24:min:sek</span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari kl. 2:30 PM). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Valfritt) Giltighetsdatumet för listan över återkallade certifikat. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">åååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd-h24:min:sek</span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f filnamn[certfile]</span> </td> 
@@ -68,7 +71,7 @@ Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issurName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar det certifikat som identifieras av <span class="codeph"> publisherName</span> och <span class="codeph"> serialNumber</span> på det angivna datumet. IssueName <span class="codeph"></span> måste följa namnformatet 509 (till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Ange serienummer i hexadecimal form. Ange återkallningsdatumet som <span class="+ topic/ph pr-d/codeph codeph">åååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">åååå-mm-dd-h24:min:sec</span>, till exempel 2008-12-1 eller 2008-12-00:00:00 för midnatt den 1 december 2008. Om återkallningsdatumet inte anges används det aktuella datumet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som identifieras av <span class="codeph"> utfärdarnamn</span> och <span class="codeph"> serienummer</span> på det angivna datumet. <span class="codeph"> utfärdarnamn</span> måste följa 509-namnformatet (till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Ange serienummer i hexadecimal form. Ange spärrdatumet som <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd-h24:min:sek</span>, till exempel 2008-12-1 eller 2008-12-1-00:00:00 för midnatt den 1, 2008. Om återkallningsdatumet inte anges används det aktuella datumet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
