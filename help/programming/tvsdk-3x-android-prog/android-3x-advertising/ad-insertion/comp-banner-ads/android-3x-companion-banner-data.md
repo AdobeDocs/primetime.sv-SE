@@ -6,6 +6,9 @@ title: Kompletterande banderolldata
 uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -16,12 +19,12 @@ Innehållet i en AdAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Var och en `AdAsset` innehåller information om hur resursen visas.
+Var `AdAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> <b>Tillgänglig information </b></th> 
+   <th colname="col1" class="entry"> <b>Tillgänglig information  </b></th> 
    <th colname="col2" class="entry"> <b>Beskrivning</b> </th> 
   </tr> 
  </thead>
@@ -44,7 +47,7 @@ Var och en `AdAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1"> statisk URL </td> 
-   <td colname="col2"> <p>Ibland har den tillhörande banderollen också en <span class="codeph"> statiskURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du i stället använda en direkt URL till en bild eller swf för att visa banderollen i Flash-scenen. I det här fallet kan du använda den <span class="codeph"> statiska URL</span> :en för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
+   <td colname="col2"> <p>Ibland har den tillhörande banderollen också en <span class="codeph"> staticURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild eller swf för att visa banderollen på scenen Flash i stället. I det här fallet kan du använda den statiska URL:en <span class="codeph"></span> för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
   </tr> 
  </tbody> 
 </table>
