@@ -6,6 +6,9 @@ title: Implementera en anpassad affärsmöjlighetsdetektor
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -14,16 +17,16 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Ni kan implementera egna affärsmöjlighetsdetektorer.
 
-* Om affärsmöjlighetsgeneratorn baseras på `TimedMetadata` objekt som är kopplade till den aktuella medieströmmen bör den utöka `SpliceOutOpportunityGenerator` eller `TimedMetadataOpportunityGenerator`.
+* Om din affärsmöjlighetsgenerator baseras på `TimedMetadata`-objekt som är associerade med den aktuella medieströmmen bör den utöka `SpliceOutOpportunityGenerator` eller `TimedMetadataOpportunityGenerator`.
 
-* Om din affärsmöjlighetsgenerator baseras på out-of-band-data som tillhandahålls av en extern tjänst (t.ex. en CIS), bör den utöka `OpportunityGenerator`.
+* Om affärsmöjlighetsgeneratorn är baserad på out-of-band-data som tillhandahålls av en extern tjänst (till exempel en CIS), bör den utöka `OpportunityGenerator`.
 
 1. Skapa den anpassade affärsmöjlighetsgeneratorn.
 
        Om den anpassade generatorn för affärsmöjlighet är baserad på TimedMetadata-objekt, utökar du TimedMetadataOpportunityGenerator och åsidosätter dessa metoder:
    
    * `doConfigure` - Den här metoden anropas efter att mediespelarobjektet har skapats och ger möjlighet att skapa en första uppsättning möjligheter vid behov
-   * `doProcess` - Den här metoden anropas varje gång nya `TimedMetadata` upptäcks (t.ex. för live-/linjära strömmar varje gång spellistan/manifestet uppdateras)
+   * `doProcess` - Den här metoden anropas varje gång nya  `TimedMetadata` upptäcks (t.ex. för live/linear-strömmar varje gång spellistan/manifestet uppdateras)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
