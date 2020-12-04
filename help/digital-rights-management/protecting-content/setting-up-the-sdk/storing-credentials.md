@@ -21,7 +21,7 @@ Du måste noga bevaka privata nycklar för att säkerställa säkerheten för di
 >
 >Adobe rekommenderar att du använder en HSM för maximal säkerhet.
 >
->Se *Adobe Primetime riktlinjer* för säker driftsättning av DRM.
+>Se guiden *Adobe Primetime DRM Secure Deployment Guidelines*.
 
 >[!NOTE]
 >
@@ -29,8 +29,8 @@ Du måste noga bevaka privata nycklar för att säkerställa säkerheten för di
 
 Du kan behålla en privat nyckel på en HSM och använda Primetimes DRM SDK för att skicka de autentiseringsuppgifter som du får från HSM. Om du vill använda en referens som lagras på en HSM måste du använda en JCE-leverantör som kan kommunicera med en HSM för att få en referens till den privata nyckeln. Sedan måste du skicka handtaget för den privata nyckeln, providernamnet och certifikatet som innehåller den offentliga nyckeln till `ServerCredentialFactory.getServerCredential()`.
 
-SunPKCS11-providern representerar ett exempel på en JCE-leverantör som du kan använda för att komma åt en privat nyckel på en HSM. Vissa HSM-moduler ingår också i en Java SDK som medföljer en JCE-leverantör.
+SunPKCS11-providern representerar ett exempel på en JCE-leverantör som du kan använda för att få åtkomst till en privat nyckel på en HSM. Vissa HSM-moduler ingår också i en Java SDK som medföljer en JCE-leverantör.
 
 I dokumentationen för Sun Java finns instruktioner om hur du använder den här providern.
 
-PEM och DER är sätt att koda ett certifikat för offentlig nyckel. PEM är en base-64-kodning och DER är en binär kodning. Certifikatfiler använder vanligtvis tillägget [!DNL .cer], [!DNL .pem]eller [!DNL .der]. Certifikat används där bara en offentlig nyckel krävs. Om en komponent endast kräver den offentliga nyckeln för att fungera, rekommenderar vi att du tillhandahåller komponenten certifikatet i stället för en autentiserings- eller PKCS12-fil.
+PEM och DER är sätt att koda ett certifikat för offentlig nyckel. PEM är en base-64-kodning och DER är en binär kodning. Certifikatfiler använder vanligtvis tillägget [!DNL .cer], [!DNL .pem] eller [!DNL .der]. Certifikat används där bara en offentlig nyckel krävs. Om en komponent endast kräver den offentliga nyckeln för att fungera, rekommenderar vi att du tillhandahåller komponenten certifikatet i stället för en autentiserings- eller PKCS12-fil.
