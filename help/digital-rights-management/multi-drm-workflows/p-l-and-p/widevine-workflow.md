@@ -6,11 +6,14 @@ title: Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
 
-# Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady {#multi-drm-workflow-for-widevine-and-playready}
+# Multi-DRM Workflow för WideVM och PlayReady {#multi-drm-workflow-for-widevine-and-playready}
 
 Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licensiering och uppspelning av DASH-innehåll som krypterats med WideVM och PlayReady.
 
@@ -20,7 +23,7 @@ Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-
 >
 >Inga planer har gjorts på att bakportera VSDK 1.X till Android för uppspelning av Widewin-krypterat DASH-innehåll.
 
-## Översikt över DASH-innehåll och gemensam kryptering {#section_33A881158F724835B4B89AAE97302B17}
+## DASH-innehåll och gemensam kryptering i korthet {#section_33A881158F724835B4B89AAE97302B17}
 
 Dash-innehåll består av ett huvudmanifest, skrivet i xml, som pekar på video- och ljudfiler som ska spelas upp. I exemplet nedan pekar DASH-manifestet på en video-URL, video/1080_30.mp4, och en ljud-URL, audio/1080_30.mp4, i förhållande till manifestets URL.
 
@@ -44,7 +47,7 @@ Dash-innehåll består av ett huvudmanifest, skrivet i xml, som pekar på video-
 </MPD>
 ```
 
-Nedan visas ett exempelmanifest med gemensam kryptering. XML-elementen (blocken) för skydd av vitt innehåll i manifestet innehåller en base64-kodad pssh-ruta (skyddssystemspecifik rubrik). `<ContentProtection>` Rutan pssh innehåller de data som behövs för att initiera innehållsavkryptering. Dessa data är också inbäddade i video-/ljudinnehållet som manifestet refererar till. DASH-innehåll kan ha flera element för innehållsskydd, till exempel 1 för PlayReady och 1 för Widewin.
+Nedan visas ett exempelmanifest med gemensam kryptering. XML-elementen för skydd av vitt innehåll (`<ContentProtection>`-blocken) i manifestet innehåller en base64-kodad pssh-ruta (skyddssystemspecifik rubrik). Rutan pssh innehåller de data som behövs för att initiera innehållsavkryptering. Dessa data är också inbäddade i video-/ljudinnehållet som manifestet refererar till. DASH-innehåll kan ha flera element för innehållsskydd, till exempel 1 för PlayReady och 1 för Widewin.
 
 ```
 <?xml version="1.0" ?>
