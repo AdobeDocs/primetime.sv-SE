@@ -6,11 +6,14 @@ title: Stöd för implementeringskapitel
 uuid: 6e2c3994-d28b-489f-ae60-9b876125a871
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
-# Stöd för implementeringskapitel {#implement-chapter-support}
+# Implementera kapitelstöd {#implement-chapter-support}
 
 Du kan definiera och spåra *anpassade* kapitel för videospårning i TVSDK-baserade program.
 
