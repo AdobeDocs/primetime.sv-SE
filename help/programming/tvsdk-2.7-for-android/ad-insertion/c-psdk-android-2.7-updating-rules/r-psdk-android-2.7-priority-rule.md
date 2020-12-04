@@ -7,6 +7,9 @@ title: Prioritetsregler
 uuid: 4ca31dc7-9c5e-400c-9111-e7b6fc11a392
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väl
    <td><span class="codeph"> artikel</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> värd</span></td> 
-   <td>För närvarande stöds bara <span class="codeph"> värden</span> . Det här attributet måste finnas när <span class="codeph"> matchningar</span> och <span class="codeph"> värdeattribut</span> definieras.</td> 
+   <td>För närvarande stöds bara <span class="codeph"> host</span>. Det här attributet måste finnas när <span class="codeph"> matchar</span> och <span class="codeph"> värden</span>-attribut har definierats.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matchar</span></td> 
@@ -45,25 +48,25 @@ Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väl
    <td><span class="codeph"> flera</span></td> 
    <td>Möjliga värden:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> - lika med</li> 
+     <li><span class="codeph"> eq</span> - equals</li> 
      <li><span class="codeph"> ne</span> - inte lika med</li> 
-     <li><span class="codeph"> co</span> - innehåller</li> 
-     <li><span class="codeph"> nc</span> - innehåller inte</li> 
+     <li><span class="codeph"> co</span> - contains</li> 
+     <li><span class="codeph"> nc</span> - not contains</li> 
      <li><span class="codeph"> sw</span> - börjar med</li> 
-     <li><span class="codeph"> new</span> - slutar med</li> 
+     <li><span class="codeph"> Nytt</span>  - slutar med</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> prioritet</span></td> 
-   <td>Värdet måste alltid vara <span class="codeph"> prioriterat</span></td> 
+   <td>Värdet måste alltid vara <span class="codeph"> prioritet</span></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> <p>TVSDK använder attributet <span class="codeph"> match</span> på det kreativa <span class="codeph"> källobjektet</span> och matchar mot värdena som definieras i den här arrayen</p> </td> 
+   <td> <p>TVSDK kommer att använda attributet <span class="codeph"> matchar</span> för <span class="codeph">-objektet</span> för den kreativa källan och matcha mot värdena som definieras i den här arrayen</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
