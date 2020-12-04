@@ -6,13 +6,16 @@ title: Säker annonsinläsning över HTTPS
 uuid: 10657f59-cfbf-4c75-9249-fc154952bc51
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
 
 # Säker annonsinläsning över HTTPS{#secure-ad-loading-over-https}
 
-Adobe Primetime kan begära annonsservrar från tredje part via https även om spelaren finns på http. Endast de annonsserveranrop uppgraderas till https som klienten söker under Auditude Ad-lösningsfasen.
+Adobe Primetime kan begära annonsservrar från tredje part över https även om spelaren finns på http. Endast de annonsserveranrop uppgraderas till https som klienten söker under Auditude Ad-lösningsfasen.
 
 >[!NOTE]
 >
