@@ -6,6 +6,9 @@ title: Skapa funktionshanterare genom att skicka konfigurationsinformation till 
 uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -24,9 +27,9 @@ TVSDK-funktioner drivs av konfiguration och implementeras via MediaPlayer.
 
    Funktionshanterare registrerar TVSDK-händelseavlyssnare för det här spelarobjektet, hämtar data från uppspelningssessionen och utlöser TVSDK-funktioner till uppspelningssessionen.
 
-Varje funktion har ett motsvarande konfigurationsgränssnitt. I används `CCManager` till exempel `ICCConfig` för att hämta konfigurationen. `ICCConfig` innehåller metoder för att hämta konfigurationsinformation som endast gäller undertextning.
+Varje funktion har ett motsvarande konfigurationsgränssnitt. `CCManager` använder till exempel `ICCConfig` för att hämta konfigurationen. `ICCConfig` innehåller metoder för att hämta konfigurationsinformation som endast gäller undertextning.
 
-I följande exempel visas [!DNL ICCConfig.java] filen som är konfigurerad att ta emot information om synlighet för undertexter, teckensnittsstil och teckensnittskant från `MediaPlayer`:
+I följande exempel visas filen [!DNL ICCConfig.java] som är konfigurerad att ta emot information om synlighet för undertexter, teckensnittsstil och teckensnittskant från `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +67,7 @@ I följande exempel visas [!DNL ICCConfig.java] filen som är konfigurerad att t
 }
 ```
 
-Ett program som använder en TVSDK-funktion kan skapa sin funktionshanterare med en konfigurationsprovider och ett `MediaPlayer` objekt. Exempel:
+Ett program som använder en TVSDK-funktion kan skapa sin funktionshanterare med en konfigurationsprovider och ett `MediaPlayer`-objekt. Exempel:
 
 ```java
 // This application needs to use the advertising workflow feature 
