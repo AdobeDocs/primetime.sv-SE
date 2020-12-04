@@ -6,6 +6,9 @@ title: Katalogformat
 uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ Varje flödespost är ett JSON-objekt med en given uppsättning attribut:
 | `thumbnails` | En array med JSON-objekt med URL:er för olika storlekar på miniatyrbilder. JSON-objektattributen definieras nedan. |
 | `metadata` | Ett JSON-objekt som definierar metadata för innehållet. För närvarande är dessa metadata begränsade till och relaterade metadata. Metadataobjektet definieras nedan. |
 
-Följande kodblock definierar de JSON-objekt som utgör arrayen med **innehållsobjekt**:
+Följande kodblock definierar de JSON-objekt som utgör arrayen för **innehållsobjekt**:
 
 ```
 "content":  [
@@ -94,7 +97,7 @@ Följande kodblock definierar de JSON-objekt som utgör arrayen med **innehålls
 | format | Måste vara m3u8-format för Android. |
 | url | URL:en till videoströmmen för det angivna formatet. |
 
-I följande kodblock definieras JSON-objekten som utgör arrayen med **miniatyrbildobjekt**:
+Följande kodblock definierar de JSON-objekt som utgör arrayen med **miniatyrbildobjekt**:
 
 ```
 "thumbnails": [
@@ -120,7 +123,7 @@ I följande kodblock definieras JSON-objekten som utgör arrayen med **miniatyrb
 | width | Bredden på miniatyrbilden. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
 | url | URL:en till miniatyrfilen. |
 
-I följande kodblock definieras **metadataobjektet**:
+Följande kodblock definierar **metadataobjektet**:
 
 ```
 "metadata" : {
@@ -141,5 +144,5 @@ I följande kodblock definieras **metadataobjektet**:
 | type | Värdet kan vara Primetime Ads, Direct Ad Breaks eller Custom Ad Marers. <br/><br/>PSDK har inbyggt stöd för följande typer av metadata: Auditude-relaterade metadata för Primetime Ad Serving (Primetime Ads), direkta annonsbrytningar med annonsadresser (Direct Ad Breaks) och anpassade annonsmarkörer som anger tidsintervallet för varje annonsmarkör (Custom Ad Marers). Varje typ har en inbyggd AdProvider i PSDK som bearbetar metadata.  <br/><br/>JSON-formatet för var och en av dessa har definierats nedan. |
 | information | Innehåller attribut för annonsmetadata. Båda typerna av annonsmetadata har en egen uppsättning attribut som definieras nedan. För de inbyggda typerna definierar attributen de data som förväntas av PSDK för den typen. |
 | berättigande | Tillståndsrelaterade metadata |
-| id | Medieresurs-ID som används för auktoriseringsbegäranden mot betal-TV-pass-tjänsten för Adobe Primetime. ID:t kan vara antingen en textsträng eller en HTML-kodad mRSS-sträng. Allt mediainnehåll som kräver auktorisering måste innehålla ett giltigt resurs-ID. |
+| id | Medieresurs-ID som används för auktoriseringsbegäranden mot Adobe Primetime betal-TV-pass-tjänst. ID:t kan vara antingen en textsträng eller en HTML-kodad mRSS-sträng. Allt mediainnehåll som kräver auktorisering måste innehålla ett giltigt resurs-ID. |
 
