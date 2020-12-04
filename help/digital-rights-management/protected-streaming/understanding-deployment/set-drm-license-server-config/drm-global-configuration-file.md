@@ -17,15 +17,15 @@ ht-degree: 0%
 
 Konfigurationsfilen flashaccess-global.xml innehåller inställningar som gäller för alla innehavare av licensservern.
 
-Du måste placera konfigurationsfilen i [!DNL LicenseServer.ConfigRoot] katalogen.
+Du måste placera konfigurationsfilen i katalogen [!DNL LicenseServer.ConfigRoot].
 
-Ett exempel på en global konfigurationsfil finns i [!DNL configs] katalogen.
+I katalogen [!DNL configs] finns ett exempel på en global konfigurationsfil.
 
 Den globala konfigurationsfilen innehåller:
 
 * Cachelagring - Styr cachelagring av konfigurationsfiler i minnet.
 
-   Mer information om cachelagringsinställningarna finns i *Uppdatera konfigurationsfiler* .
+   Mer information om cachelagringsinställningarna finns i *Uppdatera konfigurationsfiler*.
 * Loggning - Anger loggningsnivån och hur ofta loggfiler rullas.
 * HSM-lösenord - Krävs endast om en HSM används för att lagra serverautentiseringsuppgifter.
 
