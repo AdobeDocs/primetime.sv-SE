@@ -6,6 +6,9 @@ title: Implementera snabbt framåt och bakåt
 uuid: d54c8c61-887f-4362-9085-e443859854b9
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Om du vill växla hastighet måste du ange ett värde.
 
        Kom ihåg följande information:
    
-   * Klassen definierar `MediaPlayerItem` tillåtna uppspelningshastigheter.
+   * Klassen `MediaPlayerItem` definierar tillåtna uppspelningshastigheter.
    * TVSDK väljer den närmaste tillåtna hastigheten om den angivna hastigheten inte tillåts.
 
       I följande exempel ställs spelarens interna uppspelningshastighet in på den begärda hastigheten:
@@ -53,7 +56,7 @@ Om du vill växla hastighet måste du ange ett värde.
 
 TVSDK skickar följande händelser som är relaterade till trick play:
 
-* `MediaPlayerEvent.RATE_SELECTED`, när `rate` värdet ändras till ett annat värde.
+* `MediaPlayerEvent.RATE_SELECTED`, när  `rate` värdet ändras till ett annat värde.
 
 * `MediaPlayerEvent.RATE_PLAYING`när uppspelningen återupptas med vald hastighet.
 
