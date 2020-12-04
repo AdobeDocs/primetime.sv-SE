@@ -6,6 +6,9 @@ title: Adaptiva bithastigheter (ABR) för videokvalitet
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -72,7 +75,7 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Uppdatera din `PTMediaPlayer` instans med den konfigurerade `PTABRControlParameters` instansen.
+1. Uppdatera din `PTMediaPlayer`-instans med den konfigurerade `PTABRControlParameters`-instansen.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
 
 Kom ihåg följande:
 
-* Programmet måste ange egenskapen `abrControlParameters` på `PTMediaPlayer` innan en `PTMediaPlayerItem` instans konfigureras för att de inledande och lägsta bithastighetsinställningarna ska börja gälla.
+* Programmet måste ställa in egenskapen `abrControlParameters` på `PTMediaPlayer` innan en `PTMediaPlayerItem`-instans konfigureras för att de inledande och lägsta bithastighetsinställningarna ska börja gälla.
 
    När uppspelningen av innehållet startar påverkas inställningen för en ny instans bara den maximala bithastigheten.
 
-* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters` instans och anger den på spelarinstansen.
-* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. I tidigare versioner används det `maxBitrate` värde som ställdes in innan uppspelningen av innehåll startades.
+* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters`-instans och anger den på spelarinstansen.
+* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. I tidigare versioner används det `maxBitrate`-värde som angavs innan innehållsuppspelningen startades.
