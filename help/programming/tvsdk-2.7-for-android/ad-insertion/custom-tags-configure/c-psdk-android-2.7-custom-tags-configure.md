@@ -23,7 +23,7 @@ Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan
 >
 >Den här funktionen är inte tillgänglig för Safari på Apple-datorer eftersom TVSDK använder videotaggen i stället för Flash eller MSE för att spela upp HLS-innehåll.
 
-TVSDK har färdiga funktioner för specifika `#EXT` annonstaggar. Ditt program kan använda anpassade taggar för att förbättra arbetsflödet för annonsering eller för att stödja svartoutscenarier. Om du vill ha stöd för avancerade arbetsflöden kan du med TVSDK ange och prenumerera på ytterligare taggar i manifestet. Du kan meddelas när dessa taggar visas i manifestfilen.
+TVSDK har körklart stöd för specifika `#EXT`-annonstaggar. Ditt program kan använda anpassade taggar för att förbättra arbetsflödet för annonsering eller för att stödja svartoutscenarier. Om du vill ha stöd för avancerade arbetsflöden kan du med TVSDK ange och prenumerera på ytterligare taggar i manifestet. Du kan meddelas när dessa taggar visas i manifestfilen.
 
 >[!TIP]
 >
@@ -65,8 +65,8 @@ seg5.ts
 
 Programmet kan konfigurera följande scenarier:
 
-* Ett meddelande när det finns `#EXT-X-ASSET` taggar, eller andra uppsättningar anpassade taggnamn som du prenumererar på, i filen.
-* Infoga annonser när en `#EXT-X-AD` tagg eller något annat anpassat taggnamn hittas i strömmen.
+* Det finns ett meddelande när `#EXT-X-ASSET`-taggar eller andra uppsättningar anpassade taggnamn som du har prenumererat på finns i filen.
+* Infoga annonser när en `#EXT-X-AD`-tagg eller något annat anpassat taggnamn hittas i strömmen.
 
 Du kan prenumerera på följande taggar som anpassade taggar:
 
@@ -76,6 +76,6 @@ Du kan prenumerera på följande taggar som anpassade taggar:
 * `EXT-X-CUE`
 * `EXT-X-ENDLIST`
 
-Du meddelas med en `TimedMetadata` händelse under tolkningen av manifestfiler.
+Du meddelas med en `TimedMetadata`-händelse under tolkningen av manifestfiler.
 
-Det finns några reklamtaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` egenskapen.
+Det finns vissa annonstaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange egenskapen `adTags`.
