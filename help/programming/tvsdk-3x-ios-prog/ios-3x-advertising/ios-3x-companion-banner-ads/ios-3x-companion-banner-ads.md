@@ -6,15 +6,18 @@ title: Companion banner ads
 uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# Companion banner ads {#companion-banner-ads}
+# Banderollannonser {#companion-banner-ads}
 
 TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
-Följ dessa rekommendationer när du visar följeslagarannonser:
+Följ de här rekommendationerna när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
 * Visa bara en tilläggsbanderoll om du har en plats som exakt matchar den angivna höjden och bredden.
@@ -35,8 +38,8 @@ Innehållet i en PTAdAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Meddelandet returnerar `PTMediaPlayerAdStartedNotification` en `PTAd` instans som innehåller en `companionAssets` egenskap (array med `PtAdAsset`).
-Var och en `PtAdAsset` innehåller information om hur resursen visas.
+`PTMediaPlayerAdStartedNotification`-meddelandet returnerar en `PTAd`-instans som innehåller en `companionAssets`-egenskap (matrisen `PtAdAsset`).
+Var `PtAdAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -74,17 +77,17 @@ Var och en `PtAdAsset` innehåller information om hur resursen visas.
 
 Om du vill visa bannerannonser måste du skapa bannerinstanser och tillåta TVSDK att lyssna efter annonsrelaterade händelser.
 
-TVSDK tillhandahåller en lista över bannerannonser som är kopplade till en linjär annons via `PTMediaPlayerAdPlayStartedNotification` meddelandehändelsen.
+TVSDK tillhandahåller en lista med annonser för följeslagare som är kopplade till en linjär annons via meddelandehändelsen `PTMediaPlayerAdPlayStartedNotification`.
 
 Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL:en för en statisk bild eller en Adobe Flash SWF-fil
+* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
 
 För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga för ditt program.
 
-1. Skapa en `PTAdBannerView` instans för varje extern annonsplats på sidan.
+1. Skapa en `PTAdBannerView`-instans för varje kompletterande annonsplatta på sidan.
 
        Kontrollera att följande information har lämnats:
    
@@ -96,13 +99,13 @@ För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga f
    1. Hämtar listan över följeslagarannonser från `Ad.getCompanionAssets` `PTAd.companionAssets`.
    1. Om listan med följesedlar inte är tom kan du iterera över listan för banderollinstanser.
 
-      Varje bannerinstans ( a `PTAdAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
+      Varje banderollinstans ( a `PTAdAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
    1. Om en videoannons inte har några följeslagare bokade med sig innehåller listan med följesedlar inga data för den videoannonsen.
 
       Om du vill visa en fristående visningsannons lägger du till logiken i skriptet för att köra en vanlig DFP-visningstagg (DoubleClick for Publishers) i rätt banderollinstans.
    1. Skickar banderollinformationen till en funktion på sidan som visar banderollerna på lämplig plats.
 
-      Detta är vanligtvis en `div`stil, och funktionen använder `div ID` för att visa banderollen. Exempel:
+      Det här är vanligtvis en `div` och funktionen använder `div ID` för att visa banderollen. Exempel:
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
