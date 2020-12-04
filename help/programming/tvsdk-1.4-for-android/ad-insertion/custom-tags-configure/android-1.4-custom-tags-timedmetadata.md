@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Timed metadata, klass{#timed-metadata-class}
+# Timed metadata-klass{#timed-metadata-class}
 
 När TVSDK identifierar en prenumerationstagg i spellistan/manifestet försöker spelaren automatiskt att bearbeta taggen och visa den i form av ett TimedMetadata-objekt.
 
@@ -29,27 +29,27 @@ Klassen innehåller följande element:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> Unik identifierare för tidsbestämda metadata. Det här värdet extraheras vanligtvis från attributet cue/tag ID. Annars anges ett unikt slumpmässigt värde. Använd <span class="codeph"> getId </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> Metadata </td> 
    <td colname="col2"> Den bearbetade/extraherade informationen från den anpassade taggen för spelningslistan/manifestet. Använd <span class="codeph"> getMetadata </span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> Sträng </td> 
-   <td colname="col2"> Namnet på tidsbestämda metadata. Om typen är <span class="codeph"> TAG </span>representerar värdet cue/tag-namnet. Om typen är <span class="codeph"> ID3 </span>är den null. Använd <span class="codeph"> getName </span>. </td> 
+   <td colname="col2"> Namnet på tidsbestämda metadata. Om typen är <span class="codeph"> TAG </span> representerar värdet cue/tag-namnet. Om typen är <span class="codeph"> ID3 </span> är den null. Använd <span class="codeph"> getName </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> tid </span> </td> 
+   <td colname="col1"> <span class="codeph"> tid  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> Tidspositionen, i millisekunder, i förhållande till början av huvudinnehållet där dessa tidsbestämda metadata finns i strömmen. Använd <span class="codeph"> getTime </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Typ </td> 
    <td colname="col2"> Typen för tidsbestämda metadata. Använd <span class="codeph"> getType </span>. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
