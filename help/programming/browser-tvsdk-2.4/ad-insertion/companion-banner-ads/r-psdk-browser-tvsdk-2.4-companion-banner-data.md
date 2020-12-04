@@ -19,8 +19,8 @@ Innehållet i en AdBannerAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Händelsen `AdobePSDK.PSDKEventType.AD_STARTED` returnerar en `Ad` instans som innehåller en `companionAssets` egenskap ( `Array<AdBannerAsset>`).
-Var och en `AdBannerAsset` innehåller information om hur resursen visas.
+Händelsen `AdobePSDK.PSDKEventType.AD_STARTED` returnerar en `Ad`-instans som innehåller en `companionAssets`-egenskap ( `Array<AdBannerAsset>`).
+Var `AdBannerAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
