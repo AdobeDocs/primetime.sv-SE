@@ -6,6 +6,9 @@ title: Ordning för uppspelningshändelser
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -18,19 +21,19 @@ TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelar
 
 I följande exempel visas ordningen för vissa händelser som innehåller uppspelningshändelser.
 
-* När en medieresurs läses in via `MediaPlayer.replaceCurrentResource`är händelseordningen:
+* När en medieresurs har lästs in via `MediaPlayer.replaceCurrentResource` är händelseordningen:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`
 
-* När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`är händelseordningen:
+* När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` om annonser har infogats
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARED`
 
 * För live-/linjära strömmar, under uppspelningen när uppspelningsfönstret går framåt och ytterligare möjligheter är lösta, är händelseordningen:
 
