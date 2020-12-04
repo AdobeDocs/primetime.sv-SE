@@ -5,6 +5,9 @@ seo-title: Säker leverans över HTTPS
 title: Säker leverans över HTTPS
 translation-type: tm+mt
 source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Adobe Primetime TVSDK har stöd för HTTPS-leverans för alla samtal som kommer 
 
 Om du vill använda den här funktionen måste servrarna som konfigurerats för att betjäna ovanstående ha stöd för HTTPS.
 
-Det här nya beteendet är inte aktiverat som standard. Använd följande för att aktivera säker leverans före samtal till `MediaPlayer.replaceCurrentResource()`
+Det här nya beteendet är inte aktiverat som standard. Använd följande för att aktivera säker leverans före anrop till `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);
