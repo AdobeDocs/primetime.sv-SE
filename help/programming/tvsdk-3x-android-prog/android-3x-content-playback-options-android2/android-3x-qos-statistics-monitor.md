@@ -6,11 +6,14 @@ title: Kvalitetsstatistik för tjänster
 uuid: 3d66ed44-9d4a-4162-962f-e238575ff2dd
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
 
-# Kvalitetsstatistik för tjänster {#quality-of-service-statistics}
+# Kvalitetsstatistik för tjänsten {#quality-of-service-statistics}
 
 QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 
@@ -22,25 +25,25 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
 
 ## Spåra på fragmentnivå med hjälp av inläsningsinformation {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från `LoadInformation` klassen.
+Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från klassen `LoadInformation`.
 
-1. Implementera och registrera `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` händelseavlyssnaren.
-1. Anropa `event.getLoadInformation()` för att läsa relevanta data från den `event` parameter som skickas till återanropet.
+1. Implementera och registrera händelseavlyssnaren `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`.
+1. Anropa `event.getLoadInformation()` för att läsa relevanta data från parametern `event` som skickas till återanropet.
 
    >[!NOTE]
    >
-   >Mer information `LoadInformation`finns i [3.0 for Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html) API docs.
+   >Mer information om `LoadInformation` finns i [3.0 for Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html) API docs.
 
 ## Läs QOS-uppspelning, buffring och enhetsstatistik {#section_D21722600F324E67A9F06234D338B243}
 
-Du kan läsa uppspelning, buffring och enhetsstatistik från `QOSProvider` klassen.
+Du kan läsa uppspelning, buffring och enhetsstatistik från klassen `QOSProvider`.
 
-Klassen innehåller `QOSProvider` olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata. Den innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version, tillverkarens enhets-ID och skärmstorlek/skärmtäthet.
+Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata. Den innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version, tillverkarens enhets-ID och skärmstorlek/skärmtäthet.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider` objekt och bifoga det till mediespelaren.
+1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
 
-   Konstruktorn använder en spelarkontext så att den kan hämta enhetsspecifik information. `QOSProvider`
+   Konstruktorn `QOSProvider` har en spelarkontext så att den kan hämta enhetsspecifik information.
 
    ```java
    // Create Media Player. 
