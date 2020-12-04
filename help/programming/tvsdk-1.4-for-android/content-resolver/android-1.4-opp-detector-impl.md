@@ -6,6 +6,9 @@ title: Implementera en anpassad affärsmöjlighetsdetektor
 uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gränssnittet PlacementOpportunityDetector.
 
-1. Skapa en anpassad `AdvertisingFactory` instans och åsidosätt `createOpportunityDetector`. Exempel:
+1. Skapa en anpassad `AdvertisingFactory`-instans och åsidosätt `createOpportunityDetector`. Exempel:
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +30,7 @@ Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gr�
    }
    ```
 
-1. Registrera annonsklientfabriken hos `MediaPlayer`kunden. Exempel:
+1. Registrera annonsklientfabriken på `MediaPlayer`. Exempel:
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,16 +38,16 @@ Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gr�
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Skapa en anpassad klass för affärsmöjlighetsdetektor som utökar `PlacementOpportunityDetector` klassen.
+1. Skapa en anpassad klass för affärsmöjlighetsdetektor som utökar klassen `PlacementOpportunityDetector`.
    1. Åsidosätt den här funktionen i den anpassade affärsmöjlighetsidentifieraren:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      Den `timedMetadataList` innehåller listan med tillgängliga `TimedMetadata`som sorteras. Metadata innehåller målparametrar och anpassade parametrar som ska skickas till annonsleverantören.
+      `timedMetadataList` innehåller listan med tillgängliga `TimedMetadata`, som är sorterad. Metadata innehåller målparametrar och anpassade parametrar som ska skickas till annonsleverantören.
 
-   1. För varje `TimedMetadata`skapar du en `List<PlacementOpportunity>`. Listan kan vara tom, men inte null. `PlacementOpportunity` ska ha följande attribut:
+   1. Skapa en `List<PlacementOpportunity>` för varje `TimedMetadata`. Listan kan vara tom, men inte null. `PlacementOpportunity` ska ha följande attribut:
 
       ```java
       PlacementOpportunity( 
@@ -54,7 +57,7 @@ Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gr�
       )
       ```
 
-   1. När placeringsmöjligheter har skapats för alla identifierade tidsbestämda metadataobjekt returnerar du bara `PlacementOpportunity` listan.
+   1. När placeringsmöjligheter har skapats för alla identifierade tidsbestämda metadataobjekt returnerar du bara listan `PlacementOpportunity`.
 
 Detta är ett exempel på identifierare av anpassade placeringsmöjligheter:
 
