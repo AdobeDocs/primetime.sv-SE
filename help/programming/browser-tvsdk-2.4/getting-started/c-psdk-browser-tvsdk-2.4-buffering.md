@@ -6,15 +6,18 @@ title: Buffring
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 2%
 
 ---
 
 
-# Buffring{#buffering}
+# Buffrar{#buffering}
 
 Du kan konfigurera visuellt för att meddela användaren att innehållet buffras.
 
-Lyssna efter `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` händelser och `AdobePSDK.PSDKEventType.BUFFERING_END` händelser. Exempel:
+Lyssna efter `AdobePSDK.PSDKEventType.BUFFERING_BEGIN`- och `AdobePSDK.PSDKEventType.BUFFERING_END`-händelser. Exempel:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
