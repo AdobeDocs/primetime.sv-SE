@@ -6,6 +6,9 @@ title: AC-3 5.1-format
 uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ TVSDK stöder följande AC-3 5.1-funktioner:
 
 >[!IMPORTANT]
 >
->TVSDK stöder endast AC-3 5.1-funktionerna på enheten Amazon Fire TV 1:a generationen.
+>TVSDK stöder endast AC-3 5.1-funktionerna på enheten med första generationen av Amazon Fire TV.
 
 Följande AC-3 5.1-funktioner stöds inte:
 
