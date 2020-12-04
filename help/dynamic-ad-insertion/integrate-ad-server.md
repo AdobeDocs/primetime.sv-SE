@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Integrera er annonsserver {#integrate-ad-server}
+# Integrera annonsservern {#integrate-ad-server}
 
 Till att börja med får du en inloggning för att komma åt Primetimes Ad Insertion-konsol, där du ställer in regler som Primetime Ad Insertion använder för att vidarebefordra annonsförfrågningar till valfri annonsserver. Primetime Ad Insertion stöder de flesta VAST- eller VMAP-kompatibla annonsservrar.
 
