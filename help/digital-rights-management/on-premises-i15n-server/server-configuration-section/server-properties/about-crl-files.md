@@ -4,6 +4,9 @@ title: Om CRL-filer
 uuid: 672c3ca0-5c5d-4ec7-83b1-f0f8e34c8d09
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,6 @@ Följande är externt värdbaserade CRL:er som bara används av licensservrarna:
 * Fil: [!DNL http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl]
 * Giltighet: Gäller i cirka 3 månader från det att fotot skapades
 
-Utöver de tidigare nämnda CRL:erna måste du skapa och underhålla ytterligare en CRL. Det här är CRL:en för enskilt certifikatutfärdare, enligt vad som anges i avsnittet [Skapa CRL](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) för enskilt certifikatutfärdare i det här dokumentet.
+Utöver de tidigare nämnda CRL:erna måste du skapa och underhålla ytterligare en CRL. Det här är den personliga certifikatutfärdarens lista över återkallade certifikat, som anges i [Skapa certifikatutfärdarens lista över återkallade certifikat](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) i det här dokumentet.
 
 CRL:er är schemalagda att uppdateras 45 dagar innan de upphör att gälla. På så sätt får du tillräckligt med tid för att hämta och installera nyligen genererade listor över återkallade certifikat från Internet. Du måste uppdatera CRL-filer innan de går ut.
