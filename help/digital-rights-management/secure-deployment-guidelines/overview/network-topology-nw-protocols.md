@@ -6,6 +6,9 @@ title: Adobe Primetime DRM-nätverksprotokoll
 uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
@@ -37,12 +40,12 @@ När du konfigurerar en säker nätverksarkitektur krävs följande nätverkspro
 
 ## Portar för programservrar {#ports-for-application-servers}
 
-Du kan konfigurera Adobe Primetime DRM-licensservern så att den använder valfri nätverksport.
+Du kan konfigurera Adobe Primetime DRM-licensservern så att den använder vilken nätverksport som helst.
 
 Portarna måste aktiveras eller inaktiveras på den inre brandväggen, beroende på vilken nätverksfunktion du vill tillåta för klienter som ansluter till den programserver som kör Primetime DRM.
 
 ## Konfigurerar SSL {#configuring-ssl}
 
-SSL (Secure Sockets Layer) krävs endast om du behöver stöd för Flash Media Rights Management Server 1.x-klienter.
+SSL (Secure Sockets Layer) är bara nödvändigt om du behöver stöd för Flash Media Rights Management Server 1.x-klienter.
 
-SSL med klientautentisering krävs för nyckelservern Adobe Primetime DRM. Mer information finns i [Använda Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).
+SSL med klientautentisering krävs för nyckelservern för Adobe Primetime DRM. Mer information finns i [Använda Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).
