@@ -6,6 +6,9 @@ title: Översikt
 uuid: 9752a239-690b-4b2b-aab1-1e82470d84d1
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,13 @@ I den här handboken förutsätts det att du förstår hur du utvecklar program 
 
 ## Om den här guiden {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare med ActionScript på datorer.
+Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare genom att använda ActionScript på datorer.
 
-## Namnområdesnotering i den här handboken {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namnområdesnotering i den här guiden {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Namnområdesprefixet för TVSDK-API `com.adobe.mediacore` utelämnas av utrymmesskäl.
+>API-namnområdesprefixet `com.adobe.mediacore` för TVSDK utelämnas av utrymmesskäl.
 >
 >Många API-element refereras utan sin överordnade klassbeteckning om kontexten är klar.
 
