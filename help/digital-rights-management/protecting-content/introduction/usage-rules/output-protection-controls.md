@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Skydd av utdata{#output-protection-controls}
+# Utdataskyddskontroller{#output-protection-controls}
 
 Utdataskyddet styr parametern om utdata till externa återgivningsenheter är skyddade. Du kan ange begränsningar för analoga och digitala utdata oberoende av varandra.
 
@@ -25,13 +25,13 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
 
 | Alternativ | Stöds i analoga enheter | Stöds i digitala enheter |
 |---|---|---|
-| **Obligatoriskt** - AVS-utdataskydd (Analog Copy Protection) eller CGMS-A-utdataskydd (Copy Generation Management System) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Primetime DRM-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker Primetime DRM 3.0-klienterna aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. | JA | JA |
-| **Krävs** för AVS-stater - AVS-stater måste ha skydd för utdata. Uppspelning tillåts inte på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Ingen uppspelning har angetts. | JA | - |
-| **Använd om tillgängligt** - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Primetime DRM 3.0-klienter försöker aktivera både ACP och CGMS-A, om möjligt. Primetime DRM 2.0-klienter försöker bara aktivera antingen ACP eller CGMS-A. Ett försök görs av Primetime DRM-klienten att aktivera antingen ACP eller CGMS-A. Om försöket lyckas kan det andra alternativet inte aktiveras. Om försöket misslyckas görs sedan ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet upp ändå. | JA | JA |
-| **Använd ACP om det finns** - försök att aktivera AVS-utdataskydd om tillgängligt, men tillåt uppspelning om det inte finns tillgängligt. Skydd är inte tillgängligt på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Inget skydd har angetts. | JA | - |
+| **Obligatoriskt**  - Utdataskydd för analog kopiering (ACP) eller Copy Generation Management System - analog (CGMS-A) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Primetime DRM-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker Primetime DRM 3.0-klienterna aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. | JA | JA |
+| **Krävs**  förAVS - AVS-utdataskydd krävs. Uppspelning tillåts inte på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Ingen uppspelning har angetts. | JA | - |
+| **Använd om tillgängligt**  - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Primetime DRM 3.0-klienter försöker aktivera både ACP och CGMS-A, om möjligt. Primetime DRM 2.0-klienter försöker bara aktivera antingen ACP eller CGMS-A. Ett försök görs av Primetime DRM-klienten att aktivera antingen ACP eller CGMS-A. Om försöket lyckas kan det andra alternativet inte aktiveras. Om försöket misslyckas görs sedan ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet upp ändå. | JA | JA |
+| **Använd ACP om det är tillgängligt**  - Försök att aktivera AVS-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Inget skydd har angetts. | JA | - |
 | **Använd CGMS-A om tillgängligt **— Försök aktivera CGMS-A-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på AVS. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Inget skydd har angetts. | JA | - |
-| **Inget skydd** - Ingen aktivering av utdataskydd krävs för analoga och digitala utdata. | JA | JA |
-| **Ingen uppspelning** - Tillåt inte uppspelning till en extern enhet för analoga och digitala utdata. | JA | JA |
+| **Inget skydd**  - Ingen aktivering av utdataskydd krävs för analoga och digitala utdata. | JA | JA |
+| **Ingen uppspelning**  - Tillåt inte uppspelning till en extern enhet för analoga och digitala utdata. | JA | JA |
 
 >[!NOTE]
 >
