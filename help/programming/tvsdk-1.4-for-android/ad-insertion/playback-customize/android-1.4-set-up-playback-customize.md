@@ -19,10 +19,11 @@ Du kan anpassa eller åsidosätta annonsbeteendet genom att registrera annonspri
 
 Gör något av följande om du vill anpassa annonsbeteenden:
 
-* Implementera `AdPolicySelector` gränssnittet och alla dess metoder.
+* Implementera gränssnittet `AdPolicySelector` och alla dess metoder.
 Det här alternativet rekommenderas om du behöver åsidosätta alla standardbeteenden för annonser.
 
-* Utöka `DefaultAdPolicySelector` klassen och tillhandahålla implementeringar för endast de beteenden som kräver anpassning.
+* Utöka klassen `DefaultAdPolicySelector` och endast tillhandahålla implementeringar för de beteenden som kräver
+anpassning.
 Det här alternativet rekommenderas om du bara behöver åsidosätta några av standardbeteendena.
 
 Utför följande uppgifter för båda alternativen:
