@@ -6,11 +6,14 @@ title: Stöd för VPAID 2.0
 uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
-# Stöd för VPAID 2.0 {#vpaid-ad-support}
+# Stöd för VPAID 2.0 och {#vpaid-ad-support}
 
 Video Player Ad-Serving Interface Definition (VPAID) 2.0 är ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 
@@ -38,18 +41,18 @@ Följande funktioner stöds inte:
 
 Följande ändringar har gjorts i API:t:
 
-* `PTAuditudeMetadata` har en `customAdLoadTimeout` egenskap som ändrar standardtidsgränsen för VPAID-inläsningsprocessen.
+* `PTAuditudeMetadata` har en  `customAdLoadTimeout` egenskap som ändrar standardtidsgränsen för VPAID-inläsningsprocessen.
 
    Standardvärdet för timeout är 10 sekunder.
 
-* `PTMediaPlayerCustomAdNotification` skickas från `PTMediaPlayer` instansen
+* `PTMediaPlayerCustomAdNotification` skickas från  `PTMediaPlayer` instansen
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
 Under uppspelningen av VPAID-annonsen:
 
 * VPAID-annonsen visas i en visningsbehållare ovanför spelarvyn, så koden som är beroende av att användarna trycker på spelarvyn fungerar inte.
-* Huvudinnehållsspelaren pausas och anrop till `pause` och `play` på spelarinstansen används för att pausa och återuppta VPAID-annonsen.
+* Huvudinnehållsspelaren är pausad och anrop till `pause` och `play` på spelarinstansen används för att pausa och återuppta annonsen för VPAID.
 
 * VPAID-annonser har ingen fördefinierad varaktighet eftersom annonsen kan vara interaktiv.
 
