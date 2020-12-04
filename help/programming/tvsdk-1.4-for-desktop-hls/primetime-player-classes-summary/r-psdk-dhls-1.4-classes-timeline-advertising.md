@@ -6,21 +6,25 @@ title: Tidslinjeannonsklasser
 uuid: f424fa13-778b-458d-bc82-389441a8a56a
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
 
-# Tidslinjeannonsklasser {#timeline-advertising-classes}
+# Annonsklasser för tidslinje {#timeline-advertising-classes}
 
 Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 
-Paket: [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/package-detail.html)Package: [com.adobe.mediacore.timeline.advertising.policy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/package-detail.html)
+Paket: [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/package-detail.html)
+Paket: [com.adobe.mediacore.timeline.advertising.policy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/package-detail.html)
 
 | Namn | Beskrivning |
 |---|---|
-| [Annons](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och en `MediaResource`. Innehåller den URL-adress där det faktiska annonsinnehållet finns. `MediaResource` |
+| [Annons](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och ett `MediaResource`. `MediaResource` innehåller URL:en där det faktiska annonsinnehållet finns. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | En klass som representerar en resurs som ska visas. En klass som representerar en annonsresurs. |
-| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. |
+| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. |
 | [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakPolicy.html) | En uppräkning som definierar annonsuppspelningsprincipen som relaterar till användaren som åsidosätter annonser vid sökning. |
 | [AdBreakTimelineItem](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreakTimelineItem.html) | Tidslinjeobjekt som är associerat med en viss annonsbrytning. |
 | [AdBreakWatchedPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakWatchedPolicy.html) | Uppräkningsklass för möjliga principer för när en annonsbrytning ska markeras som bevakad. |
