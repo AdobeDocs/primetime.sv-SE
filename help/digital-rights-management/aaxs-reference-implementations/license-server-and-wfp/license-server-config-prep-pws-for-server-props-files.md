@@ -4,19 +4,22 @@ title: Förbereda lösenord för serveregenskapsfiler
 uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Förbereda lösenord för serveregenskapsfiler {#preparing-passwords-for-the-server-properties-files}
+# Förbereder lösenord för serveregenskapsfilerna {#preparing-passwords-for-the-server-properties-files}
 
-För att säkerställa säkerheten för inloggningsuppgiftens lösenord finns det ett verktyg som krypterar lösenordet innan det anges i [!DNL flashaccess-refimpl.properties] eller [!DNL flashaccess-refimpl-packager.properties] filen.
+För att säkerställa säkerheten för autentiseringsuppgiftens lösenord finns det ett verktyg för att kryptera lösenordet innan det anges i [!DNL flashaccess-refimpl.properties]- eller [!DNL flashaccess-refimpl-packager.properties]-filen.
 
 Så här kör du verktyget med det ANT-skript som finns:
 
-* Gå till *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* Gå till *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Kontrollera att `sdkdir` egenskapen i [!DNL build-refimpl.xml] pekar mot katalogen som innehåller Adobe Access SDK
+* Kontrollera att egenskapen `sdkdir` i [!DNL build-refimpl.xml] pekar på katalogen som innehåller Adobe Access SDK
 * Kör följande kommando med ANT:
 
    ```
@@ -27,7 +30,7 @@ Så här kör du verktyget med det ANT-skript som finns:
 
 Så här kör du verktyget med Java:
 
-* Gå till *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
+* Gå till *`<Reference Implementation Server Path>`*\[!DNL scrambler]
 
 * Ange kommandot från kommandotolken:
 
