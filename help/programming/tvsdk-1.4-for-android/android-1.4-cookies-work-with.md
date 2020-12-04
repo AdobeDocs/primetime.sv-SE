@@ -26,7 +26,7 @@ Här följer ett exempel med någon typ av autentisering när begäranden görs 
 
 Så här arbetar du med cookies:
 
-1. Skapa en `cookieManager` och lägg till dina cookies för URI:erna i din `cookieStore`mapp.
+1. Skapa en `cookieManager` och lägg till dina cookies för URI:erna i din `cookieStore`.
 
    Exempel:
 
@@ -46,7 +46,7 @@ Så här arbetar du med cookies:
 
    TVSDK skickar frågor till denna cookieManager vid körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder dem automatiskt.
 
-   Ett annat alternativ är att använda `cookieHeaders` i `NetworkConfiguration` för att ange en godtycklig cookie-huvudsträng som ska användas för begäranden. Denna cookie-rubrik skickas som standard endast med nyckelbegäranden. Om du vill skicka cookie-huvudet med alla begäranden använder du `NetworkConfiguration` metoden `setUseCookieHeadersForAllRequests`:
+   Ett annat alternativ är att använda `cookieHeaders` i `NetworkConfiguration` för att ange en godtycklig cookie-huvudsträng som ska användas för begäranden. Denna cookie-rubrik skickas som standard endast med nyckelbegäranden. Om du vill skicka cookie-huvudet med alla begäranden använder du metoden `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
