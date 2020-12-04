@@ -6,6 +6,9 @@ title: Hantera domäner
 uuid: 30b73e38-d6ed-43c6-89ba-ae8616383779
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 0%
 
 ---
 
