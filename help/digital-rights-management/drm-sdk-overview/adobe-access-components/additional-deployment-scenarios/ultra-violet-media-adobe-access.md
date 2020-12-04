@@ -4,15 +4,18 @@ title: UltraViolet media och Adobe Primetime DRM
 uuid: 7076c0f9-e092-48e4-9118-8a414bd03c7a
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 
-# UltraViolet media och Adobe Primetime DRM {#ultraviolet-media-and-adobe-primetime-drm}
+# UltraViolet-media och Adobe Primetime DRM {#ultraviolet-media-and-adobe-primetime-drm}
 
 Adobe Primetime DRM kan användas tillsammans med andra tredjepartslösningar för innehållsströmning för att skapa ett komplett och säkert DRM-baserat mediedistributionssystem.
 
-UltraViolet ( [https://www.myuv.com/](https://www.uvvu.com/)) är ett system för autentisering av digitala rättigheter och molnbaserad distribution som gör det möjligt för konsumenter av digitalt hemunderhållningsinnehåll att strömma och ladda ned köpt innehåll via flera plattformar och enheter. UltraViolet-innehåll laddas ned (eller direktuppspelas) i ett Common File Format (CFF) med Common Encryption (CENC).
+UltraViolet ( [https://www.myuv.com/](https://www.uvvu.com/)) är ett system för autentisering av digitala rättigheter och molnbaserad distribution som gör det möjligt för användare av digitalt underhållningsinnehåll att strömma och ladda ned köpt innehåll via flera plattformar och enheter. UltraViolet-innehåll laddas ned (eller direktuppspelas) i ett Common File Format (CFF) med Common Encryption (CENC).
 
 Det är enkelt att skapa ett UltraViolet-system tillsammans med Adobe Primetime DRM. I följande exempel visas hur innehållsflödet fungerar:
 
