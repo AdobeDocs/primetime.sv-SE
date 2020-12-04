@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Blockeringslista i programkörningar {#blocklist-of-application-runtimes}
+# Blockeringslista i programkörningsmiljöerna {#blocklist-of-application-runtimes}
 
-Blockeringslista i programkörningar anger vilken version av Primetime-klienten eller Flash Runtime som inte har åtkomst till innehållet. Ange begränsad körningsmiljö (Flash Player, AIR eller iOS), plattform och version.
+Blockeringslista i programkörningar anger vilken version av Primetime-klienten eller Flash Runtime som inte har åtkomst till innehåll. Ange begränsad körningsmiljö (Flash Player, AIR eller iOS), plattform och version.
 
-Exempel: På samma sätt som Primetime DRM Client blockeringslista kan den senaste versionen av Flash Player-, AIR- eller iOS-runtimes anges som den lägsta version som krävs för hämtning av licenser och uppspelning av innehåll.
+Exempel: På samma sätt som Primetime DRM Client blockeringslista kan den senaste versionen av Flash Player, AIR eller iOS anges som den lägsta version som krävs för hämtning av licenser och uppspelning av innehåll.
 
 Du kan identifiera programkörningen med något av attributen som stöds för Primetime DRM-klientversioner, förutom följande attribut:
 
