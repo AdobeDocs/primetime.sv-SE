@@ -6,6 +6,9 @@ title: AC-3 5.1-format
 uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Mer information finns i [Dolby Digital 5.1](https://www.dolby.com/us/en/technolo
 
 >[!IMPORTANT]
 >
->TVSDK version 1.4 stöder AC-3 5.1-formatet endast på Amazon FireTV.
+>TVSDK version 1.4 har endast stöd för AC-3 5.1-formatet på Amazon FireTV.
 
 TVSDK stöder följande AC-3 5.1-funktioner:
 
@@ -35,7 +38,7 @@ TVSDK stöder följande AC-3 5.1-funktioner:
 
    I genomströmningsläget ändras eller ändras inte TVSDK (beroende på enhet) Dolby-media från Decoder, i stället för att avkoda media från AC-3 5.1-formatet till ett PCM-format (multichannel pulse-code modulation). Det här mediet skickas till ljudenheten (högtalare eller mottagare) så att ljudenheten kan avkoda och spela upp Dolby-surroundströmmen.
 
-TVSDK stöder endast AC-3 5.1-funktionerna på enheten Amazon Fire TV 1:a generationen.
+TVSDK stöder endast AC-3 5.1-funktionerna på enheten med första generationen av Amazon Fire TV.
 
 Följande AC-3 5.1-funktioner stöds inte:
 
@@ -56,7 +59,7 @@ Här är det typiska arbetsflödet som inträffar när TVSDK hittar ett manifest
 >
 >Programmet kan inte få information om ignorerade profiler.
 
-## Bestämma utdataläge {#section_64145D9824594C36AADBF0482C528767}
+## Bestämma utdataläget {#section_64145D9824594C36AADBF0482C528767}
 
 Om en Android-enhet är ansluten till högtalarsystemet beror beslutet att spela upp innehåll i surroundläge eller stereoläge på hur enheten är konfigurerad när du bearbetar AC-3-media.
 
