@@ -6,6 +6,9 @@ title: Arbeta med cookies
 uuid: a3b966fd-1263-458d-8303-b4e898372ee1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Här följer ett exempel på en begäran till nyckelservern med viss autentiseri
 
 Så här arbetar du med cookies:
 
-Skapa en `cookieManager` och lägg till dina cookies för URI:er i din cookieStore.
+Skapa en `cookieManager` och lägg till dina cookies för URI:erna i din cookieStore.
 
 Exempel:
 
@@ -45,7 +48,7 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 >
 >När 302-omdirigering är aktiverat kan annonsbegäran omdirigeras till en annan domän än den domän som cookien tillhör.
 
-TVSDK frågar detta `cookieManager` under körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder automatiskt dessa cookies.
+TVSDK skickar frågor till denna `cookieManager` vid körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder automatiskt dessa cookies.
 
 Händelsen MediaPlayerEvent.COOKIES_UPDATED anropas när C++-cookies uppdateras. Denna cookiesUpdatedEvent har en metod, getCookieString(), som returnerar ett strängvärde för cookien.
 
