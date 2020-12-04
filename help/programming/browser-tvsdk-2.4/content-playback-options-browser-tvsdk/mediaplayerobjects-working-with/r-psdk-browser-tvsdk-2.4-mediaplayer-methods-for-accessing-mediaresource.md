@@ -28,50 +28,51 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Liveström </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> True om strömmen är live; false om det är VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Undertexter </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> True om det finns spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> Hämtar det textningsspår som markerades med <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> Hämtar det textningsspår som valdes med <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Alternativt ljud </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>True om strömmen har alternativa ljudspår. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga alternativa ljudspår. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      Hämtar det markerade ljudspåret som markerades med <span class="codeph"> selectAudioTrack </span>. 
+      Hämtar det markerade ljudspåret som markerades med 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Tidsbestämda metadata </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> True if the stream has associated timed metadata. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> Innehåller en lista över de tidsbestämda metadataobjekt som är associerade med strömmen. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Flera profiler (bithastighet) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profiler </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profiler  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Medieresurs </td> 
-   <td colname="2"> <span class="codeph"> resurs </span> </td> 
+   <td colname="2"> <span class="codeph"> resurs  </span> </td> 
    <td colname="3"> Returnerar den medieresurs som är associerad med det här objektet. </td> 
   </tr> 
  </tbody> 
