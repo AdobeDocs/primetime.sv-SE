@@ -6,6 +6,9 @@ title: Använd tidsbestämda metadata
 uuid: 1531780f-2502-4235-818c-6c0a6bf3d348
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 
-Om du vill använda de här sparade `PTTimedMetadata` objekten under uppspelning använder du den sparade ordlistan från [Store som tidsbestämda metadataobjekt när de skickas](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
+Om du vill använda dessa sparade `PTTimedMetadata`-objekt under uppspelning använder du den sparade ordlistan från [Lagra tidsbestämda metadataobjekt när de skickas](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
 
-1. Extrahera och uppdatera den aktuella uppspelningstiden från det här meddelandet och hitta alla `PTTimedMetadata` objekt med starttider som matchar den aktuella uppspelningstiden.
+1. Extrahera och uppdatera den aktuella uppspelningstiden från det här meddelandet och hitta alla `PTTimedMetadata`-objekt med starttider som matchar den aktuella uppspelningstiden.
 
    Du kan använda dessa objekt för att slutföra olika åtgärder.
 
@@ -57,4 +60,4 @@ Om du vill använda de här sparade `PTTimedMetadata` objekten under uppspelning
    }
    ```
 
-1. Justera regelbundet inaktuella `PTTimedMetadata` instanser från listan för att förhindra att minnet växer kontinuerligt.
+1. Justera regelbundet inaktuella `PTTimedMetadata`-instanser från listan för att förhindra att minnet växer kontinuerligt.
