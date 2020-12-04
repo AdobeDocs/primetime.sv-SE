@@ -6,6 +6,9 @@ title: Ändringar i VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ Exempel på situationer där du kan vilja ersätta en VOD-tidslinje är:
 * Ersätt dynamiskt gamla C3-annonser med nyare annonser med längre varaktighet.
 * Infoga färre annonser eller inga alls.
 
-Du kan ersätta annonstidslinjen genom att skicka in en ny annonsbegäran med den ursprungliga M3U8-filen och ett annat värde för `pttimeline` frågeparametern.
+Du kan ersätta annonstidslinjen genom att skicka en ny annonsinsättningsbegäran med den ursprungliga M3U8-filen och ett annat värde för frågeparametern `pttimeline`.
