@@ -9,6 +9,9 @@ products: SG_PRIMETIME
 discoiquuid: a6dbcc4a-9e14-4452-9004-b39ed13fad6f
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '1988'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Här hittar du dokumentation:
 
 Javadocs är den ultimata auktoriteten eftersom de automatiskt genereras direkt från TVSDK-källkoden.
 
-・ [C++ API-dokumentation TVSDK 2.4 för Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
+・ [API-dokumentation för C++ TVSDK 2.4 för Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
 Varje Java-klass har en motsvarande C++-klass, och C++-dokumentationen innehåller mer förklarande material än Javadocs, så se C++-dokumentationen för en mer detaljerad förståelse av Java API.
 
@@ -49,12 +52,12 @@ Här är de viktigaste nya funktionerna i version 2.4.1:
 
 * Funktioner i HLS version 4
 
-   * **Videouppspelning** (play, pause, seek) med spelarkontroll för live-, linear- och VOD-strömmar.
+   * **Videouppspelning**  (spela upp, pausa, söka) med spelarkontroll för live-, linjärt- och VOD-strömmar.
    * **Undertexter.** TVSDK kan visa undertexter för 608/708 med ett urval av teckensnitt, teckenstorlekar, färger och bakgrund. Det kan även stödja videor med uppslagna beskrivningar och växla mellan språkspår om sådana finns.
-   * **Trick play-läge** stöder snabb framåtspolning och tillbakaspolning för HLS-strömmar som använder I-Frames. Alla videouppspelningskontroller fungerar på innehållet. Långsam rörelse (framåt) är tillgängligt för externt videouppspelningsläge med hastigheter mellan 0 och 1.
+   * **Trick play-** läge stöder snabb framåtspolning och tillbakaspolning för HLS-strömmar som använder I-Frames. Alla videouppspelningskontroller fungerar på innehållet. Långsam rörelse (framåt) är tillgängligt för externt videouppspelningsläge med hastigheter mellan 0 och 1.
    * **Med adaptiv bithastighet (ABR)** kan spelaren dynamiskt välja vilken av flera versioner av samma innehållsström som ska spelas upp, baserat på nätverk och andra förhållanden. Du kan ange parametrar dynamiskt eller i manifestfilen för att välja bland aggressiva, måttliga och konservativa markeringsprinciper.
-   * **Byteintervall** gör att en enda TS-fil kan innehålla flera TS-segment.
-   * **Med alternativa ljudåtergivningar** kan spelaren växla mellan tillgängliga ljudspår.
+   * **Byte-** intervall gör att en enda TS-fil kan innehålla flera TS-segment.
+   * **Alternativa** ljudåtergivningsbara spelaren för att växla mellan tillgängliga ljudspår.
    * **ID3-stöd.** TVSDK kan spela upp HLS-ljud- och videoströmmar som innehåller ID3-ljudmetadata, till exempel artistnamn, titel och album.
    * **Redundans. **TVSDK använder strategier för att fortsätta oavbruten uppspelning, trots fel i värdservrar, spellistfiler och segment.
    * **Flerkanaligt ljudpass-through (DD+).** TVSDK kan skicka Dolby Digital Plus-ljuddata (E-AC3) till hårdvara.
@@ -70,26 +73,26 @@ Här är de viktigaste nya funktionerna i version 2.4.1:
       * IV-rotation
 
 * **AES 128-uppspelning.** TVSDK kan spela upp HLS-innehåll enligt den avancerade krypteringsstandarden (AES) med en nyckelstorlek på 128 bitar.
-* **Skyddad HLS (PHLS)** innehåller en begränsad uppsättning färdiga DRM-principer, en deluppsättning av vad Adobe Access erbjuder, för att aktivera lättviktig DRM över HLS för live- och VOD-strömmar.
+* **Skyddad HLS (PHLS)** innehåller en begränsad uppsättning färdiga DRM-principer, en delmängd av vad Adobe Access tillhandahåller, för att aktivera lättviktig DRM över HLS för live- och VOD-strömmar.
 
 * Reklam/alternativt innehåll och intäktsfunktioner
 
    * **Spårning för annonser som infogats på serversidan.** TVSDK kan spåra annonser som infogats av annonsinfogningstjänsten i Adobe Cloud. Det har stöd för linjära annonser i formaten VAST2, VAST3 och VMAP för VOD och live/linear streams.
-   * **Anpassade HLS-taggar.** TVSDK använder sin `MediaPlayerConfig` klass för att aktivera meddelanden till spelarprogrammet när anpassade HLS-taggar visas i strömmen.
-   * **Annonsinfogning på klientsidan.** Biblioteket för annonsinfogning i Auditude fungerar tillsammans med Adobe Auditude-servrar för att matcha annonser som kan infogas dynamiskt i live-, linjärt- och VOD-innehåll, på pre-roll-, center- eller post-roll-positioner.
-   * **Anpassade annonslösare.** Med gränssnitten `ContentResolver, OpportunityGenerator,` och `MediaPlayerClientFactory` kan du implementera en anpassad annons/alternativ innehållshanterare och registrera en anpassad affärsmöjlighetsdetektor för att arbeta med TVSDK. Klasserna `TestAdResolver` och `AuditudeResolver` innehåller C++ exempel på implementering av en innehållslösare. Du hittar ett Javascript-exempel på `samples/jspsdk/testapp/psdk.js`.
-   * **Enhetligt annonsbeteende.** Använd `AdPolicySelector` gränssnittet för att aktivera konsekvent beteende i alla spelare för åtgärder som sökning och trick play när det finns annonser i innehållet. Om du inte implementerar din egen, använder TVSDK `DefaultAdPolicySelector`.
+   * **Anpassade HLS-taggar.** TVSDK använder sin  `MediaPlayerConfig` klass för att aktivera meddelanden till spelarprogrammet när anpassade HLS-taggar visas i strömmen.
+   * **Annonsinfogning på klientsidan.** Biblioteket för annonsinfogning i Auditude fungerar tillsammans med Adobe Auditude-servrar för att matcha annonser för dynamisk infogning i live-, linjärt- och VOD-innehåll, både före- och efter-rollpositioner.
+   * **Anpassade annonslösare.** Tack vare  `ContentResolver, OpportunityGenerator,` gränssnittet och  `MediaPlayerClientFactory` gränssnittet kan du implementera en anpassad annons/alternativ innehållshanterare och registrera en anpassad affärsmöjlighetsdetektor för att arbeta med TVSDK. Klasserna `TestAdResolver` och `AuditudeResolver` innehåller C++-exempel på implementering av en innehållslösare. Du hittar ett Javascript-exempel på `samples/jspsdk/testapp/psdk.js`.
+   * **Enhetligt annonsbeteende.** Använd  `AdPolicySelector` gränssnittet för att aktivera konsekvent beteende i alla spelare för åtgärder som sökning och tricks spelar när det finns annonser i innehållet. Om du inte implementerar din egen använder TVSDK `DefaultAdPolicySelector`.
    * **Ta bort/byt ut C3-annonser.** Använd lämpligt TVSDK API för att ta bort anpassade innehållsområden och dynamiskt infoga nya annonser utan ytterligare förberedelser. Detta är praktiskt när live/linjärt innehåll sänds och sedan omedelbart görs tillgängligt på begäran utan rensning.
 
 Här är de viktigaste nya funktionerna i version 2.4:
 
-* **Direkt aktiverat för VOD och live** När du aktiverar direkt initieras och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera `MediaPlayerItemLoader` instanser samtidigt i bakgrunden kan du buffra flera strömmar samtidigt. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.4 har även stöd för Instant On för liveströmmar. De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
+* **Direkt aktiverat för VOD och** liveNär du aktiverar direkt initieras och buffrar TVSDK medier innan uppspelningen startar. Eftersom du kan starta flera `MediaPlayerItemLoader`-instanser samtidigt i bakgrunden kan du buffra flera strömmar samtidigt. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.4 har även stöd för Instant On för liveströmmar. De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
 
 * **Prestandaförbättringar **Den nya TVSDK 2.4-arkitekturen har flera prestandaförbättringar:
 
-   * **Delsegmentering** - TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt.
-   * **Parallella annonshämtningar** - TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
-   * **Lazy-annonsupplösning** - Med den här funktionen väntar vi inte på upplösning av annonser som inte är färdiga innan vi påbörjar uppspelningen, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta.
+   * **Delsegmentering**  - TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt.
+   * **Parallella annonshämtningar**  - TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
+   * **Lazy-annonsupplösning**  - Med den här funktionen väntar vi inte på upplösning av annonser som inte är färdiga innan vi påbörjar uppspelningen, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta.
 
 * **Uppspelning av MP4-innehåll**
 
@@ -121,7 +124,7 @@ Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffe
 
 * **Fakturering**
 
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK API:t för datainfogning i Adobe Analytics för att skicka faktureringsmått som innehållstyp, inmatningsaktiverade flaggor och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens längd - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
 
 ## Funktioner som stöds {#supported-features}
 
@@ -131,28 +134,28 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 >
 >I funktionens matristabeller nedan betyder en Ö att funktionen stöds i den aktuella versionen.
 
-### Kärnfunktioner för uppspelning {#core-playback-features}
+### Core Playback Features {#core-playback-features}
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allmän uppspelning (Play, Pause, Seek) | VOD + Live | √ | ² (endast VOD) |
-| FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | √ | Stöds inte |
+| Allmän uppspelning (Play, Pause, Seek) | VOD + Live | Ð | ² (endast VOD) |
+| FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | Ð | Stöds inte |
 | MP3 | VOD | Stöds inte | Stöds inte |
-| Uppspelning av MP4-innehåll | VOD | √ | √ |
-| Adaptiv logik för växling av bithastighet | VOD + Live | √ | Stöds inte |
-| Uppspelning endast av ljud | VOD + Live | √ | Stöds inte |
-| Undertexter - 608/708 | VOD + Live | √ | ² (endast VOD) |
-| Undertexter - WebVTT | VOD + Live | √ | ² (endast VOD) |
-| Manifestväxling vid fel | VOD + Live | √ | ² (endast VOD) |
-| Avancerad redundans | VOD + Live | √ | ² (endast VOD) |
-| QoS och spelarmeddelanden | VOD + Live | √ | ² (endast VOD) |
-| Stöd för cookie-rubriker | VOD + Live | √ | ² (endast VOD) |
+| Uppspelning av MP4-innehåll | VOD | Ð | Ð |
+| Adaptiv logik för växling av bithastighet | VOD + Live | Ð | Stöds inte |
+| Uppspelning endast av ljud | VOD + Live | Ð | Stöds inte |
+| Undertexter - 608/708 | VOD + Live | Ð | ² (endast VOD) |
+| Undertexter - WebVTT | VOD + Live | Ð | ² (endast VOD) |
+| Manifestväxling vid fel | VOD + Live | Ð | ² (endast VOD) |
+| Avancerad redundans | VOD + Live | Ð | ² (endast VOD) |
+| QoS och spelarmeddelanden | VOD + Live | Ð | ² (endast VOD) |
+| Stöd för cookie-rubriker | VOD + Live | Ð | ² (endast VOD) |
 | Stöd för anpassade rubriker | VOD + Live | Stöds inte | Stöds inte |
-| Ange parametrar för buffertkontroll | VOD + Live | √ | ² (endast VOD) |
-| Ange adaptiva bithastighetskontroller | VOD + Live | √ | ² (endast VOD) |
-| Anpassade Manifest-taggar (HLS)/händelseströmmar (DASH) | VOD + Live | √ | ² (endast VOD) |
-| Sena bundna ljud | VOD + Live | √ | ² (endast VOD) |
-| 302 Omdirigering | VOD + Live | √ | ² (endast VOD) |
+| Ange parametrar för buffertkontroll | VOD + Live | Ð | ² (endast VOD) |
+| Ange adaptiva bithastighetskontroller | VOD + Live | Ð | ² (endast VOD) |
+| Anpassade Manifest-taggar (HLS)/händelseströmmar (DASH) | VOD + Live | Ð | ² (endast VOD) |
+| Sena bundna ljud | VOD + Live | Ð | ² (endast VOD) |
+| 302 Omdirigering | VOD + Live | Ð | ² (endast VOD) |
 
 ### Avancerade uppspelningsfunktioner {#advanced-playback-features}
 
@@ -167,31 +170,31 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Uppspelning med förskjutning</td> 
    <td>Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Uppspelning endast av ljud</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Trick Play </td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Smooth Trick Play (med ABR)</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>ID3-parsning (HLS) / Timed Metadata (DASH)</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -203,7 +206,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Direkt på</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -213,13 +216,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
      <li>Flera punkter (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>302 Omdirigera Stickyness</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>² (endast VOD)</td> 
   </tr>
   <tr>
@@ -231,21 +234,21 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Strömintegritet </td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
  </tbody>
 </table>
 
-### CSAI (Core Ad Insertion Features) {#core-ad-insertion-features-csai}
+### Core Ad Insertion Features (CSAI) {#core-ad-insertion-features-csai}
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allmän uppspelning, annonser aktiverade | VOD + Live | √ | ² (endast VOD-förrullningar) |
-| FER-innehåll med annonser aktiverade | VOD | √ | Stöds inte |
-| Standardbeteenden för annonser | VOD + Live | √ | ² (endast VOD-förrullningar) |
-| VAST 2.0/3.0 | VOD + Live | √ | ² (endast VOD-förrullningar) |
-| VMAP 1.0 | VOD + Live | √ | ² (endast VOD-förrullningar) |
+| Allmän uppspelning, annonser aktiverade | VOD + Live | Ð | ² (endast VOD-förrullningar) |
+| FER-innehåll med annonser aktiverade | VOD | Ð | Stöds inte |
+| Standardbeteenden för annonser | VOD + Live | Ð | ² (endast VOD-förrullningar) |
+| VAST 2.0/3.0 | VOD + Live | Ð | ² (endast VOD-förrullningar) |
+| VMAP 1.0 | VOD + Live | Ð | ² (endast VOD-förrullningar) |
 | MP4-annonser | VOD + Live | ² (från CRS) | ■ (från CRS, endast för rullning) |
 
 ### Advanced Ad Insertion Features (CSAI) {#advanced-ad-insertion-features-csai}
@@ -261,7 +264,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Trick Play med annonser aktiverade</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -273,31 +276,31 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Målparametrar</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Egna parametrar</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Anpassade annonsbeteenden</td> 
    <td>VOD + Live</td> 
-   <td>√</td> 
+   <td>Ð</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Anpassade annonstaggar</td> 
    <td>Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Anpassade annonslösare</td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -309,13 +312,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>C3 Ad Replacement </td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Lazy Ad Loading</td> 
    <td>VOD</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -325,13 +328,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
      <li>Flera punkter (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Companion Ads, Banner Ads och Clickable Ads</td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
@@ -343,31 +346,31 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Tidigt annonsutträde</td> 
    <td>Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Regelbaserad Creative VOD + Live Prioritization</td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>CRS-regler </td> 
    <td>VOD + Live</td> 
-   <td>√ </td> 
+   <td>Ð </td> 
    <td>Stöds inte</td> 
   </tr>
  </tbody>
 </table>
 
-## Funktioner för innehållsskydd {#content-protection-features}
+## Innehållsskyddsfunktioner {#content-protection-features}
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| AES-kryptering | VOD + Live | √ | ² (endast VOD) |
-| AES-kryptering - exempel | VOD + Live | √ |  |
-| Tokeniserade strömmar | VOD + Live | √ |  |
+| AES-kryptering | VOD + Live | Ð | ² (endast VOD) |
+| AES-kryptering - exempel | VOD + Live | Ð |  |
+| Tokeniserade strömmar | VOD + Live | Ð |  |
 | DRM | VOD + Live | Primetime DRM only (Future: WideVM) | Endast bredbara |
 | Extern uppspelning (RBOP) | VOD + Live | Endast Primetime DRM | Stöds inte |
 | Licensrotation | VOD + Live | Endast Primetime DRM | Stöds inte |
@@ -377,8 +380,8 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Integrering med Adobe Analytics VHL | VOD + Live | √ | √ |
-| Fakturering | VOD + Live | √ | Stöds inte |
+| Integrering med Adobe Analytics VHL | VOD + Live | Ð | Ð |
+| Fakturering | VOD + Live | Ð | Stöds inte |
 
 ## Funktioner som inte stöds {#features-not-supported}
 
@@ -408,4 +411,4 @@ Utan video finns det ingen visningsrutedimension och utan visningsrutedimension 
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
