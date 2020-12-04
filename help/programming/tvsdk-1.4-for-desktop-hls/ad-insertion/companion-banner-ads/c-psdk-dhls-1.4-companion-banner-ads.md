@@ -6,15 +6,18 @@ title: Companion banner ads
 uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
 
-# Companion banner ads {#companion-banner-ads}
+# Banderollannonser {#companion-banner-ads}
 
 TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
-Följ dessa rekommendationer när du visar följeslagarannonser:
+Följ de här rekommendationerna när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
 * Visa bara en tilläggsbanderoll om du har en plats som exakt matchar den angivna höjden och bredden.
@@ -35,8 +38,8 @@ Innehållet i en AdBannerAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Händelsen `AdPlaybackEvent.AD_STARTED` returnerar en `Ad` instans som innehåller en `companionAssets` egenskap ( `Vector.<AdAsset>`).
-Var och en `AdAsset` innehåller information om hur resursen visas.
+Händelsen `AdPlaybackEvent.AD_STARTED` returnerar en `Ad`-instans som innehåller en `companionAssets`-egenskap ( `Vector.<AdAsset>`).
+Var `AdAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -68,7 +71,7 @@ Var och en `AdAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1"> statisk URL </td> 
-   <td colname="col2"> <p>Ibland har den tillhörande banderollen också en statisk URL som är en direkt URL till bilden eller till en <span class="filepath"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du i stället använda en direkt URL till en bild eller swf för att visa banderollen i Flash-scenen. I det här fallet kan du använda staticURL för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
+   <td colname="col2"> <p>Ibland har den tillhörande banderollen också en staticURL som är en direkt URL till bilden eller till en <span class="filepath"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild eller swf för att visa banderollen på scenen Flash i stället. I det här fallet kan du använda staticURL för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -77,17 +80,17 @@ Var och en `AdAsset` innehåller information om hur resursen visas.
 
 Om du vill visa bannerannonser måste du skapa bannerinstanser och tillåta TVSDK att lyssna efter annonsrelaterade händelser.
 
-TVSDK tillhandahåller en lista över banners som är kopplade till en linjär annons via `AdPlaybackEvent.AD_STARTED` eventet.
+TVSDK innehåller en lista med banderollannonser som är kopplade till en linjär annons via händelsen `AdPlaybackEvent.AD_STARTED`.
 
 Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL:en för en statisk bild eller en Adobe Flash SWF-fil
+* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
 
 För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga för ditt program.
 
-Lägg till en avlyssnare för `AdPlaybackEvent.AD_STARTED` händelsen som utför följande:
+Lägg till en avlyssnare för händelsen `AdPlaybackEvent.AD_STARTED` som gör följande:
 
 1. Rensar befintliga annonser i banderollinstansen.
 
@@ -95,15 +98,15 @@ Lägg till en avlyssnare för `AdPlaybackEvent.AD_STARTED` händelsen som utför
 
 1. Om listan med följesedlar inte är tom kan du iterera över listan för banderollinstanser.
 
-   Varje banderollinstans ( an `AdBannerAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
+   Varje banderollinstans ( en `AdBannerAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
 
 1. Om en videoannons inte har några följeslagare bokade med sig innehåller listan med följesedlar inga data för den videoannonsen.
 
    Om du vill visa en fristående visningsannons lägger du till logiken i skriptet för att köra en vanlig DFP-visningstagg (DoubleClick for Publishers) i rätt banderollinstans.
 
-1. Skickar banderollinformationen till en funktion på sidan, vanligtvis JavaScript, med `ExternalInterface`vilket banners visas på lämplig plats.
+1. Skickar banderollinformationen till en funktion på sidan, vanligtvis JavaScript, med `ExternalInterface`, som visar banderollerna på en lämplig plats.
 
-   Detta är vanligtvis en `div`stil, och funktionen använder `div ID` för att visa banderollen. Exempel:
+   Det här är vanligtvis en `div` och funktionen använder `div ID` för att visa banderollen. Exempel:
 
    Lägg till händelseavlyssnaren:
 
