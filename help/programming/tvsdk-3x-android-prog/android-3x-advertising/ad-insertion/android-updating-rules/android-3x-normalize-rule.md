@@ -7,6 +7,9 @@ title: Normalisera regler
 uuid: 8511000e-3a8a-42f3-b4be-d069d09112b0
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '174'
+ht-degree: 0%
 
 ---
 
@@ -29,13 +32,13 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> normalisera</span></td> 
-   <td>Värdet måste alltid vara <span class="codeph"> normaliserat</span>.</td> 
+   <td>Värdet måste alltid vara <span class="codeph"> normalize</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> artikel</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> värd</span></td> 
-   <td>För närvarande stöds bara <span class="codeph"> värden</span> . Det här attributet måste finnas när <span class="codeph"> matchningar</span> och <span class="codeph"> värdeattribut</span> definieras.</td> 
+   <td>För närvarande stöds bara <span class="codeph"> host</span>. Det här attributet måste finnas när <span class="codeph"> matchar</span> och <span class="codeph"> värden</span>-attribut har definierats.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matchar</span></td> 
@@ -43,19 +46,19 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
    <td></td> 
    <td>Möjliga värden:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> - lika med</li> 
+     <li><span class="codeph"> eq</span> - equals</li> 
      <li><span class="codeph"> ne</span> - inte lika med</li> 
-     <li><span class="codeph"> co</span> - innehåller</li> 
-     <li><span class="codeph"> nc</span> - innehåller inte</li> 
+     <li><span class="codeph"> co</span> - contains</li> 
+     <li><span class="codeph"> nc</span> - not contains</li> 
      <li><span class="codeph"> sw</span> - börjar med</li> 
-     <li><span class="codeph"> new</span> - slutar med</li> 
+     <li><span class="codeph"> Nytt</span>  - slutar med</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK använder attributet <span class="codeph"> match</span> på <span class="codeph"> objektet</span> i källfilen som är kreativt och matchar mot värdena som definieras i den här arrayen.</td> 
+   <td>TVSDK använder attributet <span class="codeph"> match</span> för <span class="codeph">-objektet</span> för källans kreativa del och matchar mot värdena som definieras i den här arrayen.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> sök</span></td> 
