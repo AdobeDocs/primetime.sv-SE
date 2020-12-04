@@ -44,7 +44,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Alla lösenord som du har angett i [!DNL flashaccess-global.xml] och [!DNL flashaccess-tenant.xml] filer måste krypteras.
+Alla lösenord som du har angett i filerna [!DNL flashaccess-global.xml] och [!DNL flashaccess-tenant.xml] måste krypteras.
 
 >[!NOTE]
 >
