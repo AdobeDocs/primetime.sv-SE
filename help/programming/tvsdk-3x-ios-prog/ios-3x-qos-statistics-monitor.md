@@ -6,30 +6,33 @@ title: Kvalitetsstatistik för tjänster
 uuid: c08c1031-616a-4776-92e2-1c405467689b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Kvalitetsstatistik för tjänster {#quality-of-service-statistics}
+# Kvalitetsstatistik för tjänsten {#quality-of-service-statistics}
 
 QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 
 ## Läs QOS-uppspelning, buffring och enhetsstatistik {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Du kan läsa uppspelning, buffring och enhetsstatistik från `PTQOSProvider` klassen.
+Du kan läsa uppspelning, buffring och enhetsstatistik från klassen `PTQOSProvider`.
 
-Klassen innehåller `PTQOSProvider` olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
+Klassen `PTQOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
 
 Det innehåller även information om enheten, till exempel modell, operativsystem och tillverkarens enhets-ID.
 
 >[!TIP]
 >
->Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som `playbackBufferFull` och `playbackLikelyToKeepUp`.
+>Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som  `playbackBufferFull` och  `playbackLikelyToKeepUp`.
 
 1. Skapa en mediespelare.
-1. Skapa ett `PTQOSProvider` objekt och bifoga det till mediespelaren.
+1. Skapa ett `PTQOSProvider`-objekt och koppla det till mediespelaren.
 
-   Konstruktorn använder en spelarkontext så att den kan hämta enhetsspecifik information. `PTQOSProvider`
+   Konstruktorn `PTQOSProvider` har en spelarkontext så att den kan hämta enhetsspecifik information.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
