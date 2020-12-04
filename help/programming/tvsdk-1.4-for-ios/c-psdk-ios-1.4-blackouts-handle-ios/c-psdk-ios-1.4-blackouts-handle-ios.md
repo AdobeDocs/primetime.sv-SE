@@ -6,6 +6,9 @@ title: Hantera strömavbrott i liveströmmar
 uuid: 1f70a272-bc77-4d41-a999-b076cb42ac5e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -23,17 +26,17 @@ Så här implementerar du lösningen för detta användningsfall:
    TVSDK känner inte direkt till svarta out-taggar, men det gör att din app kan prenumerera på meddelanden när specifika taggar påträffas under parsning av manifestfiler.
 1. Lägg till en meddelandeavlyssnare för `PTTimedMetadataChangedNotification`.
 
-   Det här meddelandet skickas varje gång en prenumerationstagg tolkas i manifestet och en ny tagg `PTTimedMetadata` förbereds.
+   Det här meddelandet skickas varje gång en prenumerationstagg tolkas i manifestet och en ny `PTTimedMetadata` förbereds.
 
-1. Implementera en avlyssnarmetod, till exempel `onMediaPlayerSubscribedTagIdentified`, för `PTTimedMetadata` objekt i förgrunden.
+1. Implementera en avlyssnarmetod, till exempel `onMediaPlayerSubscribedTagIdentified`, för `PTTimedMetadata`-objekt i förgrunden.
 
-1. Använd avlyssnaren för att hantera `PTMediaPlayerTimeChangeNotification` `PTTimedMetadata` objekt varje gång det finns en uppdatering under uppspelningen.
+1. Varje gång det finns en uppdatering under uppspelningen använder du `PTMediaPlayerTimeChangeNotification`-avlyssnaren för att hantera `PTTimedMetadata`-objekt.
 
-1. Lägg till `PTTimedMetadata` hanteraren.
+1. Lägg till `PTTimedMetadata`-hanteraren.
 
-   Med den här hanteraren kan du växla till alternativt innehåll och gå tillbaka till huvudinnehållet som anges av `PTTimedMetadata` objektet och dess uppspelningstid.
+   Med den här hanteraren kan du växla till alternativt innehåll och gå tillbaka till huvudinnehållet enligt `PTTimedMetadata`-objektet och dess uppspelningstid.
 
-1. Används `onSubscribedTagInBackground` för att implementera avlyssnarmetoden för `PTTimedMetadata` objekt i bakgrunden.
+1. Använd `onSubscribedTagInBackground` för att implementera avlyssnarmetoden för `PTTimedMetadata`-objekt i bakgrunden.
 
    Den här metoden övervakar timingen i bakgrundsströmmen, vilket hjälper dig att avgöra när du kan växla från alternativt innehåll tillbaka till huvudinnehållet.
 
