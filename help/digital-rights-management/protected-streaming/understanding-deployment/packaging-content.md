@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Paketera innehåll{#packaging-content}
+# Paketerar innehåll{#packaging-content}
 
 När du paketerar innehåll måste du ange licensserverns URL.
 
-Adobe Primetime DRM Server-URL:en har följande format:
+Adobe Primetime DRM Server-URL har följande format:
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
@@ -31,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Om varje innehavare använder en annan licensserver och transportautentiseringsuppgifter måste du ange rätt innehavarcertifikat i paketeraren.
 
-Om du vill vara säker på att servern bara utfärdar licenser till innehåll från kända paketerare måste du inkludera paketerarens certifikat i listan över tillåtna för paketering av klientkonfigurationsfilen.
+Om du vill vara säker på att servern bara utfärdar licenser till innehåll från kända paketerare måste du inkludera paketerarens certifikat i paketeraren tillåtelselista i klientkonfigurationsfilen.
