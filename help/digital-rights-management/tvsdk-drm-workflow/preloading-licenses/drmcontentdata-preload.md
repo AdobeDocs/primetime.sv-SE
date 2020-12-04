@@ -6,24 +6,27 @@ title: Använda DRMContentData för att ladda licenser i förväg
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
-# Använda DRMContentData för att ladda licenser i förväg{#using-drmcontentdata-to-pre-load-licenses}
+# Använda DRMContentData för att förhandsladda licenser{#using-drmcontentdata-to-pre-load-licenses}
 
-Följande steg beskriver arbetsflödet för att förhandsladda licensen för en skyddad mediefil med hjälp av ett `DRMContentData` objekt.
+Följande steg beskriver arbetsflödet för att förhandsladda licensen för en skyddad mediefil med ett `DRMContentData`-objekt.
 
 1. Hämta binära DRM-metadata för det packade innehållet.
 
-   Om du använder referensimplementeraren för Java i Primetime DRM skapas denna metadatafil automatiskt med ett [!DNL .metadata] tillägg. Du kan till exempel hämta dessa metadata med `URLLoader` klassen. Om du använder HLS- eller HDS-innehåll refereras metadata till i innehållsmanifestfilen ( [!DNL .m3u8] eller [!DNL .f4m]) eller inkluderas *i* manifestfilen som en Base64-kodad sträng (som måste vara Base64-avkodad innan den används).
-1. Skapa ett `DRMContentData` objekt och skicka metadata till konstruktorfunktionen:
+   Om du använder referensimplementeraren för Java i Primetime DRM skapas den här metadatafilen automatiskt med tillägget [!DNL .metadata]. Du kan till exempel hämta dessa metadata med klassen `URLLoader`. Om du använder HLS- eller HDS-innehåll refereras metadata till i innehållsmanifestfilen ( [!DNL .m3u8] eller [!DNL .f4m]) eller inkluderas *i* manifestfilen som en Base64-kodad sträng (som måste vara Base64-avkodad före förbrukning).
+1. Skapa ett `DRMContentData`-objekt och skicka metadata till konstruktorfunktionen:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. Resten av stegen är identiska med arbetsflödet som beskrivs i Processinformation för *innehållsskydd*.
+1. Resten av stegen är identiska med arbetsflödet som beskrivs i *Processinformation för skydd av innehåll*.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
