@@ -21,14 +21,14 @@ TVSDK stöder lösning och infogning av annonser för VOD och live/linear stream
 
 Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 
-* A, `mediaID`som identifierar det specifika innehåll som ska spelas upp.
+* A `mediaID`, which identify the specific content to play.
 * Din `zoneID`, som identifierar ditt företag eller din webbplats.
 * Din annonsserverdomän, som anger domänen för den tilldelade annonsservern.
 * Andra parametrar för målinriktning.
 
 ## Konfigurera metadata för Primetime och server {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Ditt program måste förse TVSDK med den information som krävs för att ansluta till annonsservern. `PTAuditudeMetadata`
+Ditt program måste förse TVSDK med den nödvändiga `PTAuditudeMetadata`-informationen för att kunna ansluta till annonsservern.
 
 Så här ställer du in annonsserverns metadata:
 
@@ -42,7 +42,7 @@ Så här ställer du in annonsserverns metadata:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Ange `PTAuditudeMetadata` instansen som metadata för aktuella `PTMediaPlayerItem` metadata genom att använda `PTAdResolvingMetadataKey`.
+1. Ange `PTAuditudeMetadata`-instansen som metadata för aktuella `PTMediaPlayerItem`-metadata med `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
