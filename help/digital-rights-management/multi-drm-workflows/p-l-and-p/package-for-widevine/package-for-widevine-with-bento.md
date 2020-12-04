@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Paketera innehåll för WideVM och PlayReady {#package-for-widevine}
+# Paketerar innehåll för WideVM och PlayReady {#package-for-widevine}
 
 Vi använder både Bento4-paketeraren och offlinepaketeraren i Adobe för att skapa krypterat DASH-innehåll. Bento4 används som okrypterat MP4-innehåll.
 
@@ -66,11 +66,11 @@ I exemplet nedan kombineras PlayReady- och Widewin-scheman. I det här specifika
 
 där
 
-Värdet för `--encryption-key` flaggan är i formatet `<base16 encoded key id>:<base16 encoded encryption key>`.
+Värdet för flaggan `--encryption-key` har formatet `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-Flaggan anger att `--widevine-header=provider:intertrust#content_id:2a` paketeraren ska inkludera pssh-rutan i manifestet, som TVSDK för närvarande kräver för uppspelning.
+Flaggan `--widevine-header=provider:intertrust#content_id:2a` anger för paketeraren att inkludera pssh-rutan i manifestet, som för närvarande krävs för uppspelning i TVSDK.
 
-Värdet för `-playready-header` PlayReady är att köpa licenser.
+Värdet för `-playready-header` är för PlayReady-licensförvärv.
 
 ## Paketera ditt innehåll med Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
@@ -92,7 +92,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-I det här specifika fallet lägger offlinepaketeraren till både WideVM-innehållsskydd och PlayReady-innehållsskyddsinitieringsdata till DASH-utdatainnehållet. Värdet för `-key_file_path` är för en base64-kodad nyckel. Värdet av `-playready_LA_URL` är för PlayReady-licensköp.
+I det här specifika fallet lägger offlinepaketeraren till både WideVM-innehållsskydd och PlayReady-innehållsskyddsinitieringsdata till DASH-utdatainnehållet. Värdet `-key_file_path` är för en base64-kodad nyckel. Värdet `-playready_LA_URL` är för PlayReady-licensförvärv.
 
 Argumentet conf_path pekar på en konfigurationsfil som skulle innehålla följande:
 
