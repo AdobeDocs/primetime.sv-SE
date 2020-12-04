@@ -6,6 +6,9 @@ title: DRM-autentisering före uppspelning
 uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -16,10 +19,10 @@ När DRM-metadata för en video är åtskilda från medieströmmen ska du autent
 
 En videoresurs kan ha en associerad DRM-metadatafil. Exempel:
 
-* &quot;url&quot;: &quot;<span></span>https://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot;: &quot;<span></span>https://www.domain.com/asset.metadata&quot;
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-I så fall använder du `DRMHelper` metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering behövs.
+I så fall använder du `DRMHelper`-metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering krävs.
 
 1. Använd `loadDRMMetadata` för att läsa in URL-metadatainnehållet och tolka de hämtade byten till en `DRMMetadata`.
 
@@ -39,7 +42,7 @@ I så fall använder du `DRMHelper` metoder för att hämta innehållet i DRM-me
    ```
 
 1. Eftersom åtgärden är asynkron är det en bra idé att informera användaren om det. Annars kommer han att undra varför hans uppspelning inte börjar. Du kan till exempel visa ett rotationshjul medan DRM-metadata hämtas och tolkas.
-1. Implementera återanropen i `DRMLoadMetadataListener`. Anropar dessa händelsehanterare (skickar dessa händelser). `loadDRMMetadata`
+1. Implementera återanropen i `DRMLoadMetadataListener`. `loadDRMMetadata` anropar dessa händelsehanterare (skickar dessa händelser).
 
    ```java
    public interface  
@@ -62,7 +65,7 @@ I så fall använder du `DRMHelper` metoder för att hämta innehållet i DRM-me
    * `onLoadMetadataUrlComplete` identifierar när metadata-URL:en har lästs in.
    * `onLoadMetadataUrlError` anger att det inte gick att läsa in metadata.
 
-1. När inläsningen är slutförd kontrollerar du objektet för att se om DRM-autentisering behövs. `DRMMetadata` Se det.
+1. När inläsningen är klar kontrollerar du `DRMMetadata`-objektet för att se om DRM-autentisering behövs.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
