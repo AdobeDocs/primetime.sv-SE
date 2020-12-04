@@ -26,7 +26,7 @@ Webbläsare-TVSDK har stöd för ett antal DASH-funktioner som du kan implemente
 
 >[!TIP]
 >
->I tabellen nedan i funktionsmatrisen  ![](assets/supported15.png)
+>![](assets/supported15.png) i funktionens matristabeller nedan
 >betyder att funktionen stöds i den aktuella versionen.
 
 Följande funktioner stöds:
@@ -102,7 +102,7 @@ Följande funktioner stöds:
 | Ad Insertion | VOD | Annonser, banners och klickbara annonser | Stöds inte |
 | Ad Insertion | VOD | VPAID 2.0 | Stöds inte |
 
-## Funktioner för infogning av annonser i DASH-kärnan (CSAI) {#dash-core-ad-insertion}
+## Funktioner för annonsinfogning i DASH-kärna (CSAI) {#dash-core-ad-insertion}
 
 | Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
