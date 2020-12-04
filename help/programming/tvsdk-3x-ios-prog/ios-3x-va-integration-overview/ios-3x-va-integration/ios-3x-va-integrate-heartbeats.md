@@ -6,6 +6,9 @@ title: Initiera och konfigurera videoanalys
 uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -22,23 +25,23 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Viktigt:  Det här JSON-konfigurationsfilnamnet måste förbli <span class="codeph"> ADBMobleConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="codeph"> &lt;källrot&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Viktigt:  Det här JSON-konfigurationsfilnamnet måste vara <span class="codeph"> ADBMobleConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="codeph"> &lt;källrot&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Serverslutpunkt för </span> AppMeasurement Tracking </td> 
-   <td colname="col2"> URL:en för den bakomliggande samlingens slutpunkt i Adobe Analytics (tidigare SiteCatalyst). </td> 
+   <td colname="col1"> <span class="codeph"> Slutpunkt  </span> för AppMeasurement Tracking-server </td> 
+   <td colname="col2"> URL:en för Adobe Analytics (tidigare SiteCatalyst) back-end-samlingens slutpunkt. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar Visitor ID-tjänsten finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementera ID-tjänst </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
    <td colname="col2"> Kallas även Report Suite-ID (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Organisations-ID för Marketing Cloud </td> 
+   <td colname="col1"> Marketing Cloud organisation-ID </td> 
    <td colname="col2"> Ett strängvärde som krävs för att instansiera Visitor-komponenten. </td> 
   </tr> 
   <tr> 
@@ -50,7 +53,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 
 Så här konfigurerar du videospårning i spelaren:
 
-1. Kontrollera att alternativen för inläsningstid i `ADBMobileConfig.json` resursfilen är korrekta.
+1. Kontrollera att alternativen för inläsning i resursfilen `ADBMobileConfig.json` är korrekta.
 
    ```
    { 
@@ -83,8 +86,8 @@ Så här konfigurerar du videospårning i spelaren:
 
    Så här konfigurerar du inläsningsalternativ:
 
-   1. Kontrollera att `ADBMobileConfig.json` filen innehåller rätt värden från Adobe.
-   1. Kontrollera att filen finns i `AdobeMobile` mappen.
+   1. Bekräfta att filen `ADBMobileConfig.json` innehåller rätt värden från Adobe.
+   1. Kontrollera att filen finns i mappen `AdobeMobile`.
 
       Mappen måste finnas i roten för programkällträdet.
    1. Kompilera och skapa programmet.
