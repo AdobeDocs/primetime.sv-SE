@@ -6,6 +6,9 @@ title: Spela upp och pausa en video
 uuid: 04b3b23f-5ef1-4cc4-a22f-f6ffa9cefce5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '129'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +31,6 @@ Du kan lägga till TVSDK-beteende för att pausa och spela upp knappar.
       function pause():void;
       ```
 
-1. Använd callback-funktionen för `MediaPlayerStatusChangeEvent.STATUS_CHANGED` händelsen för att söka efter fel eller för att vidta andra lämpliga åtgärder.
+1. Använd återanropet för händelsen `MediaPlayerStatusChangeEvent.STATUS_CHANGED` om du vill söka efter fel eller vidta andra lämpliga åtgärder.
 
    TVSDK anropar det här återanropet när pause- eller play-metoden anropas. TVSDK skickar information om statusändringen i återanropet, inklusive den nya statusen, som PAUSED eller PLAYING.
