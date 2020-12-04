@@ -6,6 +6,9 @@ title: Anpassade åtgärder för tidsintervall
 uuid: e9c6a135-124e-44d4-adf2-dc9d671e2483
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ Klassen CustomRangeMetadata identifierar olika typer av tidsintervall i en VOD-s
 
 <!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
 
-För borttagning och ersättning av annonser använder TVSDK följande *anpassade åtgärdslägen* för tidsintervall:
+TVSDK använder följande *anpassade tidsintervallåtgärder*-lägen för att ta bort och ersätta annonser:
 
-* **MARK** Det här läget kallades för anpassade annonsmarkörer i tidigare versioner av TVSDK. Läget anger start- och sluttider för annonser som redan har placerats i VOD-strömmen. När det finns tidsintervallmarkörer av typen `MARK` i strömmen skapas en inledande placering av `Mode.MARK` av `CustomMarkerOpportunityGenerator` och löses av `CustomRangeResolver`. Inga annonser infogas.
+* **** MARKTDetta läge kallades för anpassade annonsmärken i tidigare versioner av TVSDK. Läget anger start- och sluttider för annonser som redan har placerats i VOD-strömmen. När det finns tidsintervallmarkörer av typen `MARK` i strömmen skapas en inledande placering av `Mode.MARK` av `CustomMarkerOpportunityGenerator` och löses av `CustomRangeResolver`. Inga annonser infogas.
 
-* **DELETE** För `DELETE` tidsintervall skapas en början `placementInformation` av typen `Mode.DELETE` och löses av `CustomRangeResolver`. `DeleteRangeTimelineOperation` definierar de intervall som ska tas bort från tidslinjen, och TVSDK använder API:t `removeByLocalTime` för Adobe Video Engine (AVE) för att slutföra den här åtgärden. Om det finns DELETE-intervall och Adobe Primetime-metadata för annonsbeslut, tas intervallen bort först, och annonserna `AuditudeResolver` löses sedan med hjälp av det vanliga arbetsflödet för annonsbeslut i Adobe Primetime.
+* **** DELETEF, eller  `DELETE` tidsintervall,  `placementInformation` skapas och löses en början  `Mode.DELETE` av typen  `CustomRangeResolver`. `DeleteRangeTimelineOperation` definierar de intervall som ska tas bort från tidslinjen, och TVSDK använder API:t för videomotorn (AVE)  `removeByLocalTime` från Adobe för att slutföra åtgärden. Om det finns DELETE-intervall och Adobe Primetime-metadata för annonsbeslut tas intervallen bort först, så löser `AuditudeResolver` annonserna med hjälp av det typiska arbetsflödet för Adobe Primetime-annonsbeslut.
 
-* **ERSÄTT** För `REPLACE` tidsintervall `placementInformations` skapas två initialer, ett `Mode.DELETE` och ett `Mode.REPLACE`. `CustomRangeResolver` tar bort tidsintervallen först och sedan `AuditudeResolver` infogar annonser för det angivna `replaceDuration` i tidslinjen. Om inget `replaceDuration` anges avgör servern vad som ska infogas.
+* **** REPLACEF `REPLACE` eller tidsintervall  `placementInformations` skapas två initialer, ett  `Mode.DELETE` och ett  `Mode.REPLACE`. `CustomRangeResolver` tar bort tidsintervallen först och sedan  `AuditudeResolver` infogar annonser för det angivna  `replaceDuration` i tidslinjen. Om ingen `replaceDuration` har angetts avgör servern vad som ska infogas.
 
 TVSDK ger stöd för dessa anpassade åtgärder för tidsintervall genom att tillhandahålla följande:
 
@@ -30,7 +33,7 @@ TVSDK ger stöd för dessa anpassade åtgärder för tidsintervall genom att til
 
    En ström kan ha flera innehållslösningar som baseras på annonssignaleringsläget och annonsmetadata. Beteendet ändras med olika kombinationer av annonseringssignaleringslägen och annonsmetadata.
 * Flera initiala möjligheter med `CustomMarkerOpportunityGenerator`.
-* Ett nytt läge för annonssignalering, `CUSTOM_RANGES`.
+* Ett nytt annonseringssignaleringsläge, `CUSTOM_RANGES`.
 
    Annonserna placeras baserat på tidsintervalldata från en extern källa, till exempel en JSON-fil.
 
