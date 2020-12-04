@@ -6,6 +6,9 @@ title: ID3-taggar
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -23,13 +26,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * TYPE = ID3
 * NAME = ID3
 
-1. Implementera en händelseavlyssnare för `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med `MediaPlayer` objektet.
+1. Implementera en händelseavlyssnare för `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med objektet `MediaPlayer`.
 
-   TVSDK anropar den här avlyssnaren när den identifierar `ID3` metadata.
+   TVSDK anropar den här avlyssnaren när den identifierar `ID3`-metadata.
 
    >[!TIP]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata` händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i [Egna taggar](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
+   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i [Egna taggar](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Hämta metadata.
