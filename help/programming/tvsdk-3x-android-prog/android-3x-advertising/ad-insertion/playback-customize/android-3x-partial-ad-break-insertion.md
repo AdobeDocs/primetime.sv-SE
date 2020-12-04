@@ -6,6 +6,9 @@ title: Insättning av delvis annonsradbrytning
 uuid: a81295b8-77fe-4475-a472-080ee7804d7a
 translation-type: tm+mt
 source-git-commit: fe9d7d1b2b23a70eb4e212de3d9bda47fc11d8f1
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ Om en användare till exempel går med mitt i en 90-sekunders annonsbrytning (tr
 * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
 * Annonsspårare för annonsen som spelas delvis (den andra annonsen) utlöses inte. Bara spåraren för den tredje annonsen aktiveras.
 
-Det här beteendet är inte aktiverat som standard. Så här aktiverar du den här funktionen i appen.
+Det här beteendet är inte aktiverat som standard. Så här aktiverar du den här funktionen i din app:
 
-Aktivera inställningen för delvis infogning av annonsradbrytning. Använd den nya metoden `setPartialAdBreakPref` i MediaPlayer-gränssnittet för att aktivera den här funktionen. Använd `getPartialAdBreakPref` metod för att hitta det aktuella läget för den här inställningen.
+Aktivera inställningen för delvis infogning av annonsradbrytning. Använd den nya metoden `setPartialAdBreakPref` i MediaPlayer-gränssnittet för att aktivera den här funktionen. Använd metoden `getPartialAdBreakPref` för att hitta det aktuella läget för den här inställningen.
 
 ```
     MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); 
