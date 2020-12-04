@@ -4,6 +4,9 @@ title: Uppdatera en princip med Java API
 uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Så här uppdaterar du en princip med Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i ditt projekt.
-1. Skapa en `Policy` instans och läs in profilen från en fil eller databas.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i projektet.
+1. Skapa en `Policy`-instans och läs in principen från en fil eller databas.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Uppdatera `Policy` objektet genom att ange dess egenskaper, till exempel dess namn och användningsregler.
+1. Uppdatera `Policy`-objektet genom att ange dess egenskaper, till exempel dess namn och användningsregler.
 
    ```java
      // Change the policy name.  
@@ -44,7 +47,7 @@ Så här uppdaterar du en princip med Java API:
      }
    ```
 
-1. Serialisera det uppdaterade `Policy` objektet och lagra det i en fil eller databas.
+1. Serialisera det uppdaterade `Policy`-objektet och lagra det i en fil eller databas.
 
    ```java
       // Serialize the policy.  
@@ -58,4 +61,4 @@ Så här uppdaterar du en princip med Java API:
       out.close(); 
    ```
 
-Den fullständiga källan till den här exempelkoden finns `com.adobe.flashaccess.samples.policy.UpdatePolicy` i katalogen&quot;samples&quot; (Exempel) för kommandoradsverktygen för referensimplementering.
+Den fullständiga källan till den här exempelkoden finns i `com.adobe.flashaccess.samples.policy.UpdatePolicy` i katalogen &quot;samples&quot; i Command Line Reference Implementation.
