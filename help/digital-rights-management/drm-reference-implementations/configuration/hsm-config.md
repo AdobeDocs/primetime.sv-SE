@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Du kan konfigurera referensimplementeringen med Sun PKCS#11-providern som stöder HSM. Även om det inte krävs någon HSM rekommenderas det.
 
-Om du vill använda en autentiseringsuppgift på en HSM måste du skapa en konfigurationsfil för Sun PKCS#11-providern. Mer information finns i [referenshandboken](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)för Java PCKS#11.
+Om du vill använda en autentiseringsuppgift på en HSM måste du skapa en konfigurationsfil för Sun PKCS#11-providern. Mer information finns i [referenshandboken för Java PCKS#11](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html).
 
 Verifiera att konfigurationsfilen för HSM och Sun PKCS#11 har konfigurerats genom att skriva följande kommando med hjälp av nyckelverktyget som installerades med Java JDK:
 
