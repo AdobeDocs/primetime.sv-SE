@@ -16,7 +16,7 @@ ht-degree: 0%
 # PSDK 1.4 för Android-referensimplementering {#reference-implementation}
 
 + [Översikt över implementering av Android-referenser](home.md)
-+ Referensimplementering för Primetime {#reference}
++ Primetime-referensimplementering {#reference}
    + [Så här använder du implementeringen av Primetimes referens](ref-implementation/how-to-use-ref-player.md)
    + [Referensimplementationsstruktur](ref-implementation/ref-player-structure.md)
    + Så här använder du funktionshanterare {#feature-managers}
@@ -60,7 +60,7 @@ ht-degree: 0%
       + [Integrera ljud med senare bindning](late-binding-audio/aa-enable.md)
       + [Välj ljudspår](late-binding-audio/select-audio-tracks.md)
       + [Relaterad API-dokumentation](late-binding-audio/aa-api-callbacks.md)
-   + Rättighetsflöden för Primetime-autentisering {#primetime-authentications}
+   + Rättighetsflöden för autentisering av primär tid {#primetime-authentications}
       + [Översikt](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Tillståndshanteraren - översikt](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrera Primetime-autentisering](paytvpass-entitlement/integrate-pass.md)
