@@ -4,6 +4,9 @@ title: Felsökning
 uuid: db76d6a4-c285-4d86-95a1-4f1a85ed3743
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Nedan visas vanliga problem och lösningar för distribution:
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Kontrollera att lösenordet är krypterat med den angivna `ScrambleUtil` klassen.
+   Kontrollera att lösenordet är krypterat med den angivna klassen `ScrambleUtil`.
 
 * Om följande fel visas:
 
