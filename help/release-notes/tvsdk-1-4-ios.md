@@ -24,7 +24,7 @@ Versionsinformationen för TVSDK 1.4 för iOS beskriver vad som är nytt eller �
 
 **Version 1.4.45**
 
-* För att uppfylla kraven i Xcode10 har TVSDK gått från&quot;`libstdc++`&quot; till&quot;`libc++`&quot;, och därför är den version som stöds iOS 7 som minimum. Tidigare var det iOS 6.
+* För att uppfylla kraven i Xcode10 har TVSDK flyttat från `libstdc++` till `libc++`, och därför är den version som stöds som lägst iOS 7. Tidigare var det iOS 6.
 
 **Version 1.4.44**
 
@@ -59,7 +59,7 @@ Inga nya funktioner.
 **Version 1.4.39**
 
 * iOS TVSDK är certifierat med VHL 2.0.1 och med VHL 2.0.1 med Nielsen.
-* iOS TVSDK uppdateras för att göra CRS-förfrågningar från den nya Akamai-värden `primetime-a.akamaihd.net`.
+* iOS TVSDK uppdateras för att göra CRS-begäranden från den nya Akamai-värden `primetime-a.akamaihd.net`.
 * Den nya värdnamnskonfigurationen ger leverans av CRS-resurser via både HTTP och HTTPS (SSL) i större skala.
 
 **Version 1.4.36**
@@ -70,11 +70,11 @@ Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska barriären i implementering
 
 * Nätverksannonsinformation
 
-   TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klasser som är tillgängliga via en Ad Asset- `networkAdInfo` egenskap. Den här informationen kan användas för att integrera med andra annonseringsplattformar som **Moat Analytics**.
+   TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i klassen `PTNetworkAdInfo` som är tillgänglig via egenskapen `networkAdInfo` för en annonsresurs. Den här informationen kan användas för integrering med andra annonseringsplattformar som **Moat Analytics**.
 
 **Version 1.4.31**
 
-* **Faktureringsstatistik** För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsstatistik och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
+* **FaktureringsstatistikFör att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.** 
 
 Varje gång TVSDK genererar en direktuppspelningshändelse börjar spelaren att skicka HTTP-meddelanden regelbundet till Adobe faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men ditt kontrakt med Adobe avgör de faktiska värdena.
 
@@ -84,7 +84,7 @@ Varje gång TVSDK genererar en direktuppspelningshändelse börjar spelaren att 
 
 I klassen PTSDKConfig har API:t forceHTTPS lagts till.
 
-Klassen PTSDKConfig innehåller metoder för att tillämpa SSL på begäranden som görs till Adobe Primetime-servrar för annonsbeslut, DRM och videoanalys. Mer information finns i avsnitten om `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
+Klassen PTSDKConfig innehåller metoder för att tillämpa SSL på begäranden som görs till Adobe Primetime-servrar för annonsbeslut, DRM och videoanalys. Mer information finns i metoderna `forceHTTPS` och `isForcingHTTPS` för den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
 
 **Obs**: Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
 
@@ -128,7 +128,7 @@ Mer information om VPAID 2.0 finns i [VPAID och support](../programming/tvsdk-1.
 
 För VAST-annonser (kreatörer) med återgångsregeln aktiverad hanterar TVSDK en annons med en ogiltig MIME-typ som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 
-Mer information finns i [Lägg till reserv för VAST- och VMAP-annonser](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
+Mer information finns i [Lägg till reservversioner för VAST- och VMAP-annonser](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
 
 **Version 1.4.9**
 
@@ -240,7 +240,7 @@ Comment Type: draft
    * Åtgärdade kompileringsproblem med TVSDK i XCode 10. På grund av XCode 10-kraven kräver appar som bygger på TVSDK för iOS 1.4.45 och framåt ett lägsta distributionsmål som iOS 7.0
 
 * Biljett nr 36321 - En avvikelse har observerats i sökbart intervall mellan PTMediaPlayer- och AVPlayer-instansen i läget&quot;Spelas upp&quot;.
-* Biljett nr 36493 - stöd `libstdc++` för iOS 12
+* Biljett nr 36493 - `libstdc++`-stöd i iOS 12
 
    * Åtgärdade kompileringsproblem med TVSDK på iOS 12. Appar som byggs på TVSDK för iOS 1.4.45 och framåt kräver lägsta distributionsmål som iOS 7.0
 
@@ -330,7 +330,7 @@ Comment Type: draft
 * (ZD #31951) - Tom skärm i en annonsbrytning och ingen annonsbrytning slutförs.
 
    Hanterades ett problem där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda \&amp;lt;AdParameters\&amp;gt; VAST-nod.
-* (ZD #33336) - [iOS] TVSDK - Ad pods not be fill, trots att tillräckligt många annonser returnerades av Freewheel.
+* (ZD #33336) - [iOS] TVSDK - Annonspunkterna fylls inte trots att tillräckligt många annonser returnerades av Freewheel.
 
    Skapade en överordnad-underordnad relation mellan sekvensannons och reservannons och sortering baserat på överordnad sekvens och index.
 
@@ -460,7 +460,7 @@ Problemet löstes genom att taggen placerades i början av spellistan.
 
 * (ZD# 24528) Implementera TVSDK-användningsstatistik för fakturering
 
-Mer information finns i [Faktureringsstatistik](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
+Mer information finns i [Faktureringsmått](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
 
 * (ZD# 24642) Stöd för bild-i-bild för TVSDK
 
@@ -512,7 +512,7 @@ När den sista starttiden för en annonsbrytning från VMAP infaller innan den t
 
    * (ZD #22351) VHL - Analys: Varaktighet för livevideoresurs
 
-Problemet löstes genom att API:t assetDuration lades till för `PTVideoAnalyticsTrackingMetadata` att uppdatera resurslängden för live-/linjära strömmar och tillhandahålla en logik för att kontrollera liveströmmen.
+Problemet löstes genom att API:t assetDuration lades till i `PTVideoAnalyticsTrackingMetadata` för att uppdatera resurslängden för Live/Linear-strömmar och tillhandahålla en logik för att kontrollera liveströmmen.
 
 * (ZD# 22675) VHL - Analys: Uppdaterar livevideoresursens varaktighet
 
@@ -810,7 +810,7 @@ I stället för att skicka ett fel när innehållet inte är M3U8, returnerar DR
 
 Samma upplösning som Zendesk #2228
 
-* Zendesk #3304 - VAST 3.0- `[ERRORCODE]` makrot fylls inte i
+* Zendesk #3304 - VAST 3.0 `[ERRORCODE]`-makro fylls inte i
 
 Problemet där Auditude SDK inte kan skicka ett ping när spårnings-URL:en har blanksteg i början har åtgärdats.
 
@@ -878,9 +878,9 @@ Korrigerade en intermittent krasch på grund av samtidighetsproblem.
 
 **Version 1.4.13** (iOS 6.0+)
 
-* (ZD #3304) - VAST 3.0- `[ERRORCODE]` makrot fylls inte i
+* (ZD #3304) - VAST 3.0 `[ERRORCODE]`-makrot fylls inte i
 
-   * Felkod 400 visas om annonsen är intern och har dålig kreativitet.
+   * Felkod 400 visas om den är infogad   och har dålig kreativitet.
    * `[ERRORCODE]` makrot kommer att URL-kodas.
 
 * (ZD #3865) Integrering av pulsslag med IMA-annonser
@@ -984,7 +984,7 @@ Stöd för att pinga tomma URL:er för annonsbrytningsspårning, TVSDK kommer nu
 * Det kan hända att licensrotationsvideo inte spelas upp på iOS 11 och att den spelas upp korrekt på iOS 9.x och iOS 10.x.
 * Om uppspelningen är aktiv över AirPlay hoppas VPAID-annonser över i VPAID 2.0-stödet.
 * drmNativeInterface.framework länkar inte korrekt när minimimålet är iOS7 (eller senare).\
-   Tillfällig lösning: Specificera `libstdc++6`.  dylib-bibliotek enligt följande: Gå till Target->Build Phases->Länka binära till bibliotek och lägg till `libstdc++.6.dylib`.
+   Tillfällig lösning: Ange `libstdc++6` explicit.  dylib-bibliotek enligt följande: Gå till Target->Build Phases->Länka binära till bibliotek och lägg till `libstdc++.6.dylib`.
 
 * Det gick inte att infoga post-roll för att ersätta API.
 * Om du söker efter en annonsbrytning (utan att komma ut ur den) utfärdas en dubblett och ett meddelande om annonsbrytningar startas
@@ -994,4 +994,4 @@ Stöd för att pinga tomma URL:er för annonsbrytningsspårning, TVSDK kommer nu
 
 ## Användbara resurser {#helpful-resources}
 
-* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
