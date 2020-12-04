@@ -6,6 +6,9 @@ title: Implementera händelseavlyssnare och återanrop
 uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -24,11 +27,11 @@ Ditt program måste implementera händelseavlyssnare för Browser TVSDK-händels
 
       >[!IMPORTANT]
       >
-      >Uppspelningshändelsen `STATUS_CHANGED` anger spelarens tillstånd, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
+      >Uppspelningshändelsen `STATUS_CHANGED` anger spelarläget, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
 
    * **Andra händelser**: Valfritt, beroende på ditt program.
 
-      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` - och `AdPlaybackEvent` -händelser.
+      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent`- och `AdPlaybackEvent`-händelser.
 
 1. Implementera händelseavlyssnare för varje händelse.
 
@@ -52,7 +55,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registrera dina callback-avlyssnare hos `MediaPlayer` objektet med hjälp av `MediaPlayer.addEventListener`.
+1. Registrera dina callback-avlyssnare med `MediaPlayer`-objektet med `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
