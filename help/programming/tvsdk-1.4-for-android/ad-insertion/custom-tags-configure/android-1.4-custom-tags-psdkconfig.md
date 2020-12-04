@@ -6,6 +6,9 @@ title: Konfig-klassmetoder för taggar
 uuid: f2758085-8e49-4eaf-82bb-4a2e4dd8accb
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -25,11 +28,11 @@ TVSDK tillämpar den globala konfigurationen automatiskt på alla medieströmmar
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags() </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags()  </span> </td> 
    <td colname="col2"> Hämtar den aktuella listan med prenumerationstaggar. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] taggar); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] taggar);  </span> </td> 
    <td colname="col2"> Anger listan med prenumerationstaggar som kommer att visas för programmet. <p>Ditt program prenumererar automatiskt på alla taggar som överförs via <span class="codeph"> setAdTags </span>. </p> </td> 
   </tr> 
   <tr> 
@@ -37,11 +40,11 @@ TVSDK tillämpar den globala konfigurationen automatiskt på alla medieströmmar
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getAdTags(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getAdTags();  </span> </td> 
    <td colname="col2"> Hämtar den aktuella listan med annonstaggar. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] taggar); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] taggar);  </span> </td> 
    <td colname="col2"> Anger listan med annonstaggar som ska användas som standardgenerator för affärsmöjlighet. </td> 
   </tr> 
  </tbody> 
@@ -54,6 +57,6 @@ Kom ihåg följande:
    Om TVSDK påträffas genereras ett `IllegalArgumentException`.
 * Det anpassade taggnamnet måste innehålla prefixet #.
 
-   Exempel: `#EXT-X-ASSET` är ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
+   Till exempel är `#EXT-X-ASSET` ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
 * Du kan inte ändra konfigurationen efter att medieströmmen har lästs in.
 
