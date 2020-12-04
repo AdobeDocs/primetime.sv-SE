@@ -24,7 +24,7 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE  </span> </td> 
    <td colname="col2"> 
     <pre>
       Inbyggd felkod från Flash Player. 
@@ -36,31 +36,31 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE </span> </td> 
-   <td colname="col2"> En sträng som innehåller felets namn; till exempel <span class="codeph"> AAXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE  </span> </td> 
+   <td colname="col2"> En sträng som innehåller felets namn; till exempel <span class="codeph"> AXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar den <span class="codeph"> DRMErrorEvents- </span> underfelkod som returneras av Flash Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE  </span> </td> 
+   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar underfelskoden <span class="codeph"> DRMErrorEvents </span> som returneras av Flash Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
    <td colname="col2"> För DRM är detta den anpassade felsträngen från DRM-serverdistributionen, om du har definierat någon. Inkludera även detta när du rapporterar fel till Adobe. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> BESKRIVNING </span> </td> 
+   <td colname="col1"> <span class="codeph"> BESKRIVNING  </span> </td> 
    <td colname="col2"> Strängbeskrivning för felet. Vanligtvis mediets URL. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_URL </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_URL  </span> </td> 
    <td colname="col2"> Mediets URL. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE  </span> </td> 
    <td colname="col2"> Medietyp (HLS). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_ID </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_ID  </span> </td> 
    <td colname="col2"> Medie-ID. </td> 
   </tr> 
  </tbody> 
@@ -70,4 +70,4 @@ TVSDK tar emot dessa felkoder och strängar från videomotorn.
 
 >[!IMPORTANT]
 >
->En fullständig lista över felkoder för Adobe Primetime DRM-klienter finns i [Felmeddelandereferens](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)för DRM-klient.
+>En fullständig lista över Adobe Primetime DRM-klientfelkoder finns i [Felmeddelandereferens för DRM-klient](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
