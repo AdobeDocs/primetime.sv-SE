@@ -4,6 +4,9 @@ title: Generera en CSR-fil (Certificate Signing Request)
 uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -39,9 +42,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 1. Du uppmanas att ange lösenordet för den privata nyckeln.
 1. Skapa en säkerhetskopia av din privata nyckel och lösenord.
 
-   Om du tappar bort den privata nyckeln eller om den har komprometterats kontaktar du Adobe Certificate Administrator för att återkalla certifikatet och begära ett nytt.
+   Om du tappar bort den privata nyckeln eller om den har komprometterats kontaktar du certifikatadministratören i Adobe för att återkalla certifikatet och begära ett nytt.
 
    >[!NOTE]
    >
-   >Adobe rekommenderar att du använder en HSM för att skydda din privata nyckel och lösenord.
+   >Adobe rekommenderar att du använder en HSM för att skydda din privata nyckel och ditt lösenord.
 
