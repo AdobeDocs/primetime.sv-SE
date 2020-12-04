@@ -6,6 +6,9 @@ title: Kontrollera synlighet för undertexter
 uuid: b161a729-73f3-4019-a95e-013b42779842
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
@@ -24,5 +27,5 @@ Om undertextad text visas när spelaren går till sökningsläget visas inte tex
 >
 >Synlighetsvärdena för undertexter styrs med `MediaPlayer.VISIBLE` och `MediaPlayer.INVISIBLE`.
 
-1. Använd egenskapen `MediaPlayer.ccVisibility` för att komma åt den aktuella synlighetsinställningen för undertexter.
+1. Använd egenskapen `MediaPlayer.ccVisibility` för att komma åt den aktuella synlighetsinställningen för de stängda bildtexterna.
 
