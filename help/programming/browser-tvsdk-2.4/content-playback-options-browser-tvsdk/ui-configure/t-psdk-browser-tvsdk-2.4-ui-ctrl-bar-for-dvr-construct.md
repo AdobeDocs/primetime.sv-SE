@@ -6,6 +6,9 @@ title: Skapa ett kontrollfält förbättrat för DVR
 uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
