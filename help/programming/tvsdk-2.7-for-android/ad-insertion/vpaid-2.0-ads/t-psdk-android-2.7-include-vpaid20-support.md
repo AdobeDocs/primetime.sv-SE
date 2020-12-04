@@ -6,6 +6,9 @@ title: Implementera VPAID 2.0-integrering
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
@@ -37,7 +40,7 @@ Så här lägger du till stöd för VPAID 2.0:
 
    >[!IMPORTANT]
    >
-   >I ett VPAID 2.0-arbetsflöde är det för anpassade annonsvyer mycket viktigt att du behåller din `CustomAdView` instans över `AdBreak` starter (händelse `AD_BREAK_START`) och `AdBreak` slutför (händelse `AD_BREAK_COMPLETE`) från den tidpunkt du skapar den anpassade annonsvyn till den tidpunkt du tar bort den. Det innebär att du inte ska skapa en anpassad annonsvy vid varje annonsstart och ta bort den vid varje annonsbrytning.
+   >I ett VPAID 2.0-arbetsflöde är det mycket viktigt att behålla din `CustomAdView`-instans i alla `AdBreak` starter (event `AD_BREAK_START`) och `AdBreak` slutförs (event `AD_BREAK_COMPLETE`) från den tidpunkt du skapar den anpassade annonsvyn till den tidpunkt du tar bort den. Det innebär att du inte ska skapa en anpassad annonsvy vid varje annonsstart och ta bort den vid varje annonsbrytning.
    >
    >
    >Dessutom bör du bara skapa en anpassad annonsvy när spelaren är i läget FÖRBEREDD,
@@ -54,7 +57,7 @@ Så här lägger du till stöd för VPAID 2.0:
    >} 
    >```
    >
-   >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`webbsidan innan du tar bort den. Exempel:
+   >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout` innan du tar bort den. Exempel:
    >
    >
    ```
