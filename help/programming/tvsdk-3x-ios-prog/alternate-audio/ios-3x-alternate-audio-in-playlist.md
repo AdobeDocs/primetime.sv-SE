@@ -6,6 +6,9 @@ title: Alternativa ljudspår i spellistan
 uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Följande krav gäller om du använder alternativa ljudspår och inkluderar anno
 * Om huvudinnehållet har alternativa ljudspår måste annonserna ha minst en ström med enbart ljud.
 * Varaktigheten för varje segment i en annons ström med enbart ljud måste vara lika med segmentlängden för en annons videoström.
 
-Huvudljudspåret ingår i ljudspårssamlingen med `default` etiketten. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA` -taggarna med `TYPE=AUDIO`.
+Huvudljudspåret ingår i ljudspårsamlingen med etiketten `default`. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA`-taggarna med `TYPE=AUDIO`.
 
 Ett M3U8-manifest som anger flera alternativa ljudströmmar kan till exempel se ut så här:
 
