@@ -6,6 +6,9 @@ title: Släpp en MediaPlayer-instans och resurser
 uuid: e7b2112e-8add-4789-9345-5f829d39d639
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
 
-När du frigör ett `MediaPlayer` objekt frigörs de underliggande maskinvaruresurserna som är kopplade till det här `MediaPlayer` objektet.
+När du frisläpper ett `MediaPlayer`-objekt frigörs de underliggande maskinvaruresurserna som är kopplade till det här `MediaPlayer`-objektet.
 
-Här är några skäl att släppa en `MediaPlayer`:
+Här följer några skäl till att släppa en `MediaPlayer`:
 
 * Om du har onödiga resurser kan det påverka prestandan.
 * Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
@@ -27,4 +30,4 @@ Här är några skäl att släppa en `MediaPlayer`:
    function release():void;
    ```
 
-När `MediaPlayer` instansen har släppts kan du inte längre använda den. Om någon metod i `MediaPlayer` gränssnittet anropas efter att det har släppts `IllegalStateException` genereras ett fel.
+När `MediaPlayer`-instansen har släppts kan du inte längre använda den. Om någon metod i `MediaPlayer`-gränssnittet anropas efter att det har släppts genereras ett `IllegalStateException`.
