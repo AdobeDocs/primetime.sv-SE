@@ -6,6 +6,9 @@ title: Ange en ström vid en viss tidpunkt
 uuid: 5db73b50-0629-4fb1-8f12-6c88e4cd7109
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
