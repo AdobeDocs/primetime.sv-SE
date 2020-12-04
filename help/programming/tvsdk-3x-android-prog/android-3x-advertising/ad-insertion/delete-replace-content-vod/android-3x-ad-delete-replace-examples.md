@@ -6,6 +6,9 @@ title: Exempel på att ta bort och ersätta annonser
 uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
