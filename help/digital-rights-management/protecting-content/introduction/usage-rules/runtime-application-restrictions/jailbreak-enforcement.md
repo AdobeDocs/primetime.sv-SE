@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Tillämpning av Jailbreak (kräver Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-På plattformar som stöder jailbreak-identifiering, till exempel Android- och iOS-mobilenheter, kan du aktivera tvångsuppspelning för att förhindra uppspelning av innehåll om det [!DNL jailbreak/root] har upptäckts på enheten.
+På plattformar som stöder jailbreak-identifiering, till exempel Android- och iOS-mobilenheter, kan du aktivera tvångsuppspelning för att förhindra uppspelning av innehåll om [!DNL jailbreak/root] har identifierats på enheten.
 
 >[!NOTE]
 >
