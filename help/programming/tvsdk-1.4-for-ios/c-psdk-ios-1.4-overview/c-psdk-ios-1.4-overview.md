@@ -6,6 +6,9 @@ title: Översikt
 uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
