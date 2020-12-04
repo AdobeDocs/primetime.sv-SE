@@ -28,8 +28,9 @@ Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distr
 >
 >Om du vill skapa referensspelaren, enligt beskrivningen i README.md som distribueras med versionen, måste du göra följande:
 >
->1. Hämta VideoHeartbeat.jar från [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (VideoHeartbeat-biblioteket för Android v2.0.0)
+>1. Hämta VideoHeartbeat.jar från [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (VideoHeartbeat-bibliotek för Android v2.0.0)
 >1. Extrahera VideoHeartbeat.jar till mappen libs/.
+
 >
 
 
@@ -55,7 +56,7 @@ TVSDK 2.7 stöder den samtidiga upplösningen av alla Ad-begäranden i en Ad bre
 
 * **alwaysUseAudioOutputLatency(booleskt val) i klassen MediaPlayer**
 
-Använd fördröjning för utdata vid beräkning av ljudtidsstämpel.
+Använd fördröjning för utdata vid beräkning av ljudtidsstämpling.
 Booleska parametrar val - True använder fördröjning för ljudutgång vid beräkning av ljudtidsstämpling.
 
 * **Optimerad för att få bästa möjliga uppspelningsupplevelse även om bandbredden plötsligt faller av.**
@@ -72,21 +73,24 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **Säker annonsinläsning över HTTPS**
 
-   Med Adobe Primetime kan du begära att få en primär annonsserver och CRS via https.
+   Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
    * Inkludera nu AdSystem och CreativeId som nya parametrar i förfrågningarna 1401 och 1403.
 
-* **API setEncodeUrlForTracking i klassen NetworkConfiguration har tagits bort** eftersom osäkra tecken i en URL ska kodas.
+* **API setEncodeUrlForTracking i klassen NetworkConfiguration** tas bort eftersom osäkra tecken i en URL ska kodas.
 
 **Version 2.5.4**
 
 Android TVSDK v2.5.4 erbjuder följande uppdateringar och API-ändringar:
 
-* Ändringar i standardvärdet för WebViewDebbugingWebViewDebbuging är som standard inställda på Falskt. Om du vill aktivera det anropar du setWebContentsDebuggingEnabled(true) i programmet.
-* Uppgradering av OpenSSL- och Curl-versionUppdaterat libcurl till v7.57.0 och OpenSSL till v1.0.2 kB.
-* Åtkomst på appnivå för VAST-svarsobjektIntroducerade ett nytt API NetworkAdInfo::getVastXml() som ger åtkomst till VAST-svarsobjektet för programmet.
+* Ändringar i standardvärdet för WebViewDebuging
+Värdet för WebViewDebbuging är som standard False. Om du vill aktivera det anropar du setWebContentsDebuggingEnabled(true) i programmet.
+* Uppgradering av OpenSSL- och Curl-version
+Uppdaterat libcurl till v7.57.0 och OpenSSL till v1.0.2 kB.
+* Åtkomst på appnivå för VAST-svarsobjekt
+Introducerade ett nytt API NetworkAdInfo::getVastXml() som ger åtkomst till VAST-svarsobjektet för programmet.
 
 **Version 2.5.3**
 
@@ -117,19 +121,19 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
 Android TVSDK v2.5.2 innehåller viktiga felkorrigeringar och några API-ändringar.
 
-**Version 2.5.1**
+**Version 1.5.1**
 
 De viktiga nya funktionerna i Android 2.5.1.
 
 * **Prestandaförbättringar** Den nya TVSDK 2.5.1-arkitekturen ger ett antal prestandaförbättringar. Baserat på statistik från en jämförande studie från tredje part ger den nya arkitekturen en 5 gånger kortare starttid och 3,8 gånger färre uteslutna bildrutor jämfört med branschens genomsnitt:
 
-   * **Direkt aktiverat för VOD och live -** När du aktiverar direkt initieras och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera MediaPlayerItemLoader-instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.5.1 har även stöd för Instant On för **liveströmmar** . De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
+   * **Direkt aktiverad för VOD och live -** När du aktiverar direkt initieras och buffrar TVSDK medier innan uppspelningen startar. Eftersom du kan starta flera MediaPlayerItemLoader-instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.5.1 stöder även direktuppspelning på för **live**-strömmar. De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
 
-      * **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
-      * **Nedladdning av delar av segment/delsegmentering -** TVSDK minskar ytterligare storleken på varje fragment för att starta uppspelningen så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
+      * **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, hastighet för ändring av buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
+      * **Delsegmentnedladdning/delsegmentering -** TVSDK minskar ytterligare storleken på varje fragment för att kunna starta uppspelningen så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
       * **Lazy-annonsupplösning -** TVSDK väntar inte på upplösning av annonser som inte är preflight innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt är inte tillåtna förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
       * **Beständiga nätverksanslutningar -** Med den här funktionen kan TVSDK skapa och lagra en intern lista över beständiga nätverksanslutningar. De här anslutningarna återanvänds för flera begäranden i stället för att en ny anslutning öppnas för varje nätverksbegäran och sedan tas bort. Detta ökar effektiviteten och minskar fördröjningen i nätverkskoden, vilket ger snabbare uppspelningsprestanda.
-När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen. Vissa servrar kanske inte stöder den här typen av anslutning. I så fall kommer TVSDK att återgå till att skapa en anslutning för varje begäran igen. Även om beständiga anslutningar är aktiverade som standard har TVSDK nu ett konfigurationsalternativ så att program kan inaktivera beständiga anslutningar om så önskas.
+När TVSDK öppnar en anslutning uppmanas servern att ange en *keep-alive*-anslutning. Vissa servrar kanske inte stöder den här typen av anslutning. I så fall kommer TVSDK att återgå till att skapa en anslutning för varje begäran igen. Även om beständiga anslutningar är aktiverade som standard har TVSDK nu ett konfigurationsalternativ så att program kan inaktivera beständiga anslutningar om så önskas.
       * **Parallell nedladdning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
       * **Parallella annonshämtningar -** TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
 
@@ -137,8 +141,8 @@ När TVSDK öppnar en anslutning blir servern ombedd att *behålla* anslutningen
 
    * **MP4 Content Playback -** MP4 short clips do not need to be retranscoded to play back within TVSDK.
 Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegmentering stöds inte för MP4-uppspelning.
-   * **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
-   * **Smidigare tricks-** De här förbättringarna förbättrar användarupplevelsen:
+   * **Trick play med adaptiv bithastighet (ABR) -** Den här funktionen gör att TVSDK kan växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
+   * **Smidigare tricks -** De här förbättringarna förbättrar användarupplevelsen:
 
           * Anpassad bithastighet och bildrutehastighet vid uppspelning, baserat på bandbredd och buffertprofil
           * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
@@ -149,16 +153,16 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
 
 * **Stöd för arbetsflöden**
 
-   * **Direktfaktureringsintegrering -** Detta skickar faktureringsstatistik till Adobe Analytics-backend, som certifieras av Adobe Primetime för strömmar som används av kunden.
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. Vid varje direktstarthändelse använder TVSDK Adobes API för datainfogning i Analytics för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på längden på den fakturerbara strömmen - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte eller ingår inte i kundens egna rapportsviter eller serversamtal från Adobe Analytics. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+   * **Integrering med direkt fakturering -** Detta skickar faktureringsmätningar till Adobe Analytics, som certifieras av Adobe Primetime för strömmar som används av kunden.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
 
 * **Reklam**
 
-   * **Moat Integration -** Stöd för annonsvisning från Moat.
-   * **Medföljande banderoller -** De medföljande banderollerna visas tillsammans med en linjär annons och fortsätter ofta att visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
+   * **Moat Integration -** Stöd för visning av annonser från Moat.
+   * **Medföljande banderoller -** Medföljande banderoller visas tillsammans med en linjär annons och fortsätter ofta visas i vyn när annonsen är slut. Dessa banners kan vara av typen html (ett HTML-kodfragment) eller iframe (en URL till en iframe-sida).
 
-* **Analytics**
+* **Analyser**
 
    * **VHL 2.0 -** Det här är den senaste optimerade VHL-integreringen (Video Heartbeats Library) för automatisk insamling av användningsdata för Adobe Analytics. API:ernas komplexitet har minskat för att underlätta implementeringen. Hämta VHL-biblioteket [v2.0.0 för Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) och extrahera JAR-filen i mappen libs.
 
@@ -263,7 +267,7 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 | Funktion | Innehållstyp | HLS |
 |---|---|---|
-| Integrering med Analytics VHL | VOD + Live | Y |
+| Integrering med Adobe Analytics VHL | VOD + Live | Y |
 | Fakturering | VOD + Live | Y |
 
 ## Lösta problem {#resolved-issues}
@@ -286,7 +290,7 @@ Detta avsnitt innehåller en sammanfattning av det problem som löstes i TVSDK 2
 * ZD #34149 - Spelaren fortsätter att begära manifest även om ett fel påträffas.
    * Korrigerade fallet där TVSDK gjorde upprepade anrop även när alla profiler var nere (fel 404).
 * ZD #31533 - Spela upp ljud på Android när programmet har skickats till bakgrunden.
-   * Lagt till `enableAudioPlaybackInBackground` API för MediaPlayer som ska anropas med &quot;True&quot; som argument (när spelaren är i läget PREPARED) för att aktivera uppspelning av ljud när appen är i bakgrunden.
+   * Lagt till `enableAudioPlaybackInBackground`-API för MediaPlayer som ska anropas med True som argument (när spelaren är i läget PREPARED) för att aktivera uppspelning av ljud när appen är i bakgrunden.
 
 **Android TVSDK 2.5.5**
 
@@ -340,14 +344,16 @@ Detta avsnitt innehåller en sammanfattning av det problem som löstes i TVSDK 2
    * Problem med CC-fel har korrigerats i den senaste versionen
 * Zendesk#25590 - Förbättra: TVSDK cookie store (C++ till JAVA)
    * Android TVSDK har nu stöd för åtkomst av cookies mellan JAVA-lager (som lagras i CookieStore i Android-programmet) och C++ TVSDK-lagret.
-* Zendesk#32252 - TVSDK_Android_2.5.2.12 verkar inte ha korrigerat problemet för PTPLAY-20269Det här problemet har åtgärdats och integrerats med 2.5.2-grenen.
-* Zendesk#31806 - Auditude-käppar i PREPARINGPlayer fastnade i tillståndet Preparing eftersom XML-svar hade en tom tagg. Problemet är nu åtgärdat.
+* Zendesk#32252 - TVSDK_Android_2.5.2.12 verkar inte ha korrigeringen för PTPLAY-20269
+Problemet har åtgärdats och integrerats i 2.5.2-grenen.
+* Zendesk#31806 - Auditude Stcks in PREPARING
+Spelaren fastnade i tillståndet Förbereder eftersom XML för svar hade en tom tagg. Problemet är nu åtgärdat.
 * Zendesk#31727 - TVSDK 2.5 med undertexter tas bort eller felstavas.
    * Problemet är åtgärdat och vi släpper/felstavar inga tecken.
 * Zendesk#31485 - DrmManager in 2.5
    * Ett problem uppstod när DRMManager skapades via nya DrmManager (kontextkontext). En implementerad DRMService-klass som skulle ge DRMManager.
 * Upplösningsströmmen Zendesk#32794-1080P spelas inte upp på Android.
-   * Vi har ändrat metoderna SizeAvailableEvent och Tidigare, getHeight() och getWidth() för SizeAvailableEvent i 2.5, som används för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Den returnerar nu utdatahöjd och utdatavärde som returneras av avkodaren.
+   * Vi har ändrat metoderna SizeAvailableEvent och Tidigare, getHeight() och getWidth() för SizeAvailableEvent i 2.5, som används för att returnera ramhöjd och rambredd, som returnerades av medieformatet. Den returnerar nu utdatahöjd och utdatavärde som returneras av avkodaren.
 * Zendesk #19359 Flash Player kraschar på grund av positionen för #EXT-X-FAXS-CM-attributet i manifestet på uppsättningsnivå.
    * Taggen #EXT-X-FAXS-CM måste alltid finnas i den övre spellistan innan enskilda bithastigheter eller segment visas i spellistan.
 
@@ -361,7 +367,7 @@ egenskapen setTreatSpaceAsAlphaNum i TextFormat visas. Som standard är egenskap
 
 * Zendesk #31620 Användaragentsträngen som lämnar TVSDK-spelaren trunkeras.
 Användaragentsträngen kommer inte längre att trunkeras efter 128 tecken.
-Versionssträngen Adobe Primetime läggs till i systemanvändaragenten.
+Adobe Primetime-versionssträng läggs till i systemanvändaragenten.
 
 * Zendesk #30809 Saknad SEEK_END-händelse förhindrar att appen övergår till uppspelningsläge.
 * Zendesk #30415 Closed Captions &#39;Cyan&#39;-färg är nu en mörkare nyans av blått (turkos) jämfört med tidigare Primetimes TVSDK-versioner.
@@ -430,7 +436,7 @@ Den här versionen av TVSDK har följande problem:
 * [Systemkrav](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-requirements.html)
 * [TVSDK 2.7 for Android Programmer&#39;s Guide](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-overview-prod-audience-guide.html)
 * [TVSDK Android Javadoc for API Reference](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
-* [TVSDK Android C++ API-dokument](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) - Varje Java-klass har en motsvarande C++-klass, och C++-dokumentationen innehåller mer förklarande material än Javadocs, så se C++-dokumentationen för en djupare förståelse av Java API.
+* [TVSDK Android C++ API-dokument](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) - Varje Java-klass har en motsvarande C++-klass och C++-dokumentationen innehåller mer förklarande material än Javadocs, så se C++-dokumentationen för en djupare förståelse av Java API.
 * [TVSDK 1.4 till 2.5 för migreringshandbok för Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
-* Information om hur du hanterar scenarier för att visa/dölja skärmar finns i den `Application_Changes_for_Screen_On_Off.pdf` fil som ingår i bygget.
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Information om hur du hanterar skärmscenarier på/av finns i `Application_Changes_for_Screen_On_Off.pdf`-filen som ingår i bygget.
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
