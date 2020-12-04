@@ -6,6 +6,9 @@ title: API-element för annonsuppspelning
 uuid: 6d0ab181-9c50-431f-97bf-32e6684a7df1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -51,11 +54,11 @@ Följande API-element är användbara för att anpassa uppspelning:
      <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span>. <p>Detta är den lokala tidpunkten för uppspelningen, exklusive de monterade annonsbrytningarna. </p> </li> 
      <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> seekToLocal</span>. <p>Här sker sökningen i förhållande till en lokal tid i strömmen. </p> </li> 
      <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>Den virtuella positionen på tidslinjen konverteras till den lokala positionen. </p> </li> 
-    </ul> <p>Viktigt:  <span class="codeph"> getLocalTime</span> i <span class="codeph"> MediaPlayer</span> returnerar den aktuella tiden i förhållande till det ursprungliga innehållet, utan dynamiskt uppdelade annonser. <span class="codeph"> getLocalTime</span> i <span class="codeph"> AdBreak</span> returnerar brytningens starttid i förhållande till det ursprungliga innehållet. </p> </td> 
+    </ul> <p>Viktigt:  <span class="codeph"> getLocalTime</span> i <span class="codeph"> MediaPlayer</span> returnerar den aktuella tiden i förhållande till det ursprungliga innehållet, utan dynamiskt uppdelade annonser. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakreturns the start time of the break relative to the original content. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> isWatched</span> , egenskap. Anger om tittaren har tittat på annonsen. </td> 
+   <td colname="col2"><span class="codeph"> </span> isWatchedproperty. Anger om tittaren har tittat på annonsen. </td> 
   </tr> 
  </tbody> 
 </table>
