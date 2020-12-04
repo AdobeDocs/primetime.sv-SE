@@ -16,7 +16,7 @@ ht-degree: 0%
 # Hjälp om Digital Rights Management {#drm}
 
 + [DRM-översikt](home.md)
-+ Handbok för registrering av certifikat {#certificate-enrollment-guide}
++ Certifikatregistreringshandbok {#certificate-enrollment-guide}
    + [Om certifikat](certificate-enrollment-guide/about-certs.md)
    + [Förutsättningar](certificate-enrollment-guide/prerequisites.md)
    + [Om certifikatregistreringsroller](certificate-enrollment-guide/about-cert-enrollment.md)
@@ -71,7 +71,7 @@ ht-degree: 0%
       + [Använd Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Testa det packade innehållet](cloud-quick-start/test-packaged-content.md)
    + [Fel vid testning](cloud-quick-start/triaging-errors/client-error-triaging.md)
-   + Anpassad autentisering/tillstånd {#custom-auth-ent}
+   + Anpassad autentisering/berättigande {#custom-auth-ent}
       + [Anpassad autentisering/tillstånd (valfritt)](cloud-quick-start/custom-auth-ent/custom-overview.md)
       + [BEES - översikt](cloud-quick-start/custom-auth-ent/overview.md)
       + [BEES-arbetsflöde](cloud-quick-start/custom-auth-ent/workflow-summary/policy-workflow.md)
@@ -105,7 +105,7 @@ ht-degree: 0%
       + [Hantera domäner](secure-deployment-guidelines/issuing-licenses/issuing-licenses-domains.md)
 + Arbetsflöden för flera DRM {#multi-drm-workflows}
    + [Arbetsflöden för flera DRM](multi-drm-workflows/title-page/overview.md)
-   + Snabbstart för Primetime DRM Cloud {#quick-start}
+   + Primetime DRM Cloud Quick-start {#quick-start}
       + [Översikt](multi-drm-workflows/quick-start/quick-overview.md)
       + [Skaffa licenser (konton, etc.)](multi-drm-workflows/quick-start/get-provisioned.md)
       + [Tangenter, ID:n och autentiserare](multi-drm-workflows/quick-start/keys-ids-and-authenticators.md)
@@ -128,12 +128,12 @@ ht-degree: 0%
    + Allmänna arbetsflöden {#generic-workflows}
       + [Primetime Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
       + [ExpressPlay Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
-   + Funktioner {#feature-topics}
+   + Funktionsavsnitt {#feature-topics}
       + [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
       + [Referenstjänst: Tidsbaserat berättigande](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
       + [Referenstjänst: Enhetsbindningsberättigande](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [SE Offentligt API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
-   + ExpressPlay-licenstokenbegäran/svarsreferens {#license-token-req-resp-ref}
+   + ExpressPlay-licensens tokenbegäran/svarsreferens {#license-token-req-resp-ref}
       + [Översikt](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
       + [FairPlay-licenstokenbegäran/svar](multi-drm-workflows/license-token-req-resp-ref/fairplay-license-token-request.md)
       + [PlayReady-licenstokenbegäran/svar](multi-drm-workflows/license-token-req-resp-ref/playready-license-token-request.md)
@@ -179,7 +179,7 @@ ht-degree: 0%
       + [Uppgradera Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
       + [Köra DRM-servern för skyddad direktuppspelning](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [Paketera innehåll](protected-streaming/understanding-deployment/packaging-content.md)
-      + DRM Server for Protected Streaming Utilities {#drm-for-protected-streaming-utilities}
+      + DRM-server för verktyg för skyddad strömning {#drm-for-protected-streaming-utilities}
          + [Konfigurationsvaliderare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
          + [Lösenordsskrubbare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
          + [SWF-hash-räknare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
@@ -229,7 +229,7 @@ ht-degree: 0%
       + [Paketeringsalternativ](protecting-content/packaging-media-overview/content-packaging-options.md)
       + [Kryptera innehåll](protecting-content/packaging-media-overview/encrypting-content.md)
       + [Undersöker krypterat filinnehåll](protecting-content/packaging-media-overview/examining-encrypted-file-content.md)
-   + Förgenerering och inbäddning av licenser {#pre-generating-and-embedded-licenses}
+   + Förgenererar och bäddar in licenser {#pre-generating-and-embedded-licenses}
       + [Förgenererande licenser](protecting-content/pre-generating-and-embedded-licenses/pre-generating-licenses.md)
       + [Bädda in licenser](protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md)
    + Implementera en licensserver {#implementing-the-license-server}
@@ -276,7 +276,7 @@ ht-degree: 0%
       + [Översikt](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
       + [Krav för kommandoradsverktyg](drm-reference-implementations/command-line-tools/requirements.md)
       + [Installera kommandoradsverktygen](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
-   + Konfigurera och köra kommandoradsverktygen {#configure-and-run}
+   + Konfigurera och kör kommandoradsverktygen {#configure-and-run}
       + [Översikt](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
       + [Om konfigurationsfiler för kommandoradsverktyg](drm-reference-implementations/command-line-tools/configure-command-line-tools/config-file.md)
       + [DRM Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
@@ -346,7 +346,7 @@ ht-degree: 0%
    + [Standardarbetsflöde för AXS DRM](aaxs-drm-xkey-mgmt/aaxs-drm-standard-workflow.md)
    + [Externt CEK-arbetsflöde för AXS DRM](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
    + [Använda externt CEK för att sälja och paketera licenser](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
-+ Använda Adobe Access Server för skyddad strömning {#adobe-access-server}
++ Använd Adobe Access Server för skyddad strömning {#adobe-access-server}
    + [Om Adobe Access Server för skyddad strömning](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [Användningsregler](aaxs-protected-streaming/usage-rules.md)
    + [Krav](aaxs-protected-streaming/requirements.md)
@@ -355,7 +355,7 @@ ht-degree: 0%
       + [Java-systemegenskaper](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
       + [Adobe Access-autentiseringsuppgifter](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
       + [HSM-konfiguration](aaxs-protected-streaming/deplying-aaxs-protect-stream/hsm-configuration.md)
-   + Konfigurationsfiler för licensserver {#aaxs-license-server-config-files}
+   + Konfigurationsfiler för licensservern {#aaxs-license-server-config-files}
       + [Struktur för konfigurationskatalog](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)
       + [Global konfigurationsfil](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-global-configuration-file.md)
       + [Konfigurationsfil för innehavare](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-tenant-configuration-file.md)
@@ -363,14 +363,14 @@ ht-degree: 0%
    + [Anpassade auktoriseringstillägg](aaxs-protected-streaming/custom-authorization-extensions.md)
    + Prestandajustering {#performance-tuning}
       + [Global konfigurationsfil](aaxs-protected-streaming/performance-tuning/global-configuration-file.md)
-   + Uppgradera Adobe Access Server för skyddad strömning {#upgrading-the-license-server}
+   + Uppgraderar Adobe Access Server för skyddad strömning {#upgrading-the-license-server}
       + [Köra Adobe Access Server för skyddad strömning](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
       + [Loggfiler](aaxs-protected-streaming/upgrading-the-license-server/log-files.md)
       + [Loggkatalogstruktur](aaxs-protected-streaming/upgrading-the-license-server/log-directory-structure.md)
       + [Global loggfil](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
       + [Partitionsloggfil](aaxs-protected-streaming/upgrading-the-license-server/partition-log-file.md)
       + [Klientloggfil](aaxs-protected-streaming/upgrading-the-license-server/tenant-log-file.md)
-   + Konfigurationsfiler uppdateras {#updating-configuration-files}
+   + Konfigurationsfilerna {#updating-configuration-files} uppdateras
       + [Uppdaterar översikt över konfigurationsfiler](aaxs-protected-streaming/updating-configuration-files/updating-configuration-files-overview.md)
       + [Uppdaterar den globala konfigurationsfilen](aaxs-protected-streaming/updating-configuration-files/updating-global-configuration.md)
       + [Uppdaterar klientkonfigurationsfilen](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
@@ -432,7 +432,7 @@ ht-degree: 0%
       + [Minsta säkerhetsnivå för DRM och körningsmiljöer](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Enhetsfunktioner som krävs för att spela upp skyddat innehåll](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Jailbreak Enforcement (kräver Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
-   + Andra policyalternativ {#content-other-policy-options}
+   + Andra principalternativ {#content-other-policy-options}
       + [Förbättrad kedja av licenser](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
       + [Flera uppspelningsrättigheter](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
       + [Fjärradministration och lokal leverans av iOS-nycklar](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
@@ -452,18 +452,18 @@ ht-degree: 0%
       + [Adobe Access-autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
       + [Begär certifikat](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [Lagra autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
-   + Arbeta med politik {#working-with-policies}
+   + Arbeta med profiler {#working-with-policies}
       + [Arbeta med politik](aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)
       + [Skapa en profil med Java API](aaxs-protecting-content/content-working-with-policies/content-creating-policy-using-java-api.md)
       + [Uppdatera en princip med Java API](aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)
       + [Kritisk politik](aaxs-protecting-content/content-working-with-policies/content-policy-criticality.md)
       + [Listor över principuppdateringar](aaxs-protecting-content/content-working-with-policies/protecting-content-policy-update-lists.md)
       + [Arbeta med principuppdateringslistor](aaxs-protecting-content/content-working-with-policies/content-working-with-policy-update-lists.md)
-   + Paketera mediefiler {#packaging-media-files}
+   + Paketerar mediefiler {#packaging-media-files}
       + [Paketera mediefiler](aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md)
       + [Kryptera innehåll](aaxs-protecting-content/content-packaging-media-files/content-encrypting-content.md)
       + [Undersöker krypterat filinnehåll](aaxs-protecting-content/content-packaging-media-files/content-examining-encrypted-file-content.md)
-   + Förgenerering och inbäddning av licenser {#pre-generating-and-embedding-liceses}
+   + Förgenererar och bäddar in licenser {#pre-generating-and-embedding-liceses}
       + [Förgenerering och inbäddning av licenser](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-embedded-licenses-overview.md)
       + [Förgenererande licenser](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-licenses.md)
       + [Bädda in licenser](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)
@@ -503,15 +503,15 @@ ht-degree: 0%
          + [Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
          + [Prestandajustering](aaxs-protecting-content/content-implementing-the-license-server/content-performance-tuning.md)
          + [Generera slumpmässiga tal](aaxs-protecting-content/content-implementing-the-license-server/content-generating-random-nos.md)
-   + Återkalla klientautentiseringsuppgifter {#revoking-client-credentials}
+   + Återkallar klientautentiseringsuppgifter {#revoking-client-credentials}
       + [Återkalla klientautentiseringsuppgifter](aaxs-protecting-content/content-revoking-client-creds/content-revoking-client-creds-overview.md)
       + [Återkalla DRM-klient- och körningsreferenser](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
       + [Återkallar datorautentiseringsuppgifter](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
    + [Skapa videospelare](aaxs-protecting-content/content-creating-video-players.md)
 + Referensimplementeringar för Adobe Access {#reference-implementation}
    + [Översikt - Använda referensimplementeringar](aaxs-reference-implementations/overview.md)
-   + [Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
-   + Policy Manager {#policy-manager}
+   + [Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor  ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + Principhanteraren {#policy-manager}
       + [Använda Policy Manager](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md)
@@ -519,7 +519,7 @@ ht-degree: 0%
       + [Använda Media Packager](aaxs-reference-implementations/command-line-tools/media-packager/using-aaxs-media-packager.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-config-file-props.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-command-line-usage.md)
-   + Listhanterare för principuppdatering {#policy-update-list-manager}
+   + Listhanteraren för principuppdatering {#policy-update-list-manager}
       + [Översikt över Listhanteraren för principuppdatering](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-config-file-props.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-command-line-usage.md)
@@ -527,14 +527,14 @@ ht-degree: 0%
       + [Översikt över Hanteraren för spärrlista](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-config-file-props.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-command-line-usage.md)
-   + AIR Publisher ID-verktyg {#air-publisher-id-utility}
+   + Verktyget AIR Publisher ID {#air-publisher-id-utility}
       + [Översikt över verktyget AIR Publisher ID](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-command-line-usage.md)
    + Licensgenerator {#license-generator}
       + [Licensgenerator - översikt](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-overview.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-config-file-props.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-command-line-usage.md)
-   + License Embedder {#license-embedder}
+   + Licensinbäddaren {#license-embedder}
       + [Översikt över licensinbäddning](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-overview.md)
       + [Användning av kommandorad](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-command-line-usage.md)
    + Licensserver och bevakad mapppaketerare{#license-server-and-wfp}
@@ -550,7 +550,7 @@ ht-degree: 0%
       + [Konfigurera databasen och konfigurera JNDI-datakällan](aaxs-reference-implementations/license-server-and-wfp/license-server-setting-up-db-jndi.md)
       + [HSM-konfiguration](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config.md)
       + [Policyfil för korsdomän](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config-crossdomain-policy-file.md)
-   + Distribuera licensservern och bevakad mapppaketerare {#license-server-and-wfp}
+   + Distribuera licensservern och den bevakade mapppaketeraren {#license-server-and-wfp}
       + [Distribuera licensservern och den bevakade mapppaketeraren - översikt](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-overview.md)
       + [Felsökning](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
    + [Kontrollerar om Reference Implementation License Server körs som den ska](aaxs-reference-implementations/deploying-license-server-determining-ref-running.md)
@@ -578,7 +578,7 @@ ht-degree: 0%
          + [Inställningar för Packager](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
          + [Inställningar för principuppdateringslista](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
          + [HSM-inställningar](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-hsm-prefs.md)
-      + Skapa profiler {#policy-creation}
+      + Skapa profil {#policy-creation}
          + [Skapa en ny princip](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-create-new.md)
          + [Grundläggande principalternativ](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-basic-policy-options.md)
          + [Uppspelningsrättigheter](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-play-rights.md)
