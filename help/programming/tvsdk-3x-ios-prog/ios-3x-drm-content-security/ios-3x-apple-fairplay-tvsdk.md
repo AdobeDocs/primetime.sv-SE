@@ -7,13 +7,13 @@ uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 
-# Apple FairPlay i TVSDK-applikationer {#apple-fairplay-in-tvsdk-applications}
+# Apple FairPlay i TVSDK-program {#apple-fairplay-in-tvsdk-applications}
 
 Om du vill implementera FairPlay-strömning i din TVSDK-app måste du skriva en Resource Loader, som skickar en licensinhämtningsbegäran till FairPlay-servern.
 
@@ -31,17 +31,17 @@ https://fp-gen.service.expressplay.com
 
 Resursinläsaren formaterar begäran och kopplar en ExpressPlay-token som tillåter uppspelning till URL:en. När du hämtar ExpressPlay-token finns det flera alternativ att tänka på. Dessa alternativ bestäms av hur du paketerade ditt innehåll.
 
-När du paketerar ditt innehåll infogar paketeraren URL: `skd:` er i ditt M3U8-manifest. Efter `skd:` inmatningen kan du lägga in alla data i manifestet. Du kan använda dessa data i programkoden för att slutföra de uppgifter som anges ovan. Du kan till exempel använda `skd:{content_id}` så att din app kan avgöra ID:t för det innehåll som spelas upp och begära en token för det specifika innehållet. Du kan till exempel använda `skd:{entitlement_server_url}?cid={content_id}`så att ditt program inte behöver ha en URL för tillståndsservern hårdkodad.
+När du paketerar ditt innehåll infogar paketeraren `skd:` URL:er i ditt M3U8-manifest. Efter `skd:`-posten kan du lägga alla data i manifestet. Du kan använda dessa data i programkoden för att slutföra de uppgifter som anges ovan. Du kan till exempel använda `skd:{content_id}` så att din app kan avgöra ID:t för det innehåll som spelas upp och begära en token för det specifika innehållet. Du kan till exempel även använda `skd:{entitlement_server_url}?cid={content_id}` så att din app inte behöver ha en URL för tillståndsservern hårdkodad.
 
-Du behöver kanske ingen information i din `skd:` URL om du redan känner till innehålls-ID via andra kanaler när uppspelningen startar. Det andra exemplet är en perfekt lösning för att testa konfigurationen, men du kan också använda den i en produktionsmiljö.
+Du behöver kanske ingen information i din `skd:`-URL om du redan känner till innehålls-ID via andra kanaler när uppspelningen startar. Det andra exemplet är en perfekt lösning för att testa konfigurationen, men du kan också använda den i en produktionsmiljö.
 
 >[!TIP]
 >
 >Du bestämmer formatet för `skd:`.
 
-Ditt innehåll hämtas med hjälp av `skd:` protokollet, men din licensbegäran använder `https:`. De vanligaste alternativen för att hantera dessa protokoll är:
+Ditt innehåll hämtas med `skd:`-protokollet, men din licensbegäran använder `https:`. De vanligaste alternativen för att hantera dessa protokoll är:
 
-* **Inledande testning av uppspelning** från början till slut Välj en `skd:` URL när du paketerar innehållet. När du testar din app måste du hämta en licens från ExpressPlay och hårdkoda licensen (en `https:` URL) och innehålls-URL:en i din inläsare manuellt.
+* **Inledande testning av** uppspelning från början till slutVälj en  `skd:` URL när du paketerar innehållet. När du testar din app måste du hämta en licens från ExpressPlay och hårdkoda licensen (en `https:`-URL) och innehålls-URL:en i din inläsare manuellt.
 
    Exempel:
 
@@ -53,7 +53,7 @@ Ditt innehåll hämtas med hjälp av `skd:` protokollet, men din licensbegäran 
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **De flesta andra fall** När du paketerar innehåll väljer du en `skd:` URL som unikt representerar innehållets ID. Tolka URL-adressen i inläsaren, skicka den till servern för att hämta en token och använd den resulterande token som URL-adress. `skd:`
+* **De flesta andra** fallNär du paketerar innehåll väljer du en  `skd:` URL som unikt representerar innehållets ID. Analysera URL:en för `skd:` i inläsaren, skicka den till servern för att hämta en token och använd den resulterande token som URL.
 
    Exempel:
 
@@ -161,11 +161,11 @@ Du kan implementera Apple FairPlay Streaming, som är Apples DRM-lösning, i din
    >
    >Se till att du följer instruktionerna i *FairPlay Streaming Program Guide* ( *FairPlayStreaming_PG.pdf*), som ingår i [FairPlay Server SDK för utveckling av en FPS-kompatibel app](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   Metoden `resourceLoader:shouldWaitForLoadingOfRequestedResource` motsvarar det som finns i `AVAssetResourceLoaderDelegate`.
+   Metoden `resourceLoader:shouldWaitForLoadingOfRequestedResource` motsvarar vad som finns i `AVAssetResourceLoaderDelegate`.
 
    >[!NOTE]
    >
-   >Om du vill spela upp innehåll i ExpressPlay-licensserverscenariot ändrar du URL-schemat i din licensbegäran för ExpressPlay-servern från `skd://` till `https://` (eller `https://`).
+   >Om du vill spela upp innehåll i ExpressPlay-licensserverscenariot ändrar du URL-schemat i din licensbegäran för ExpressPlay från `skd://` till `https://` (eller `https://`).
 
 1. Registrera *FairPlay* Customer Resource Loader med `registerPTAVAssetResourceLoader`.
 
