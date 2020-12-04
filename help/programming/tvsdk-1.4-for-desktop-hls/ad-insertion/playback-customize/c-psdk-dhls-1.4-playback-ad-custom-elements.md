@@ -31,7 +31,8 @@ Följande API-element är användbara för att anpassa uppspelning:
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta bevakade profiler med 
     <pre>
-     egenskapen <span class="codeph"> adBreakAsWatched</span> .
+     den 
+     <span class="codeph"> ochBreakAsWatched</span>-egenskap.
     </pre> </td> 
   </tr> 
   <tr> 
