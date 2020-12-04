@@ -6,6 +6,9 @@ title: Förbereda innehåll
 uuid: edb633f0-b623-41ea-a52a-19017d45fb18
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Innan du gör innehåll tillgängligt för distribution måste du först koda in
 
 Stegen för att koda, paketera och distribuera innehåll är följande:
 
-1. Koda innehållet i det videoformat du vill använda med kodningsverktyg från Adobe eller från tredje part.
+1. Koda materialet i det videoformat du önskar med kodningsverktygen från Adobe eller från tredje part.
 1. Skapa profiler som anger de användningsregler som konsumenterna kan använda för att visa innehållet.
 
    En policy är behållaren för de regler och begränsningar som avgör hur, när och var det skyddade innehållet kan ses av konsumenterna.
@@ -33,5 +36,5 @@ Stegen för att koda, paketera och distribuera innehåll är följande:
 
 1. Gör det skyddade innehållet tillgängligt för distribution till konsumenter.
 
-   Det skyddade innehållet distribueras vanligtvis via ett nätverk för innehållsdistribution (CDN). CDN kan använda vilken mekanism som helst som stöds av klientmiljön, som Flash Media Server, Adobe HTTP Dynamic Streaming för strömning med flera bithastigheter eller en HTTP Web Server för progressiv nedladdning.
+   Det skyddade innehållet distribueras vanligtvis via ett nätverk för innehållsdistribution (CDN). CDN kan använda vilken mekanism som helst som stöds av klientmiljön, till exempel Flash Media Server, Adobe HTTP Dynamic Streaming för direktuppspelning med flera bithastigheter eller en HTTP-webbserver för progressiv nedladdning.
 
