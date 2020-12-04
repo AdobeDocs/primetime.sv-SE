@@ -6,6 +6,9 @@ title: Uppgradera befintliga distributioner
 uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Om du vill använda domänregistrering med Reference Implementation License Serv
 
 Så här bevarar du databasposter och lägger till nya tabeller:
 
-1. Öppna `CreateSampleDB.sql` och köra kommandon som skapar följande tabeller:
+1. Öppna `CreateSampleDB.sql` och kör kommandon som skapar följande tabeller:
 
    * `DomainServerInfo`
    * `DomainKeys`
@@ -26,14 +29,14 @@ Så här bevarar du databasposter och lägger till nya tabeller:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Lägg till följande egenskaper för [!DNL flashaccess-refimpl.properties] att använda domänstödet:
+1. Lägg till följande egenskaper i [!DNL flashaccess-refimpl.properties] för att använda domänstödet:
 
-   * `HandlerConfiguration.DomainCAs.n` eller `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+   * `HandlerConfiguration.DomainCAs.n` eller  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` och `DomainRegistrationHandler.ServerCredential.password` eller `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` och  `DomainRegistrationHandler.ServerCredential.password` eller  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. Lägg till följande egenskaper för [!DNL flashaccess-refimpl.properties] att ge stöd för fjärrnyckelleverans till iOS-klienter:
+1. Lägg till följande egenskaper i [!DNL flashaccess-refimpl.properties] för att ge stöd för fjärradministration med iOS-klienter:
 
-   * `HandlerConfiguration.KeyServerCertificate` eller `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
+   * `HandlerConfiguration.KeyServerCertificate` eller  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
