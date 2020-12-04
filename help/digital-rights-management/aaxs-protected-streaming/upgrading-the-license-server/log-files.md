@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Loggfiler{#log-files}
 
-Loggfilerna som genereras av programmet Adobe Access Server för skyddad direktuppspelning finns i den katalog som anges av *LicenseServer.LogRoot*.
+Loggfilerna som genereras av Adobe Access Server för skyddad direktuppspelning finns i den katalog som anges av *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
