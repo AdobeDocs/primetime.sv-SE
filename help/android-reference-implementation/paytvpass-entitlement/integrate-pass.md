@@ -6,6 +6,9 @@ title: Integrera Primetime-autentisering
 uuid: 34cdf1da-261e-462c-a194-4fcb439e5dfb
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 0%
 
 ---
 
@@ -18,26 +21,26 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
 1. Aktivera eller inaktivera tillståndsflöden.
 
-   Först `EntitlementManager` måste användaren initiera och hämta en instans av SDK för autentisering av Primetime för att kunna aktiveras. Om biblioteket `EntitlementManager` inte initieras inaktiveras hanteraren.
-1. Aktivera `EntitlementManger`från huvudprogramklassen:
+   `EntitlementManager` måste först initiera och hämta en instans av SDK för autentisering av Primetime för att aktiveras. Om `EntitlementManager` inte initierar det här biblioteket inaktiveras hanteraren.
+1. Aktivera `EntitlementManger` från huvudprogramklassen:
 
    ```java
    // initialize the AccessEnabler library, required for Primetime PayTV Pass entitlement workflows 
    EntitlementManager.initializeAccessEnabler(this); // comment out this line to disable entitlement workflows
    ```
 
-1. Använd `ManagerFactory` klassen för att hämta en instans av `EntitlementManager`.
+1. Använd klassen `ManagerFactory` för att hämta en instans av `EntitlementManager`.
 
-   Du måste alltid använda `ManagerFactory` för att hämta en instans av `EntitlementManager`filen eftersom den `ManagerFactory` underhåller en enda instans av EntitlementManager för programmet. Instansiera aldrig `EntitlementManager` - eller `EntitlementManagerOn` -klasserna med hjälp av deras konstruktorer.
+   Du måste alltid använda `ManagerFactory` för att hämta en instans av `EntitlementManager`, eftersom `ManagerFactory` upprätthåller en enda instans av EntitlementManager för programmet. Instansiera aldrig klasserna `EntitlementManager` eller `EntitlementManagerOn` med hjälp av deras konstruktorer.
 
    ```java
    EntitlementManager entitlementManager =  
    ManagerFactory.getEntitlementManager();
    ```
 
-   Den `ManagerFactory` returnerar en instans av `EntitlementManagerOn`, med berättigandeflödena aktiverade, om du tidigare anropade `EntitlementManager.initializeAccessEnabler`. Om du inte först anropar `EntitlementManager.initializeAccessEnabler`returnerar `ManagerFactory` instansen av `EntitlementManager`och berättigandeflödena är inaktiverade. 1. Konfigurera begärande-ID.
+   `ManagerFactory` returnerar en instans av `EntitlementManagerOn` med tillståndsflödena aktiverade, om du tidigare anropade `EntitlementManager.initializeAccessEnabler`. Om du inte först anropar `EntitlementManager.initializeAccessEnabler` returnerar `ManagerFactory` en instans av `EntitlementManager` med berättigandeflödena inaktiverade. 1. Konfigurera begärande-ID.
 
-   Referensimplementeringen är förkonfigurerad med test-ID:t för begärande inställt på: &quot;REF&quot;. Du kan använda detta begärande-ID för att testa programmet. När du är redo att använda det begärande-ID som du har fått från din autentiseringsrepresentant för Primetime, uppdaterar du programmets [!DNL res/values/strings.xml] fil med ditt begärande-ID.
+   Referensimplementeringen är förkonfigurerad med test-ID:t för begärande inställt på: &quot;REF&quot;. Du kan använda detta begärande-ID för att testa programmet. När du är redo att använda det begärande-ID som du har fått från din autentiseringsrepresentant för Primetime, uppdaterar du programmets [!DNL res/values/strings.xml]-fil med ditt begärande-ID.
 
    ```xml
    <!-- Programmer Requestor ID, change to ID provided by your Adobe  
@@ -53,9 +56,9 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
    <string name="adobepass_sp_url_staging">sp.auth-staging.adobe.com</string>
    ```
 
-   Dessutom kan du behöva ändra de URL:er som ditt program använder för att ansluta till Primetimes autentiseringstjänster. Dessa inkluderar URL:er för testnings- och produktionsserver för Primetime-autentisering och en URL till en Token Verification Service. Kontakta din Adobe Primetime-representant för mer information. 1. Signera begärande-ID:t.
+   Dessutom kan du behöva ändra de URL:er som ditt program använder för att ansluta till Primetimes autentiseringstjänster. Dessa inkluderar URL:er för testnings- och produktionsserver för Primetime-autentisering och en URL till en Token Verification Service. Kontakta Adobe Primetime för mer information. 1. Signera begärande-ID:t.
 
-   För att kunna fastställa programmerarens identitet i Primetimes autentiseringssystem skickas programmerarens begärande-ID till autentiseringssystemet Primetime. Som ett extra säkerhetsskikt måste beställar-ID:t signeras av programmeraren innan det skickas till Adobe. Adobe rekommenderar att Programmeraren installerar en tjänst för att signera begärande-ID:t på ett betrott nätverk.
+   För att kunna fastställa programmerarens identitet i Primetimes autentiseringssystem skickas programmerarens begärande-ID till autentiseringssystemet Primetime. Som ett extra säkerhetslager måste begärande-ID:t signeras av programmeraren innan det skickas till Adobe. Adobe rekommenderar att Programmeraren installerar en tjänst för att signera begärande-ID på ett betrott nätverk.
 
    Primetimes referensimplementering visar hur du signerar begärande-ID, men detta är endast till för demonstrationssyften. Adobe rekommenderar starkt att signeringscertifikatet och signaturgeneratorkoden, under `com.adobe.primetime.reference.crypto`, inte ska inkluderas i ett produktionsprogram. I stället bör du flytta den till en betrodd nätverkstjänst.
 
@@ -65,7 +68,8 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
    * Mellanlagring - Mellanlagringsmiljön används för att testa programmet.
    * Produktion - Produktionsmiljön används för driftsättning av ditt program.
-   Du ställer in URI:er för både staging- och produktionsmiljöer med programmet, men du måste ange vilken av dessa som ska användas av programmet i koden. I `com.adobe.primetime.reference.manager.EntitlementManger` klassen ställer du in `environmentUri` variabeln på antingen `STAGING_URI` eller `PRODUCTION_URI` beroende på vilken av Primetimes autentiseringstjänstmiljö du använder.
+
+   Du ställer in URI:er för både staging- och produktionsmiljöer med programmet, men du måste ange vilken av dessa som ska användas av programmet i koden. I klassen `com.adobe.primetime.reference.manager.EntitlementManger` anger du variabeln `environmentUri` till antingen `STAGING_URI` eller `PRODUCTION_URI` beroende på vilken autentiseringsmiljö du använder.
 
    >[!NOTE]
    >
@@ -95,7 +99,7 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
 1. Anpassa MVPD-markeringsstödrastret.
 
-   På urvalssidan för innehållsleverantör visas en tabell med de nio viktigaste PDF-filerna som användaren kan välja bland. Programmet hämtar de nio viktigaste PDF-filerna från en ordnad lista i programmet som matchar de tillgängliga MVPD-filerna som är integrerade med programmeraren i Primetimes autentiseringssystem. Den ordnade listan över de primära PDF-filerna sparas i MVPD-ID:t i autentiseringssystemet Primetime, inte i visningsnamnet för MVPD. Det är viktigt att verifiera att MVPD ID:n i listan över primära MVPD-ID:n matchar MVPD ID:n som är integrerade med programmerarens konto, eftersom ID:n i vissa fall kan vara olika för olika integreringar. Nedan finns den ordnade listan över primära MVPD:er som finns i klassen `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
+   På urvalssidan för innehållsleverantör visas en tabell med de nio viktigaste PDF-filerna som användaren kan välja bland. Programmet hämtar de nio viktigaste PDF-filerna från en ordnad lista i programmet som matchar de tillgängliga MVPD-filerna som är integrerade med programmeraren i Primetimes autentiseringssystem. Den ordnade listan över de primära PDF-filerna sparas i MVPD-ID:t i autentiseringssystemet Primetime, inte i visningsnamnet för MVPD. Det är viktigt att verifiera att MVPD ID:n i listan över primära MVPD-ID:n matchar MVPD ID:n som är integrerade med programmerarens konto, eftersom ID:n i vissa fall kan vara olika för olika integreringar. Nedan visas den ordnade listan över primära MVPD:er som finns i klassen `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
 
    ```java
    /* Array of MVPDs to display in a Grid of icons 
