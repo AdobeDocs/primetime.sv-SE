@@ -6,6 +6,9 @@ title: Läs in annons för ett DVR-fönster
 uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ När en användare börjar visa innehåll i början av en DVR-ström, löser TVS
 >
 >Reparera annonser efter att den aktuella direktpunkten är snabbare, men om användaren söker bakåt förhindrar det här alternativet spelaren från att spela upp annonser som visades tidigare.
 
-## Styra och läsa in för ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Kontrollera och läsa in ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Så här styr du inläsning av DVR-fönster:
 
