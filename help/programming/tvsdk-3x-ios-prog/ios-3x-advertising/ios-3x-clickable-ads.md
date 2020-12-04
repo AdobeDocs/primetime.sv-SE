@@ -6,6 +6,9 @@ title: Klickbara annonser
 uuid: 8b257483-8b90-47cf-be2a-095b6d5b8883
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ TVSDK ger dig information så att du kan agera på klickbara annonser. När du s
 
 I TVSDK för iOS går det bara att klicka på linjära annonser.
 
-## Svara på klickningar på annonser {#section_537AF2593FDB4257B81AAE2103B0C719}
+## Svara på klick på annonser {#section_537AF2593FDB4257B81AAE2103B0C719}
 
 När en användare klickar på en annons, en tilläggsbanderoll eller en relaterad knapp måste ditt program svara. TVSDK ger dig information om mål-URL:en för klickningen.
 
@@ -27,9 +30,9 @@ När en användare klickar på en annons, en tilläggsbanderoll eller en relater
    >När en användare klickar på en annons, en tilläggsbanderollannons eller en relaterad knapp skickar TVSDK det här meddelandet, inklusive information om klickningens mål.
 
 1. Övervaka användarinteraktioner i klickbara annonser.
-1. När användaren vidrör eller klickar på annonsen eller knappen ska du använda för att meddela TVSDK `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Lyssna efter `PTMediaPlayerAdClickNotification` eventet från TVSDK.
-1. Använd `PTMediaPlayerAdClickURLKey` objektet om du vill hämta klicknings-URL:en och relaterad information.
+1. När användaren pekar på eller klickar på annonsen eller knappen ska du använda `[_player notifyClick:_currentAd.primaryAsset];` för att meddela TVSDK.
+1. Lyssna efter händelsen `PTMediaPlayerAdClickNotification` från TVSDK.
+1. Använd objektet `PTMediaPlayerAdClickURLKey` om du vill hämta klicknings-URL:en och relaterad information.
 1. Pausa videon.
 1. Använd klickningsinformationen för att visa webbadressen för annonsklickningen och relaterad information.
 
