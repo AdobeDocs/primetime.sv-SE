@@ -6,11 +6,14 @@ title: Annonsmätningar från Moat
 uuid: 520d33b0-2218-4f74-9689-b9dc520f29cc
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# Annonsmätningar från Moat {#ad-measurements-from-moat}
+# Lägg till mått från Moat {#ad-measurements-from-moat}
 
 TVSDK hämtar information från FreeWheel och andra adminstratörer som tillhandahåller VAST-svar. FreeWheel ger, inom VAST-svar, information från tjänsten Moat. Tjänsten Moat räknar med en noggrannhet som bättre visar att kreatörerna fångar upp eller försummar en viss målgrupps intressen.
 
