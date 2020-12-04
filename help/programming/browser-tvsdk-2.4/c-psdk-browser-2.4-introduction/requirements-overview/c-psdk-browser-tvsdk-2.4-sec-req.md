@@ -6,6 +6,9 @@ title: Säkerhetsaspekter
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Det finns vissa säkerhetsfrågor att tänka på när det gäller webbläsarens 
 
    * Flash Player tillåter inte åtkomst till data som finns utanför den domän som SWF-filen kommer från.
 
-      Om du vill tillåta åtkomst ska du ha en korsdomänprincipfil med lämpliga behörigheter i roten på den server där data lagras. I Flash-återställningsläget i Browser TVSDK (Flash Player version 23 och senare) behöver du en autentiseringstoken för din domän. Kontakta din Adobe-representant om du vill generera token.
+      Om du vill tillåta åtkomst ska du ha en korsdomänprincipfil med lämpliga behörigheter i roten på den server där data lagras. I Flash-återställningsläget i webbläsarens TVSDK (Flash Player version 23 och senare) behöver du en autentiseringstoken för din domän. Kontakta din Adobe-representant om du vill generera token.
 
 * **JavaScript**
 
