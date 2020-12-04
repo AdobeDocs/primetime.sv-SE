@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Jailbreak Enforcement (kräver Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
+# Jailbreak Enforcement (requires Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-På plattformar som stöder jailbreak-identifiering (till exempel Android- och iOS-mobilenheter), kan du aktivera tvångsuppföljning av jailbreak-attacker och inaktivera uppspelning av innehåll om det [!DNL jailbreak/root] har identifierats på enheten.
+På plattformar som stöder jailbreak-identifiering (till exempel Android- och iOS-mobilenheter), kan du inte spela upp innehåll om [!DNL jailbreak/root] har identifierats på enheten genom att aktivera tvångsuppdatering.
 
 >[!NOTE]
 >
