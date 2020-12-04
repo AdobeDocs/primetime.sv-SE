@@ -6,6 +6,9 @@ title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
 uuid: b6939011-a6ff-4342-8e7c-3a0c805ee91c
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -16,17 +19,17 @@ Implementera lämpliga meddelandeavlyssnare om du vill få meddelanden om taggar
 
 Du kan övervaka tidsbestämda metadata genom att avlyssna följande händelser som meddelar programmet om relaterade aktiviteter:
 
-* `PTTimedMetadataChangedNotification`: Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK ett nytt `PTTimedMetadata` objekt och skickar det här meddelandet.
+* `PTTimedMetadataChangedNotification`: Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK ett nytt  `PTTimedMetadata` objekt och skickar det här meddelandet.
 
    Objektet innehåller namnet på taggen som du prenumererar på, lokal tid i uppspelningen där taggen ska visas samt andra data.
 
-* `PTMediaPlayerTimeChangeNotification` : För live-/linjära strömmar där manifestet/spellistan uppdateras regelbundet kan ytterligare anpassade taggar visas i den uppdaterade spellistan/manifestfilen, så ytterligare `TimedMetadata` objekt kan läggas till i `MediaPlayerItem.timedMetadata` egenskapen.
+* `PTMediaPlayerTimeChangeNotification` : För live-/linjära strömmar där manifestet/spellistan uppdateras regelbundet kan ytterligare anpassade taggar visas i den uppdaterade spellistan/manifestfilen, så ytterligare  `TimedMetadata` objekt kan läggas till i  `MediaPlayerItem.timedMetadata` egenskapen.
 
    Den här händelsen meddelar programmet när detta händer.
 
    Hämta tidsmetadata på något av följande sätt.
 
-   * Ange att programmet ska lägga till sig självt som avlyssnare till `PTTimedMetadataChangedNotification` meddelandet och hämta objektet med `PTTimedMetadataKey`.
+   * Ange att programmet ska lägga till sig själv som avlyssnare till `PTTimedMetadataChangedNotification`-meddelandet och hämta objektet med `PTTimedMetadataKey`.
 
       ```
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
@@ -38,4 +41,4 @@ Du kan övervaka tidsbestämda metadata genom att avlyssna följande händelser 
       }
       ```
 
-   * Få åtkomst till egenskapen `timedMetadataCollection` för `PTMediaPlayerItem`, som består av alla `PTTimedMetadata` objekt som har anmälts hittills.
+   * Få åtkomst till egenskapen `timedMetadataCollection` för `PTMediaPlayerItem`, som består av alla `PTTimedMetadata`-objekt som har meddelats hittills.
