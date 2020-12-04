@@ -6,6 +6,9 @@ title: Ange buffringstider
 uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
 >
 >Om du inte anger parametrar för buffertkontroll innan uppspelningen startar, blir mediaspelaren som standard 2 sekunder för den inledande bufferten och 30 sekunder för den pågående uppspelningsbufferttiden.
 
-1. Ställ in `BufferControlParameters` objektet, som kapslar in den inledande buffringstiden och tidskontrollparametrarna för uppspelningsbufferten:
+1. Ställ in objektet `BufferControlParameters`, som kapslar in den inledande bufferttiden och kontrollparametrarna för uppspelningsbuffertens tid:
 
        Den här klassen innehåller följande fabriksmetoder:
    
@@ -39,13 +42,13 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
 
-1. Använd den här `MediaPlayer` metoden om du vill ange värden för buffertparametern:
+1. Använd den här `MediaPlayer`-metoden om du vill ange värden för buffertparametern:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Använd den här `MediaPlayer` metoden om du vill hämta de aktuella buffertparametervärdena:
+1. Använd den här `MediaPlayer`-metoden för att hämta de aktuella buffertparametervärdena:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +62,4 @@ Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och up
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-I exemplet `psdkdemo` visas denna funktion. Använd programmets inställningar för att ange buffertvärden.
+`psdkdemo` demonstrerar den här funktionen; Använd programmets inställningar för att ange buffertvärden.
