@@ -4,18 +4,21 @@ title: Distribuera WAR-filer
 uuid: 435a6a6e-c981-46fb-bca9-7f5f34eecd6a
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 0%
 
 ---
 
 
 # Distribuera WAR-filer{#deploy-the-war-files}
 
-1. Kopiera WAR-filen till Tomcat- [!DNL webapps] katalogen.
+1. Kopiera WAR-filen till Tomcat&#39;s [!DNL webapps]-katalogen.
 
    * Individualiseringsserver: [!DNL flashaccess.war]
    * Nyckelgenereringsserver: [!DNL flashaccess-kgs.war]
 
-1. Kopiera mappen från det paket som Adobe tillhandahåller till [!DNL ROOT] [!DNL webapps] katalogen.
+1. Kopiera mappen [!DNL ROOT] från paketet som tillhandahålls av Adobe till katalogen [!DNL webapps].
 
-   Individualiseringsservern måste också vara värd för [!DNL crossdomain.xml] filen. (Mappen [!DNL ROOT] innehåller [!DNL crossdomain.xml] filen; [!DNL ROOT] måste vara i versaler.) Nyckelgenereringsservern kräver inte den här filen.
+   Individualiseringsservern måste också vara värd för filen [!DNL crossdomain.xml]. (Mappen [!DNL ROOT] innehåller filen [!DNL crossdomain.xml]; [!DNL ROOT] måste vara i versaler.) Nyckelgenereringsservern kräver inte den här filen.
 
