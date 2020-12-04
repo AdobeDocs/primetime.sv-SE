@@ -6,33 +6,36 @@ title: Styra videovyns placering och storlek
 uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
 
-# Styra videovyns placering och storlek{#control-the-position-and-size-of-the-video-view}
+# Styra position och storlek för videovyn{#control-the-position-and-size-of-the-video-view}
 
 Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 
 Webbläsaren TVSDK försöker som standard att behålla videovyns proportioner när storleken eller positionen för videon ändras på grund av en ändring som gjorts av programmet, en profilväxling, en innehållsväxling osv.
 
-Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan *skalpolicy*. Ange skalningsprincipen med hjälp av `MediaPlayerView` objektets `scalePolicy` egenskap. Standardskalningsprincipen för `MediaPlayerView` anges med en instans av `MaintainAspectRatioScalePolicy` klassen. Om du vill återställa skalförändringsprincipen ersätter du standardinstansen av den `MaintainAspectRatioScalePolicy` med `MediaPlayerView.scalePolicy` din egen princip.
+Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan *skalprincip*. Ange skalningsprincipen med `MediaPlayerView`-objektets `scalePolicy`-egenskap. Standardskalningsprincipen för `MediaPlayerView` anges med en instans av klassen `MaintainAspectRatioScalePolicy`. Om du vill återställa skalprincipen ersätter du standardinstansen av `MaintainAspectRatioScalePolicy` på `MediaPlayerView.scalePolicy` med din egen princip.
 
 >[!IMPORTANT]
 >
->Du kan inte ställa in egenskapen på ett null-värde. `scalePolicy`
+>Du kan inte ange egenskapen `scalePolicy` till ett null-värde.
 
-## Utfallsscenarier som inte är Flash {#non-flash-fallback-scenarios}
+## Reservscenarier som inte är Flash {#non-flash-fallback-scenarios}
 
-För att skalningsprincipen ska fungera korrekt i andra scenarier än Flash-reservscenarier bör video-div-elementet som anges i konstruktorn returnera värden som inte är noll för `View` och `offsetWidth` `offsetHeight`. Om du vill ge ett exempel på en felaktig funktion, ibland när bredden och höjden på video-div-elementen inte anges explicit i css, returnerar konstruktorn `View` noll för `offsetWidth` eller `offsetHeight`.
+För att skalningsprincipen ska fungera korrekt i andra scenarier än Flash bör video-div-elementet som anges i `View`-konstruktorn returnera värden som inte är noll för `offsetWidth` och `offsetHeight`. Om du vill ge ett exempel på en felaktig funktion, ibland när bredden och höjden på video-div-elementen inte anges explicit i css, returnerar `View`-konstruktorn noll för `offsetWidth` eller `offsetHeight`.
 
 >[!NOTE]
 >
 >CustomScalePolicy har begränsat stöd för ett fåtal webbläsare, bland annat IE, Edge och Safari 9. För dessa webbläsare går det inte att ändra videofilens ursprungliga proportioner. Videons position och dimensioner används dock enligt skalningsprincipen.
 
-1. Implementera `MediaPlayerViewScalePolicy` gränssnittet för att skapa en egen skalpolicy.
+1. Implementera gränssnittet `MediaPlayerViewScalePolicy` för att skapa en egen skalpolicy.
 
-   Det `MediaPlayerViewScalePolicy` finns en metod:
+   `MediaPlayerViewScalePolicy` har en metod:
 
    ```js
    /** 
@@ -64,14 +67,14 @@ För att skalningsprincipen ska fungera korrekt i andra scenarier än Flash-rese
    };
    ```
 
-1. Tilldela implementeringen till `MediaPlayerView` egenskapen.
+1. Tilldela din implementering till egenskapen `MediaPlayerView`.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. Lägg till vyn i Media Players `view` egenskap.
+1. Lägg till vyn i mediespelarens `view`-egenskap.
 
    ```
    mediaplayer.view = view;
