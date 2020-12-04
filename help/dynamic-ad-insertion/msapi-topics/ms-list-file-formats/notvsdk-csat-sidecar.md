@@ -6,6 +6,9 @@ title: JSON-format för spårning av URL:er
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -364,7 +367,7 @@ Den har förkortats för att undvika onödig upprepning, så att strukturen blir
 
 >[!NOTE]
 >
->Värdet `offset` för `scte35` attributet som det extraheras från `ad breaks` kan vara negativt. Detta beror på att den underordnade JSON V2 innehåller information om annonsbrytningarna som delvis finns i det aktuella uppspelningsfönstret. Därför innehåller attributet även information om `scte35` sådana annonsbrytningar.
+>Värdet `offset` för attributet `scte35` som extraherats från `ad breaks` kan vara negativt. Detta beror på att den underordnade JSON V2 innehåller information om annonsbrytningarna som delvis finns i det aktuella uppspelningsfönstret. Därför innehåller attributet `scte35` även information om sådana annonsbrytningar.
 
 ## JSON-format för spårning av version 3 {#json_v3}
 
