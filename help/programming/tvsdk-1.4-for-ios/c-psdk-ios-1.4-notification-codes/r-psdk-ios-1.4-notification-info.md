@@ -6,6 +6,9 @@ title: INFO-meddelandekoder
 uuid: 10145ce6-9eb0-4829-85dd-1acfe97b07e8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 4%
 
 ---
 
@@ -35,36 +38,36 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 300000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_START  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> Ingen </td> 
    <td colname="5"> Uppspelningen har startat. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300001 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300001  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> Ingen </td> 
    <td colname="5"> Uppspelningen har slutförts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 300002  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> <p> Ingen </p> </td> 
    <td colname="5"> En sökåtgärd initierades. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300003 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300003  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> En sökåtgärd har slutförts. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300005 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 300005  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> Spelarläget har ändrats. När tillståndet är FEL är det inre meddelandeobjektet det felmeddelandeobjekt som utlöste växlingen till FELläge. </td> 
@@ -77,10 +80,10 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 302000 </span> </td> 
-   <td colname="2"><span class="codeph"> BITRATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 302000  </span> </td> 
+   <td colname="2"><span class="codeph"> BITRATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BITRAT </span> </td> 
+   <td colname="4"><span class="codeph"> BITRAT  </span> </td> 
    <td colname="5"> Videons bithastighet ändrad. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -91,8 +94,8 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 304000  </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Ljudspåret har ändrats. </p> </td> 
@@ -105,8 +108,8 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 307000 </span> </td> 
-   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 307000  </span> </td> 
+   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Spår för undertexter har ändrats. </p> </td> 
