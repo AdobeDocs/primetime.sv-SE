@@ -6,22 +6,25 @@ title: Hantering av fel vid borttagning och ersättning av annonser
 uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
 
-# Hantering av fel vid borttagning och ersättning av annonser {#ad-deletion-and-replacement-error-handling}
+# Hantering av borttagning och ersättningsfel {#ad-deletion-and-replacement-error-handling}
 
 TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
 
-TVSDK hanterar `timeRanges` fel genom att utföra standardsammanslagning och sortering. För det första sorteras kunddefinierade tidsintervall efter *starttiden* . Baserat på den här sorteringsordningen sammanfogar den sedan intilliggande intervall och sammanfogar dem om det finns delmängder och skärningar mellan intervallen.
+TVSDK hanterar `timeRanges`-fel genom att utföra standardsammanslagning och sortering. Först sorteras kunddefinierade tidsintervall efter *början*-tiden. Baserat på den här sorteringsordningen sammanfogar den sedan intilliggande intervall och sammanfogar dem om det finns delmängder och skärningar mellan intervallen.
 
 TVSDK hanterar fel i tidsintervallet enligt följande:
 
 * Oordning - TVSDK ändrar ordning på tidsintervallen.
 * Delmängd - TVSDK sammanfogar delmängder av tidsintervall.
 * Överlappa - TVSDK sammanfogar de överlappande tidsintervallen.
-* Ersätt intervallkonflikt - TVSDK väljer ersättningstiden från det tidigaste som visas `timeRange` i den grupp som står i konflikt.
+* Ersätt intervallkonflikt - TVSDK väljer ersättningstiden från den tidigaste `timeRange` som visas i den grupp som står i konflikt.
 
 TVSDK hanterar konflikter i signaleringsläge enligt följande:
 
@@ -31,13 +34,13 @@ TVSDK hanterar konflikter i signaleringsläge enligt följande:
 
 När servern inte returnerar giltig `AdBreaks`:
 
-* TVSDK genererar och bearbetar en `NOPTimelineOperation` for the empty `AdBreak`. Ingen annons spelas.
+* TVSDK genererar och bearbetar en `NOPTimelineOperation` för den tomma `AdBreak`. Ingen annons spelas.
 
 ## Exempel på tidsintervallfel {#time-range-error-examples}
 
 TVSDK svarar på felaktiga specifikationer för tidsintervall genom att sammanfoga eller ersätta tidsintervallen efter behov.
 
-I följande exempel definieras fyra överlappande DELETE-tidsintervall. TVSDK sammanfogar de fyra tidsintervallen till ett så att det faktiska borttagningsintervallet är mellan 0 och 50.
+I följande exempel definieras fyra överlappande tidsintervall för DELETE. TVSDK sammanfogar de fyra tidsintervallen till ett så att det faktiska borttagningsintervallet är mellan 0 och 50.
 
 ```
 "time-ranges": {
