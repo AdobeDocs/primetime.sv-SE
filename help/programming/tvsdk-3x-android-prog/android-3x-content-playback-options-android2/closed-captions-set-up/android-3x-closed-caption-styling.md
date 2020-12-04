@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Styr textningsformat {#control-closed-caption-styling}
+# Kontroll av textningsformat {#control-closed-caption-styling}
 
 Du kan ange formatinformation för textningsspår med klassen TextFormat som anger formatet för textning som visas av spelaren.
 
@@ -23,12 +23,12 @@ Den här klassen kapslar in formatinformation för undertexter som teckensnittst
 
 Du kan formatera undertexttexten med TVSDK-metoder.
 
-1. Vänta tills mediespelaren har minst `PREPARED` status.
-1. Skapa en `TextFormatBuilder` instans.
+1. Vänta tills mediespelaren har minst statusen `PREPARED`.
+1. Skapa en `TextFormatBuilder`-instans.
 
    Du kan ange alla parametrar för textningsformat nu eller ange dem senare.
 
-   TVSDK kapslar in formatinformation för undertexter i `TextFormat` gränssnittet. Klassen skapar `TextFormatBuilder` objekt som implementerar det här gränssnittet.
+   TVSDK kapslar in formatinformation för undertexter i `TextFormat`-gränssnittet. Klassen `TextFormatBuilder` skapar objekt som implementerar det här gränssnittet.
 
    ```java
    public TextFormatBuilder( 
@@ -46,16 +46,16 @@ Du kan formatera undertexttexten med TVSDK-metoder.
       java.lang.String safeArea)
    ```
 
-1. Om du vill hämta en referens till ett objekt som implementerar `TextFormat` gränssnittet anropar du metoden `TextFormatBuilder.toTextFormat` public.
+1. Om du vill få en referens till ett objekt som implementerar gränssnittet `TextFormat` anropar du den publika metoden `TextFormatBuilder.toTextFormat`.
 
-   Detta returnerar ett `TextFormat` objekt som kan tillämpas på mediespelaren.
+   Detta returnerar ett `TextFormat`-objekt som kan tillämpas på mediespelaren.
 
    `public TextFormat toTextFormat()`
 
 
 1. Du kan även hämta de aktuella stilinställningarna för undertextning genom att göra något av följande:
 
-   * Hämta alla formatinställningar med returvärdet är `MediaPlayer.getCCStyle` en instans av `TextFormat` gränssnittet.
+   * Hämta alla formatinställningar med `MediaPlayer.getCCStyle` Det returnerade värdet är en instans av gränssnittet `TextFormat`.
 
       ```java
       /** 
@@ -67,7 +67,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * Hämta inställningarna en åt gången med hjälp av `TextFormat` gränssnittets get-metoder.
+   * Hämta inställningarna en åt gången med hjälp av metoderna för att hämta i gränssnittet i `TextFormat`.
 
       ```java
       public java.lang.String getFontColor(); 
@@ -85,7 +85,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
 1. Gör något av följande om du vill ändra formatinställningarna:
 
-   * Använd metoden set `MediaPlayer.setCCStyle`och skicka en instans av `TextFormat` gränssnittet:
+   * Använd metoden `MediaPlayer.setCCStyle` och skicka en instans av gränssnittet `TextFormat`:
 
       ```java
       /** 
@@ -103,7 +103,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
    * Använd klassen `TextFormatBuilder` som definierar enskilda set-metoder.
 
-      Gränssnittet definierar ett objekt som inte kan ändras, så det finns bara get-metoder och inga set-metoder. `TextFormat` Du kan bara ange parametrar för textningsformat med `TextFormatBuilder` klassen:
+      Gränssnittet `TextFormat` definierar ett objekt som inte kan ändras, så det finns bara get-metoder och inga set-metoder. Du kan bara ange parametrar för textningsformat med klassen `TextFormatBuilder`:
 
       ```java
       // set font type 
@@ -138,7 +138,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
          >och så vidare.
 
       >
-      >När du skickar färgformatsinformation till `TextFormatBuilder`programmet använder du uppräkningen som tidigare, men nu måste du lägga `Color` `getValue()` till färgen för att få värdet som en sträng. Exempel:
+      >När du skickar information om färgstilar till `TextFormatBuilder` i programmet använder du ändå uppräkningen `Color` som tidigare, men nu måste du lägga till `getValue()` i färgen för att få värdet som en sträng. Exempel:
       >
       >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
@@ -180,25 +180,25 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan bara anges till ett värde som definieras av <span class="codeph"> </span> uppräkningen TextFormat.Font och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips:  De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Font </span> och representerar till exempel fast teckenbredd med eller utan serifer. </p> <p>Tips:  De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
-   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av <span class="codeph"> uppräkningen TextFormat.Size </span> : 
+   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Size </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Standardstorlek </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - cirka 30 % större än mediet </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än medium </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medium </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardstorlek </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR  </span> - Cirka 30 % större än mediet </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medium </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Bildtextens standardstorlek; samma som medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnittskant </td> 
-   <td colname="2"> <p>Den effekt som används för teckensnittskanten, till exempel upphöjd eller ingen. </p> <p>Kan bara anges till ett värde som definieras av <span class="codeph"> uppräkningen TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>Den effekt som används för teckensnittskanten, till exempel upphöjd eller ingen. </p> <p>Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckenfärg </td> 
-   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Color- </span> uppräkningen. </p> </td> 
+   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Color </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Kantfärg </td> 
@@ -214,15 +214,15 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ogenomskinlighet för teckensnitt </td> 
-   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för teckensnittet är 100. </p> </td> 
+   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för teckensnittet är 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bakgrundsopacitet </td> 
-   <td colname="2"> <p>Opaciteten för bakgrundsteckencellen. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för bakgrunden är 100. </p> </td> 
+   <td colname="2"> <p>Opaciteten för bakgrundsteckencellen. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för bakgrunden är 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Fyllningsopacitet </td> 
-   <td colname="2"> <p>Opaciteten för bildtextfönstrets bakgrund. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för fill är 0. </p> </td> 
+   <td colname="2"> <p>Opaciteten för bildtextfönstrets bakgrund. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för fill är 0. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Undre indrag </td> 
