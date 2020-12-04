@@ -31,7 +31,7 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 >public static const VISIBLE:String = visible;
 >```
 
-1. Vänta tills `MediaPlayer` statusen FÖRBEREDD är minst (se [Vänta på ett giltigt tillstånd](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Vänta tills `MediaPlayer` har minst statusen PREPARED (se [Vänta på ett giltigt tillstånd](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
 
    ```
