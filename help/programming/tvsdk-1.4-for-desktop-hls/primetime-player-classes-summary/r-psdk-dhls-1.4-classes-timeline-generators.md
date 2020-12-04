@@ -6,11 +6,14 @@ title: Klasser för generatorer för tidslinje
 uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '214'
+ht-degree: 0%
 
 ---
 
 
-# Klasser för generatorer för tidslinje{#timeline-generators-classes}
+# Generatorklasser för tidslinje{#timeline-generators-classes}
 
 Dessa klasser hjälper till att identifiera möjligheter i en tidslinje för placering av innehåll, som annonser.
 
