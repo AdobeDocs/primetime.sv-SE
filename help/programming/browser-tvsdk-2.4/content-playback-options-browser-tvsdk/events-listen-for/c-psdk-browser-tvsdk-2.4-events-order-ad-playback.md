@@ -1,16 +1,19 @@
 ---
-description: När din uppspelning inkluderar annonsering skickar webbläsaren TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
-seo-description: När din uppspelning inkluderar annonsering skickar webbläsaren TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
+description: När din uppspelning inkluderar annonsering skickar webbläsarens TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
+seo-description: När din uppspelning inkluderar annonsering skickar webbläsarens TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 seo-title: Ordning på annonsevenemang
 title: Ordning på annonsevenemang
 uuid: 9787e6ac-5e52-4d7d-8fc7-f7609633707c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Ordning på annonsevenemang{#order-of-advertising-events}
+# Ordning för annonshändelser{#order-of-advertising-events}
 
 När din uppspelning inkluderar annonsering skickar webbläsarens TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 
