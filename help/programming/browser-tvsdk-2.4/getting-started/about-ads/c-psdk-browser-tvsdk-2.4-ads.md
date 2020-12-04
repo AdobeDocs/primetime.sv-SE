@@ -6,6 +6,9 @@ title: Annonser
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 När innehåll spelas upp kan webbläsarens TVSDK visa annonser och skicka information om annonser när MediaResource-objektet skapas.
 
-Du kan också anropa `prepareToPlay` funktionen efter att du har fått `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Du kan också anropa funktionen `prepareToPlay` när du har tagit emot `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Mer information om obligatoriska metadata `AuditudeSettings`finns i [Lägg till infogningsmetadata](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
+Mer information om obligatoriska `AuditudeSettings` finns i [Metadata för annonsinfogning](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
