@@ -6,6 +6,9 @@ title: Identifiera om innehållet är live eller VOD
 uuid: e6a66104-97fb-438a-8356-e21f94058c85
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -14,8 +17,8 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Du kan behöva veta om medieinnehållet är live eller on demand-video (VOD).
 
-1. Kontrollera att spelaren är i åtminstone `PREPARED` läget.
-1. Avgör om `MediaPlayerItem` innehållet är live ( `true`) eller VOD ( `false`).
+1. Kontrollera att spelaren är i minst `PREPARED`-läge.
+1. Avgör om `MediaPlayerItem`-innehållet är live ( `true`) eller VOD ( `false`).
 
    ```java
    boolean isLive();
