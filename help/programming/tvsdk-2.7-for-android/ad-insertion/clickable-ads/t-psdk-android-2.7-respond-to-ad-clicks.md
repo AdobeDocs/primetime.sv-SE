@@ -6,24 +6,27 @@ title: Svara på klickningar på annonser
 uuid: 58efaba5-d0f6-4ddd-9628-6bc065cc95d8
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
-# Svara på klickningar på annonser {#respond-to-clicks-on-ads}
+# Svara på klick på annonser {#respond-to-clicks-on-ads}
 
 TVSDK ger dig information så att du kan agera på klickbara annonser. När du skapar användargränssnittet måste du bestämma hur du ska svara när en användare klickar på en klickbar annons.
 
 För TVSDK för Android går det bara att klicka på linjära annonser.
 När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
 
-1. Registrera dig för att konfigurera en händelseavlyssnare för TVSDK och ange klickningsinformationen `AdClickedEventListener.onAdClicked`.
+1. Registrera `AdClickedEventListener.onAdClicked` om du vill konfigurera en händelseavlyssnare för TVSDK och ange klickningsinformationen.
 
    När en användare klickar på en annons eller en relaterad knapp skickar TVSDK det här meddelandet, inklusive information om klickningens mål.
 1. Övervaka användarinteraktioner i klickbara annonser.
-1. När användaren rör vid eller klickar på annonsen eller knappen kan du kontakta TV SDK `notifyClick` på `MediaPlayerView`.
-1. Lyssna efter `onAdClick(AdClickEvent event)` eventet från TVSDK.
-1. Om du vill hämta klicknings-URL:en och relaterad information använder du metoderna för `AdClickEvent` instansen.
+1. När användaren vidrör eller klickar på annonsen eller knappen ringer du `notifyClick` på `MediaPlayerView` för att meddela TVSDK.
+1. Lyssna efter händelsen `onAdClick(AdClickEvent event)` från TVSDK.
+1. Om du vill hämta klicknings-URL:en och relaterad information använder du get-metoderna för `AdClickEvent`-instansen.
 1. Pausa videon.
 
    Mer information om hur du pausar videon finns i pausning/återuppspelning.
