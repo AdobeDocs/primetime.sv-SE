@@ -6,6 +6,9 @@ title: Ersätt tidsintervall med en annons
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Ni kan infoga annonser i VOD-innehåll.
 
-I det här fallet tas `TimeRanges` mellan `begin` och `end` i `localTime` bort från tidslinjen. De ersätts med ett `AdBreak` av `begin` till `begin+replaceDuration`. Om ersättningens varaktighet inte finns som en parameter, bestäms den returnerade Adbreak-koden av servern.
+I det här fallet tas `TimeRanges` mellan `begin` och `end` i `localTime` bort från tidslinjen. De ersätts med `AdBreak` av `begin` till `begin+replaceDuration`. Om ersättningens varaktighet inte finns som en parameter, bestäms den returnerade Adbreak-koden av servern.
 
 >[!NOTE]
 >
