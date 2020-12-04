@@ -6,6 +6,9 @@ title: Livscykel och status för MediaPlayer-objektet
 uuid: a0eb27c8-180b-4c56-926f-59fa3bcef032
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
 
 Mediespelarens status avgör vilka åtgärder som är giltiga.
 
-För att arbeta med mediespelarstatus:
+För att arbeta med status för mediespelare:
 
-* Du kan hämta den aktuella statusen för `MediaPlayer` objektet med `MediaPlayer.getStatus()`.
+* Du kan hämta aktuell status för `MediaPlayer`-objektet med `MediaPlayer.getStatus()`.
 
-* Statuslistan definieras i [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) -uppräkningen.
+* Statuslistan definieras i uppräkningen [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html).
 
-Statusövergångsdiagram för en `MediaPlayer` instans livscykel:
+Statusövergångsdiagram för livscykeln för en `MediaPlayer`-instans:
 <!--<a id="fig_A6425F24C7734DC681D992859D2A6743"></a>-->
 
 ![](assets/media_player_statuses.png)
@@ -41,7 +44,7 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
   </tr> 
   <tr> 
    <td colname="col1"> INITIERAR </td> 
-   <td colname="col2"> <p>Programmet anropar <span class="codeph"> MediaPlayer.replaceCurrentItem() </span>. </p> <p>Mediespelarobjektet läses in. </p> </td> 
+   <td colname="col2"> <p>Ditt program anropar <span class="codeph"> MediaPlayer.replaceCurrentItem() </span>. </p> <p>Mediespelarobjektet läses in. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> INITIERAD </td> 
@@ -61,11 +64,11 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
   </tr> 
   <tr> 
    <td colname="col1"> UPPHÄVD </td> 
-   <td colname="col2"> <p>Om programmet navigerar bort från uppspelningen, stänger av enheten eller växlar program medan spelaren spelas upp eller pausas, pausas mediespelaren och resurser frigörs. </p> <p>Om <span class="codeph"> MediaPlayer.restore() anropas </span> återställs spelaren till den status som spelaren hade innan den SUSPENDED. Undantaget är om spelaren SEEKING anropas när den pausas, PAUSED och sedan SUSPENDED. </p> <p>Viktigt:  <p>Kom ihåg följande information: 
+   <td colname="col2"> <p>Om programmet navigerar bort från uppspelningen, stänger av enheten eller växlar program medan spelaren spelas upp eller pausas, pausas mediespelaren och resurser frigörs. </p> <p>Om du anropar <span class="codeph"> MediaPlayer.restore() </span> återställs spelaren till den status som spelaren hade innan den SUSPENDED användes. Undantaget är om spelaren SEEKING anropas när den pausas, PAUSED och sedan SUSPENDED. </p> <p>Viktigt:  <p>Kom ihåg följande information: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">MediaPlayer anropar <span class="codeph"> automatiskt </span> pausning <span class="codeph"> bara när det ytobjekt som används av </span> MediaView <span class="codeph"> </span> förstörs. </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">MediaPlayer anropar <span class="codeph"> automatiskt </span> restore() <span class="codeph"> endast när ett nytt ytobjekt som används av </span> MediaPlayerView <span class="codeph"> </span> skapas. </li> 
-      </ul> </p> </p> <p>Om du alltid vill att uppspelningen ska pausas när MediaPlayer återställs ska du låta programmet anropa <span class="codeph"> MediaPlayer.pause() </span> i <span class="codeph"> onPause()- </span> metoden för Android-aktiviteten. </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">Med <span class="codeph"> MediaPlayer </span> anropas automatiskt <span class="codeph"> paus </span> bara när det ytobjekt som används av MediaPlayerView </span> förstörs.<span class="codeph"> </span></li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1"><span class="codeph"> MediaPlayer </span> anropar automatiskt <span class="codeph"> restore() </span> bara när ett nytt ytobjekt som används av MediaPlayerView </span> skapas.<span class="codeph"> </span></li> 
+      </ul> </p> </p> <p>Om du alltid vill att uppspelningen ska pausas när MediaPlayer återställs ska du låta programmet anropa <span class="codeph"> MediaPlayer.pause() </span> i Android-aktivitetens <span class="codeph"> onPause() </span>-metod. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> SLUTFÖRD </td> 
