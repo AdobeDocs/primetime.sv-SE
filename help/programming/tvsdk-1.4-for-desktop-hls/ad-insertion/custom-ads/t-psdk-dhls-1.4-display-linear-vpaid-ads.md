@@ -17,7 +17,7 @@ ht-degree: 0%
 
 TVSDK stöder visning av VPAID-annonser (linear Video Player-Ad Interface Definition) i en annonsbrytning. VPAID version 1.0 kräver Flash, medan version 2.0 också fungerar med Browser TVSDK och JavaScript.
 
-Om du vill visa VPAID-annonser korrekt måste du ange en annonsbehållare ( `AdContainerView`) i `MediaPlayerContext` instansen.
+Om du vill visa VPAID-annonser korrekt måste du ange en annonsbehållare ( `AdContainerView`) i `MediaPlayerContext`-instansen.
 
 Begränsningar för VPAID-annonser:
 
