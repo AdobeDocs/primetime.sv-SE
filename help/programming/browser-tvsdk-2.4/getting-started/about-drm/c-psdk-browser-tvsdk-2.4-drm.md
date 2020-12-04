@@ -1,18 +1,21 @@
 ---
-description: Du kan slutföra DRM-specifika arbetsflöden.
-seo-description: Du kan slutföra DRM-specifika arbetsflöden.
+description: Du kan slutföra DRM-specifika arbetsflöden (Digital Rights Management).
+seo-description: Du kan slutföra DRM-specifika arbetsflöden (Digital Rights Management).
 seo-title: Digital Rights Management
 title: Digital Rights Management
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
 # Digital Rights Management {#digital-rights-management}
 
-Du kan slutföra DRM-specifika arbetsflöden.
+Du kan slutföra DRM-specifika arbetsflöden (Digital Rights Management).
 
 Du kan lyssna på händelsen `AdobePSDK.DRMMetadataInfoEvent` för att hantera DRM-arbetsflöden:
 
@@ -22,9 +25,9 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## Lägg till hantering av digitala rättigheter {#add-digital-rights-management}
+## Lägg till Digital Rights Management {#add-digital-rights-management}
 
-1. Lägg till filen `DRMMetadataInfoAvailableEvent` för att hämta `DRMMetadata`.
+1. Lägg till `DRMMetadataInfoAvailableEvent` för att hämta `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
