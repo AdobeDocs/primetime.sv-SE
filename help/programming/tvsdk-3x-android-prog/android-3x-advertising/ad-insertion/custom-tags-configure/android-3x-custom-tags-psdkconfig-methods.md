@@ -6,11 +6,14 @@ title: Konfig-klassmetoder för taggar
 uuid: b75aebac-4b94-4c42-bed4-3c17ad989cd1
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
 
-# Konfig-klassmetoder för taggar {#config-class-methods-for-tags}
+# Konfigurationsklassmetoder för taggar {#config-class-methods-for-tags}
 
 Du kan globalt konfigurera anpassade taggnamn i TVSDK med klassen MediaPlayerItemConfig.
 
@@ -37,8 +40,8 @@ Kom ihåg följande:
 * Metoderna set tillåter inte att parametern tags innehåller null-värden.
 
    Om TVSDK påträffas genereras ett `IllegalArgumentException`.
-* Det anpassade taggnamnet måste innehålla `#` prefixet.
+* Det anpassade taggnamnet måste innehålla prefixet `#`.
 
-   Exempel: `#EXT-X-ASSET` är ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
+   Till exempel är `#EXT-X-ASSET` ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
 
 * Du kan inte ändra konfigurationen efter att medieströmmen har lästs in.
