@@ -6,17 +6,20 @@ title: Läge för annonssignalering
 uuid: 7d2f61bc-ea66-4ac4-ae71-ffee69ef0036
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Läge för annonssignalering {#ad-signaling-mode}
+# Läget Lägg till signalering {#ad-signaling-mode}
 
 Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
 
-Giltiga värden är `DEFAULT`, `SERVER_MAP`och `MANIFEST_CUES`.
+Giltiga värden är `DEFAULT`, `SERVER_MAP` och `MANIFEST_CUES`.
 
-I följande tabell beskrivs effekten av `AdSignalingMode` värden för olika HLS-strömtyper:
+I följande tabell beskrivs effekten av `AdSignalingMode`-värden för olika HLS-strömtyper:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
