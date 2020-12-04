@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Kryptera skriptdata {#encrypting-script-data}
+# Krypterar skriptdata {#encrypting-script-data}
 
 Det här paketeringsalternativet anger om skriptdata som är inbäddade i innehållet är krypterade.
 
