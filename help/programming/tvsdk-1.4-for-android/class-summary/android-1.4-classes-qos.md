@@ -6,6 +6,9 @@ title: QoS-klasser
 uuid: c1f0218d-4a79-4141-9a74-e70ac4f70aa5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '426'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,8 @@ Paket: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a> </span></td> 
-   <td colname="2">Anger information om plattformen och operativsystemet som frasen körs på: 
+   <td colname="2">Anger information om plattformen och operativsystemet som frasen
+    kör: 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Version av plattformens operativsystem </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Versionsnummer för frasbiblioteket </li> 
@@ -46,7 +50,7 @@ Paket: [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> PlaybackInformation</a></span> </td> 
-   <td colname="2"> Innehåller information om hur uppspelningen fungerar. Detta inkluderar bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videobildfragmentet, den tid det tog att återge den första bildrutan, den för närvarande buffrade längden och bufferttiden. </td> 
+   <td colname="2"> Innehåller information om hur uppspelningen fungerar. Detta inkluderar bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videobildfragmentet, den tid det tog att återge den första bildrutan, den buffertlängd som för tillfället används och bufferttiden. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph">mätvärden.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
