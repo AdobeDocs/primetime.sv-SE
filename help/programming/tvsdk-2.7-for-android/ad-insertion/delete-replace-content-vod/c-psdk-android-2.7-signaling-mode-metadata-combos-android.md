@@ -6,6 +6,9 @@ title: Effekt vid infogning och borttagning av annonser i signeringsläge och me
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
    <th class="entry"> Läge för annonssignalering </th> 
    <th class="entry"> Lägg till metadata </th> 
    <th class="entry"> Skapade lösare </th> 
-   <th class="entry"><span class="codeph"> PlacementInformation</span> har skapats </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationskapad </th> 
    <th class="entry"> Resulterande beteende </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
    <td> Ta bort, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervall borttagna, annonser infogade </td> 
