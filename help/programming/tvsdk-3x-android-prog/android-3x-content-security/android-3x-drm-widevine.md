@@ -1,18 +1,21 @@
 ---
-description: Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade lösning.
-seo-description: Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade lösning.
+description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
+seo-description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
 seo-title: DRM, Widewin
 title: DRM, Widewin
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
 source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 0%
 
 ---
 
 
-# DRM, Widewin {#widevine-drm}
+# DRM för Widewin {#widevine-drm}
 
-Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade lösning.
+Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
 
 Kontakta din Adobe-representant för att få den senaste informationen om tillgängliga DRM-lösningar från tredje part.
 
@@ -39,7 +42,7 @@ Map<String, String> requestProperties)
 
 ### Argument {#arguments-license-server}
 
-* `drm` - `"com.widevine.alpha"` för WideVM.
+* `drm` -  `"com.widevine.alpha"` för WideVM.
 
 * `licenseServerURL` - URL:en för den Wideglobal licensserver som tar emot licensbegäranden.
 
@@ -57,7 +60,7 @@ DRMManager.setProtectionData(
 
 ## Ange anpassad återanrop {#custom-callback}
 
-Anropa följande `com.adobe.mediacore.drm.DRMManager` API innan du läser in MediaPlayer-resursen.
+Anropa följande `com.adobe.mediacore.drm.DRMManager`-API innan du läser in MediaPlayer-resursen.
 
 ```java
 public static void setMediaDrmCallback(
@@ -66,7 +69,7 @@ MediaDrmCallback callback)
 
 ### Argument {#arguments-custom-callback}
 
-* `callback` - anpassad implementering av MediaDrmCallback som ska användas i stället för standardinställningen `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+* `callback` - anpassad implementering av MediaDrmCallback som ska användas i stället för standardinställningen  `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
 Mer information finns i [Android TVSDK 3.11 API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
