@@ -6,6 +6,9 @@ title: Läs in annons för ett DVR-fönster
 uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ När en användare börjar visa innehåll i början av en DVR-ström, löser TVS
 >
 >Reparera annonser efter att den aktuella direktpunkten är snabbare, men om användaren söker bakåt förhindrar det här alternativet spelaren från att spela upp annonser som visades tidigare.
 
-## Styra och läsa in för ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Kontrollera och läsa in ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Så här styr du inläsning av DVR-fönster:
 
-Om du vill läsa in alla annonser för hela flödet anger du egenskapen `PTAdMetadata.enableDVRAds` till `YES`.
+Om du vill läsa in alla annonser för hela flödet anger du `PTAdMetadata.enableDVRAds`-egenskapen till `YES`.
 
 >[!NOTE]
 >
