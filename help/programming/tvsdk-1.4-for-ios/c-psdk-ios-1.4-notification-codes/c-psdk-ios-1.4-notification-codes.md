@@ -49,11 +49,11 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> paras till exempel med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
+   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> skulle till exempel kombineras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
-   <td colname="2">En referens till ett annat <span class="codeph"> PTNotification</span> -objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
+   <td colname="2">En referens till ett annat <span class="codeph"> PTNotification</span>-objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
   </tr> 
  </tbody> 
 </table>
