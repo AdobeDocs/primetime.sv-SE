@@ -6,6 +6,9 @@ title: segmentredundans saknas
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Om ett segment saknas på servern, till exempel på grund av att manifestfilen i
 1. Bläddra igenom alla tillgängliga bithastigheter i alla tillgängliga varianter.
 1. Hoppa över segmentet och skicka en varning.
 
-När TVSDK inte kan hämta ett alternativt segment utlöses ett `CONTENT_ERROR` felmeddelande. Det här meddelandet innehåller ett internt meddelande med `DOWNLOAD_ERROR` koden. Om strömmen med problemet är ett alternativt ljudspår genereras felmeddelandet `AUDIO_TRACK_ERROR` .
+När TVSDK inte kan hämta ett alternativt segment utlöses ett `CONTENT_ERROR`-felmeddelande. Det här meddelandet innehåller ett internt meddelande med koden `DOWNLOAD_ERROR`. Om strömmen med problemet är ett alternativt ljudspår genererar felmeddelandet `AUDIO_TRACK_ERROR`.
 
-Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinuerliga segmenthopp till 5, varefter uppspelningen stoppas och en `NATIVE_ERROR` åtgärd med koden 5 utfärdas.
+Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinuerliga segmenthopp till 5, varefter uppspelningen stoppas och en `NATIVE_ERROR` utfärdas med koden 5.
 
 >[!NOTE]
 >
