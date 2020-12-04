@@ -6,6 +6,9 @@ title: Bästa tillvägagångssätt för annonser på följeslagare
 uuid: 0e4c98cd-5e16-4c84-848f-02bc6f1b0d6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
-Följ dessa rekommendationer när du visar följeslagarannonser:
+Följ de här rekommendationerna när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
 * Visa bara en tilläggsbanderoll om du har en plats som matchar annonsens angivna höjd och bredd.
