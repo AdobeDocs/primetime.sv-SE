@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Integrera ditt CDN {#integrating-cdn}
 
-Primetime Ad Insertion fungerar som en proxy mellan klientprogrammet och -manifestationerna, inte själva videosegmenten. Distribuera ditt innehåll till valfritt CDN och skicka URL:en till Primetime Ad Insertion med Bootstrap API:t.<!-- For integration details, see [Supported CDNs](supported-cdns.md).-->
+Primetime Ad Insertion fungerar som en proxy mellan klientprogrammet och -manifestationerna, inte själva videosegmenten. Distribuera ditt innehåll till valfritt CDN och skicka URL:en till Primetime Ad Insertion med Bootstrap-API:t.<!-- For integration details, see [Supported CDNs](supported-cdns.md).-->
 
-## CDN-tokeniseringsscheman som stöds {#cdn-tokenization-schemes}
+## CDN-tokeniseringsscheman {#cdn-tokenization-schemes} som stöds
 
 CDN:er har ofta olika tokeniseringsscheman för fragmentauktorisering. Primetime Ad Insertion stöder aktivt större CDN-nätverk, bland annat:
 
@@ -23,7 +23,7 @@ CDN:er har ofta olika tokeniseringsscheman för fragmentauktorisering. Primetime
 * Centurylink / Level3
 * Kontakta din supportrepresentant på Primetime om du vill ha en fullständig lista över CDN:er som stöds
 
-Mer information om `pttoken` parametern finns i beskrivningen [av](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap API-parametern.
+Mer information om parametern `pttoken` finns i [Bootstrap API-parameterbeskrivning](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 ## Konfigurera annonser att leverera från innehållets CDN {#configure-ad-deliver-from-cdn}
 
@@ -33,6 +33,6 @@ Ni kanske vill leverera annonser och innehåll från samma CDN för att behålla
 
 For more information, see [Optimizing start-up](optimize-video-startup-time.md).-->
 
-## Funktioner för flera CDN {#enable-multi-cdn-fetures}
+## Multi-CDN-funktioner {#enable-multi-cdn-fetures}
 
 Kontakta din supportrepresentant på Primetime om du vill aktivera multiCDN-funktioner.
