@@ -6,6 +6,9 @@ title: Livscykel och lägen för MediaPlayer-objektet
 uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
@@ -16,38 +19,38 @@ Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här
 
 Här är möjliga lägen:
 
-* **IDLE**: `MediaPlayerStatus.IDLE`
+* **IDLE**:  `MediaPlayerStatus.IDLE`
 
-* **INITIERAR**: `MediaPlayerStatus.INITIALIZING`
+* **INITIERAR**:  `MediaPlayerStatus.INITIALIZING`
 
-* **INITIERAT**: `MediaPlayerStatus.INITIALIZED`
+* **INITIERAT**:  `MediaPlayerStatus.INITIALIZED`
 
-* **FÖRBEREDER**: `MediaPlayerStatus.PREPARING`
+* **FÖRBEREDER**:  `MediaPlayerStatus.PREPARING`
 
-* **FÖRBEREDD**: `MediaPlayerStatus.PREPARED`
+* **FÖRBEREDD**:  `MediaPlayerStatus.PREPARED`
 
-* **SPELA UPP**: `MediaPlayerStatus.PLAYING`
+* **SPELA UPP**:  `MediaPlayerStatus.PLAYING`
 
-* **PAUSAT**: `MediaPlayerStatus.PAUSED`
+* **PAUSAT**:  `MediaPlayerStatus.PAUSED`
 
-* **SÖKER**: `MediaPlayerStatus.SEEKING`
+* **SÖKER**:  `MediaPlayerStatus.SEEKING`
 
-* **FULLSTÄNDIGT**: `MediaPlayerStatus.COMPLETE`
+* **FULLSTÄNDIGT**:  `MediaPlayerStatus.COMPLETE`
 
-* **FEL**: `MediaPlayerStatus.ERROR`
+* **FEL**:  `MediaPlayerStatus.ERROR`
 
-* **SLÄPPT**: `MediaPlayerStatus.RELEASED`
+* **SLÄPPT**:  `MediaPlayerStatus.RELEASED`
 
 Den fullständiga listan med lägen definieras i `MediaPlayerStatus`.
 
-Att känna till spelarens tillstånd är användbart eftersom vissa åtgärder bara är tillåtna när spelaren är i ett visst läge. Det `play` går till exempel inte att anropa när du är i IDLE-läge. Den måste anropas efter att ha nått PREPARED-tillståndet. FELläget ändrar också vad som kan hända härnäst.
+Att känna till spelarens tillstånd är användbart eftersom vissa åtgärder bara är tillåtna när spelaren är i ett visst läge. Det går till exempel inte att anropa `play` i IDLE-läge. Den måste anropas efter att ha nått PREPARED-tillståndet. FELläget ändrar också vad som kan hända härnäst.
 
 När en medieresurs läses in och spelas upp, övergår spelaren på följande sätt:
 
 1. Det inledande tillståndet är IDLE.
-1. Ditt program anropar `MediaPlayer.replaceCurrentResource`, vilket flyttar spelaren till INITIALIZING-läget.
+1. Programmet anropar `MediaPlayer.replaceCurrentResource`, vilket flyttar spelaren till INITIALIZING-läget.
 1. Om webbläsar-TVSDK läser in resursen ändras läget till INITIALIZED.
-1. Ditt program anropas `MediaPlayer.prepareToPlay`och läget ändras till PREPARING.
+1. Programmet anropar `MediaPlayer.prepareToPlay` och läget ändras till PREPARING.
 1. Webbläsare-TVSDK förbereder medieströmmen och startar annonslösningen och annonsinfogningen (om den är aktiverad).
 
    När det här steget är klart infogas annonser i tidslinjen eller så har annonsproceduren misslyckats och spelarläget ändras till PREPARED.
