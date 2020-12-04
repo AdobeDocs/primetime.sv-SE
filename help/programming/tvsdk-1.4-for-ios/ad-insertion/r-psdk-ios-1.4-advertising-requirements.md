@@ -6,13 +6,16 @@ title: Krav för annonsering
 uuid: 60e299df-4f42-455a-8983-8964f7a197e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Krav för annonsering {#advertising-requirements}
 
-Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetimes annonsbeslutsgränssnitt.
+Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
 
 Primetimes annonsbeslut fungerar tillsammans med TVSDK för att identifiera annonsmöjligheter, lösa annonser och infoga lösta annonser i era videoströmmar.
 
