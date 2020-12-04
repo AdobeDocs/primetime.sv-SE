@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Paketera media {#package-media}
+# Paketmedia {#package-media}
 
 Använd fliken Paketera media för att paketera innehåll. I avsnittet Packager Properties visas de Packager-inställningar som har angetts på fliken Inställningar. Om du vill ändra inställningarna går du till fliken Inställningar, ändrar inställningarna och sparar.
 
-Om du vill paketera en enskild FLV- eller F4V-fil väljer du **[!UICONTROL Select Single File]** alternativet och anger den fullständiga sökvägen till källfilen och den fullständiga sökvägen där den krypterade filen ska sparas.
+Om du vill paketera en enskild FLV- eller F4V-fil väljer du alternativet **[!UICONTROL Select Single File]** och anger den fullständiga sökvägen till källfilen och den fullständiga sökvägen där den krypterade filen ska sparas.
 
-Om du vill paketera alla filer i en mapp väljer du **[!UICONTROL Select Single Folder]** alternativet. Ange den mapp som innehåller källfilerna. Endast filer i indatamappen som matchar villkoren kommer att paketeras (filer i undermappar paketeras inte). **[!UICONTROL Input Media File Selection]** Välj om du vill kryptera [!DNL .flv] filer, [!DNL .f4v] filer eller ange ett eget reguljärt uttryck (till exempel &quot;.*&quot; krypterar alla filer i mappen). De krypterade filerna sparas i den angivna utdatamappen med samma filnamn som originalfilen.
+Om du vill paketera alla filer i en mapp väljer du alternativet **[!UICONTROL Select Single Folder]**. Ange den mapp som innehåller källfilerna. Endast filer i indatamappen som matchar villkoret **[!UICONTROL Input Media File Selection]** paketeras (filer i undermappar paketeras inte). Välj om du vill kryptera [!DNL .flv]-filer, [!DNL .f4v]-filer eller ange ett anpassat reguljärt uttryck (till exempel &quot;.*&quot; krypterar alla filer i mappen). De krypterade filerna sparas i den angivna utdatamappen med samma filnamn som originalfilen.
 
 >[!NOTE]
 >
@@ -35,4 +35,4 @@ I följande tabell beskrivs inställningarna för Paketmedia:
 | Kryptera skript | Markera den här kryssrutan om du vill kryptera skriptdata (endast FLV) |
 | Anpassade egenskaper | Ange anpassade egenskaper som ska inkluderas i det paketerade innehållet. Dessa egenskaper är tillgängliga för licensservern när en licens utfärdas. (Valfritt) |
 
-När paketeringsalternativen har valts klickar du på **[!UICONTROL Package Media]** knappen för att börja paketera filerna.
+När paketeringsalternativen har valts klickar du på **[!UICONTROL Package Media]** för att börja paketera filerna.
