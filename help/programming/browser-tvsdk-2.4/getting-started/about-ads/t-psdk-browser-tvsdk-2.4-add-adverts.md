@@ -6,6 +6,9 @@ title: Lägg till annonsering
 uuid: 7762506f-b55e-445d-b8a2-c1208358a370
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
@@ -21,14 +24,14 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
      auditudeSettings.zoneId = "123869";
    ```
 
-1. Lägg till reklammetadata i `MediaResource`.
+1. Lägg till annonsmetadata i `MediaResource`.
 
    ```js
    var mediaResource =  
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. Lägg till inställningarna i konfigurationen och lägg till en `SpliceOut` parserfabrik.
+1. Lägg till inställningarna i konfigurationen och lägg till en `SpliceOut`-parserfabrik.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -36,8 +39,8 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. Lägg till filen `ExtCueOutContentFactory` i biblioteksavsnittet.
-1. Hämta filen `ExtCueOutContentFactory.js` från bibliotekssektionen och placera den i arbetsmappen.
+1. Lägg till `ExtCueOutContentFactory` i biblioteksavsnittet.
+1. Hämta `ExtCueOutContentFactory.js` från bibliotekssektionen och placera den i arbetsmappen.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
