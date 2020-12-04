@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Återställningsigenkänning {#rollback-detection}
+# Återställningsidentifiering {#rollback-detection}
 
 Om din implementering av Adobe Access använder affärsregler som kräver att klienten behåller läget (till exempel intervallet för uppspelningsfönstret), rekommenderar Adobe att servern håller reda på återställningsräknaren och använder AIR eller SWF som tillåter listning.
 
-Återställningsräknaren skickas till servern i de flesta begäranden från klienten. Om din implementering av Adobe Access inte kräver återställningsräknaren kan den ignoreras. I annat fall rekommenderar Adobe att servern lagrar det slumpmässiga dator-ID som erhållits med `MachineToken.getMachineId().getUniqueId()`och det aktuella räkningsvärdet i en databas. Mer information om hur du ökar och spårar återställningsräknaren finns i ClientState i *Adobe Access API Reference* and *Rollback detection* i *Använda Adobe Access SDK för att skydda innehåll*.
+Återställningsräknaren skickas till servern i de flesta begäranden från klienten. Om återställningsräknaren inte behövs för implementeringen av Adobe Access kan den ignoreras. I annat fall rekommenderar Adobe att servern lagrar det slumpmässiga dator-ID som erhållits med `MachineToken.getMachineId().getUniqueId()` och det aktuella räknarvärdet i en databas. Mer information om hur du ökar och spårar återställningsräknaren finns i ClientState i *API-referens för Adobe Access* och *Återställningsidentifiering* i *Använda Adobe Access SDK för att skydda innehåll*.
