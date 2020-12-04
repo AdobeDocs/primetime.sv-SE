@@ -6,6 +6,9 @@ title: Anpassa affärsmöjlighetsdetektorer och innehållslösningar
 uuid: d4926933-5966-4cd8-8050-c81c5e3c8545
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Webbläsarens TVSDK innehåller följande standarddetektorer för affärsmöjlig
 * `AdSignalingModeOpportunityGenerator`, som skapar inledande annonsmöjligheter baserat på annonseringssigneringsläget.
 * `ManifestCuesOpportunityGenerator`, vilket skapar möjligheter till annonsplacering från alla splice-out-taggar.
 
-Webbläsarens TVSDK innehåller även standardinnehållslösare, till exempel `AuditudeResolver`, som innehåller innehåll som infogas baserat på metadatanyckeln i spelarobjektet. `AuditudeResolver` kan kommunicera med Adobe Primetimes annonsservrar och returnera annonsbrytningar som ska placeras.
+Webbläsarens TVSDK innehåller även standardinnehållslösare, till exempel `AuditudeResolver`, som innehåller innehåll som infogas baserat på metadatanyckeln i spelarobjektet. `AuditudeResolver` kan kommunicera med Adobe Primetime annonsservrar och returnera annonsbrytningar som ska placeras ut.
 
 Du kan åsidosätta standardfunktioner för att identifiera affärsmöjligheter och tolka innehåll för att anpassa arbetsflödet för annonsering på följande sätt:
 
