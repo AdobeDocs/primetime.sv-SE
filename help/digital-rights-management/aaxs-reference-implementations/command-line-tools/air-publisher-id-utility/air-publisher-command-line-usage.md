@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Användning av kommandorad {#command-line-usage}
+# Kommandoradsanvändning {#command-line-usage}
 
 Använd följande syntax när du kör verktyget:
 
@@ -29,11 +29,11 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* anger sökvägen till AIR-programmets signatures.xml-fil, som finns i [!DNL META-INF] programkatalogen
+   * `signaturefile`* anger sökvägen till AIR-programmets signatures.xml-fil, som finns i  [!DNL META-INF] programkatalogen
 
 * `signingcert` anger det certifikat som används för att signera AIR-programmet
 
 >[!NOTE]
 >
->Om du vill ta reda på utgivar-ID:t för ett iOS-program använder du alternativet och anger det certifikat som används för att signera iOS-programmet. `-s` ***Adobe Primetime krävs för att skapa iOS-program som kan spela upp åtkomstskyddat innehåll***.
+>Om du vill ta reda på utgivar-ID:t för ett iOS-program använder du alternativet `-s` och anger det certifikat som används för att signera iOS-programmet. ***Adobe Primetime krävs för att skapa iOS-program som kan spela upp åtkomstskyddat innehåll***.
 
