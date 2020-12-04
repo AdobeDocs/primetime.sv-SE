@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Hantera sökning när sökfältet används{#handle-seek-when-using-the-seek-bar}
+# Hantera sökning när sökfältet{#handle-seek-when-using-the-seek-bar} används
 
 I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktuppspelning kan vara en uppspelningslista med glidfönster eller VOD-innehåll (video on demand).
 
@@ -23,11 +23,11 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
 
 1. Vänta tills webbläsarens TVSDK är i ett giltigt söktillstånd.
 
-   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om medieresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge genereras ett `IllegalStateException`fel om du försöker anropa följande metoder.
+   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om medieresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge kommer ett försök att anropa följande metoder att resultera i `IllegalStateException`.
 
-   Du kan till exempel vänta på att webbläsarens TVSDK ska utlösas `AdobePSDK.MediaPlayerStatusChangeEvent` med ett `event.status` av `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Du kan till exempel vänta på att webbläsarens TVSDK ska utlösa `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status` av `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Skicka den begärda sökpositionen till `MediaPlayer.seek` metoden som en parameter i millisekunder.
+1. Skicka den begärda sökpositionen till metoden `MediaPlayer.seek` som en parameter i millisekunder.
 
    Detta flyttar spelhuvudet till en annan position i strömmen.
 
@@ -39,7 +39,7 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Vänta tills Browser TVSDK utlöser `AdobePSDK.PSDKEventType.SEEK_END` händelsen, som returnerar den justerade positionen i händelsens `actualPosition` attribut:
+1. Vänta tills Browser TVSDK utlöser händelsen `AdobePSDK.PSDKEventType.SEEK_END` som returnerar den justerade positionen i händelsens `actualPosition`-attribut:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -53,7 +53,7 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
    * Uppspelningsbeteendet påverkas om en sökning, eller annan omplacering, slutar mitt i en annonsbrytning eller hoppar över annonsbrytningar.
    * Du kan bara söka efter resursens sökbara längd. För VOD är det från 0 till tillgångens varaktighet.
 
-1. Avlyssna sökfältet som skapades i exemplet ovan för `setPositionChangeListener()` att se när användaren stegar igenom:
+1. Lyssna efter `setPositionChangeListener()` för att se när användaren rensar sökfältet som skapades i exemplet ovan:
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
