@@ -6,6 +6,9 @@ title: Google Cast-app för webbläsare TVSDK
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -57,7 +60,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Skapa en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Upprättar en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -87,7 +90,7 @@ Information om hur du skickar meddelanden till mottagaren finns i dokumentatione
 
 >[!IMPORTANT]
 >
->Du måste inkludera det anpassade namnutrymmet för meddelanden `MSG_NAMESPACE` i alla meddelanden.
+>Du måste inkludera det anpassade meddelandets namnutrymme, `MSG_NAMESPACE` i alla meddelanden.
 
 För mottagarappen följer du dokumentationen för gipsmottagarens API:er.
 
