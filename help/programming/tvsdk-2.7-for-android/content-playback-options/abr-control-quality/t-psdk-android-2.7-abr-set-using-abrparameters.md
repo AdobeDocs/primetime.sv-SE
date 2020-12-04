@@ -6,6 +6,9 @@ title: Konfigurera adaptiva bithastigheter med ABRControlParameters
 uuid: 7084e954-196b-492e-846f-f8b36bed13a9
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Du kan bara ange ABR-kontrollvärden med ABRControlParameters, men du kan när som helst skapa en ny.
 
-Följande villkor gäller `ABRControlParameters`:
+Följande villkor gäller för `ABRControlParameters`:
 
 * Vid konstruktionen måste du ange värden för alla parametrar.
 * Efter konstruktionen kan du inte ändra enskilda värden.
-* Om parametrarna som du anger ligger utanför det tillåtna intervallet `ArgumentError` genereras ett fel.
+* Om parametrarna som du anger ligger utanför det tillåtna intervallet genereras ett `ArgumentError`.
 
 1. Bestäm den inledande, lägsta och högsta bithastigheten.
 1. Bestäm ABR-principen:
@@ -27,7 +30,7 @@ Följande villkor gäller `ABRControlParameters`:
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Ange ABR-parametervärden i konstruktorn och tilldela värdena till Media Player. `ABRControlParameters`
+1. Ange ABR-parametervärden i konstruktorn `ABRControlParameters` och tilldela värdena till Media Player.
 
    ```
    public ABRControlParameters(int initialBitRate, 
