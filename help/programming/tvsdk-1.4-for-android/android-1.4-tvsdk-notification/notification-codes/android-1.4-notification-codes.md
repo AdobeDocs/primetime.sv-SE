@@ -6,6 +6,9 @@ title: Meddelandekoder
 uuid: edbce737-28fd-4309-be5a-2e33fcc156b6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span> </td> 
-   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräkningstyp med möjliga värden för <span class="codeph"> INFO</span>, <span class="codeph"> WARN</span>eller <span class="codeph"> ERROR</span>. Det här är den översta grupperingen för meddelanden. </td> 
+   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräknad typ med möjliga värden <span class="codeph"> INFO</span>, <span class="codeph"> WARN</span> eller <span class="codeph"> ERROR</span>. Det här är den översta grupperingen för meddelanden. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> kod</span> </td> 
@@ -43,11 +46,11 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> paras till exempel med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
+   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> skulle till exempel kombineras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2">En referens till ett annat <span class="codeph"> MediaPlayerNotification</span> -objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
+   <td colname="2">En referens till ett annat <span class="codeph"> MediaPlayerNotification</span>-objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
   </tr> 
  </tbody> 
 </table>
