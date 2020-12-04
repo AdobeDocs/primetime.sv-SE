@@ -6,6 +6,9 @@ title: Alternativt ljud
 uuid: d1af1ea9-2516-4835-baff-3577ad5b705e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Med alternativt ljud kan du växla mellan tillgängliga ljudspår för ett video
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-När TVSDK skapar `MediaPlayerItem` instansen för den aktuella videon skapas ett `AudioTrack` objekt för varje tillgängligt ljudspår. Objektet innehåller en `name` egenskap, som är en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard. När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill tillåta användaren att välja ett spår och ställa in videon som ska spelas upp med det valda spåret.
+När TVSDK skapar instansen `MediaPlayerItem` för den aktuella videon skapas ett `AudioTrack`-objekt för varje tillgängligt ljudspår. Objektet innehåller en `name`-egenskap, som är en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard. När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill tillåta användaren att välja ett spår och ställa in videon som ska spelas upp med det valda spåret.
 
 >[!TIP]
 >
->Om ett ytterligare ljudspår blir tillgängligt efter att TVSDK har skapat `MediaPlayerItem`händelsen utlöses en `MediaPlayerItem.AUDIO_TRACK_UPDATED` händelse, även om det är sällsynt.
+>Om ett ytterligare ljudspår blir tillgängligt efter att TVSDK har skapat `MediaPlayerItem`, kommer TVSDK att utlösa en `MediaPlayerItem.AUDIO_TRACK_UPDATED`-händelse.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -28,7 +31,7 @@ Följande API:er har lagts till som stöd för alternativt ljud:
 
 **`hasAlternateAudio`**
 
-Om det angivna mediet har ett annat ljudspår än standardspåret returnerar den här booleska funktionen `true`. Om det inte finns något alternativt ljudspår returneras `false`.
+Om det angivna mediet har ett annat ljudspår än standardspåret returnerar den här booleska funktionen `true`. Om det inte finns något alternativt ljudspår returnerar funktionen `false`.
 
 ```java
 boolean hasAlternateAudio();
