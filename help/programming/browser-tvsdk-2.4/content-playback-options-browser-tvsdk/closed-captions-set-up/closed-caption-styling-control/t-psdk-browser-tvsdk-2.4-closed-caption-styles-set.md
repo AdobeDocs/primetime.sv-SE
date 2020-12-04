@@ -6,6 +6,9 @@ title: Ange format för undertexter
 uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Du kan ange format, till exempel teckensnitt, storlek, färg, kant och opacitet för undertextad text.
 
-1. Vänta tills `MediaPlayer` den är åtminstone i tillståndet PREPARED.
+1. Vänta tills `MediaPlayer` är åtminstone i tillståndet PREPARED.
 
    Mer information om lägena finns i [Vänta på ett giltigt tillstånd](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
-1. Skapa en `TextFormat` instans.
+1. Skapa en `TextFormat`-instans.
 
    Du kan ange alla parametrar för textningsformat nu eller ange dem senare.
 
@@ -39,7 +42,7 @@ Du kan ange format, till exempel teckensnitt, storlek, färg, kant och opacitet 
 
 1. (Valfritt) Hämta de aktuella stilinställningarna för undertextning med `MediaPlayer.ccStyle`.
 
-   Returvärdet är en instans av `TextFormat` gränssnittet.
+   Returvärdet är en instans av `TextFormat`-gränssnittet.
 
    Om inget format har angetts tidigare returneras ett TextFormat-objekt med standardvärden för varje attribut:
 
@@ -47,7 +50,7 @@ Du kan ange format, till exempel teckensnitt, storlek, färg, kant och opacitet 
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. Om du vill ändra formatinställningarna använder du `MediaPlayer.ccStyle`och skickar en instans av `TextFormat` gränssnittet.
+1. Om du vill ändra formatinställningarna använder du `MediaPlayer.ccStyle` och skickar en instans av gränssnittet `TextFormat`.
 
    Du kan använda den här metoden även om den aktuella medieströmmen inte har några undertexter.
 
