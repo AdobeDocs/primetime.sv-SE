@@ -6,13 +6,16 @@ title: Ange XSTS-token i spelaren
 uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
 translation-type: tm+mt
 source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
 # Ange XSTS-token i spelaren{#set-the-xsts-token-in-your-player}
 
-I Xbox360 anger du token asynkront som svar på `MediaPlayer.RequestKeyAttribute` händelsen.
+I Xbox360 anger du token asynkront som svar på händelsen `MediaPlayer.RequestKeyAttribute`.
 
 Ange XSTS-token.
 
