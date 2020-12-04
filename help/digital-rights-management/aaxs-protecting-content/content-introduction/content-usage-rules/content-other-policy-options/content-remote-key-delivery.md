@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Fjärradministration och lokal leverans av iOS-nycklar{#remote-and-local-ios-key-delivery}
+# Fjärr- och lokal iOS-nyckelleverans{#remote-and-local-ios-key-delivery}
 
 Adobe Primetime har stöd för två alternativ för leverans till iOS-klienter:
 
@@ -24,4 +24,4 @@ Fjärrnyckelleveransen aktiveras via den princip som används för att paketera 
 >
 >Val av nyckelleverans påverkar bara iOS-klienter. Alla andra enheter som använder HLS-innehåll använder alltid &quot;lokal&quot; nyckelleverans, även om &quot;fjärr&quot; har angetts.
 
-Mer information finns i *Använda nyckelservern* för Adobe Access.
+Mer information finns i *Använda nyckelservern Adobe Access*.
