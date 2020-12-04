@@ -6,6 +6,9 @@ title: Tangenter, ID:n och autentiserare
 uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '812'
+ht-degree: 0%
 
 ---
 
@@ -37,13 +40,13 @@ eller (för Adobe Offline Packager):
    ```
 
 1. Öppna Notepad++ och klistra in i 16 byte hex-strängen.
-1. Konvertera det här värdet från hex ASCII med Base64-kodning för att skapa värdet [!DNL keyfile.bin]. (Detta beskrivs i [](../../multi-drm-workflows/quick-start/package-your-content.md).)
+1. Konvertera det här värdet från hex ASCII med Base64-kodning för att skapa [!DNL keyfile.bin]. (Detta beskrivs i [](../../multi-drm-workflows/quick-start/package-your-content.md).)
 
 **Samma nyckel, annat namn?** - Ja, du kan se det CK som andra namn hänvisar till på andra platser, som:
 
-* ** [!DNL [some file].bin]** - Adobe Offline Packager refererar till CEK som [!DNL [some.file].bin]; t.ex. * [!DNL Keyfile.bin]* - Detta är din CEK som används av Adobe Offline Packager, i form av en fil på datorn som du använder för att paketera innehåll.
+* ** [!DNL [någon fil].bin]** - Adobe Offline Packager refererar till CEK:n som [!DNL [någon fil].bin]; t.ex. * [!DNL Keyfile.bin]* - Detta är ditt CEK som det används av Adobe Offline Packager, i form av en fil på datorn som du använder för att paketera innehåll.
 
-   Du&quot;Base64&quot; din slumpmässiga CEK hex-sträng och sparar den som en fil (t.ex. [!DNL keyfile.bin]), som vanligtvis finns i [!DNL creds] katalogen under [!DNL offlinepkgr/]. I konfigurationsfilen för Packager (du kan t.ex. anropa den [!DNL widevine.xml] om du packar för Widewin DRM), refererar du till ditt CEK i konfigurationsfilen så här:
+   Du&quot;Base64&quot; din slumpmässiga CEK-hexsträng och sparar den som en fil (t.ex. [!DNL keyfile.bin]), som vanligtvis finns i katalogen [!DNL creds] under [!DNL offlinepkgr/]. I Packager-konfigurationsfilen (du kan t.ex. kalla den [!DNL widevine.xml] om du packar för Widewin DRM) refererar du till ditt CEK i din konfigurationsfil så här:
 
    ```
    <config>  
@@ -54,24 +57,24 @@ eller (för Adobe Offline Packager):
    </config> 
    ```
 
-* **Innehållsnyckel** - Du kan även se CEK-värdet som kallas för innehållsnyckel vid samtal ( `&contentKey=`), i felmeddelanden, i supportärenden och i annan dokumentation.
+* **Innehållsnyckel**  - Du kan även se CEK-värdet som kallas för innehållsnyckel vid samtal (  `&contentKey=`), i felmeddelanden, i supportärenden och i annan dokumentation.
 
 **När / var ska jag använda den?**
 
 1. Först måste du ha CEK tillgängligt på den dator där du packar. Ditt paketeringsverktyg använder ditt CEK för att kryptera ditt innehåll.
 1. För det andra måste du lagra CEK i någon form av nyckelhanteringssystem (KMS), där varje CEK är associerat med sin egen [innehållskrypteringsnyckel](../../multi-drm-workflows/glossary/glossary-cek.md). Du kan skapa en egen KMS eller använda [ExpressPlays nyckellagringsutrymme](https://www.expressplay.com/developer/key-storage/). På så sätt kan din butik (din tillståndsserver, som hanterar kundernas berättigande och License Token-etablering) hämta en licenstoken för kunden från KMS med ett nyckel-ID i stället för det faktiska CEK-värdet (detta är mycket säkrare).
 
-## Lagrings-ID för innehållskrypteringsnyckel {#section_0C94F54970E04BDB82DE3C8A33A62CD4}
+## Lagring-ID för innehållskrypteringsnyckel {#section_0C94F54970E04BDB82DE3C8A33A62CD4}
 
 CCEKSID (Content Encryption Key Storage ID) identifierar unikt den lagrade nyckel som dekrypterar ett krypterat videomaterial.
 
 **Vad är CEKSID?** - CEKSID är den unika identifieraren för en innehållskrypteringsnyckel (CEK). CEK är nödvändigt för att låsa upp det skyddade innehållet. CEKSID är nödvändigt för att få tillgång till det CEK där det lagras. När du testar konfigurationen kan du tillhandahålla ett slumpmässigt CEKSID och CEK under paketeringstiden, förutsatt att du använder samma information för licensierings- och uppspelningskontrollerna.
 
-**Var kommer den ifrån?** - Du (innehållsleverantören) kan skapa detta ID själv eller så kan du använda en tjänst som [ExpressPlays Key Storage](https://www.expressplay.com/developer/key-storage/) för att generera CEKSID för var och en av dina CEK (och lagra båda). Dessutom kan ni använda slumpmässigt genererade CEKSID:er eller använda ett schema som passar er affärsmodell. Du kan till exempel använda CEKSID som är meningsfulla strängar i stället för slumpmässiga Hex-strängar (ID-namnet kan bestå av ämnen, datum, tider osv.)
+**Var kommer den ifrån?** - Du (innehållsleverantören) kan skapa detta ID själv, eller du kan använda en tjänst som  [ExpressPlays Key ](https://www.expressplay.com/developer/key-storage/) Storage för att generera CEKSID för var och en av dina CEK (och lagra båda). Dessutom kan ni använda slumpmässigt genererade CEKSID:er eller använda ett schema som passar er affärsmodell. Du kan till exempel använda CEKSID som är meningsfulla strängar i stället för slumpmässiga Hex-strängar (ID-namnet kan bestå av ämnen, datum, tider osv.)
 
-**Vad mer heter CEKSID?** - Det kallas ibland för ett *innehålls-ID*.
+**Vad mer heter CEKSID?** - Det kallas ibland för ett  *innehålls-ID*.
 
-## Kundautentisering {#section_F9DDBAA54C544D82A42320CBEEB6CD74}
+## Kundens autentisering {#section_F9DDBAA54C544D82A42320CBEEB6CD74}
 
 Kundautentiseraren är en nyckel som du får från ExpressPlay när du skapar ett administratörskonto där. Autentiseraren används i kommunikation med ExpressPlay-servrar.
 
@@ -80,4 +83,4 @@ Kundautentiseraren är en nyckel som du får från ExpressPlay när du skapar et
 
 ![](assets/expressplay_admin_dashboard-web.png)
 
-**När använder jag den här?** - Detta ingår i alla anrop till ExpressPlay-servrar - till exempel licensservrar, [ExpressPlay-nyckellagring](https://www.expressplay.com/developer/key-storage/)och andra samtal.
+**När använder jag den här?** - Detta ingår i alla anrop till ExpressPlay-servrar - till exempel licensservrar,  [ExpressPlay-nyckellagring](https://www.expressplay.com/developer/key-storage/) och andra samtal.
