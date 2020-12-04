@@ -6,6 +6,9 @@ title: Visa videons varaktighet, aktuella tid och återstående tid
 uuid: 13627fa2-8cd8-4336-bc4b-7e3226330389
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '399'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 Du kan använda TVSDK för att hämta information om spelarens position i mediet och visa den i sökfältet.
 
 1. Vänta tills spelaren är i åtminstone tillståndet PREPARED.
-1. Hämta spelhuvudets aktuella tid med hjälp av `MediaPlayer.getCurrentTime` metoden.
+1. Hämta aktuell spelhuvudtid med metoden `MediaPlayer.getCurrentTime`.
 
    Detta returnerar spelhuvudets aktuella position på den virtuella tidslinjen i millisekunder. Tiden beräknas i förhållande till den matchade strömmen som kan innehålla flera instanser av alternativt innehåll, till exempel flera annonser eller annonsbrytningar som delas upp i huvudströmmen. För live-/linjära strömmar är den returnerade tiden alltid i uppspelningsfönsterintervallet.
 
@@ -24,22 +27,22 @@ Du kan använda TVSDK för att hämta information om spelarens position i mediet
    ```
 
 1. Hämta uppspelningsintervallet för strömmen och fastställ varaktigheten.
-   1. Använd `MediaPlayer.getPlaybackRange` metoden för att hämta tidsintervallet för den virtuella tidslinjen.
+   1. Använd metoden `MediaPlayer.getPlaybackRange` för att hämta tidsintervallet för den virtuella tidslinjen.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Använd `MediaPlayer.getPlaybackRange` metoden för att hämta tidsintervallet för den virtuella tidslinjen.
+   1. Använd metoden `MediaPlayer.getPlaybackRange` för att hämta tidsintervallet för den virtuella tidslinjen.
 
       * För VOD börjar intervallet alltid med noll och slutvärdet är lika med summan av innehållets längd och varaktigheten för ytterligare innehåll i flödet (annonser).
       * För en linjär/liveresurs representerar intervallet uppspelningsfönsterintervallet. Det här intervallet ändras under uppspelning.
 
-         TVSDK anropar återanropet för att ange att medieobjektet uppdaterades och att dess attribut, inklusive uppspelningsintervallet, uppdaterades. `ITEM_Updated`
+         TVSDK anropar återanropet `ITEM_Updated` för att ange att medieobjektet uppdaterades och att dess attribut, inklusive uppspelningsintervallet, uppdaterades.
 
-1. Använd de metoder som är tillgängliga för `MediaPlayer` och på `SeekBar` klassen i Android SDK för att ställa in sökfältsparametrarna.
+1. Använd de metoder som är tillgängliga i `MediaPlayer` och i klassen `SeekBar` i Android SDK för att ställa in sökfältsparametrarna.
 
-   Här finns till exempel en möjlig layout som innehåller sökfältet och två `TextView` element.
+   Här finns till exempel en möjlig layout som innehåller sökfältet och två `TextView`-element.
 
    ```xml
    <LinearLayout 
@@ -77,7 +80,7 @@ Du kan använda TVSDK för att hämta information om spelarens position i mediet
 
    ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
 
-   I följande exempel används `Clock.java` hjälpklassen, som finns i `ReferencePlayer`, som timer. Den här klassen ställer in en händelseavlyssnare och utlöser en `onTick` händelse varje sekund, eller ett annat timeout-värde som du kan ange.
+   I följande exempel används hjälpklassen `Clock.java`, som är tillgänglig i `ReferencePlayer`, som timer. Den här klassen ställer in en händelseavlyssnare och utlöser en `onTick`-händelse varje sekund, eller ett annat timeout-värde som du kan ange.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +93,7 @@ Du kan använda TVSDK för att hämta information om spelarens position i mediet
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   I det här exemplet hämtas mediespelarens aktuella position och sökfältet uppdateras. De två `TextView` elementen används för att markera den aktuella tiden och uppspelningsintervallets slutposition som numeriska värden.
+   I det här exemplet hämtas mediespelarens aktuella position och sökfältet uppdateras. De två `TextView`-elementen används för att markera den aktuella tiden och slutpositionen för uppspelningsintervallet som numeriska värden.
 
    ```java
    @Override 
