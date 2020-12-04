@@ -6,6 +6,9 @@ title: MediaPlayerItem-metoder för åtkomst av MediaResource-information
 uuid: c6e77eb7-cefd-48aa-9373-2b44a96217a5
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '470'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;String&gt; getAdTags() </span> </td> 
+   <td colname="2"> <span class="codeph"> Listget&lt;string&gt; AdTags()  </span> </td> 
    <td colname="3"> Innehåller en lista med annonstaggar som används för annonsplaceringsprocessen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -35,7 +38,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolesk isLive(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolesk isLive();  </span> </td> 
    <td colname="3"> True om strömmen är live; false om det är VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -43,11 +46,11 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolesk isProtected(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolesk isProtected();  </span> </td> 
    <td colname="3"> True om strömmen är DRM-skyddad. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;DRMMetadataInfo&gt; getDRMMetadataInfo(); </span> </td> 
+   <td colname="2"> <span class="codeph"> List&lt;drmmetadatainfo&gt; DRMMetadataInfos();  </span> </td> 
    <td colname="3"> Visar alla DRM-metadataobjekt som identifieras i manifestet. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -55,19 +58,19 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolesk hasClosedCaptions(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolesk hasClosedCaptions();  </span> </td> 
    <td colname="3"> True om det finns spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;ClosedCaptionsTrack&gt; getClosedCationsTracks(); </span> </td> 
+   <td colname="2"> <span class="codeph"> List&lt;closedcaptionstrack&gt; ClosedCationsTracks();  </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedClosedCaptionsTrack(); </span> </td> 
+   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedClosedCaptionsTrack();  </span> </td> 
    <td colname="3"> Hämtar det aktuella textningsspåret som är markerat med <span class="codeph"> SelectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closedCaptionsTrack) </span> </td> 
+   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closedCaptionsTrack)  </span> </td> 
    <td colname="3"> Anger att ett undertextningsspår ska vara det aktuella undertextningsspåret. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -75,19 +78,19 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> booleskt hasAlternateAudio(); </span> </td> 
+   <td colname="2"> <span class="codeph"> booleskt hasAlternateAudio();  </span> </td> 
    <td colname="3"> True om strömmen har alternativa ljudspår. <p>Obs!  Huvudljudspåret (standardljudspåret) är också en del av den alternativa ljudspårslistan. </p> <p>TVSDK för Android betraktar huvudljudspåret som ett av objekten i den alternativa ljudspårslistan. Därför är det enda fallet där <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> returnerar false när strömmen inte har något ljud alls. Om innehållet bara har ett ljudspår returnerar metoden true och <span class="codeph"> MediaPlayerItem.getAudioTracks </span> returnerar en lista med ett enda element (standardljudspåret). </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;AudioTrack&gt; getAudioTracks(); </span> </td> 
+   <td colname="2"> <span class="codeph"> List&lt;audiotrack&gt; AudioTracks();  </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga alternativa ljudspår. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack(); </span> </td> 
-   <td colname="3"> Hämtar det ljudspår som har valts med <span class="codeph"> selectAudioTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack();  </span> </td> 
+   <td colname="3"> Hämtar det ljudspår som valts med <span class="codeph"> selectAudioTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack ) </span> </td> 
+   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack )  </span> </td> 
    <td colname="3"> Väljer att ett ljudspår ska vara aktuellt ljudspår. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -95,11 +98,11 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata();  </span> </td> 
    <td colname="3"> True if the stream has associated timed metadata. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;TimedMetadata&gt; getTimedMetadata(); </span> </td> 
+   <td colname="2"> <span class="codeph"> List&lt;timedmetadata&gt; TimedMetadata();  </span> </td> 
    <td colname="3"> Innehåller en lista med tidsbestämda metadataobjekt som är associerade med strömmen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -107,15 +110,15 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isDynamic(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean isDynamic();  </span> </td> 
    <td colname="3"> True if the stream is a multiple bit rate (MBR) stream. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt;Profile&gt; getProfiles(); </span> </td> 
-   <td colname="3"> Visar en lista med associerade bithastighetsprofiler. För varje profil kan du hämta dess bithastighet och profilens höjd och bredd. </td> 
+   <td colname="2"> <span class="codeph"> List&lt;profile&gt; Profiles();  </span> </td> 
+   <td colname="3"> Innehåller en lista med associerade bithastighetsprofiler. För varje profil kan du hämta dess bithastighet och profilens höjd och bredd. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Profil getSelectedProfile() </span> </td> 
+   <td colname="2"> <span class="codeph"> Profil getSelectedProfile()  </span> </td> 
    <td colname="3"> Hämtar den markerade profilen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -123,31 +126,31 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> booleskt isTrickPlaySupported(); </span> </td> 
+   <td colname="2"> <span class="codeph"> booleskt isTrickPlaySupported();  </span> </td> 
    <td colname="3"> True if the player supports fast forward, rewind, and resume. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> List&lt; Float&gt; getAvailablePlaybackRates() </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt; Float=""&gt; ListAvailablePlaybackRates()  </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga uppspelningsfrekvenser i samband med trippelfunktionen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Float getSelectedPlaybackRate() </span> </td> 
+   <td colname="2"> <span class="codeph"> Float getSelectedPlaybackRate()  </span> </td> 
    <td colname="3"> Hämtar den valda uppspelningshastigheten. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> MediaPlayerItemConfig getConfig() </span> </td> 
-   <td colname="3"> Returnerar den <span class="codeph"> MediaPlayerItemConfig- </span> instans som är associerad med det här objektet. </td> 
+   <td colname="2"> <span class="codeph"> MediaPlayerItemConfig getConfig()  </span> </td> 
+   <td colname="3"> Returnerar den <span class="codeph"> MediaPlayerItemConfig </span>-instans som är associerad med det här objektet. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <b>Medieresurs</b> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> MediaResource getResource(); </span> </td> 
+   <td colname="2"> <span class="codeph"> MediaResource getResource();  </span> </td> 
    <td colname="3"> Returnerar den medieresurs som är associerad med det här objektet. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="2"> <span class="codeph"> int getResourceId() </span> </td> 
+   <td colname="2"> <span class="codeph"> int getResourceId()  </span> </td> 
    <td colname="3"> Returnerar medieidentifieraren som är associerad med det här objektet. Detta ID anges när objektet läses in med <span class="codeph"> MediaPlayerItemLoader.load </span>. </td> 
   </tr> 
  </tbody> 
