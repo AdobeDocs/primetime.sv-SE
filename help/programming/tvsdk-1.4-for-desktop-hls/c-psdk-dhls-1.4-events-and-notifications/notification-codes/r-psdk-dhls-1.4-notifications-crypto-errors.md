@@ -1,18 +1,21 @@
 ---
-description: Krypteringsmodulen i Adobes videomotor returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
-seo-description: Krypteringsmodulen i Adobes videomotor returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
+description: Krypteringsmodulen för videomotorn i Adobe returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
+seo-description: Krypteringsmodulen för videomotorn i Adobe returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
 seo-title: NATIVE_ERROR Kryptovärden
 title: NATIVE_ERROR Kryptovärden
 uuid: 6f5cea7d-688f-421e-bba6-62aeae1ec9ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 6%
 
 ---
 
 
 # NATIVE_ERROR: Kryptovärden{#native-error-crypto-values}
 
-Krypteringsmodulen i Adobes videomotor returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
+Krypteringsmodulen för videomotorn i Adobe returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
 
 | Värde för metadatanyckeln RUNTIME_CODE | Värde för metadatanyckeln RUNTIME_CODE_MESSAGE | Betydelse |
 |---|---|---|
