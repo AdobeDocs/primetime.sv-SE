@@ -6,6 +6,9 @@ title: Visa banners
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
@@ -14,26 +17,26 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Om du vill visa bannerannonser måste du skapa bannerinstanser och tillåta webbläsare-TVSDK att lyssna efter annonsrelaterade händelser.
 
-Webbläsarens TVSDK innehåller en lista över bannerannonser som är kopplade till en linjär annons via `AdobePSDK.PSDKEventType.AD_STARTED` händelsen.
+Webbläsare-TVSDK innehåller en lista över bannerannonser som är kopplade till en linjär annons via händelsen `AdobePSDK.PSDKEventType.AD_STARTED`.
 
 Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL:en för en statisk bild eller en Adobe Flash SWF-fil
+* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
 
 Webbläsare-TVSDK anger vilka typer som är tillgängliga för ditt program för varje kompletterande annons.
 
-Lägg till en avlyssnare för händelsen `AdobePSDK.PSDKEventType.AD_STARTED` som utför följande:
+Lägg till en avlyssnare för händelsen `AdobePSDK.PSDKEventType.AD_STARTED` som gör följande:
 1. Rensar befintliga annonser i banderollinstansen.
 1. Hämtar listan över följeslagarannonser från `Ad.getCompanionAssets`.
 1. Om listan med följesedlar inte är tom kan du iterera över listan för banderollinstanser.
 
-   Varje banner-instans (an `AdBannerAsset`) innehåller information, t.ex. bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande bannern.
+   Varje banderollinstans (en `AdBannerAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
 1. Om en videoannons inte har några följeslagare bokade med sig innehåller listan med följesedlar inga data för den videoannonsen.
 1. Skickar banderollinformationen till en funktion på sidan som visar banderollerna på lämplig plats.
 
-   Detta är vanligtvis en `div`stil, och funktionen använder `div ID` för att visa banderollen. Exempel:
+   Det här är vanligtvis en `div` och funktionen använder `div ID` för att visa banderollen. Exempel:
 
    Lägg till händelseavlyssnaren:
 
