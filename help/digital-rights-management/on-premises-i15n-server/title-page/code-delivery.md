@@ -4,6 +4,9 @@ title: Kodleverans/paketinnehåll
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Paketet Adobe Primetime DRM On Premises Individualization Server innehåller fö
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Ett verktyg för kryptering av serverautentiseringsuppgifter
-* [!DNL ROOT] - innehåller en [!DNL crossdomain.xml] fil
+* [!DNL ROOT] - innehåller en  [!DNL crossdomain.xml] fil
 
 * ECI-cachefiler - förnedladdade
 * [!DNL addIndivCert.py] - Ett skript som uppdaterar en licensservers pålitlighetsrot för att stödja On Premises-personaliseringar
