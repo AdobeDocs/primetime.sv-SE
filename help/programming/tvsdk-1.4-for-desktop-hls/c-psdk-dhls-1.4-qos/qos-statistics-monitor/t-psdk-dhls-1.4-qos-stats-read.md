@@ -6,6 +6,9 @@ title: Läs QOS-uppspelning, buffring och enhetsstatistik
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
@@ -14,12 +17,12 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen innehåller `QOSProvider` olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
+Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
 
 Det innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version och skärmstorlek/skärmtäthet.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider` objekt och bifoga det till mediespelaren.
+1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
 
    ```
    // Create Media Player. 
