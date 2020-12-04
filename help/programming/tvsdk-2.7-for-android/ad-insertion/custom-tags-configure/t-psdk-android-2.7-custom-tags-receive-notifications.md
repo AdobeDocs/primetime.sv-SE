@@ -6,6 +6,9 @@ title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
 uuid: 336882e7-e2d8-49b8-a23d-f236c7e6a594
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '174'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Om du vill få meddelanden om taggar i manifestet måste du implementera lämpliga händelseavlyssnare.
 
-Du kan övervaka tidsbestämda metadata genom att avlyssna `onTimedMetadata`som meddelar programmet om relaterade aktiviteter. Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK ett nytt `TimedMetadata` objekt och skickar den här händelsen. Objektet innehåller namnet på taggen som du prenumererar på, lokal tid i uppspelningen där taggen ska visas samt andra data.
+Du kan övervaka tidsbestämda metadata genom att avlyssna `onTimedMetadata`, som meddelar programmet om relaterad aktivitet. Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK ett nytt `TimedMetadata`-objekt och skickar den här händelsen. Objektet innehåller namnet på taggen som du prenumererar på, lokal tid i uppspelningen där taggen ska visas samt andra data.
 
 1. Lyssna efter händelser.
 
@@ -38,4 +41,4 @@ Du kan övervaka tidsbestämda metadata genom att avlyssna `onTimedMetadata`som 
    }; 
    ```
 
-ID3-metadata använder samma `onTimedMetadata` avlyssnare för att ange om det finns en ID3-tagg. Detta bör dock inte skapa någon förvirring eftersom du kan använda egenskapen `TimedMetadata``type` för att skilja mellan TAGG och ID3. Mer information om ID3-taggar finns i [ID3-taggar](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).
+ID3-metadata använder samma `onTimedMetadata`-avlyssnare för att ange om det finns en ID3-tagg. Detta bör dock inte skapa någon förvirring eftersom du kan använda egenskapen `TimedMetadata` `type` för att skilja mellan TAGG och ID3. Mer information om ID3-taggar finns i [ID3-taggar](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).
