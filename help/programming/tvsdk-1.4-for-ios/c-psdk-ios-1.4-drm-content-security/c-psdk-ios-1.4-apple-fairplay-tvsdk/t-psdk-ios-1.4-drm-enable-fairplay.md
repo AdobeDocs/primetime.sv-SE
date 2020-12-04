@@ -29,7 +29,7 @@ Du kan implementera Apple FairPlay Streaming, som är Apples DRM-lösning, i din
 
    >[!IMPORTANT]
    >
-   >Om du vill spela upp innehåll i ExpressPlay-licensserverscenariot ändrar du URL-schemat i din licensbegäran för ExpressPlay-servern från `skd://` till `https://` (eller `https://`).
+   >Om du vill spela upp innehåll i ExpressPlay-licensserverscenariot ändrar du URL-schemat i din licensbegäran för ExpressPlay från `skd://` till `https://` (eller `https://`).
 
 1. Registrera *FairPlay* Customer Resource Loader med `registerPTAVAssetResourceLoader`.
 
