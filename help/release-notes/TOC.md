@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om Primetime {#release-notes}
+# Versionsinformation för Primetime {#release-notes}
 
 + [Översikt över versionsinformation](home.md)
 + Primetime Ad Insertion {#ptai}
