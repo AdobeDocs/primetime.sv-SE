@@ -46,5 +46,5 @@ Följande attribut kan identifiera enhetsfunktionerna:
 >
 >Den här användningsregeln stöds av Adobe Primetime DRM-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern.
 >
->Se [Minimal klientversion](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+>Se [Minsta klientversion](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
