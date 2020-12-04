@@ -6,17 +6,20 @@ title: Specialanvändningsfall
 uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# Specialanvändningsfall{#special-use-cases}
+# Specialanvändningsexempel{#special-use-cases}
 
-TVSDK prioriterar anpassade intervallinställningar framför standardannonsinställningar. Om till exempel markeringsintervall definieras, ignoreras annonsens infogningsinställningar. Om REPLACE-intervall definieras används signeringsläget automatiskt i TVSDK `CustomRanges` .
+TVSDK prioriterar anpassade intervallinställningar framför standardannonsinställningar. Om till exempel markeringsintervall definieras, ignoreras annonsens infogningsinställningar. Om REPLACE-intervall är definierade använder TVSDK automatiskt signeringsläget `CustomRanges`.
 
 1. `ReplaceRange` utan ersättningstid
 
-   Om ersättningens varaktighet saknas bestäms den faktiska ersättningstiden av servern. Antalet annonser som placeras i den här `AdBreak` bestäms också av servern.
+   Om ersättningens varaktighet saknas bestäms den faktiska ersättningstiden av servern. Antalet annonser i denna `AdBreak` bestäms också av servern.
 
    ```
    {
@@ -60,6 +63,6 @@ TVSDK prioriterar anpassade intervallinställningar framför standardannonsinst�
    }
    ```
 
-1. MARK- och DELETE-intervall med ersättningstid
+1. Intervall för MARK och DELETE med ersättningstid
 
    Den extra ersättningstiden ignoreras.
