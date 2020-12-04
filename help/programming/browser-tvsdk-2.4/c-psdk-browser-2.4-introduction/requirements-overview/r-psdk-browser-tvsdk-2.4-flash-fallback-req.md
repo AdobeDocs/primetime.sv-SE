@@ -1,34 +1,37 @@
 ---
-description: Om du vill använda Flash Player måste du kontrollera att miljön uppfyller de nödvändiga kraven.
-seo-description: Om du vill använda Flash Player måste du kontrollera att miljön uppfyller de nödvändiga kraven.
+description: För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
+seo-description: För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
 seo-title: Krav för Flash Player
 title: Krav för Flash Player
 uuid: f181457b-2bb4-4baa-b2b7-d787f65fab75
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
 
 # Krav för Flash Player{#flash-player-requirements}
 
-Om du vill använda Flash Player måste du kontrollera att miljön uppfyller de nödvändiga kraven.
+För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Här följer kraven för Flash Player:
+Här är kraven för Flash Player:
 
-* Om du vill spela upp med `Primetime.js`måste du installera minst Flash Player version 23.
+* Om du vill spela upp med `Primetime.js` måste du installera minst Flash Player version 23.
 * Installera minst Flash Player version 11.0.0 om du vill bli tillfrågad om uppdateringar av Flash Player version 23 eller senare.
 
-## Förpackningskrav {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
+## Paketeringskrav {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
 För uppspelning med Flash Player krävs följande SWF-filer:
 
 * Den huvudsakliga SWF-programfilen som hanterar webbläsar-TVSDK-API:er.
-* Den `playerProductInstall.swf` SWF-fil som hanterar installation och uppdatering av Flash Player.
+* Den `playerProductInstall.swf` SWF-fil som hanterar installation och uppdateringar av Flash Player.
 
-Dessutom kräver videouppspelning i Flash en auktoriseringstokenfil som kan vara en SWF-fil eller en `.DAT` fil. Sökvägen till SWF-filerna, auktoriseringstokenfilen samt tokenfilens namn och typ kan anges med API:erna för AdobePSDK.
+Dessutom kräver videouppspelning i Flash en auktoriseringstokenfil som kan vara en SWF- eller `.DAT`-fil. Sökvägen till SWF-filerna, auktoriseringstokenfilen samt tokenfilens namn och typ kan anges med API:erna för AdobePSDK.
 
 Exempel:
 
