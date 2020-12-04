@@ -6,15 +6,18 @@ title: Implementera en generator för anpassade affärsmöjligheter
 uuid: 93d8253f-10f9-4950-a273-28975cb69caa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
 
-# Implementera en generator för anpassade affärsmöjligheter {#implement-a-custom-opportunity-generator}
+# Implementera en anpassad affärsmöjlighetsgenerator {#implement-a-custom-opportunity-generator}
 
 Du kan implementera egna generatorer för affärsmöjligheter genom att implementera klassen OpportunityGenerator.
 
-1. Implementera ditt eget gränssnitt `ContentFactory` genom att implementera `ContentFactory` gränssnittet och åsidosätta `retrieveGenerators`.
+1. Implementera din anpassade `ContentFactory` genom att implementera gränssnittet `ContentFactory` och åsidosätta `retrieveGenerators`.
 
    Exempel:
 
@@ -47,14 +50,14 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
    itemLoader.load(resource, id, config);
    ```
 
-1. Skapa en anpassad klass för generering av affärsmöjlighet som implementerar `OpportunityGenerator` klassen.
+1. Skapa en anpassad generatorklass för affärsmöjlighet som implementerar klassen `OpportunityGenerator`.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. I den anpassade affärsmöjlighetsgeneratorn åsidosätter `doConfigure`och `doUpdate` `doCleanup`:
+   1. Åsidosätt `doConfigure`, `doUpdate` och `doCleanup` i den anpassade affärsmöjlighetsgeneratorn:
 
       ```java
       @Override 
@@ -86,7 +89,7 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
       ); 
       ```
 
-   1. För varje affärsmöjlighet som skapas, ring `resolve` på `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Ring `resolve` på `OpportunityGeneratorClient:getClient().resolve(opportunity);` för varje affärsmöjlighet som skapas.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
