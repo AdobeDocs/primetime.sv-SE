@@ -25,7 +25,7 @@ En DRM-klientversion kan identifieras av attributen som anges i följande tabell
 |---|---|---|---|
 | Miljö | &quot;PC&quot;, &quot;PortingKit&quot; | Exakt matchning | Identifierar om klienten körs på en stationär dator eller någon annan enhet. |
 | OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exakt matchning | Plattform |
-| Arkitektur | “32”, “64” | Exakt matchning | 32-bitars eller 64-bitars |
+| Arkitektur | &quot;32&quot;, &quot;64&quot; | Exakt matchning | 32-bitars eller 64-bitars |
 | Skärmtyp | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Exakt matchning |  |
 | Körningsmiljöversioner | Ett giltigt versionsnummer. Exempel: &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; osv. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
 | DRM-biblioteksversion | Ett giltigt versionsnummer. Till exempel &quot;2.0.0&quot;. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
