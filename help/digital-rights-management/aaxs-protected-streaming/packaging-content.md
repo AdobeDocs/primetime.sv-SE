@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Paketera innehåll{#packaging-content}
+# Paketerar innehåll{#packaging-content}
 
-Vid paketering av innehåll måste licensserverns URL anges. Adobe Access Server-URL:en har följande format:
+Vid paketering av innehåll måste licensserverns URL anges. Adobe Access Server URL har följande format:
 
 ```
 http(s):// license-server-host:port/flashaccessserver/tenant-name
