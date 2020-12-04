@@ -6,6 +6,9 @@ title: Uttryckstoken
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-Lagrings-ID:t för innehållskrypteringsnyckeln eller CEKSID som anges för parametern och den krypteringsnyckel eller CEK som anges för `kid` `contentKey` parametern måste matcha ID:t för innehållskrypteringsnyckeln och den krypteringsnyckel som används för paketeringen. Följande text är ett exempel på tokenserversvaret:
+Lagrings-ID:t för innehållskrypteringsnyckeln eller CEKSID som anges för parametern `kid` och den innehållskrypteringsnyckel eller CEK som anges för parametern `contentKey` måste matcha ID:t för innehållskrypteringsnyckeln och den innehållskrypteringsnyckel som används för paketeringen. Följande text är ett exempel på tokenserversvaret:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -37,4 +40,4 @@ https://wv.service.expressplay.com/hms/wv/rights/
 Då kan du antingen
 
 * använda den returnerade URL:en och frågan som licensserverns URL, eller
-* ta bort frågan från URL:en och skicka ExpressPlayToken separat som en HTTP POST-rubrik
+* ta bort frågan från URL:en och skicka ExpressPlayToken separat som en HTTP-POST
