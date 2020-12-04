@@ -15,14 +15,14 @@ ht-degree: 0%
 
 # Förbered lösenord för serveregenskapsfilerna{#prepare-passwords-for-the-server-properties-files}
 
-Referensimplementeringen innehåller `ScrambleUtil.class`en klass som garanterar säkerheten för dina autentiseringsuppgifter.
+Referensimplementeringen innehåller `ScrambleUtil.class`, en klass som garanterar säkerheten för dina autentiseringsuppgifter.
 
-Använd det här verktyget för att kryptera lösenordet innan du tar med det i [!DNL flashaccess-refimpl.properties] filen.
+Använd det här verktyget för att kryptera lösenordet innan du tar med det i [!DNL flashaccess-refimpl.properties]-filen.
 
 Om du vill köra verktyget kan du antingen använda ett Ant-skript eller Java.
 
-Verktyget genererar det krypterade lösenordet, som du måste kopiera till [!DNL flashaccess-refimpl.properties] filen.
+Verktyget genererar det krypterade lösenordet, som du måste kopiera till filen [!DNL flashaccess-refimpl.properties].
 
 >[!NOTE]
 >
->Lösenord som har kodats med det `ScrambleUtil.class` som har angetts i referensimplementeringen fungerar inte med Primetime DRM-servern för skyddad direktuppspelning.
+>Lösenord som har kodats med `ScrambleUtil.class` som har angetts med referensimplementeringen fungerar inte med Primetime DRM-servern för skyddad direktuppspelning.
