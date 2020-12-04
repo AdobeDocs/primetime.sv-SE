@@ -4,15 +4,18 @@ title: Licensserverns egenskapsfil
 uuid: bede307a-2060-451f-baf5-d058702c0a7e
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '195'
+ht-degree: 0%
 
 ---
 
 
 # Licensserverns egenskapsfil {#license-server-properties-file}
 
-Använd [!DNL flashaccess-refimpl.properties] filen för att konfigurera licensserverkomponenten för referensimplementeringen. Du måste åtminstone konfigurera egenskaperna för transportautentiseringsuppgifterna och licensserverns autentiseringsuppgifter. Platserna för autentiseringsfilerna måste anges i förhållande till katalogen som anges av `config.resourcesDirectory` egenskapen. Den här filen innehåller även flera egenskaper för paketeringsinnehåll: dessa egenskaper används endast för Flash Media Rights Management Server 1.x-metadatakonvertering. Om du ändrar något av värdena i den här egenskapsfilen måste du starta om licensservern för att ändringarna ska börja gälla.
+Använd filen [!DNL flashaccess-refimpl.properties] för att konfigurera licensserverkomponenten för referensimplementeringen. Du måste åtminstone konfigurera egenskaperna för transportautentiseringsuppgifterna och licensserverns autentiseringsuppgifter. Platserna för autentiseringsfilerna måste anges i förhållande till katalogen som anges av egenskapen `config.resourcesDirectory`. Den här filen innehåller även flera egenskaper för paketeringsinnehåll: Dessa egenskaper används endast för metadatakonvertering av Flash Media Rights Management Server 1.x. Om du ändrar något av värdena i den här egenskapsfilen måste du starta om licensservern för att ändringarna ska börja gälla.
 
-Nyckelservercertifikatet måste anges i [!DNL flashaccess-refimpl.properties]om du vill ha stöd för generering av licenser för fjärrnyckelleverans till iOS-klienter i Adobe Access.
+Om du vill ha stöd för generering av licenser för fjärrnyckelleverans till iOS-klienter i Adobe Access måste nyckelservercertifikatet anges i [!DNL flashaccess-refimpl.properties].
 
 Följande egenskaper har lagts till i Adobe Access:
 
