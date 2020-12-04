@@ -1,16 +1,19 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
 seo-description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
-seo-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
+seo-title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
+title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
 
-# Visa ett söknavigeringsfält med den aktuella uppspelningspositionen{#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Visa ett söknavigeringsfält med aktuell uppspelningsposition{#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
 
@@ -31,7 +34,7 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
    Giltiga lägen är FÖRBEREDDA, SLUTFÖRDA, PAUSED och PLAYING.
 
 1. Lyssna efter lämplig händelse för att se när användaren drar.
-1. Skicka den begärda sökpositionen (millisekunder) till `MediaPlayer.seek` metoden.
+1. Skicka den begärda sökpositionen (millisekunder) till metoden `MediaPlayer.seek`.
 
    ```
    function seek(position:Number):void;
@@ -43,7 +46,7 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
    >
    >Detta flyttar spelhuvudet till en ny position i strömmen, men den slutliga beräknade positionen kan skilja sig från den angivna sökpositionen.
 
-1. Vänta tills TVSDK skickar `SeekEvent.SEEK_END` händelsen.
+1. Vänta tills TVSDK skickar händelsen `SeekEvent.SEEK_END`.
 1. Hämta den slutliga justerade uppspelningspositionen med event.actualPosition.
 
        Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Olika regler kan gälla, bland annat:
