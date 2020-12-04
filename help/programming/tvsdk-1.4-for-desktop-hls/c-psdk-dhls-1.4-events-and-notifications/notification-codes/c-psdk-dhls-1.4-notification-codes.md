@@ -40,7 +40,8 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Informationshändelser, från 300000 till 399999 </li> 
     </ul> <p>Varje intervall på den översta nivån, t.ex. fel, delas upp i underintervall, t.ex. 101000 till 101999, som representerar uppspelningsfel. </p>
     <pre>
-     Uppräkningen <span class="codeph"> mediacore.PSDKErrorCode</span> visar möjliga värden.
+     Uppräkningen 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> visar möjliga värden.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +50,11 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadata </td> 
-   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> paras till exempel med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
+   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> skulle till exempel kombineras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">En referens till ett annat <span class="codeph"> MediaPlayerNotification</span> -objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
+   <td colname="2">En referens till ett annat <span class="codeph"> MediaPlayerNotification</span>-objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
   </tr> 
  </tbody> 
 </table>
