@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Uppdaterar klientkonfigurationsfilen{#updating-the-tenant-configuration-file}
 
-Alla värden som anges i [!DNL flashaccess-tenant.xml] kan ändras när som helst, och ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler (.pfx) och tillåtelselista-certifikatfiler för paketerare som refereras i klientens konfigurationsfil.
+Alla värden som anges i [!DNL flashaccess-tenant.xml] kan ändras när som helst och ändringarna börjar gälla nästa gång servern läser in konfigurationsfilen igen. Dessutom söker servern efter ändringar i alla autentiseringsfiler (.pfx) och tillåtelselista-certifikatfiler för paketerare som refereras i klientens konfigurationsfil.
