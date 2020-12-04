@@ -7,6 +7,9 @@ title: Klientfelhantering för trasig VMAP
 uuid: 7cc68c86-bb49-4a1b-a1ec-65ca4c94d75d
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Beroende på vilken typ av annonsserversvar det är, och på dina inställningar
 
 Låt oss titta på ett scenario där annonsserverns svar pekar på VMAP XML. Låt oss också säga att annonsserverns svar har fyra tillgängliga annonsplatser, där var och en pekar på samma VMAP. Slutligen, låt oss säga att denna VMAP är trasig.
 
-I det här scenariot, om lazy ad ad annonsupplösning är aktiverat ( [Aktivera lat annonsmatchning](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)), skickar TVSDK två 1 109-fel (inte ett som kan förväntas): ett fel skickas vid varje tolkningspass över tidslinjen. Detta beror på att TVSDK tolkar annonserna på två omgångar när lat annonslösande är aktiverat: den första omgången inträffar precis innan innehållsuppspelningen startar för pre-roll-ads, och den andra omgången inträffar efter att uppspelningen startar, för annonser i mellanrullning och post-roll.
+I det här scenariot, om lazy ad ad annonsupplösning är aktiverad ( [Aktivera lat och lösa](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)), skickar TVSDK två 1109-fel (inte ett som kan förväntas): ett fel skickas vid varje tolkningspass över tidslinjen. Detta beror på att TVSDK tolkar annonserna på två omgångar när lat annonslösande är aktiverat: den första omgången inträffar precis innan innehållsuppspelningen startar för pre-roll-ads, och den andra omgången inträffar efter att uppspelningen startar, för annonser i mellanrullning och post-roll.
 
 >[!NOTE]
 >
