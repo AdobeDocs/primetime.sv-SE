@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Tidslinjeannonsklasser{#timeline-advertising-classes}
+# Annonsklasser för tidslinje{#timeline-advertising-classes}
 
 Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 
@@ -78,13 +78,14 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> Klassen PTContentResolver</a> , <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> protokollet PTContentResolver</a>
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> En klass som hanterar annonsupplösningsdelen i Adobe Primetime annonsbeslutsprocess. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
-   <td colname="2"> Protokoll som beskriver de metoder som den anpassade innehållslösaren ( <span class="codeph"> PTContentResolver</span> ) ska använda för att kommunicera status för innehållets matchning till delegaten. </td> 
+   <td colname="2"> Protokoll som beskriver de metoder som den anpassade innehållslösaren ( <span class="codeph"> PTContentResolver</span>) ska använda för att kommunicera status för innehållets matchning till delegaten. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 
