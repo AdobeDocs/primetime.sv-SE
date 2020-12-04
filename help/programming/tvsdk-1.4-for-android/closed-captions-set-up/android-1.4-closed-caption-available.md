@@ -19,14 +19,14 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
 >[!TIP]
 >
->Undertexter är alltid aktiverade. Alla standardspår för undertextning anses finnas. Standardspår (som CC1-CC4, CS1-CS6) räknas upp i `ClosedCaptionsTrack.DefaultCCTypes`. När uppspelningen börjar letar TVSDK efter aktivitet i någon av dessa kanaler. Om den hittar aktivitet, anger den metoden för det spåret och skickar `isActive` `MediaPlayer.PlaybackEventListener.onUpdated` händelsen.
+>Undertexter är alltid aktiverade. Alla standardspår för undertextning anses finnas. Standardspår (som CC1-CC4, CS1-CS6) räknas upp i `ClosedCaptionsTrack.DefaultCCTypes`. När uppspelningen börjar letar TVSDK efter aktivitet i någon av dessa kanaler. Om den hittar aktivitet anges metoden `isActive` för det spåret och händelsen `MediaPlayer.PlaybackEventListener.onUpdated` skickas.
 
 1. Vänta tills mediespelaren är i åtminstone tillståndet PREPARED.
 1. Lyssna efter dessa händelser:
 
    * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: Den första listan med spår för undertextning är tillgänglig
 
-1. Hämta en lista över alla tillgängliga undertextningsspår.
+1. Hämta en lista med alla tillgängliga undertextningsspår.
 
    Exempel:
 
