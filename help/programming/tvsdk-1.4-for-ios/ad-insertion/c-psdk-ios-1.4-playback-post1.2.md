@@ -6,6 +6,9 @@ title: Standardbeteende och anpassat uppspelningsbeteende med annonser
 uuid: cc996e5c-bee2-451b-96cb-088df1694188
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ I följande tabell beskrivs hur TVSDK hanterar annonser och annonsbrytningar und
   <tr> 
    <td colname="col1"> Under normal uppspelning påträffas en annonsbrytning. </td> 
    <td colname="col2"></td> 
-   <td colname="col3">Ange en annan princip för annonsbrytningen med <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Ange en annan princip för annonsbrytningen genom att använda <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Ditt program söker fram över annonsbrytningar till huvudinnehållet. </td> 
@@ -58,12 +61,12 @@ I följande tabell beskrivs hur TVSDK hanterar annonser och annonsbrytningar und
   <tr> 
    <td colname="col1"> Ditt program söker bakåt i en annonsbrytning. </td> 
    <td colname="col2"> Spelar upp från början av den annons där sökningen avslutades. </td> 
-   <td colname="col3">Ange en annan annonspolicy för annonsbrytningen och för den specifika annons som sökningen avslutades i med <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Ange en annan annonsprincip för annonsbrytningen och för den specifika annons som sökningen avslutades i med <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Programmet söker framåt eller bakåt över bevakade annonsbrytningar till huvudinnehållet. </td> 
    <td colname="col2"> Om den senaste annonsbrytningen redan har bevakats, hoppar över till den användarvalda sökpositionen. </td> 
-   <td colname="col3">Välj vilka av de överhoppade brytningarna som ska spelas upp med <span class="codeph"> selectAdBreaksToPlay</span> och ange vilka brytningar som redan har bevakats med <span class="codeph"> PTAdBreak.isWatched</span>. <p> <p>Viktigt:  Som standard markerar TVSDK en annonsbrytning som bevakad direkt efter att den första annonsen har öppnats i annonsbrytningen. </p> </p> </td> 
+   <td colname="col3">Välj vilken av de överhoppade brytningarna som ska spelas upp med <span class="codeph"> selectAdBreaksToPlay</span> och ta reda på vilka brytningar som redan har bevakats med <span class="codeph"> PTAdBreak.isWatched</span>. <p> <p>Viktigt:  Som standard markerar TVSDK en annonsbrytning som bevakad direkt efter att den första annonsen har öppnats i annonsbrytningen. </p> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Programmet söker framåt eller bakåt över en eller flera annonsbrytningar och övergår i en bevakad annonsbrytning. </td> 
