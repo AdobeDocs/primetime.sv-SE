@@ -6,6 +6,9 @@ title: Alternativa ljudspår i spellistan
 uuid: ec98cb6d-aa82-4473-83b6-f12c875f17cb
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Alternativa ljudspår, eller sent bindande ljud, gör att användarna kan växla
 >
 >För att det alternativa ljudet ska kunna blandas med huvudmediets videospår måste det alternativa spårets tidsstämplar matcha tidsstämplarna för ljudet i huvudspåret.
 
-Huvudljudspåret ingår i ljudspårssamlingen med `default` etiketten. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA` -taggarna med `TYPE=AUDIO`.
+Huvudljudspåret ingår i ljudspårsamlingen med etiketten `default`. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA`-taggarna med `TYPE=AUDIO`.
 
 Ett M3U8-manifest som anger flera alternativa ljudströmmar kan till exempel se ut så här:
 
