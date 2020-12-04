@@ -6,6 +6,9 @@ title: Klassen TimeRange
 uuid: adf4f1ad-6b3b-48ac-a388-ee1fd54f770b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ Med anpassade annonsmarkörer kan du skicka en uppsättning TimeRange-specifikat
 
 Varje TimeRange-specifikation i uppsättningen representerar ett segment på tidslinjen för uppspelning som underhålls internt av TVSDK och som måste markeras som en annonsrelaterad period.
 
-Klassen är en enkel `TimeRange` datastruktur som visar startpositionen och slutpositionen på tidslinjen. De här två skrivskyddade egenskaperna förkortar begreppet tidsintervall på tidslinjen för uppspelningen.
+Klassen `TimeRange` är en enkel datastruktur som visar startpositionen och slutpositionen på tidslinjen. De här två skrivskyddade egenskaperna förkortar begreppet tidsintervall på tidslinjen för uppspelningen.
 
 >[!TIP]
 >
 >Båda värdena uttrycks i millisekunder.
 
-Här är en sammanfattning av `TimeRange` klassen:
+Här är en sammanfattning av klassen `TimeRange`:
 
 ```java
 public final class TimeRange {
