@@ -6,6 +6,9 @@ title: ID3-taggar
 uuid: 5e5c5f89-7653-47c1-b9c1-6b9b9b1f8d73
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -25,13 +28,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * NAME = finns inte
 * ID = 0
 
-1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med `MediaPlayer` objektet.
+1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med objektet `MediaPlayer`.
 
    TVSDK anropar den här avlyssnaren när ID3-metadata identifieras.
 
    >[!NOTE]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata` händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
+   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
 
 1. Hämta metadata.
 
