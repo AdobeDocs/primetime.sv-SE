@@ -1,18 +1,21 @@
 ---
-description: Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du har fått andra konfigurationsparametrar från din Adobe Enablement-representant använder du klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
-seo-description: Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du har fått andra konfigurationsparametrar från din Adobe Enablement-representant använder du klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
+description: Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du fick andra konfigurationsparametrar från din Adobe-representant kan du använda klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
+seo-description: Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du fick andra konfigurationsparametrar från din Adobe-representant kan du använda klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
 seo-title: Konfigurera faktureringsmått
 title: Konfigurera faktureringsmått
 uuid: d8656ab2-fdd8-4fe4-8578-a6c8ecd378e2
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurera faktureringsmått {#configure-billing-metrics}
 
-Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du har fått andra konfigurationsparametrar från din Adobe Enablement-representant använder du klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
+Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du fick andra konfigurationsparametrar från din Adobe-representant kan du använda klassen BillingMetricsConfiguration för att ställa in dessa parametrar innan du initierar mediespelaren.
 
 >[!TIP]
 >
