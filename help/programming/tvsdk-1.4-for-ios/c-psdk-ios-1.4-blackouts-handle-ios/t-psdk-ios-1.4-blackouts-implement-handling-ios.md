@@ -6,6 +6,9 @@ title: Implementera hantering av strömavbrott
 uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Implementera en avlyssnarmetod för objekt `PTTimedMetadata` i förgrunden.
+1. Implementera en avlyssnarmetod för `PTTimedMetadata`-objekt i förgrunden.
 
    Exempel:
 
@@ -61,7 +64,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Hantera `TimedMetadata` objekt med konstanta uppdateringar under uppspelningen.
+1. Hantera `TimedMetadata`-objekt med konstanta uppdateringar under uppspelning.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Lägg till hanteraren för att växla till alternativt innehåll och återgå till huvudinnehållet som anges av `PTTimedMetadata` `PTTimedMetadata` objektet och dess uppspelningstid.
+1. Lägg till `PTTimedMetadata`-hanteraren för att växla till alternativt innehåll och återgå till huvudinnehållet enligt `PTTimedMetadata`-objektet och dess uppspelningstid.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Implementera en avlyssnarmetod för `PTTimedMetadata` objekt i bakgrunden.
+1. Implementera en avlyssnarmetod för `PTTimedMetadata`-objekt i bakgrunden.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
