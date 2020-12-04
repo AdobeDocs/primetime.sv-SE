@@ -6,6 +6,9 @@ title: Annonsinfogning och failover för VOD
 uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
@@ -16,16 +19,16 @@ Processen för annonsinfogning video-on-demand (VOD) består av faserna för ann
 
 ## Ad-resolving phase {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
-Webbläsarens TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetimes annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör Browser TVSDK ett HTTP-anrop till fjärr-annonsservern och tolkar serverns svar.
+Webbläsarens TVSDK kontaktar en annonsleveranstjänst, t.ex. Adobe Primetime annonsbeslut, och försöker hämta den primära spellistfilen som motsvarar annonsens videoström. Under reklamlösningsfasen gör Browser TVSDK ett HTTP-anrop till fjärr-annonsservern och tolkar serverns svar.
 
 Browser TVSDK stöder följande typer av annonseringsleverantörer:
 
 * Metadata och leverantör
 
    Annonsdata kodas i JSON-filer med oformaterad text.
-* Adobe Primetimes annonsleverantör
+* Adobe Primetime annonsleverantör för annonsbeslut
 
-   Browser TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till Adobe Primetimes server för annonsbeslut. Adobe Primetimes annonsbeslut besvaras med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
+   Browser TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till Adobe Primetime server för annonsbeslut. Adobe Primetime annonsbedömning svarar med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
 
    En av följande redundanssituationer kan uppstå under den här fasen:
 
@@ -35,17 +38,17 @@ Browser TVSDK stöder följande typer av annonseringsleverantörer:
       Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
    Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Fas för annonsinfogning {#section_88A0E4FA12394717A9D85689BD11D59F}
+## Ad-insertion phase {#section_88A0E4FA12394717A9D85689BD11D59F}
 
 Webbläsarens TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 
 När annonslösningsfasen är klar har Browser TVSDK en ordnad lista över annonsresurser som grupperats i annonsbrytningar. Varje annonsbrytning placeras på huvudinnehållets tidslinje med ett starttidsvärde som uttrycks i millisekunder (ms). Varje annons i en annonsbrytning har en duration-egenskap som också uttrycks i ms. Annonserna i en annonsbrytning är sammankopplade, den ena efter den andra. Följaktligen är längden på en annonsbrytning lika med summan av varaktigheten för de enskilda dispositionsannonserna.
 
-Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsavbrott kan annonssegmenten överlappa varandra. Överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar Browser TVSDK bort den senare annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
+Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsbrytningar kan annonssegmenten överlappa varandra. Överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar Browser TVSDK bort den senare annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
 
 Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Ad-uppspelningsfas {#section_7B0073BE9A744C74929263182C1243FC}
+## Annonsuppspelningsfas {#section_7B0073BE9A744C74929263182C1243FC}
 
 Webbläsaren TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 
