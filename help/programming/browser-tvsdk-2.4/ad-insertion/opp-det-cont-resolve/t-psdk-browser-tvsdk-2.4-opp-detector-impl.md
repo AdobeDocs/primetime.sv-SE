@@ -6,11 +6,14 @@ title: Implementera en generator för anpassade affärsmöjligheter
 uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '95'
+ht-degree: 4%
 
 ---
 
 
-# Implementera en generator för anpassade affärsmöjligheter{#implement-a-custom-opportunity-generator}
+# Implementera en generator för anpassad affärsmöjlighet{#implement-a-custom-opportunity-generator}
 
 Du kan implementera en egen generator för affärsmöjligheter genom att utöka gränssnittet för OpportunityGenerator.
 
