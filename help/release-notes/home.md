@@ -24,13 +24,13 @@ Versionen fokuserade på underhållsuppdateringar.
 
 Versionen fokuserade på att uppdatera Primetime Reference-programmets gråskaleversion till version 5.6.4.
 
-Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md).
+Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md) finns här.
 
 ## Förbättringar och korrigeringar i versionsinformation för TVSDK 3.12 iOS
 
 Versionen fokuserade på att lösa de vanligaste kundproblemen.
 
-Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-ios.md)finns här.
+Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-ios.md) finns här.
 
 ## Se även
 
