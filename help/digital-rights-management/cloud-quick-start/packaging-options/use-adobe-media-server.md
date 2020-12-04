@@ -4,13 +4,16 @@ title: Använd Adobe Media Server
 uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 3%
 
 ---
 
 
 # Använd Adobe Media Server {#use-adobe-media-server}
 
-Vissa kunder kanske redan använder Adobe Media Server och vill underhålla leveransmodellen. Om så är fallet kan de DRM-specifika data som krävs för Primetime Cloud samlas in från någon av konfigurationsfilerna som ingår i paketet för att fylla i XML-konfigurationen för JIT (Just In Time) för AMS.
+Vissa kunder kanske redan använder Adobe Media Server och vill underhålla innehållsleveransmodellen. Om så är fallet kan de DRM-specifika data som krävs för Primetime Cloud samlas in från någon av konfigurationsfilerna som ingår i paketet för att fylla i XML-konfigurationen för JIT (Just In Time) för AMS.
 
 Exempel:
 
