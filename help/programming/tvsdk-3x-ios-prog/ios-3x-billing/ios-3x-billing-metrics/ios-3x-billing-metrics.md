@@ -6,15 +6,18 @@ title: Faktureringsanvändningsstatistik
 uuid: e792cc72-b1ae-42ce-8b71-f9f9f1de0614
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
-# Faktureringsstatistik {#billing-metrics}
+# Faktureringsmått {#billing-metrics}
 
 För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 
-Varje gång spelaren genererar en direktuppspelningshändelse börjar TVSDK skicka HTTP-meddelanden regelbundet till Adobes faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men avtalet med Adobe avgör de faktiska värdena.
+Varje gång spelaren genererar en direktuppspelningshändelse börjar TVSDK skicka HTTP-meddelanden regelbundet till Adobe faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men ditt kontrakt med Adobe avgör de faktiska värdena.
 
 Meddelandena innehåller följande information:
 
@@ -25,13 +28,13 @@ Meddelandena innehåller följande information:
 * Anger om strömmen skyddas av DRM
 * Version och plattform för TVSDK
 
-Adobe förkonfigurerar detta arrangemang, men om du vill ändra ordningen bör du samarbeta med din Adobe Enablement-representant.
+Adobe förkonfigurerar det här arrangemanget, men om du vill ändra ordningen ska du arbeta med din representant för Adobe Enablement.
 
-Om du vill övervaka den statistik som TVSDK skickar till Adobe hämtar du URL-adressen från din Adobe Enablement-representant och använder ett verktyg för nätverksregistrering, till exempel Charles, för att se data.
+Om du vill övervaka den statistik som TVSDK skickar till Adobe hämtar du URL-adressen från Adobe Enablement-representanten och använder ett verktyg för nätverksregistrering, till exempel Charles, för att se data.
 
 ## Konfigurera faktureringsmått {#configure-billing-metrics}
 
-Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du har fått andra konfigurationsparametrar från din Adobe Enablement-representant använder du klassen PTBillingMetricsConfiguration för att ställa in de här parametrarna innan du initierar mediespelaren.
+Om du använder standardkonfigurationen finns det inget annat du behöver göra för att aktivera eller konfigurera fakturering. Om du har fått andra konfigurationsparametrar från din Adobe-representant kan du använda klassen PTBillingMetricsConfiguration för att ställa in de här parametrarna innan du initierar mediespelaren.
 
 De flesta kunder bör använda standardkonfigurationen.
 
@@ -86,4 +89,4 @@ Om du använder ett verktyg för nätverksregistrering för att övervaka statis
 </request>
 ```
 
-De booleska egenskaperna `drmProtected`, `adsEnabled`och `midrollEnabled` visas bara om de är sanna.
+De booleska egenskaperna `drmProtected`, `adsEnabled` och `midrollEnabled` visas bara om de är sanna.
