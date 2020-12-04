@@ -4,6 +4,9 @@ title: Introduktion
 uuid: 7c7d5fb0-bc4d-47e9-8856-53df57b8c6d3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 0%
 
 ---
 
