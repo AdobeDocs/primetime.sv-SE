@@ -6,6 +6,9 @@ title: Visa undertexter
 uuid: 7057014a-b14a-4790-8f7f-37d7a1fb8194
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Om du vill göra undertexter tillgängliga för din klientspelare måste du akti
 
 Visa undertexter:
 
-1. Ange `PTMediaPlayer` egenskapen i `closedCaptionDisplayEnabled` objektet.
+1. Ange egenskapen `closedCaptionDisplayEnabled` i `PTMediaPlayer`-objektet.
 
    Om användaren har aktiverat undertexter visas texten i det här steget.
 
@@ -26,4 +29,4 @@ Visa undertexter:
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` egenskapen är inaktuell. Använd `subtitlesOptions` egenskapen för `PTMediaPlayerItem`. Se [Visa undertexter](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) för användning av undertexter.
+   >`closedCaptionDisplayEnabled` egenskapen är inaktuell. Använd egenskapen `subtitlesOptions` för `PTMediaPlayerItem`. Se [Visa underrubriker](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) för att använda undertexter.
