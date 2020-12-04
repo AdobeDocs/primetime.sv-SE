@@ -6,6 +6,9 @@ title: Lägg till uppspelningshändelser
 uuid: 63138237-2315-45ff-914d-369da18fdff7
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 TVSDK skickar annonsuppspelningshändelser som svar på annonsrelaterade åtgärder som när en annons börjar spelas upp.
 
-Om du vill få meddelanden om alla annonsuppspelningsrelaterade händelser registrerar du avlyssnare med objektet för följande händelser `MediaPlayer` .
+Om du vill få meddelanden om alla annonsuppspelningsrelaterade händelser registrerar du avlyssnare med `MediaPlayer`-objektet för följande händelser.
 
 >[!TIP]
 >
