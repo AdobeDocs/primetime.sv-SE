@@ -4,18 +4,21 @@ title: Komma igång
 uuid: 2002cf94-c8a7-4820-a560-6d9f7f33ee97
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
 
 # Komma igång {#getting-started}
 
-I det här dokumentet beskrivs stegen för snabb installation och driftsättning av ett Adobe Primetime DRM-ekosystem som använder progressiv nedladdning för att distribuera innehåll, samt Primetime DRM-servern för skyddad direktuppspelning för licensdistribution. Ytterligare information om varje steg finns i följande handböcker:
+Det här dokumentet innehåller stegen för att snabbt installera och driftsätta ett Adobe Primetime DRM-ekosystem som använder Progressiv nedladdning för att distribuera innehåll, samt Primetime DRM-servern för skyddad direktuppspelning för licensdistribution. Ytterligare information om varje steg finns i följande handböcker:
 
 * *Använda Primetime DRM-servern för att skydda innehåll*
 * *Använda Primetime DRM-servern för skyddad strömning*
 
-Primetimes DRM-server för skyddad direktuppspelning är en server med minimal funktionalitet som inte innehåller källkod. En ändringsbar server med fullständig Java-källa finns i guiden *Använda implementeringar* av Primetimes DRM-referens. Om du konfigurerar en referenslicensserver ersätter det steget *Konfigurera och distribuera Primetime DRM Server för skyddad direktuppspelning (licensserver)* .
+Primetimes DRM-server för skyddad direktuppspelning är en server med minimal funktionalitet som inte innehåller källkod. En ändringsbar server med fullständig Java-källa finns i guiden *Använda implementeringar av Primetime DRM Reference Implementations*. Om du konfigurerar en referenslicensserver ersätter det steget *Konfigurera och distribuera Primetime DRM Server för skyddad direktuppspelning (licensserver)*.
 
 ## Förutsättningar {#prerequisites}
 
@@ -33,16 +36,16 @@ Utför följande uppgifter innan du börjar:
 
 ## Hämta certifikat {#obtain-certificates}
 
-När SDK-programvaran har levererats får den utsedda företagscertifikatadministratören en inbjudan om att slutföra registreringsprocessen för DRM-certifikat för Adobe Primetime. Mer information finns i *Handboken* för registrering av DRM-certifikat för Primetime.
+När SDK-programvaran har levererats får den utsedda företagscertifikatadministratören en inbjudan om att slutföra registreringsprocessen för Adobe Primetime DRM-certifikat. Mer information finns i *Handbok för registrering av DRM-certifikat från Primetime*.
 
 1. Administratören utser minst en person att fungera som certifikatbegärande.
 1. Certifikatbegäraren genererar en privat nyckel och en CSR.
 1. Begäranden skickar en certifikatbegäran.
 1. Företagsadministratören godkänner begäran.
-1. Adobe Certificate Administrator bekräftar inlämningen.
+1. Adobe certifikatadministratör bekräftar överföringen.
 1. Begäraren tar emot certifikatet, binder certifikatet med den privata nyckeln och distribuerar certifikatet. enligt beskrivningen i .
 
-   Mer information om hur du distribuerar certifikatet finns i guiden *Distribuera Adobe Primetime DRM Server for Protected Streaming* .
+   Mer information om hur du distribuerar certifikatet finns i guiden *Distribuera Adobe Primetime DRM Server for Protected Streaming*.
 1. Steg 3 till 6 måste slutföras för varje certifikattyp.
 
    För Primetimes DRM-produktionsversion måste den begärande parten göra separata begäranden för licensservern, paketeringen och transportcertifikaten, som är giltiga i två år.
