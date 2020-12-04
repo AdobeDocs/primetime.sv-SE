@@ -6,6 +6,9 @@ title: Annonsinfogning
 uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,6 @@ Referensimplementeringen visar hur du ställer in spelaren för annonser, vilket
 
 Processen med att konfigurera en spelare för annonsinfogning omfattar:
 
-* **Inmatningsfeed:** Fylla i en inmatning med annonsmetadata. Se [Katalogformat](../set-up-dev-environment/exploring-code/catalog-format.md).
-* **Referensimplementeringsadapter:** Tolka indataflödet för att fylla i ett metadataobjekt för annonsering.
+* **Inmatningsfeed:** Fylla i en inmatningsfeed med annonsmetadata. Se [Katalogformat](../set-up-dev-environment/exploring-code/catalog-format.md).
+* **referensimplementeringsflödeskort:** Tolka indataflödet för att fylla i ett metadataobjekt.
 * **AdsManager:** Använda AdsManager för att hämta annonsmetadata och skapa motsvarande AdProvider.
