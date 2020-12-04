@@ -22,8 +22,8 @@ Processen för att konfigurera Primetime Ad Insertion är följande:
 
 1. Bestäm om precis-i-tid-annonspaketering krävs för ert annonsarbetsflöde. Kontakta din supportrepresentant på Primetime för att aktivera tjänsten.
 
-1. Uppdatera programmet så att det använder API:t [för](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap för att göra och ta emot begäranden för Primetime Ad Insertion och konfigurera programmet så att det stöds. Mer information finns i [Annonsspårning](set-up-ad-tracking.md).
+1. Uppdatera programmet så att det använder [Bootstrap API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) för att skapa och ta emot begäranden för Primetime Ad Insertion och konfigurera programmet så att det stöds. Mer information finns i [Ad tracking](set-up-ad-tracking.md).
 
 1. Testa programmet för att säkerställa korrekt annonsuppspelning. <!-- using the [Debugging tools](troubleshoot-and-debug.md).-->
 
-1. Testa applikationerna för att säkerställa korrekt aktivering av annonsspårning och visningssignaler.<!-- using the [Reporting](reporting-and-billing.md).-->
+1. Testa dina program för att säkerställa korrekt aktivering av annonsspårning och visningssignaler.<!-- using the [Reporting](reporting-and-billing.md).-->
