@@ -6,6 +6,9 @@ title: Visa videons varaktighet, aktuella tid och återstående tid
 uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 Du kan använda TVSDK för att hämta information om media som du kan visa i sökfältet.
 
 1. Vänta tills spelaren är i tillståndet PREPARED.
-1. Hämta spelhuvudets aktuella tid med `MediaPlayer.getCurrentTime` metoden.
+1. Hämta den aktuella spelhuvudstiden med metoden `MediaPlayer.getCurrentTime`.
 
    Detta returnerar spelhuvudets aktuella position på den virtuella tidslinjen i millisekunder. Tiden beräknas i förhållande till den matchade strömmen som kan innehålla flera instanser av alternativt innehåll, till exempel flera annonser eller annonsbrytningar som delas upp i huvudströmmen. För live-/linjära strömmar är den returnerade tiden alltid i uppspelningsfönsterintervallet.
 
@@ -24,7 +27,7 @@ Du kan använda TVSDK för att hämta information om media som du kan visa i sö
    ```
 
 1. Hämta uppspelningsintervallet för strömmen och fastställ varaktigheten.
-   1. Använd `mediaPlayer.getPlaybackRange` metoden för att hämta tidsintervallet för den virtuella tidslinjen.
+   1. Använd metoden `mediaPlayer.getPlaybackRange` för att hämta tidsintervallet för den virtuella tidslinjen.
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
@@ -39,11 +42,11 @@ Du kan använda TVSDK för att hämta information om media som du kan visa i sö
 
       För en linjär/liveresurs representerar intervallet uppspelningsfönstret och det här intervallet ändras under uppspelningen.
 
-      TVSDK anropar ditt återanrop för att ange att medieobjektet har uppdaterats och att dess attribut (inklusive uppspelningsintervallet) har uppdaterats. `onUpdated`
+      TVSDK anropar ditt `onUpdated`-återanrop för att ange att medieobjektet har uppdaterats och att dess attribut (inklusive uppspelningsintervallet) har uppdaterats.
 
-1. Använd de metoder som är tillgängliga på `MediaPlayer` och den `SeekBar` klass som är allmänt tillgänglig i Android SDK för att ställa in sökfältsparametrarna.
+1. Använd de metoder som är tillgängliga för klassen `MediaPlayer` och klassen `SeekBar` som är allmänt tillgänglig i Android SDK för att ställa in sökfältsparametrarna.
 
-   Här finns till exempel en möjlig layout som innehåller `SeekBar` och två `TextView` element.
+   Det finns till exempel en möjlig layout som innehåller `SeekBar` och två `TextView`-element.
 
    ```xml
    <LinearLayout 
@@ -77,7 +80,7 @@ Du kan använda TVSDK för att hämta information om media som du kan visa i sö
 
 1. Använd en timer för att regelbundet hämta aktuell tid och uppdatera SeekBar.
 
-   I följande exempel används hjälpklassen som timer, som är tillgänglig i referensspelaren PrimetimeReference. `Clock.java` Den här klassen ställer in en händelseavlyssnare och utlöser en `onTick` händelse varje sekund, eller ett annat timeout-värde som du kan ange.
+   I följande exempel används hjälpklassen `Clock.java` som timer, som är tillgänglig i referensspelaren PrimetimeReference. Den här klassen ställer in en händelseavlyssnare och utlöser en `onTick`-händelse varje sekund, eller ett annat timeout-värde som du kan ange.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
