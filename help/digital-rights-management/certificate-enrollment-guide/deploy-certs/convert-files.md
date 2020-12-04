@@ -4,6 +4,9 @@ title: Konvertera filer
 uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -58,5 +61,5 @@ Med hjälp av ett verktyg som OpenSSL och den privata nyckeln skapar den begära
 
    >[!NOTE]
    >
-   >DER-filer krävs bara för HTTP Dynamic Streaming Packager.
+   >DER-filer krävs bara för HTTP Dynamic Streaming-paketeraren.
 
