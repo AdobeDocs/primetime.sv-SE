@@ -6,6 +6,9 @@ title: Flera bithastighetsströmmar
 uuid: f59cb765-e000-43e0-8d3a-8149a3c5b96e
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 
 * **`live/vod`** Manifestservern anger det här värdet baserat på innehållets spellisttyp: Live/linear (#EXT-X-PLAYLIST-TYPE:EVENT) or VOD (#EXT-X-PLAYLIST-TYPE:VOD)
 
-* **`publisherAssetID`** Utgivarens unika ID för det specifika innehållet som anges i Bootstrap URL-begäran.
+* **`publisherAssetID`** Utgivarens unika ID för det specifika innehåll som anges i Bootstrap URL-begäran.
 
 * **`rendition`** Manifestservern anger detta baserat på BANDWIDTH-värdet för innehållsströmmen och använder det för att matcha bithastigheten för annonsen med bithastigheten för innehållet. Annonsbithastigheten får inte överskrida bithastigheten för innehållet om inte annonsåtergivningen med den lägsta bithastigheten gör det.
 
