@@ -6,6 +6,9 @@ title: Ange volymkontroll
 uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Du kan ange en gränssnittskontroll för ljudvolymen.
 
-1. Vänta tills `MediaPlayer` instansen har ett giltigt tillstånd för det här kommandot.
+1. Vänta tills `MediaPlayer`-instansen har ett giltigt tillstånd för det här kommandot.
 
    Alla tillstånd utom FRISLÄPPT eller FEL är giltiga.
-1. Ställ in ljudvolymen genom att ange volymattributet på `MediaPlayer` instansen.
+1. Ställ in ljudvolymen genom att ställa in volymattributet på `MediaPlayer`-instansen.
 
    ```js
    player.volume = ...
