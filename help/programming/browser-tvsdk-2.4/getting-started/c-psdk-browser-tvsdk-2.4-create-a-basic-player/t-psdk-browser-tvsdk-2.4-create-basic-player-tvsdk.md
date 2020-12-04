@@ -6,11 +6,14 @@ title: Skapa en basspelare med TVSDK
 uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Skapa en basspelare med TVSDK{#create-a-basic-player-using-tvsdk}
+# Skapa en grundläggande spelare med TVSDK{#create-a-basic-player-using-tvsdk}
 
 Följ de här stegen för att skapa en grundläggande spelare med webbläsarens TVSDK.
 
@@ -42,14 +45,14 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. För body-taggen lägger du till `onLoad` avsnittet.
+1. För body-taggen lägger du till avsnittet `onLoad`.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Börja implementera `startVideo` funktionen.
-1. Lägg till en script-tagg och skapa `startVideo` funktionen i taggen .
+1. Börja implementera funktionen `startVideo`.
+1. Lägg till en script-tagg och skapa funktionen `startVideo` i taggen.
 
    Det här ska finnas i sidans head-avsnitt.
 
@@ -70,7 +73,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
 
    >[!TIP]
    >
-   >Det är här som det `div` du skapade tidigare används.
+   >Det är här som `div` som du skapade tidigare används.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -141,7 +144,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    }; 
    ```
 
-1. Skapa `MediaResource`, som skickar M3U8-länken (eller mpd).
+1. Skapa `MediaResource` som skickar M3U8-länken (eller mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +160,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Ring `prepareToPlay`när spelaren är i INITIALIZED-läge.
+1. Ring `prepareToPlay` när spelaren är i INITIALIZED-läge.
 
    ```js
    case INITIALIZED: 
@@ -165,7 +168,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
     break;
    ```
 
-1. När spelaren är i läget FÖRBEREDD ringer du `play`.
+1. Ring `play` när spelaren är i tillståndet PREPARED.
 
    ```js
    case PREPARED: 
