@@ -6,6 +6,9 @@ title: Spela upp och pausa en video
 uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Du kan lägga till webbläsarens TVSDK-beteende för att pausa och spela upp kna
       void pause() throws IllegalStateException;
       ```
 
-1. Lyssna efter `AdobePSDK.MediaPlayerStatusChangeEvent` händelsen för att söka efter fel eller för att vidta andra lämpliga åtgärder.
+1. Lyssna efter händelsen `AdobePSDK.MediaPlayerStatusChangeEvent` om du vill söka efter fel eller vidta andra lämpliga åtgärder.
 
-   Webbläsarens TVSDK utlöser den här händelsen när metoderna för paus eller uppspelning anropas och skickar information om händelseobjektet, inklusive det nya läget, som `MediaPlayerStatus.PLAYING` eller `MediaPlayerStatus.PAUSED`.
+   Webbläsarens TVSDK utlöser den här händelsen när metoderna för att pausa eller spela upp anropas och skickar information om händelseobjektet, inklusive det nya läget, till exempel `MediaPlayerStatus.PLAYING` eller `MediaPlayerStatus.PAUSED`.
 
