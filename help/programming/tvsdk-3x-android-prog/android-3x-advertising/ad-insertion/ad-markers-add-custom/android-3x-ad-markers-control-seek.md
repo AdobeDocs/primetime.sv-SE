@@ -6,6 +6,9 @@ title: Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer
 uuid: ec95a22f-0143-4c80-826f-d6b40e77cf26
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
