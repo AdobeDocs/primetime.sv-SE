@@ -6,6 +6,9 @@ title: Översikt över DRM-gränssnittet
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Browser TVSDK har ett DRM-gränssnitt som du kan använda för att spela upp inn
 >
 >DRM-stöd finns för MPEG-Dash-strömmar som skyddas av Microsoft PlayReady (på Internet Explorer på Windows 8.1 och Edge) och Widewin (på Google Chrome) DRM-system. DRM-stöd finns för HLS-strömmar på Safari som skyddas med FairPlay.
 
-DRM-arbetsflödets nyckelgränssnitt är `DRMManager`. En referens till `DRMManager` instansen kan hämtas via MediaPlayer-instansen:
+Nyckelgränssnittet för DRM-arbetsflödet är `DRMManager`. En referens till `DRMManager`-instansen kan hämtas via MediaPlayer-instansen:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -100,14 +103,14 @@ Här är ett arbetsflöde på hög nivå för uppspelning av DRM-skyddat innehå
 
 1. Som standard är sessionstypen för DRM-licensen tillfällig, vilket innebär att licensen inte lagras när sessionen stängs.
 
-   Du kan ange en sessionstyp med ett API i `DRMManager`.  För bakåtkompatibilitet omfattar sessionstyperna `temporary`, `persistent-license`, `persistent-usage-record`och `persistent`.
+   Du kan ange en sessionstyp med hjälp av ett API i `DRMManager`.  För bakåtkompatibilitet är sessionstyperna `temporary`, `persistent-license`, `persistent-usage-record` och `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. När den `sessionType` används är `persistent-license` eller `persistent`så kan DRM-licensen returneras genom anrop `DRMManager.returnLicense`.
+1. När `sessionType` används är `persistent-license` eller `persistent` kan DRM-licensen returneras genom att anropa `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
