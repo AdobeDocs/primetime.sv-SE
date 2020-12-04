@@ -6,6 +6,9 @@ title: Överväganden och bästa praxis
 uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
 
