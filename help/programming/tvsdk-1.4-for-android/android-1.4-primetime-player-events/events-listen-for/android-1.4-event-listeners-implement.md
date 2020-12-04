@@ -6,6 +6,9 @@ title: Implementera händelseavlyssnare och återanrop
 uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Händelsehanterare gör att TVSDK kan svara på händelser.
 
 När en händelse inträffar anropar TVSDK:s händelsemekanism din registrerade händelsehanterare och skickar händelseinformationen till hanteraren.
 
-TVSDK definierar avlyssnare som offentliga interna gränssnitt i `MediaPlayer` gränssnittet.
+TVSDK definierar avlyssnare som offentliga interna gränssnitt i `MediaPlayer`-gränssnittet.
 
 Ditt program måste implementera händelseavlyssnare för TVSDK-händelser som påverkar ditt program.
 
@@ -28,7 +31,7 @@ En fullständig lista över händelser för videoanalys finns i Spåra grundläg
 
       >[!IMPORTANT]
       >
-      >Uppspelningshändelsen `onStateChanged` anger spelarens tillstånd, inklusive fel. Alla lägen kan påverka spelarens nästa steg
+      >Uppspelningshändelsen `onStateChanged` anger spelarläget, inklusive fel. Alla lägen kan påverka spelarens nästa steg
 
    * **Andra händelser**: Valfritt, beroende på ditt program.
 
@@ -47,7 +50,7 @@ En fullständig lista över händelser för videoanalys finns i Spåra grundläg
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. Registrera dina callback-avlyssnare hos `MediaPlayer` objektet med hjälp av `MediaPlayer.addEventListener`.
+1. Registrera dina callback-avlyssnare med `MediaPlayer`-objektet med `MediaPlayer.addEventListener`.
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -65,22 +68,22 @@ TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelar
 
 I följande exempel visas ordningen för vissa händelser som innehåller uppspelningshändelser.
 
-* När en medieresurs läses in via `MediaPlayer.replaceCurrentResource`är händelseordningen:
+* När en medieresurs har lästs in via `MediaPlayer.replaceCurrentResource` är händelseordningen:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
 >Läs in din medieresurs på huvudtråden. Om du läser in en medieresurs på en bakgrundstråd kan den här åtgärden eller efterföljande TVSDK-åtgärder, eller båda, generera ett fel (till exempel `IllegalStateException`) och avsluta.
 
-* När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`är händelseordningen:
+* När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` om annonser infogades.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` med läge  `MediaPlayerStatus.PREPARED`
 
 * För live-/linjära strömmar, under uppspelningen när uppspelningsfönstret går framåt och ytterligare möjligheter är lösta, är händelseordningen:
 
@@ -110,7 +113,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## Ordning på annonsevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Ordning för annonshändelser {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 
@@ -209,7 +212,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 
 TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga. Spelaren kan implementera åtgärder som svar på dessa händelser.
 
-Om du vill få meddelanden om alla DRM-relaterade händelser lyssnar du efter `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK skickar ytterligare DRM-händelser via `DRMManager` klassen.
+Om du vill få meddelanden om alla DRM-relaterade händelser lyssnar du efter `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK skickar ytterligare DRM-händelser via klassen `DRMManager`.
 
 I följande exempel visas ett typiskt förlopp:
 
