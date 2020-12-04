@@ -4,6 +4,9 @@ title: Terminologi och centrala begrepp
 uuid: dc269873-7b63-4c18-bada-5338f4da0edd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '669'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Följande termer och begrepp används i hela dokumentet:
 
 **Konsument**
 
-Konsumenten *är den* slutanvändare som laddar ned eller direktuppspelar innehåll.
+*konsumenten* är den slutanvändare som hämtar eller direktuppspelar innehåll.
 
 **Innehåll**
 
@@ -22,7 +25,7 @@ Konsumenten *är den* slutanvändare som laddar ned eller direktuppspelar inneh�
 
 **Innehållskrypteringsnyckel**
 
-CEK ( *Content Encryption Key* ) är en krypteringsnyckel som används för att kryptera innehållet.
+*Nyckeln för innehållskryptering* (CEK) är en krypteringsnyckel som används för att kryptera innehållet.
 
 **Innehållsägare**
 
@@ -34,7 +37,7 @@ CEK ( *Content Encryption Key* ) är en krypteringsnyckel som används för att 
 
 **Digitalt certifikat**
 
-*Digitala certifikat* (kallas även *certifikat*) binder en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
+*Digitala certifikat*  (kallas även  *certifikat*) binder en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
 
 **Digital signatur**
 
@@ -42,11 +45,11 @@ En *digital signatur* binder utgivarens identitet till innehållet som de har pu
 
 **Distributör**
 
-*Distributörer* (även kallade *innehållsdistributörer* eller* återförsäljare*) är företag som säkrar distributionsrättigheterna för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
+*Distributörer*  (även kallade  *innehållsdistributörer** återförsäljare*) är affärsenheter som säkrar distributionsrättigheter från innehållsägare för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
 
 **DRM-metadata**
 
-Information som klienten (Adobe® Flash® Player, Adobe® AIR® runtime och Primetime client) skickar för att identifiera det begärda innehållet.
+Information som klienten (dvs. Adobe® Flash® Player, Adobe® AIR® runtime och Primetime) skickar för att identifiera det begärda innehållet.
 
 **Licens**
 
@@ -54,7 +57,7 @@ En *licens *är en datastruktur som innehåller en krypterad nyckel som används
 
 **Licenshämtning**
 
-*Licenshämtning* innebär att man köper en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning sker när en kund skickar information som identifierar det begärda innehållet ( *DRM-metadata*) och datorcertifikatet (identifierar konsumentens dator) till licensservern (se nedan).
+*Licenshämtning* innebär att man köper en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning inträffar när en klient skickar information som identifierar det begärda innehållet (DRM-metadata *) och datorcertifikatet (identifierar konsumentens dator) till licensservern (se nedan).*
 
 **Licensserver**
 
@@ -66,12 +69,12 @@ Du måste skapa och distribuera en licensserver med hjälp av Primetimes DRM SDK
 
 En *princip* är en behållare för användningsreglerna som avgör hur konsumenter kan använda skyddat innehåll. Profiler definieras oberoende av vilket innehåll som skyddas. En profil tillämpar inte rättigheter förrän den är bunden till innehållet via licensen. En policy listar de användarregler som innebär de behörigheter eller&quot;rättigheter&quot; som konsumenterna har till det innehåll de köper. Innehållsägare kan till exempel skapa en policy som ser till att skyddat innehåll endast är tillgängligt för konsumenter under en viss tidsperiod. Den här principen tillämpas sedan på allt innehåll som innehållsägaren vill tillämpa den här begränsningen för.
 
-Principer skapas med Primetime DRM SDK.
+Profiler skapas med Primetime DRM SDK.
 
 **Skyddat innehåll**
 
-*Skyddat innehåll* (även kallat *paketerat innehåll*) avser videoinnehåll som har krypterats med Primetime DRM SDK eller andra verktyg som stöds.
+*Skyddat innehåll*  (även kallat  *paketerat innehåll*) avser videoinnehåll som har krypterats med Primetime DRM SDK eller andra verktyg som stöds.
 
 **Återförsäljare**
 
-Se informationen för *distributörer* tidigare i det här avsnittet.
+Se posten för *distributörer* tidigare i det här avsnittet.
