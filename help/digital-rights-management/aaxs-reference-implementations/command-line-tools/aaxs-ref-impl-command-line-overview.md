@@ -42,13 +42,13 @@ Standardkonfigurationsfilen är [!DNL flashaccesstools.properties]. Den finns i 
 
 Konfigurationsfilen använder Java-egenskapens filformat. Om värden för någon av egenskaperna innehåller specialtecken bör du tänka på följande begränsningar:
 
-* Escape-omvända snedstreck med ytterligare ett omvänt snedstreck. Om du till exempel vill ange [!DNL C:\credentials.pfx] filen anger du den som [!DNL C:\\credentials.pfx] eller `C:/credentials.pfx`. Om du vill ange en fil på en nätverksserver anger du `\\\\server\\folder\\filename.pfx`.
-* Konfigurationsfilen får bara innehålla Latin-1-tecken. Om du måste använda icke-latinska 1-tecken använder du rätt Unicode-escape-sekvens (eventuellt med det [!DNL native2ascii] verktyg som medföljer Java).
+* Escape-omvända snedstreck med ytterligare ett omvänt snedstreck. Om du till exempel vill ange filen [!DNL C:\credentials.pfx] anger du den som [!DNL C:\\credentials.pfx] eller `C:/credentials.pfx`. Om du vill ange en fil på en nätverksserver anger du `\\\\server\\folder\\filename.pfx`.
+* Konfigurationsfilen får bara innehålla Latin-1-tecken. Om du måste använda tecken som inte är latinska-1 ska du använda rätt Unicode-escape-sekvens (eventuellt med verktyget [!DNL native2ascii] som medföljer Java).
 
 Ange värden för egenskaper i konfigurationsfilen innan du kör verktygen. För vissa kommandoradsverktyg kan du ange värden för vissa alternativ antingen via kommandoraden eller konfigurationsfilen. I dessa fall prioriteras värden som ställs in via kommandoraden framför värden i konfigurationsfilen.
 
-## Installera kommandoradsverktygen  {#installing-the-command-line-tools}
+## Installera kommandoradsverktygen {#installing-the-command-line-tools}
 
-Du kan kopiera de filer du behöver från [!DNL \Reference Implementation\Command Line Tools] katalogen på dvd-skivan, som innehåller [!DNL flashaccesstools.properties] standardkonfigurationsfilen, och en [!DNL libs] katalog som innehåller JAR-filerna för verktygen.
+Du kan kopiera de filer du behöver från katalogen [!DNL \Reference Implementation\Command Line Tools] på dvd-skivan, som innehåller konfigurationsfilen [!DNL flashaccesstools.properties] och en [!DNL libs]-katalog, som innehåller JAR-filerna för verktygen.
 
-Katalogen innehåller flera exempel på Java-källfiler som visar hur API:erna för Adobe Access SDK används. [!DNL samples] Använd Ant-skriptet om du vill skapa och köra exemplen [!DNL build-samples.xml] .
+Katalogen [!DNL samples] innehåller flera exempel på Java-källfiler som visar hur API:erna för Adobe Access SDK används. Använd skriptet [!DNL build-samples.xml] Ant om du vill skapa och köra exemplen.
