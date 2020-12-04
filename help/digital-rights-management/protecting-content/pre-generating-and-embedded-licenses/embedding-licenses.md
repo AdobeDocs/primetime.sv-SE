@@ -15,9 +15,9 @@ ht-degree: 0%
 
 När innehållet har krypterats och en licens har förgenererats kan licensen bäddas in i det krypterade innehållet.
 
-Om du vill bädda in en licens måste du skaffa en instans av `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Om du vet vilken typ av krypterat innehåll det är använder du konstruktorn för `FLVKeyMetaDataUpdater` eller `F4VKeyMetaDataUpdater`; I annat fall använder du `MediaProcessorFactory.getMediaProcessor()` för att returnera en instans baserat på den upptäckta filtypen. Sedan måste du konstruera en `KeyMetaDataCallback` och anropa `modifyKeyMetaData()`. Din återanropsimplementering anropas sedan när DRM-metadata finns i det krypterade innehållet. Baserat på de metadata som hittas kan du välja vilken licens som ska bäddas in och ange licensen med `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
+Om du vill bädda in en licens måste du skaffa en instans av `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Om du vet vilken typ av krypterat innehåll det är använder du konstruktorn för `FLVKeyMetaDataUpdater` eller `F4VKeyMetaDataUpdater`; I annat fall använder du `MediaProcessorFactory.getMediaProcessor()` för att returnera en instans baserat på den upptäckta filtypen. Sedan måste du konstruera en `KeyMetaDataCallback` och anropa `modifyKeyMetaData()`. Din återanropsimplementering anropas sedan när DRM-metadata finns i det krypterade innehållet. Baserat på de metadata som hittats kan du välja en licens att bädda in och ange licensen med `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
 
-I `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` katalogen Reference Implementation Command Line Tools finns [!DNL Samples] exempelkod som demonstrerar inbäddade licenser.
+Se `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` i katalogen Reference Implementation Command Line Tools [!DNL Samples] för exempelkod som demonstrerar inbäddade licenser.
 
 >[!NOTE]
 >
