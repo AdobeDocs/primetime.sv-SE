@@ -65,12 +65,12 @@ seg5.ts
 
 Programmet kan konfigurera följande scenarier:
 
-* Ett meddelande när det finns `#EXT-X-ASSET` taggar, eller andra uppsättningar anpassade taggnamn som du prenumererar på, i filen.
-* Infoga annonser när en `#EXT-X-AD` tagg eller något annat anpassat taggnamn hittas i strömmen.
+* Det finns ett meddelande när `#EXT-X-ASSET`-taggar eller andra uppsättningar anpassade taggnamn som du har prenumererat på finns i filen.
+* Infoga annonser när en `#EXT-X-AD`-tagg eller något annat anpassat taggnamn hittas i strömmen.
 
-Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Du meddelas om en `TimedMetadata` händelse under parsning av manifestfiler.
+Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Du meddelas med en `TimedMetadata`-händelse under parsning av manifestfiler.
 
-Det finns några reklamtaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` egenskapen.
+Det finns vissa annonstaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange egenskapen `adTags`.
 
 ## DASH-innehållstaggar {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
@@ -83,4 +83,4 @@ DASH har två sätt att signalera händelser:
 
    Inband-händelser multiplexas med representationer genom att händelsemeddelandena läggs till som en del av segmenten. En representation är en lista över video- och ljudsegment som spelas upp i sekvens. Inband-händelsedata är inbäddade i dessa segment.
 
-Dessa händelser meddelas som händelser till programmet så snart de tolkas av Browser TVSDK. `TimedMetadata` När en händelse har meddelats kommer den inte att meddelas igen.
+Dessa händelser meddelas som `TimedMetadata`-händelser till programmet så snart de tolkas av Browser TVSDK. När en händelse har meddelats kommer den inte att meddelas igen.
