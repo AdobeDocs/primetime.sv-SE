@@ -1,24 +1,27 @@
 ---
-description: Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade Primetime DRM-lösning.
-seo-description: Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade Primetime DRM-lösning.
+description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad Primetime DRM-lösning.
+seo-description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad Primetime DRM-lösning.
 seo-title: Översikt över Primetime DRM-gränssnittet
 title: Översikt över Primetime DRM-gränssnittet
 uuid: 71479464-8356-4732-9774-da9f6084e6ad
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
 
 # Översikt {#primetime-drm-interface-overview}
 
-Du kan använda funktionerna i Primetimes DRM-system (Digital Rights Management) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobes integrerade Primetime DRM-lösning.
+Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad Primetime DRM-lösning.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Fråga din Adobe-representant om den senaste informationen om att det finns DRM-lösningar från tredje part.
+Kontakta din Adobe-representant för att få den senaste informationen om tillgängliga DRM-lösningar från tredje part.
 
-Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller en `DRMHelper` klass som visar hur du gör vissa DRM-åtgärder enklare att implementera.
+Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller en `DRMHelper`-klass som visar hur du gör vissa DRM-åtgärder enklare att implementera.
 
 Primetime DRM ger ett skalbart och effektivt arbetsflöde för att implementera innehållsskydd i TVSDK-program. Du skyddar och hanterar rättigheterna till ditt videoinnehåll genom att skapa en licens för varje digital mediefil.
 
@@ -34,13 +37,13 @@ Detta är de viktigaste API-elementen för att arbeta med DRM:
 
    >[!TIP]
    >
-   >Detta API returnerar bara ett giltigt `DRMManager` objekt när `MediaPlayerEvent.DRM_METADATA` det har utlösts. Om du anropar `getDRMManager()` innan den här händelsen utlöses kan den returnera NULL.
+   >Detta API returnerar ett giltigt `DRMManager`-objekt först efter att `MediaPlayerEvent.DRM_METADATA` har utlösts. Om du anropar `getDRMManager()` innan den här händelsen utlöses kan det returnera NULL.
 
-* Klassen `DRMHelper` help, som är användbar när du implementerar DRM-arbetsflöden.
+* Hjälpklassen `DRMHelper`, som är användbar när du implementerar DRM-arbetsflöden.
 
    Du kan se `DRMHelper` i `ReferencePlayer`.
 
-* En inläsningsmetod för metadata, som läser in DRM-metadata när de finns i en separat URL från mediet. `DRMHelper`
+* En `DRMHelper`-metadatainläsarmetod som läser in DRM-metadata när den finns i en separat URL från mediet.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -48,7 +51,7 @@ Detta är de viktigaste API-elementen för att arbeta med DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* En `DRMHelper` metod för att kontrollera DRM-metadata för att avgöra om autentisering krävs.
+* En `DRMHelper`-metod för att kontrollera DRM-metadata för att avgöra om autentisering krävs.
 
    ```java
    /** 
@@ -108,4 +111,4 @@ Comment Type: draft
 -->
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Mer information om DRM finns i dokumentationen [för](https://helpx.adobe.com/primetime/user-guide.html)Adobe Primetime DRM.
+Mer information om DRM finns i [Adobe Primetime DRM-dokumentationen](https://helpx.adobe.com/primetime/user-guide.html).
