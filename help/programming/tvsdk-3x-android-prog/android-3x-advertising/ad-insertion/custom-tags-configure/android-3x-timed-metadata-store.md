@@ -6,6 +6,9 @@ title: Lagra tidsbestämda metadataobjekt när de skickas
 uuid: 3d0ed022-829d-474e-83a9-152caeb5b317
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ Under innehållsparsning, som inträffar före uppspelning, identifierar TVSDK p
 Så här lagrar du tidsbestämda metadataobjekt när de skickas:
 
 1. Håll reda på aktuell uppspelningstid.
-1. Matcha aktuell uppspelningstid med skickade `TimedMetadata` objekt.
+1. Matcha aktuell uppspelningstid med skickade `TimedMetadata`-objekt.
 
-1. Använd den `TimedMetadata` plats där starttiden är lika med den aktuella lokala uppspelningstiden.
+1. Använd `TimedMetadata` där starttiden är lika med den aktuella lokala uppspelningstiden.
 
-   I följande exempel visas hur du sparar `TimedMetadata` objekt i en `ArrayList`.
+   I följande exempel visas hur du sparar `TimedMetadata`-objekt i en `ArrayList`.
 
    ```java
    private List<TimedMetadata> _timedMetadataList =  
