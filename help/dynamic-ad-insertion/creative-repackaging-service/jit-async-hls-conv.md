@@ -6,6 +6,9 @@ title: Huvudsaklig användning av CRS
 uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 CRS erbjuder JIT (just-in-time) och asynkron ompaketering och HLS-to-HLS-konvertering. Resultatet av ompaketeringen är en HLS-formaterad version av den ursprungliga annonsdesignen. CRS placerar den HLS-formaterade versionen på CDN-servern (Content Delivery Network) för användning vid behov.
 
-Vid ompaketering av JIT-annonser i Adobe Primetime inleds ompaketeringsprocessen när en annonsruta som inte är HLS påträffas. Detta innebär vanligtvis förlorade möjligheter att köra annonsen under ompaketeringsprocessen.
+I JIT-ompaketering av Adobe Primetime-annonsinfogningen börjar ompaketeringsprocessen när en person som inte är HLS eller kreativ påträffas. Detta innebär vanligtvis förlorade möjligheter att köra annonsen under ompaketeringsprocessen.
 
 Vid asynkron ompackning omkodas annonspersonalen och lagras innan den behövs, vilket kan eliminera de förlorade möjligheterna.
 
@@ -30,9 +33,9 @@ Sekvensen för JIT-ompaketering är följande:
 1. Om formatet inte är HLS och CDN-servern inte har någon omkodad version skickar manifestservern annonsen till CRS, som omkodar annonsens kreativitet och lagrar resultatet på CDN-servern för senare bruk.
 1. Manifestservern returnerar innehållet utan annonsen.
 
-## Asynkron ompackning {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
+## Asynkron ompaketering {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-Du kan använda API:t som beskrivs i API:t för [ompaketering](../creative-repackaging-service/api-repackage.md) för att förkoda en icke-HLS-kreativitet för att minimera förlust av visningar och maximera intäktsgenereringen.
+Du kan använda API:t som beskrivs i [API:t för ompaketering](../creative-repackaging-service/api-repackage.md) för att förkoda en annan typ av arbete än HLS för att minimera förlust av visningar och maximera intäktsgenereringen.
 
 ## HLS-till-HLS-konvertering {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
