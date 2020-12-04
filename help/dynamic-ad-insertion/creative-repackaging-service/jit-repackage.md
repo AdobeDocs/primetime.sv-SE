@@ -6,6 +6,9 @@ title: Detaljerade arbetsflöden för JIT-ompaketering
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ En klient baserad på TVSDK eller med liknande funktioner kan interagera med CRS
 1. Annonsservern begär att icke-HLS ska kodas om till HLS.
 1. CRS skapar en HLS-version och överför den till CDN-servern för framtida bruk.
 
-## Prioriteringar och tidslinje för annonseringsformat {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## Prioriteter och tidslinje för annonseringsformat {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 Manifestservern och klienten använder samma urvalslogik för att fastställa prioriteter för uppspelning av tillgängliga annonser. HLS-formaterade annonser har högsta prioritet, följt av MP4, FLV och slutligen WebM.
 
