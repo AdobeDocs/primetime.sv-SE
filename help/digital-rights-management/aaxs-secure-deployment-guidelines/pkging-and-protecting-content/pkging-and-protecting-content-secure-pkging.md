@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Säker paketering av innehåll {#securely-packaging-content}
+# Paketera innehåll {#securely-packaging-content} på ett säkert sätt
 
 Konfigurationsfilen för kommandoradsverktyget Adobe Access Media Packager kräver en PKCS12-autentiseringsuppgift som används vid paketeringen.
 
