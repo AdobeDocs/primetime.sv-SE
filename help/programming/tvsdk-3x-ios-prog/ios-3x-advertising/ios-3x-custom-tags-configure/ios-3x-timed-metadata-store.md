@@ -6,6 +6,9 @@ title: Lagra tidsbestämda metadataobjekt när de skickas
 uuid: 38e72a9b-571a-48da-9c17-80be453e6a98
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -19,15 +22,15 @@ Under innehållsparsning, som inträffar före uppspelning, identifierar TVSDK p
 Programmet måste utföra följande uppgifter:
 
 1. Håll reda på aktuell uppspelningstid.
-1. Matcha aktuell uppspelningstid med skickade `PTTimedMetadata` objekt.
+1. Matcha aktuell uppspelningstid med skickade `PTTimedMetadata`-objekt.
 
-1. Använd den `PTTimedMetadata` plats där starttiden är lika med den aktuella uppspelningstiden.
+1. Använd `PTTimedMetadata` där starttiden är lika med den aktuella uppspelningstiden.
 
    >[!NOTE]
    >
-   >Koden nedan förutsätter att det bara finns en `PTTimedMetadata` instans åt gången. Om det finns flera instanser måste de sparas korrekt i en ordlista. En metod är att skapa en array vid en viss tidpunkt och lagra alla instanser i den arrayen.
+   >Koden nedan förutsätter att det bara finns en `PTTimedMetadata`-instans åt gången. Om det finns flera instanser måste de sparas korrekt i en ordlista. En metod är att skapa en array vid en viss tidpunkt och lagra alla instanser i den arrayen.
 
-   I följande exempel visas hur du sparar `PTTimedMetadata` objekt i en `NSMutableDictionary (timedMetadataCollection)` transparens som anges i respektive `timedMetadata`.
+   I följande exempel visas hur du sparar `PTTimedMetadata`-objekt i en `NSMutableDictionary (timedMetadataCollection)` som anges av starttiden för varje `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -54,7 +57,7 @@ Programmet måste utföra följande uppgifter:
 
 ## Tolkar Nielsen ID3-taggar {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Använd följande på `onMediaPlayerSubscribedTagIdentified` metoden för att extrahera ID3-taggen för tolkning:
+Använd följande på metoden `onMediaPlayerSubscribedTagIdentified` för att extrahera ID3-taggen för tolkning:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
