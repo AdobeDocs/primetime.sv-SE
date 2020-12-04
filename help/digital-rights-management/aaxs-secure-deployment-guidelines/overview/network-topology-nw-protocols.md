@@ -4,6 +4,9 @@ title: Nätverksprotokoll som används av Adobe Access
 uuid: 4f2ee3f5-6758-4fbe-b5cd-cead1e5ccde8
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ När du konfigurerar en säker nätverksarkitektur krävs nätverksprotokollen i
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTP </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Klienter i Flash Player, Adobe AIR® och Adobe Primetime kommunicerar med Adobe Access via HTTP. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Klienter från Flash Player, Adobe AIR® och Adobe Primetime kommunicerar med Adobe Access via HTTP. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS (valfritt) </p> </td> 
