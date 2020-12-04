@@ -6,15 +6,18 @@ title: Felsökning av snabbstart
 uuid: 42256aa0-2efc-4602-aefc-3bab2dc58ec0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 0%
 
 ---
 
 
-# Felsökning av snabbstart{#troubleshooting-your-quick-start}
+# Felsöka snabbstart{#troubleshooting-your-quick-start}
 
 Vanliga problem vid testning är ofta ExpressPlay-autentiserare, transportprotokoll och obligatoriska parametrar för serviceförfrågningar.
 
-Om dina [!DNL curl] förfrågningar till ExpressPlay för generering av token misslyckas, innehåller svarstexten ett felmeddelande som förklarar orsaken till felet.
+Om dina [!DNL curl]-begäranden till ExpressPlay för token-generering misslyckas innehåller svarstexten ett felmeddelande som förklarar orsaken till felet.
 
 Om tokengenereringen lyckas, men innehållet fortfarande inte spelas upp, kontrollerar du om det finns fel i loggarna för tokeninlösen för ExpressPlay, t.ex.&quot;Utgånen token&quot;.
 
@@ -22,9 +25,9 @@ Om tokengenereringen lyckades och inlösen inte hade något fel, men videon fort
 
 Dessutom:
 
-* Kontrollera att du använder rätt kundautentiserare i dina serviceförfrågningar. Det är lätt att oavsiktligt använda produktionsautentiseraren när du ska använda testautentiseraren. Kontrollera också att du använder *din* autentiserare. Under testningen kan du till exempel låna någon annans `curl` kommando och glömma att byta in din autentiserare mot deras.
+* Kontrollera att du använder rätt kundautentiserare i dina serviceförfrågningar. Det är lätt att oavsiktligt använda produktionsautentiseraren när du ska använda testautentiseraren. Kontrollera också att du använder *din*-autentiserare. Under testningen kan du till exempel låna någon annans `curl`-kommando och glömma att byta in autentiseraren för sin.
 
-* Kontrollera att du använder rätt transportprotokoll i dina förfrågningar eller i dina manifest ( `https://` versus `https://`, eller i fallet FairPlay, `skd://` kontra `https://` kontra `https://`.
+* Kontrollera att du använder rätt transportprotokoll i dina förfrågningar eller i dina manifest ( `https://` jämfört med `https://`, eller i fallet FairPlay, `skd://` jämfört med `https://` jämfört med `https://`.
 
 * Se till att du inkluderar alla obligatoriska frågeparametrar för den DRM-lösning du arbetar med. Det är enkelt att växla mellan exempelvis PlayReady och Widewin eftersom de båda fungerar med DASH, men de obligatoriska parametrarna för begäran och paketeringskonfigurationerna skiljer sig åt.
 * Bekräfta att ditt ExpressPlay-konto har tillräckligt många tokenkrediter och att det inte har tömts.
