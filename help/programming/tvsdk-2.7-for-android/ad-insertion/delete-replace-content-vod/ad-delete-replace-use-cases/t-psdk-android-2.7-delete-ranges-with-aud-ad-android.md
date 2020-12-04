@@ -6,6 +6,9 @@ title: Ta bort intervall
 uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Du kan ta bort TimeRanges mellan början och slutet i localTime från tidslinjen
 
 >[!TIP]
 >
->Om du bara vill ta bort vissa intervall från innehållet skapar du en `CustomRangeMetadata` instans och anger typen som en `DELETE` åtgärd med de definierade anpassade intervallen.
+>Om du bara vill ta bort vissa intervall från innehållet skapar du en `CustomRangeMetadata`-instans och anger typen som en `DELETE`-åtgärd med de definierade anpassade intervallen.
 
 Annonskartan måste användas enligt annonsserverns definition.
 
-1. Så här tar du bort intervall med annonsen Adobe Primetime:
+1. Så här tar du bort intervall med en annons från Adobe Primetime:
 
    ```
    {   
