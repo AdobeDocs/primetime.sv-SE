@@ -6,6 +6,9 @@ title: Kvalitetsstatistik för tjänster
 uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -18,10 +21,10 @@ QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. Web
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen innehåller `QOSProvider` olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
+Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider` objekt och bifoga det till mediespelaren.
+1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
 
    ```js
    // Create Media Player.qosProvider =  
