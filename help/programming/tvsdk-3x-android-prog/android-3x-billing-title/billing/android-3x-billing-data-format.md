@@ -6,6 +6,9 @@ title: Skicka faktureringsmått
 uuid: c925800c-0fb7-4781-94e8-7e7ad94bb965
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
@@ -40,4 +43,4 @@ Om du använder ett verktyg för nätverksregistrering för att övervaka statis
 </request>
 ```
 
-De booleska egenskaperna `drmProtected`, `adsEnabled`och `midrollEnabled` visas bara om de är sanna.
+De booleska egenskaperna `drmProtected`, `adsEnabled` och `midrollEnabled` visas bara om de är sanna.
