@@ -6,6 +6,9 @@ title: Definiera reservannonsbeteenden för VMAP-textbundna annonser
 uuid: a7b5c9a6-f546-4d3a-9d49-7e5484acff7a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Du kan aktivera reserv när en intern VMAP-fil innehåller en ogiltig medietyp.
 
-1. Ange `setFallbackOnInvalidCreativeEnabled` att VMAP `true` ska återställas när medietypen för en linjär/textbunden annons är ogiltig för HLS.
+1. Ange `setFallbackOnInvalidCreativeEnabled` som `true` om du vill att VMAP ska återställas när medietypen för en linjär/intern annons är ogiltig för HLS.
 
    Standardvärdet är `false`. Om en linjär annons misslyckas på grund av att den har en ogiltig medietyp, eller eftersom annonsen inte kan paketeras om, tillåter den här flaggan Primetime-annonsbeslut att följa samma reservbeteende som om annonsen var en tom VAST-wrapper.
 
