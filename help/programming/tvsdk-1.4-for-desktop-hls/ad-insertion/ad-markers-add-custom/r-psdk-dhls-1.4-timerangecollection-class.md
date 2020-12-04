@@ -6,6 +6,9 @@ title: Klassen TimeRangeCollection
 uuid: da781df4-6b19-47e1-8dc5-ea83c139f061
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Det definierade värdet för samlingstypen är `MARK_RANGES`, `DELETE_RANGES`och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection`bilder med dessa tre typer.
+Det definierade värdet för samlingstypen är `MARK_RANGES`, `DELETE_RANGES` och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection`s med dessa tre typer.
