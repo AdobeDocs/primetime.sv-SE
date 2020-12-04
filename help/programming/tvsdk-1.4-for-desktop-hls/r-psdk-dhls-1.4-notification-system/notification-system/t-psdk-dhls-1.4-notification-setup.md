@@ -6,6 +6,9 @@ title: Konfigurera meddelandesystemet
 uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -24,9 +27,9 @@ Så här tar du emot meddelanden:
 * Lägg till meddelanden i meddelandehistoriken
 
 1. Lyssna efter tillståndsändringar.
-1. Implementera `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` händelseavlyssnaren.
-1. TVSDK skickar en `MediaPlayer.StatusChangeEvent` instans till händelseavlyssnaren, som innehåller två parametrar:
+1. Implementera händelseavlyssnaren `MediaPlayer.StatusChangeEvent.STATUS_CHANGED`.
+1. TVSDK skickar en `MediaPlayer.StatusChangeEvent`-instans till händelseavlyssnaren, som innehåller två parametrar:
 
    * Det nya läget ( `MediaPlayer.Status`)
-   * Ett `MediaPlayerNotification` objekt
+   * Ett `MediaPlayerNotification`-objekt
 
