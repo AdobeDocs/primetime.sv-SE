@@ -6,11 +6,14 @@ title: Visa ett söknavigeringsfält med aktuell position för uppspelningstid
 uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# Visa ett söknavigeringsfält med aktuell position för uppspelningstid {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Visa ett sökningsnavigeringsfält med den aktuella uppspelningstiden {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
 
