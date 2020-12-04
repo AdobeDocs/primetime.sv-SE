@@ -6,6 +6,9 @@ title: Exempel på tidsintervallfel
 uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 TVSDK svarar på felaktiga specifikationer för tidsintervall genom att sammanfoga eller ersätta tidsintervallen efter behov.
 
-**TA BORT tidsintervall**
+**DELETE tidsintervall**
 
-I följande exempel definieras fyra överlappande DELETE-tidsintervall. TVSDK sammanfogar de fyra tidsintervallen till ett så att det faktiska borttagningsintervallet är mellan 0 och 50.
+I följande exempel definieras fyra överlappande tidsintervall för DELETE. TVSDK sammanfogar de fyra tidsintervallen till ett så att det faktiska borttagningsintervallet är mellan 0 och 50.
 
 ```
 "time-ranges": {
