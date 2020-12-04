@@ -1,18 +1,21 @@
 ---
-description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetimes annonsbeslutsgränssnitt.
-seo-description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetimes annonsbeslutsgränssnitt.
+description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
+seo-description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
 seo-title: Krav för annonsering
 title: Krav för annonsering
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
 # Krav för annonsering {#advertising-requirements}
 
-Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetimes annonsbeslutsgränssnitt.
+Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
