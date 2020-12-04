@@ -4,6 +4,9 @@ title: Egenskaper för konfigurationsfil
 uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 0%
 
 ---
 
@@ -30,11 +33,11 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry ">Anger om skriptdata ska krypteras i FLV-filer. <i class="+ topic/ph hi-d/i ">onMetaData</i> - och <i class="+ topic/ph hi-d/i ">onXMP</i> -skriptdatataggar krypteras aldrig, även om det här alternativet är aktiverat. </td> 
+   <td colname="2" class="- topic/entry ">Anger om skriptdata ska krypteras i FLV-filer. <i class="+ topic/ph hi-d/i "></i> onMetaData- och  <i class="+ topic/ph hi-d/i "></i> onXMPscript-datataggar krypteras aldrig, även om det här alternativet är aktiverat. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. Värdet high används för att kryptera allt videoinnehåll, medan värdena medium och low används för att kryptera delar av videoinnehållet för F4V-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| låg</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. Värdet high används för att kryptera allt videoinnehåll, medan värdena medium och low används för att kryptera delar av videoinnehållet för F4V-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">värde = <span class="codeph"> högt | medium | låg</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypted</span> </td> 
@@ -42,11 +45,11 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Certifikatfilen för licensservern som används för att kryptera nyckeln. Egenskapen <span class="codeph"> encrypt.keys.asymmetric.certfile</span> anger en fil som bara innehåller certifikatet (antingen PEM- eller DER-format tillåts). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Certifikatfilen för licensservern som används för att kryptera nyckeln. Egenskapen <span class="codeph"> encrypt.keys.asymmetric.certfile</span> anger en fil som endast innehåller certifikatet (antingen PEM- eller DER-format tillåts). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den här egenskapen används upprepade gånger för att skapa en lista med profiler som ska tillämpas på innehållet. <span class="codeph"> n</span> är ett heltal vars värde är 1 eller högre. Klienten använder den första instansen som standard. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den här egenskapen används upprepade gånger för att skapa en lista med profiler som ska tillämpas på innehållet. <span class="codeph"> är </span> ett heltal vars värde är 1 eller högre. Klienten använder den första instansen som standard. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -58,7 +61,7 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-filen som innehåller autentiseringsuppgifter för paketering för signering av innehåll. Filen <span class="codeph"> encrypt.sign.certfile</span> ska referera till en <span class="filepath"> .pfx</span> -fil som innehåller ett certifikat och en privat nyckel. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-filen som innehåller autentiseringsuppgifter för paketering för signering av innehåll. <span class="codeph"> encrypt.sign.certfile</span> ska referera till en <span class="filepath"> .pfx</span>-fil som innehåller ett certifikat och en privat nyckel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certpass</span> </td> 
@@ -66,23 +69,23 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. Ange x (Adobe Access x.0) där x = större versionsnummer. Servrar före Adobe Access 3.0 har inte stöd för den här inställningen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. Ange x (Adobe Access x.0) där x = större versionsnummer. Servrar före Adobe Access 3.0 stöder inte den här inställningen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.flyttcert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Om en princip <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> kräver domänregistrering med en server som använder ett annat transportcertifikat än vad som anges i <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, måste domänens transportcertifikat anges. </p> <p class="- topic/p ">This property specifies a file that contains the certificate only (either PEM or DER format is acceptable). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Om en princip <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> kräver domänregistrering med en server som använder ett annat transportcertifikat än vad som anges i <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span> måste domänens transportcertifikat anges. </p> <p class="- topic/p ">This property specifies a file that contains the certificate only (either PEM or DER format is acceptable). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ange licensnyckel. Om ingen nyckel anges genereras nyckeln slumpmässigt. När nyckelrotation inte är aktiverad är det den här nyckeln som används för att kryptera innehållet. </p> <p class="- topic/p ">När tangentrotation är aktiverad används den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda mellanrum mellan hexadecimala värden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ange licensnyckel. Om ingen nyckel anges genereras nyckeln slumpmässigt. När nyckelrotation inte är aktiverad är det den här nyckeln som används för att kryptera innehållet. </p> <p class="- topic/p ">När tangentrotation är aktiverad används den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda blanksteg mellan hexadecimala värden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. Om värdet är false (standard) inaktiveras nyckelrotation och huvud-CEK används för att kryptera alla exempel i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera delar av innehållet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. Om värdet är false (standard) inaktiveras nyckelrotation och det överordnad CEK-värdet används för att kryptera alla samplingar i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera delar av innehållet. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som används för att kryptera innehåll när nyckelrotation är aktiverad. Om inga nycklar anges genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda mellanrum mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När flera nycklar anges kommer nycklarna att bläddras igenom i den ordning som anges. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som används för att kryptera innehåll när nyckelrotation är aktiverad. Om inga nycklar anges genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda blanksteg mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">Från och med 1 </i> måste antalet öka monotont. När flera nycklar anges kommer nycklarna att bläddras igenom i den ordning som anges. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 
