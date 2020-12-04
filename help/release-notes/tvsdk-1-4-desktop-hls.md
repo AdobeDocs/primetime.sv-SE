@@ -34,7 +34,7 @@ Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt elle
 
 **1.4.30**
 
-* **Faktureringsstatistik**
+* **Faktureringsmått**
 
 För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 
@@ -60,7 +60,7 @@ I den här versionen stöds inte den här funktionen i Apple Safari och Mozilla 
 
 * **Ad Fallback, Daisy chaining in ad ad selection logic (Zendesk #3103)** For VAST ads (creatives) with the fallback rule enabled, the TVSDK behandlar en annons med en ogiltig MIME-typ som en tom annons och försöker använda reservannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 
-Mer information finns i [Lägg till reserv för VAST- och VMAP-annonser](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md).
+Mer information finns i [Lägg till reservversioner för VAST- och VMAP-annonser](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md).
 
 **1.4.8**
 
@@ -91,9 +91,9 @@ Samplingsbaserad AES-kryptering stöds nu.
 
 **1.4.0**
 
-* **Svartsignalering med alternativ innehållsersättning** Som en del av 1.4-TVSDK-uppdateringen stöder nu även TVSDK att börja och återgå från regionala utfall mot linjärt innehåll. TVSDK kan nu bearbeta två manifestfiler parallellt, i huvudversion och alternativt, för att övervaka utpressningssignaler även när alternativ programmering visas i stället för den ursprungliga programmeringen.
+* **Svartsignalering med alternativ innehållsersättningSom en del av TVSDK-uppdateringen (1.4) har TVSDK nu också stöd för att börja och återgå från regionala utfall mot linjärt innehåll.** TVSDK kan nu bearbeta två manifestfiler parallellt, i huvudversion och alternativt, för att övervaka utpressningssignaler även när alternativ programmering visas i stället för den ursprungliga programmeringen.
 
-* **Ta bort/ersätt C3-annonser** Nu behövs inget ytterligare förberedelsearbete för att dynamiskt infoga nya annonser i VOD-resurser (video-on-demand) som kommer från C3-fönstret. TVSDK erbjuder nu ett API för att ta bort anpassade innehållsområden och dynamiskt infoga nya annonser. Den här kraftfulla nya funktionen är också användbar i fall där live/linjärt innehåll möts under sändning och omedelbart tas ned för användning som on demand-innehåll utan att man behöver ägna tid åt att&quot;rensa&quot; materialet.
+* **Ta bort/ersätt C3** AdsNu behövs inget ytterligare förberedelsearbete för att dynamiskt infoga nya annonser i VOD-resurser (video-on-demand) som kommer ut från C3-fönstret. TVSDK erbjuder nu ett API för att ta bort anpassade innehållsområden och dynamiskt infoga nya annonser. Den här kraftfulla nya funktionen är också användbar i fall där live/linjärt innehåll möts under sändning och omedelbart tas ned för användning som on demand-innehåll utan att man behöver ägna tid åt att&quot;rensa&quot; materialet.
 
 ## Lösta problem {#resolved-issues}
 
@@ -358,7 +358,7 @@ I den här versionen har tidsgränsen för global annonsbegäran lagts till.
 
 **Version 1.4.21** (782)
 
-* Zendesk #19580 TVSDK väntar på att innehållsmatcharen ska slutföras innan `PTTimedMetadataChangedNotification` meddelanden skickas
+* Zendesk #19580 TVSDK väntar på att innehållsmatcharen ska slutföras innan `PTTimedMetadataChangedNotification`-meddelanden skickas
 
 **Obs**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
@@ -662,7 +662,7 @@ Korrigerade en tillfällig Flash Player-krasch med Firefox på Mac när en direk
 
 Korrigerade ett problem i Mac Chrome där strömmen skulle börja flimra och slutligen bli svart. (kräver Flash Player 18.0.0.161)
 
-* Zendesk #3304 - VAST 3.0- `[ERRORCODE]` makrot fylls inte i
+* Zendesk #3304 - VAST 3.0 `[ERRORCODE]`-makro fylls inte i
 
    * felkod 400 visas om annonsen är intern och har dålig kreativitet.
    * `[ERRORCODE]` makrot kommer att vara URL-kodat
@@ -722,7 +722,7 @@ Mime-typer för HLS-formatet var skiftlägeskänsliga, vilket var felaktigt och 
 * Zendesk #1303 - Vertical Offset for Closed Caption (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
 * Zendesk #1870 - Closed Caption Turning On &amp; Off (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
 * Zendesk #2110 - Uppspelningen fastnar efter försök att gå in i helskärmsläge under en VPAID-annons (kräver Flash Player version 16.0.0.235 eller senare, förväntat releasedatum: December 2014)
-* Zendesk #2199 - `[VPAID]` Player svarar inte vid sökning efter tidigare annonsavbrott
+* Zendesk #2199 - `[VPAID]` Player svarar inte vid sökning efter tidigare annonsbrytning
 * Zendesk #2358 - Sv: `[Analytics]` Felaktiga kapiteldata
 
 **Version 1.4.1**
@@ -740,7 +740,7 @@ Mime-typer för HLS-formatet var skiftlägeskänsliga, vilket var felaktigt och 
 * Textning fungerar inte med enbart ljud eftersom bildtextsystemet behöver video för att fungera.
 Utan video finns det ingen visningsrutedimension och utan visningsrutedimension kan du inte visa grafik för bildtexter.
 * Strömintegriteten är något långsammare i Google Chrome på grund av begränsningar i Chrome-sandlådan.
-* Om du inaktiverar autoPlay i TVSDK 1.4 kan ett DRM-fel uppstå när spelaren är inaktiv i minst en minut. Du kan lösa problemet genom att ändra innehållet `ReferenceCore.as` i `onPlaybackManagerPrepared`:
+* Om du inaktiverar autoPlay i TVSDK 1.4 kan ett DRM-fel uppstå när spelaren är inaktiv i minst en minut. Du kan lösa problemet genom att ändra `ReferenceCore.as` genom att ändra innehållet i `onPlaybackManagerPrepared` när du inaktiverar autoPlay men läser in resurser i förväg:
 
 ```
 if (_playbackManager.autoPlay) {
@@ -753,7 +753,7 @@ _playbackManager.pause();
 
 * **Version 1.4.13** PTPLAY-8501 - När VMAP returnerar två direkta MP4-annonser som inte är omkodade, spelas samma fall upp två gånger.
 
-* **Version 1.4.2** I version 16 av Flash Player identifierades ett problem med ABR-logiken för&quot;nedbrytning&quot; efter att spelaren försatts i en tom buffringshändelse. Problemet förhindrar att bithastigheten ändras i miljöer med dålig bandbredd när spelaren försätts i buffertläge. Om du vill undvika problemet kan du låta appen vara inställd på `BufferControlParameters.initialBufferTime` att vara densamma som `BufferControlParameters.playbackBufferTime` tillfälligt under buffringsläget (d.v.s. i en `BufferEvent.BUFFERING_BEGIN` händelse) och sedan återställa den till de angivna värdena för `BufferEvent.BUFFERING_END` händelsen. Fixen till det här problemet kommer att finnas i nästa patch-version av Flash Player 16.
+* **Version 1.4.2** I version 16 av Flash Player identifierades ett problem med ABR-logiken för&quot;nedbrytning&quot; efter att spelaren har försatts i en tom buffringshändelse. Problemet förhindrar att bithastigheten ändras i miljöer med dålig bandbredd när spelaren försätts i buffertläge. Om du vill undvika problemet kan du låta din app ange `BufferControlParameters.initialBufferTime` som `BufferControlParameters.playbackBufferTime` tillfälligt under buffertläget (d.v.s. för en `BufferEvent.BUFFERING_BEGIN`-händelse) och sedan återställa den till de angivna värdena för händelsen `BufferEvent.BUFFERING_END`. Fixen till det här problemet kommer att finnas i nästa patch-version av Flash Player 16.
 
 * **Version 1.4.0**
 
@@ -769,4 +769,4 @@ _playbackManager.pause();
 
 ## Användbara resurser {#helpful-resources}
 
-* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
