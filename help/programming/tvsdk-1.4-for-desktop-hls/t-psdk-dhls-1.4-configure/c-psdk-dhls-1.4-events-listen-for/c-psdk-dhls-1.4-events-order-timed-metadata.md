@@ -6,11 +6,14 @@ title: Händelser för tidsbestämda metadata
 uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Händelser för tidsbestämda metadata{#timed-metadata-events}
+# Tidsbestämda metadatahändelser{#timed-metadata-events}
 
 TVSDK skickar tidskodade metadatahändelser och genererar tidsbestämda metadata när standardtaggar eller anpassade taggar påträffas eller när en spellista ändras i ett manifest. Händelser skickas i den ordning som de visas i manifestet.
 
