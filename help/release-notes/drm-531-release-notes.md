@@ -9,6 +9,9 @@ topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '543'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Versionsinformationen för DRM 5.3.1 beskriver de nya funktionerna och de kända
 
 * **Säkert stopp -** Du kan ange om uppspelningen ska stoppas eller fortsätta i slutet av uppspelningsfönstret.
 * **Upplösningsbaserat utdataskydd (RBOP) -** Du kan ange utdatabegränsningar baserat på pixelupplösningar.
-* **CDM Gating -** Adobe har uppdaterat referensimplementeringslicensservern som ingår i Java SDK:t för Adobe Primetime (tidigare Adobe Access DRM) för att kunna använda alla DRM-protokollmeddelanden vid en enda URL-slutpunkt. Denna konsolidering av HTTP URL-metoder är nödvändig för att uppfylla specifikationen HTML5 EME (Encrypted Media Extension) som i sin tur krävs för att implementeras av CDM-leverantörer (Content Decryption Module) för DRM. Tidigare var detta de enda URL-slutpunkterna som exponerades av licensservern för referensimplementering:
+* **CDM Gating -** För att ge stöd för HTML5 har Adobe uppdaterat referensimplementeringslicensservern som ingår i Adobe Primetime DRM (tidigare Adobe Access DRM) Java SDK så att alla DRM-protokollmeddelanden kan användas vid en enda URL-slutpunkt. Denna konsolidering av HTTP URL-metoder är nödvändig för att uppfylla specifikationen HTML5 EME (Encrypted Media Extension) som i sin tur krävs för att implementeras av CDM-leverantörer (Content Decryption Module) för DRM. Tidigare var detta de enda URL-slutpunkterna som exponerades av licensservern för referensimplementering:
 
    * /flashaccess/i15n/v3 (Individualisering)
    * /flashaccess/license/v5 (licensbegäran)
@@ -32,11 +35,11 @@ Nu kan alla begäranden (som kommer från en HTML5 CDM) dirigeras till en enda s
 
 Den här ändringen är bakåtkompatibel med andra plattformar än CDM, till exempel Flash Player, Android och iOS.
 
-* **RBOP-nedskalning -** RBOP är specifikt för HTML5-utrymmet och innehåller automatisk nedskalningsfunktion. Om en bithastighet som överskrider den tillåtna bithastigheten som anges i DRM-principen kommer innehållet att nedskalas till den högsta möjliga upplösningen. Om till exempel en 1080p-ström direktuppspelas till en klient som visar innehållet på en bildskärm som inte är HDCP-kompatibel, kan DRM-principen indikera att den maximala upplösningen ska vara 720p. Primetime DRM avkodar 1080p-strömmen och nedskalar den sedan till 720p innan den återges på skärmen. Om webbläsaren som spelar upp videon sedan dras över till en bildskärm som har stöd för HDCP, kommer Primetime DRM att avbryta nedskalningen av innehållet och tillåta uppspelning vid 1080.
+* **RBOP-nedskalning -** Specifikt för HTML5-utrymmet, innehåller RBOP automatisk nedskalningsfunktion, där innehållet kommer att nedskalas till högsta möjliga upplösning om en bithastighet som överskrider den tillåtna bithastigheten som anges i DRM-principen. Om till exempel en 1080p-ström direktuppspelas till en klient som visar innehållet på en bildskärm som inte är HDCP-kompatibel, kan DRM-principen indikera att den maximala upplösningen ska vara 720p. Primetime DRM avkodar 1080p-strömmen och nedskalar den sedan till 720p innan den återges på skärmen. Om webbläsaren som spelar upp videon sedan dras över till en bildskärm som har stöd för HDCP, kommer Primetime DRM att avbryta nedskalningen av innehållet och tillåta uppspelning vid 1080.
 
 ## Kända fel i version 5.3 {#known-issues}
 
-* `Hasher.bat (flashaccess-hasher.jar)` skickar loggmeddelanden till `flashaccess-global.log.`Du måste se till att `flashaccess-global.log` filen finns i samma katalog som Hasher.bat.
+* `Hasher.bat (flashaccess-hasher.jar)` skickar loggmeddelanden till  `flashaccess-global.log.`Du måste se till att  `flashaccess-global.log` filen finns i samma katalog som Hasher.bat.
 
 * Utdata från vissa av `toJSON()`anropen returnerar `Strings` som inte är helt JSON-kompatibla eller helt kompatibla på ett fristående sätt (dvs. utan sammansättning av JSON-strukturer).
 
@@ -55,4 +58,4 @@ Flera klasser implementerar en toJSON()-metod som ska returnera en JSON-kompatib
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
