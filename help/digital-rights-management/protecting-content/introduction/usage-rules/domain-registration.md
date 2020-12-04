@@ -4,6 +4,9 @@ title: Domänregistrering för enhetsgrupp
 uuid: 221bf6c3-0568-443d-b761-64715a57ada6
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ Flera enheter kan ansluta till en domän och ta emot domäntoken. När en enhet 
 
 Om du vill ha stöd för domänbundna licenser måste DRM-principen för Primetime specificera den domänserver som klienten måste registrera med. DRM-principen Primetime måste också ange autentiseringskraven för domänservern om anonym åtkomst är aktiverat eller om servern kräver användarnamn/lösenord eller anpassad autentisering.
 
-Domänregistrering och domänbundna licenser stöds av Primetime DRM-klienter version 3.0 eller senare. Om en äldre klient eller en Adobe Primetime 3.0-klient i Flash Player begär en licens för innehåll som stöder domänregistrering, kan licensservern utfärda en licens som använder en alternativ Primetime DRM-princip som stöder bindning till en viss enhet.
+Domänregistrering och domänbundna licenser stöds av Primetime DRM-klienter version 3.0 eller senare. Om en äldre klient eller en Adobe Primetime 3.0-klient i Flash Player begär en licens för innehåll som stöder domänregistrering, kan licensservern utfärda en licens som använder en alternativ Primetime DRM-princip för att stödja bindning till en viss enhet.
