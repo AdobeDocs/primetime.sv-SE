@@ -6,15 +6,18 @@ title: Timed metadata, klass
 uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
 
-# Timed metadata, klass{#timed-metadata-class}
+# Timed metadata-klass{#timed-metadata-class}
 
 När Browser TVSDK identifierar en prenumerationstagg i spellistan/manifestet försöker spelaren automatiskt att bearbeta taggen och visa den som ett TimedMetadata-objekt.
 
-Klassen innehåller följande `TimedMetadata` element:
+Klassen `TimedMetadata` innehåller följande element:
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
