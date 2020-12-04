@@ -6,6 +6,9 @@ title: Standardbeteende och anpassat uppspelningsbeteende med annonser
 uuid: 272cdfd0-799f-41e5-bf41-1620d48c992a
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,7 @@ I följande tabell beskrivs hur TVSDK hanterar annonser och annonsbrytningar und
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> För live/linjärt spelas annonsbrytningen upp, även om annonsbrytningen redan har bevakats. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">För VOD spelas annonsbrytningen upp och annonsbrytningen markeras som bevakad. </li> 
     </ul> </td> 
-   <td colname="col3">Ange en annan princip för annonsbrytningen med <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Ange en annan princip för annonsbrytningen genom att använda <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Ditt program söker fram över annonsbrytningar till huvudinnehållet. </td> 
@@ -67,12 +70,12 @@ I följande tabell beskrivs hur TVSDK hanterar annonser och annonsbrytningar und
   <tr> 
    <td colname="col1"> Ditt program söker bakåt i en annonsbrytning. </td> 
    <td colname="col2"> Spelar upp från början av den annons där sökningen avslutades. </td> 
-   <td colname="col3">Ange en annan annonspolicy för annonsbrytningen och för den specifika annons som sökningen avslutades i med <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Ange en annan annonsprincip för annonsbrytningen och för den specifika annons som sökningen avslutades i med <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Programmet söker framåt eller bakåt över bevakade annonsbrytningar till huvudinnehållet. </td> 
    <td colname="col2"> Om den senaste annonsbrytningen redan har bevakats, hoppar över till den användarvalda sökpositionen. </td> 
-   <td colname="col3">Välj vilken av de överhoppade brytningarna som ska spelas upp med <span class="codeph"> selectAdBreaksToPlay</span> och ange vilka brytningar som redan har bevakats med <span class="codeph"> AdBreak.isWatched</span> . <p>Viktigt:  Som standard markerar TVSDK en annonsbrytning som bevakad direkt efter att den första annonsen har öppnats i annonsbrytningen. </p> </td> 
+   <td colname="col3">Välj vilken av de överhoppade brytningarna som ska spelas upp med <span class="codeph"> selectAdBreaksToPlay</span> och ta reda på vilka brytningar som redan har bevakats med <span class="codeph"> AdBreak.isWatched</span>. <p>Viktigt:  Som standard markerar TVSDK en annonsbrytning som bevakad direkt efter att den första annonsen har öppnats i annonsbrytningen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Programmet söker framåt eller bakåt över en eller flera annonsbrytningar och övergår i en bevakad annonsbrytning. </td> 
@@ -87,7 +90,7 @@ I följande tabell beskrivs hur TVSDK hanterar annonser och annonsbrytningar und
   <tr> 
    <td colname="col1"> Ditt program söker framåt över annonser som infogats med anpassade annonsmärken. </td> 
    <td colname="col2"> Hoppar till den användarvalda sökpositionen. </td> 
-   <td colname="col3">Mer information finns i <a href="../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Visa ett söknavigeringsfält med aktuell uppspelningsposition...</a> </td> 
+   <td colname="col3">Mer information finns i <a href="../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Visa ett söknavigeringsfält med den aktuella uppspelningspositionen..</a> </td> 
   </tr> 
  </tbody> 
 </table>
