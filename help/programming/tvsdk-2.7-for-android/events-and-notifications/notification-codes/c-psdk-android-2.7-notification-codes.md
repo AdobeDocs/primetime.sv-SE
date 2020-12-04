@@ -6,6 +6,9 @@ title: Meddelandekoder
 uuid: 24476204-5c35-4ff9-810d-77698ea18b53
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,7 @@ Meddelandeobjekt tillhandahåller information som är relaterad till spelarens s
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2"> <p>En referens till ett annat <span class="codeph"> MediaPlayerNotification</span> -objekt som direkt påverkade det här meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
+   <td colname="2"> <p>En referens till ett annat <span class="codeph"> MediaPlayerNotification</span>-objekt som direkt påverkade det här meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
   </tr> 
  </tbody> 
 </table>
