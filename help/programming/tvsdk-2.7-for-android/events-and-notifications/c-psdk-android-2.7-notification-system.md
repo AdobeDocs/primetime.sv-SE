@@ -25,7 +25,7 @@ Programmet kan hämta information om meddelanden och status. Med hjälp av den h
 
 `MediaPlayerNotification` innehåller information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista över `MediaPlayerNotification` meddelanden och varje meddelande innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification`-meddelanden och varje meddelande innehåller följande information:
 
 * En tidsstämpel
 * Diagnostiska metadata som består av följande element:
@@ -35,7 +35,7 @@ TVSDK tillhandahåller en kronologisk lista över `MediaPlayerNotification` medd
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
 
-   * `innerNotification`: En referens till ett annat `MediaPlayerNotification` objekt som direkt påverkar det här meddelandet.
+   * `innerNotification`: En referens till ett annat  `MediaPlayerNotification` objekt som direkt påverkar det här meddelandet.
 
 Du kan lagra informationen lokalt för senare analys eller skicka den till en fjärrserver för loggning och grafisk representation.
 
@@ -43,16 +43,16 @@ Du kan lagra informationen lokalt för senare analys eller skicka den till en fj
 
 Du kan lyssna efter meddelanden.
 
-Kärnan i Primetime Players meddelandesystem är `Notification` klassen, som representerar ett fristående meddelande.
+Kärnan i Primetime Players meddelandesystem är klassen `Notification`, som representerar ett fristående meddelande.
 
 Lyssna efter meddelanden så här om du vill få meddelanden:
 
-1. Implementera `NotificationEventListener.onNotification()` återanropet.
-1. TVSDK skickar ett `NotificationEvent` objekt till återanropet.
+1. Implementera `NotificationEventListener.onNotification()`-återanropet.
+1. TVSDK skickar ett `NotificationEvent`-objekt till återanropet.
 
    >[!NOTE]
    >
-   >Meddelandetyper räknas upp i `Notification.Type` uppräkningen:
+   >Meddelandetyper räknas upp i `Notification.Type`-uppräkningen:
 
    * `ERROR`
    * `INFO`
