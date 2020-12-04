@@ -6,6 +6,9 @@ title: Kvalitetsstatistik för tjänster
 uuid: b74cbc94-1d69-4b4b-b969-d0e985b4762b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -16,20 +19,20 @@ QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVS
 
 ## Läs QOS-uppspelning, buffring och enhetsstatistik {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Du kan läsa uppspelning, buffring och enhetsstatistik från `PTQOSProvider` klassen.
+Du kan läsa uppspelning, buffring och enhetsstatistik från klassen `PTQOSProvider`.
 
-Klassen innehåller `PTQOSProvider` olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
+Klassen `PTQOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
 
 Det innehåller även information om enheten, till exempel modell, operativsystem och tillverkarens enhets-ID.
 
 >[!TIP]
 >
->Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som `playbackBufferFull` och `playbackLikelyToKeepUp`.
+>Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som  `playbackBufferFull` och  `playbackLikelyToKeepUp`.
 
 1. Skapa en mediespelare.
-1. Skapa ett `PTQOSProvider` objekt och bifoga det till mediespelaren.
+1. Skapa ett `PTQOSProvider`-objekt och koppla det till mediespelaren.
 
-   Konstruktorn använder en spelarkontext så att den kan hämta enhetsspecifik information. `PTQOSProvider`
+   Konstruktorn `PTQOSProvider` har en spelarkontext så att den kan hämta enhetsspecifik information.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
