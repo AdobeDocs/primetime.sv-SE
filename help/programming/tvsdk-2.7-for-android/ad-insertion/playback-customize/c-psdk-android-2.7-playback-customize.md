@@ -6,6 +6,9 @@ title: Anpassa uppspelning med annonser
 uuid: 20b5bfb2-83d8-4517-b821-8c542afa387d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller sluta
 
 >[!TIP]
 >
->Du kan åsidosätta standardbeteendet genom att använda `AdBreakPolicySelector` klassen.
+>Du kan åsidosätta standardbeteendet genom att använda klassen `AdBreakPolicySelector`.
 
 Standardbeteendet varierar beroende på om användaren skickar annonsbrytningen under normal uppspelning eller genom att söka i en video eller flytta den med snabb fram- eller tillbakaspolning (tricks play).
 
