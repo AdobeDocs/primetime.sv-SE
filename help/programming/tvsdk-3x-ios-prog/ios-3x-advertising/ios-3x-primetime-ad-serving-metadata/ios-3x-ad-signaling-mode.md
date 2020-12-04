@@ -6,17 +6,20 @@ title: Läge för annonssignalering
 uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Läge för annonssignalering {#ad-signaling-mode}
+# Läget Lägg till signalering {#ad-signaling-mode}
 
 Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
 
-Giltiga värden är `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`och `PTAdSignalingModeServerMap`.
+Giltiga värden är `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` och `PTAdSignalingModeServerMap`.
 
-I följande tabell beskrivs effekten av `AdSignalingMode` värden för olika HLS-strömtyper:
+I följande tabell beskrivs effekten av `AdSignalingMode`-värden för olika HLS-strömtyper:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
