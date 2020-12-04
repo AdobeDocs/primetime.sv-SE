@@ -6,6 +6,9 @@ title: ID3-taggar
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 ID3-taggar ger information om en ljud- eller videofil, till exempel filens titel eller namnet på artisten. Browser TVSDK identifierar ID3-taggar på segmentnivån för transportströmmar (TS) i HLS-strömmar och skickar en händelse. Programmet kan extrahera data från taggen.
 
-När en ny ID3-metadata hittas i den underliggande HLS-strömmen utlöses en `AdobePSDK.TimedMetadataEvent` händelse av Browser TVSDK.
+När en ny ID3-metadata hittas i den underliggande HLS-strömmen utlöser Browser TVSDK en `AdobePSDK.TimedMetadataEvent`-händelse.
 
 Objektet `TimedMetadata` för ID3 har följande egenskaper:
 
@@ -27,28 +30,28 @@ Objektet `TimedMetadata` för ID3 har följande egenskaper:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>En typ av <span class="codeph"> TimedMetadata- </span> objekt. </p> <p>För ID3-metadata är värdet <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
+   <td colname="col2"> <p>En typ av <span class="codeph"> TimedMetadata </span>-objekt. </p> <p>För ID3-metadata är värdet <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> tid </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> tid  </span> </p> </td> 
    <td colname="col2"> <p> Spelartid där tidsbestämda metadata identifierades. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>ID för <span class="codeph"> TimedMetadata- </span> objektet. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
+   <td colname="col2"> <p>ID för TimedMetadata </span>-objektet <span class="codeph">. </span></p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>Namnet på <span class="codeph"> TimedMetadata- </span> objektet. För ID3-metadata är värdet"ID3". </p> </td> 
+   <td colname="col2"> <p>Namnet på TimedMetadata </span>-objektet <span class="codeph">. För ID3-metadata är värdet"ID3". </span></p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> innehåll </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> innehåll  </span> </p> </td> 
    <td colname="col2"> <p>Tidsbestämt metadatainnehåll. För ID3-taggar representerar det här värdet den serialiserade bytearrayen. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> metadata </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> bearbetade information, som är en instans av <span class="codeph"> AdobePSDK.Metadata </span> där ID3-bildrutorna lagras. </p> <p> <p>Obs!  För Safaris <span class="codeph"> videotagg </span> visas ID3-taggens specifika bildrutedata i form av objekt via ett <span class="codeph"> AdobePSDK.Metadata- </span> objekt, medan ID3-taggens bildrutedata för andra webbläsare visas i form av en bytearray via <span class="codeph"> AdobePSDK.Metadata- </span> objektet. </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadata  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> TimedMetadata  </span> bearbetade information, som är en instans av  <span class="codeph"> AdobePSDK.Metadata  </span> där ID3-bildrutorna lagras. </p> <p> <p>Obs!  För Safari <span class="codeph"> video </span>-taggen visas ID3-taggens specifika bildrutedata i form av objekt via ett <span class="codeph"> AdobePSDK.Metadata </span>-objekt, medan ID3-taggens bildrutedata för andra webbläsare visas i form av en bytearray via objektet <span class="codeph"> AdobePSDK.Metadata </span>. </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -114,7 +117,7 @@ De olika ID3-taggarna som lagras i `TimedMetadata` kan hämtas av programmet på
    }); 
    ```
 
-* Använder `MediaPlayerItem`egenskapen `timedMetadata` .
+* Använda `MediaPlayerItem`-egenskapen `timedMetadata`.
 
    ```
    var isSafari = function () { 
