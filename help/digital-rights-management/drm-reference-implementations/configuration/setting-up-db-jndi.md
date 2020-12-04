@@ -30,20 +30,20 @@ Anonym licensköp kräver inte att databasen körs.
 
 Om du vill köra licensservern måste du installera och konfigurera MySQL:
 
-1. Gå till [!DNL Third Party\MySQL\Installer\5.1] mappen på dvd-skivan och starta installationsprogrammet.
+1. Gå till mappen [!DNL Third Party\MySQL\Installer\5.1] på dvd-skivan och starta installationsprogrammet.
 1. Slutför MySQL-installationen.
-1. Välj **[!UICONTROL Configure MySQL Server Now]** att starta konfigurationsguiden.
+1. Välj **[!UICONTROL Configure MySQL Server Now]** för att starta konfigurationsguiden.
 1. Använd standardinställningarna eller välj specifika inställningar för testningen tills den femte skärmen visas.
-1. På den femte skärmen väljer **[!UICONTROL Online Transaction Processing (OLTP)]** eller **[!UICONTROL Manual Setting]** anger du det maximala antalet tillåtna anslutningar.
+1. På den femte skärmen väljer du **[!UICONTROL Online Transaction Processing (OLTP)]** eller **[!UICONTROL Manual Setting]** och anger maximalt antal tillåtna anslutningar.
 1. Skriv ned rotlösenordet.
 1. Så här installerar du om MySQL om du behöver starta servern senare:
-   1. Ta bort *systemenheten:* mapp.
+   1. Ta bort mappen *system drive:*.
 
       Mappen finns i [!DNL \Documents and Settings\All Users\Application Data\MySQL].
    1. Ta bort den gamla installationsmappen för MySQL.
 
       Exempel: *systemenhet:*, som finns i [!DNL \Program Files\MySQL\MySQL Server 5.1].
-1. Om du vill installera MySQL JDBC Driver 5.1.7 kopierar du [!DNL mysql-connector-java-5.1.7-bin.jar] filen i [!DNL Third Party\MySQL\Installer\5.1] -mappen på dvd-skivan till [!DNL ...\Tomcat6.0\lib] katalogen på Tomcat-servern.
+1. Om du vill installera MySQL JDBC Driver 5.1.7 kopierar du filen [!DNL mysql-connector-java-5.1.7-bin.jar] i mappen [!DNL Third Party\MySQL\Installer\5.1] på dvd-skivan till katalogen [!DNL ...\Tomcat6.0\lib] på Tomcat-servern.
 
    >[!NOTE]
    >
