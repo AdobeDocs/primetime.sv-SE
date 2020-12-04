@@ -6,11 +6,14 @@ title: Inläggning av delvis annonsbrytning
 uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Inläggning av delvis annonsbrytning {#partial-ad-break-insertion}
+# Inläggning av partiell annonsbrytning {#partial-ad-break-insertion}
 
 Funktionen Partial Ad Break Insertion (PABI) påminner om en TV-liknande upplevelse där användaren, om han eller hon går med i en liveström i en mellanrollsbrytning, visas på medelversionssidan i stället för en förhandsgranskningsannons eller skiffer.
 
@@ -28,9 +31,9 @@ Funktionen PABI instruerar manifestservern att ignorera förradbrytningen och an
 
 >[!NOTE]
 >
->EXT- [X-START](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) är en HLS-standardtagg som anger en önskad startpunkt i spellistan.
+>[EXT-X-START](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) är en HLS-standardtagg som anger en önskad startpunkt i spellistan.
 
-## Rekommendationer {#section_4CF0733B14504F2A99690310B9F3B130}
+## Recommendations {#section_4CF0733B14504F2A99690310B9F3B130}
 
 * Använd spårning på klientsidan eftersom klienten har större kontroll över avfyrningen av spårningsfyrar.
 * Delvisa annonsbrytningar bör endast användas med spårningsläget på serversidan om spelaren stöder EXT-X-START.
