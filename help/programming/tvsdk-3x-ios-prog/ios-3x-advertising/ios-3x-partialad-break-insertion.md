@@ -6,6 +6,9 @@ title: Insättning av delvis annonsbrytning
 uuid: 799acdd8-fbb9-43b4-955a-3f56825d1e87
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Om en användare till exempel ansluter sig mitt i en 90-sekunders annonsbrytning
 
 Annonsspårare för annonsen som spelas delvis (den andra annonsen) aktiveras inte. I exemplet ovan aktiveras bara spåraren för den tredje annonsen.
 
-## Beteende med pre-roll {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
+## Beteende med förrullning {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
 
 Funktionen fungerar när en pre-roll-annons spelas upp med livematerial. Direktuppspelningen spelas upp från direktpunkten när pre-roll-annonsen avslutas.
 
