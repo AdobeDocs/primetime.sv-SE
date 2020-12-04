@@ -4,13 +4,16 @@ title: Uppdatera licensserverns WAR-fil
 uuid: 0cde53d6-185d-4bf2-84fc-0c31d17904a8
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
 # Uppdatera licensserverns WAR-fil{#update-the-license-server-war-file}
 
-För att stödja klienter som har individualiserat via en On Premises Individualization-server måste du uppdatera certifikatserverns certifikatrot för tillit så att den inkluderar de nyligen förvärvade autentiseringsuppgifterna för Individualization CA. Ett Python-skript ( [!DNL addIndivCert.py]) finns i [!DNL update_license_server] mappen.
+För att stödja klienter som har individualiserat via en On Premises Individualization-server måste du uppdatera certifikatserverns certifikatrot för tillit så att den inkluderar de nyligen förvärvade autentiseringsuppgifterna för Individualization CA. Ett Python-skript ( [!DNL addIndivCert.py]) finns i mappen [!DNL update_license_server].
 
 Gör följande för att uppdatera licensservern:
 
@@ -22,6 +25,7 @@ Gör följande för att uppdatera licensservern:
 
    * `cert`: PKCS12-fil som innehåller det enskilda certifikatutfärdarcertifikatet
    * `war`: WAR-fil som ska uppdateras
+
    Utdatafilen är en uppdaterad WAR-fil.
 
    ```
