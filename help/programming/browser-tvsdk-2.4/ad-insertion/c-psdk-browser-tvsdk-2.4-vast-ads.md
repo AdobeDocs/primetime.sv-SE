@@ -41,13 +41,13 @@ Följande element stöds:
 
 ## Kreatörer {#section_0121F948CB074E49A8132D202786CAA4}
 
-Det här elementet är en fil som är en del av en VAST-annons och innehåller ett `creative` element som kan hantera en linjär annons, en icke-linjär annons eller en kompletterande annons. I elementet `creative` stöds elementen `id`, `sequence`och `adId` .
+Det här elementet är en fil som är en del av en VAST-annons och innehåller ett `creative`-element som kan hantera en linjär annons, en icke-linjär annons eller en kompletterande annons. I `creative`-elementet stöds elementen `id`, `sequence` och `adId`.
 
 Här finns mer information om annonstyperna:
 
-* **Linjära annonser** Följande element stöds:
+* **Linjära** annonserFöljande element stöds:
 
-   * `TrackingEvent`, som innehåller `Tracking` elementet.
+   * `TrackingEvent`, som innehåller  `Tracking` elementet.
       * `Duration`
       * `AdParameters`
       * `VideoClicks`, inklusive följande:
@@ -62,15 +62,15 @@ Här finns mer information om annonstyperna:
 
          >[!TIP]
          >
-         >I det här elementet stöds attributen `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` .
+         >I det här elementet stöds attributen `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` och `type`.
 
-* **Annonser** som inte är linjära: Följande element stöds:
+* **Icke-linjära** annonserFöljande element stöds:
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` .
+      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` och `minSuggestedDuration`.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,13 +78,13 @@ Här finns mer information om annonstyperna:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Tilläggsannonser** Följande element stöds:
+* **Tillhörande** annonserFöljande element stöds:
 
    * `Companion`
 
       >[!TIP]
       >
-      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` .
+      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth` och `expandedHeight`.
 
       * `StaticResource`
       * `IFrameResource`
