@@ -6,6 +6,9 @@ title: Aktivera videouppspelning
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Skapa en PlaybackManager som hanterar konfigurationen och uppspelningen av HLS-s
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementera `PlaybackManagerEventListener` i `PlayerFragment` för att hantera uppspelningshändelser:
+1. Implementera `PlaybackManagerEventListener` i `PlayerFragment` för att hantera uppspelningshändelserna:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
