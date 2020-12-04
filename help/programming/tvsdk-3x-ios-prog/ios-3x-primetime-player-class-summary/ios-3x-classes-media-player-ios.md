@@ -6,6 +6,9 @@ title: Klasser för mediespelare
 uuid: 705c71b6-4e5e-46b5-a59d-13df977b04f2
 translation-type: tm+mt
 source-git-commit: b13f2d3f083a6ca333a4edba1c8d7261f7d448ad
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Dessa klasser beskriver din mediespelare och dess resurser.
 | PTMediaPlayerView | Hanterar visningskomponenten i Primetime Player-ramverket. |
 | PTMediaProfile | Representerar profilen för en enskild ström i variantspellistan. |
 | PTMediaSelectionOption | Representerar en audiovisuell medieresurs för olika språkpreferenser, tillgänglighetskrav eller anpassade programkonfigurationer. Giltiga alternativtyper:<ul><li>Undertexter (PTMediaSelectionOptionTypeSubtitle)</li><li>Alternativt ljud (PTMediaSelectionOptionTypeAudio)</li><li>Undertexter (PTMediaSelectionOptionTypeCC)</li><li>Odefinierad (PTMediaSelectionOptionTypeUndefined)</li></ul> |
-| klassen PTOpportunityResolver,protokollet PTOpportunityResolver | En klass som används för att bearbeta in-manifest-cues som ska användas som ersättning för annonseringsprocessen i Adobe Primetime. |
+| klassen PTOpportunityResolver,protokollet PTOpportunityResolver | En klass som används för att bearbeta in-manifest-referenser som ska användas som placeringar för Adobe Primetime annonsbeslutsprocess. |
 | PTOpportunityResolverDelegate | Protokoll som beskriver de metoder som den anpassade affärsmöjlighetslösaren (PTOpportunityResolver) ska använda för att kommunicera status för matchningen av affärsmöjligheten till delegaten. |
 | PTSDK | Beskriver versionen av TVSDK och dess funktioner. |
 | PTSDKConfig | Visar globala TVSDK-inställningar och tillåter ett program att prenumerera på anpassade HLS-taggar. |
