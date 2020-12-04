@@ -6,6 +6,9 @@ title: Markera intervall
 uuid: ca544f64-ef83-4c08-8ec5-1bc07fdba3c4
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Här är några exempel på hur annonser kan tas bort och ersättas:
 
 ## Markera intervall {#mark-ranges}
 
-Så här implementerar du `PTTimeRangeCollection` och markerar innehållsområden som annonser:
-1. Förbered `PTTimeRangeCollection`den.
+Så här implementerar du `PTTimeRangeCollection` och markerar innehållsintervall som annonser:
+1. Förbered `PTTimeRangeCollection`.
 1. Ange typen för `PTTimeRangeCollection` till `PTTimeRangeCollectionTypeMarkRanges`.
 
    I det här steget meddelas TVSDK om att anpassade intervall måste behandlas som annonser.
@@ -39,7 +42,7 @@ Så här implementerar du `PTTimeRangeCollection` och markerar innehållsområde
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. Skapa `PTAdMetadata` och ställ in `PTTimeRangeCollection`.
+1. Skapa `PTAdMetadata` och ange `PTTimeRangeCollection`.
 
    ```
    // Create the PTPlayerItem metadata 
@@ -98,9 +101,9 @@ Så här implementerar du `PTTimeRangeCollection` och tar bort innehållsinterva
 
    >[!TIP]
    >
-   >Argumentet `replacementDuration` är valfritt. Om det inte är definierat `AdServer` avgör annonsbrytningens varaktighet.
+   >Argumentet `replacementDuration` är valfritt. Om det inte är definierat bestämmer `AdServer` längden på annonsbrytningen.
 
-1. Skapa `PTAdMetadata` och ställ in `PTTimeRangeCollection`.
+1. Skapa `PTAdMetadata` och ange `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -124,7 +127,7 @@ Så här implementerar du `PTTimeRangeCollection` och tar bort innehållsinterva
 
    >[!TIP]
    >
-   >Även om inställningen `signalingMode` är inställd som `PTAdSignalingModeCustomRanges`, ställs det här annonseringsläget in automatiskt när du ställer in `PTTimeRangeCollection` typen `PTTimeRangeCollectionTypeReplace`.
+   >Även om `signalingMode` är inställt på `PTAdSignalingModeCustomRanges` ställs det här annonseringsläget in automatiskt när du ställer in `PTTimeRangeCollection` för typen `PTTimeRangeCollectionTypeReplace`.
 
 1. Skapa spelaren och starta uppspelningen.
 
@@ -142,8 +145,8 @@ Så här implementerar du `PTTimeRangeCollection` och tar bort innehållsinterva
 ## Ta bort intervall {#delete-ranges}
 
 Så här implementerar du `PTTimeRangeCollection` och tar bort innehållsintervall som annonser:
-1. Förbered `PTTimeRangeCollection`den.
-1. Ange typen för `PTTimeRangeCollection` till `PTTimeRangeCollectionTypeDeleteRanges`, som meddelar TVSDK om att de angivna intervallen måste tas bort.
+1. Förbered `PTTimeRangeCollection`.
+1. Ange typen för `PTTimeRangeCollection` till `PTTimeRangeCollectionTypeDeleteRanges`, som meddelar TVSDK att de angivna intervallen måste tas bort.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -160,7 +163,7 @@ Så här implementerar du `PTTimeRangeCollection` och tar bort innehållsinterva
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. Skapa `PTAdMetadata` och ställ in `PTTimeRangeCollection`.
+1. Skapa `PTAdMetadata` och ange `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
