@@ -6,6 +6,9 @@ title: Insättning av delvis annonsradbrytning
 uuid: cc071c89-f813-419e-a2b2-4f6a9fdccd6a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Om en användare till exempel går med mitt i en 90-sekunders annonsbrytning (tr
 * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
 * Annonsspårare för annonsen som spelas delvis (den andra annonsen) utlöses inte. Bara spåraren för den tredje annonsen aktiveras.
 
-Det här beteendet är inte aktiverat som standard. Så här aktiverar du den här funktionen i appen.
+Det här beteendet är inte aktiverat som standard. Så här aktiverar du den här funktionen i din app:
 
 1. Inaktivera live-föranrop med AdvertisingMetadata-klassens setEnableLivePreroll-metod.
 
