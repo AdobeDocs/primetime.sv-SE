@@ -42,5 +42,5 @@ Enhetens funktioner kan identifieras med de attribut som anges i följande tabel
 
 >[!NOTE]
 >
->Den här användningsregeln stöds av Adobe Access-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minimal klientversion](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
+>Den här användningsregeln stöds av Adobe Access-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minsta klientversion](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
