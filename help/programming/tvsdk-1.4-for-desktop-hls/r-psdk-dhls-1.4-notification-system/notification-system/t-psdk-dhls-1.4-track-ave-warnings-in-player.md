@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Med NotificationEvent kan du spåra varningar som skickas från Adobe Video Engine (AVE).
 
-Spelarappen kan spåra uppspelningsvarningar och fel som genererats av AVE, t.ex. failover- eller nätverkshändelser som inte stoppar uppspelningen och som inte nödvändigtvis kräver någon åtgärd från din app. Vissa AVE-fel hanteras av TVSDK, men fungerar som en allmän genomströmningsmekanism för AVE-varningar i programlagret. `NotificationEvent` När du har fått AVE-varningar kan du välja att utföra någon åtgärd, som att proaktivt stoppa uppspelningen, aktivera en beredskapsplan, logga meddelanden och så vidare.
+Spelarappen kan spåra uppspelningsvarningar och fel som genererats av AVE, t.ex. failover- eller nätverkshändelser som inte stoppar uppspelningen och som inte nödvändigtvis kräver någon åtgärd från din app. Vissa AVE-fel hanteras av TVSDK, men `NotificationEvent` fungerar som en allmän genomströmningsmekanism för AVE-varningar i programlagret. När du har fått AVE-varningar kan du välja att utföra någon åtgärd, som att proaktivt stoppa uppspelningen, aktivera en beredskapsplan, logga meddelanden och så vidare.
 
 Använd följande API-element för att spåra AVE-varningar i spelaren:
 
@@ -32,7 +32,7 @@ public final class NotificationCode {
 }
 ```
 
-**seekEvent**
+**NotificationEvent**
 
 ```
 /** 
@@ -102,7 +102,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Här är ett exempel på AVE-varningar som spårats med `NotificationEvent`:
+Här är ett exempel på AVE-varningar som spårades med `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
