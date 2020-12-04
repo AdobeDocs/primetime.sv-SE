@@ -6,6 +6,9 @@ title: Ange volymkontroll
 uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Du kan ange en gränssnittskontroll för ljudvolymen.
 1. Vänta tills MediaPlayer-instansen har en giltig status för det här kommandot.
 
    Alla lägen utom för SLÄPPT är giltiga.
-1. Anropa metoden för volyminställning på `MediaPlayer` instansen för att ställa in ljudvolymen.
+1. Anropa metoden för volyminställning på `MediaPlayer`-instansen för att ställa in ljudvolymen.
 
    ```
    public function set volume(value:Number):void
@@ -47,7 +50,8 @@ Du kan ange en gränssnittskontroll för ljudvolymen.
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">Resultatet om det är mellan 0 och 1 </li> 
       <li id="li_03B7F30662554F299320040CAC2DEB7A">1 om resultatet är större än 1 </li> 
-      </ul> <p>Tips:  Den här logiken hanterar värden som tillhandahålls från klienter baserat på tidigare versioner av <span class="codeph">fraserna/primetime-sdk-name</span>, där volymvärdena låg mellan 0 och 100. </p> </td> 
+      </ul> <p>Tips:  Den här logiken hanterar värden som tillhandahålls från klienter baserat på tidigare versioner av 
+      <span class="codeph">fraser/primetime-sdk-name</span>, där volymvärdena låg mellan 0 och 100. </p> </td> 
    </tr> 
    </tbody> 
    </table>
