@@ -10,6 +10,9 @@ topic-tags: migration
 discoiquuid: 8d9136bf-b3ae-450c-bd8a-0bb246527886
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '2343'
+ht-degree: 0%
 
 ---
 
@@ -55,9 +58,9 @@ Direktfakturering eliminerar behovet av att skapa manuella rapporter för faktur
 | Funktioner | Beskrivning |
 |--- |--- |
 | Moat-integrering | Stöd för visning av annonser från Moat. |
-| VHL 2.0 | Den senaste optimerade videointegrationen fångar biblioteksintegrationen för automatisk insamling av användningsdata för Adobe Analytics. |
+| VHL 2.0 | Den senaste optimerade videofilmen fångar biblioteksintegrationen för automatisk insamling av användningsdata för Adobe Analytics. |
 | Stöd för failover | Ytterligare strategier har implementerats för att fortsätta oavbruten uppspelning, trots fel på värdservrar, spellistfiler och segment. |
-| Direkt faktureringsintegrering | Faktureringsstatistik skickas till Adobe Analytics-backend, som certifieras av Adobe Primetime för strömmar som används av kunden. |
+| Direkt faktureringsintegrering | Faktureringsstatistik skickas till Adobe Analytics backend, som certifieras av Adobe Primetime för strömmar som används av kunden. |
 
 >[!NOTE]
 >
@@ -69,7 +72,7 @@ Att smidigt migrera från TVSDK 1.4 till 2.5 innebär att man måste byta till v
 
 TVSDK v1.4-bibliotek fungerar inte med och samexisterar inte med v2.5-bibliotek. Du måste använda v2.5-bibliotek med TVSDK 2.5 och migrera dina program och integreringar för att uppgradera till TVSDK 2.5. I det här dokumentet beskrivs hur och vad du ska ändra i programkoden och hur du åtgärdar fel under omkompileringen.
 
-Filen psdk.jar använder bibliotek från tredje part för att stödja olika funktioner. Du kan förhindra att biblioteken tas bort genom att inkludera följande i `proguard.cfg` filen:
+Filen psdk.jar använder bibliotek från tredje part för att stödja olika funktioner. Ta med följande i `proguard.cfg`-filen för att förhindra att biblioteken tas bort:
 
 ```java
 # Adobe TVSDK keep classes
@@ -78,14 +81,14 @@ Filen psdk.jar använder bibliotek från tredje part för att stödja olika funk
 { *; }
 ```
 
-I `build.gradle` filen måste du ta med kompileringsdirektivet för att inkludera TVSDK-baserade JAR-filer. Om appen innehåller Adobe Video Analytics måste du ta med kompileringsdirektivet för de ytterligare burar som krävs för Adobe Video Analytics-integrering i appen
+I `build.gradle`-filen måste du ta med kompileringsdirektivet för att inkludera TVSDK-baserade JAR-filer. Om appen innehåller Adobe Video Analytics måste du ta med kompileringsdirektivet för de ytterligare burar som krävs för Adobe Video Analytics-integrering i appen
 
 ```java
 # Compile Adobe TVSDK jars compile files('libs/psdk-va.jar')
 compile files('libs/VideoHeartbeat.jar')
 ```
 
-Flera mindre ändringar ingår inte i det här dokumentet. Om du vill se mindre ändringar i API:t läser du [TVSDK 2.5 för Android Java API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/index.html). Motsvarande API-referens för C++ har detaljerade beskrivningar. Analog dokumentation för C++ API finns i [TVSDK 2.5 för Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.5/index.html).
+Flera mindre ändringar ingår inte i det här dokumentet. Om du vill se mindre ändringar i API:t läser du [TVSDK 2.5 för Android Java API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/index.html). Motsvarande API-referens för C++ har detaljerade beskrivningar. Analog API-dokumentation för C++ finns i [TVSDK 2.5 för Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.5/index.html).
 
 Flera exempel på API-användning beskrivs i referensimplementeringen som distribueras med TVSDK.
 
@@ -125,7 +128,7 @@ Följande klasser tas bort och har inga motsvarigheter.
 
 De sista sex av dessa klasser är tillgängliga som hjälpklasser i referensimplementeringen.
 
-## Ändringar av namnutrymme {#namespace-changes}
+## Namnområdesändringar {#namespace-changes}
 
 API:t TVSDK 2.5 konsoliderar namnutrymmen.
 
@@ -217,7 +220,7 @@ Följande händelsekoder är nya i 2.5:
 * `TIMED_EVENT`
 * `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
-### Händelser med ändrat namn {#renamed-events}
+### Bytt namn på händelser {#renamed-events}
 
 | Nytt namn | Gammalt namn |
 |--- |--- |
@@ -238,9 +241,9 @@ Ett nytt sätt att konstruera `MediaPlayer` och ändra vissa metoder.
 
 **Ändringar i klassen MediaPlayer**
 
-Här är ändringarna av `MediaPlayer` klassen:
+Här är ändringarna av klassen `MediaPlayer`:
 
-* Enum `MediaPlayerStatus` ersätter `MediaPlayer.PlayerState`. Exempel:
+* Uppräkningen `MediaPlayerStatus` ersätter `MediaPlayer.PlayerState`. Exempel:
 
 ```java
 //TVSDK v1.4
@@ -265,7 +268,7 @@ public void onStatusChanged(MediaPlayerStatusChangeEvent event) {
 });
 ```
 
-* Nu anropas `MediaPlayer.seekToLocalTime()` metoden `MediaPlayer.seekToLocal`. Exempel:
+* Metoden `MediaPlayer.seekToLocalTime()` kallas nu `MediaPlayer.seekToLocal`. Exempel:
 
 ```java
 //TVSDK v1.4
@@ -277,7 +280,7 @@ public void seekToLocal(long localPosition) { mediaPlayer.seekToLocal(localPosit
 }
 ```
 
-* Metoden är nu `MediaPlayerView.notifyClick()` här `MediaPlayer.notifyClick()`. Exempel:
+* Metoden `MediaPlayerView.notifyClick()` är nu `MediaPlayer.notifyClick()`. Exempel:
 
 ```java
 //TVSDK v1.4
@@ -289,8 +292,8 @@ public void adClick() { mediaPlayer.notifyClick();
 }
 ```
 
-* Den tidigare `MediaPlayer.MediaPlayer.getNotificationHistory()` metoden är nu borta och ersätts inte.
-* Den första `MediaPlayer.replaceCurrentItem()` är uppdelad i två metoder: `replaceCurrentResource()`, som tar en instans av `MediaResource`, och `replaceCurrentItem()`, som tar en instans av `MediaPlayerItem`. Exempel:
+* Den tidigare `MediaPlayer.MediaPlayer.getNotificationHistory()`-metoden är nu borta och ersätts inte.
+* Den första `MediaPlayer.replaceCurrentItem()` delas upp i två metoder: `replaceCurrentResource()`, som tar en instans av `MediaResource` och `replaceCurrentItem()`, som tar en instans av `MediaPlayerItem`. Exempel:
 
 ```java
 //TVSDK v1.4
@@ -338,13 +341,13 @@ Du kan använda den här metoden för att växla mellan förinitierade MediaPlay
 
 **Konstruktorer ersätter statiska create()-metoder**
 
-Du kan använda konstruktorer i TVSDK v2.5 i stället för att använda `create()` metoder i TVSDK v1.4. Alla klasser med namn som börjar med Standard, till exempel `DefaultMediaPlayer`, `DefaultNetworkConfig`, `DefaultContentFactory`är inte tillgängliga i v2.5.
+Du kan använda konstruktorer i TVSDK v2.5 i stället för att använda metoderna `create()` för TVSDK v1.4. Alla klasser med namn som börjar med Standard, som `DefaultMediaPlayer`, `DefaultNetworkConfig`, `DefaultContentFactory`, är inte tillgängliga i v2.5.
 
 I vissa fall använder TVSDK v1.4 API följande mönster för att skapa klasser:
 
 1. Definiera ett gränssnitt (till exempel `MediaPlayer`).
 1. Ange en standardklass (till exempel `DefaultMediaPlayer`).
-1. Ange en `create()` metod i standardklassen för att tillhandahålla en klass som implementerar gränssnittet.
+1. Ange en `create()`-metod i standardklassen för att tillhandahålla en klass som implementerar gränssnittet.
 
 I TVSDK v2.5 är sådana gränssnitt konkreta klasser och du skapar instanser av dessa klasser med respektive konstruktor. Följande kodfragment visar den här skillnaden:
 
@@ -363,10 +366,10 @@ new MediaPlayer(getActivity().getApplicationContext()); return mediaPlayer;
 }
 ```
 
-Andra klasser som inte följer mönstret men använder `create()` metoder i 1.4 är:
+Andra klasser som inte följer mönstret men använder `create()`-metoder i 1.4 är:
 
 * MediaResource\
-   Den här användes tidigare `MediaResource.createFromUrl()`. Använd nu konstruktorn som tar en URL, resurstyp och metadata. Exempel:
+   Detta användes tidigare `MediaResource.createFromUrl()`. Använd nu konstruktorn som tar en URL, resurstyp och metadata. Exempel:
 
 ```java
 //TVSDK v1.4
@@ -393,8 +396,8 @@ Vissa klasser (till exempel `ContentFactory`) är abstrakta klasser utan offentl
 
 Följande ändringar påverkar klasser för undertextning:
 
-* När du hämtar textningsspår returneras bara de aktiva spåren `MediaPlayerItem.getClosedCaptionTracks()` .
-* `ClosedCaptionTrack` har inte längre någon `isActive()` metod.
+* När du hämtar spår för undertexter returnerar `MediaPlayerItem.getClosedCaptionTracks()` bara aktiva spår.
+* `ClosedCaptionTrack` har inte längre någon  `isActive()` metod.
 
 ```java
 //TVSDK v1.4
@@ -440,7 +443,7 @@ View.VISIBLE/*Visible*/);
 };
 ```
 
-## Ändringar i annonsering {#advertising-changes}
+## Reklamändringar {#advertising-changes}
 
 Det finns flera annonsrelaterade ändringar i version 2.5.
 
@@ -463,7 +466,7 @@ I TVSDK version 1.4 placeras den här filen under mappen assets i programmet och
 
 **Annonsfabriksbyte**
 
-`AdvertisingFactory` har fått sitt namn `ContentFactory`. Med `ContentFactory` hjälp av kan ni skapa anpassade arbetsflöden för annonsering genom att åsidosätta några av dess metoder. Använd return null för att behålla standardbeteendena, som i följande:
+`AdvertisingFactory` har fått sitt namn  `ContentFactory`. Med `ContentFactory` kan du skapa anpassade arbetsflöden för annonsering genom att åsidosätta några av dess metoder. Använd return null för att behålla standardbeteendena, som i följande:
 
 ```java
 //TVSDK v2.5
@@ -520,7 +523,7 @@ return adSettings;
 }
 ```
 
-* Enum `MetadataKeys` ersätter `DefaultMetadataKeys`. Alla nycklar i `DefaultMetadataKeys` finns inte i den nya versionen.
+* Uppräkningen `MetadataKeys` ersätter `DefaultMetadataKeys`. Alla nycklar i `DefaultMetadataKeys` finns inte i den nya versionen.
 
 ```java
 //TVSDK v1.4
@@ -544,7 +547,7 @@ vaMetadata = parseVideoAnalyticsMetadata(vaMetadataObj);
 }
 ```
 
-* Reklammetadata representeras nu av `AdvertisingMetadata` klassen, en underklass till Metadata, och lagras nu i `MediaPlayerItemConfig` snarare än `MediaResource`.
+* Advertising metadata representeras nu av klassen `AdvertisingMetadata`, en underklass till Metadata, och lagras nu i `MediaPlayerItemConfig` i stället för `MediaResource`.
 
 ```java
 //TVSDK v1.4
@@ -578,7 +581,7 @@ mediaPlayer.replaceCurrentResource(playerResource, mItemConfig);
 }
 ```
 
-Metadata för nätverkskonfiguration, som tidigare var medlem av `MediaResource` klassen, representeras nu av `NetworkConfiguration` klassen och lagras nu i `MediaPlayerItemConfig` stället för `MediaResource`.
+Metadata för nätverkskonfiguration, som tidigare var medlem av klassen `MediaResource`, representeras nu av klassen `NetworkConfiguration` och lagras nu i `MediaPlayerItemConfig` i stället för `MediaResource`.
 
 ```java
 //TVSDK v1.4
@@ -667,12 +670,12 @@ Följande ytterligare ändringar är tillgängliga i version 2.5:
 * Metoden `notifyClick()` har flyttats från `MediaPlayerView` till `MediaPlayer`.
 
 * `AdPolicySelector` är ett gränssnitt, inte en klass. Implementera alla dess metoder.
-* `AdPolicyInfo` innehåller nu en lista med `AdBreakTimelineItem`, inte `AdBreakPlacement`.
+* `AdPolicyInfo` innehåller nu en lista med  `AdBreakTimelineItem`, inte  `AdBreakPlacement`.
 
-* API-namnet för den `ContentResolver` abstrakta klassen har ändrats.
-* `PlacementOpportunityDetector` är inte längre tillgängligt. Utöka i stället den `OpportunityGenerator` abstrakta klassen. Referensimplementeringen innehåller ett exempel på detta.
+* API-namnet för den abstrakta klassen `ContentResolver` har ändrats.
+* `PlacementOpportunityDetector` är inte längre tillgängligt. Utöka i stället den abstrakta klassen `OpportunityGenerator`. Referensimplementeringen innehåller ett exempel på detta.
 
-* Konstruktorns parametrar är desamma, men i en annan ordning. `AdBreakPlacement` Ett exempel på implementering finns i Reference Player-implementeringen som medföljer produkten.
+* Parametrarna för konstruktorn `AdBreakPlacement` är desamma, men i en annan ordning. Ett exempel på implementering finns i Reference Player-implementeringen som medföljer produkten.
 
 ## Ändringar i DRM {#changes-in-drm}
 
@@ -829,13 +832,13 @@ public void onAuthenticationComplete(byte[] authenticationToken) { PMPDemoApp.lo
 };
 ```
 
-Den statiska `DRMManager` instansen som var tillgänglig i 1.4 efter att mediaplayer har skapats är nu tillgänglig efter att `onDRMMetadataInfo` händelseavlyssnaren har utlösts.
+Den statiska `DRMManager`-instansen som var tillgänglig i 1.4 efter att mediaplayer har skapats är nu tillgänglig efter att händelseavlyssnaren `onDRMMetadataInfo` har utlösts.
 
 ## Ändringar relaterade till adaptiv bithastighet (ABR) {#adaptive-bitrate-abr-related-changes}
 
 **Ändringar i konstanter**
 
-Många konstanter har ändrat typ från `String` till `int`. Till exempel: `MediaResourceType`, `ABRControlParameters`och `MediaPlayerStatusChangeEvent`.
+Många konstanter har ändrat typen från `String` till `int`. Till exempel: `MediaResourceType`, `ABRControlParameters` och `MediaPlayerStatusChangeEvent`.
 
 ```java
 //TVSDK v1.4
@@ -910,11 +913,11 @@ int nMinTrickPlayBitRate, int nMaxTrickPlayBitRate,
 int nMaxTrickPlayBandwidthUsage, double dMaxPlayoutRate)
 ```
 
-## Felhändelser och hantering {#error-events-and-handling}
+## Felhändelser och hantering av {#error-events-and-handling}
 
 **Ändringar i felhanteringen**
 
-Klassen har ersatts med `MediaError` `Notification` klassen. Den enda skillnaden mellan klasserna `MediaError` och `Notification` klasserna är att de senare inte innehåller något description-attribut. Felkoderna TVSDK 1.4 med värdena 101xxx, 102xxx,104xxx,106xxx,107xxx,109xxx finns inte i TVSDK 2.5. Information om uppspelningskoderna i TVSDK 2.5 finns i [Inbyggda värden](assets/psdk_android_2.5.pdf)för videouppspelning med fel.
+Klassen `MediaError` har ersatts med klassen `Notification`. Den enda skillnaden mellan klasserna `MediaError` och `Notification` är att de senare inte innehåller något description-attribut. Felkoderna TVSDK 1.4 med värdena 101xxx, 102xxx,104xxx,106xxx,107xxx,109xxx finns inte i TVSDK 2.5. Information om uppspelningskoderna i TVSDK 2.5 finns i [Inbyggda värden för videouppspelning](assets/psdk_android_2.5.pdf).
 
 Nedan följer exempel på felhantering i TVSDK 1.4 och 2.5:
 
@@ -958,7 +961,7 @@ default:
 };
 ```
 
-Alla fel som kan återställas behandlas som varningar och hanteras med hjälp av `NotificationEventListener` i TVSDK 2.5. Varningarna visas som meddelanden med `onOperationFailed` avlyssnaren i QOS-hanteraren i TVSDK 1.4 där meddelandet är en separat händelse, precis som i TVSDK 2.5. Varningen som hanteras i 1.4 och 2.5 är följande:
+Alla fel som kan återställas behandlas som varningar och hanteras med `NotificationEventListener` i TVSDK 2.5. Varningarna visas som meddelanden med `onOperationFailed`-avlyssnaren i QOS-hanteraren i TVSDK 1.4 där meddelandet är en separat händelse, precis som i TVSDK 2.5. Varningen som hanteras i 1.4 och 2.5 är följande:
 
 ```java
 //TVSDK v1.4
@@ -1040,7 +1043,7 @@ showToast(sb.toString()); PMPDemoApp.logger.d(LOG_TAG, sb.toString());
 
 **Nya undantag**
 
-Medan TVSDK v1.4 använde en kombination av null-värden returneras fel och en mängd undantag ( `MediaPlayerException`, `IllegalStateException`och `IllegalArgumentException`), TVSDK v2.5 `generatesMediaPlayerException` för alla fel.
+Medan TVSDK v1.4 använde en kombination av null-värden returneras fel och en mängd undantag ( `MediaPlayerException`, `IllegalStateException` och `IllegalArgumentException`), TVSDK v2.5 `generatesMediaPlayerException` för alla fel.
 
 >[!NOTE]
 >
@@ -1070,7 +1073,7 @@ mediaPlayer.setBufferControlParameters(getBufferParamsFromSettings());
 
 Det finns mindre ändringar i objektegenskaperna för QOSProvider:
 
-* Detta `TimeToFirstFrame` är inte tillgängligt i TVSDK 2.5.
+* `TimeToFirstFrame` är inte tillgängligt i TVSDK 2.5.
 * TVSDK 2.5 QOSProvider har en ny egenskap som avgör den upplevda bandbredden under en direktuppspelningssession.
 
 ```java
@@ -1092,9 +1095,9 @@ setQosItem("Time to prepare", (int) playbackInformation.getTimeToPrepare());
 setQosItem("Perceived Bandwidth", (int) playbackInformation.getPerceivedBandwidth());
 ```
 
-* Den finns `QOSEventListener::onOperationFailed()` inte längre i TVSDK 2.5. Varningarna som tidigare visades i den här händelseavlyssnaren visas nu i `NotificationEventListener::onNotification()` händelseavlyssnaren.
+* `QOSEventListener::onOperationFailed()` finns inte längre i TVSDK 2.5. Varningarna som tidigare visades i den här händelseavlyssnaren visas nu i `NotificationEventListener::onNotification()`-händelseavlyssnaren.
 
-* Händelseavlyssnarna `QOSProvider event listeners onBufferStart()`, `onBufferComplete()`, `onSeekStart()`, `onSeekComplete()`och `onLoadInfo()` är enskilda som är bundna till en mediaPlayer-instans.
+* `QOSProvider event listeners onBufferStart()`, `onBufferComplete()`, `onSeekStart()`, `onSeekComplete()` och `onLoadInfo()` är enskilda händelseavlyssnare som är bundna till en mediaPlayer-instans.
 
 ```java
 //TVSDK v1.4
@@ -1232,4 +1235,4 @@ LOG_TAG + "::LoadInformationEventListener#onLoadInfomation()", "Url: " + loadInf
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
