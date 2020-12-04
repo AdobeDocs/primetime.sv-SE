@@ -4,6 +4,9 @@ title: Alternativt ljud
 uuid: cc38ded2-45b7-4be4-8f46-a919fdaf79cf
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för 
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-När TVSDK skapar `MediaPlayerItem` instansen för den aktuella videon skapas ett `AudioTrack` objekt för varje tillgängligt ljudspår. Objektet innehåller en `name` egenskap, en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard.
+När TVSDK skapar instansen `MediaPlayerItem` för den aktuella videon skapas ett `AudioTrack`-objekt för varje tillgängligt ljudspår. Objektet innehåller en `name`-egenskap, en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard.
 
 När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill låta användaren välja ett, och ställa in videon som ska spelas upp med det valda spåret.
 
-Om ett ytterligare ljudspår blir tillgängligt efter att det har skapats `MediaPlayerItem`utlöses en `MediaPlayerItem.AUDIO_UPDATED` händelse av TVSDK.
+Om ett ytterligare ljudspår blir tillgängligt efter att `MediaPlayerItem` har skapats aktiveras en `MediaPlayerItem.AUDIO_UPDATED`-händelse av TVSDK, även om det är sällsynt.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -26,7 +29,7 @@ Följande API:er har lagts till som stöd för alternativt ljud:
 
 **hasAlternateAudio**
 
-Om det angivna mediet har ett annat ljudspår än standardspåret returnerar den här booleska funktionen `true`. Om det inte finns något alternativt ljudspår returneras `false`.
+Om det angivna mediet har ett annat ljudspår än standardspåret returnerar den här booleska funktionen `true`. Om det inte finns något alternativt ljudspår returnerar funktionen `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
