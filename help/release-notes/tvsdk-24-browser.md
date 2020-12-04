@@ -10,6 +10,9 @@ products: SG_PRIMETIME
 discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '6834'
+ht-degree: 0%
 
 ---
 
@@ -32,11 +35,11 @@ Den här versionen innehåller följande information:
 
 ・ [Webbläsare-TVSDK API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-・ Programguide [för](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf)webbläsare TVSDK.
+・ [Programmeringsguide för webbläsare-TVSDK](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
 
 ・ [TVSDK for 1.4 DHLS to Browser TVSDK 2.4 Migration Guide](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
-・ [Konvertera från webbläsare TVSDK 2.4.6 till version 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
+・ [Konverterar från Browser TVSDK 2.4.6 till version 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
 
 ・ En referensimplementering som ingår i bygget.
 
@@ -44,9 +47,9 @@ Den här versionen innehåller följande information:
 >
 >*En fullständig lista över säkerhetsaspekter för den här versionen finns i Säkerhetsfrågor.
 
-## Nyheter och funktioner {#what-s-new-and-supported-features}
+## Nyheter och funktioner som stöds {#what-s-new-and-supported-features}
 
-Den här versionen av Browser TVSDK innehåller nya funktioner som du kan använda för att förbättra videoprogrammen.
+I den här versionen av Browser TVSDK finns nya funktioner som du kan använda för att förbättra dina videoprogram.
 
 **Nytt i 2.4.12-uppdateringen (build 2014)**
 
@@ -54,23 +57,23 @@ Följande tillägg finns som en del av Browser TVSDK 2.4.12 Update (Build 204):
 
 * Implementeringen av volym-API för AdobePSDK.MediaPlayer ändras så att automatisk uppspelning tillåts på iOS när uppspelningen stängs av.
 
-・ Ett nytt API `auditudeSettings.ignoreVPAIDAds`läggs till för att tillåta ignorering av VPAID-annonser som tagits emot från Auditude-servern. API:t fungerar inte för Flash Fallback.
+・ Ett nytt API, `auditudeSettings.ignoreVPAIDAds`, läggs till för att tillåta ignorering av VPAID-annonser som tagits emot från Auditude-servern. API:t fungerar inte för Flash Fallback.
 
 **Version 2.4.11**
 
 Följande förbättringar och tillägg finns i Browser TVSDK 2.4.11:
 
-・ HLS Live-segmentfel stöds för MSE- och Flash-reservlägen.
+・ HLS Live-segmentredundans stöds för MSE och Flash.
 
 ・ Stöd för `AuditudeSettings.creativeRepackagingDomain` API finns nu även för MSE. Tidigare hade det bara stöd för Flash-reservläge.
 
-・ Versionen innehåller korrigeringar för allvarliga kundproblem. Se *Problem åtgärdade* en lista.
+・ Versionen innehåller korrigeringar för allvarliga kundproblem. Se *Åtgärdade problem* en lista.
 
 **Version 2.4.10**
 
 Följande förbättringar och tillägg finns i Browser TVSDK 2.4.10:
 
-・ TVSDK tillhandahåller enableLogging() för att aktivera eller inaktivera loggningen. Mer information finns i [API-](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)dokumentationen.
+・ TVSDK tillhandahåller enableLogging() för att aktivera eller inaktivera loggningen. Mer information finns i [API-dokumentationen](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)för användning.
 
 ・ TVSDK stöder inte längre standardkapitel när Adobe Analytics används. Definiera och hantera kapitel med ditt program.
 
@@ -84,9 +87,9 @@ Följande förbättringar och tillägg finns i Browser TVSDK 2.4.9:
 
 ・ ID3 v2.4.0-bildrutor stöds med Safari-videotaggen för HLS VOD- och Live-strömmar.
 
-・ Implementering av säker annonsinläsning säkerställer att annonsserveranrop uppgraderas för att skydda HTTP baserat på API-konfiguration. Mer information finns i klasserna AdobePSDK.AdvertisingMetadata och AdobePSDK.ForceHttpsAdConfiguration. Den här funktionen stöds inte i Flash grundläge.
+・ Implementering av säker annonsinläsning säkerställer att annonsserveranrop uppgraderas för att skydda HTTP baserat på API-konfiguration. Mer information finns i klasserna AdobePSDK.AdvertisingMetadata och AdobePSDK.ForceHttpsAdConfiguration. Den här funktionen stöds inte i Flash i grundläge.
 
-・ Information om annonserings-ID och tilläggsinformation som hör till VAST 3.0-svar är nu tillgängliga för programmet av TVSDK och kan användas för att implementera Moat-integrering för annonsmätningar. Mer information finns i API:t för AdobePSDK.NetworkAdInfo. Detta stöds inte i Flash-fallback-läge.
+・ Information om annonserings-ID och tilläggsinformation som hör till VAST 3.0-svar är nu tillgängliga för programmet av TVSDK och kan användas för att implementera Moat-integrering för annonsmätningar. Mer information finns i API:t för AdobePSDK.NetworkAdInfo. Detta stöds inte i Flash i grundläge.
 
 ・ Klassen AdobePSDK.ForceHttpsConfiguration är inte längre tillgänglig. Den slutförs av
 
@@ -96,7 +99,7 @@ Klassen AdobePSDK.ForceHttpsAdConfiguration.
 
 **Nytt i 2.4.8-uppdateringen (build 6002)**
 
-Den här uppdateringen innehåller korrigeringar för viktiga kundproblem. En lista finns i *Åtgärdade problem*.
+Den här uppdateringen innehåller korrigeringar för viktiga kundproblem. En lista finns i *Åtgärdade fel*.
 
 **Version 2.4.8**
 
@@ -104,9 +107,9 @@ Följande förbättringar och tillägg finns i Browser TVSDK 2.4.8:
 
 ・ SDK är nu kompatibelt med Chrome EME och de bästa metoderna som är tillgängliga från och med Chrome v58. Mer information finns i [https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
-・ UI Framework har nu stöd för HLS Access DRM i arbetsflödet Flash, Ad only och Targeting Info.
+・ UI Framework har nu stöd för HLS Access DRM i arbetsflödet Flash, endast annons och målinformation.
 
-・ API:t setDRMAuthenticateData läggs till i UI Framework. Anropa detta API om du vill spela upp strömmar som skyddas med Adobe Access DRM. Attributet drmAuthenticateData kan också anges i spelaren. Mer information finns [i ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)AdobePSDK.videoBehavior.
+・ API:t setDRMAuthenticateData läggs till i UI Framework. Anropa detta API om du vill spela upp strömmar som skyddas med Adobe Access-DRM. Attributet drmAuthenticateData kan också anges i spelaren. Mer information finns i [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html).
 
 **Version 2.4.7**
 
@@ -126,7 +129,7 @@ I det här verktyget kan du välja olika inställningar, klicka på **Testa konf
 
 ・ MediaPlayerItemConfig-API:t har lagts till i gränssnittsramverket
 
-Olika funktioner, som advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscribeTags, adTags, thumbnailScrubber, billingMetricsConfiguration, kan konfigureras med MediaPlayerItemConfig. Mer information finns i dokumentationen för AdobePSDK.MediaPlayerItemConfig i [webbläsarens TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Olika funktioner, som advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscribeTags, adTags, thumbnailScrubber, billingMetricsConfiguration, kan konfigureras med MediaPlayerItemConfig. Mer information finns i dokumentationen för AdobePSDK.MediaPlayerItemConfig i [Browser TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [dokumentationen](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 I UI Framework har sättet att skicka nätverkskonfigurationer via spelarkonfigurationen ändrats.
 
@@ -162,11 +165,11 @@ I UI Framework har sättet att skicka nätverkskonfigurationer via spelarkonfigu
 
 DRM-konfigurationer och Analytics Tracking kan aktiveras via UI Framework.
 
-* Tillägg av `AdobePSDK.embedSWFinFullScreenDiv` API
+* Tillägg av API:t `AdobePSDK.embedSWFinFullScreenDiv`
 
 Det nya API:t ger spelarappen flexibilitet att välja den div som den kan bädda in filen FlashFallback.swf i.
 
-* Ersatt `getVersion`API från `AdobePSDK.MediaPlayer` klassen med `AdobePSDK.Version` klass för versionsrelaterad information för TVSDK. Mer information finns i `AdobePSDK.Version` API [här](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
+* Ersatte `getVersion`API från klassen `AdobePSDK.MediaPlayer` med klassen `AdobePSDK.Version` för versionsrelaterad information för TVSDK. Mer information finns i `AdobePSDK.Version` API [här](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
 **Version 2.4.6**
 
@@ -190,7 +193,7 @@ Följande funktioner är nya i version 2.4.5:
 
 * **Full Event Replay and Ads**
 
-   HLS FER-strömmar (Full Event Replay) har nu stöd för annonsupplösning och annonsbeteenden. Om du vill aktivera det här stödet anger du annonssignaleringsläget till `MANIFEST_CUES` när du skapar `MediaPlayerItemConfig` objektet.
+   HLS FER-strömmar (Full Event Replay) har nu stöd för annonsupplösning och annonsbeteenden. Om du vill aktivera det här stödet anger du annonssignaleringsläget till `MANIFEST_CUES` när du skapar `MediaPlayerItemConfig`-objektet.
 
 * **MediaplayerView ScalePolicy Support**
 
@@ -198,11 +201,11 @@ Följande funktioner är nya i version 2.4.5:
 
 * **Stöd för anamorfiskt innehåll**
 
-   Anamorfisk innehållsuppspelning stöds nu när MSE och Flash-uppspelning används.
+   Uppspelning av anamorfiskt innehåll stöds nu när MSE och Flash används.
 
 * **Selektiv tillämpning av`withCredentials`**
 
-Om `withCredentials` är true kan inte huvudet `Access-Control-Allow-Origin` ställas in på ett jokertecken. Beroende på serverns svar kommer Browser TVSDK att välja vilket `withCredentials` attribut som ska användas. Mer information om det här stödet finns i [Webbläsare-TVSDK API-dokument](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Om `withCredentials` är true kan inte huvudet `Access-Control-Allow-Origin` anges till ett jokertecken. Beroende på serverns svar kommer Browser TVSDK att välja attributet `withCredentials`. Mer information om det här stödet finns i [Webbläsare-TVSDK API docs](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 **Version 2.4.4**
 
@@ -234,11 +237,11 @@ Följande funktioner var nya i version 2.4.2:
 
 * **API-paritet**
 
-En fullständig lista över API-paritet finns i [TVSDK för 1.4 DHLS till Browser TVSDK 2.4 Migreringshandbok](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+En fullständig lista över API-paritet finns i [TVSDK for 1.4 DHLS to Browser TVSDK 2.4 Migration Guide](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 * **Stöd för Sample-AES**
 
-   Den här versionen har stöd för Sample-AES-krypterad innehållsuppspelning på MSE- och Flash-fallback. Kravet på att lagra AES-innehåll över säkert ursprung på Google Chrome har tagits bort.
+   Den här versionen har stöd för Sample-AES-krypterad innehållsuppspelning på MSE och Flash. Kravet på att lagra AES-innehåll över säkert ursprung på Google Chrome har tagits bort.
 
 * **Stöd för AAC-behållare**
 
@@ -321,7 +324,7 @@ Browser TVSDK har specifika krav för de plattformsnivåer och den programvara s
    * Krom 33+
    * Firefox 38+
 
-### Webbkonfigurationer för mobiler {#mobile-web-configurations}
+### Mobila webbkonfigurationer {#mobile-web-configurations}
 
 * Android 4.4
 
@@ -353,7 +356,7 @@ Browser TVSDK har specifika krav för de plattformsnivåer och den programvara s
  <tbody> 
   <tr> 
    <td><p><strong>Teknik</strong> </p> </td> 
-   <td><p><strong>Videotagg</strong><sup>1 för webbläsare TVSDK</sup></p> </td> 
+   <td><p><strong>Videotagg</strong><sup> 1 för webbläsare TVSDK</sup></p> </td> 
    <td><p><strong>Webbläsare: TVSDK MSE</strong></p> </td> 
    <td><p><strong>Flash</strong></p> </td> 
    <td><p><strong>Standardteknik</strong></p> </td> 
@@ -434,7 +437,7 @@ Här är en lista över funktioner som stöds och inte stöds i den här version
 
 2 Firefox är som standard Flash Player för version 41 eller tidigare.
 
-### Funktioner för MP4-ljud {#mp-audio-features-1}
+### MP4-ljudfunktioner {#mp-audio-features-1}
 
 **Tabell 2: Kärnuppspelning**
 
@@ -442,12 +445,12 @@ Här är en lista över funktioner som stöds och inte stöds i den här version
 |--- |--- |--- |--- |--- |--- |
 | Uppspelning | MP4 VOD | Allmän uppspelning (Spela upp, Pausa, Sök) | Stöds inte | Y | Y |
 
-**Tabell 4: Inläggning av huvudannonser**
+**Tabell 3: Core Ad Insertion**
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Annonsinfogning | MP4 VOD | Förrullning (MP4) | Stöds inte | Y | Y |
-| Annonsinfogning | MP4 VOD | Efterrullning (MP4) | Stöds inte | Y | Y |
+| Ad Insertion | MP4 VOD | Förrullning (MP4) | Stöds inte | Y | Y |
+| Ad Insertion | MP4 VOD | Efterrullning (MP4) | Stöds inte | Y | Y |
 
 Mer information om stöd för HLS- och DASH-funktioner finns nedan.
 
@@ -728,7 +731,7 @@ Följande funktioner stöds:
    <td><p><strong>HTML5: Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Förrullning (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -736,7 +739,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Mid-roll (HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -744,7 +747,7 @@ Följande funktioner stöds:
    <td><p>Plattformsbegränsning</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Efterrullning (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -752,7 +755,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>Annonsupplösning och beteenden</p> </td> 
    <td><p>Y</p> </td> 
@@ -760,7 +763,7 @@ Följande funktioner stöds:
    <td><p>Plattformsbegränsning</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Standardannonspolicy</p> </td> 
    <td><p>Y</p> </td> 
@@ -768,7 +771,7 @@ Följande funktioner stöds:
    <td><p>Plattformsbegränsning</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -776,7 +779,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -784,7 +787,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Creative Repackaging (MP4 to HLS)</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -807,7 +810,7 @@ Följande funktioner stöds:
    <td><p><strong>HTML5: Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Endast annons</p> </td> 
    <td><p>Stöds inte</p> </td> 
@@ -815,7 +818,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Målparametrar</p> </td> 
    <td><p>Y</p> </td> 
@@ -823,7 +826,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Egna parametrar</p> </td> 
    <td><p>Y</p> </td> 
@@ -831,7 +834,7 @@ Följande funktioner stöds:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Anpassad annonspolicy</p> </td> 
    <td><p>Y</p> </td> 
@@ -839,7 +842,7 @@ Följande funktioner stöds:
    <td><p>Plattformsbegränsning</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Lazy och laddning</p> </td> 
    <td><p>Y</p> </td> 
@@ -847,7 +850,7 @@ Följande funktioner stöds:
    <td><p>Plattformsbegränsning</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Kompletterande annonser, banners, klickbara annonser</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -855,7 +858,7 @@ Följande funktioner stöds:
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>SWF</p> </td> 
@@ -894,15 +897,15 @@ Här är funktionsmatrisen för DASH-funktionerna i Browser TVSDK.
 
 ・ *Uppspelningsfunktioner för DASH Core*
 
-・ *Avancerade funktioner för DASH-uppspelning*
+・ *Avancerade DASH-uppspelningsfunktioner*
 
 ・ *Skyddsfunktioner för DASH-innehåll*
 
-・ *Funktioner för annonsinfogning med DASH Core*
+・ *Funktioner för annonsinfogning i DASH Core*
 
 ・ *Avancerade funktioner för annonsinfogning i DASH*
 
-・ *DASH-integreringar*
+・ *DASH-integrering*
 
 >[!NOTE]
 >
@@ -1106,49 +1109,49 @@ Följande funktioner stöds:
    <td><p><strong>HTML5 FF, IE, Chrome, Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Förrullning (MP4/DASH)</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Mid-roll (DASH)</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Efterrullning (MP4/DASH)</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>Annonsupplösning och beteenden</p> </td> 
    <td><p>Stöds inte</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Standardannonspolicy</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Creative Repackaging (MP4 to DASH)</p> </td> 
    <td><p>Stöds inte</p> </td> 
@@ -1167,43 +1170,43 @@ Följande funktioner stöds:
    <td><p><strong>HTML5</strong> FF, IE, Chrome, Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Endast annons</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Målparametrar</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Egna parametrar</p> </td> 
    <td><p>Endast VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Anpassad annonspolicy</p> </td> 
    <td><p>Stöds inte</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Lazy och laddning</p> </td> 
    <td><p>Stöds inte</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Pressmeddelanden, banners, klickbara annonser</p> </td> 
    <td><p>Stöds inte</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Annonsinfogning</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>Stöds inte</p> </td> 
@@ -1240,13 +1243,13 @@ Följande problem har åtgärdats i Browser TVSDK version 2.4.12 Update (Build 2
 
 ・ **21465**- Nyckelsystemåtkomst nekas vid uppspelning av en DRM-skyddad DASH-ström efter att en DASH Live-ström spelats upp.
 
-・ **21442**- Aktivera automatisk uppspelning av innehåll på iOS-webben efter att en förhandsgranskning har spelats upp med en användargest.
+・ **21442**- Aktivera automatisk uppspelning av innehåll på iOS-webben efter att annonsen spelats upp med en användargest.
 
-・ **21240**- Tillhandahålls API för att filtrera VPAID-annonser som tolkas från Auditude/VMAP.
+・ **21240**- Angivet API för att filtrera VPAID-annonser som tolkas från Auditude/VMAP.
 
 **Problem som har korrigerats i version 2.4.11**
 
-Följande problem har åtgärdats i Browser TVSDK version 2.4.10:
+Följande problem har åtgärdats i Browser TVSDK version 2.4.11:
 
 **Kärnfunktioner för uppspelning:**
 
@@ -1308,7 +1311,7 @@ Följande problem har åtgärdats i Browser TVSDK version 2.4.9:
 
 ・ **20046**: Datum och tid för program tas emot som nyckel i stället för som värde när det tas emot som tidsbestämda metadataobjekt.
 
-・ **20047**: useDefaultResizeHandler genererar ett fel med Flash-reserv.
+・ **20047**: useDefaultResizeHandler genererar ett fel med Flash fallback.
 
 ・ **20179**: Flash Fallback fungerar inte med Flash Player v25.0.0.171.
 
@@ -1346,11 +1349,11 @@ Följande problem har åtgärdats i Browser TVSDK version 2.4.8 Update (Build 60
 
 ・ **19780:** Korrigerar annonsuppspelningen med HLS-innehåll som har brutits i Mozilla Firefox v53.
 
-・ **1987 och 19744:** Problemen åtgärdar inkonsekvensen i val av bithastighet efter en sökåtgärd. Nu är bithastigheten som väljs vid sökning det lägre värdet för den aktuella bithastigheten och bithastigheten vid starten.
+・ **19877 och 19744:** Problemet åtgärdar inkonsekvensen i val av bithastighet efter en sökåtgärd. Nu är bithastigheten som väljs vid sökning det lägre värdet för den aktuella bithastigheten och bithastigheten vid starten.
 
-・ **1981:** Uppspelningen sitter fast och buffringsövertäckningen visas oändligt länge efter att sökningen har utförts i 3-4 gånger.
+・ **19881:** Uppspelningen fastnade och buffringsövertäckningen visas oändligt när sökningen har utförts i 3-4 gånger.
 
-・ **1984:** Bekräfta överensstämmelse med kraven för betaversionen av Chrome 59 VMP (Beta Verified Media Path). bTVSDK kunde spela upp DRM-innehåll av typen Widewin med Chrome 59 Beta.
+・ **19884:** Bekräfta överensstämmelse med kraven för Beta Verified Media Path (VMP) i Chrome 59. bTVSDK kunde spela upp DRM-innehåll av typen Widewin med Chrome 59 Beta.
 
 ・ **19916:** DRM-uppspelningen i UI-Framework avbröts. Nu anropas obtainLicense även om det inte finns någon princip i metadata.
 
@@ -1370,11 +1373,11 @@ Följande problem har åtgärdats i Browser TVSDK 2.4.8:
 
 ・ **19219**: Ads only playback fungerar inte via UI framework.
 
-・ **1922**: AES-128-nyckeln begärs en gång för en spellista och efterföljande begäranden hanteras från cachen. Tidigare begärdes det för varje segment.
+・ **19222**: AES-128-nyckeln begärs en gång för en spellista och efterföljande begäranden hanteras från cachen. Tidigare begärdes det för varje segment.
 
 ・ **19597**: &quot;Uncaught TypeError: Det går inte att läsa egenskapen &#39;log&#39; för undefined&#39; som har påträffats i Chrome Canary-byggen.
 
-・ **19605**: adRequestDomain var inte tillgängligt i Flash-reservalsläget.
+・ **19605**: adRequestDomain var inte tillgängligt i Flash-reservalsläge.
 
 ・ **19608**: VMAP-annonser infogades inte för HLS Live-strömmar. SDK hanterar nu referenspunkter och förlitar sig inte på tidsförskjutningsvärden i VMAP-svar.
 
@@ -1400,7 +1403,7 @@ Följande problem har åtgärdats i version 2.4.7:
 
 Följande problem har åtgärdats i version 2.4.6:
 
-・ **18093**: TimedMetadata för taggen bredvid taggen subscribed returneras när du använder Flash Player version 24 i Flash-återställningsläget.
+・ **18093**: TimedMetadata för taggen bredvid taggen subscribed returneras när du använder Flash Player version 24 i Flash-läget.
 
 **Problem som har korrigerats i version 2.4.4**
 
@@ -1441,8 +1444,8 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
   <tr> 
    <td>VOD + Live</td> 
    <td>Allmän uppspelning (Spela upp, Pausa, Sök)</td> 
-   <td><p>・ Andra medieformat än HLS stöds inte.</p> <p>8799: Flash-reservlösningar tar inte hand om blandat innehåll och därför måste man se till att innehåll, annons och andra URL:er inte leder till blandat innehåll (säkert och osäkert innehåll tillsammans).</p> <p>・ 19271: Multivisningsuppspelning via UI-ramverket stöds inte i Flash-fallback-läge.</p> <p>・ Flash-reservlösningar fungerar inte i Microsoft Internet Explorer 8 och 9 i Windows 7 eftersom dessa versioner inte stöds av SDK:n.</p> <p>・ 20262: Flash-reservversionen lägger till anpassade parametrar i informationslistan för målinriktning. Även prioritetsordningen för anpassade parametrar skiljer sig åt när det gäller Flash och MSE.</p> <p>・ 20653: Browser TVSDK Flash fallback fungerar inte på Win10 med Creators Update.</p> <p>・ Flash Fallback fungerar med Flash Player version 23 och senare.</p> <p>・ 20087 - Beta för Chrome 59 med</p> <p>Flash 25.0.0.171</p> <p>Beta (standard) fungerar inte HLS-uppspelning i Flash-läget. Det fungerar bra på Canary.</p> </td> 
-   <td><p>・ 12563: Streckbilder med ljudkodek mp4a.40.02 spelas inte upp i Firefox på grund av att ljudkodeksträngen i MPD inte stöds. Ljudkodek mp4a.40.2 stöds.</p> <p>15029: När du växlar mellan videoklipp i multiView i UI-Framework uppdateras inte knappen för uppspelning/paus.</p> <p>・ 16034:I Windows 8.1 IE leder anrop av reset() till ett okänt MIME-typfel. Läs in mediet igen för att återuppta uppspelningen.</p> <p>・ 18235: Vissa sökproblem har observerats med DASH-vodströmmar med annonser.</p> <p>・ 18727: Fel-API stöds inte för MSE</p> <p>18750: Statusändringshändelser kanske inte är i ordning i vissa fall för både SDK- och UI-ramverket och i UI-ramverket saknas IDLE- och Initializing StatusChange-händelser för händelseavlyssnare som lagts till efter att resursen har lästs in.</p> <p>・ 18889: Om MediaPlayer är i FEL-läge returneras inte visningsobjektet.</p> <p>・ 19039: Om AdobePSDK. MediaPlayer. seekToLocal() används med ett värde som är större än EOF, och uppspelningen startar från början med MSE.</p> <p>・ 19049: Inget feltillstånd har rapporterats för Flash Player i Chrome, IE eller Firefox när video blockeras under uppspelningen.</p> <p>・ 17205: Videouppspelningen avbryts vid uppspelning av omultiplicerad ström under några timmar medan ljudet fortsätter att spelas upp (Chromium-problem nr 664033).</p> <p>・ 12308: DASH-strömmar med composition_time_offset angiven kan ha TimeStampOffset tillämpat på den i Chrome-webbläsaren, vilket leder till negativ avkodningstid och därmed ett MEDIA_ERR_SRC_NOT_SUPPORTED-fel (Chromium-problem nr 398141).</p> <p>・ 14126: Uppspelningen kan stoppas i Firefox (utgåva 1316024) på grund av den interna luckan i MSE-källbufferten. Försök att söka för att återuppta uppspelningen.</p> <p>・ 1915: MS Edge och IE 11 (Win 8.1 och 10) anger inte Origin till null vid CORS-omdirigering och misslyckas ändå eftersom rubriken inte är null vilket leder till uppspelningsfel.</p> <p>・ 19861: Problem med att lägga till beteende i källbuffert för media som redan spelats upp. Chrome avvisar det tillagda fragmentet inklusive moov, vilket orsakar efterföljande avkodningsfel. (Krom nr 735335)</p> <p>19921: Uppspelning stoppas för visst HLS-innehåll trots att det har buffrats (Chromium-problem nr 713540)</p> <p>・ 20444:Om du söker till slutet av buffertintervallet på IE och Edge kan uppspelningen stoppas.</p> <p>・ 2011: Ibland kan avvisning av sökning observeras för HLS-strömmar med eller utan annonser.</p> <p>・ 20743: I Windows 10 Chrome spelas HLS Live-strömmen upp i några sekunder innan MP4-uppspelningen spelas upp.</p> <p>・ 21043: Videodimensionen kanske inte stämmer vid den första inläsningen på grund av brist på metadata.</p> <p>・ 21115: Android-användargest krävs för att starta uppspelningen om det finns annonsutrymme före uppspelning för videor i en spellista.</p> <p>・ HLS Live har inte stöd för tidsstämpelrollover.</p> <p>・ AAC-SSR-ljud stöds inte.</p> <p>Ljudkodekar AC3 och Enhanced AC3 stöds inte.</p> <p>・ För strömmar med tidsstämpelavbrott men utan kontinuitetsmarkörer</p> <p>・ Uppspelning kan ha problem och felaktig sökning på grund av hopp.</p> <p>・ Innehållets längd och uppspelningstiden kanske inte stämmer överens.</p> <p>・ Ojämnheter mellan representationer och renderingar bör överensstämma med andra metoder kan leda till problem med synkronisering och kvarvarande.</p> <p>・ Bildtexter och WebVTT kanske inte visas i närheten av strömmens slut.</p> <p>・ Ändringar i ljudkodeken stöds inte vid tidsstämpelhopp.</p> <p>・ Annonsinfogning stöds inte.</p> <p>・ Snabbläge framåt kan leda till uppspelningsloop på Win 8.1 IE 11 (MS-problem 12446268).</p> <p>DASH:</p> <p>・ För liveströmmar stöds liveprofiler med dynamisk typ.</p> <p>・ För VoD-strömmar stöds live-profiler med statisk typ.</p> <p>För VoD-strömmar är ondemand-profilen inte certifierad för annonsarbetsflöden.</p> </td> 
+   <td><p>・ Andra medieformat än HLS stöds inte.</p> <p>8799: Flash reservlösningar tar inte hand om blandat innehåll och därför måste det säkerställas att innehåll, annons och andra URL:er inte leder till blandat innehåll (säkert och osäkert innehåll tillsammans).</p> <p>・ 19271: Uppspelning av flera vyer via UI-ramverket stöds inte i Flash-fallback-läge.</p> <p>・ Flash fungerar inte i Microsoft Internet Explorer 8 och 9 i Windows 7 eftersom dessa versioner inte stöds av SDK:n.</p> <p>・ 20262: Flash fallback lägger till anpassade parametrar i målinformationslistan. Även prioritetsordningen för anpassade parametrar är annorlunda för Flash och MSE.</p> <p>・ 20653: Webbläsarens TVSDK-reservlösning för Flash fungerar inte på Win10 med Creators Update.</p> <p>・ Flash Fallback fungerar med Flash Player version 23 och senare.</p> <p>・ 20087 - Beta för Chrome 59 med</p> <p>Flash 25.0.0.171</p> <p>Beta (standard) fungerar inte HLS-uppspelning i läget Flash Fallback. Det fungerar bra på Canary.</p> </td> 
+   <td><p>・ 12563: Streckbilder med ljudkodek mp4a.40.02 spelas inte upp i Firefox på grund av att ljudkodeksträngen i MPD inte stöds. Ljudkodek mp4a.40.2 stöds.</p> <p>15029: När du växlar mellan videoklipp i multiView i UI-Framework uppdateras inte knappen för uppspelning/paus.</p> <p>・ 16034:I Windows 8.1 IE leder anrop av reset() till ett okänt MIME-typfel. Läs in mediet igen för att återuppta uppspelningen.</p> <p>・ 18235: Vissa sökproblem har observerats med DASH-vodströmmar med annonser.</p> <p>・ 18727: Fel-API stöds inte för MSE</p> <p>18750: Statusändringshändelser kanske inte är i ordning i vissa fall för både SDK- och UI-ramverket och i UI-ramverket saknas IDLE- och Initializing StatusChange-händelser för händelseavlyssnare som lagts till efter att resursen har lästs in.</p> <p>・ 18889: Om MediaPlayer är i FEL-läge returneras inte visningsobjektet.</p> <p>・ 19039: Om AdobePSDK. MediaPlayer. seekToLocal() används med ett värde som är större än EOF, och uppspelningen startar från början med MSE.</p> <p>・ 19049: Inget feltillstånd rapporterades för Flash Player i Chrome, IE och Firefox när videon blockeras under uppspelningen.</p> <p>・ 17205: Videouppspelningen avbryts vid uppspelning av omultiplicerad ström under några timmar medan ljudet fortsätter att spelas upp (Chromium-problem nr 664033).</p> <p>・ 12308: DASH-strömmar med composition_time_offset angiven kan ha TimeStampOffset tillämpat på den i Chrome-webbläsaren, vilket leder till negativ avkodningstid och därmed ett MEDIA_ERR_SRC_NOT_SUPPORTED-fel (Chromium-problem nr 398141).</p> <p>・ 14126: Uppspelningen kan stoppas i Firefox (utgåva 1316024) på grund av den interna luckan i MSE-källbufferten. Försök att söka för att återuppta uppspelningen.</p> <p>・ 1915: MS Edge och IE 11 (Win 8.1 och 10) anger inte Origin till null vid CORS-omdirigering och misslyckas ändå eftersom rubriken inte är null vilket leder till uppspelningsfel.</p> <p>・ 19861: Problem med att lägga till beteende i källbuffert för media som redan spelats upp. Chrome avvisar det tillagda fragmentet inklusive moov, vilket orsakar efterföljande avkodningsfel. (Krom nr 735335)</p> <p>19921: Uppspelning stoppas för visst HLS-innehåll trots att det har buffrats (Chromium-problem nr 713540)</p> <p>・ 20444:Om du söker till slutet av buffertintervallet på IE och Edge kan uppspelningen stoppas.</p> <p>・ 2011: Ibland kan avvisning av sökning observeras för HLS-strömmar med eller utan annonser.</p> <p>・ 20743: I Windows 10 Chrome spelas HLS Live-strömmen upp i några sekunder innan MP4-uppspelningen spelas upp.</p> <p>・ 21043: Videodimensionen kanske inte stämmer vid den första inläsningen på grund av brist på metadata.</p> <p>・ 21115: Android-användargest krävs för att starta uppspelningen om det finns annonsutrymme före uppspelning för videor i en spellista.</p> <p>・ HLS Live har inte stöd för tidsstämpelrollover.</p> <p>・ AAC-SSR-ljud stöds inte.</p> <p>Ljudkodekar AC3 och Enhanced AC3 stöds inte.</p> <p>・ För strömmar med tidsstämpelavbrott men utan kontinuitetsmarkörer</p> <p>・ Uppspelning kan ha problem och felaktig sökning på grund av hopp.</p> <p>・ Innehållets längd och uppspelningstiden kanske inte stämmer överens.</p> <p>・ Ojämnheter mellan representationer och renderingar bör överensstämma med andra metoder kan leda till problem med synkronisering och kvarvarande.</p> <p>・ Bildtexter och WebVTT kanske inte visas i närheten av strömmens slut.</p> <p>・ Ändringar i ljudkodeken stöds inte vid tidsstämpelhopp.</p> <p>・ Annonsinfogning stöds inte.</p> <p>・ Snabbläge framåt kan leda till uppspelningsloop på Win 8.1 IE 11 (MS-problem 12446268).</p> <p>DASH:</p> <p>・ För liveströmmar stöds liveprofiler med dynamisk typ.</p> <p>・ För VoD-strömmar stöds live-profiler med statisk typ.</p> <p>För VoD-strömmar är ondemand-profilen inte certifierad för annonsarbetsflöden.</p> </td> 
    <td><p>・ DASH Live- och DASH Video on Demand-strömmar stöds inte.</p> <p>・ PIP-videouppspelning (Picture in Picture) stöds inte i iOS i helskärmsläge.</p> <p>I Safari-tillägget (Video Tag) fungerar inte mindre manifest utan rätt innehållstyphuvud.</p> </td> 
    <td><p>・ applicationID i avsändarappen måste vara detsamma som genereras när mottagarens URL registreras som en anpassad mottagarapp.</p> <p>・ Referensspelaren är certifierad för DASH-arbetsflöden. Gränssnittsramverket är inte certifierat.</p> <p>En lista över mediekodekar som stöds finns <a href="https://developers.google.com/cast/docs/media"><em>här</em></a>.</p> </td> 
   </tr> 
@@ -1481,7 +1484,7 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
   <tr> 
    <td>VOD + Live</td> 
    <td>Manifestredundans</td> 
-   <td>21056: I Flash Fallback sker inte växling vid fel för Live-strömmen om den primära strömmen returnerar ett 404-fel under uppspelningen.</td> 
+   <td>21056: Med Flash Fallback sker inte växling vid fel för Live-strömmen om den primära strömmen returnerar ett 404-fel under uppspelningen.</td> 
    <td>Manifestväxling kan bara användas för innehåll och inte för annonser.</td> 
    <td>Missing playlist failover works on Safari only for HTTP error code 404.</td> 
    <td> </td> 
@@ -1497,8 +1500,8 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
   <tr> 
    <td>VOD + Live</td> 
    <td>QoS- och Player-meddelanden</td> 
-   <td>21129: Bildrutefrekvensen är inte tillgänglig om Flash Fallback används.</td> 
-   <td><p>• 11170:</p> <p>Timed_Event är inte tillgängligt för Browser TVSDK med MSE, till skillnad från Browser TVSDK med Flash Fallback.</p> <p>21129: Bildrutefrekvensen har inte beräknats för liveströmmar.</p> </td> 
+   <td>21129: Bildrutefrekvensen är inte tillgänglig vid återfall i Flash.</td> 
+   <td><p>・ 1170:</p> <p>Timed_Event är inte tillgängligt för webbläsarens TVSDK med MSE, till skillnad från webbläsarens TVSDK med Flash Fallback.</p> <p>21129: Bildrutefrekvensen har inte beräknats för liveströmmar.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1569,7 +1572,7 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
    <td>VOD + Live</td> 
    <td>ID3-parsning</td> 
    <td>20346: Textkodningsbyte för ID3-bildrutor ska också returneras av SDK.</td> 
-   <td><p>ID3-taggar som finns i ADTS (Audio Data Transport Streams) ignoreras av SDK.</p> <p>・ 12378: Tidsbestämda ID3-metadata tolkas vid olika tidpunkter i Flash och webbläsaren med MSE-stöd, vilket innebär att visningsbeteendet på referenspspelarens tidslinje också är annorlunda.</p> <p>・ 19247: ID3-parsning stöds inte i gränssnittsramverket.</p> </td> 
+   <td><p>ID3-taggar som finns i ADTS (Audio Data Transport Streams) ignoreras av SDK.</p> <p>・ 12378: Tidsbestämda ID3-metadata tolkas vid olika tidpunkter på Flash och i webbläsaren med MSE-stöd, vilket innebär att visningsbeteendet på referenspspelarens tidslinje också är annorlunda.</p> <p>・ 19247: ID3-parsning stöds inte i gränssnittsramverket.</p> </td> 
    <td><p>・ 20323: PRIV ID3-tagg som används för att signalera tidsstämpeln för det första urvalet av ett segment tolkas inte av Safari (Safari-problem nr 32422733)</p> <p>・ 20350: På vissa enheter (inklusive MAC OS X 10.1, iPad10) tillhandahåller Safari inte en händelse för cue-ändring i trickläge och ID3-bildrutor tas därför inte emot. (Safari-nummer 32450526)</p> </td> 
    <td> </td> 
   </tr> 
@@ -1615,7 +1618,7 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
  </tbody> 
 </table>
 
-**Tabell 19: CSAI (Core Ad Insertion Features)**
+**Tabell 19: Core Ad Insertion Features (CSAI)**
 
 <table> 
  <tbody> 
@@ -1729,4 +1732,4 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetimes sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
