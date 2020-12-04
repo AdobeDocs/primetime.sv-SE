@@ -4,6 +4,9 @@ title: Skapa en DRM-princip med Java API
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Så här skapar du en DRM-princip med Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som finns i [Konfigurera utvecklingsmiljön i projektet.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Skapa ett `com.adobe.flashaccess.sdk.policy.Policy` objekt och ange dess egenskaper, inklusive rättigheter, varaktighet för licenscache och slutdatum för DRM-princip.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som anges i [Konfigurera utvecklingsmiljön i projektet.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Skapa ett `com.adobe.flashaccess.sdk.policy.Policy`-objekt och ange dess egenskaper, inklusive rättigheter, varaktighet för licenscache och slutdatum för DRM-princip.
 
    ```java
    // Create a new DRM policy object.  
@@ -48,7 +51,7 @@ Så här skapar du en DRM-princip med Java API:
    } 
    ```
 
-1. Serialisera DRM- `Policy` objektet och lagra det i en fil eller databas.
+1. Serialisera DRM-objektet `Policy` och lagra det i en fil eller databas.
 
    ```java
    // Serialize the DRM policy  
@@ -62,4 +65,4 @@ Så här skapar du en DRM-princip med Java API:
    out.close(); 
    ```
 
-Se [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] i [!DNL samples] katalogen Reference Implementation Command Line Tools för den fullständiga källan till exempelkoden.
+Se [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] i katalogen Reference Implementation Command Line Tools [!DNL samples] för den fullständiga källan till den här exempelkoden.
