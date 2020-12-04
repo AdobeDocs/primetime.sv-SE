@@ -4,18 +4,21 @@ title: Tidsbaserade regler
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
 
 # Tidsbaserade regler {#time-based-rules}
 
-Primetime DRM använder&quot;mjuk framtvingning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet förfaller under uppspelning av en video är standardbeteendet för Primetime DRM att inte begränsa uppspelningen förrän nästa gång videoströmmen återskapas (genom anrop `Netstream.stop()` och `Netstream.play()`).
+Primetime DRM använder&quot;mjuk framtvingning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet upphör vid uppspelning av en video är standardbeteendet för Primetime DRM att inte begränsa uppspelningen förrän nästa gång videoströmmen återskapas (genom att anropa `Netstream.stop()` och `Netstream.play()`).
 
 Även om mjuk tvång är standardbeteendet kan du även aktivera hård tvång genom att utföra någon av följande åtgärder:
 
-* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan du göra genom att anropa `DRMManager.loadVoucher(LOCAL_ONLY).` En felkod anger att den lokalt lagrade licensen inte längre är giltig.
-* När användaren klickar **[!UICONTROL Pause]** kan du spela in den aktuella tidsstämpeln och sedan anropa `Netstream.stop()`. När användaren klickar på uppspelningsknappen kan du söka efter den inspelade platsen och sedan ringa `Netstream.play()`.
+* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan uppnås genom att anropa `DRMManager.loadVoucher(LOCAL_ONLY).` En felkod anger att den lokalt lagrade licensen inte längre är giltig.
+* När användaren klickar på **[!UICONTROL Pause]** kan du spela in den aktuella tidsstämpeln och sedan anropa `Netstream.stop()`. När användaren klickar på uppspelningsknappen kan du söka efter den inspelade platsen och sedan anropa `Netstream.play()`.
 
 ## Startdatum {#start-date}
 
@@ -43,13 +46,13 @@ När cachens förfallodatum har passerat är licensen inte längre giltig och kl
 
 Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. vid uthyrning. Du kan ange en 30-dagars uthyrning (med cache-lagring av licenser) för att ange den totala licenstiden för innehållet.
 
-## Uppspelningsfönster {#playback-window}
+## Uppspelningsfönstret {#playback-window}
 
 Uppspelningsfönstret anger hur länge en licens är giltig efter första gången den används för att spela upp skyddat innehåll.
 
 Exempel: Vissa affärsmodeller tillåter en hyrperiod på 30 dagar, men när uppspelningen börjar måste uppspelningen vara slutförd på 48 timmar. I det här fallet är licensens 48-timmarsperiod uppspelningsfönstret.
 
-**Från version 5.3 framåt** - Uppspelningsfönstret har även stöd för alternativet att aktivera eller inaktivera Hårt stopp, vilket anger om dekrypteringssammanhanget för uppspelningen ska stoppas när uppspelningsfönstret (aktiverat) upphör eller fortsätta trots att det har gått ut (inaktiverat).
+**Från version 5.3 framåt**  - Uppspelningsfönstret har även stöd för alternativet att aktivera eller inaktivera Hårt stopp, vilket anger om dekrypteringssammanhanget för uppspelning ska stoppas när uppspelningsfönstret (aktiverat) upphör eller fortsätta trots att det har gått ut (inaktiverat).
 
 >[!NOTE]
 >
