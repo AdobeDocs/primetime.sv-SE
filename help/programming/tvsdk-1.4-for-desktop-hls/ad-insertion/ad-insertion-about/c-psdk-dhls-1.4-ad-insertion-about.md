@@ -6,6 +6,9 @@ title: Infoga annonser
 uuid: 25c79822-a861-427b-b6a8-24714b21aae4
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Annonsinfogningen åtgärdar annonser för video-on-demand (VOD), för liveströ
 
 En *`ad break`* innehåller en eller flera annonser som spelas upp i sekvens. TVSDK infogar annonser i huvudinnehållet som medlemmar i en eller flera annonsbrytningar.
 
-## Inaktivera annonser före rullning {#disable-preroll-ads}
+## Inaktivera förrollsannonser {#disable-preroll-ads}
 
 Om du vill inaktivera pre-roll ändrar du standardgeneratorerna för affärsmöjlighet så att de inte gör ett pre-roll-anrop. Standardgeneratorerna för affärsmöjlighet är:
 
