@@ -6,6 +6,9 @@ title: Buffring
 uuid: c84b98ed-0070-4a86-a409-d7702e5be23c
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ TVSDK definierar en uppspelningsbuffertlängd på minst 30 sekunder och en inled
 
 Du kan ändra buffringstiderna genom att definiera nya buffringsprinciper, och du kan ändra när den inledande buffringen inträffar genom att använda Direkt on.
 
-## Buffringstidsregler {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
+## Bufferttidsprinciper {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
 
 Beroende på din miljö (inklusive enheten, operativsystemet eller nätverksförhållandena) kan du ange olika buffringsprinciper för spelaren, till exempel ändra minimilängden för inledande buffring och för pågående uppspelningsbuffring.
 
-När du har anropat `play`börjar mediespelaren buffra videon. När mediespelaren har buffrat den mängd video som anges av den inledande buffringstiden börjar uppspelningen. Den här processen förbättrar starttiden eftersom spelaren inte väntar på att hela uppspelningsbufferten ska fyllas innan uppspelningen startas. Efter att de få inledande sekunderna har buffrats börjar uppspelningen i stället.
+När du har anropat `play` börjar mediespelaren buffra videon. När mediespelaren har buffrat den mängd video som anges av den inledande buffringstiden börjar uppspelningen. Den här processen förbättrar starttiden eftersom spelaren inte väntar på att hela uppspelningsbufferten ska fyllas innan uppspelningen startas. Efter att de få inledande sekunderna har buffrats börjar uppspelningen i stället.
 
 När videon återges fortsätter TVSDK att buffra nya fragment tills det har buffrat den mängd som anges av uppspelningsbufferttiden. Om den aktuella buffertlängden sjunker under uppspelningsbuffertens tid hämtar spelaren ytterligare fragment. När den aktuella buffertlängden är över uppspelningsbufferttiden med några sekunder kommer TVSDK att sluta hämta fragment.
 
@@ -30,17 +33,17 @@ När videon återges fortsätter TVSDK att buffra nya fragment tills det har buf
 >
 >Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en jämnare uppspelning under en längre tid. Men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.
 
-Om du aktiverar direkt genom att anropa `prepareBuffer`börjar den inledande buffringen vid den tidpunkten i stället för att vänta på `play`.
+Om du aktiverar direkt genom att anropa `prepareBuffer` börjar den inledande buffringen vid den tidpunkten i stället för att vänta på `play`.
 
 ## Ange buffringstider {#section_05CDD927869D47EBA1D2069B1416B2E4}
 
-I `MediaPlayer` finns metoder för att ställa in och hämta den inledande buffringstiden och uppspelningsbuffringstiden.
+`MediaPlayer` innehåller metoder för att ställa in och hämta den inledande buffringstiden och uppspelningsbuffringstiden.
 
 >[!TIP]
 >
 >Om du inte anger parametrar för buffertkontroll innan uppspelningen startar, blir mediaspelaren som standard 2 sekunder för den inledande bufferten och 30 sekunder för den pågående uppspelningsbufferttiden.
 
-1. Konfigurera `BufferControlParameters` objektet, som kapslar in den inledande bufferttiden och kontrollparametrarna för uppspelningsbuffertens tid.
+1. Ställ in objektet `BufferControlParameters`, som kapslar in den inledande bufferttiden och kontrollparametrarna för uppspelningsbuffertens tid.
 
    Den här klassen innehåller följande fabriksmetoder:
 
@@ -57,19 +60,19 @@ I `MediaPlayer` finns metoder för att ställa in och hämta den inledande buffr
         long initialBuffer,  
         long bufferTime)
       ```
-   Om parametrarna inte är giltiga genereras dessa metoder `MediaPlayerException` med felkod, till exempel `PSDKErrorCode.INVALID_ARGUMENT`när följande villkor uppfylls:
+   Om parametrarna inte är giltiga, kommer dessa metoder att resultera i `MediaPlayerException` med felkoden `PSDKErrorCode.INVALID_ARGUMENT`, till exempel när följande villkor uppfylls:
 
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
 
 
-1. Använd den här `MediaPlayer` metoden om du vill ange värden för buffertparametrar:
+1. Använd den här `MediaPlayer`-metoden om du vill ange värden för buffertparametrar:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Använd den här `MediaPlayer` metoden om du vill hämta de aktuella buffertparametervärdena:
+1. Använd den här `MediaPlayer`-metoden för att hämta de aktuella buffertparametervärdena:
 
    ```java
       BufferControlParameters getBufferControlParameters()  
