@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Definiera tidsbaserade regler {#defining-time-based-rules}
 
-Adobe Access använder&quot;mjuk tillämpning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet upphör vid uppspelning av en video är standardbeteendet för Adobe Access att inte begränsa uppspelningen förrän nästa gång videoströmmen återskapas (genom anrop `Netstream.stop()` och `Netstream.play()`).
+Adobe Access använder&quot;mjuk tillämpning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet upphör vid uppspelning av en video är standardbeteendet för Adobe Access att inte begränsa uppspelningen förrän nästa gång videoströmmen återskapas (genom att anropa `Netstream.stop()` och `Netstream.play()`).
 
 Även om mjuk tvång är standardbeteendet kan du även aktivera hård tvång genom att utföra någon av följande åtgärder:
 
-* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan du göra genom att anropa `DRMManager.loadVoucher(LOCAL_ONLY).`En felkod anger att den lokalt lagrade licensen inte längre är giltig.
-* När användaren klickar på pausknappen kan du spela in den aktuella videons tidsstämpel och sedan anropa `Netstream.stop().`När användaren klickar på knappen Spela upp, kan du söka efter den inspelade platsen och sedan anropa `Netstream.play()`.
+* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan uppnås genom att anropa `DRMManager.loadVoucher(LOCAL_ONLY).`En felkod anger att den lokalt lagrade licensen inte längre är giltig.
+* När användaren klickar på pausknappen kan du spela in den aktuella videons tidsstämpel och sedan anropa `Netstream.stop().`När användaren klickar på knappen Spela upp, kan du söka till den inspelade platsen och sedan anropa `Netstream.play()`.
 
 ## Startdatum {#start-date}
 
@@ -46,7 +46,7 @@ När cachens förfallodatum har passerat är licensen inte längre giltig och kl
 
 Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. vid uthyrning. En 30-dagars uthyrning kan anges (med cache-lagring av licenser) för att ange den totala licenstiden inom vilken innehållet ska konsumeras.
 
-## Uppspelningsfönster {#playback-window}
+## Uppspelningsfönstret {#playback-window}
 
 Anger hur länge en licens är giltig efter första gången den används för att spela upp skyddat innehåll.
 
@@ -64,4 +64,4 @@ Synkroniseringsbeteendet definieras med följande parametrar:
 
 >[!NOTE]
 >
->Den här användningsregeln stöds av Adobe Access-klienter version 3.0 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minimal klientversion](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Den här användningsregeln stöds av Adobe Access-klienter version 3.0 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minsta klientversion](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
