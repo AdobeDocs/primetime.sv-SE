@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Förbättrad licenskedja {#enhanced-license-chaining}
+# Förbättrad licenskonedning {#enhanced-license-chaining}
 
-Med förbättrad kedja av licenser i Adobe Access 3.0 rekommenderar vi att man utfärdar både en löv och en rot första gången man begär en licens för en viss dator. Om användaren redan har rotlicensen kan servern bara utfärda en löv (anropa `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` för att avgöra om klienten redan har en 3.0 Förbättrad rot). För efterföljande licensbegäranden anger klienten att den redan har en löv och en rot, så servern bör utfärda en ny rotlicens. När den utökade licenskedjan används måste du anropa `setRootKeyRetrievalInfo()` de autentiseringsuppgifter som behövs för att dekryptera rotkrypteringsnyckeln i profilen.
+Med förbättrad kedja av licenser i Adobe Access 3.0 rekommenderar vi att man utfärdar både en löv och en rot första gången man begär en licens för en viss dator. Om användaren redan har rotlicensen kan servern bara utfärda en löv (ring `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` för att avgöra om klienten redan har en 3.0 Förbättrad rot). För efterföljande licensbegäranden anger klienten att den redan har en löv och en rot, så servern bör utfärda en ny rotlicens. När den förbättrade licenskedjan används måste `setRootKeyRetrievalInfo()` anropas för att ange de autentiseringsuppgifter som krävs för att dekryptera rotkrypteringsnyckeln i profilen.
 
 >[!NOTE]
 >
