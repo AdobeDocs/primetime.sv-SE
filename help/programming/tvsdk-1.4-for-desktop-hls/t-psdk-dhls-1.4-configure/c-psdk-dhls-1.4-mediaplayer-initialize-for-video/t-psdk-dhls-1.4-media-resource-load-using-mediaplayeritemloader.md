@@ -6,6 +6,9 @@ title: Läsa in en medieresurs med MediaPlayerItemLoader
 uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -14,18 +17,18 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 
-Genom `MediaPlayerItemLoader` klassen kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer` instans, vilket skulle leda till allokering av maskinvaruresurser för videoavkodning. Processen att hämta `MediaPlayerItem` instansen är asynkron.
+Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer`-instans, vilket skulle leda till allokering av maskinvaruresurser för videoavkodning. Processen att hämta `MediaPlayerItem`-instansen är asynkron.
 
-1. Implementera händelseavlyssnare för dessa `MediaPlayerItemLoader` händelser:
+1. Implementera händelseavlyssnare för dessa `MediaPlayerItemLoader`-händelser:
 
    * `MediaPlayerItemLoaderEvent.ERROR` event
 
       TVSDK använder detta för att informera programmet om att ett fel har inträffat. TVSDK tillhandahåller en felegenskap som innehåller diagnostikinformation.
 
 1. Registrera den här instansen hos `MediaPlayerItemLoader`.
-1. Anropa `DefaultMediaPlayerItemLoader.load`och skicka en instans av ett `MediaResource` objekt.
+1. Anropa `DefaultMediaPlayerItemLoader.load` och skicka en instans av ett `MediaResource`-objekt.
 
-   URL:en för `MediaResource` objektet måste peka mot den ström som du vill få information om. Exempel:
+   URL:en för `MediaResource`-objektet måste peka på den ström som du vill få information om. Exempel:
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 
