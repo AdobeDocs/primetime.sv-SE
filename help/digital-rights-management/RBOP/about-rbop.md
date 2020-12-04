@@ -6,11 +6,14 @@ title: Översikt över RBOP
 uuid: 57219331-d949-443c-88b3-6f714ab6c82e
 translation-type: tm+mt
 source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
 
-# Översikt över RBOP {#rbop-overview}
+# RBOP-översikt {#rbop-overview}
 
 Upplösningsbaserat utdataskydd (RBOP) är en mekanism som ger utdataskydd baserat på innehållets lodräta pixelantal.
 
@@ -20,8 +23,8 @@ För att förenkla processen att ange säkerhetskrav för utdata tillhandahålle
 
 Avsnitt i den här handboken:
 
-* [RBOP Concepts](../RBOP/output-protection-concepts.md) ger en konceptuell översikt över konfiguration, alternativ och innebörd för skydd av utdata.
-* [RBOP Client Support](../RBOP/client-support.md) beskriver de funktioner som finns i olika versioner av Flash Player och TVSDK.
-* [Exempel på RBOP-konfiguration](../RBOP/sample-output-protection-config.md) visar en exempelkonfiguration som illustrerar koncept och form för konfigurationen.
-* [RBOP-grammatik](../RBOP/output-protection-grammar.md) täcker grammatiken för konfigurationsindata, framhäver giltiga och ogiltiga indataalternativ och förklarar hur utelämnade valfria fält tolkas.
+* [RBOP ](../RBOP/output-protection-concepts.md) Conceptsger en konceptuell översikt över konfiguration, alternativ och innebörd för skydd av utdata.
+* [Stöd ](../RBOP/client-support.md) för RBOP-klient beskriver de funktioner som finns i olika versioner av Flash Player och TVSDK.
+* [Exempel på RBOP-](../RBOP/sample-output-protection-config.md) konfiguration är en exempelkonfiguration som illustrerar koncept och form för konfigurationen.
+* [RBOP ](../RBOP/output-protection-grammar.md) Grammares täcker in-konfigurationens grammatik, framhäver giltiga och ogiltiga indataalternativ och förklarar hur utelämnade valfria fält tolkas.
 
