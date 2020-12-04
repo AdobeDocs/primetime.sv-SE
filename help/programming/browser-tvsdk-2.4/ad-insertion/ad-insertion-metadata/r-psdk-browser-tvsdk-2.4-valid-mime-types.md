@@ -6,6 +6,9 @@ title: Giltiga MIME-typer
 uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ auditudeSettings.validMimeTypes = mimeTypes;
 
 där `mimeTypes` är en array med strängar, och varje sträng representerar en MIME-typ.
 
-Om flera mediefiler returneras för en annons beror valet på i vilken ordning mediefilerna visas i `validMimeTypes` arrayen. De MIME-typer som har lägre index ges en inställning framför de som har högre index.
+Om flera mediefiler returneras för en annons beror valet på i vilken ordning mediefilerna visas i `validMimeTypes`-arrayen. De MIME-typer som har lägre index ges en inställning framför de som har högre index.
