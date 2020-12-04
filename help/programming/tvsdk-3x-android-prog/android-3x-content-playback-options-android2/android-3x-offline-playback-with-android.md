@@ -5,11 +5,14 @@ seo-title: Uppspelning offline med Android
 title: Uppspelning offline med Android
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
 
-# Uppspelning offline med Android {#offline-playback-with-android}
+# Offlineuppspelning med Android {#offline-playback-with-android}
 
 Följande API:er har introducerats som instruerar TVSDK att ignorera nätverksanslutningstillståndet när manifest hämtas. Nätverksanslutningstillståndet används vanligtvis vid strömning med adaptiv bithastighet (ABR) för att avgöra om ett reservförsök ska göras eller om nätverket ska återupptas.
 
