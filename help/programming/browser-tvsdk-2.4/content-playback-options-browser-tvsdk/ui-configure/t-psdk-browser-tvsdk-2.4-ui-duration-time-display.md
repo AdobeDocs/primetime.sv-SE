@@ -6,6 +6,9 @@ title: Visa videons varaktighet, aktuella tid och återstående tid
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
 
 1. Vänta tills spelaren är i åtminstone tillståndet PREPARED.
-1. Hämta spelhuvudets aktuella tid med `MediaPlayer.currentTime` -attributet.
+1. Hämta den aktuella spelhuvudstiden med attributet `MediaPlayer.currentTime`.
 
    Det här attributet returnerar spelhuvudets aktuella position på den virtuella tidslinjen i millisekunder. Tiden beräknas i förhållande till den matchade strömmen som kan innehålla flera instanser av alternativt innehåll, till exempel flera annonser eller annonsbrytningar som delas upp i huvudströmmen. För live-/linjära strömmar är den returnerade tiden alltid i uppspelningsfönsterintervallet.
 
