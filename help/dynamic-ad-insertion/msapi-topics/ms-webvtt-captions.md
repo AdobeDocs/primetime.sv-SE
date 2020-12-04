@@ -6,6 +6,9 @@ title: Stöd för WebVTT-bildtexter
 uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -29,4 +32,4 @@ Arbetsflödet för VOD-innehållsströmmar är följande:
 
 >[!NOTE]
 >
->Om en klient begär att en video ska spelas upp på ett specifikt språk, till exempel engelska, och sedan begär att videon ska spelas upp på franska, kan manifestservern inte identifiera att klienten har begärt att språket ska ändras till franska. Eftersom klienten inte kommunicerar med manifestservern infogar manifestservern annonsbeskrivningen i videoströmmen med det första språk som anges i annonsens M3U8-huvudfil.
+>Om en klient begär att en video ska spelas upp på ett specifikt språk, till exempel engelska, och sedan begär att videon ska spelas upp på franska, kan manifestservern inte identifiera att klienten har begärt att språket ska ändras till franska. Eftersom klienten inte kommunicerar med manifestservern infogar manifestservern annonsbeskrivningen i videoströmmen med det första språk som anges i annonsens M3U8 överordnad fil.
