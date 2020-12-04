@@ -4,6 +4,9 @@ title: Utfärda licenser för fjärrnyckelleverans till iOS-klienter (kräver Ad
 uuid: 739dd93d-0645-4cb1-a3e8-aa78f7ef015e
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
