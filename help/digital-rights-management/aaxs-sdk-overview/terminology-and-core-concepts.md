@@ -4,6 +4,9 @@ title: Terminologi och centrala begrepp
 uuid: 89a9e4b0-f5e1-4dc2-9cf8-0c8d7e9b7d62
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Följande termer och begrepp används i hela dokumentet:
 
 **Konsument**
 
-Konsumenten *är den* slutanvändare som laddar ned eller direktuppspelar innehåll.
+*konsumenten* är den slutanvändare som hämtar eller direktuppspelar innehåll.
 
 **Innehåll**
 
@@ -22,7 +25,7 @@ Konsumenten *är den* slutanvändare som laddar ned eller direktuppspelar inneh�
 
 **Innehållskrypteringsnyckel**
 
-CEK ( *Content Encryption Key* ) är en krypteringsnyckel som används för att kryptera innehållet.
+*Nyckeln för innehållskryptering* (CEK) är en krypteringsnyckel som används för att kryptera innehållet.
 
 **Innehållsägare**
 
@@ -34,19 +37,19 @@ CEK ( *Content Encryption Key* ) är en krypteringsnyckel som används för att 
 
 **Digitalt certifikat**
 
-*Digitala certifikat* (kallas även *certifikat*) binder en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
+*Digitala certifikat*  (kallas även  *certifikat*) binder en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
 
 **Digital signatur**
 
-En *digital signatur* binder utgivarens identitet till innehållet som de har publicerat och erbjuder en mekanism för att upptäcka manipulering. Algoritmer för digitala signaturer använder kryptografiska hash-funktioner och asymmetriska - eller publika/privata nyckelpar - krypteringsalgoritmer. Vissa digitala signaturer utnyttjar också digitala certifikat och infrastruktur för publika nycklar (PKI) för att binda publika nycklar till identiteterna för innehållsägare eller distributörer.
+En *digital signatur* binder utgivarens identitet till innehållet som de har publicerat och tillhandahåller en mekanism för att upptäcka manipulering. Algoritmer för digitala signaturer använder kryptografiska hash-funktioner och asymmetriska - eller publika/privata nyckelpar - krypteringsalgoritmer. Vissa digitala signaturer utnyttjar också digitala certifikat och infrastruktur för publika nycklar (PKI) för att binda publika nycklar till identiteterna för innehållsägare eller distributörer.
 
 **Distributör**
 
-*Distributörer* (även kallade *innehållsdistributörer* eller* återförsäljare*) är företag som säkrar distributionsrättigheterna för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
+*Distributörer*  (även kallade  *innehållsdistributörer** återförsäljare*) är affärsenheter som säkrar distributionsrättigheter från innehållsägare för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
 
 **DRM-metadata**
 
-Information som klienten (Adobe® Flash® Player, Adobe® AIR® runtime och Primetime client) skickar för att identifiera det begärda innehållet.
+Information som klienten (dvs. Adobe® Flash® Player, Adobe® AIR® runtime och Primetime) skickar för att identifiera det begärda innehållet.
 
 **Licens**
 
@@ -54,7 +57,7 @@ En *licens *är en datastruktur som innehåller en krypterad nyckel som används
 
 **Licenshämtning**
 
-*Licenshämtning* innebär att man köper en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning sker när en kund skickar information som identifierar det begärda innehållet ( *DRM-metadata*) och datorcertifikatet (identifierar konsumentens dator) till licensservern (se nedan).
+*Licenshämtning* innebär att man köper en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning inträffar när en klient skickar information som identifierar det begärda innehållet (DRM-metadata *) och datorcertifikatet (identifierar konsumentens dator) till licensservern (se nedan).*
 
 **Licensserver**
 
@@ -70,8 +73,8 @@ Profiler skapas med Adobe Access SDK.
 
 **Skyddat innehåll**
 
-*Skyddat innehåll* (även kallat *paketerat innehåll*) avser FLV- och F4V-videoinnehåll som har krypterats med Adobe Access SDK eller andra verktyg som stöds.
+*Skyddat innehåll*  (även kallat  *paketerat innehåll*) avser FLV- och F4V-videoinnehåll som har krypterats med Adobe Access SDK eller andra verktyg som stöds.
 
 **Återförsäljare**
 
-Se informationen för *distributörer* tidigare i det här avsnittet.
+Se posten för *distributörer* tidigare i det här avsnittet.
