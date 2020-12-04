@@ -6,6 +6,9 @@ title: Pausa och återuppta uppspelning
 uuid: 229e2499-e30e-458c-bd6d-d035588c21cf
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
