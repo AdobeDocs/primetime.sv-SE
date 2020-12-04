@@ -16,7 +16,7 @@ Versionsinformationen för Primetime Ad Insertion 19.11.1 beskriver vad som är 
 
 ## Nyheter i PTAI 19.11.1
 
-**När:** Måndagen den 4 november 2019 kl. 12.01 till 01.00 EASTERN
+**När:** Måndag den 4 november 2019 kl. 12.01 till 01.00 EASTERN
 
 Underhållsuppdateringar.
 
@@ -24,31 +24,31 @@ Underhållsuppdateringar.
 
 ### Version 19.10.2
 
-**När:** Torsdagen den 31 oktober 2019 från 01:00 till 03:00 Eastern
+**När:** torsdagen den 31 oktober 2019 från 01:00 till 03:00 Eastern
 
 Underhållsuppdateringar.
 
 ### Version 19.10.1
 
-**När:**  Tisdagen den 22 oktober 01:00 till 02:00 EASTERN
+**När:**  tisdag den 22 oktober 01:00 till 02:00 ÖSTRA
 
 Underhållsuppdateringar.
 
 ### Version 19.9.1
 
-**När:** Tisdagen den 10 september 2019 kl. 12.30-02.00 (östlig tid)
+**När:** tisdag den 10 september 2019 kl. 12.30 till kl. 2.00 Eastern Time
 
 Säkerhetsuppdateringar
 
 ### Version 19.8.3
 
-**När:** onsdagen den 28 augusti 2019 kl. 12.30 - 01.30 EASTERN
+**När:** onsdag den 28 augusti 2019 kl. 12.30 - 01.30 EASTERN
 
 Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen när annonssegment släpptes ut från DVR-fönstret.
 
 ### Version 19.8.2
 
-**När:** Onsdag 21 augusti 2019 02:00 till 03:00 Eastern Time
+**När:** onsdag den 21 augusti 2019 02:00 till 03:00 Eastern Time
 
 * SSAI Dashboard: Avsnittet Sessionsstatistik. Du kan exportera sessionshändelserna via alternativet Hämta CSV.
 
@@ -56,7 +56,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.8.1
 
-**När:** Tisdag 6 augusti 2019 02:30 Eastern Time till tisdag 6 augusti 2019 04:30 Eastern Time
+**När:** tisdag den 6 augusti 2019 02:30 Eastern Time till tisdag den 6 augusti 2019 04:30 Eastern Time
 
 * SSAI Dashboard: Nytt avsnitt, Sessionsstatistik, har lagts till på SSAI Dashboard
    * Om du har sessions-ID för en SSAI-session där felsökningsläget är aktiverat (ptdebug=true), kan du söka efter följande aktivitet som inträffade under den sessionen:
@@ -69,7 +69,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.7.1
 
-**När:** Onsdag 10 juli
+**När:** onsdag den 10 juli
 
 * SSAI: För ptcueformat-värden som stöder EXT-X-CUE-OUT och radbrytningssignalering i liveströmmar lade du till ett generiskt makro för att skicka data från attribut i taggen EXT-X-ASSET Exempel: Tagg som medföljer taggen #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=News,Program=NewsAt10 Macros: # kan användas för att skicka News (från attributet GENRE) till en annonsanrops-URL # kan användas för att skicka NewsAt10 (från attributet Program) till ett annonsanrops-URL Exception: För bakåtkompatibilitet har # och # samma funktioner. Båda makrona kan användas för att skicka värdet för CAID-attributet, efter konvertering av värdet från hex till long. Det långa värdet är 123456789 för det hex-värdet 75BCD15, i ovanstående exempel. Båda makrona används för att skicka 123456789 till en annonsanrops-URL. Makrot börjar alltid med #. Makrot är skiftlägeskänsligt, men attributet i taggen EXT-X-ASSET är inte skiftlägeskänsligt. Både PROGRAM och Program tillåts i taggen EXT-X-ASSET
 * SSAI: Konfigurationsändringar för en viss kund för följande:
@@ -79,7 +79,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.6.1
 
-**När:** Onsdagen den 12 juni 2019 kl. 11.30 PST till torsdagen den 13 juni 2019 kl. 12.30 PST
+**När:** onsdagen den 12 juni 2019 kl. 11.30 PST till torsdagen den 13 juni 2019 kl. 12.30 PST
 
 * CRS: Normaliseringsregel för kreatörer från RevJet
    * Lagt till regel för normalisering av kreativ URL för RevJet, som används av CRS och SSAI
@@ -95,7 +95,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.5.2
 
-**När:** Onsdag 22:30 Eastern Time to onsdag 22:30 Eastern Time, 22:30 maj
+**När:** onsdag den 22 maj klockan 16:30 (östlig tid till onsdag) den 22 maj 04:30 (östtid)
 
 * Stöd för CMAF (HLS/fMP4-innehåll) har lagts till
    * SSAI: Hantera CMAF-manifest
@@ -103,13 +103,13 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
    * CRS: Lagt till arbetsflöde för att paketera om annonser i CMAF-format (HLS/fMP4)
 * SSAI: Ett problem har korrigerats som förhindrade att onumxade annonser infogades i omultiplexat innehåll, när både innehållet och annonsen inte har ström med enbart ljud (EXT-X-STREAM-INF)
 * SSAI: Stöd har lagts till för CDN-tokens för Limelight (LLNW) för innehållssegment
-   * När `pttoken=limelight` eller `pttoken=llnw` läggs till i bootstrap-URL:en lägger vi till ett hemligt huvud när vi hämtar den överordnad källspellistan. Därefter lägger vi till frågeparametrarna från LLNW:s X-Adobe-Sig-huvud i innehållssegmenten
+   * När `pttoken=limelight` eller `pttoken=llnw` läggs till i bootstrap-URL:en lägger vi till en hemlig rubrik när vi hämtar den överordnad källspellistan. Sedan lägger vi till frågeparametrarna från LLNW:s X-Adobe-Sig-huvud i innehållssegmenten
 * SSAI: Ytterligare ett token-värde (`pttoken=centurylink`) för stöd för CenturyLink CDN auth token, som släpptes 30 juli 2018
-   * `pttoken=centurylink` har samma beteende som `pttoken=level3`, och båda värdena är giltiga
+   * `pttoken=centurylink` har samma beteende som  `pttoken=level3`, och båda värdena är giltiga
 
 ### Version 19.5.1
 
-**När:** Torsdag 9 maj klockan 2:30 Eastern Time till torsdag 9 maj 04:30 Eastern Time
+**När:** Torsdag 9 maj 02:30 Eastern Time till torsdag 9 maj 04:30 Eastern Time
 
 * SSAI: Säkerhetsuppdateringar
 * CRS Dashboard: Strängen&quot;FqAdId Sample&quot; har trunkerats till 255 tecken på grund av begränsningar i datalagringen (8-bitars)
@@ -118,7 +118,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.4.1
 
-**När:** Onsdag 10 april 2:30 Eastern Time to onsdag, 10 april 04:30 Eastern Time
+**När:** onsdag den 10 april 2:30 Eastern Time till onsdag den 10 april 04:30 Eastern Time
 
 * CRS: CRS Repackaging API har inte längre stöd för HTTP-POST-kommandon. API:t för CRS-ompaketering dirigerar automatiskt om (301) HTTP-POST-kommandon till HTTPS
    * Från och med 20 maj inaktiveras HTTP->HTTPS-omdirigering för HTTP-POST-kommandon
@@ -144,7 +144,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.2.1
 
-**När:** Onsdagen den 20 februari 2019 1:30 Eastern Time to onsdag den 20 februari 2019 03:30 Eastern Time
+**När:** onsdag den 20 februari 2019 1:30 Eastern Time till onsdag den 20 februari 2019 03:30 Eastern Time
 
 * SSAI: Lagt till ClickThrough- och ClickTracking-URL:er för videoannonser i det underordnade JSON v2-formatet
    * Under egenskapen &quot;trackingURLs&quot; kommer deras &quot;event&quot;-värdenamn att vara &quot;clickthrough&quot; och &quot;clickTracking&quot;
@@ -160,15 +160,15 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Webbgränssnittsrelease
 
-**När:** Onsdag 13 februari 04:00 - 16:30 PST
+**När:** onsdag den 13 februari 04:00 - 04:30 PST
 
-**Vad:** Komponenten Primetime och Decisioning Web UI
+**Vad:** komponenten Primetime och Decisioning Web UI
 
 * Åtgärda problemet med kalenderanvändargränssnitt där användaren inte kunde välja ett datum efter den 31 december 2018 från kalenderkomponenten när en kampanj eller en rapport byttes ut.
 
 ### Version 19.1.2
 
-**När:** Onsdagen den 30 januari 2019 1:30 Eastern Time to onsdag den 30 januari 03:30 Eastern Time
+**När:** onsdag den 30 januari 2019 1:30 Eastern Time till onsdag den 30 januari 03:30 Eastern Time
 
 * SSAI: Den söknyckelstruktur som SSAI använder för att lagra och hämta CRS-resurser har uppdaterats för att hantera scenarier där annonsleverantörer har ett dynamiskt annons-ID eller Creative-ID för samma annons
    * Ny uppslagsnyckelstruktur: Zon, Creative URL och formatparametrar (målvaraktighet, utdataformat, mål-CDN)
@@ -185,7 +185,7 @@ Korrigerade ett fel där Chromecast-spelarna oväntat avslutade uppspelningen n�
 
 ### Version 19.1.1
 
-**När:** Onsdag 9 januari 2019 1:30 Eastern Time to onsdag 9 januari 03:30 Eastern Time
+**När:** onsdag den 9 januari 2019 1:30 Eastern Time to onsdag den 9 januari 03:30 Eastern Time
 
 * Korrigerade ett problem där feltolkning av HTTP keep-alive-rubriker kan resultera i ett fel vid validering av inkommande kreativa resurser på total-stream.net.
 * Ett problem har korrigerats där enkla citattecken (&#39;) och dubbla citattecken (&quot;) i Ad ID, Creative ID och andra fält för en ompackningsbegäran gör att ompackningsbegäran misslyckas.
