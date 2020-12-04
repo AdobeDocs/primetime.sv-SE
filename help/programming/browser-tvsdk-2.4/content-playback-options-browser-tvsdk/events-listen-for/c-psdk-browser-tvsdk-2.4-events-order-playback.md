@@ -6,6 +6,9 @@ title: Ordning för uppspelningshändelser
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,16 @@ Webbläsarens TVSDK skickar händelser/meddelanden i vanligtvis förväntade sek
 
 I följande exempel visas ordningen för vissa händelser som innehåller uppspelningshändelser.
 
-* När en medieresurs läses in via `replaceCurrentResource`är händelseordningen:
+* När en medieresurs har lästs in via `replaceCurrentResource` är händelseordningen:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` med  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`är händelseordningen:
+* När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` med  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
