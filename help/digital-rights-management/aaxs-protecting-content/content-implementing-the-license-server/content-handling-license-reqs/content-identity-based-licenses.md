@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Identitetsbaserade licenser {#identity-based-licenses}
 
-Om identitetsbaserad licensiering används söker servern efter en giltig autentiseringstoken innan den utfärdar en licens. Mer information om hur du hanterar autentiseringstoken finns i [Användarautentisering](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) .
+Om identitetsbaserad licensiering används söker servern efter en giltig autentiseringstoken innan den utfärdar en licens. Mer information om hur du hanterar autentiseringstoken finns i [Användarautentisering](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md).
 
 >[!NOTE]
 >
