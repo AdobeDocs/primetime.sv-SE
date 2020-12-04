@@ -6,6 +6,9 @@ title: Adaptiva bithastigheter (ABR) för videokvalitet
 uuid: d41c3edf-33c7-4616-820f-22303d578df0
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '724'
+ht-degree: 0%
 
 ---
 
@@ -20,15 +23,15 @@ TVSDK övervakar hela tiden bithastigheten för att säkerställa att innehålle
  <tbody> 
   <tr> 
    <td colname="col01"> Inledande bithastighet </td> 
-   <td colname="col2"> <p>Den önskade uppspelningsbithastigheten (i bitar per sekund) för det första segmentet. </p> <p>När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p><span class="codeph"> getABRInitialBitRate</span> returnerar ett heltalsvärde som representerar byte-per-sekund-profilen. </p> </td> 
+   <td colname="col2"> <p>Den önskade uppspelningsbithastigheten (i bitar per sekund) för det första segmentet. </p> <p>När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p><span class="codeph"> </span> getABRInitialBitRatern returnerar ett heltalsvärde som representerar byteprofilen per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Minsta bithastighet </td> 
-   <td colname="col2"> <p>Den lägsta tillåtna bithastigheten som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är lägre än denna bithastighet. <span class="codeph"> getABRMinBitRate</span> returnerar ett heltalsvärde som representerar bitprofilen per sekund. </p> </td> 
+   <td colname="col2"> <p>Den lägsta tillåtna bithastigheten som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är lägre än denna bithastighet. <span class="codeph"> </span> getABRMinBitRatern returnerar ett heltalsvärde som representerar bitprofilen per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Maximal bithastighet </td> 
-   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är högre än den här bithastigheten. <span class="codeph"> getABRMaxBitRate</span> returnerar ett heltalsvärde som representerar bitprofilen per sekund. </p> </td> 
+   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är högre än den här bithastigheten. <span class="codeph"> </span> getABRMaxBitRatern returnerar ett heltalsvärde som representerar bitprofilen per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> ABR-växlingsprincip </td> 
@@ -37,7 +40,7 @@ TVSDK övervakar hela tiden bithastigheten för att säkerställa att innehålle
       <li id="li_B79C0AA2CBFB42FF98A257CEC9C400BA"><span class="codeph"> ABR_CONSERVATIVE</span>: Växlar till profilen med nästa högre bithastighet när bandbredden är 50 % högre än den aktuella bithastigheten. </li> 
       <li id="li_38CC3A95D8634F359D0F7C273D0108C0"><span class="codeph"> ABR_MODERATE</span>: Växlar till nästa högre bithastighetsprofil när bandbredden är 20 % högre än den aktuella bithastigheten. </li> 
       <li id="li_E845C035420D4B3FB2B179F448F8CA85"><span class="codeph"> ABR_AGGRESSIVE</span>: Växlar omedelbart till den högsta bithastighetsprofilen när bandbredden är högre än den aktuella bithastigheten. </li> 
-     </ul> </p> <p>Om den inledande bithastigheten är noll, eller inte har angetts, men en princip har angetts, startar uppspelningen med den lägsta bithastighetsprofilen för en konservativ princip, den profil som ligger närmast mediandbithastigheten för tillgängliga profiler för en måttlig princip och den högsta bithastighetsprofilen för en aggressiv princip. </p> <p>Principen fungerar i begränsningarna för lägsta och högsta bithastighet, om dessa hastigheter anges. </p> <p> <span class="codeph"> getABRPolicy</span> returnerar den aktuella inställningen från <span class="codeph"> uppräkningen ABRControlParameters</span> : <span class="codeph"> ABR_CONSERVATIVE</span>, <span class="codeph"> ABR_MODERATE</span>eller <span class="codeph"> ABR_AGGRESSIVE</span>. </p> <p>Mer information finns i ABRControlParameters API doc.</p> </td> 
+     </ul> </p> <p>Om den inledande bithastigheten är noll, eller inte har angetts, men en princip har angetts, startar uppspelningen med den lägsta bithastighetsprofilen för en konservativ princip, den profil som ligger närmast mediandbithastigheten för tillgängliga profiler för en måttlig princip och den högsta bithastighetsprofilen för en aggressiv princip. </p> <p>Principen fungerar i begränsningarna för lägsta och högsta bithastighet, om dessa hastigheter anges. </p> <p> <span class="codeph"> </span> getABRPolicyreturnerar den aktuella inställningen från  <span class="codeph"> </span> ABRControlParametersenum:  <span class="codeph"> ABR_CONSERVATIVE</span>,  <span class="codeph"> ABR_MODERATE</span> eller  <span class="codeph"> ABR_AGGRESSIVE</span>. </p> <p>Mer information finns i ABRControlParameters API doc.</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -45,7 +48,7 @@ TVSDK övervakar hela tiden bithastigheten för att säkerställa att innehålle
 Tänk på följande:
 
 * Felväxlingsmekanismen för TVSDK kan åsidosätta dina inställningar eftersom TVSDK prioriterar en kontinuerlig uppspelning framför att strikt följa dina kontrollparametrar.
-* När bithastigheten ändras skickar TVSDK `onProfileChanged` händelser i `PlaybackEventListener`.
+* När bithastigheten ändras skickar TVSDK `onProfileChanged`-händelser i `PlaybackEventListener`.
 
 * Du kan ändra ABR-inställningarna när som helst, och spelaren växlar till den profil som mest liknar de senaste inställningarna.
 
@@ -59,4 +62,4 @@ Om en ström till exempel har följande profiler:
 
 Om du anger ett intervall på 300000 till 2000000 kommer TVSDK endast att ta hänsyn till profilerna 1, 2 och 3. Detta gör att program kan justeras till olika nätverksförhållanden, t.ex. växla från Wi-Fi till 3G eller till olika enheter som en telefon, en surfplatta eller en stationär dator.
 
-Om du vill ange ABR-kontrollparametrar anger du parametrarna för `ABRControlParameter` klassen.
+Om du vill ange ABR-kontrollparametrar anger du parametrarna för klassen `ABRControlParameter`.
