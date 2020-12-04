@@ -26,8 +26,8 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Viktigt:  Det här JSON-konfigurationsfilnamnet måste förbli <span class="filepath"> ADBMobleConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="filepath"> &lt;källrot&gt;/resurser </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Viktigt:  Det här JSON-konfigurationsfilnamnet måste vara <span class="filepath"> ADBMobleConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="filepath"> &lt;källrot&gt;/resurser </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td> 
@@ -35,7 +35,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar Visitor ID-tjänsten finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementera ID-tjänst </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
@@ -50,7 +50,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 
 Så här konfigurerar du videospårning i spelaren:
 
-1. Kontrollera att alternativen för inläsningstid i `ADBMobileConfig.json` resursfilen är korrekta.
+1. Kontrollera att alternativen för inläsning i resursfilen `ADBMobileConfig.json` är korrekta.
 
    ```
    { 
@@ -84,8 +84,8 @@ Så här konfigurerar du videospårning i spelaren:
    Så här konfigurerar du inläsningsalternativ:
 
 
-   1. Kontrollera att `ADBMobileConfig.json` filen innehåller rätt värden (tillhandahålls av Adobe).
-   1. Kontrollera att filen finns i `assets/` mappen.
+   1. Bekräfta att filen `ADBMobileConfig.json` innehåller rätt värden (tillhandahålls av Adobe).
+   1. Kontrollera att filen finns i mappen `assets/`.
 
       Mappen måste finnas i roten för programkällträdet.
 
@@ -135,13 +135,13 @@ Så här konfigurerar du videospårning i spelaren:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Ange metadata för videoanalys för `videoAnalyticsProvider` instansen.
+   1. Ange metadata för videoanalys för instansen `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Koppla mediespelarinstansen till `videoAnalyticsProvider` instansen:
+   1. Koppla mediespelarinstansen till `videoAnalyticsProvider`-instansen:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
