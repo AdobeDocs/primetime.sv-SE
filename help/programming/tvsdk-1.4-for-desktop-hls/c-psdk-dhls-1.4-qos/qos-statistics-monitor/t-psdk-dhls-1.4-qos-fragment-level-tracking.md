@@ -6,6 +6,9 @@ title: Spåra på fragmentnivå med hjälp av inläsningsinformation
 uuid: 41fb2b90-3531-4cc5-bf9b-01ccae04d2fd
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från klassen LoadInformation.
 
-1. Implementera händelseavlyssnaren för `onLoadInformationAvailable` återanrop.
+1. Implementera händelseavlyssnaren `onLoadInformationAvailable` för återanrop.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -30,7 +33,7 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
                                     onLoadInformationAvailable);
    ```
 
-1. Läs intressanta data från det `LoadInformation` som skickas till återanropet.
+1. Läs intressanta data från `LoadInformation` som skickas till återanropet.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -42,37 +45,37 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> <p>Hämtningens varaktighet i millisekunder. </p> <p>TVSDK skiljer inte mellan den tid det tog för klienten att ansluta till servern och den tid det tog att hämta det fullständiga fragmentet. Om till exempel ett 10 MB-segment tar 8 sekunder att ladda ned, tillhandahåller TVSDK den informationen, men talar inte om för dig att det tog 4 sekunder innan den första byten och ytterligare 4 sekunder att ladda ned hela fragmentet. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> Medielängden för de hämtade fragmenten i millisekunder. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> size </span> </td> 
+      <td colname="col01"> <span class="codeph"> size  </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> Storleken på den hämtade resursen i byte. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
       <td colname="col2"> Index för motsvarande spår, om det är känt. annars 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Namnet på motsvarande spår, om det är känt. annars null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Typ av motsvarande spår, om den är känd. annars null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type </span> </td> 
+      <td colname="col01"> <span class="codeph"> type  </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Vad TVSDK laddade ned. Något av följande: 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
@@ -82,7 +85,7 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
       </ul> Ibland är det inte möjligt att identifiera resurstypen. Om detta inträffar returneras FILE. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url </span> </td> 
+      <td colname="col01"> <span class="codeph"> url  </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Den URL som pekar på den hämtade resursen. </td> 
    </tr> 
