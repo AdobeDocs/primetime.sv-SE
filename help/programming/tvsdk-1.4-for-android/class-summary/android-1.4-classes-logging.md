@@ -6,6 +6,9 @@ title: Loggningsklasser
 uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +41,7 @@ Paket: [com.adobe.mediacore.log](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Gränssnitt. De metoder som krävs för att implementera en anpassad loggare för <code>primetime-sdk-name</code> fasen. </td> 
+   <td colname="2">Gränssnitt. De metoder som krävs för att implementera en anpassad loggare för <code>primetime-sdk-name</code>-fasen. </td> 
   </tr> 
  </tbody>
 </table>
