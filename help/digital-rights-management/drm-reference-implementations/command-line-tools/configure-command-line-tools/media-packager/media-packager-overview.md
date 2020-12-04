@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # DRM Media Packager {#media-packager}
 
-Använd Media Packager ( [!DNL AdobePackager.jar]) för att ange en DRM-princip som ska gälla för ditt innehåll och för att ange vilken del av innehållet som ska krypteras. Du kan till exempel ange att paketeraren ska kryptera videodata, men inte ljuddata.
+Använd Media Packager ( [!DNL AdobePackager.jar]) för att ange en DRM-princip som ska tillämpas på ditt innehåll och för att ange vilken del av innehållet som ska krypteras. Du kan till exempel ange att paketeraren ska kryptera videodata, men inte ljuddata.
 
-Innan du kör [!DNL AdobePackager.jar]måste du ange egenskaper i avsnittet Egenskaper för Media Packager i konfigurationsfilen.
+Innan du kör [!DNL AdobePackager.jar] måste du ange egenskaper i avsnittet Egenskaper för Media Packager i konfigurationsfilen.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ java -jar AdobePackager.jar
 
    Om du anger en katalog sparas den krypterade filen automatiskt i den angivna katalogen med samma filnamn som du angav som källfil. Du kan dock inte ange en målkatalog som innehåller källfilen.
 
-**Paketera flera filer med samma nyckel** (för stöd för flera bitar):
+**Paketera flera filer med samma nyckel**  (för stöd för flera bitar):
 
 ```
 java -jar AdobePackager.jar  
@@ -78,11 +78,11 @@ java -jar AdobePackager.jar -d
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` är en [!DNL .metadata] fil som innehåller DRM-metadata.
+* `metadatafile` är en  [!DNL .metadata] fil som innehåller DRM-metadata.
 
 >[!NOTE]
 >
->Under paketeringen kan Media Packager inte längre generera en [!DNL .header] fil som standard. Om du vill generera en [!DNL .header] fil använder du `-h` alternativet under paketeringen.
+>Under paketeringen kan Media Packager inte längre generera en [!DNL .header]-fil som standard. Om du vill generera en [!DNL .header]-fil använder du alternativet `-h` under paketeringen.
 
 **Tabell 3: Alternativ**
 
@@ -95,11 +95,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> konfigurationsfil </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Media Packager efter <span class="filepath"> flashaccesstools.properties </span> i den aktuella arbetskatalogen. </p> <p>Obs!  De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedFile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> krypterad fil </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gör att du kan visa information om en fil som redan har paketerats. </p> <p class="- topic/p ">Käll- och målfilerna är inte obligatoriska. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -108,27 +108,27 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraherar DRM-principer från en paketerad fil när du använder det här alternativet tillsammans med <span class="codeph"> -d- </span> alternativet. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog där den krypterade filen finns med ett filnamn och en DRM-principidentifierare. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraherar DRM-principer från en paketerad fil när du använder det här alternativet tillsammans med alternativet <span class="codeph"> -d </span>. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog där den krypterade filen finns med ett filnamn och en DRM-principidentifierare. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraherar DRM-huvudet från en paketerad fil när du använder det här alternativet tillsammans med <span class="codeph"> -d- </span> alternativet. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog där den krypterade filen finns med filnamnet och filnamnstillägget <span class="filepath"> .header </span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extraherar DRM-huvudet från en paketerad fil när du använder det här alternativet tillsammans med alternativet <span class="codeph"> -d </span>. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog där den krypterade filen finns med filnamnet och filnamnstillägget <span class="filepath"> .header </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en unik identifierare för det här innehållssegmentet. </p> <p class="- topic/p ">Om du inte anger någon identifierare används målfilens namn automatiskt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> värde </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en anpassad nyckel/värde som ska läggas till i innehållets metadata. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -k- </span> alternativ. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> nyckel </span>= <span class="+ topic/ph pr-d/codeph codeph"> värde </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en anpassad nyckel/värde som ska läggas till i innehållets metadata. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -k </span>-alternativ. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrahera metadata från en paketerad fil när du använder det här alternativet tillsammans med <span class="codeph"> -d- </span> alternativet. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog som den krypterade filen med ett filnamn och ett <span class="codeph"> .metadata- </span> tillägg. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Extrahera metadata från en paketerad fil när du använder det här alternativet tillsammans med alternativet <span class="codeph"> -d </span>. </p> <p class="- topic/p ">En fil skapas automatiskt i samma katalog som den krypterade filen med ett filnamn och ett <span class="codeph"> .metadata </span>-tillägg. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-noprompt </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. </p> <p class="- topic/p ">Om målfilen redan finns och <span class="codeph"> -o inte </span> är inställd inträffar ett fel. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. </p> <p class="- topic/p ">Om målfilen redan finns och <span class="codeph"> -o </span> inte har angetts inträffar ett fel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
@@ -136,7 +136,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> filnamn [domain-transport-cert] </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namnet på filen som innehåller DRM-principen. </p> <p class="- topic/p ">Om DRM-principen kräver domänregistrering hos en server som använder ett annat transportcertifikat än det som du har angett i egenskapsfilen, måste du ange domänens transportcertifikat. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -p- </span> alternativ. Klienten använder alltid det första alternativet som standard. De värden som du har angett på kommandoraden har högre prioritet än de som du har angett i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namnet på filen som innehåller DRM-principen. </p> <p class="- topic/p ">Om DRM-principen kräver domänregistrering hos en server som använder ett annat transportcertifikat än det som du har angett i egenskapsfilen, måste du ange domänens transportcertifikat. </p> <p class="- topic/p ">Du kan ange flera alternativ för <span class="codeph"> -p </span>. Klienten använder alltid det första alternativet som standard. De värden som du har angett på kommandoraden har högre prioritet än de som du har angett i konfigurationsfilen. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -167,11 +167,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Anger om skriptdata ska krypteras i mp4s. </p> <p><i class="+ topic/ph hi-d/i ">onMetaData</i> - och <i class="+ topic/ph hi-d/i ">onXMP</i> -skriptdatataggar krypteras aldrig, även om du aktiverar det här alternativet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Anger om skriptdata ska krypteras i mp4s. </p> <p><i class="+ topic/ph hi-d/i "></i> onMetaData- och  <i class="+ topic/ph hi-d/i "></i> onXMPscript-datataggar krypteras aldrig, även om du aktiverar det här alternativet. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. </p> <p class="- topic/p ">Värdet <span class="codeph"> high</span> används för att kryptera allt videoinnehåll, medan värden för <span class="codeph"> medium</span> och <span class="codeph"> low</span> används för att kryptera delar av videoinnehållet för mp4-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | låg</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger videokrypteringsnivån. </p> <p class="- topic/p ">Värdet <span class="codeph"> high</span> används för att kryptera allt videoinnehåll, medan värdena <span class="codeph"> medium</span> och <span class="codeph"> low</span> används för att kryptera delar av videoinnehållet för mp4-filer som innehåller H.264-innehåll. </p> <p class="- topic/p ">värde = <span class="codeph"> högt | medium | låg</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypted</span> </td> 
@@ -183,7 +183,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den här egenskapen används upprepade gånger för att skapa en lista med DRM-principer som ska tillämpas på innehållet. <span class="codeph"> n</span> representerar ett heltal vars värde är 1 eller högre. Klienten använder den första instansen som standard. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den här egenskapen används upprepade gånger för att skapa en lista med DRM-principer som ska tillämpas på innehållet. <span class="codeph"> representerar ett </span> heltal vars värde är 1 eller högre. Klienten använder den första instansen som standard. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -195,7 +195,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-filen som innehåller autentiseringsuppgifter för paketering för signering av innehåll. </p> <p class="- topic/p ">Filen <span class="codeph"> encrypt.sign.certfile</span> måste referera till en <span class="filepath"> .pfx</span> -fil som innehåller ett certifikat och en privat nyckel. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-filen som innehåller autentiseringsuppgifter för paketering för signering av innehåll. </p> <p class="- topic/p "><span class="codeph"> encrypt.sign.certfile</span> måste referera till en <span class="filepath"> .pfx</span>-fil som innehåller ett certifikat och en privat nyckel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certpass</span> </td> 
@@ -206,12 +206,12 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. </p> <p class="- topic/p ">Ange x (för Primetime DRM x.0) där x representerar ett större versionsnummer. Eventuella versioner av servrar före Adobe Primetime version 3.0 stöder inte den här inställningen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.flyttcert </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Om en DRM-princip <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> kräver domänregistrering med en server som stöder ett annat transportcertifikat än det som du har angett i <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, måste du ange domänens transportcertifikat. </p> <p class="- topic/p ">This property specifies a file that includes the certificate only (either PEM or DER format is acceptable). </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.flyttcert  </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Om en DRM-princip <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> kräver domänregistrering med en server som stöder ett annat transportcertifikat än det som du har angett i <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, måste du ange domänens transportcertifikatbehov. </p> <p class="- topic/p ">This property specifies a file that includes the certificate only (either PEM or DER format is acceptable). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en licensnyckel. </p> <p class="- topic/p ">Om du inte anger någon tangent genereras nyckeln slumpmässigt. Om du inte aktiverar tangentrotation kan du använda den här nyckeln för att kryptera innehåll. </p> <p class="- topic/p ">När du aktiverar tangentrotation kan du använda den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda mellanrum mellan hexadecimala värden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en licensnyckel. </p> <p class="- topic/p ">Om du inte anger någon tangent genereras nyckeln slumpmässigt. Om du inte aktiverar tangentrotation kan du använda den här nyckeln för att kryptera innehåll. </p> <p class="- topic/p ">När du aktiverar tangentrotation kan du använda den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda blanksteg mellan hexadecimala värden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
@@ -219,7 +219,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som du kan ange för att kryptera innehåll när nyckelrotation är aktiverad. </p> <p class="- topic/p ">Om du inte anger några tangenter genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda mellanrum mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När du anger flera tangenter bläddras nycklarna igenom i den ordning som du har angett. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som du kan ange för att kryptera innehåll när nyckelrotation är aktiverad. </p> <p class="- topic/p ">Om du inte anger några tangenter genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda blanksteg mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">Från och med 1 </i> måste antalet öka monotont. När du anger flera tangenter bläddras nycklarna igenom i den ordning som du har angett. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 
