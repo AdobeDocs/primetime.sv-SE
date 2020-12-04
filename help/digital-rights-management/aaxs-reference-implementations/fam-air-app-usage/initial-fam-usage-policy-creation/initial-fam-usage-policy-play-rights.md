@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Uppspelningsrättigheter {#play-rights}
+# Spela upp rättigheter {#play-rights}
 
 I följande tabell beskrivs inställningarna för uppspelningsrättigheter:
 
@@ -19,13 +19,13 @@ I följande tabell beskrivs inställningarna för uppspelningsrättigheter:
 |--- |--- |
 | Uppspelningsfönster | Den tid en licens är giltig (i minuter) efter första gången användaren spelar upp det skyddade innehållet. |
 | Utdataskydd | Anger om utdata till externa återgivningsenheter ska skyddas. Analoga och digitala utdata kan anges oberoende av varandra. |
-| Begränsningar | Blocklista över klientversioner som inte får spela upp innehåll. Alla kolumner är valfria. |
+| Begränsningar | Blockeringslista i klientversioner tillåts inte att spela upp innehåll. Alla kolumner är valfria. |
 | DRM | Anger en lista över DRM-versioner som inte får spela upp skyddat innehåll. |
 | Körning | Anger en lista med körningsmiljöversioner som inte får spela upp skyddat innehåll. |
 | Minsta säkerhetsnivå |  |
 | DRM | Den lägsta DRM-säkerhetsnivå som krävs för att spela upp skyddat innehåll. |
 | Körning | Den lägsta säkerhetsnivå vid körning som krävs för att spela upp skyddat innehåll. |
-| Tillåtna program | Tillåt en lista över klientprogram som får spela upp innehåll. Om inga program anges tillåts alla SWF- och AIR-program. |
+| Tillåtna program | Tillåtelselista av klientprogram som får spela upp innehåll. Om inga program anges tillåts alla SWF- och AIR-program. |
 | SWF | Lista över SWF-URL:er som får spela upp skyddat innehåll. |
 | AIR | Lista över AIR-program som tillåts spela upp skyddat innehåll. Utgivar-ID krävs, de återstående fälten är valfria. |
 
