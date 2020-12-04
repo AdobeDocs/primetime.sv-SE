@@ -6,6 +6,9 @@ title: NATIVE_ERROR Videouppspelningsvärden
 uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 6%
 
 ---
 
@@ -55,72 +58,72 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> Resursen kan inte hittas. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> Allmänt fel. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR  </span> </td> 
    <td colname="col3"> Ett feltillstånd som videomotorn inte kan återställas från. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE  </span> </td> 
    <td colname="col3"> Nätverksfel, försöker återställa. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> Resursens storlek kan inte bestämmas. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
    <td colname="col3"> Funktionen är inte implementerad. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY </span> </td> 
+   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY  </span> </td> 
    <td colname="col3"> Slut på minne. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> Ett fel uppstod när mediefilen parsades. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN  </span> </td> 
    <td colname="col3"> Resursen har en storlek, men är okänd. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> Underflödesvillkor. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG  </span> </td> 
    <td colname="col3"> Konfigurationen stöds inte. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> Åtgärden stöds inte. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> Har inte initierats än. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> Ogiltig parameter. </td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> Resursen har inte angetts. </td> 
   </tr> 
   <tr> 
@@ -175,7 +178,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Behållartypen stöds inte. </td> 
   </tr> 
   <tr> 
@@ -250,7 +253,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> NETWORK_DOWN  </span> </td> 
    <td colname="col3"> Användarens nätverksanslutning är inte tillgänglig. Uppspelningen kan avbrytas när som helst och återupptas när anslutningen är tillgänglig. </td> 
   </tr> 
   <tr> 
@@ -300,7 +303,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3"> Medieläsaren kan inte läsa in segment eftersom den har nått slutet av det aktiva fönstret. Inläsning av segment återupptas när servern annonserar nya media till det aktiva fönstret. Det här läget nås vanligtvis om: 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">bufferTime är för hög (lika med eller högre än livefönstrets varaktighet). </li> 
@@ -310,7 +313,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING  </span> </td> 
    <td colname="col3"> Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Detta är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder. </td> 
   </tr> 
   <tr> 
@@ -375,7 +378,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Webbprotokollet som används i URL:en stöds inte. </td> 
   </tr> 
   <tr> 
@@ -445,7 +448,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> Det gick inte att läsa in innehållet på grund av säkerhetsbegränsningar. </td> 
   </tr> 
   <tr> 
@@ -465,7 +468,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> Det går inte att hitta nyckeln. </td> 
   </tr> 
   <tr> 
@@ -496,7 +499,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Det uppstod ett fel när media spelades upp i <i>tricks-uppspelningsläge</i> . Trick-uppspelningsläget avslutas och flödet pausas. Anropa <span class="codeph"> Play()</span> för att spela upp media i normalläge. </td> 
+   <td colname="col3">Det uppstod ett fel när media spelades upp i <i>tricks play</i>-läge. Trick-uppspelningsläget avslutas och flödet pausas. Anropa <span class="codeph"> Play()</span> för att spela upp media i normalläge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
