@@ -17,9 +17,9 @@ Krav för synkronisering anger hur ofta klienten synkroniserar sitt tillstånd m
 
 Synkroniseringsbeteendet definieras med följande parametrar:
 
-* **Startintervall** - Anger hur lång tid det tar att vänta efter den senaste lyckade synkroniseringen för att starta en annan synkroniseringsbegäran.
-* **Hårt stoppintervall** - (valfritt). Tillåt inte uppspelning om en lyckad synkronisering inte har utförts under den angivna tiden.
-* **Tvinga synkroniseringssannolikhet** - (valfritt). Sannolikhet med vilken klienten ska skicka ett synkroniseringsmeddelande före nästa startintervall.
+* **Startintervall**  - Anger hur lång tid det tar att vänta efter den senaste lyckade synkroniseringen för att starta en annan synkroniseringsbegäran.
+* **Hårt stoppintervall**  - (valfritt). Tillåt inte uppspelning om en lyckad synkronisering inte har utförts under den angivna tiden.
+* **Tvinga synkroniseringssannolikhet**  - (valfritt). Sannolikhet med vilken klienten ska skicka ett synkroniseringsmeddelande före nästa startintervall.
 
 >[!NOTE]
 >
