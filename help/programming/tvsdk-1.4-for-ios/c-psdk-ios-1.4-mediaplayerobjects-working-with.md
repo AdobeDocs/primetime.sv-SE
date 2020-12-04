@@ -6,6 +6,9 @@ title: Arbeta med MediaPlayer-objekt
 uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -16,19 +19,19 @@ PTMediaPlayer-objektet representerar din mediespelare. Ett PTMediaPlayerItem rep
 
 ## Om klassen MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-När en medieresurs har lästs in, skapar TVSDK en instans av `PTMediaPlayerItem` klassen som ger åtkomst till den resursen.
+När en medieresurs har lästs in, skapar TVSDK en instans av klassen `PTMediaPlayerItem` som ger åtkomst till den resursen.
 
-Medieresursen `PTMediaPlayer` åtgärdas, den tillhörande manifestfilen läses in och manifestet tolkas. Detta är den asynkrona delen av resursinläsningsprocessen. Instansen skapas när `PTMediaPlayerItem` resursen har lösts och den här instansen är en löst version av en medieresurs. TVSDK ger åtkomst till den nyligen skapade `PTMediaPlayerItem` instansen via `PTMediaPlayer.currentItem`.
+`PTMediaPlayer` löser medieresursen, läser in den associerade manifestfilen och tolkar manifestet. Detta är den asynkrona delen av resursinläsningsprocessen. Instansen `PTMediaPlayerItem` skapas när resursen har lösts och den här instansen är en löst version av en medieresurs. TVSDK ger åtkomst till den nyligen skapade `PTMediaPlayerItem`-instansen via `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
 >Du måste vänta tills resursen har lästs in innan du kan komma åt mediespelarobjektet.
 
-## MediaPlayer-objektets livscykel {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
+## Livscykel för MediaPlayer-objekt {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-Från det ögonblick du skapar `PTMediaPlayer` instansen till det ögonblick du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar från en status till en annan.
+Från den stund du skapar `PTMediaPlayer`-instansen till den stund du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar från en status till en annan.
 
-Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Anrop `play` till exempel `PTMediaPlayerStatusCreated` är inte tillåtet. Du kan bara anropa den här statusen när spelaren har nått `PTMediaPlayerStatusReady` statusen.
+Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Det är till exempel inte tillåtet att anropa `play` i `PTMediaPlayerStatusCreated`. Du kan bara anropa den här statusen efter att spelaren har uppnått `PTMediaPlayerStatusReady`-statusen.
 
 Så här arbetar du med status:
 
@@ -56,7 +59,7 @@ I följande tabell finns mer information:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>Programmet anropar <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>och mediespelaren läses in. </p> </td> 
+   <td colname="col2"> <p>Programmet anropar <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span> och mediespelaren läses in. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
@@ -72,7 +75,7 @@ I följande tabell finns mer information:
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
-   <td colname="col2"> <p>När ditt program spelar upp och pausar media flyttas mediespelaren mellan detta läge och <span class="codeph"> PTMediaPlayerStatusPlayering</span>. </p> </td> 
+   <td colname="col2"> <p>När ditt program spelar upp och pausar media flyttas mediespelaren mellan detta läge och <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusSlutförd</span> </p> </td> 
