@@ -6,15 +6,18 @@ title: Styr textningsformat
 uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
 source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+workflow-type: tm+mt
+source-wordcount: '594'
+ht-degree: 0%
 
 ---
 
 
-# Styr textningsformat{#control-closed-caption-styling}
+# Kontrollera textningsformat för undertexter{#control-closed-caption-styling}
 
 Du kan ange formatinformation för textningsspår med klassen ClosedCaptionStyles. Detta anger formatet för alla undertexter som visas av spelaren.
 
-Den här klassen kapslar in formatinformation för undertexter som teckensnittstyp, storlek, färg och bakgrundsopacitet. En associerad hjälpklass, `ClosedCaptionStylesBuilder`underlättar arbetet med stilinställningar för undertexter.
+Den här klassen kapslar in formatinformation för undertexter som teckensnittstyp, storlek, färg och bakgrundsopacitet. En associerad hjälpklass, `ClosedCaptionStylesBuilder`, underlättar arbetet med formatinställningar för undertexter.
 
 ## Ange format för undertexter {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
@@ -23,8 +26,8 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 1. Vänta tills MediaPlayer har minst statusen PREPARED (se [Vänta på ett giltigt tillstånd](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Gör något av följande om du vill ändra formatinställningarna:
 
-   * Använd klassen `ClosedCaptionStylesBuilder` help (används `ClosedCaptionStyles` bakom scenerna).
-   * Använd `ClosedCaptionStyles` klassen direkt.
+   * Använd hjälpklassen `ClosedCaptionStylesBuilder` (används i `ClosedCaptionStyles` bakom scenerna).
+   * Använd klassen `ClosedCaptionStyles` direkt.
 
 >[!NOTE]
 >
@@ -32,7 +35,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
 ## Alternativ för textningsformat {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-Du kan ange formatinformation för textningsspår med `ClosedCaptionStyles` klassen. Detta anger formatet för alla undertexter som visas av spelaren.
+Du kan ange formatinformation för textningsspår med klassen `ClosedCaptionStyles`. Detta anger formatet för alla undertexter som visas av spelaren.
 
 ```
 public function TextFormat( 
@@ -62,7 +65,7 @@ public function TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> ClosedCaptionStyles.FONT- </span> arrayen och representerar till exempel fast teckenbredd med eller utan serifer. 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av matrisen <span class="codeph"> ClosedCaptionStyles.FONT </span> och representerar till exempel fast teckenbredd med eller utan serifer. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -78,17 +81,17 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
-   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av <span class="codeph"> ClosedCaptionStyles.FONT_SIZE- </span> matrisen: 
+   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av <span class="codeph">-matrisen ClosedCaptionStyles.FONT_SIZE </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Standardstorlek </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - cirka 30 % större än mediet </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än medium </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medium </li> 
-     </ul> </p> <p>Tips:  Du kan ändra teckenstorleken för WebVTT-bildtexter genom att ändra parametern size för <span class="codeph"> inställningsfunktionen DefaultMediaPlayer.ccStyles </span> . </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardstorlek </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR  </span> - Cirka 30 % större än mediet </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medium </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Bildtextens standardstorlek; samma som medium </li> 
+     </ul> </p> <p>Tips:  Du kan ändra teckenstorleken för WebVTT-bildtexter genom att ändra parametern size för funktionen <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnittskant </td> 
-   <td colname="2"> <p>Den effekt som används för teckensnittskanten, till exempel upphöjd eller ingen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> ClosedCaptionStyles.FONT_EDGE- </span> arrayen. 
+   <td colname="2"> <p>Den effekt som används för teckensnittskanten, till exempel upphöjd eller ingen. </p> <p>Kan endast anges till ett värde som definieras av matrisen <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +106,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckenfärg </td> 
-   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> ClosedCaptionStyles.COLOR- </span> arrayen. 
+   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av matrisen <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -145,15 +148,15 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ogenomskinlighet för teckensnitt </td> 
-   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för teckensnittet är 100. </p> </td> 
+   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för teckensnittet är 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bakgrundsopacitet </td> 
-   <td colname="2"> <p>Opaciteten för bakgrundsteckencellen. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för bakgrunden är 100. </p> </td> 
+   <td colname="2"> <p>Opaciteten för bakgrundsteckencellen. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för bakgrunden är 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Fyllningsopacitet </td> 
-   <td colname="2"> <p>Opaciteten för bildtextfönstrets bakgrund. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för fill är 0. </p> </td> 
+   <td colname="2"> <p>Opaciteten för bildtextfönstrets bakgrund. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för fill är 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
