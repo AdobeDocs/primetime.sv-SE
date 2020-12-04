@@ -6,6 +6,9 @@ title: Effekt vid infogning och borttagning av annonser i signeringsläge och me
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
 
 **Serveröversikt**
 
-| **Lägg till metadata** | **Skapade lösare** | **`PlacementInformations`skapad ** | **Resulterande beteende** |
+| **Lägg till metadata** | **Skapade lösare** | **`PlacementInformations`skapad** | **Resulterande beteende** |
 |--- |--- |--- |--- |
 |  | Ta bort | Ta bort | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | Raderade intervall |
 | Ta bort, Auditude | Ta bort, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | Intervall borttagna, annonser infogade |
