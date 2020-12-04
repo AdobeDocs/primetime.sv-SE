@@ -6,6 +6,9 @@ title: Arbeta med undertexter
 uuid: 881266aa-3c32-4035-9547-0f363949f77b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,6 @@ TVSDK har stöd för återgivning av följande format:
 Du kan:
 
 * Välj ett tillgängligt bildtextspår som aktuellt spår och lyssna efter händelser som indikerar ytterligare tillgängliga spår.
-* Aktivera eller inaktivera undertextning (synlig eller inte synlig) med hjälp av `MediaPlayer` gränssnittet.
-* Välj formatalternativ som anger hur undertexter återges av den underliggande videomotorn. Använd `MediaPlayerItem` gränssnittet för att välja format som teckensnitt eller teckenfärg.
+* Aktivera eller inaktivera undertextning (synlig eller inte synlig) med `MediaPlayer`-gränssnittet.
+* Välj formatalternativ som anger hur undertexter återges av den underliggande videomotorn. Använd gränssnittet `MediaPlayerItem` för att välja format som teckensnitt eller teckenfärg.
 
