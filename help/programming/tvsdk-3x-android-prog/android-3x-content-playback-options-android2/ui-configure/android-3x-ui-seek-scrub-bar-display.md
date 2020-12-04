@@ -1,11 +1,14 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i VOD (video on demand) och liveströmmar.
 seo-description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i VOD (video on demand) och liveströmmar.
-seo-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
+seo-title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
+title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
 uuid: 30a9237c-bbd5-457e-a93c-662570711986
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,8 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
 1. Vänta tills spelaren har en giltig status för sökning.
 
    Giltiga statusvärden är PREPARED, COMPLETE, PAUSED och PLAYING.
-1. Använd det inbyggda alternativet `SeekBar` för att ange `OnSeekBarChangeListener`, vilket avgör när användaren rensar.
-1. Skicka den begärda sökpositionen (millisekunder) till `MediaPlayer.seek` metoden.
+1. Använd det inbyggda `SeekBar` för att ställa in `OnSeekBarChangeListener`, som avgör när användaren rensar.
+1. Skicka den begärda sökpositionen (millisekunder) till metoden `MediaPlayer.seek`.
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -46,7 +49,7 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
 
    Den här händelsen skickar lämplig varning. Programmet avgör hur du ska gå vidare, och alternativen omfattar att försöka söka igen eller fortsätta uppspelningen från den föregående positionen.
 
-1. Vänta på att TVSDK ska ringa upp `MediaPlayerEvent.SEEK_END` motringningen.
+1. Vänta på att TVSDK ska anropa `MediaPlayerEvent.SEEK_END`-återanropet.
 1. Hämta den slutliga justerade uppspelningspositionen med återanropets positionsparameter.
 
    Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Regler, inklusive uppspelningsbeteendet påverkas om en sökning eller annan omplacering avslutas mitt i en annonsbrytning eller hoppar över och brytningar kan tillämpas.
