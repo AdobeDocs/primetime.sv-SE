@@ -18,7 +18,7 @@ ht-degree: 0%
 Adobe® Access™ är en avancerad lösning för hantering av digitala rättigheter och skydd av innehåll för högvärdigt audiovisuellt innehåll. Med verktyg som du skapar med Java API:er kan du skapa profiler, tillämpa profiler på filer som innehåller ljud- och videoinnehåll och kryptera dessa filer. Stegen på hög nivå för att utföra dessa uppgifter är följande:
 
 1. Använd Java-API:erna för att ange principegenskaper och krypteringsparametrar.
-1. Skapa en profil som beskriver användningsrollerna för innehållet. (Se [Arbeta med policyer](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)).
+1. Skapa en profil som beskriver användningsrollerna för innehållet. (Se [Arbeta med profiler](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)).
 
    Du kan skapa valfritt antal profiler. De flesta användare skapar ett litet antal profiler och tillämpar dem på många filer.
 
@@ -30,11 +30,11 @@ Adobe® Access™ är en avancerad lösning för hantering av digitala rättighe
 
 Det krypterade innehållet är nu klart för distribution och klienten kan begära licensen från servern.
 
-SDK innehåller ett Java-API för att utföra dessa åtgärder, och innehåller referensimplementeringar av licensservern samt kommandoradsverktyg som baseras på Java-API:erna. Mer information finns i *Använda referensimplementeringar* för Adobe Access.
+SDK innehåller ett Java-API för att utföra dessa åtgärder, och innehåller referensimplementeringar av licensservern samt kommandoradsverktyg som baseras på Java-API:erna. Mer information finns i *Använda referensimplementeringar för Adobe Access*.
 
 ## Nyheter i Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}
 
-* **Extern CEK**: Möjlighet att integrera ett CMS-system (Content Key Management System) i arbetsflödena för DRM-licenshantering och innehållspaketering, i stället för att kryptera CK och paketera det i innehållets metadata. Se [Extern CEK-översikt](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)för Adobe Access DRM.
+* **Extern CEK**: Möjlighet att integrera ett CMS-system (Content Key Management System) i arbetsflödena för DRM-licenshantering och innehållspaketering, i stället för att kryptera CK och paketera det i innehållets metadata. Se [Extern CEK-översikt för Adobe Access DRM](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md).
 
 * **Licens (verifikation) Retur**: Möjlighet för en kund att returnera (eller ta bort) en licens som har utfärdats till klienten.
 * **Xbox Key Server**: Möjlighet att skydda innehåll som skickas till Xbox och Xbox 360. (En Adobe Primetime-klient krävs.)
