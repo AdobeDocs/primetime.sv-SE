@@ -6,6 +6,9 @@ title: HLS-funktioner som stöds
 uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Webbläsare-TVSDK har stöd för ett antal HLS-funktioner som du kan implementer
 
 >[!TIP]
 >
->Ikonen ![som](assets/supported15.png) stöds i tabellen nedan betyder att funktionen stöds i den aktuella versionen.
+>I funktionsmatristabellerna nedan betyder ![ikonen](assets/supported15.png) som stöds att funktionen stöds i den aktuella versionen.
 
 >[!TIP]
 >
@@ -91,27 +94,27 @@ Removed Nielsen row
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Annonsinfogning | VOD | Endast annons | Stöds inte | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD + Live | Målparametrar | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD + Live | Anpassad annonspolicy | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
-| Annonsinfogning | VOD + Live | Lazy och laddning | ![ikon som stöds](assets/supported15.png) | Stöds inte | Plattformsbegränsning |
-| Annonsinfogning | VOD | Annonser, banners och klickbara annonser | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
+| Ad Insertion | VOD | Endast annons | Stöds inte | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Målparametrar | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Anpassad annonspolicy | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
+| Ad Insertion | VOD + Live | Lazy och laddning | ![ikon som stöds](assets/supported15.png) | Stöds inte | Plattformsbegränsning |
+| Ad Insertion | VOD | Annonser, banners och klickbara annonser | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
-## Funktioner för infogning av HLS-kärnannonser (CSAI) {#hls-core-ad-insertion}
+## HLS-huvudfunktioner för annonsinfogning (CSAI) {#hls-core-ad-insertion}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Annonsinfogning | VOD + Live | Före rullning | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD + Live | Mid-roll | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
-| Annonsinfogning | VOD + Live | Efterrullning | Endast VOD | Endast VOD | Endast VOD |
-| Annonsinfogning | FER VOD | Annonsupplösning och beteenden | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
-| Annonsinfogning | VOD + Live | Standardannonspolicy | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
-| Annonsinfogning | VOD + Live | VAST 2.0/3.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD + Live | VMAP 1.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
-| Annonsinfogning | VOD + Live | CRS v3.1 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Före rullning | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Mid-roll | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
+| Ad Insertion | VOD + Live | Efterrullning | Endast VOD | Endast VOD | Endast VOD |
+| Ad Insertion | FER VOD | Annonsupplösning och beteenden | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
+| Ad Insertion | VOD + Live | Standardannonspolicy | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | VMAP 1.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
+| Ad Insertion | VOD + Live | CRS v3.1 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 
-## Funktioner för skydd av HLS-innehåll {#hls-content-protection}
+## HLS-innehållsskyddsfunktioner {#hls-content-protection}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -119,7 +122,7 @@ Removed Nielsen row
 | Skydd av innehåll | VOD + Live | Sample-AES | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Skydd av innehåll | VOD | DRM | Adobe Access | Stöds inte | FairPlay |
 
-## Avancerade HLS-uppspelningsfunktioner {#hls-advanced-playback}
+## HLS avancerade uppspelningsfunktioner {#hls-advanced-playback}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
