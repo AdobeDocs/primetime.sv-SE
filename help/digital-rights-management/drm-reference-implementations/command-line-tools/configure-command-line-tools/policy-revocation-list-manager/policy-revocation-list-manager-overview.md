@@ -4,21 +4,24 @@ title: DRM Revocation List Manager
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
 # DRM Revocation List Manager {#policy-revocation-list-manager}
 
-Använd kommandoradsverktyget ( [!DNL AdobeRevocationListManager.jar]) Primetime DRM Revocation List Manager för att skapa och hantera återkallningslistor och kontrollera om profiler har återkallats.
+Använd kommandoradsverktyget Primetime DRM Revocation List Manager ( [!DNL AdobeRevocationListManager.jar]) för att skapa och hantera återkallningslistor och för att kontrollera om profiler har återkallats.
 
-Innan du kör [!DNL AdobeRevocationListManager.jar]måste du ange egenskaper i egenskapsdelen *för* principuppdateringshanteraren och återkallningslistehanteraren i konfigurationsfilen.
+Innan du kör [!DNL AdobeRevocationListManager.jar] måste du ange egenskaper i *listhanteraren för principuppdatering och egenskaper för spärrlistehanteraren* i konfigurationsfilen.
 
 >[!NOTE]
 >
 >Du kan också ange alla egenskaper för Hanteraren för spärrlista från kommandoraden.
 
-## Kommandoradsanvändning för Revocation List Manager {#revocation-list-manager-command-line-usage}
+## Kommandoradsanvändning {#revocation-list-manager-command-line-usage} för Hanteraren för återkallningslista
 
 ```
 java -jar AdobeRevocationListManager.jar 
@@ -72,7 +75,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte är inställd inträffar ett fel. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte har angetts inträffar ett fel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issurName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som har identifierats av <span class="codeph"> publisherName</span> och <span class="codeph"> serialNumber</span> på det angivna datumet. UtgivareName <span class="codeph"> måste använda</span> namnformatet 509. Till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Du måste ange serienumren i ett hexadecimalt format. Du måste även ange återkallningsdatumet i något av följande format: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som har identifierats av <span class="codeph"> utfärdarnamn</span> och <span class="codeph"> serienummer</span> på det angivna datumet. <span class="codeph"> utfärdarnamn</span> måste använda 509-namnformatet. Till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Du måste ange serienumren i ett hexadecimalt format. Du måste även ange återkallningsdatumet i något av följande format: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> </li> 
