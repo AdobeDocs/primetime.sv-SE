@@ -6,11 +6,14 @@ title: Översikt över spårning på klientsidan som inte är TVSDK
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
 
-# Översikt över spårning på klientsidan som inte är TVSDK {#overview-of-non-tvsdk-client-side-tracking}
+# Översikt över icke-TVSDK-klientspårning {#overview-of-non-tvsdk-client-side-tracking}
 
 Utgivare kan bygga HLS-kompatibla videospelare som fungerar med arbetsflödena för annonsuppföljning på klientsidan i Primetimes manifestfil. Gränssnitten till manifestservern för direktuppspelningen och VOD-fall (video on demand) skiljer sig något åt.
 
@@ -21,7 +24,7 @@ Manifestservern tillhandahåller ett API som gör det möjligt för anpassade sp
 * Annonsstatus
 * Content pod progress
 
-Manifestserverns API förutsätter att alla videospelare som använder det uppfyller minimikraven. Mer information finns i Krav [för](../../msapi-topics/ms-player-req.md) videospelare.
+Manifestserverns API förutsätter att alla videospelare som använder det uppfyller minimikraven. Mer information finns i [Krav för videospelare](../../msapi-topics/ms-player-req.md).
 
 ## Arbetsflöde för spårning på klientsidan {#section_cst_flow}
 
@@ -39,7 +42,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   URL:en innehåller de element som beskrivs i [Skicka ett kommando till Manifest Server](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
+   URL:en innehåller de element som beskrivs i [Skicka ett kommando till manifestservern](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
 1. Manifestservern upprättar en session för spelaren och genererar ett unikt sessions-ID. Den skapar en ny variant av M3U8-spellistans URL, som den returnerar till spelaren som ett JSON-svar. JSON har följande syntax:
 
@@ -54,7 +57,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
    https://pcor3.manifest.auditude.com/auditude/variant/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3B0ZGVtb3MuY29tL3ZpZGVvcy90b3NoZHVuZW5jcnlwdGVkL2hscy90ZXN0Mi5tM3U4.3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Spelaren använder URL:en från JSON-svaret för att begära den nya huvudspelningslistan för varianten M3U8 från manifestservern.
+1. Spelaren använder URL:en från JSON-svaret för att begära den nya varianten av den överordnad spellistan M3U8 från manifestservern.
 1. Manifestservern returnerar en ny variant av M3U8 som innehåller URL:er för spellistor på direktuppspelningsnivå med en syntax som liknar följande:
 
    ```
@@ -114,24 +117,24 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
 
    >[!NOTE]
    >
-   >Spelaren väljer URL:en till spellistan på direktuppspelningsnivå för att hämta innehållsströmmen. Manifestservern hämtar den ursprungliga spelningslistan från CDN. Vissa kodare kan mata in ytterligare information i `#EXTINF` rubrikattributet, till exempel:
+   >Spelaren väljer URL:en till spellistan på direktuppspelningsnivå för att hämta innehållsströmmen. Manifestservern hämtar den ursprungliga spelningslistan från CDN. Vissa kodare kan mata in ytterligare information i rubrikattributet `#EXTINF`, till exempel:
    >
    >
    ```
    >#EXTINF:6.006,LTC=2017-08-23T13:25:47+00:00
    >```
 
-   Eftersom manifestservern inte kan tolka innebörden av icke-standardattribut för att ändra dem för en sammansatt spellista, tar manifestservern bort alla ytterligare attribut utöver varaktighetsinformationen i den här taggen. Mer information finns i [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) -posten i HLS-specifikationen.
+   Eftersom manifestservern inte kan tolka innebörden av icke-standardattribut för att ändra dem för en sammansatt spellista, tar manifestservern bort alla ytterligare attribut utöver varaktighetsinformationen i den här taggen. Mer information finns i [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1)-posten i HLS-specifikationen.
 
 
-1. Om du vill begära spårningsinformation lägger spelaren till frågeparametern `pttrackingposition` med ett alfanumeriskt värde i URL:en för spelningslistan på direktuppspelningsnivå för den valda bithastigheten. Exempel:
+1. Om du vill begära spårningsinformation lägger spelaren till frågeparametern `pttrackingposition` med ett alfanumeriskt värde i spellistans URL på direktuppspelningsnivå för den valda bithastigheten. Exempel:
 
    ```
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. Manifestservern returnerar spellistfilen som är ifylld med antingen ett [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) - eller [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) -objekt som innehåller annonsspårningsdata för den m3u8-fil på strömnivå som begärts.
+1. Manifestservern returnerar spellistfilen som är ifylld med antingen ett [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)- eller [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)-objekt som innehåller annonsspårningsdata för den m3u8-fil på strömnivå som för närvarande begärs.
 
    >[!NOTE]
    >
@@ -139,7 +142,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
 
    >[!NOTE]
    >
-   >Manifestservern genererar annonsspårningsobjektet baserat på `pttrackingversion` värdet i Bootstrap-URL:en. Om annonsen `pttrackingversion` utelämnas eller har ett ogiltigt värde fylls annonsspårningsinformationen automatiskt i i taggarna i de begärda `#EXT-X-MARKER` spellistan på strömnivå. Mer information finns [i](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >Manifestservern genererar annonsspårningsobjektet baserat på `pttrackingversion`-värdet i URL:en för Bootstrap. Om `pttrackingversion` utelämnas eller har ett ogiltigt värde fylls annonsspårningsinformationen automatiskt i i `#EXT-X-MARKER`-taggarna i varje begärd spellista på strömnivå. Se [för mer information](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. Spelaren begär varje annonsspårnings-URL för varje annonsspårningshändelse vid rätt tidpunkt.
 
