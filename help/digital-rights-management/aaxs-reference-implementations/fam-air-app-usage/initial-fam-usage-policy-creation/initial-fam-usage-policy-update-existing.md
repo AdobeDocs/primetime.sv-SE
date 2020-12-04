@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Om du vill uppdatera en befintlig profil väljer du filnamnet i listrutan och klickar på **[!UICONTROL Open]**. Ändra eventuella principattribut. Alla attribut kan ändras, förutom de som är relaterade till autentisering och licenskedning.
 
-När du är klar klickar du på **[!UICONTROL Save]**. Principfilen i [!DNL Resource] katalogen ersätts med den uppdaterade versionen.
+När du är klar klickar du på **[!UICONTROL Save]**. Principfilen i katalogen [!DNL Resource] ersätts med den uppdaterade versionen.
 
 >[!NOTE]
 >
->Även om principnamnet ändras ändras ändras inte filens namn i [!DNL Resource] katalogen.
+>Även om principnamnet ändras ändras ändras inte filens namn i katalogen [!DNL Resource].
 
