@@ -1,6 +1,6 @@
 ---
-title: API-referenser för Adobe Primetime
-seo-title: API-referenser för Adobe Primetime
+title: Adobe Primetime API-referenser
+seo-title: Adobe Primetime API-referenser
 description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
 seo-description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
 topic-tags: API-references
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# API-referenser för Adobe Primetime {#api-references}
+# Adobe Primetime API-referenser {#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 för Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
