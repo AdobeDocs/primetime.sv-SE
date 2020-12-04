@@ -4,6 +4,9 @@ title: Om certifikatregistreringsroller
 uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
