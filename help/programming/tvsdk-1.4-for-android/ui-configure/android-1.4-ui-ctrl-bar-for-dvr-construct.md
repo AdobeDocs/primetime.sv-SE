@@ -6,6 +6,9 @@ title: Skapa ett kontrollfält förbättrat för DVR
 uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
       }
       ```
 
-      Du kan också välja att söka till klientens direktpunkt med hjälp av `MediaPlayer.LIVE_POINT` -konstanten.
+      Du kan också välja att söka till klientens direktpunkt med konstanten `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
