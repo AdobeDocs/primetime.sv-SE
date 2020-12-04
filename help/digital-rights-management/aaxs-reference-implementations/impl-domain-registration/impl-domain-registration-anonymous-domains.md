@@ -18,30 +18,30 @@ I det här fallet tillhör ett stort antal enheter en enda domän och autentiser
 Referensimplementeringen implementerar följande logik för domänregistrering:
 
 1. Tolka domännamnet från begärande-URL:en.
-1. Sök efter domännamnet i `DomainServerInfo` tabellen. Om ingen post hittas infogar du en post i tabellen (standardvärden: autentisering krävs inte och inget medlemskap är maximalt).
+1. Sök efter domännamnet i tabellen `DomainServerInfo`. Om ingen post hittas infogar du en post i tabellen (standardvärden: autentisering krävs inte och inget medlemskap är maximalt).
 1. Om autentisering krävs för den begärda domänen kontrollerar du att en giltig autentiseringstoken har inkluderats i begäran och att den matchar autentiseringsnamnutrymmet, om det har angetts i databasen.
 
-   1. Om autentisering krävs men ingen giltig auth-token har angetts returnerar du ett fel `DOM_AUTHENTICATION_REQUIRED (503)`.
+   1. Om autentisering krävs men ingen giltig auth-token har angetts returnerar du felet `DOM_AUTHENTICATION_REQUIRED (503)`.
 
 1. Kontrollera om enheten redan har registrerats i domänen:
 
-   1. Sök efter domännamnet i `DomainMembership` tabellen. Jämför varje dator-GUID som hittas med maskin-GUID i begäran. Om det här är en ny dator lägger du till en post i `DomainMembership` tabellen.
+   1. Sök efter domännamnet i tabellen `DomainMembership`. Jämför varje dator-GUID som hittas med maskin-GUID i begäran. Om det här är en ny dator lägger du till en post i tabellen `DomainMembership`.
 
-   1. Om det är en ny enhet och det maximala medlemskapet redan har nåtts returnerar du ett fel `DOM_LIMIT_REACHED (502)`.
+   1. Om det är en ny enhet och det maximala medlemskapet redan har nåtts returnerar du felet `DOM_LIMIT_REACHED (502)`.
 
-1. Sök efter alla domännycklar för den här domänen i `DomainKeys` tabellen.
+1. Sök efter alla domännycklar för den här domänen i tabellen `DomainKeys`.
 
-   1. Om `DomainServerInfo` anger att tangenterna måste rullas över genererar du ett nytt nyckelpar, sparar det i `DomainKeys` tabellen (med nyckelversion ett högre än den högsta befintliga tangenten) och återställer `Key Rollover Required` flaggan i `DomainServerInfo`.
+   1. Om `DomainServerInfo` anger att nycklarna måste rullas över genererar du ett nytt nyckelpar, sparar det i tabellen `DomainKeys` (med nyckelversion ett högre än den högsta befintliga nyckeln) och återställer flaggan `Key Rollover Required` i `DomainServerInfo`.
 
    1. Generera en domänautentiseringsuppgift för varje domännyckel.
 
 Referensimplementeringen implementerar följande logik för domänavregistrering:
 
 1. Tolka domännamnet från begärande-URL:en.
-1. Sök efter det begärda domännamnet i `DomainServerInfo` tabellen.
+1. Sök efter det begärda domännamnet i tabellen `DomainServerInfo`.
 1. Om autentisering krävs för den begärda domänen kontrollerar du att en giltig autentiseringstoken har inkluderats i begäran och att den matchar autentiseringsnamnutrymmet, om det har angetts i databasen.
-1. Sök efter domännamnet och datorns GUID i `DomainMembership` tabellen. Om ingen matchande post hittas returneras ett fel `DEREG_DENIED (401)`.
+1. Sök efter domännamnet och datorns GUID i tabellen `DomainMembership`. Om ingen matchande post hittas returneras felet `DEREG_DENIED (401)`.
 
-1. Om detta inte är en förhandsgranskningsbegäran tar du bort posten från `DomainMembership` och anger `Key Rollover Required` flaggan i `DomainServerInfo`.
+1. Om detta inte är en förhandsgranskningsbegäran tar du bort posten från `DomainMembership` och anger flaggan `Key Rollover Required` i `DomainServerInfo`.
 
 I det här fallet går det inte att matcha dator-ID:t fullständigt eftersom ett stort antal datorer kan ansluta till domänen. I stället används det slumpmässiga maskin-GUID som tilldelats datorn under personaliseringen.
