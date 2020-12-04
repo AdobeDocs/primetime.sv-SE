@@ -6,6 +6,9 @@ title: Arbeta med cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Här följer ett exempel på en begäran till nyckelservern med viss autentiseri
 
 Så här arbetar du med cookies:
 
-1. Skapa en `cookieManager` och lägg till dina cookies för URI:er i din cookieStore.
+1. Skapa en `cookieManager` och lägg till dina cookies för URI:erna i din cookieStore.
 
    Exempel:
 
@@ -45,9 +48,9 @@ Så här arbetar du med cookies:
    >
    >När 302-omdirigering är aktiverat kan annonsbegäran omdirigeras till en annan domän än den domän som cookien tillhör.
 
-   TVSDK frågar detta `cookieManager` under körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder automatiskt dessa cookies.
+   TVSDK skickar frågor till denna `cookieManager` vid körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder automatiskt dessa cookies.
 
-   Om cookies måste uppdateras i programmet under uppspelning ska du inte använda `networkConfiguration.setCookieHeaders` API eftersom uppdateringen sker i JAVA-cookie-butiken.
+   Om cookies behöver uppdateras i programmet under uppspelning ska du inte använda `networkConfiguration.setCookieHeaders` API eftersom uppdateringen görs i JAVA-cookie-arkivet.
 
    `networkConfiguration.setCookieHeaders` API ställer in cookies till TVSDK&#39;s C++ CookieStore.
 
