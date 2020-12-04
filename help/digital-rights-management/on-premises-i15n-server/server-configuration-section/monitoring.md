@@ -4,6 +4,9 @@ title: Övervakning
 uuid: ee62c55f-0d44-40f4-a2c7-39456f4d3d99
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Individualiseringsservern och nyckelgenereringsservern har båda en statussida, 
 
 * **Sida för personaliseringsstatus:** [!DNL https://SERVER:PORT/flashaccess/status]
 
-   * Rapporterar&quot;live&quot; om appservern körs och appen kan göra en GET-begäran till nyckelgenereringsservern
+   * Rapporterar&quot;live&quot; om appservern körs och appen kan göra en GET-förfrågan till nyckelgenereringsservern
    * Sidan rapporterar &quot;Alive&quot; eller ingenting. Ingen information om programmet visas, så den här sidan kan användas för övervakning utanför brandväggen.
 
 * **Statussida för nyckelgenerering:** [!DNL https://SERVER:PORT/flashaccess-kgs/status]
