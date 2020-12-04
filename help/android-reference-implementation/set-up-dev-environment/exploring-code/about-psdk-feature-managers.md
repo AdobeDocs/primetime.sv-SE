@@ -6,6 +6,9 @@ description: Med funktionshanterare kan du styra enskilda funktioner utan att be
 seo-description: Med funktionshanterare kan du styra enskilda funktioner utan att behöva gå igenom hela TVSDK för att söka efter en funktion som kan vara utspridd på flera platser.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '422'
+ht-degree: 2%
 
 ---
 
@@ -17,13 +20,16 @@ Med funktionshanterare kan du styra enskilda funktioner utan att behöva gå ige
 Funktionshanterarna utför följande uppgifter:
 
 * **Utlöser TVSDK-funktioner.**
-Detta är funktionsanrop som utlöser en TVSDK-funktion. Anropas till exempel `PlaybackManager.play()` när spelarprogrammet behöver starta videouppspelningen.
+Detta är funktionsanrop som utlöser en TVSDK-funktion. Exempel: 
+`PlaybackManager.play()` anropas när spelarprogrammet behöver starta videouppspelningen.
 
 * **Lyssnar på TVSDK-händelser.**
-Funktionshanteraren måste lyssna på TVSDK-händelser för att få information från TVSDK. Avlyssnar till exempel `AdsManager` TVSDK Ads-händelser som ska meddelas när annonsbrytningarna börjar.
+Funktionshanteraren måste lyssna på TVSDK-händelser för att få information från TVSDK. Exempel: 
+`AdsManager` lyssnar på TVSDK Ads-händelser som ska meddelas när annonsbrytningar börjar.
 
 * **Skickar händelser till hanteraren.**
-När funktionshanterarna har tagit emot och bearbetat händelser från TVSDK, kontaktar de klientsidan för att hantera händelsen. Efter att `AdsManager` ha tagit emot en starthändelse för annonsradbrytning instruerar det spelarfragmentet att återspegla den här ändringen i användargränssnittet (inaktivera navigeringsfältet, visa annonsövertäckningen osv.).
+När funktionshanterarna har tagit emot och bearbetat händelser från TVSDK, kontaktar de klientsidan för att hantera händelsen. Till exempel efter 
+`AdsManager` tar emot en starthändelse för annonsradbrytning, anger att spelarfragmentet ska återspegla den här ändringen i användargränssnittet (inaktivera navigeringsfältet, visa annonsövertäckningen osv.).
 
 Primetimes referensimplementering innehåller följande funktionshanterare:
 
@@ -31,7 +37,7 @@ Primetimes referensimplementering innehåller följande funktionshanterare:
 |---|---|---|---|
 | Videouppspelning | PlaybackManager | HLS-uppspelning och -kontroll, DVR-uppspelning och -kontroll, buffertkontroll och hantering av flera bithastigheter. | Obligatoriskt |
 | Skydd av DRM-innehåll | DrmManager | Skydd av innehåll. | Obligatoriskt |
-| Annonsinfogning | AdsManager | Annonsinfogning, inklusive Adobe Primetime-annonsbeslut, direkt annonsbrytning och anpassad annonsbrytning. | Valfritt |
+| Annonsinfogning | AdsManager | Annonsinfogning, inklusive Adobe Primetime annonsbeslut, direkt annonsbrytning och anpassad annonsbrytning. | Valfritt |
 | Undertexter | CCManager | Undertexter och VTT-undertexter. | Valfritt |
 | Ljud med låg bindning | AAManager | Ljud med sen bindning. | Valfritt |
 | QoS | QosManager | QoS-statistik. | Valfritt |
