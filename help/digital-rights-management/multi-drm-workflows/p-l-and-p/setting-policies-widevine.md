@@ -4,11 +4,14 @@ title: Använda skyddsprofiler för utdata
 uuid: f00d2a97-0036-41a6-ab44-391cc40b146e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
 
 
-# Använda skyddsprofiler för utdata{#using-output-protection-policies}
+# Använda utdataskyddsprofiler{#using-output-protection-policies}
 
 **Skyddspolicyer för vinstdrivande produktioner**
 
@@ -23,4 +26,4 @@ Uttrycket stöder för närvarande inte koppling av analoga utdatabegränsningar
 
 PlayReady har också inbyggt stöd för både analoga och digitala utdataskyddsbegränsningar. De värden för skyddsnivå för utdata som du kan ange. På sidan [Utdataskyddsnivåer](https://msdn.microsoft.com/en-us/library/dn468831.aspx) dokumenteras de värden som du kan ange och deras förväntade klientbeteende.
 
-Om du använder Expresplay ska du bifoga värden för skyddsnivå vid generering av token via compressedDigitalAudioOPL, uncompressedDigitalAudioOPL, compressedDigitalVideoOPL, uncompressedDigitalVideoOPL och unknownOutputBehavior-flaggan. Dessa beskrivs på [PlayReady-licenstokenbegäran](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
+Om du använder Expresplay ska du bifoga värden för skyddsnivå vid generering av token via compressedDigitalAudioOPL, uncompressedDigitalAudioOPL, compressedDigitalVideoOPL, uncompressedDigitalVideoOPL och unknownOutputBehavior-flaggan. Dessa beskrivs i [PlayReady License Token Request](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
