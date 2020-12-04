@@ -6,6 +6,9 @@ title: Anpassa metadata för annonsinfogning
 uuid: 047470d3-45bd-48be-82ce-4e9d9fe6ea10
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Du kan anpassa metadata för annonsinfogning.
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   Egenskapen `timeout` definieras i `AdvertisingMetadata` klassen och den här tidsgränsen kan anges för alla anpassade annonsinställningar som härleds från `AdvertisingMetadata` klassen. Om användare till exempel definierar anpassade inställningar för en FreeWheel-lösare kan de ange en standardtimeout med den här inställningen.
+   Egenskapen `timeout` definieras i klassen `AdvertisingMetadata` och den här tidsgränsen kan anges för anpassade annonsinställningar som härleds från klassen `AdvertisingMetadata`. Om användare till exempel definierar anpassade inställningar för en FreeWheel-lösare kan de ange en standardtimeout med den här inställningen.
 
 1. Skapa `MediaPlayerItemConfig` med annonsinställningarna i steg 2.
 
@@ -32,7 +35,7 @@ Du kan anpassa metadata för annonsinfogning.
    config.advertisingMetadata = auditudeSettings;
    ```
 
-1. Använd den här konfigurationen när du anropar `replaceCurrentResource` den `MediaPlayer`.
+1. Använd den här konfigurationen när du anropar `replaceCurrentResource` på `MediaPlayer`.
 
    ```js
    player.replaceCurrentResource(mediaResource, config);
