@@ -6,6 +6,9 @@ title: ExpressPlay Packager / Cloud DRM / TVSDK
 uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Du kan använda ExpressPlays Bento4-paketerare för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
 
-Den här uppgiften beskriver hur du använder ett verktyg från tredje part för att förbereda skyddat innehåll, i det här fallet *ExpressPlay Bento4 Tools*, för användning med en mängd olika DRM-lösningar. Mer information finns i dokumentationen för *Bento4-verktygen* på webbplatsen [ExpressPlay](https://www.expressplay.com/developer/) .
+Den här uppgiften beskriver hur du använder ett verktyg från tredje part för att förbereda skyddat innehåll, i det här fallet *ExpressPlay Bento4 Tools*, för användning med en mängd olika DRM-lösningar. Mer information finns i *dokumentationen till Bento4-verktygen* på webbplatsen [ExpressPlay](https://www.expressplay.com/developer/).
 1. Skaffa ett ExpressPlay-konto och få din ExpressPlay-kundautentiseringsinformation.
 
    Se [Snabbstart för Primetime DRM Cloud.](../../quick-start/quick-overview.md)
-1. Om du krypterar innehåll för Primetime Access måste du skaffa Primetimes Adobe Access SDK tillsammans med de certifikat som krävs (licens-, transport- och paketeringscertifikat).
+1. Om du krypterar innehåll för Primetime Access måste du skaffa Primetime Adobe Access SDK från Adobe, tillsammans med de certifikat som krävs (licens-, transport- och paketeringscertifikat).
 1. Ange en innehållskrypteringsnyckel (CEK) och Content Encryption Key Storage ID (CEKSID) för användning i alla DRM-system. (Du genererar dessa slumpmässigt med OpenSSL eller liknande.)
 
    CEK är den faktiska nyckeln som du använder för att kryptera dina videofiler. Du kan antingen lagra den säkert på din egen server i ditt eget nyckelhanteringssystem eller använda ExpressPlays [nyckellagringslösning](https://www.expressplay.com/developer/key-storage/).
@@ -27,15 +30,15 @@ Den här uppgiften beskriver hur du använder ett verktyg från tredje part för
 
 1. Om du krypterar innehåll för Access använder du ditt CEK för att skapa Primetime Access-metadata som är associerade med ditt innehåll.
 
-1. Fragmentera innehållet för att förbereda det för *Bento4 MP4DASH* -verktyget.
+1. Fragmentera innehållet för att förbereda det för verktyget *Bento4 MP4DASH*.
 
-   I det här steget kan du använda *MP4FRAGMENT* -verktyget. Du behöver bara fragmentera innehållet en gång. Exempel:
+   I det här steget kan du använda verktyget *MP4FRAGMENT*. Du behöver bara fragmentera innehållet en gång. Exempel:
 
    ```
    ./mp4fragment Unfragmented.mp4 Fragmented.mp4
    ```
 
-1. Använd *Bento4 MPDASH* -verktyget för att&quot;DASH-ify&quot; och kryptera fragmenterat innehåll.
+1. Använd verktyget *Bento4 MPDASH* för att&quot;DASH-ify&quot; och kryptera ditt fragmenterade innehåll.
 
    Använd det här kommandot för att ange alla DRM-system som du vill använda och skicka in alla Primetime Access-metadata som genererats från föregående steg. Exempel:
 
@@ -62,7 +65,7 @@ Den här uppgiften beskriver hur du använder ett verktyg från tredje part för
 
 1. Skapa en kund.
 
-   Klienten bör innehålla ett anrop till din storefront-server. Adobe rekommenderar att kunden ringer butiken när användaren har valt visst innehåll och efter att användaren har autentiserats. Skicka sedan den token som returnerats från ExpressPlay till spelaren för att använda den för licensförfrågningar. Introduktioner till implementering av DRM-komponenten för dina spelare är här:
+   Klienten bör innehålla ett anrop till din storefront-server. Adobe rekommenderar att klienten anropar butiken efter att användaren har valt visst innehåll och efter att användaren har autentiserats. Skicka sedan den token som returnerats från ExpressPlay till spelaren för att använda den för licensförfrågningar. Introduktioner till implementering av DRM-komponenten för dina spelare är här:
 
    * Webbläsare-TVSDK för HTML5
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
