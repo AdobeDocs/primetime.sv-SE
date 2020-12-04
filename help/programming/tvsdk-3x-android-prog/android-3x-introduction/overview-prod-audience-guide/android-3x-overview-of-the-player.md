@@ -6,11 +6,14 @@ title: Funktioner i Primetime TVSDK
 uuid: 6e26c09c-2858-47d1-80e8-1d7c6a468b86
 translation-type: tm+mt
 source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# Funktioner i Primetime TVSDK {#primetime-tvsdk-features}
+# Primetime TVSDK-funktioner {#primetime-tvsdk-features}
 
 TVSDK för Android 3.9 innehåller en mängd funktioner som du kan implementera i dina spelare.
 
@@ -22,7 +25,7 @@ TVSDK-funktioner:
    * Stöd för repriser vid alla evenemang
    * Undertexter (608, 708, WebVTT) och alternativa former av ljud ger ökad tillgänglighet
    * Kontroller för textformat i bildtexter
-   * DVR-kapacitet, snabb framåtspolning och snabb tillbakaspolning (de två senare kallas *trippelläge*)
+   * DVR-kapacitet, snabb framåtspolning och snabb tillbakaspolning (de två senare kallas *tricks-play-läge*)
    * Logik för anpassad bithastighet (ABR) och inledande konfiguration av ABR-kontroller
    * Stöd för realtidsmanifestväxling
    * Justerbara uppspelningsbuffertar
