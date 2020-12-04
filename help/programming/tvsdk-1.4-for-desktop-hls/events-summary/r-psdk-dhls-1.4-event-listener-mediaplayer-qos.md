@@ -6,6 +6,9 @@ title: QoS-händelser
 uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring eller sökning.
 
-Om du vill få information om alla QoS-relaterade händelser registrerar du händelseavlyssnare med objektet för `MediaPlayer` följande händelser:
+Om du vill få information om alla QoS-relaterade händelser registrerar du händelseavlyssnare med `MediaPlayer`-objektet för följande händelser:
 
 | Händelse | Betydelse |
 |---|---|
