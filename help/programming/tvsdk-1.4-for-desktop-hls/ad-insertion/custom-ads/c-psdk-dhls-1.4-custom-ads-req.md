@@ -6,6 +6,9 @@ title: Anpassade annonskrav
 uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ TVSDK skickar följande händelser:
 * `AdPlaying`
 * `AdStopped`
 
-Efter `AdStopped` händelsen återupptar TVSDK videoinnehållet.
+Efter händelsen `AdStopped` återupptar TVSDK videoinnehållet.
 
 >[!TIP]
 >
@@ -53,4 +56,4 @@ Efter `AdStopped` händelsen återupptar TVSDK videoinnehållet.
 
 Om annonsen tar för lång tid att läsa in eller om det finns fel i annonsen, kan TVSDK ignorera annonsen och nästa annons i annonsuppsättningen spelas upp automatiskt.
 
-Om `AuditudeSettings.customAdLoadTimeout` inställningen anger ett antal sekunder som är större än noll försöker TVSDK läsa in annonsen till den angivna längden. Om annonsen inte kan läsas in hoppas annonsen över. Om du till exempel konfigurerar `AuditudeSettings.customAdLoadTimeout:5`försöker TVSDK att läsa in annonsen i högst 5 sekunder. Om annonsen fortfarande inte läses in ignoreras den.
+Om inställningen `AuditudeSettings.customAdLoadTimeout` anger ett antal sekunder som är större än noll försöker TVSDK läsa in annonsen till den angivna varaktigheten. Om annonsen inte kan läsas in hoppas annonsen över. Om du till exempel konfigurerar `AuditudeSettings.customAdLoadTimeout:5` försöker TVSDK läsa in annonsen i högst 5 sekunder. Om annonsen fortfarande inte läses in ignoreras den.
