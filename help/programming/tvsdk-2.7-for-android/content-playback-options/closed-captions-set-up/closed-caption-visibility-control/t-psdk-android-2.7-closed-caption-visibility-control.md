@@ -31,7 +31,7 @@ Du kan styra synligheten för undertexter. När synlighet har aktiverats visas d
 >}
 >```
 
-1. Vänta tills `MediaPlayer` statusen PREPARED är minst.
+1. Vänta tills `MediaPlayer` har statusen PREPARED.
 
    Mer information finns i ui-state-prepare-wait-for.
 1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
