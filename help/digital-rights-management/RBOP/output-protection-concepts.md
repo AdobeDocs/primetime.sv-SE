@@ -6,6 +6,9 @@ title: RBOP-begrepp
 uuid: fc19c3c9-39a1-4b62-b763-101e5454a01f
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Du kopplar utdatakrav till specifika pixelbegränsningar. De typer av krav som d
 
 **Digital Output**
 
-Kravet på digitala utdata kan ange restriktiva alternativ, t.ex.&quot;digitalt utdataskydd krävs&quot; eller&quot;uppspelning tillåts inte&quot;. Utdatakraven kan även specificera mindre begränsande alternativ som&quot;inget skydd bör tillämpas&quot; eller&quot;digitalt skydd bör användas om det finns tillgängligt&quot;.
+Kravet på digitala utdata kan ange restriktiva alternativ, t.ex.&quot;digitalt utdataskydd krävs&quot; eller&quot;uppspelning tillåts inte&quot;. Utdatakraven kan även specificera mindre restriktiva alternativ, till exempel&quot;inget skydd bör tillämpas&quot; eller&quot;digitalt skydd bör användas om det är tillgängligt&quot;.
 
 **Analoga utdata**
 
