@@ -4,13 +4,16 @@ title: Aktivera bakgrundsljud
 uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
 
 # Aktivera bakgrundsljud {#enable-background-audio}
 
-Om du vill aktivera ljuduppspelning när programmet är i bakgrunden ska programmet anropa MediaPlayers API med värdet true som argument när spelaren är i läget PREPARED. `enableAudioPlaybackInBackground`
+Om du vill aktivera ljuduppspelning när programmet är i bakgrunden ska programmet anropa `enableAudioPlaybackInBackground` API för MediaPlayer med true som argument när spelaren är i läget PREPARED.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
