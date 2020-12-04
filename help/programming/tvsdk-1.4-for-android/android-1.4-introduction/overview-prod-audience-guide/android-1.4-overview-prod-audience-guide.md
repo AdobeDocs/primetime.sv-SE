@@ -6,6 +6,9 @@ title: Översikt
 uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +31,11 @@ Den här guiden förutsätter att du förstår hur du utvecklar program och vide
 
 Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare genom att använda Java på Android-enheter.
 
-## Namnområdesnotering i den här handboken {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namnområdesnotering i den här guiden {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Namnområdesprefixet för TVSDK-API `com.adobe.mediacore` utelämnas av utrymmesskäl.
+>API-namnområdesprefixet `com.adobe.mediacore` för TVSDK utelämnas av utrymmesskäl.
 >
 >Många API-element refereras utan sin överordnade klassbeteckning om kontexten är klar.
 
