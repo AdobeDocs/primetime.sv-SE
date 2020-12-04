@@ -1,20 +1,23 @@
 ---
-description: Använd HTTP GET-kommandot för att interagera med manifestservern.
-seo-description: Använd HTTP GET-kommandot för att interagera med manifestservern.
+description: Använd kommandot HTTP GET för att interagera med manifestservern.
+seo-description: Använd kommandot HTTP GET för att interagera med manifestservern.
 seo-title: Skicka ett kommando till manifestservern
 title: Skicka ett kommando till manifestservern
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # Skicka ett kommando till manifestservern {#send-a-command-to-the-manifest-server}
 
-Använd HTTP GET-kommandot för att interagera med manifestservern.
+Använd kommandot HTTP GET för att interagera med manifestservern.
 
-1. Skicka en begäran `HTTP GET` om en bootstrap-URL som konstruerats med följande mönster:
+1. Skicka en `HTTP GET`-begäran för en bootstrap-URL som konstruerats med följande mönster:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ Använd HTTP GET-kommandot för att interagera med manifestservern.
     ?{query parameters}
    ```
 
-* **PublisherAssetID** krävs. Utgivarens unika ID för det specifika innehållet.
+* **** PublisherAssetIDRequired. Utgivarens unika ID för det specifika innehållet.
 
-* **Innehålls-URL** krävs. URL för M3U8-innehållsfilen, Base64-kodad för att vara säker i manifestserverns URL. Innehålls-URL:en måste peka på en variant M3U8-fil, även om det bara finns en bithastighetsström.
+* **Innehållet** URLRequired. URL för M3U8-innehållsfilen, Base64-kodad för att vara säker i manifestserverns URL. Innehålls-URL:en måste peka på en variant M3U8-fil, även om det bara finns en bithastighetsström.
 
-* **Frågeparametrar** Vissa är obligatoriska, vissa är valfria. Dessa utgör den mest varierade delen av begäran. De talar om för manifestservern vilken typ av klient som begär och vad den vill att manifestservern ska göra.
+* **FrågeparametrarVissa** är obligatoriska, andra är valfria. Dessa utgör den mest varierade delen av begäran. De talar om för manifestservern vilken typ av klient som begär och vad den vill att manifestservern ska göra.
 
    Exempel:
 
