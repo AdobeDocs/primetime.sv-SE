@@ -31,7 +31,7 @@ Den här självhjälpsguiden förklarar hur ni kan tjäna pengar på innehåll g
 | [Manifest Server Debugging Tool](manifest-server-debugging-tool.md) | Ger en inblick i Manifest Server-felsökningsverktyget och den felsökningsinformation som finns för att undersöka problem med annonsinfogning. |
 | [Översikt över tjänsten Creative Repackaging](creative-repackaging-service/crs-overview.md) | Beskriver hur CRS ser till att icke-HLS och kreativa uppspelningar spelas upp korrekt i HLS-strömmar. |
 
-## Viktiga användarhandböcker för Primetime {#other-primetime-helps}
+## Användarhandböcker för Key Primetime {#other-primetime-helps}
 
 | Användarhandbok | Beskrivning |
 |---|---|
