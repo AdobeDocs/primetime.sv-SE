@@ -4,13 +4,16 @@ title: Generera On Premises DRM-metadata
 uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 
 
 # Generera On Premises DRM-metadata{#generate-the-on-premises-drm-metadata}
 
-Ett [!DNL CreateMetadata.jar] verktyg finns i [!DNL create_metadata] mappen. Poängen med det här verktyget är att skapa en On Premises DRM-metadata som startar klienten att utföra personaliseringsprocessen mot den angivna On Premises Individualization Server.
+Ett [!DNL CreateMetadata.jar]-verktyg finns i mappen [!DNL create_metadata]. Poängen med det här verktyget är att skapa en On Premises DRM-metadata som startar klienten att utföra personaliseringsprocessen mot den angivna On Premises Individualization Server.
 
 1. Uppdatera implementeringen av DRM-referensen för Primetime - kommandoradsverktyg med följande filer:
 
@@ -18,11 +21,11 @@ Ett [!DNL CreateMetadata.jar] verktyg finns i [!DNL create_metadata] mappen. Po�
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      De två JAR-filerna kan finnas i [!DNL Command Line Tools/libs] mappen. Filen kan [!DNL createMetadata.properties] finnas bredvid [!DNL flashaccesstools.properties] filen.
+      De två JAR-filerna kan finnas i mappen [!DNL Command Line Tools/libs]. Filen [!DNL createMetadata.properties] kan finnas bredvid filen [!DNL flashaccesstools.properties].
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-Inkluderat är ett [!DNL examplecreate.sh] skript som demonstrerar hur metadata skapas. Konfigurera licensserverns URL och URL:en till servern för personalisering i både skript- och egenskapsfilerna innan du försöker generera metadata.
+Inkluderat är ett [!DNL examplecreate.sh]-skript som demonstrerar hur metadata skapas. Konfigurera licensserverns URL och URL:en till servern för personalisering i både skript- och egenskapsfilerna innan du försöker generera metadata.
 
 Indata för verktyget är följande:
 
