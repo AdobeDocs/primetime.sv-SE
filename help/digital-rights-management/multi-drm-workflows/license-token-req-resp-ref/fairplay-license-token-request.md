@@ -53,20 +53,20 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
 | Frågeparameter | Beskrivning | Obligatoriskt? |
 |--- |--- |--- |
 | customerAuthenticator Customer authenticator as query parameter customerAuthenticator FairPlay | Det här är er API-nyckel för era kunder, en för era produktions- och testmiljöer. Det finns på fliken Admin Dashboard för ExpressPlay. | Ja |
-| errorFormat | Antingen html eller json. Om html (standard) anges en HTML-representation av eventuella fel i svarets entitetstext. Om json anges returneras ett strukturerat svar i JSON-format. Mer information finns i [JSON-fel](https://www.expressplay.com/developer/restapi/#json-errors) . MIME-typen för svaret är antingen text/uri-list on success, text/html for HTML error format eller application/json for JSON error format. | Nej |
+| errorFormat | Antingen html eller json. Om html (standard) anges en HTML-representation av eventuella fel i svarets entitetstext. Om json anges returneras ett strukturerat svar i JSON-format. Mer information finns i [JSON-fel](https://www.expressplay.com/developer/restapi/#json-errors). MIME-typen för svaret är antingen text/uri-list on success, text/html for HTML error format eller application/json for JSON error format. | Nej |
 
 **Tabell 4: Parametrar för licensfråga**
 
 | **Frågeparameter** | **Beskrivning** | **Obligatoriskt?** |
 |---|---|---|
 | `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. &quot;0000&quot; är det enda tillåtna värdet. | Nej |
-| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). Om `kek` anges måste antingen en av parametrarna `kid` eller `ek` parametrarna anges, *men inte båda*. | Nej |
+| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). Om `kek` anges måste antingen en av `kid`- eller `ek`-parametrarna anges, *men inte båda*. | Nej |
 | `kid` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng `'^somestring'`. Längden på strängen följt av `'^'` får inte vara längre än 64 tecken. | Nej |
 | `ek` | En hexadecimal strängrepresentation av den krypterade innehållsnyckeln. | Nej |
-| `contentKey` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln | Ja, om inte `kek` och `ek` eller `kid` inte anges. |
+| `contentKey` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln | Ja, såvida inte `kek` och `ek` eller `kid` anges. |
 | `iv` | En 16 byte hexadecimal strängbeteckning för innehållskryptering IV | Ja |
 | `rentalDuration` | Hyrningens varaktighet i sekunder (standard - 0) | Nej |
-| `fpExtension` | En kort figursättning `extensionType` och `extensionPayload`som en kommaavgränsad sträng. Exempel: […] `&fpExtension=wudo,AAAAAA==&`[…] | Nej, vilket tal som helst kan användas |
+| `fpExtension` | Ett kort formulär som omsluter `extensionType` och `extensionPayload`, som en kommaavgränsad sträng. Exempel: […] `&fpExtension=wudo,AAAAAA==&`[…] | Nej, vilket tal som helst kan användas |
 
 **Tabell 5: Frågeparametrar för tokenbegränsning**
 
@@ -80,8 +80,8 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> expirationTime </span> </td> 
-   <td> Förfallotid för denna token. Detta värde MÅSTE vara en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339- </a> format för datum/tid i zondesignern Z ("Zulu time") eller ett heltal föregånget av ett plustecken (+). Ett exempel på ett RFC 3339-datum/tid är <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Om värdet är en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339- </a> format för datum/tid representerar det ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av ett plustecken tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. </p> Exempel: <span class="codeph"> +60 </span> anger en minut. Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. </td> 
+   <td> <span class="codeph"> expirationTime  </span> </td> 
+   <td> Förfallotid för denna token. Detta värde MÅSTE vara en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339 </a> datum-/tidsformat i zondesignern för Z ("Zulu time") eller ett heltal föregånget av tecknet "+". Ett exempel på ett RFC 3339-datum/tid är <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Om värdet är en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339 </a> datum-/tidsformat representerar det ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av ett plustecken tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. </p> <span class="codeph"> +60 </span> anger till exempel en minut. Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. </td> 
    <td> Nej </td> 
   </tr> 
  </tbody> 
@@ -100,10 +100,10 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
 | **HTTP-statuskod** | **Beskrivning** | **Content-Type** | **Entitetstexten innehåller** |
 |---|---|---|---|
 | `200 OK` | Inget fel. | `text/uri-list` | URL för hämtning av licens + token |
-| `400 Bad Request` | Ogiltiga argument | `text/html` eller `application/json` | Felbeskrivning |
-| `401 Unauthorized` | Autentisering misslyckades | `text/html` eller `application/json` | Felbeskrivning |
-| `404 Not found` | Felaktig URL | `text/html` eller `application/json` | Felbeskrivning |
-| `50x Server Error` | Serverfel | `text/html` eller `application/json` | Felbeskrivning |
+| `400 Bad Request` | Ogiltiga argument | `text/html` eller  `application/json` | Felbeskrivning |
+| `401 Unauthorized` | Autentisering misslyckades | `text/html` eller  `application/json` | Felbeskrivning |
+| `404 Not found` | Felaktig URL | `text/html` eller  `application/json` | Felbeskrivning |
+| `50x Server Error` | Serverfel | `text/html` eller  `application/json` | Felbeskrivning |
 
 **Tabell 8: Felkoder för händelse**
 
@@ -137,7 +137,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Ogiltig autentiseringstoken: &lt;information&gt; <p>Obs!  Detta kan inträffa om autentiseraren är fel eller när testnings-API:t används på <span class="filepath"> *.test.expressplay.com </span> med hjälp av produktionsautentiseraren och vice versa. </p> <p importance="high">Obs!  Test SDK och Advanced Test Tool (ATT) fungerar bara med <span class="filepath"> *.test.expressplay.com </span>medan produktionsenheter måste använda <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
+   <td> Ogiltig autentiseringstoken: &lt;information&gt; <p>Obs!  Detta kan inträffa om autentiseraren är fel eller när testnings-API:t på <span class="filepath"> *.test.expressplay.com </span> används med produktionsautentiseraren och vice versa. </p> <p importance="high">Obs!  Test SDK och Advanced Test Tool (ATT) fungerar bara med <span class="filepath"> *.test.expressplay.com </span>, medan produktionsenheter måste använda <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -197,7 +197,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> måste koda 4 byte </td> 
+   <td> <span class="codeph"> OutputControlFlag  </span> måste koda 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -221,19 +221,19 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> child </span> måste vara 32 hexadecimala tecken långa </td> 
+   <td> <span class="codeph"> child  </span> måste vara 32 hexadecimala tecken långa </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> barn </span> måste vara 64 tecken långt efter ^ </td> 
+   <td> <span class="codeph"> barn  </span> måste vara 64 tecken långt efter ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> Ogiltigt <span class="codeph"> barn </span> </td> 
+   <td> Ogiltig <span class="codeph">-grabb </span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> Ogiltig krypterad nyckel eller <span class="codeph"> -nyckel </span> </td> 
+   <td> Ogiltig krypterad nyckel eller <span class="codeph">-nyckel </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -241,7 +241,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> Ogiltiga <span class="codeph"> FPExtension- </span> parametrar har angetts </td> 
+   <td> Ogiltiga <span class="codeph"> FPExtension </span>-parametrar har angetts </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
@@ -249,10 +249,10 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> En ogiltig <span class="codeph"> iv- </span> parameter har angetts </td> 
+   <td> Ogiltig <span class="codeph"> iv </span>-parameter har angetts </td> 
   </tr> 
   <tr> 
-   <td> -6004 </td> 
+   <td> -6002 </td> 
    <td> Det gick inte att generera CKC för FP </td> 
   </tr> 
   <tr> 
