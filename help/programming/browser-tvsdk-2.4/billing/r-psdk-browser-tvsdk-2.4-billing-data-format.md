@@ -1,22 +1,25 @@
 ---
-description: Webbläsarens TVSDK skickar faktureringsstatistik till Adobe i XML-format.
-seo-description: Webbläsarens TVSDK skickar faktureringsstatistik till Adobe i XML-format.
+description: Webbläsarens TVSDK skickar faktureringsvärden till Adobe i ett XML-format.
+seo-description: Webbläsarens TVSDK skickar faktureringsvärden till Adobe i ett XML-format.
 seo-title: Skicka faktureringsmått
 title: Skicka faktureringsmått
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
 
 # Skicka faktureringsmått{#transmit-billing-metrics}
 
-Webbläsarens TVSDK skickar faktureringsstatistik till Adobe i XML-format.
+Webbläsarens TVSDK skickar faktureringsvärden till Adobe i ett XML-format.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Om du använder ett verktyg för nätverksregistrering för att övervaka statistiken som Browser TVSDK överför till Adobe bör du se enheter som följande:
+Om du använder ett verktyg för nätverksinspelning för att övervaka statistik Browser TVSDK-överföringar till Adobe bör du se enheter som följande:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +43,4 @@ Om du använder ett verktyg för nätverksregistrering för att övervaka statis
 </request>
 ```
 
-De booleska egenskaperna `drmProtected`, `adsEnabled`och `midrollEnabled` visas bara om de är sanna.
+De booleska egenskaperna `drmProtected`, `adsEnabled` och `midrollEnabled` visas bara om de är sanna.
