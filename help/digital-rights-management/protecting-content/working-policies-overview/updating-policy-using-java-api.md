@@ -4,6 +4,9 @@ title: Uppdatera en DRM-princip med Java API
 uuid: ec21351c-900e-48f5-845a-c0b430c210d7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Så här uppdaterar du en DRM-princip med Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som finns i [Konfigurera utvecklingsmiljön](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)i projektet.
-1. Skapa en DRM- `Policy` instans och läs DRM-principen från en fil eller databas.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som anges i [Konfigurera utvecklingsmiljön](../../protecting-content/setting-up-the-sdk/setup-dev-env.md) i projektet.
+1. Skapa en DRM `Policy`-instans och läs DRM-principen från en fil eller databas.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Uppdatera DRM- `Policy` objektet genom att ange dess egenskaper, till exempel dess namn och användningsregler.
+1. Uppdatera DRM `Policy`-objektet genom att ange dess egenskaper, till exempel dess namn och användningsregler.
 
    ```java
    // Change the DRM policy name.  
@@ -44,7 +47,7 @@ Så här uppdaterar du en DRM-princip med Java API:
    }
    ```
 
-1. Serialisera det uppdaterade DRM- `Policy` objektet och lagra det i en fil eller databas.
+1. Serialisera det uppdaterade DRM `Policy`-objektet och lagra det i en fil eller databas.
 
    ```java
    // Serialize the DRM policy.  
@@ -58,4 +61,4 @@ Så här uppdaterar du en DRM-princip med Java API:
    out.close();
    ```
 
-Källan till exempelkoden finns `com.adobe.flashaccess.samples.policy.UpdatePolicy` i [!DNL samples] katalogen Reference Implementation Command Line Tools.
+I katalogen `com.adobe.flashaccess.samples.policy.UpdatePolicy` i Command Line Tools [!DNL samples] för Reference Implementation finns information om källan för den här exempelkoden.
