@@ -25,7 +25,7 @@ Många metodsignaturer och API-elementnamn har ändrats för 2.0. Granska de hä
 
 Kommentarer i metoddokumentationen föreslår signaturen för återanrop som du måste implementera.
 
-För JavaScript baseras API-syntaxen på webb-ID. För ett TVSDK-gränssnitt kallas metodnamnen för *methodName*(). För metoder som ska implementeras av programmet läggs ett read/write-attribut med namnet ** methodNameCallbackFunc till i gränssnittet och programmet bör ange att det ska peka på en funktion som implementerar metoden. Exempel:
+För JavaScript baseras API-syntaxen på webb-ID. För ett TVSDK-gränssnitt anropas metodnamnen *methodName*(). För metoder som ska implementeras av ditt program läggs ett read/write-attribut med namnet *methodName* CallbackFunc till i gränssnittet och programmet bör ange att det ska peka på en funktion som implementerar metoden. Exempel:
 
 ```shell
 // An app implementable interface
@@ -92,12 +92,12 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>TimedMetadata</strong>: interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ; <br /> const unsigned short METADATA_TYPE_ID3 = 1 ; <br /> skrivskyddat attribut utan signerad kort typ, <br /> skrivskyddat attribut, lång tid,<br /> skrivskyddat attribut DomString id;<br /> skrivskyddat attribut DOMString-namn;<br /> skrivskyddat attribut DOMString-innehåll; <br /> metadata för skrivskyddat attributobjekt,<br /> }; </p> </td> 
-   <td><p>interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ;<br /> const unsigned short METADATA_TYPE_ID3 = 1 ;<br /> skrivskyddat attribut unsigned short metadataType;<br /> skrivskyddat attribut, lång tid,<br /> long id för skrivskyddat attribut,<br /> skrivskyddat attribut DOMString-namn;<br /> <br /> metadata för skrivskyddat attributobjekt,<br /> };</p> </td> 
+   <td><p> <strong>TimedMetadata</strong>: interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0;  <br /> const unsigned short METADATA_TYPE_ID3 = 1 ;  <br /> skrivskyddat attribut utan signerad kort typ,  <br /> skrivskyddat attribut, lång tid;<br /> skrivskyddat attribut DomString id;<br /> skrivskyddat attribut DomString name;<br /> skrivskyddat attribut DomString content;  <br /> skrivskyddade attributobjektmetadata;<br /> }; </p> </td> 
+   <td><p>gränssnitt TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ;<br /> const unsigned short METADATA_TYPE_ID3 = 1 ;<br /> readonly attribute unsigned short metadataType;<br /> readonly attribute long time;<br /> readonly attribute long id;<br /> readonly-attributet Dom Strängnamn;<br /> <br /> skrivskyddat attributmetadata;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>TimedMetadataList</strong>: (Ingen ändring för 2.0)</td> 
-   <td><p>interface TimedMetadataList {<br /> readonly attribute unsigned long;<br /> getter TimedMetadata(unsigned long index);<br /> };</p> </td> 
+   <td><p>interface TimedMetadataList {<br /> readonly attribute unsigned long length;<br /> getter TimedMetadata(unsigned long index);<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -126,7 +126,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Interface AdvertisingMetadata { <br /> attribute AdSignalingMode; <br /> attribute AdBreakWatchedPolicy adBreakAsWatched; <br /> attribut boolesk livePreroll; <br /> attribute boolean delayAdLoading; <br /> };</p> </td> 
+   <td><p>AdvertisingMetadata { <br />-attributet AdSignalingMode; <br />-attributet AdBreakWatchedPolicy adBreakAsWatched; <br />-attributet boolean livePreroll; <br /> attribut boolean delayAdLoading ; <br /> };</p> </td> 
    <td>Den här funktionen tillhandahålls av<p>MetadataKeys::ADVERTISING_METADATA</p> nyckel.</td> 
   </tr> 
  </tbody> 
@@ -141,13 +141,13 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Gränssnitt CustomRangeMetadata { <br /> const unsigned short TYPE_MARK_RANGE; <br /> const unsigned short TYPE_DELETE_RANGE; <br /> const unsigned short TYPE_REPLACE_RANGE; <br /> attribut osignerad kort typ, <br /> attribute boolean adjustSeekPosition; <br /> attribute TimeRangeList timeRangeList; <br /> };</p> </td> 
+   <td><p>Gränssnitt CustomRangeMetadata { <br /> const unsigned short TYPE_MARK_RANGE; <br /> const unsigned short TYPE_DELETE_RANGE; <br /> const unsigned short TYPE_REPLACE_RANGE; <br />-attribut osignerad kort typ; <br />-attributet boolean adjustSeekPosition; <br />-attributet TimeRangeList timeRangeList; <br /> };</p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
 </table>
 
-### ErsättTidsintervall {#replacetimerange}
+### ReplaceTimeRange {#replacetimerange}
 
 <table> 
  <tbody> 
@@ -156,13 +156,13 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface ReplaceTimeRange { <br /> attribute unsigned long begin; <br /> skrivskyddat attribut utan signerad lång ände, <br /> attributet har lång varaktighet utan tecken, <br /> attribute unsigned long replaceDuration; <br /> };</p> </td> 
+   <td><p>interface ReplaceTimeRange { <br /> attribute unsigned long begin; <br /> skrivskyddat attribut med osignerad lång ände; <br />-attributet har lång varaktighet utan tecken; <br />-attribut osignerat long replaceDuration; <br /> };</p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
 </table>
 
-### Placement {#placement}
+### Placering {#placement}
 
 <table> 
  <tbody> 
@@ -171,7 +171,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Gränssnittsplacering { <br /> const unsigned short TYPE_MID_ROLL; <br /> const unsigned short TYPE_PRE_ROLL; <br /> const unsigned short TYPE_POST_ROLL; <br /> const unsigned short TYPE_SERVER_MAP; <br /> const unsigned short TYPE_CUSTOM_RANGE;<br /> skrivskyddat attribut utan signerad kort typ, <br /> skrivskyddat attribut, lång tid, <br /> lång skrivskyddad attributlängd, <br /> const unsigned short MODE_DEFAULT; <br /> const unsigned short MODE_INSERT; <br /> const unsigned short MODE_REPLACE; <br /> const unsigned short MODE_DELETE; <br /> const unsigned short MODE_MARK; <br /> const unsigned short MODE_FREE_REPLACE; <br /> skrivskyddat attribut i kort läge utan tecken, <br /> skrivskyddat attribut TimeRange-intervall; <br /> };</p> </td> 
+   <td><p>Gränssnittsplacering { <br /> const unsigned short TYPE_MID_ROLL; <br /> const unsigned short TYPE_PRE_ROLL; <br /> const unsigned short TYPE_POST_ROLL; <br /> const unsigned short TYPE_SERVER_MAP; <br /> const unsigned short TYPE_CUSTOM_RANGE;<br /> readonly attribute unsigned short type; <br /> skrivskyddat attribut, lång tid; <br /> lång varaktighet för skrivskyddat attribut, <br /> const unsigned short MODE_DEFAULT; <br /> const unsigned short MODE_INSERT; <br /> const unsigned short MODE_REPLACE; <br /> const unsigned short MODE_DELETE; <br /> const unsigned short MODE_MARK; <br /> const unsigned short MODE_FREE_REPLACE; <br /> skrivskyddat attribut i kort läge utan tecken; <br /> skrivskyddat attribut TimeRange-intervall; <br /> };</p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -186,7 +186,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnittsmöjlighet { <br /> readonly attribute DomString id; <br /> placering av skrivskyddade attribut, <br /> skrivskyddade objektinställningar för attribut, <br /> skrivskyddat attribut Object customParameters; <br /> }; </p> </td> 
+   <td><p>gränssnittsmöjlighet { <br /> skrivskyddat attribut DomString id; <br /> placering av skrivskyddat attribut; <br /> inställningar för skrivskyddat attributobjekt; <br /> skrivskyddat attribut Object customParameters; <br /> }; </p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -201,7 +201,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnittsreservation { <br /> readonly attribute TimeRange range; <br /> skrivskyddat attributlångt undantag, <br /> }; </p> </td> 
+   <td><p>gränssnittsreservation { <br /> skrivskyddat attribut TimeRange-intervall; <br /> skrivskyddat attributlångt undantag; <br /> }; </p> </td> 
    <td> (Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -216,16 +216,16 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p><strong>Tidslinje</strong>: interface Timeline <br /> { readonly attribute TimelineMarkerList timelineMarkers; <br /> skrivskyddat attribut TimelineItemList timelineItems; <br /> double convertToLocalTime( dubbel tid); <br /> double convertToVirtualTime( dubbel tid); <br /> };</p> </td> 
+   <td><p><strong>Tidslinje</strong>: interface Timeline  <br /> { readonly attribute TimelineMarkerList timelineMarkers;  <br /> skrivskyddat attribut TimelineItemList timelineItems;  <br /> double convertToLocalTime( dubbel tid);  <br /> double convertToVirtualTime( dubbel tid);  <br /> };</p> </td> 
    <td><p>interface Timeline {<br /> readonly attribute TimelineMarkerList timelineMarkers;<br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p> <strong>Tidslinjeobjekt</strong>: interface TimelineItem :<br /> TimelineMarker {<br /> readonly attribute long id; <br /> skrivskyddat attribut TimeRange virtualRange; <br /> skrivskyddat attribut TimeRange localRange; <br /> skrivskyddade attribut med boolesk bevakning, <br /> skrivskyddat attribut boolesk temporärt, <br /> }; </p> </td> 
+   <td><p> <strong>Tidslinjeobjekt</strong>: interface TimelineItem:<br /> TimelineMarker {<br /> readonly attribute long id;  <br /> skrivskyddat attribut TimeRange virtualRange;  <br /> skrivskyddat attribut TimeRange localRange;  <br /> skrivskyddade attribut med boolesk bevakning,  <br /> skrivskyddat attribut boolesk temporärt,  <br /> }; </p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
   <tr> 
-   <td><strong>Markör</strong>för tidslinje: (Ingen ändring för 2.0)</td> 
-   <td><p>interface TimelineMarker {<br /> readonly attribute double time;<br /> skrivskyddat attribut med dubbel varaktighet,<br /> };</p> </td> 
+   <td><strong>Markör</strong> för tidslinje: (Ingen ändring för 2.0)</td> 
+   <td><p>interface TimelineMarker {<br /> readonly attribute double time;<br /> readonly attribute double duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -239,8 +239,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreak {<br /> <br /><br /> <br /> readonly attribute double duration;<br /> skrivskyddade attribut AdList ads;<br /> <br /> <br /> skrivskyddat attribut AdInsertionType insertionType;<br /> }; </p> </td> 
-   <td><p>interface AdBreak {<br /> readonly attribute double time;<br /> skrivskyddat attribut double replaceDuration;<br /> <br /> skrivskyddat attribut med dubbel varaktighet,<br /> skrivskyddat attribut AdList adList;<br /> <br /> skrivskyddade attribut DOMString-data;<br /> <br /> }; </p> </td> 
+   <td><p>interface AdBreak {<br /> <br /> <br /> <br /> skrivskyddat attribut med dubbel varaktighet;<br /> skrivskyddat attribut AdList ads;<br /> <br /> <br /> skrivskyddat attribut AdInsertionType insertionType;<br /> }; </p> </td> 
+   <td><p>interface AdBreak {<br /> readonly attribute double time;<br /> readonly attribute double replaceDuration;<br /> <br /> readonly attribute double duration;<br /> readonly attribute AdList adList;<br /> <br /> readonly attribute DomString data;<br /> <br /> }; </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -254,16 +254,16 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>Annons</strong>: interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> skrivskyddat attribut AdAssetList companionAssets;<br /> <br /> skrivskyddat attribut med dubbel varaktighet,<br /> skrivskyddat attribut DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0 ;<br /> const unsigned short ADTYPE_NONLINEAR = 1 ;<br /> <br /> skrivskyddat attribut osignerat kort adType;<br /> skrivskyddat attribut AdInsertionType adInsertionType; <br /> <br /> skrivskyddat attribut med boolesk klickbarhet, <br /> skrivskyddat attribut boolean isCustomAdMarker;<br /> }; </p> </td> 
-   <td><p>interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> skrivskyddat attribut AdAssetList companionAssets;<br /> <br /> skrivskyddat attribut med dubbel varaktighet,<br /> skrivskyddat attribut DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0 ;<br /> const unsigned short ADTYPE_NONLINEAR = 1 ;<br /> <br /> skrivskyddat attribut utan signerad kort typ,<br /> skrivskyddat attribut AdInsertionType insertionType; <br /> skrivskyddad objektspårning,<br /> <br /> <br /> }; </p> </td> 
+   <td><p> <strong>Annons</strong>: interface Ad {<br /> readonly attribute AdAsset primärAsset;<br /> readonly attribute AdAssetList companionAssets;<br /> <br /> readonly attribute double duration;<br /> readonly attribute DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0 ;<br /> const unsigned short ADTYPE_NONLINEAR = 1 ;<br /> <br /> readonly attribute unsigned short short adType;<br /> skrivskyddat attribut AdInsertionType adInsertionType;  <br /> <br /> skrivskyddat attribut med boolesk klickbarhet,  <br /> skrivskyddat attribut boolean isCustomAdMarker;<br /> }; </p> </td> 
+   <td><p>interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly attribute AdAssetList companionAssets;<br /> <br /> readonly attribute double duration;<br /> readonly attribute DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0;<br /> const osignerad kort ADTYPE_NONLINEAR = 1;<br /> <br /> skrivskyddat attribut utan signerad kort typ;<br /> skrivskyddat attribut AdInsertionType insertionType; <br /> skrivskyddad attributspårare;<br /> <br /> <br /> }; </p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdAsset</strong>: (Ingen ändring för 2.0)</td> 
-   <td><p>interface AdAsset {<br /> readonly attribute DomString id;<br /> skrivskyddat attribut med dubbel varaktighet,<br /> skrivskyddat attribut MediaResource-resurs,<br /> skrivskyddat attribut AdClick adClick;<br /> metadata för skrivskyddat attributobjekt,<br /> };</p> </td> 
+   <td><p>interface AdAsset {<br /> readonly attribute DomString id;<br /> readonly attribute double duration;<br /> readonly attribute MediaResource;<br /> readonly attribute AdClick adClick;<br /> readonly attribute Object metadata;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdClick</strong>: (Ingen ändring för 2.0)</td> 
-   <td><p>interface AdClick {<br /> readonly attribute DomString id;<br /> skrivskyddat attribut DOMString-titel;<br /> skrivskyddat attribut DomString url;<br /> };</p> </td> 
+   <td><p>interface AdClick {<br /> readonly attribute DomString id;<br /> readonly attribute DomString title;<br /> readonly attribute DomString url;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdList</strong>: (Ingen ändring för 2.0)</td> 
@@ -271,10 +271,10 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td><strong>AdAssetList</strong>: (Ingen ändring för 2.0)</td> 
-   <td><p>interface AdAssetList {<br /> readonly attribute unsigned long;<br /> getter AdAsset(unsigned long index);<br /> };</p> </td> 
+   <td><p>interface AdAssetList {<br /> readonly attribute unsigned long length;<br /> getter AdAsset(unsigned long index);<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdBannerAsset</strong>: interface AdBannerAsset : AdAsset<br /> {<br /> readonly attribute int width;<br /> skrivskyddat attribut int height,<br /> skrivskyddat attribut DomString staticUrl;<br /> skrivskyddat attribut, DOMString-höjd;<br /> skrivskyddat attribut DOMString width;<br /> };</p> </td> 
+   <td><p><strong>AdBannerAsset</strong>: interface AdBannerAsset : AdAsset<br /> {<br /> readonly attribute int width;<br /> readonly attribute int height;<br /> readonly attribute DomString staticUrl;<br /> readonly attribute DomString height;<br /> readonly attribute DomString width;<br /> };</p> </td> 
    <td> Nytt i 2.0</td> 
   </tr> 
  </tbody> 
@@ -289,15 +289,15 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>AdBreakTimelineItem</strong>: interface AdBreakTimelineItem : TimelineItem { <br /> readonly attribute AdBreak adBreak; <br /> skrivskyddat attribut för AdTimelineItemList-objekt; <br /> }; </p> </td> 
+   <td><p> <strong>AdBreakTimelineItem</strong>: interface AdBreakTimelineItem : TimelineItem {  <br /> readonly attribute AdBreak adBreak;  <br /> skrivskyddat attribut för AdTimelineItemList-objekt;  <br /> }; </p> </td> 
    <td> (Nytt i 2.0)</td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdTimelineItem</strong>: interface AdTimelineItem : TimelineItem { <br /> readonly attribute AdBreak adBreak; <br /> lässkyddat attribut Ad ad; <br /> }; </p> </td> 
+   <td><p><strong>AdTimelineItem</strong>: interface AdTimelineItem : TimelineItem {  <br /> readonly attribute AdBreak adBreak;  <br /> lässkyddat attribut Ad ad;  <br /> }; </p> </td> 
    <td> (Nytt i 2.0)</td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdBreakTimelineItemList</strong>: interface AdBreakTimelineItemList { <br /> readonly attribute unsigned long; <br /> getter AdBreakTimelineItem (unsigned log index); <br /> };</p> </td> 
+   <td><p><strong>AdBreakTimelineItemList</strong>: interface AdBreakTimelineItemList {  <br /> readonly attribute unsigned long;  <br /> getter AdBreakTimelineItem (unsigned log index);  <br /> };</p> </td> 
    <td> (Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -312,33 +312,33 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreakPolicy {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> skrivskyddat attribut short AD_BREAK_POLICY_PLAY;<br /> skrivskyddat attribut short AD_BREAK_POLICY_REMOVE;<br /> skrivskyddat attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;<br /> };</p> </td> 
-   <td><p> interface AdPolicyConstants {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> skrivskyddat attribut short AD_BREAK_POLICY_PLAY;<br /> skrivskyddat attribut short AD_BREAK_POLICY_REMOVE;<br /> skrivskyddat attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;}<br /> ...</p> </td> 
+   <td><p>interface AdBreakPolicy {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly attribute short AD_BREAK_POLICY_PLAY;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE_AFO TER_PLAY;<br /> };</p> </td> 
+   <td><p> interface AdPolicyConstants {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly attribute short AD_BREAK_POLICY_PLAY;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE_REMOVE AFTER_PLAY;}<br /> ...</p> </td> 
   </tr> 
   <tr> 
-   <td><p> interface AdBreakWatchedPolicy {<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> skrivskyddat attribut short AD_BREAK_AS_WATCHED_ON_END;<br /> skrivskyddat attribut short AD_BREAK_AS_WATCHED_NEVER;<br /> }; </p> </td> 
-   <td><p> ...<br /> skrivskyddat attribut short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> skrivskyddat attribut short AD_BREAK_AS_WATCHED_ON_END;<br /> skrivskyddat attribut short AD_BREAK_AS_WATCHED_NEVER;<br /> ...</p> </td> 
+   <td><p> interface AdBreakWatchedPolicy {<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly attribute short AD_BREAK_AS_WATCHED_NEVER;<br /> }; </p> </td> 
+   <td><p> ...<br /> skrivskyddat attribut kort AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> skrivskyddat attribut kort AD_BREAK_AS_WATCHED_ON_END;<br /> skrivskyddat attribut kort AD_BREAK_AS_WATCHED_NEVER;<br /> ....</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicy {<br /> readonly attribute short AD_POLICY_PLAY;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN; skrivskyddat attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> <br /> skrivskyddat attribut short AD_POLICY_SKIP_AD_BREAK;<br /> };</p> </td> 
-   <td><p> ... <br /> skrivskyddat attribut short AD_POLICY_PLAY;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN;<br /> skrivskyddat attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> skrivskyddat attribut short AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
+   <td><p>interface AdPolicy {<br /> readonly attribute short AD_POLICY_PLAY;<br /> readonly attribute short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> readonly attribute short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN; skrivskyddat attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> <br /> skrivskyddat attribut short AD_POLICY_SKIP_AD_BREAK;<br /> };</p> </td> 
+   <td><p> ... <br /> skrivskyddat attribut short AD_POLICY_PLAY;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> skrivskyddat attribut short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN;<br /> skrivskyddat attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAIN_REAIN AK;<br /> skrivskyddat attribut short AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicyMode {<br /> readonly attribute short AD_POLICY_MODE_PLAY;<br /> skrivskyddat attribut short AD_POLICY_MODE_SEEK;<br /> skrivskyddat attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
-   <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> skrivskyddat attribut short AD_POLICY_MODE_SEEK;<br /> skrivskyddat attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p>interface AdPolicyMode {<br /> readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribute short AD_POLICY_MODE_SEEK;<br /> readonly attribute short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribute short AD_POLICY_MODE_SEEK;<br /> readonly attribute short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakTimelineItemList <br /> adBreakTimelineItems;<br /> skrivskyddat attribut AdTimelineItem adTimelineItem;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double seekToTime;<br /> dubbelfrekvens för skrivskyddade attribut,<br /> skrivskyddat attributkortläge, //AdPolicyMode<br /> };</p> </td> 
-   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakPlacementList <br /> adBreakPlacements;<br /> lässkyddat attribut Ad ad;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double seekToTime;<br /> dubbelfrekvens för skrivskyddade attribut,<br /> skrivskyddat attributkortläge, //AdPolicyMode<br /> };</p> </td> 
+   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakTimelineItemList <br /> adBreakTimelineItems;<br /> readonly attribute AdTimelineItem adTimelineItem;<br /> readonly attribute double currentTime;<br /> readonly attribute double seekToTime;<br /> readonly attributets dubbla hastighet;<br /> skrivskyddat attributkortläge; //AdPolicyMode<br /> };</p> </td> 
+   <td><p>AdPolicyInfo {<br />-skrivskyddat attribut AdBreakPlacementList <br /> adBreakPlacements;<br /> skrivskyddat attribut Ad ad;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double seekToTime;<br /> skrivskyddat attribut med dubbel hastighet;<br /> skrivskyddat attributläge; //AdPolicyMode<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakCallbackFunc;<br /> /**<br /> * AdBreakTimelineItemList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallbackFunc;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallbackFunc; <br /> /**<br /> * AdBreakWatchedPolicy selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreakCallbackFunc;<br /> };</p> </td> 
-   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakFuncCallback;<br /> /**<br /> * AdBreakPlacementList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallback;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallback; <br /> /**<br /> * AdBreakAsWatched selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreakCallback;<br /> };</p> </td> 
+   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br />-attributet Object selectPolicyForAdBreakFunc;<br /> /* 6/&gt; * AdBreakTimelineItemList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribut Object selectAdBreaksToPlayCallbackFunc;<br /> /*<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br />-attribut Object selectPolicyForSeekIntoAdCallbackFunc; <br /> /**<br /> * AdBreakWatchedPolicy selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br />-attributet selectWatchedPolicyForAdBreak akCallbackFunc;<br /> };<br /></p> </td> 
+   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br />-attributet Object selectPolicyForAdBreakCallback;<br /> /* 6/&gt; * AdBreakPlacementList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribut Object selectAdBreaksToPlayCallback;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br />-attributet Object selectPolicyForSeekIntoAdCallback; <br /> /**<br /> * AdBreakAsWatched selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br />-attributet selectWatchedPolicyForAdBreak akCallback;<br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-### TimelineOperation {#timelineoperation}
+### Tidslinjeåtgärd {#timelineoperation}
 
 <table> 
  <tbody> 
@@ -347,7 +347,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface TimelineOperation { <br /> readonly attribute Placation placement; <br /> };</p> </td> 
+   <td><p>interface TimelineOperation { <br /> position för skrivskyddat attribut; <br /> };</p> </td> 
    <td> (Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -362,8 +362,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreakPlacement : TimelineOperation {<br /> readonly attribute AdBreak adBreak;<br /> placering av skrivskyddade attribut, // Från TimelineOperation<br /> -skrivskyddat attribut vid dubbel tid;<br /> skrivskyddat attribut med dubbel varaktighet,<br /> };</p> </td> 
-   <td><p>interface AdBreakPlacement {<br /> readonly attribute AdBreak adBreak;<br /> placering av skrivskyddade attribut,<br /> skrivskyddat attribut med dubbel tid,<br /> skrivskyddat attribut med dubbel varaktighet,<br /> };</p> </td> 
+   <td><p>interface AdBreakPlacement : Tidslinjeåtgärd {<br /> skrivskyddat attribut AdBreak adBreak;<br /> skrivskyddat attribut Placering av skrivskyddat attribut; // Från TimelineOperation<br /> readonly attribute double time;<br /> readonly attribute double duration;<br /> };</p> </td> 
+   <td><p>interface AdBreakPlacement {<br /> readonly attribute AdBreak adBreak;<br /> readonly attribute Placement placement;<br /> readonly attribute double time;<br /> readonly attribute double duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -377,7 +377,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AuditudeSettings : AdvertisingMetadata { <br /> attribute DomString zoneId; <br /> attribute DomString mediaId; <br /> attribute DomString defaultMediaId ; <br /> attribute DomString domain; <br /> attribute Object targetInfo; <br /> attribute Object customParameters; <br /> attribute Boolean creativePackingEnabled;<br /> attribute Boolean showStaticBanners;<br /> };</p> </td> 
+   <td><p>interface AuditudeSettings : AdvertisingMetadata { <br />-attributet DomString zoneId; <br />-attributet DomString mediaId; <br />-attributet DomString defaultMediaId ; <br />-attributet DomString domain; <br />-attributet Object targetInfo; <br />-attributet Object customParameters; <br />-attribut Boolean creativePackingEnabled;<br />-attribut Boolean showStaticBanners;<br /> };</p> </td> 
    <td>Funktionen tillhandahölls av MetadataKeys::AUDITUDE_METADATA_KEY-tangenten.</td> 
   </tr> 
  </tbody> 
@@ -402,8 +402,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItemConfig {<br /> attribute ContentFactory adFactory;<br /> attribute StringList subscribeTags;<br /> <br /> attributet StringList adTags;<br /> <br /> <br /> attribute AdSignalingMode adSignalingMode;<br /> customRangeMetadata-attributet CustomRangeMetadata;<br /> attribute NetworkConfiguration networkConfiguration;<br /> attribute AdvertisingMetadata advertisingMetadata;<br /> attribute Boolean useHardwareDecoder;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerConfig {<br /> <br /><br /> - <br /> attributet StringList adTags;<br /> attribute StringList subscribedTags;<br /> attribute MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayerItemConfig {<br /> attribute ContentFactory adFactory;<br /> attribute StringList subscribeTags;<br /> <br /> attribute StringList adTags;<br /> <br /> <br /> attribute AdSignalingMode adSignalingMode;<br /> attribute CustomRRRRange customRangeMetadata;<br />-attribut NetworkConfiguration networkConfiguration;<br />-attribut AdvertisingMetadata advertisingMetadata;<br />-attribut Boolean useHardwareDecoder;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerConfig {<br /> <br /> <br /> <br />-attributet StringList adTags;<br />-attributet StringList subscribedTags;<br />-attributet MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> &lt;a110/&gt;&gt; <br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -417,8 +417,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface ContentFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem item);<br /> */<br /> attribute Object retrieveAdPolicySelectorCallbackFunc;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerClientFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem-objekt);<br /> */<br /> attribute Object retrieveAdPolicySelectorFunc;<br /> };</p> </td> 
+   <td><p>interface ContentFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem-objekt);<br /> */<br /> attribute Object retrieveAdPolicySelectorCallbackFunc;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerClientFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem-objekt);<br /> */<br />-attribut Object retrieveAdPolicySelectorFunc;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -432,7 +432,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface NetworkConfiguration<br /> {<br /> attribute boolean forceNativeNetworking;<br /> attribute boolean useRedirectedUrl;<br /> attribute Object cookieHeader;<br /> booleskt attribut readSetCookieHeader;<br /> attribute int masterUpdateInterval; <br /> attributet boolean useCookieHeaderForAllRequests;<br /> attribute int readLimit;<br /> };</p> </td> 
+   <td><p>interface NetworkConfiguration<br /> {<br /> attribute boolean forceNativeNetworking;<br /> attribute boolean useRedirectedUrl;<br /> attribute Object cookieHeader;<br /> attribute boolean readSetCookieHeader;<br /> attribute int masterUpdateInterval; <br />-attributet booleskt useCookieHeaderForAllRequests;<br />-attributet int readLimit;<br /> };</p> </td> 
    <td>I 1.3 fanns en del av den här funktionen från MetadataKeys</td> 
   </tr> 
  </tbody> 
@@ -462,7 +462,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td>Programmet måste anropa AdobePSDK.beginDRMWorkflow för att initiera DRM-arbetsflödet. Utan detta anrop spelas inte DRM-videor upp.<p>gränssnittet AdobePSDK<br /> {<br /> void initialDRMWorkFlow(<br /> DomString appStoratePath, <br /> DOMString publisherId, <br /> DOMString appId, <br /> DOMString appVersion, <br /> boolean privacyModeOn);<br /> };</p> </td> 
+   <td>Programmet måste anropa AdobePSDK.beginDRMWorkflow för att initiera DRM-arbetsflödet. Utan detta anrop spelas inte DRM-videor upp.<p>interface AdobePSDK<br /> {<br /> void startedDRMWorkFlow(<br /> DomString appStoratePath, <br /> DomString publisherId, <br /> DomString appId, <br /> DomString appVersion, <br /> boolean privacyModeOn); a7/&gt; };<br /></p> </td> 
    <td>Initieringen utfördes internt och inget explicit anrop krävdes.</td> 
   </tr> 
  </tbody> 
@@ -487,7 +487,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0.</td> 
-   <td><p>gränssnittet DRMMetadata<br /> {<br /> readonly-attributet DOMString serverUrl;<br /> skrivskyddat attribut DomString licenseId;<br /> skrivskyddade DRMPolicyArray-principer, <br /> };</p> </td> 
+   <td><p>gränssnitt-DRMMetadata<br /> {<br /> skrivskyddat attribut DOMString serverUrl;<br /> skrivskyddat attribut DOMString licenseId;<br /> skrivskyddat attribut DRMPolicyArray-principer; <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -501,8 +501,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnitt för DRMPlaybackTimeWindow {<br /> readonly-attribut för playbackPeriodInSeconds;<br /> skrivskyddat attribut long playbackStartDate;<br /> skrivskyddat attribut long playbackEndDate;<br /> };</p> </td> 
-   <td><p>gränssnittet DRMPlaybackTimeWindow {<br /> readonly attribute int periodInSeconds;<br /> skrivskyddat attribut int startDate;<br /> skrivskyddat attribut int endDate;<br /> };</p> </td> 
+   <td><p>gränssnitt för DRMPlaybackTimeWindow {<br />, skrivskyddat attribut för playbackPeriodInSeconds;<br /> skrivskyddat attribut long playbackStartDate;<br /> skrivskyddat attribut long playbackEndDate;<br /> };</p> </td> 
+   <td><p>interface DRMPlaybackTimeWindow {<br /> readonly attribute int periodInSeconds;<br /> readonly attribute int startDate;<br /> readonly attribute int endDate;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -517,7 +517,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0.</td> 
-   <td><p>gränssnitts-DRMLicense {<br /> skrivskyddat attribut Uint8Array-byte;<br /> skrivskyddat attribut Date licenseStartDate;<br /> skrivskyddat attribut Date licenseEndDate;<br /> skrivskyddat attribut Date offlineStorageStartDate;<br /> skrivskyddat attribut Date offlineStorageEndDate; <br /> skrivskyddat attribut DomString serverUrl;<br /> skrivskyddat attribut DomString licenseID;<br /> skrivskyddat attribut DomString policyID;<br /> skrivskyddat attribut: DRMPlaybackTimeWindow playbackTimeWindow;<br /> skrivskyddat attribut Object customProperties;<br /> }; </p> </td> 
+   <td><p>gränssnitts-DRMLicense {<br /> skrivskyddat attribut Uint8Array bytes;<br /> skrivskyddat attribut Date licenseStartDate;<br /> skrivskyddat attribut Date licenseEndDate;<br /> skrivskyddat attribut Date offlineStorageStartDate;<br /> skrivskyddat attribut Date offlineStorageEndDate; <br /> skrivskyddat attribut DOMString serverUrl;<br /> skrivskyddat attribut DOMString licenseID;<br /> skrivskyddat attribut DOMString policyID;<br /> skrivskyddat skrivskyddat attribut DRMPlaybackTimeWindow playbackTimeWindow;<br /> skrivskyddat attribut Object customProperties;&lt;aProperties;&lt;a1Layu/&gt; };<br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -531,8 +531,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DOMString authenticationDomain;<br /> skrivskyddat attribut DRMAuthenticationMethod authenticationMethod; <br /> skrivskyddat attribut DomString serverUrl;<br /> };</p> </td> 
-   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DOMString authDomain;<br /> skrivskyddat attribut: DRMAuthenticationMethod authMethod; <br /> skrivskyddat attribut DomString serverURL;<br /> };</p> </td> 
+   <td><p>gränssnitt för DRMLicenseDomain {<br />, skrivskyddat attribut DOMString authenticationDomain;<br /> skrivskyddat attribut DRMAuthenticationMethod authenticationMethod; <br /> skrivskyddat attribut DomString serverUrl;<br /> };</p> </td> 
+   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DomString authDomain;<br /> readonly attribute DRMAuthenticationMethod authMethod; <br /> skrivskyddat attribut DomString serverURL;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -546,8 +546,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface DRMPolicy<br /> {<br /> readonly attribute DomString authenticationDomain;<br /> skrivskyddat attribut DRMAuthenticationMethod authenticationMethod;<br /> <br /> skrivskyddat attribut DomString displayName;<br /> skrivskyddat attribut DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
-   <td><p>interface DRMPolicy<br /> {<br /> readonly attribute DomString authDomain;<br /> skrivskyddat attribut: DRMAuthenticationMethod authMethod;<br /> skrivskyddat attribut DomString dispName;<br /> skrivskyddat attribut DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interface DRMPolicy<br /> {<br /> readonly attribute DomString authenticationDomain;<br /> readonly attribute DRMAuthenticationMethod authenticationMethod;<br /> <br /> readonly attribute DomString displayName;<br /> readonly attribute DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interface DRMPolicy<br /> {<br /> readonly attribute DomString authDomain;<br /> readonly attribute DRMAuthenticationMethod authMethod;<br /> readonly attribute DomString dispName;<br /> readonly attribute DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -561,18 +561,18 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnitt för DRMManager: EventTarget {<br /> void obtainLicense(DRMMetadata-metadata, <br /> DRMAcquireLicenseSettings-inställning, <br /> DRMAquireLicenseListener-lyssnare);<br /> void obtainPreviewLicense(DRMMetadata-metadata, <br /> DRMAquireLicenseListener-lyssnare);<br /> void authenticate(DRMMetadata metadata, <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> DRMAuthenticateListener listener);<br /> <br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array-matris, DRMErrorListener-lyssnare);<br /> void initialize(DRMOperationCompleteListener listener);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> DRMOperationCompleteListener-lyssnare);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener-lyssnare);<br /> <br /> void resetDRM(DRMOperationCompleteListener listener);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitOmedelbart,<br /> DRMReturnLicenseListener listener);<br /> void setAuthenticationToken(<br /> DRMMetadata-metadata, <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> DRMOperationCompleteListener-lyssnare);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> DRMOperationCompleteListener-lyssnare);<br /> };</p> </td> 
-   <td><p>gränssnitt för DRMManager: EventTarget {<br /> void obtainLicense(DRMMetadata-metadata, <br /> DRMAcquireLicenseSettings-inställning, <br /> EventContext eventContext);<br /> void obtainPreviewLicense(DRMMetadata-metadata, <br /> EventContext eventContext);<br /> void authenticate(DRMMetadata metadata, <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> EventContext eventContext);<br /> <br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array-array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> EventContext eventContext);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> EventContext eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID,<br /> DomString policyID, <br /> boolean commitImmedially,<br /> EventContext eventContext);<br /> void setAuthenticationToken(<br /> DRMMetadata-metadata, <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> EventContext eventContext);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContext);<br /> };</p> </td> 
+   <td><p>gränssnitt för DRMManager: EventTarget {<br /> void obtainLicense(DRMMetadata-metadata, <br /> DRMAcquireLicenseSettings-inställning, <br /> DRMAquireLicenseListener-lyssnare);<br /> void obtainPreviewLicense(DRMMetadata-metadata, <br /> DRMAquireLicense Lyssnare);<br /> void authenticate(DRMMetadata metadata, <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> DRMAuthenticateListener listener);&lt;a1 1/&gt; <br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array, DRMErrorListener-lyssnare);<br /> void initialize(DRMOperationCompleteListener-lyssnare);<br />-attribut long maxOperationTime;<br /> <br /> void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolesk forceRefresh, <br /> DRMOperationCompleteListener listener);<br /> void leaveLicenseDomain (<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener-lyssnare);<br /> <br /> void resetDRM(DRMOperationCompleteListener-lyssnare);<br /> void returnLicense(Dom SträngserverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitOmedelbart,<br /> DRMReturnLicenseListener listener);<br /> void setAuthenticationToken( 32/&gt; DRMMetadata-metadata, <br /> DomString authenticationDomain, <br /> Uint8Array-token, <br /> DRMOperationCompleteListener-lyssnare);<br /> void storeLicenseBytes(Uint8Array licenseBytes, &lt;a 37/&gt; DRMOperationCompleteListener-lyssnare);<br /> };<br /><br /><br /></p> </td> 
+   <td><p>gränssnitt för DRMManager: EventTarget {<br /> void obtainLicense(DRMMetadata-metadata, <br /> inställningen DRMAcquireLicenseSettings, <br /> EventContext eventContext);<br /> void obtainPreviewLicense(DRMMetadata-metadata, <br /> EventContext eventContext);<br /> void authenticate(DRMMetadata metadata, <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> EventContext eventContext);<br /> <br /> DRMMetadadata data createMetadataFromBytes(<br /> Uint8Array-array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain (<br /> DRMLicenseDomain licenseDomain, <br /> booleskt forceRefresh, <br /> EventContext eventContext);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> EventConsole text eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID,<br /> DomString policyID, &lt;a2 9/&gt; boolesk commitOmedelbart,<br /> EventContext eventContext);<br /> void setAuthenticationToken(<br /> DRMMetadata-metadata, <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> EventContext eventContext);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContext);<br /> };<br /></p> </td> 
   </tr> 
   <tr> 
-   <td><p>klassen DRMErrorListener : <br /> public psdkutils::PSDKInterfaceWithUserData {<br /> public:<br /> virtual void onDRMError(uint32_t major, <br /> uint32_t minor, <br /> const psdkutils: PSDKString&amp; errorString, const psdkutils::PSDKString&amp; errorServerUrl) = 0; <br /><br /> <br /> skyddad:<br /> virtual ~DRMErrorListener() {}<br /> }</p> </td> 
+   <td><p>klassen DRMErrorListener : <br /> public psdkutils::PSDKInterfaceWithUserData {<br /> public:<br /> virtual void onDRMError(uint32_t major, <br /> uint32_t minor, <br /> const psdkutils: PSDKString&amp; errorString, <br /> const psdkutils::PSDKString&amp; errorServerUrl) = 0;<br /> <br /> protected:<br /> virtual ~DRMErrorListener() {}<br /> }</p> </td> 
    <td>Händelse/gränssnitt/beskrivning 
     <ul> 
      <li>kEventDRMOperationError<p>/ DRMOperationErrorEvent</p> <p>När ett fel inträffar under någon av de asynkrona metoderna för DRMManger.</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>klassen DRMOperationCompleteListener : <br /> public DRMErrorListener {<br /> public:<br /> virtual void onDRMOperationComplete() = 0;<br /> <br /> skyddad:<br /> virtuell ~DRMOperationCompleteListener() {}<br /> };</p> </td> 
+   <td><p>klassen DRMOperationCompleteListener : <br /> public DRMErrorListener {<br /> public:<br /> virtual void onDRMOperationComplete() = 0;<br /> <br /> protected:<br /> virtual ~DRMOperationCompleteListener() {}<br /> };</p> </td> 
    <td>Händelse/gränssnitt/beskrivning 
     <ul> 
      <li>kEventDRMInitializationComplete<p>/ PSDKEvent</p> <p>När DRM-initieringen är slutförd.</p> </li> 
@@ -584,14 +584,14 @@ Tabeller i det här avsnittet:
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>klassen DRMAuthenticateListener : <br /> public DRMErrorListener {<br /> public:<br /> virtual void onAuthenticationComplete(<br /> psdkutils::PSDKImmutableByteArray* <br /> authenticationToken) = 0;<br /> <br /> skyddad:<br /> virtual ~DRMAuthenticateListener() {}<br /> }</p> </td> 
+   <td><p>klassen DRMAuthenticateListener : <br /> offentlig DRMErrorListener {<br /> public:<br /> virtual void onAuthenticationComplete(<br /> psdkutils::PSDKImmutableByteArray* <br /> authenticationToken) = 0;<br /> <br /> skyddad:<br /> virtuell ~DRMA-autentisering authenticateListener() {}<br /> }</p> </td> 
    <td>Händelse/gränssnitt/beskrivning 
     <ul> 
      <li>kEventDRMAuthenticationComplete<p>/ DRMAuthenticationCompleteEvent</p> <p>När metoden DRMManager::authenticate anropas.</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>klassen DRMAquireLicenseListener: <br /> public DRMErrorListener {<br /> public:<br /> virtual void onLicenseAcquired(const DRMLicense*) = 0;<br /> <br /> skyddad:<br /> virtuell ~DRMAquireLicenseListener() {}<br /> };</p> </td> 
+   <td><p>klassen DRMAquireLicenseListener: <br /> allmän DRMErrorListener {<br /> public:<br /> virtuell void onLicenseAcquired(const DRMLicense*) = 0;<br /> <br /> skyddad:<br /> virtuell ~DRMAquireLicenseListener() {}<br /> };</p> </td> 
    <td>Händelse/gränssnitt/beskrivning 
     <ul> 
      <li>kEventDRMPreviewLicenseAcquired<p>/ DRMLicenseAcquiredEvent</p> <p>När metoden DRMManager::obtainPreviewLicense har anropats.</p> </li> 
@@ -599,7 +599,7 @@ Tabeller i det här avsnittet:
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>klassen DRMReturnLicenseListener: <br /> public DRMErrorListener {<br /> public:<br /> virtuell void onLicenseReturnComplete(uint32_t numReturned ) = 0;<br /> <br /> skyddad:<br /> virtuell ~DRMReturnLicenseListener() {}<br /> };</p> </td> 
+   <td><p>klassen DRMReturnLicenseListener: <br /> public DRMErrorListener {<br /> public:<br /> virtual void onLicenseReturnComplete(uint32_t numReturned ) = 0;<br /> <br /> protected:<br /> virtual ~DRMReturnLicenseListener() {}<br /> };</p> </td> 
    <td>Händelse/gränssnitt/beskrivning 
     <ul> 
      <li>kEventDRMLicenseReturnComplete<p>/ DRMLicenseReturnCompleteEvent</p> <p>När metoden DRMManager::returnLicense anropas.</p> </li> 
@@ -630,8 +630,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaResource {<br /> attribute DomString url; <br /> attribut osignerad kort typ,<br /> attributobjektmetadata;<br /> const unsigned short TYPE_HLS;<br /> const unsigned short TYPE_HDS;<br /> const unsigned short TYPE_DASH;<br /> const unsigned short TYPE_CUSTOM;<br /> const unsigned short TYPE_UNKNOWN;<br /> };</p> </td> 
-   <td><p>interface MediaResource {<br /> attribute DomString url;<br /> Attributet DomString type;<br /> attributobjektmetadata;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaResource {<br /> attribute DomString url; <br />-attribut osignerad kort typ;<br />-attributets objektmetadata;<br /> innehåller kort TYPE_HLS utan tecken;<br /> innehåller kort TYPE_HDS utan tecken;<br /> innehåller kort TYPE_DASH utan tecken;<br /> innehåller kort TYPE_CUSTOM utan tecken;<br /> innehåller kort TYPE utan tecken OKÄND;<br /> };</p> </td> 
+   <td><p>interface MediaResource {<br /> attribute DomString url;<br /> attribute DomString type;<br /> attribute Object metadata;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -645,11 +645,11 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( dubbel position);<br /> void play();<br /> void pause();<br /> void seek( dubbel position);<br /> void seekToLocal( dubbel position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaPlayerItem-objekt);<br /> void replaceCurrentResource(MediaResource-resurs, <br /> MediaPlayerItemConfig-konfiguration); <br /> void ause();<br /> void restore();<br /> void notifyClick();<br /> <br /> skrivskyddat attribut TimeRange playbackRange;<br /> skrivskyddat attribut TimeRange seekableRange;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double localTime;<br /> skrivskyddat attribut TimeRange buffedRange;<br /> skrivskyddat attribut DRMManager drmManager;<br /> skrivskyddat attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerStatus<br /> <br /> <br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> <br /> skrivskyddat attribut utan signerad kort status,<br /> <br /> attributet unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> const unsigned short VISIBLE, //For CC visibility<br /> const unsigned short INVISIBLE; //For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> skrivskyddat attribut PlaybackMetrics playbackMetrics;<br /> <br /> attributets dubbla ränta,<br /> attribute MediaPlayerView view;<br /> skrivskyddat attribut tidslinje,<br /> attribute double currentTimeUpdateInterval; <br /> // inställning this Won be supported for 2.0<br /> };</p> </td> 
-   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( int-position);<br /> void play();<br /> void pause();<br /> void seek( int position);<br /> void seekToLocalTime( int position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaResource-källa);<br /> <br /> <br /> <br /> <br /> <br /> <br /> skrivskyddat attribut TimeRange playbackRange;<br /> skrivskyddat attribut TimeRange seekableRange;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double localTime;<br /> skrivskyddat attribut TimeRange buffedRange;<br /> skrivskyddat attribut DRMManager drmManager;<br /> skrivskyddat attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const unsigned short PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER_STATE_INITIALIZING;<br /> const unsigned short PLAYER_STATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARING;<br /> const unsigned short PLAYER_STATE_PREPARED;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const unsigned short PLAYER_STATE_PAUSED;<br /> const unsigned short PLAYER_STATE_SEEKING;<br /> const unsigned short PLAYER_STATE_COMPLETE;<br /> const unsigned short PLAYER_STATE_ERROR;<br /> const unsigned short PLAYER_STATE_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> skrivskyddat attribut utan signerat kort tillstånd,<br /> <br /> attributet unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> skrivskyddad osignerad kort VISIBLE, //For CC visibility<br /> readonly unsigned short INVISIBLE; //For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> skrivskyddat attribut PlaybackMetrics playbackMetrics;<br /> attribute MediaPlayerConfig mediaPlayerConfig;<br /> attributets dubbla ränta,<br /> attribute MediaPlayerView view;<br /> skrivskyddat attribut tidslinje,<br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( double position);<br /> void play();<br /> void pause();<br /> void seek( double position);<br /> void seekToLocal( double position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaPlayerItem-objekt);<br /> void replaceCurrentResource(MediaResource-källa, <br /> MediaPlayerItemConfig-konfiguration); <br /> void suspension();<br /> void restore();<br /> void notifyClick();<br /> <br /> skrivskyddat attribut TimeRange playbackRange;<br /> skrivskyddat attribut TimeRange seekableRange;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat dubbellocalTime;<br /> skrivskyddat attribut TimeRange buffedRange;<br /> skrivskyddat attribut DRMManager drmManager;<br /> skrivskyddat attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerStatus<br /> <br /> a8/&gt; const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;&lt;a11 2/&gt; const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;&lt;a1 6/&gt; const unsigned short PLAYER_STATUS_RELEASED;<br /> <br /> <br /><br /><br /> skrivskyddat attribut med kort status osignerat;<br /> <br /> attribut osignerad kort volym;<br /> attribut ABRControlParameters abrControlParameters;<br /> attribut BufferControlParameters bufferControlParameters;<br /> <br /> innehåller osignerat kort VISIBLE; //For CC visibility<br /> const unsigned short INVISIBLE; //For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics playbackMetrics;<br /> <br /> attribute double rate;<br /> attribute MediaPlayerView view;<br /> readonly attribute Tidslinje;<br />-attribut double currentTimeUpdateInterval; <br /> // setting this Won't be supported for 2.0<br /> };</p> </td> 
+   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( int position);<br /> void play();<br /> void pause();<br /> void seek( int position);<br /> void seekToLocalTime( int position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaResource source);<br /> <br /> <br /> <br /> <br /> <br /> <br /> skrivskyddat attribut TimeRange playbackRange;<br /> skrivskyddat Område seekableRange;<br /> skrivskyddat attribut double currentTime;<br /> skrivskyddat attribut double localTime;<br /> skrivskyddat attribut TimeRange buffedRange;<br /> skrivskyddat attribut DRMManager drmManager;<br /> skrivskyddat attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const unsigned short PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER_STATE_INITIALIZING;<br /> const unsigned short PLAYER_Manager STATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARING;<br /> const unsigned short PLAYER_STATE_PREPARED;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const unsigned short PLAYER_STATE_PAUSED;<br /> const unsigned unsigned unsigned short PLAYER_STATE_SEEKING;<br /> const unsigned short PLAYER_STATE_COMPLETE;<br /> const unsigned short PLAYER_STATE_ERROR;<br /> const unsigned short PLAYER_STATE_RELEASED;<br /> const unsigned short PLAYER_STAT US_SUSPENDED;<br /> skrivskyddat attribut i kort tillstånd utan tecken;<br /> <br /> attribut osignerad kort volym;<br /> attribut ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> readonly unsigned VISIBLE; //For CC visibility<br /> readonly unsigned short INVISIBLE; //For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics playbackMetrics;<br /> attribute MediaPlayerConfig mediaPlayerConfig;<br /> attribute double rate;<br /> attribute MediaView view;<br /> Endast attributets tidslinje;<br /> <br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerStatus<br /> {<br /> // PlayerStatus<br /> const unsigned short PLAYER_STATUS_IDLE;<br /> const unsigned short PLAYER_STATUS_INITIALIZING;<br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerStatus<br /> {<br /> // PlayerStatus<br /> const unsigned short PLAYER_STATUS_IDLE;<br /> const unsigned short PLAYER_STATUS_INITIALIZING;<br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSS PENDED;<br /> };</p> </td> 
    <td>(Nytt i 2.0)</td> 
   </tr> 
  </tbody> 
@@ -801,7 +801,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>operationFailed</td> 
-   <td>seekEvent</td> 
+   <td>NotificationEvent</td> 
    <td> </td> 
    <td>operationFailed</td> 
    <td>ErrorEvent</td> 
@@ -849,21 +849,21 @@ Tabeller i det här avsnittet:
    <td>AdBreakEvent</td> 
   </tr> 
   <tr> 
-   <td>adClick<br /> When user clicks on an Ad.</td> 
+   <td>adClick<br /> När användaren klickar på en annons.</td> 
    <td>AdClickEvent</td> 
    <td> </td> 
    <td><p>Nytt i 2.0</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
-   <td>profileChanged<br /> When the playback profile changes.</td> 
+   <td>profileChanged<br /> När uppspelningsprofilen ändras.</td> 
    <td>ProfileEvent</td> 
    <td> </td> 
    <td><p>Nytt i 2.0</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
-   <td>seekPositionAdjusted<br /> When seek position justerar på grund av interna eller externa regler.</td> 
+   <td>seekPositionAdjusted<br /> När sökpositionen justeras på grund av interna eller externa regler.</td> 
    <td>SeekEvent</td> 
    <td> </td> 
    <td><p>Nytt i 2.0</p> </td> 
@@ -891,14 +891,14 @@ Tabeller i det här avsnittet:
    <td> </td> 
   </tr> 
   <tr> 
-   <td>playbackRangeUpdated<br /> When a media player item is updated. För live/linjär direktuppspelning måste klienten regelbundet uppdatera medieresursen för att kunna identifiera det nya tillgängliga innehållet. När detta inträffar kan vissa mediaegenskaper ändras.</td> 
+   <td>playbackRangeUpdated<br /> När ett mediespelarobjekt uppdateras. För live/linjär direktuppspelning måste klienten regelbundet uppdatera medieresursen för att kunna identifiera det nya tillgängliga innehållet. När detta inträffar kan vissa mediaegenskaper ändras.</td> 
    <td>MediaPlayerItemEvent</td> 
    <td> </td> 
    <td><p>Nytt i 2.0</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
-   <td>timedEvent<br /> som skickas när tidsinställda händelser genereras.</td> 
+   <td>timedEvent<br /> Skickas när tidsinställda händelser genereras.</td> 
    <td>TimedEvent</td> 
    <td> </td> 
    <td><p>Nytt i 2.0</p> </td> 
@@ -915,8 +915,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnitt ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1 ;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2 ;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> const unsigned short DEFAULT_ABR_INITIAL_BITRATE;<br /> const unsigned short DEFAULT_ABR_MIN_BITRATE;<br /> const unsigned short DEFAULT_ABR_MAX_BITRATE;<br /> const ABRPolicy DEFAULT_ABR_POLICY;<br /> };</p> </td> 
-   <td><p>gränssnitt ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1 ;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2 ;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>gränssnitt ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1 ;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2 ;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribut osignerat int initialBitRate;<br /> attribut osignerat int minBitRate;<br /> attribut osignerat int maxBitRate;<br /> const unsigned short DEFAULT_ABR_INITIAL_BITRATE;<br /> const unsigned short DEFAULT_ABR_MMMTE IN_BITRATE;<br /> const unsigned short DEFAULT_ABR_MAX_BITRATE;<br /> const ABRPolicy DEFAULT_ABR_POLICY;<br /> };</p> </td> 
+   <td><p>gränssnitt ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1 ;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2 ;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribut osignerat int initialBitRate;<br /> attribut osignerat int minBitRate;<br /> attribut osignerat int maxBitRate;<br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -946,7 +946,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface TextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0 ;<br /> const unsigned short COLOR_BLACK = 1 ;<br /> const unsigned short COLOR_GRAY = 2 ;<br /> const unsigned short COLOR_WHITE = 3 ;<br /> const unsigned short COLOR_BRIGHT_WHITE = 4 ;<br /> const unsigned short COLOR_DARK_RED = 5 ;<br /> const unsigned short COLOR_RED = 6;<br /> const unsigned short COLOR_BRIGHT_RED = 7 ;<br /> const unsigned short COLOR_DARK_GREEN = 8 ;<br /> const unsigned short COLOR_GREEN = 9 ;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10;<br /> const unsigned short COLOR_DARK_BLUE = 11;<br /> const unsigned short COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13 ;<br /> const unsigned short COLOR_DARK_YELLOW = 14;<br /> const unsigned short COLOR_YELLOW = 15;<br /> const unsigned short COLOR_BRIGHT_YELLOW = 16;<br /> const unsigned short COLOR_DARK_MAGENTA = 17;<br /> const unsigned short COLOR_MAGENTA = 18;<br /> const unsigned short COLOR_BRIGHT_MAGENTA = 19;<br /> const unsigned short COLOR_DARK_CYAN = 20;<br /> const unsigned short COLOR_CYAN = 21;<br /> const unsigned short COLOR_BRIGHT_CYAN = 22;<br /> <br /> skrivskyddat attribut unsigned short fontColor;<br /> skrivskyddat attribut unsigned short backgroundColor;<br /> skrivskyddat attribut unsigned short fillColor;<br /> skrivskyddat attribut unsigned short edgeColor;<br /> <br /> // Size<br /> const unsigned short SIZE_DEFAULT = 0;<br /> const unsigned short SIZE_SMALL = 1 ;<br /> const unsigned short SIZE_MEDIUM = 2 ;<br /> const unsigned short SIZE_LARGE = 3 ;<br /> <br /> skrivskyddat attribut med kort storlek utan tecken,<br /> <br /> // FontEdge<br /> const unsigned short FONT_EDGE_DEFAULT = 0 ;<br /> const unsigned short FONT_EDGE_NONE = 1 ;<br /> const unsigned short FONT_EDGE_RAISED = 2 ;<br /> const unsigned short FONT_EDGE_DEPRESSED = 3 ;<br /> const unsigned short FONT_EDGE_UNIFORM = 4 ;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_LEFT = 5 ;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_RIGHT = 6 ;<br /> skrivskyddat attribut unsigned short fontEdge;<br /> <br /> // Font<br /> const unsigned short FONT_DEFAULT = 0;<br /> const unsigned short FONT_MONOSPACED_WITH_SERIFS = 1 ;<br /> const unsigned short FONT_PROPORTIONAL_WITH_SERIFS = 2 ;<br /> const unsigned short FONT_MONSPACED_WITHOUT_SERIFS = 3 ;<br /> const unsigned short FONT_CASUAL = 4 ;<br /> const unsigned short FONT_CURSIVE = 5 ;<br /> const unsigned short FONT_SMALL_CAPITALS = 6 ;<br /> skrivskyddat attribut med kort teckensnitt utan tecken,<br /> skrivskyddat attribut osignerat kort fontOpacity;<br /> skrivskyddat attribut osignerad kort bakgrundOpacitet,<br /> skrivskyddat attribut unsigned short fillOpacity;<br /> skrivskyddat attribut osignerat kort DEFAULT_OPACITY;<br /> };</p> </td> 
+   <td><p>interface TextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0;<br /> const unsigned short COLOR_BLACK = 1 ;<br /> const unsigned short COLOR_GRAY = 2 ;<br /> const unsigned short COLOR_WHITE = 3; 6/&gt; const unsigned short COLOR_BRIGHT_WHITE = 4 ;<br /> const unsigned short COLOR_DARK_RED = 5 ;<br /> const unsigned short COLOR_RED = 6 ;<br /> const unsigned short COLOR_BRIGHT_RED = 7 ;<br /> const unsigned short COLOR_DOR ARK_GREEN = 8;<br /> const unsigned short COLOR_GREEN = 9;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10;<br /> const unsigned short COLOR_DARK_BLUE = 11 ;<br /> const unst signed short COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13;<br /> const unsigned short COLOR_DARK_YELLOW = 14;<br /> const unsigned short COLOR_YELLOW = 15;&lt;a 18/&gt; <br /><br /> const unsigned short COLOR_BRIGHT_YELLOW = 16;<br /> const unsigned short COLOR_DARK_MAGENTA = 17 ;<br /> const unsigned short COLOR_MAGENTA = 18 ;<br /> const unsigned short COLOR_BRIGHT_MAGENTA = 19 ;<br /> const st unsigned short COLOR_DARK_CYAN = 20;<br /> const unsigned short COLOR_CYAN = 21;<br /> const unsigned short COLOR_BRIGHT_CYAN = 22;<br /> <br /> readonly attribute unsigned short fontColor;<br /> readonly attribute unsigned short backgroundColor; a9/&gt; skrivskyddat attribut osignerat short fillColor;<br /> skrivskyddat attribut osignerat short edgeColor;<br /> <br /> // Size<br /> const unsigned short SIZE_DEFAULT = 0;<br /> const unsigned short SIZE_SMALL = 1;&lt;a1; 5/&gt; const unsigned short SIZE_MEDIUM = 2 ;<br /> <br /><br /> const unsigned short SIZE_LARGE = 3 ;<br /> <br /> readonly attribute unsigned short size;<br /> <br /> // FontEdge<br /> const unsigned short FONT_EDGE_DEFAULT = 0;<br /> const unsigned short FONT_EDGE_NONE = 1;<br /> const unsigned short FONT_EDGE_RAISED = 2 ;<br /> const unsigned short FONT_EDGE_DEPRESSED = 3 ;<br /> const unsigned short FONT_EDGE_UNIFORM = 4 ;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_LEFT = 5 ;&lt;a1 0/&gt; const unsigned short FONT_EDGE_DROP_SHADOW_RIGHT = 6;<br /> readonly attribute unsigned short fontEdge;<br /> <br /> // Font<br /> const unsigned short FONT_DEFAULT = 0;<br /> const unsigned short FONT_MONOSPACED_WITH_SERIFS = 1 ;<br /><br /> const unsigned short FONT_PROPORTIONAL_WITH_SERIFS = 2 ;<br /> const unsigned short FONT_MONSPACED_WITHOUT_SERIFS = 3 ;<br /> const unsigned short FONT_CASUAL = 4 ;<br /> const unsigned short FONT_CURSIVE = 5 ;<br /> const unsigned unsigned unsigned unsigned short FONT_SMALL_CAPITALS = 6;<br /> skrivskyddat attribut osignerat kort teckensnitt;<br /> skrivskyddat attribut osignerat kort teckensnittOpacitet;<br /> skrivskyddat attribut osignerat kort bakgrundOpacitet;<br /> skrivskyddat attribut osignerat kort DEFAULT_OPACITY;<br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -960,7 +960,7 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItemLoader:<br /> {<br /> void load(MediaResource resource, long resourceId,<br /> ItemLoaderListener listener, <br /> MediaPlayerItemConfig config);<br /> void cancel();<br /> skrivskyddat attribut MediaPlayerItem currentItem;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerItemLoader:<br /> {<br /> void load(MediaResource resource, long resourceId,<br /> ItemLoaderListener listener, <br /> MediaPlayerItemConfig config);<br /> void cancel();<br /> skrivskyddat attribut MediaPlayerItem currentItem;&lt;a6/ &gt; };<br /></p> </td> 
    <td>Nytt i 2.0</td> 
   </tr> 
   <tr> 
@@ -990,8 +990,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource;<br /> skrivskyddat attribut long resourceId;<br /> skrivskyddat attribut boolesk live,<br /> <br /> skrivskyddat attribut booleskt hasAlternateAudio;<br /> skrivskyddat attribut AudioTrackList audioTracks;<br /> skrivskyddat attribut AudioTrack selectedAudioTrack;<br /> void selectAudioTrack(ljudspår); <br /> <br /> skrivskyddat attribut booleskt hasClosedCaptions;<br /> skrivskyddat attribut ClosedCaptionsTrackList closedCaptionsTracks;<br /> skrivskyddat attribut ClosedCaptionsTrack selectedClosedCaptionsTrack;<br /> void selectClosedCaptionsTrack(<br /> spårningen ClosedCaptionsTrack); <br /> <br /> skrivskyddat attribut boolean hasTimedMetadata;<br /> skrivskyddat attribut TimedMetadataList timedMetadata;<br /> skrivskyddat attribut booleskt dynamiskt,<br /> <br /> skrivskyddat attribut boolean isProtected;<br /> skrivskyddat attribut DRMMetadataInfoList drmMetadataInfos;<br /> skrivskyddade attribut ProfileList-profiler;<br /> skrivskyddad attributprofil selectedProfile;<br /> <br /> skrivskyddat attribut boolean trickPlaySupported;<br /> skrivskyddat attribut FloatArray availablePlaybackRates;<br /> skrivskyddat attribut float selectedPlaybackRate;<br /> <br /> <br /> skrivskyddat attribut MediaPlayer mediaPlayer;<br /> skrivskyddat attribut, konfiguration av MediaPlayerItemConfig;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource;<br /> skrivskyddat attribut long resourceId;<br /> skrivskyddat attribut boolesk live,<br /> <br /> skrivskyddat attribut booleskt hasAlternateAudio;<br /> skrivskyddat attribut AudioTrackList audioTracks;<br /> attribute AudioTrack selectedAudioTrack;<br /> <br /> <br /> skrivskyddat attribut booleskt hasClosedCaptions;<br /> skrivskyddat attribut ClosedCaptionsTrackList ccTracks;<br /> attribute ClosedCaptionsTrack selectedCCTrack;<br /> <br /> <br /> <br /> skrivskyddat attribut boolean hasTimedMetadata;<br /> skrivskyddat attribut TimedMetadataList timedMetadata;<br /> skrivskyddat attribut booleskt dynamiskt,<br /> <br /> skrivskyddat attribut boolean isProtected;<br /> skrivskyddat attribut DRMMetadataInfoList drmMetadataInfos;<br /> skrivskyddade attribut ProfileList-profiler;<br /> <br /> <br /> skrivskyddat attribut boolean trickPlaySupported;<br /> skrivskyddat attribut Int32Array availablePlaybackRates;<br /> <br /> skrivskyddat attribut StringList adTags;<br /> <br /> skrivskyddat attribut MediaPlayer mediaPlayer;<br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly attribute long resourceId;<br /> readonly attribute boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly attribute AudioTrackList audioTracks;<br /> readonly attribute AudioTrdio rack selectedAudioTrack;<br /> void selectAudioTrack(AudioTrack-spår); <br /> <br /> skrivskyddat attribut booleskt hasClosedCaptions;<br /> skrivskyddat attribut ClosedCaptionsTrack closedListCaptionsTracks;<br /> skrivskyddat attribut ClosedCaptionsTrack selectedClosedCaptionsTrack;<br /> void selectClosedCaptions Track(<br /> ClosedCaptionsTrack-spår); <br /> <br /> skrivskyddat attribut booleskt hasTimedMetadata;<br /> skrivskyddat attribut TimedMetadataList timedMetadata;<br /> skrivskyddat booleskt dynamiskt attribut;<br /> <br /> skrivskyddat skrivskyddat attribut booleskt är;&lt;a 20/&gt; skrivskyddat attribut DRMMetadataInfoList drmMetadataInfos;<br /> skrivskyddat attribut ProfileList-profiler;<br /> skrivskyddat attribut selectedProfile;<br /> <br /> skrivskyddat attribut booleskt trickPlaySupported;<br /> skrivskyddat-attribut Float atArray availablePlaybackRates;<br /> readonly attribute float selectedPlaybackRate;<br /> <br /> <br /> readonly attribute MediaPlayer mediaPlayer;<br /> readonly attribute MediaPlayerItemConfig config;<br /> };<br /></p> </td> 
+   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly attribute long resourceId;<br /> readonly attribute boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly attribute AudioTrackList audioTracks;<br /> attribute AudioTrack selected Ljudspår;<br /> <br /> <br /> skrivskyddat attribut booleskt hasClosedCaptions;<br /> skrivskyddat attribut ClosedCaptionsTrackList ccTracks;<br /> attribut ClosedCaptionsTrack selectedCCTrack;<br /> <br /> <br /> <br /> skrivskyddat attribut booleskt hasTimedMetadata;<br /> skrivskyddat attribut TimedMetadataList timed timedMetadata;<br /> skrivskyddat booleskt dynamiskt attribut;<br /> <br /> skrivskyddat skrivskyddat attribut booleskt; skrivskyddat DRMMetadataInfoList drmMetadataInfos;<br /> skrivskyddat attribut ProfileList-profiler;<br /> <br /> <br /> skrivskyddat attribut booleskt trickPlaySupported;<br /> skrivskyddat attribut Int32Art ray availablePlaybackRates;<br /> <br /> skrivskyddat attribut StringList adTags;<br /> <br /> skrivskyddat attribut MediaPlayer mediaPlayer;<br /> <br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1005,24 +1005,24 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface Track<br /> {<br /> readonly attribute DomString name;<br /> skrivskyddat attribut DOMString-språk;<br /> boolesk standardinställning för skrivskyddat attribut,<br /> skrivskyddat attribut boolean autoSelect;<br /> }; </p> </td> 
+   <td><p>interface Track<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> readonly attribute boolean default;<br /> readonly attribute boolean autoSelect;<br /> }; </p> </td> 
    <td>Nytt i 2.0</td> 
   </tr> 
   <tr> 
-   <td><p>interface AudioTrack : Spåra<br /> {<br /> readonly attribute DomString name;; //FromTrack<br /> readonly attribute DOMString language;//FromTrack<br /> readonly attribute boolean default; // From Track<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> readonly attribute unsigned int pid;<br /> };</p> </td> 
-   <td><p>interface AudioTrack<br /> {<br /> readonly attribute DomString name;<br /> skrivskyddat attribut DOMString-språk; <br /> boolesk standardinställning för skrivskyddat attribut,<br /> skrivskyddat attribut boolean autoSelect;<br /> skrivskyddat attribut (booleskt) framtvingat,<br /> <br /> };</p> </td> 
+   <td><p>interface AudioTrack : Spåra<br /> {<br /> DOMString-namn för skrivskyddat attribut; //FromTrack<br /> readonly attribute DomString language;//FromTrack<br /> readonly attribute boolean default; // From Track<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> readonly attribute unsigned int pid;<br /> };</p> </td> 
+   <td><p>interface AudioTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language; <br /> boolesk skrivskyddat attribut som standard;<br /> skrivskyddat attribut boolean autoSelect;<br /> skrivskyddat attribut booleskt framtvingat;<br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface AudioTrackList<br /> {<br /> readonly attribute unsigned long length;<br /> getter AudioTrack (unsigned long index);<br /> };</p> </td> 
+   <td><p>interface AudioTrackList<br /> {<br /> skrivskyddat attribut med lång längd utan tecken;<br /> getter AudioTrack (unsigned long index);<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface ClosedCaptionsTrack : Spåra<br /> {<br /> readonly attribute DomString name;; //FromTrack<br /> readonly attribute DOMString language;//FromTrack<br /> readonly attribute boolean default; // FromTrack<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> <br /> const unsigned short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const unsigned short SERVICE_WEB_VTT_CAPTIONS = 2;<br /> skrivskyddat attribut unsigned short serviceType;<br /> skrivskyddat attribut (booleskt) framtvingat,<br /> };</p> </td> 
-   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> skrivskyddat attribut DOMString-språk;<br /> boolesk standardinställning för skrivskyddat attribut,<br /> <br /> <br /> boolesk skrivskyddad attribut är aktivt,<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrack : Spåra<br /> {<br /> DOMString-namn för skrivskyddat attribut; //FromTrack<br /> readonly attribute DomString language;//FromTrack<br /> readonly attribute boolean default; // FromTrack<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> <br /> const unsigned short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const unsigned short SERVICE_WICE EB_VTT_CAPTIONS = 2;<br /> skrivskyddat attribut osignerat kort serviceType;<br /> skrivskyddat attribut booleskt framtvingat;<br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> readonly attribute boolean default;<br /> <br /> <br /> readonly attribute boolean;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface ClosedCaptionsTrackList<br /> {<br /> readonly attribute unsigned long;<br /> getter ClosedCaptionsTrack(unsigned long index);<br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrackList<br /> {<br /> readonly attribute unsigned long length;<br /> getter ClosedCaptionsTrack(unsigned long index);<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1037,11 +1037,11 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Profil: Ingen ändring för 2.0</td> 
-   <td><p>gränssnittsprofil<br /> {<br /> readonly attribute unsigned int width;<br /> skrivskyddat attribut osignerad int-höjd,<br /> skrivskyddat attribut osignerat int bitRate;<br /> }; </p> </td> 
+   <td><p>interface profile<br /> {<br /> readonly attribute unsigned int width;<br /> readonly attribute unsigned int height;<br /> readonly attribute unsigned int bitRate;<br /> }; </p> </td> 
   </tr> 
   <tr> 
    <td>Profillista: Ingen ändring för 2.0</td> 
-   <td><p>interface ProfileList<br /> {<br /> readonly attribute unsigned long;<br /> getter Profile(unsigned long index);<br /> };</p> </td> 
+   <td><p>interface ProfileList<br /> {<br /> readonly attribute unsigned long length;<br /> getter Profile(unsigned long index);<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1056,11 +1056,11 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td><strong>DRMMetadataInfo</strong>: Ingen ändring för 2.0</td> 
-   <td><p>gränssnitt för DRMMetadataInfo<br /> { <br /> skrivskyddade DRMMetadata-metadata;<br /> skrivskyddat attribut long prefetchTimestamp;<br /> skrivskyddat attribut TimeRange timeRange;<br /> };</p> </td> 
+   <td><p>gränssnitt DRMMetadataInfo<br /> { <br /> DRMMetadata-metadata för skrivskyddat attribut;<br /> skrivskyddat attribut long prefetchTimestamp;<br /> skrivskyddat attribut TimeRange;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>DRMMetadataInfoList</strong>: Ingen ändring för 2.0</td> 
-   <td><p>gränssnittet DRMMetadataInfoList<br /> {<br /> skrivskyddat attribut med lång längd utan tecken;<br /> getter DRMMetadataInfo(unsigned long index);<br /> };</p> </td> 
+   <td><p>gränssnitt DRMMetadataInfoList<br /> {<br /> skrivskyddat attribut med lång längd utan tecken;<br /> getter DRMMetadataInfo(unsigned long index);<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1273,8 +1273,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> skrivskyddat attribut DOMString-beskrivning;<br /> skrivskyddat attribut för long major,<br /> skrivskyddat attribut long minor,<br /> skrivskyddat attribut för lång revision,<br /> skrivskyddat attribut long apiVersion;<br /> };</p> </td> 
-   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> skrivskyddat attribut DOMString-beskrivning;<br /> skrivskyddat attribut DomString major;<br /> skrivskyddat attribut DomString minor;<br /> skrivskyddat attribut DomString-revision;<br /> skrivskyddat attribut DomString apiVersion;<br /> };</p> </td> 
+   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly attribute long major;<br /> readonly attribute long minor;<br /> readonly attribute long revision;<br /> readonly attribute long apiVersion;<br /> };</p> </td> 
+   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly attribute DomString major;<br /> readonly attribute DomString minor;<br /> readonly attribute DomString revision;<br /> readonly attribute DomString apiVersion;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1289,7 +1289,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface TimeRange<br /> {<br /> readonly attribute unsigned long begin;<br /> skrivskyddat attribut utan signerad lång ände,<br /> skrivskyddat attribut med osignerad lång varaktighet,<br /> };</p> </td> 
+   <td><p>interface TimeRange<br /> {<br /> readonly attribute unsigned long begin;<br /> readonly attribute unsigned long end;<br /> readonly attribute unsigned long duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1304,7 +1304,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>gränssnittet QOSProvider<br /> {<br /> void attachMediaPlayer(MediaPlayer player);<br /> void detachMediaPlayer();<br /> <br /> skrivskyddat attribut DeviceInformation deviceInformation;<br /> skrivskyddat attribut PlaybackInformation playbackInformation;<br /> };</p> </td> 
+   <td><p>interface QOSProvider<br /> {<br /> void attachMediaPlayer(MediaPlayer player);<br /> void detachMediaPlayer();<br /> <br /> skrivskyddat attribut DeviceInformation deviceInformation;<br /> skrivskyddat attribut PlaybackInformation playbackInformation;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1318,8 +1318,8 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>gränssnittet DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> <br /> <br /> <br /> skrivskyddat attribut DomString id;<br /> skrivskyddat attribut int sityDPI;<br /> skrivskyddat attribut int heightPixels;<br /> skrivskyddat attribut int widthPixels;<br /> skrivskyddat attribut booleskt seekToKeyFrame;<br /> };</p> </td> 
-   <td><p>gränssnittet DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> skrivskyddat attribut int sdk,<br /> skrivskyddat attribut DOMString-modell;<br /> skrivskyddat attribut DOMString-tillverkare;<br /> skrivskyddat attribut DomString id;<br /> skrivskyddat attribut int sityDPI;<br /> skrivskyddat attribut int heightPixels;<br /> skrivskyddat attribut int widthPixels;<br /> <br /> };</p> </td> 
+   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> <br /> <br /> <br /> readonly attribute DomString id;<br /> readonly attribute int sityDPI;<br /> readonly attribute int heightPixels;<br /> readonly attribute int widthPixels;<br /> skrivskyddat attribut booleskt seekToKeyFrame;<br /> };</p> </td> 
+   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> readonly attribute int sdk;<br /> readonly attribute DomString model;<br /> readonly attribute DomString manufacturer;<br /> readonly attribute DomString id;<br /> readonly attribute density;<br /> readonly attribute int heightPixels;<br /> readonly attribute int widthPixels;<br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1334,7 +1334,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface LoadInfo<br /> {<br /> readonly attribute DomString url;<br /> skrivskyddat attribut i int-storlek,<br /> skrivskyddat attribut double downloadDuration;<br /> skrivskyddat attribut int periodIndex;<br /> skrivskyddat attribut double mediaDuration;<br /> skrivskyddat attribut short TRACK_TYPE_FRAGMENT;<br /> skrivskyddat attribut short TRACK_TYPE_TRACK;<br /> skrivskyddat attribut short TRACK_TYPE_MANIFEST;<br /> skrivskyddad attributkort typ,<br /> skrivskyddat attribut DomString trackName;<br /> skrivskyddat attribut DOMString trackType;<br /> skrivskyddat attribut int trackIndex,<br /> };</p> </td> 
+   <td><p>interface LoadInfo<br /> {<br /> readonly attribute DomString url;<br /> readonly attribute int size;<br /> readonly attribute double downloadDuration;<br /> readonly attribute int periodIndex;<br /> readonly attribute double mediaDuration;<br /> readonly attribute short TRACK_TYPE_FRAGMENT;<br /> skrivskyddat attribut kort TRACK_TYPE_TRACK;<br /> skrivskyddat attribut kort TRACK_TYPE_MANIFEST;<br /> skrivskyddat attributkort;<br /> skrivskyddat attribut DOSString trackName;<br /> skrivskyddat attribut DOSString trackType;<br /> skrivskyddat attributspår Index;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1349,7 +1349,7 @@ Tabeller i det här avsnittet:
   </tr> 
   <tr> 
    <td>Ingen ändring för 2.0</td> 
-   <td><p>interface View<br /> {<br /> readonly attribute unsigned short x;<br /> skrivskyddat attribut unsigned short y,<br /> skrivskyddat attribut med kort bredd utan tecken,<br /> skrivskyddat attribut med kort höjd utan tecken,<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos(unsigned short x, unsigned short y);<br /> }</p> </td> 
+   <td><p>interface View<br /> {<br /> readonly attribute unsigned short x;<br /> readonly attribute unsigned short y;<br /> readonly attribute unsigned short width;<br /> readonly attribute unsigned short height;<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos(uns(unsigned signerad kort x, osignerad kort y);<br /> }</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1363,12 +1363,12 @@ Tabeller i det här avsnittet:
    <th>1.3 API:er</th> 
   </tr> 
   <tr> 
-   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute double timeToFirstByte;<br /> skrivskyddat attribut double timeToLoad;<br /> skrivskyddat attribut double timeToStart;<br /> skrivskyddat attribut double timeToFail;<br /> skrivskyddat attribut int totalSecondsPlayed;<br /> skrivskyddat attribut int totalSecondsSpent;<br /> skrivskyddat attribut double frameRate;<br /> skrivskyddat attribut int droppedFrameCount;<br /> skrivskyddat attribut int percepeivedBandwidth;<br /> skrivskyddat attribut, int-bithastighet,<br /> skrivskyddat attribut double bufferTime;<br /> skrivskyddat attribut int bufferLength;<br /> skrivskyddat attribut int emptyBufferCount;<br /> skrivskyddat attribut double bufferingTime;<br /> };</p> </td> 
-   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute double timeToFirstByte;<br /> skrivskyddat attribut double timeToLoad;<br /> skrivskyddat attribut double timeToStart;<br /> skrivskyddat attribut double timeToFail;<br /> skrivskyddat attribut int totalSecondsPlayed;<br /> skrivskyddat attribut int totalSecondsSpent;<br /> skrivskyddat attribut double frameRate;<br /> skrivskyddat attribut int droppedFrameCount;<br /> <br /> skrivskyddat attribut, int-bithastighet,<br /> skrivskyddat attribut double bufferTime;<br /> skrivskyddat attribut int bufferLength;<br /> skrivskyddat attribut int emptyBufferCount;<br /> skrivskyddat attribut double bufferingTime;<br /> };</p> </td> 
+   <td><p>interface PlaybackInformation<br /> {<br /> skrivskyddat attribut double timeToFirstByte;<br /> skrivskyddat attribut double timeToLoad;<br /> skrivskyddat attribut double timeToStart;<br /> skrivskyddat attribut double timeToFail;<br /> skrivskyddat attribut int totalSecondsPlayed;<br /> skrivskyddat int totalSecondsSpent;<br /> skrivskyddat attribut double frameRate;<br /> skrivskyddat attribut int dropFrameCount;<br /> skrivskyddat attribut int percepeivedBandwidth;<br /> skrivskyddat attribut int bitrate;<br /> skrivskyddat attribut double bufferTime;<br /> skrivskyddat attributint buffer Längd;<br /> skrivskyddat attribut till emptyBufferCount;<br /> skrivskyddat attribut double bufferingTime;<br /> };</p> </td> 
+   <td><p>interface PlaybackInformation<br /> {<br /> skrivskyddat attribut double timeToFirstByte;<br /> skrivskyddat attribut double timeToLoad;<br /> skrivskyddat attribut double timeToStart;<br /> skrivskyddat attribut double timeToFail;<br /> skrivskyddat attribut int totalSecondsPlayed;<br /> skrivskyddat int totalSecondsSpent;<br /> skrivskyddat attribut double frameRate;<br /> skrivskyddat attribut int dropFrameCount;<br /> <br /> skrivskyddat attribut int bitrate;<br /> skrivskyddat attribut double bufferTime;<br /> skrivskyddat attribut int bufferLength;<br /> skrivskyddat attribut int emptyBufferCount;<br /> skrivskyddat attribut double bufferingTime;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Användbara resurser {#helpful-resources}
 
-* Fullständig hjälpdokumentation finns på [Adobe Primetime sida för utbildning och support](https://helpx.adobe.com/support/primetime.html) .
+* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
