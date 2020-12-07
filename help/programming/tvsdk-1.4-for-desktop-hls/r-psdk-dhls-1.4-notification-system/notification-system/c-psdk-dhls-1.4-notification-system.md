@@ -6,6 +6,9 @@ title: Meddelanden om spelarstatus, aktivitet, fel och loggning
 uuid: 7ce5bed0-f312-437e-a82f-b1d4a8e1926c
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
