@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Poster av den här typen loggar begär att manifestservern skapar WEBVTT-bildtex
 
 ### TRACE_WEBVTT_RESPONSE-poster {#trace-webvtt-response-records}
 
-Registrerar ``of ``den här ``type ``loggen ``responses ``på ``manifest ``servern ``sends ``till ``clients ``i `` `answer` `` till ``requests `` `for` ``WEBVTT ``beskrivningar. Fält efter TRACE_WEBVTT_RESPONSE visas i den ordning som de visas i tabellen, avgränsade `by`flikar.
+Poster av den här typen loggsvar som manifestservern skickar till klienter som svar på förfrågningar om `WEBVTT` bildtexter. Fält efter `TRACE_WEBVTT_RESPONSE` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
