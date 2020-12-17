@@ -1,28 +1,52 @@
 ---
-title: Versionsinformation om PTAI 20.10.1
-description: Versionsinformationen för PTAI 20.10.1 beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
+title: Versionsinformation om PTAI 20.12.1
+description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Primetime Ad Insertion 20.10.1
+# Versionsinformation om Primetime Ad Insertion 20.12.1
 
-Versionsinformationen för Primetime Ad Insertion 20.10.1 beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2020.
+Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2020.
 
-## Nyheter i PTAI 20.10.1
+## Nyheter i PTAI 20.12.1
+
+**När:** tisdag den 8 december 2020 från 01:00 till 04:00 Eastern Time
+
+**Ändringar**
+
+* Innehåller en snabbkorrigering som åtgärdar intermittenta klientanslutningsproblem (5xx) i Primetime Ad Insertion som uppstod 30 november 2020.
+
+### Förbättringar och korrigeringar i tidigare versioner
+
+#### Version 201.11.1
+
+**När:** Torsdag den 5 november 2020 från kl. 02.00 till kl. 05.00 Eastern Time
+
+**Ändringar**
+
+* Underhållsuppdateringar.
+
+#### Version 201.10.2
+
+**När:** torsdag den 29 oktober 2020 från kl. 12.01 till kl. 06.00 Eastern Time
+
+**Ändringar**
+
+* Underhållsuppdateringar.
+
+#### Version 201.10.1
 
 **När:** tisdag den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
 
 **Ändringar**
 
 * Underhållsuppdateringar.
-
-### Förbättringar och korrigeringar i tidigare versioner
 
 #### Version 20.9.3
 
