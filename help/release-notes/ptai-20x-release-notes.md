@@ -2,7 +2,7 @@
 title: Versionsinformation om PTAI 20.12.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 ### Förbättringar och korrigeringar i tidigare versioner
 
-#### Version 201.11.1
+#### Version 20.11.1
 
 **När:** Torsdag den 5 november 2020 från kl. 02.00 till kl. 05.00 Eastern Time
 
@@ -32,7 +32,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Underhållsuppdateringar.
 
-#### Version 201.10.2
+#### Version 20.10.2
 
 **När:** torsdag den 29 oktober 2020 från kl. 12.01 till kl. 06.00 Eastern Time
 
@@ -40,7 +40,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Underhållsuppdateringar.
 
-#### Version 201.10.1
+#### Version 20.10.1
 
 **När:** tisdag den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
 
