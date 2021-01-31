@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Hjälp om Primetime-programmering
 user-guide-description: Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter.
 translation-type: tm+mt
-source-git-commit: 02ac57d14cf5c4c2819d17413a9d3e9a31237715
+source-git-commit: aab96dcf5107be90534350156ee66a88de80613e
 workflow-type: tm+mt
-source-wordcount: '4327'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---
@@ -274,7 +274,7 @@ ht-degree: 0%
    + [Meddelanden om spelarstatus, aktivitet, fel och loggar](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Anpassad loggning](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
    + [Redundans](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
-   + [Faktureringsmått](tvsdk-3x-ios-prog/ios-3x-billing/ios-3x-billing-metrics/ios-3x-billing-metrics.md)
+   + [Faktureringsstatistik](tvsdk-3x-ios-prog/ios-3x-billing/ios-3x-billing-metrics/ios-3x-billing-metrics.md)
    + Sammanfattning av klasser i Primetime Player {#primetime-player-classes-summary}
       + [Klasser för mediespelare](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-media-player-ios.md)
       + [Loggningsklasser](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-logging.md)
@@ -599,7 +599,7 @@ ht-degree: 0%
          + [Initiera och konfigurera videoanalys](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-integrate-heartbeats.md)
          + [Implementera stöd för anpassade metadata](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-custom-metadata.md)
          + [Stöd för implementeringskapitel](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-chapter-support.md)
-         + [Implementera anpassade tidsuppdateringar](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-imp-cust-time-updates.md)
+         + [Implementera anpassade tidsuppdateringar](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-android/configure-user-interface/inserting-ads/android-1.4-imp-cust-time-updates.html?lang=en#tvsdk-1-4-for-android)
          + [Konfigurera videoanalysrapporter på serversidan](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
          + [Få tillgång till videoanalysrapporter](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-reports-access.md)
       + Innehållsskydd {#content-protection}
