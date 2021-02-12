@@ -5,9 +5,9 @@ seo-title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
 title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Annonser från olika tredjepartsleverantörer, t.ex. en annonsserver, en lagerpa
 När TVSDK först stöter på en inkompatibel annons ignorerar spelaren annonsen och skickar en begäran till den kreativa reparationstjänsten (CRS), som är en del av Primetime-annonsinfogningen, för att paketera om annonsen till ett kompatibelt format. CRS försöker generera M3U8-renderingar med flera bitar och lagrar dessa renderingar i Primetimes Content Delivery Network (CDN). Nästa gång TVSDK får ett annonssvar som pekar på den annonsen använder spelaren den HLS-kompatibla M3U8-versionen från CDN.
 
 Om du vill aktivera den här valfria funktionen kontaktar du Adobe.
-
-Mer information om CRS finns i [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Flera CDN-stöd för CRS och leverans {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
