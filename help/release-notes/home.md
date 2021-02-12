@@ -4,7 +4,7 @@ seo-title: Versionsinformation för Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Mer information om den aktuella versionen för [iOS](../release-notes/tvsdk-3x-i
 | [Referensimplementering](/help/android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM) |
-| [Hjälp om Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
+| [Hjälp om Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
 | [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
 
 ## Användbara resurser
