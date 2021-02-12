@@ -4,7 +4,7 @@ seo-title: Hjälp om Adobe Digital Rights Management
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De doku
 | [Hjälp om Primetime-programmering](/help/programming/home.md) | Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter. |
 | [Hjälp om migrering och konvertering av Primetime](/help/migration-guides/home.md) | Beskriver konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generations programsvit. |
 | [Referensimplementering](/help/android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
-| [Hjälp om Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
+| [Hjälp om Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
 
