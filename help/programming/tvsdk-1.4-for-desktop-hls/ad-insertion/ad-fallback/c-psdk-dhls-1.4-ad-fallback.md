@@ -5,9 +5,9 @@ seo-title: Annonsersättning för VAST- och VMAP-annonser
 title: Annonsersättning för VAST- och VMAP-annonser
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ ht-degree: 0%
 För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 
 I specifikationen VAST/Digital Video Multiple Ad Playlist (VMAP) anges att för annonser där VAST-återgång är aktiverad, utlöser tomma annonser automatiskt användningen av reservannonser. När en VAST-annons är tom söker TVSDK efter en giltig ersättning för HLS-medietyp bland reservannonserna. När en VAST-annons i en wrapper har en ogiltig medietyp hanterar TVSDK den här annonsen som tom. Du kan konfigurera om TVSDK ska göra samma sak för annonser som är infogade i en VMAP. Mer information om funktionen VAST `fallbackOnNoAd` finns i [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
-
-Primetime-annonsinfogningen underhåller en uppsättning prioriteringar som gör att den kan välja mellan olika medietyper i samma VAST/VMAP-svar. Mer information om den här prioriteringslistan och hur du ändrar den finns i [Översikt över CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Definiera reservannonsbeteenden för VMAP-textbundna annonser {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
