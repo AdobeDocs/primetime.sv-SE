@@ -2,7 +2,7 @@
 title: Versionsinformation om PTAI 20.12.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -22,9 +22,9 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Innehåller en snabbkorrigering som åtgärdar intermittenta klientanslutningsproblem (5xx) i Primetime Ad Insertion som uppstod 30 november 2020.
 
-### Förbättringar och korrigeringar i tidigare versioner
+## Förbättringar och korrigeringar i tidigare versioner
 
-#### Version 20.11.1
+### Version 20.11.1
 
 **När:** Torsdag den 5 november 2020 från kl. 02.00 till kl. 05.00 Eastern Time
 
@@ -32,7 +32,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Underhållsuppdateringar.
 
-#### Version 20.10.2
+### Version 20.10.2
 
 **När:** torsdag den 29 oktober 2020 från kl. 12.01 till kl. 06.00 Eastern Time
 
@@ -40,7 +40,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Underhållsuppdateringar.
 
-#### Version 20.10.1
+### Version 20.10.1
 
 **När:** tisdag den 13 oktober 2020 från 03:00 till 07:00 Eastern Time
 
@@ -48,7 +48,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Underhållsuppdateringar.
 
-#### Version 20.9.3
+### Version 20.9.3
 
 **När:** onsdag den 30 september 2020 kl. 3:30 till 18:30 Eastern Time
 
@@ -56,7 +56,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 * Bootstrap API-parameter `ptparallelstream` har lagts till. Detta gör att kunder med spelare som begär CMAF-demuxade ljud- eller videoströmmar parallellt kan säkerställa att annonserna i ljud- och videospår är enhetliga. Ange parametervärdet som true om du vill aktivera den här funktionen eller utelämna om du vill inaktivera den.
 
-#### Version 20.9.2
+### Version 20.9.2
 
 **När:** tisdag den 15 september 2020 från kl. 3:30 till kl. 18:30 (östtid)
 
@@ -71,7 +71,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
    >
    >Den här tidsgränsen gäller endast för annonsförfrågningar, inte för annonsförfrågningar.
 
-#### Version 20.9.1
+### Version 20.9.1
 
 **När:** tisdag den 1 september 2020 mellan kl. 3:30 och kl. 19:30 Eastern Time
 
@@ -79,7 +79,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 * Korrigerade problemet för kunder som använde HLS/CMAF, där EXT-X-MAP ibland saknade CDN-token eller EXT-X-MAP-taggar som ibland felaktigt togs bort från DVR-fönstret.
 
-#### Version 20.8.4
+### Version 20.8.4
 
 **När:** onsdag den 19 augusti 2020 från 03:30 till 07:30 Eastern Time
 
@@ -87,7 +87,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 Underhållsuppdateringar.
 
-#### Version 20.8.1
+### Version 20.8.1
 
 **När:** tisdag den 4 augusti 2020 mellan kl. 3:00 och kl. 18:00 Eastern Time
 
@@ -95,7 +95,7 @@ Underhållsuppdateringar.
 
 Underhållsuppdateringar.
 
-#### Version 20.7.1
+### Version 20.7.1
 
 **När:** Torsdag den 9 juli 2020 från 03:00 till 05:00 Eastern Time
 
@@ -109,7 +109,7 @@ Underhållsuppdateringar.
 
 * Förbättrad SSAI Console-kontrollpanel för sessionsstatistik
 
-#### Version 20.6.2
+### Version 20.6.2
 
 **När:** torsdagen den 18 juni 2020 från 03:00 till 04:00 Eastern Time
 
@@ -117,7 +117,7 @@ Underhållsuppdateringar.
 
 Förbättrad synkronisering av strömmar för videoklipp som kräver millisekundprecision. Kontakta Adobe Support om du vill aktivera millisekundprecision för `#EXT-X-PROGRAM-DATE-TIME tags`.
 
-#### Version 20.6.1
+### Version 20.6.1
 
 **När:** tisdag den 2 juni 2020 från 03:00 till 05:00 Eastern Time
 
@@ -135,7 +135,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Korrigerade ett problem där EXT-X-DISCONTINUITY-taggar togs bort från spellistans överkant när annonser växlades tillbaka till innehåll. Kontakta supporten för Adobe för att aktivera den här korrigeringen.
 
-#### Version 20.5.1
+### Version 20.5.1
 
 **När:** tisdag den 5 maj 2020 från 04:00 till 05:00 Eastern Time
 
@@ -145,7 +145,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Underhållsuppdateringar.
 
-#### Version 20.3.4
+### Version 20.3.4
 
 **När:** onsdag den 1 april 2020 från 03:00 till 04:00 Eastern Time
 
@@ -153,7 +153,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Säkerhetsuppdateringar.
 
-#### Version 20.3.3
+### Version 20.3.3
 
 **När:** torsdag den 26 mars 2020 från 03:00 till 04:00 Eastern Time
 
@@ -163,7 +163,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Korrigerade ett problem med CMAF/demuxed-ljudströmmar, där EXT-X-MEDIA-SEQUENCE-nummer i vissa scenarier skulle öka felaktigt.
 
-#### Version 20.3.2
+### Version 20.3.2
 
 **När:** onsdag den 11 mars 2020 från 05:30 till 07:00 Eastern Time
 
@@ -171,7 +171,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Underhållsuppdateringar.
 
-#### Version 20.3.1
+### Version 20.3.1
 
 **När:** torsdag den 5 mars 2020 från 02:30 till 04:30 Eastern Time
 
@@ -183,14 +183,14 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Säkerhets- och underhållsåtgärder.
 
-#### Version 20.2.1
+### Version 20.2.1
 
 **När:** torsdag den 13 februari 2020 från 04:30 till 05:30 Eastern Time
 
 * Stöd för sammanslagning av annonsmaterial som innehåller flera strömmar med enbart ljud baserat på språk/kodek/bithastighet.
 * Mindre prestandaförbättringar och underhållsuppdateringar.
 
-#### Version 20.1.3
+### Version 20.1.3
 
 **När:** tisdag den 28 januari 2020 från kl. 2:00 till kl. 03:00 Eastern Time
 
@@ -204,13 +204,13 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
 
-#### Version 20.1.2 (programfix)
+### Version 20.1.2 (programfix)
 
 **När:** Måndag den 20 januari 2020 från 02:00 till 03:00 Eastern Time
 
 * Underhållsuppdateringar.
 
-#### Version 20.1.1
+### Version 20.1.1
 
 **När:** onsdag den 15 januari 2020 från 04:00 till 05:00 Eastern Time
 
