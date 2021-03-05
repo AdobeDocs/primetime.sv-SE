@@ -4,9 +4,9 @@ seo-title: Versionsinformation för Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,13 @@ Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas
 
 Versionen innehåller stöd för infogning/synkronisering av EXT-X-IMAGE-STREAM-INF-strömmar i HLS-strömmar. Funktionen aktiveras via en konfiguration på serversidan. Kontakta din tekniska kontorepresentant för att aktivera funktionen.
 
-## Korrigeringar i TVSDK 3.12 Android
+## Korrigeringar i TVSDK 3.13 Android
 
-Versionen fokuserade på att uppdatera Primetime Reference-programmets gråskaleversion till version 5.6.4.
+Den här versionen innehåller en lösning på problemet med frysning av DRM-strömmen på Widewin eller visning av svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
 
-Mer information om den aktuella versionen för [Android](../release-notes/tvsdk-3x-android.md) finns här.
+Du löser problemet genom att ange API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` för de angivna Fire TV-enheterna innan du påbörjar uppspelningen. Standardvärdet är false.
+
+Mer information finns i [versionsinformationen för TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
 ## Förbättringar och korrigeringar i versionsinformation för TVSDK 3.12 iOS
 
