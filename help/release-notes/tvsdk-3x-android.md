@@ -1,24 +1,24 @@
 ---
-title: Versionsinformation om TVSDK 3.12 för Android
-seo-title: Versionsinformation om TVSDK 3.12 för Android
-description: Versionsinformation för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12
-seo-description: Versionsinformation för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12
+title: Versionsinformation om TVSDK 3.13 för Android
+seo-title: Versionsinformation om TVSDK 3.13 för Android
+description: Versionsinformation för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13
+seo-description: Versionsinformation för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '5418'
+source-wordcount: '5471'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om TVSDK 3.12 för Android {#tvsdk-for-android-release-notes}
+# Versionsinformation för TVSDK 3.13 för Android {#tvsdk-for-android-release-notes}
 
-Versionsinformationen för TVSDK 3.12 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.12.
+Versionsinformationen för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13.
 
 Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distribution. I den medföljande README.md-filen beskrivs hur du skapar referensspelaren.
 
@@ -34,6 +34,14 @@ TVSDK för Android har många prestandaförbättringar jämfört med tidigare ve
 
 Den omfattande uppsättningen funktioner som stöds och inte stöds finns i [Funktionsmatris](#feature-matrix) i versionsinformationen.
 
+## Android TVSDK 3.13
+
+DRM-strömmen i stora volymer fryser eller visar svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
+
+Du löser problemet genom att ange API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` för de angivna Fire TV-enheterna innan du påbörjar uppspelningen. Standardvärdet är false.
+
+### Nya funktioner och förbättringar i tidigare versioner
+
 ## Android TVSDK 3.12
 
 Primetime Reference-programmets gråskaleversion har nu uppdaterats till version 5.6.4.
@@ -41,8 +49,6 @@ Primetime Reference-programmets gråskaleversion har nu uppdaterats till version
 Följ instruktionerna från Viktigt-filen som finns i TVSDK zip på `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md` för att installera och köra referensappen med Android Studio.
 
 De vanligaste kundproblemen som har åtgärdats i den aktuella versionen beskrivs i avsnittet [lösta problem](#resolved-issues).
-
-### Nya funktioner och förbättringar i tidigare versioner
 
 **Android TVSDK 3.11**
 
@@ -192,7 +198,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **Säker annonsinläsning över HTTPS**
 
-   Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
+   Adobe Primetime har ett alternativ för att begära att primetime-annonsservern och CRS ska ringa via https.
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
@@ -251,7 +257,7 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
 Android TVSDK v2.5.2 innehåller viktiga felkorrigeringar och några API-ändringar.
 
-**Version 1.5.1**
+**Version 2.5.1**
 
 De viktiga nya funktionerna i Android 2.5.1.
 
@@ -296,7 +302,7 @@ När TVSDK öppnar en anslutning uppmanas servern att ange en *keep-alive*-anslu
 
    * **Integrering med direkt fakturering -** Detta skickar faktureringsmätningar till Adobe Analytics, som certifieras av Adobe Primetime för strömmar som används av kunden.
 
-   TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+   TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
 
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
 
