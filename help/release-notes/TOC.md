@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 translation-type: tm+mt
-source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
    + [Versionsinformation om TVSDK 3.12 för iOS](tvsdk-3x-ios.md)
    + [Versionsinformation om TVSDK 1.4 för iOS](tvsdk-1-4-ios.md)
 + TVSDK för Android {#tvsdk-android}
-   + [Versionsinformation om TVSDK 3.12 för Android](tvsdk-3x-android.md)
+   + [Versionsinformation om TVSDK 3.13 för Android](tvsdk-3x-android.md)
    + [Versionsinformation om TVSDK 2.7 för Android](tvsdk-27-android.md)
    + [Versionsinformation om TVSDK 2.4.1 för Android](tvsdk-24-android.md)
    + [Versionsinformation om TVSDK 1.4 för Android](tvsdk-1-4-android.md)
