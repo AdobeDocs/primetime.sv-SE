@@ -1,13 +1,10 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
-seo-description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
-seo-title: Arbeta med cookies
 title: Arbeta med cookies
-uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
