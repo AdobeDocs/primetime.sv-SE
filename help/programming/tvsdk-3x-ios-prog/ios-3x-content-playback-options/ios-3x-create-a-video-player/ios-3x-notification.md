@@ -1,13 +1,10 @@
 ---
 description: Spelaren kan lyssna efter en rad händelser som anger spelarens tillstånd.
-seo-description: Spelaren kan lyssna efter en rad händelser som anger spelarens tillstånd.
-seo-title: Konfigurera meddelanden
 title: Konfigurera meddelanden
-uuid: b178b2eb-da40-456b-997a-46ae18d635fa
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -165,7 +162,7 @@ Om `PTMediaPlayer` är en egenskap för klientspelaren representerar `self.playe
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
-   <td colname="2"> <p>En prenumerationstagg identifieras i bakgrundsmanifestet och en ny PTTimedMetadata <span class="codeph">-instans förbereds från den.</span> </p> </td> 
+   <td colname="2"> <p>En prenumerationstagg identifieras i bakgrundsmanifestet och en ny PTTimedMetadata </span>-instans förbereds från den.<span class="codeph"> </span></p> </td> 
   </tr> 
  </tbody> 
 </table>
