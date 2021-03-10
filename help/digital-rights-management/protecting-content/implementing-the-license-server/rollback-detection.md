@@ -1,9 +1,9 @@
 ---
-seo-title: Återställningsigenkänning
 title: Återställningsigenkänning
-uuid: ec124bac-a1d7-45be-bf09-a99d5eec5042
+description: Återställningsigenkänning
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
