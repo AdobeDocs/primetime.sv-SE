@@ -1,17 +1,13 @@
 ---
 title: Versionsinformation om TVSDK 1.4 för Android
-seo-title: Versionsinformation om TVSDK 1.4 för Android
 description: Versionsinformation om TVSDK 1.4 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 1.4.
-seo-description: Versionsinformation om TVSDK 1.4 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 1.4.
-uuid: 8bd8ee42-7a1b-4c14-aad9-22804743e505
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '7830'
+source-wordcount: '7802'
 ht-degree: 0%
 
 ---
@@ -67,7 +63,7 @@ Inga nya funktioner.
    public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
    ```
 
-   Detta bör returnera en array med PlacementOpportunityDetector. Nu kan du registrera flera projektidentifierare. För till exempel funktionen för tidig annons krävdes två Detectors för säljprojekt - en för annonsinfogning och en för tidig avslutning av annonsen. Du behöver bara implementera den här nya funktionen om du har implementerat en egen AdvertisingFactory (och inte använder DefaultAdvertisingfactory). För att få fram det befintliga beteendet måste du skapa en enda Opportunity Detector, som i funktionen createOpportunityDetector(), som placeras i en array och returneras:
+   Detta bör returnera en array med PlacementOpportunityDetector. Nu kan du registrera flera projektidentifierare. För till exempel funktionen för tidig annons krävdes två identifierare för säljprojekt - en för annonsinfogning och en för tidig avslutning av annonsen. Du behöver bara implementera den här nya funktionen om du har implementerat en egen AdvertisingFactory (och inte använder DefaultAdvertisingfactory). För att få fram det befintliga beteendet måste du skapa en enda Opportunity Detector, som i funktionen createOpportunityDetector(), som placeras i en array och returneras:
 
    ```
    public class MyAdvertisingFactory extends AdvertisingFactory {  
@@ -234,7 +230,7 @@ TVSDK 1.4.43 har certifierats med Android-enheter som har Android 6.0.1/ 7.0 och
 
 * Biljett nr 33902 - Säker annonsleverans via HTTPS
 
-   * Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
+   * Adobe Primetime har ett alternativ för att begära att primetime-annonsservern och CRS ska ringa via https.
 
 * Biljett nr 34493 - Bluetooth-ljudfördröjning
 
@@ -545,7 +541,7 @@ Problemet löstes genom att den kodade bildrutefrekvensen användes för beslut 
 * Zendesk #2231 - Ett fel returnerades från hämtning av manifestet som inte är tillgängligt i MediaPlayerNotification
 Problemet löstes genom att manifestets svarstext inkluderades när ett tolkningsfel uppstod.
 
-* Zendesk #17703 - VideoEngineView förhindrar inte skärmbilder under videouppspelning
+* Zendesk #17703 - VideoEngineView förhindrar inte skärmdumpar under videouppspelning
 Metoden setSecure har varit tillgänglig sedan API 17, men eftersom API 17 omfattar 4.2, 4.2.1 och 4.2.2 är det inte känt vilken som kommer att generera ett undantag eller om den är enhetsspecifik. Problemet löstes genom att VideoEngineView.setSecure kapslades in i try catch-satsen.
 
 * Zendesk #17919 - Innehållssökning orsakar pulsslagsfel
