@@ -1,9 +1,9 @@
 ---
-seo-title: Genererar licenser
 title: Genererar licenser
-uuid: 242d5567-f609-4781-a8a6-2f3d78471344
+description: Genererar licenser
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
