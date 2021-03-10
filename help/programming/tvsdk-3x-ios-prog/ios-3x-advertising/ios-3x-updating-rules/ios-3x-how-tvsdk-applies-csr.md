@@ -1,14 +1,12 @@
 ---
-description: 'null'
-keywords: creative selection rules;AdobeTVSDKConfig
-seo-description: 'null'
-seo-title: Använd regler för kreativt urval
+keywords: regler för kreativt urval;AdobeTVSDKConfig
 title: Använd regler för kreativt urval
-uuid: 2f009776-201c-418e-aa8f-cb409d0046d8
+description: Använd regler för kreativt urval
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
