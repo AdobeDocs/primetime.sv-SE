@@ -1,16 +1,12 @@
 ---
 title: Versionsinformation om TVSDK 2.7 för Android
-seo-title: Versionsinformation om TVSDK 2.7 för Android
 description: Versionsinformationen för TVSDK 2.7 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 2.7
-seo-description: Versionsinformationen för TVSDK 2.7 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 2.7
-uuid: 4013b97d-29f9-435b-8772-b19df7054282
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '4123'
+source-wordcount: '4095'
 ht-degree: 0%
 
 ---
@@ -73,7 +69,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **Säker annonsinläsning över HTTPS**
 
-   Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
+   Adobe Primetime har ett alternativ för att begära att primetime-annonsservern och CRS ska ringa via https.
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
@@ -121,7 +117,7 @@ Android TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
 Android TVSDK v2.5.2 innehåller viktiga felkorrigeringar och några API-ändringar.
 
-**Version 1.5.1**
+**Version 2.5.1**
 
 De viktiga nya funktionerna i Android 2.5.1.
 
@@ -144,7 +140,7 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
    * **Trick play med adaptiv bithastighet (ABR) -** Den här funktionen gör att TVSDK kan växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
    * **Smidigare tricks -** De här förbättringarna förbättrar användarupplevelsen:
 
-          * Anpassad bithastighet och bildrutehastighet vid uppspelning, baserat på bandbredd och buffertprofil
+          * Anpassad bithastighet och bildrutefrekvensval under trick play, baserat på bandbredd och buffertprofil
           * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
       
 * **Skydd av innehåll**
@@ -154,7 +150,7 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och undersegme
 * **Stöd för arbetsflöden**
 
    * **Integrering med direkt fakturering -** Detta skickar faktureringsmätningar till Adobe Analytics, som certifieras av Adobe Primetime för strömmar som används av kunden.
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Se exemplet på referensspelaren om du vill inaktivera den här funktionen.
    * **Förbättrat stöd för växling vid fel -** Ytterligare strategier som implementeras för att fortsätta uppspelningen utan avbrott, trots fel i värdservrar, spellistfiler och segment.
 
 * **Reklam**
