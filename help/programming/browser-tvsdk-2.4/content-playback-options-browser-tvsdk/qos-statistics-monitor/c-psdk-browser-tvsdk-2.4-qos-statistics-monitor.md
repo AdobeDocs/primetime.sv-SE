@@ -1,13 +1,10 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. Webbläsarens TVSDK innehåller detaljerad statistik om uppspelning, buffring och enheter.
-seo-description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. Webbläsarens TVSDK innehåller detaljerad statistik om uppspelning, buffring och enheter.
-seo-title: Kvalitetsstatistik för tjänster
 title: Kvalitetsstatistik för tjänster
-uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '141'
 ht-degree: 1%
 
 ---
