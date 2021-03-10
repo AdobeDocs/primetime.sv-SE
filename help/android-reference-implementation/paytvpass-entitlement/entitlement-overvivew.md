@@ -1,13 +1,10 @@
 ---
 description: Entitlement Manager är den funktionshanterare som stöder implementeringen av Primetime-autentisering.
-seo-description: Entitlement Manager är den funktionshanterare som stöder implementeringen av Primetime-autentisering.
-seo-title: Tillståndshanteraren - översikt
 title: Tillståndshanteraren - översikt
-uuid: b33dfae3-a132-4215-9992-80cbf4c87a61
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -39,7 +36,7 @@ Under autentiseringen med Primetime-autentisering kan två nya aktiviteter, `Mvp
 
 ### Inloggningsknapp
 
-Referensimplementeringens huvudaktivitet, `CatalogActivity`, innehåller en ny inloggningsknapp i åtgärdsfältet. Med knappen Logga in kan användaren initiera autentisering med Primetime-autentisering. Dessutom kan användaren initiera autentisering genom att välja en skyddad video för uppspelning. Inloggningsknappens ikon och text ändras beroende på användarens autentiseringsstatus, och `CatalogActivity` innehåller kod för att uppdatera knappens ikon och text när sidan uppdateras. Det gör du genom att anropa `CatalogActivity` när &lt;a0/> startas för att uppdatera användarens autentiseringsstatus.`EntitlementManager.checkAuthentication()`
+Referensimplementeringens huvudaktivitet, `CatalogActivity`, innehåller en ny inloggningsknapp i åtgärdsfältet. Med knappen Logga in kan användaren initiera autentisering med Primetime-autentisering. Dessutom kan användaren initiera autentisering genom att välja en skyddad video för uppspelning. Inloggningsknappens ikon och text ändras beroende på användarens autentiseringsstatus, och `CatalogActivity` innehåller kod för att uppdatera knappens ikon och text när sidan uppdateras. Det gör du genom att anropa `CatalogActivity` när `EntitlementManager.checkAuthentication()` startas för att uppdatera användarens autentiseringsstatus.
 
 ### Innehållsberättigande
 
