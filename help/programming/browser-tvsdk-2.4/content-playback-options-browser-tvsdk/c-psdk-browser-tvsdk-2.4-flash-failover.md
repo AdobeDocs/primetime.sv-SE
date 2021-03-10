@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din Primetime-spelare) som du kan integrera med andra Primetime-komponenter.
-seo-description: Browser TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din Primetime-spelare) som du kan integrera med andra Primetime-komponenter.
-seo-title: 'null'
-title: 'null'
-uuid: 57b35a5f-87f8-41a2-ad85-300b999dc30b
+title: Redundans för Flash
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
