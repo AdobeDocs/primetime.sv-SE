@@ -1,13 +1,10 @@
 ---
 description: Vanligtvis är alla Primetime DRM-licenser bundna till en unik enhet när de skapas. Denna bindning förhindrar att användare delar licenser mellan olika enheter utan behörighet. Förutom bindning per enhet ger Primetime DRM möjlighet att binda licenser till en enhetsdomän eller grupp av enheter.
-seo-description: Vanligtvis är alla Primetime DRM-licenser bundna till en unik enhet när de skapas. Denna bindning förhindrar att användare delar licenser mellan olika enheter utan behörighet. Förutom bindning per enhet ger Primetime DRM möjlighet att binda licenser till en enhetsdomän eller grupp av enheter.
-seo-title: Spela upp krypterat innehåll med domänstöd
 title: Spela upp krypterat innehåll med domänstöd
-uuid: 8854cc0f-9bfc-4833-82d7-a3f46ac88e06
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
