@@ -1,9 +1,9 @@
 ---
-seo-title: Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll
 title: Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll
-uuid: 3b1f938c-5c76-459e-a918-dfbec0fc2ff9
+description: Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
