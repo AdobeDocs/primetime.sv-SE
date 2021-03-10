@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
-seo-description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
-seo-title: Tidslinjeannonsklasser
 title: Tidslinjeannonsklasser
-uuid: df970e8f-4bf8-4367-9d70-42ebcb11c025
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -51,7 +48,7 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
-   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. 
+   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. 
     <pre>
       Representerar en kontinuerlig sekvens med annonser som delas upp i innehållet.
     </pre> </td> 
