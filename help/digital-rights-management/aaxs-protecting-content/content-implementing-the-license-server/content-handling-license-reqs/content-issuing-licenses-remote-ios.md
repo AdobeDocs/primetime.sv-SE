@@ -1,9 +1,9 @@
 ---
-seo-title: Utfärda licenser för fjärrnyckelleverans till iOS-klienter (kräver Adobe Primetime)
 title: Utfärda licenser för fjärrnyckelleverans till iOS-klienter (kräver Adobe Primetime)
-uuid: 43d88426-209f-4d31-a810-ea8d75f31da9
+description: Utfärda licenser för fjärrnyckelleverans till iOS-klienter (kräver Adobe Primetime)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
