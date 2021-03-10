@@ -1,13 +1,10 @@
 ---
 description: Du kan ange formatinformation för textningsspår med klassen TextFormat. Detta anger formatet för alla undertexter som visas av spelaren.
-seo-description: Du kan ange formatinformation för textningsspår med klassen TextFormat. Detta anger formatet för alla undertexter som visas av spelaren.
-seo-title: Styr textningsformat
 title: Styr textningsformat
-uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -169,7 +166,7 @@ public TextFormatBuilder(
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardstorlek </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR  </span> - Cirka 30 % större än mediet </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medium </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medel </li> 
       <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Bildtextens standardstorlek; samma som medium </li> 
      </ul> </p> </td> 
   </tr> 
