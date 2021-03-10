@@ -1,16 +1,12 @@
 ---
 title: Primetime Streaming Server-versioner
-seo-title: Primetime Streaming Server 1.x-versioner
 description: Nyheter i Primetime Streaming Server 1.3 och 1.4.
-seo-description: Nyheter i Primetime Streaming Server 1.3 och 1.4.
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -146,13 +142,13 @@ Flera prestandaförbättringar har lagts till i JIT-paketeringsfunktionerna i Pr
 
 **Programvarukrav**
 
-* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot (JVM). JDK krävs för JConsole-åtkomst till JMX API:er
+* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot-JVM). JDK krävs för JConsole-åtkomst till JMX API:er
 
 ### Installera och konfigurera Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
 **Installera direktuppspelningsserver**
 
-1. Hämta Java SE- och JDK-programvaran från [Oracle webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Hämta Java SE- och JDK-programmet från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
 2. Extrahera arkivfilen `Primetime- StreamingServer-1-4-0-b206-12042014.zip` för Adobe Primetime-Streaming Server 1.4 till hårddisken.
 
 **Starta Primetime Streaming Server**
@@ -223,7 +219,7 @@ Det här avsnittet gäller när Primetime Streaming Server inte används och ist
 
 **Programvarukrav**
 
-* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot (JVM). JDK krävs för JConsole-åtkomst till JMX API:er
+* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot-JVM). JDK krävs för JConsole-åtkomst till JMX API:er
 
 Systemkraven ovan gäller både origin-servern och Live Packager.
 
@@ -231,12 +227,12 @@ Systemkraven ovan gäller både origin-servern och Live Packager.
 
 **Installera Live Packager**
 
-1. Hämta Java SE- och JDK-programvaran från [Oracle webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Hämta Java SE- och JDK-programmet från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
 1. Extrahera arkivfilen `Primetime-LivePackager-1-4-0-b206-12042014.zip` för Adobe Primetime Live Packager 1.4 till hårddisken.
 
 **Installerar HTTP Origin Server**
 
-1. Hämta Java JRE och JDK från [Oracle webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Hämta Java JRE och JDK från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
 1. Extrahera arkivfilen `Primetime-HttpOrigin-1-4-0-b206-12042014.zip` för Adobe Primetime - HTTP Origin Server 1.4 till hårddisken.
 
 **Starta Live** PackagerKör följande kommando från paketerarens rotkatalog när du vill starta paketeraren:\
@@ -320,7 +316,7 @@ Om du vill avinstallera HTTP Origin Server stoppar du HTTP Origin Server och tar
 
 Så här installerar du Offline Packager:
 
-1. Hämta Java SE från [Oracle webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Hämta Java SE-programmet från [Oraclet](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
 1. Extrahera arkivfilen `Primetime- OfflinePackager-1-4-0-b206-12042014.zip` för Adobe Primetime Offline Packager 1.4 till hårddisken.
 
 Information om konfigurationen som är tillgänglig [här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) finns i dokumentet Primetime Offline Packager Getting Started.
