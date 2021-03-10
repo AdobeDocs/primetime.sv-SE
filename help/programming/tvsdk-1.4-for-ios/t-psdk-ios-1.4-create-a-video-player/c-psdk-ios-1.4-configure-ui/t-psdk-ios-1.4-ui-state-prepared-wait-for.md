@@ -1,13 +1,10 @@
 ---
 description: Innan du kan använda de flesta TVSDK-spelarmetoderna måste spelaren ha en giltig status.
-seo-description: Innan du kan använda de flesta TVSDK-spelarmetoderna måste spelaren ha en giltig status.
-seo-title: Vänta på ett giltigt tillstånd
 title: Vänta på ett giltigt tillstånd
-uuid: e13201d7-b217-4d01-bdb7-a71855e3500e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
