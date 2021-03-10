@@ -1,14 +1,11 @@
 ---
 description: Regeln normalize definierar en URL-omvandling som ska användas på en kreativ källwebbadress som hämtas från ett VAST/VMAP-svar.
-keywords: normalize rule;creative selection rules
-seo-description: Regeln normalize definierar en URL-omvandling som ska användas på en kreativ källwebbadress som hämtas från ett VAST/VMAP-svar.
-seo-title: Normalisera regler
+keywords: normalisera regel;regler för kreativt urval
 title: Normalisera regler
-uuid: e2a11466-41a3-44ba-abec-1a541df6c1a1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
