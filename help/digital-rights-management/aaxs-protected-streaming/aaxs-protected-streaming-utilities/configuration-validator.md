@@ -1,9 +1,9 @@
 ---
-seo-title: Konfigurationsvaliderare
 title: Konfigurationsvaliderare
-uuid: 60ebd35c-290a-4f08-9bd0-178903857149
+description: Konfigurationsvaliderare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
