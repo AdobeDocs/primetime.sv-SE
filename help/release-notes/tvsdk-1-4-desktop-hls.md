@@ -1,17 +1,13 @@
 ---
 title: Versionsinformation om TVSDK 1.4 för Desktop HLS
-seo-title: Versionsinformation om TVSDK 1.4 för Desktop HLS
 description: Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt eller ändrat, de lösta och kända problemen i TVSDK DHLS.
-seo-description: Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt eller ändrat, de lösta och kända problemen i TVSDK DHLS.
-uuid: 84da27b7-299b-478d-88f5-ef943f0a8321
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '5222'
+source-wordcount: '5196'
 ht-degree: 0%
 
 ---
@@ -34,7 +30,7 @@ Versionsinformationen för TVSDK for Desktop HLS beskriver vad som är nytt elle
 
 **1.4.30**
 
-* **Faktureringsmått**
+* **Faktureringsstatistik**
 
 För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 
@@ -231,7 +227,7 @@ Problemet löstes genom att TVSDK aktiverade att pinga rätt URL för felspårni
 
 Efter att ha fått ett 404-fel på vissa begäranden kan en krasch inträffa. Problemet har lösts genom att anslutningen inte stängs av medan svaret hanteras. Upplösningen ser till att VPAID-annonserna inte räknas felaktigt, så de släpps inte när de hämtas.
 
-* Zendesk #23621 - Nya försök misslyckas på 400 och 404
+* Zendesk #23621 - Försök igen misslyckas på 400 och 404
 
 **Obs**: För det här problemet krävs Flash Player 23 eller senare.
 
