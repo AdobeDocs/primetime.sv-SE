@@ -1,12 +1,10 @@
 ---
-description: 'null'
 keywords: setSecure;VideoEngineView
-seo-description: 'null'
-seo-title: Aktivera skärmfångst
 title: Aktivera skärmfångst
-uuid: f3d18729-e13e-47f9-b4b8-f93a2874ef16
+description: Aktivera skärmfångst
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
