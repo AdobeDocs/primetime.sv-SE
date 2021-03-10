@@ -1,9 +1,9 @@
 ---
-seo-title: Information om NATIVE_ERROR-meddelandet
 title: Information om NATIVE_ERROR-meddelandet
-uuid: 750ee0e2-15d4-4602-9574-94015a6e1b57
+description: Information om NATIVE_ERROR-meddelandet
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6888'
 ht-degree: 2%
@@ -27,7 +27,7 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
    <td colname="col1"><span class="codeph"> NATIVE_ERROR_CODE</span> </td> 
    <td colname="col2"> <p>Inbyggd felkod från AVE. </p> <p>Dessa koder representerar följande: 
      <ul id="ul_1F33D523DDFE4CE8B4F0DC279FF7E4F8"> 
-      <li id="li_07A2D9BEE6364935A61EF3BD4AB6DE27">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder för Flash Player </li> 
+      <li id="li_07A2D9BEE6364935A61EF3BD4AB6DE27">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder i Flash Player </li> 
       <li id="li_433BA22DE3504AEEB623598BB4F939FA">Videouppspelningsfel (-1 till 89) </li> 
       <li id="li_B347CB151DB94DE0A1DDEB1B33D2DABA">Kryptografifel (300 till 307) </li> 
      </ul> </p> </td> 
@@ -450,7 +450,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col3"> <p>Det här felet inträffar när innehållet har konfigurerats för att be klienterna autentisera innan licenserna hämtas. </p> 
     <ul id="ul_712D29B8B5A6401FB014C4A283918E32"> 
      <li id="li_2D56905EB50D4FDEAD69CA8EAE38AD1A">Distributörens programvara ska autentisera användaren och sedan hämta licensen igen. <p>Om tjänsten inte har för avsikt att använda autentisering loggar du identifieringen av det innehåll som orsakar felet. </p> </li> 
-     <li id="li_B3BCF899B8BE41C7A4F7CF84B0503483">Det här felet ska inte kräva eskalering, såvida inte innehållet ska konfigureras för att kräva autentisering. <p>I det här fallet bör du paketera om det felaktiga innehållet med rätt policy. Om innehållet är rätt paketerat finns mer information i Diagnostikpolicy/licensavvikelser. </p> </li> 
+     <li id="li_B3BCF899B8BE41C7A4F7CF84B0503483">Det här felet ska inte kräva eskalering, såvida inte innehållet inte ska konfigureras för att kräva autentisering. <p>I det här fallet bör du paketera om det felaktiga innehållet med rätt policy. Om innehållet är rätt paketerat finns mer information i Diagnostikpolicy/licensavvikelser. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -755,7 +755,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Åtgärden är inte möjlig på grund av ett filslutsvillkor (EOF). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> Avkodaren misslyckades vid körning. </td> 
   </tr> 
@@ -1035,7 +1035,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> HLS-uppspelning har inte aktiverats i Flash Player. Se AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Avkodaren tog emot ett felaktigt prov som inte kan avkodas. Det här är vanligtvis inget allvarligt fel, men det indikerar att det kan finnas fel i ljud/video. För många instanser av det här felet indikerar felaktig kodning eller felaktig fil. </td> 
   </tr> 
@@ -1135,7 +1135,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det finns ingen ljudmottagare i en intern datastruktur. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Det gick inte att öppna filen. </td> 
   </tr> 
@@ -1150,7 +1150,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det går inte att läsa från en fil. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Det uppstod ett fel vid analys av ID3-data. </td> 
   </tr> 
