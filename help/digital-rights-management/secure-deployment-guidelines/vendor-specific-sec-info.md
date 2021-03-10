@@ -1,13 +1,10 @@
 ---
 description: Operativsystem och programservrar ingår i Adobe Primetime DRM-lösning.
-seo-description: Operativsystem och programservrar ingår i Adobe Primetime DRM-lösning.
-seo-title: Leverantörsspecifik säkerhetsinformation
 title: Leverantörsspecifik säkerhetsinformation
-uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
