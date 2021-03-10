@@ -1,13 +1,10 @@
 ---
 description: För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste du konfigurera Adobe Cert- och ExpressPlay-konton med din Adobe-representant.
-seo-description: För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste du konfigurera Adobe Cert- och ExpressPlay-konton med din Adobe-representant.
-seo-title: Skaffa licenser (konton, etc.)
 title: Skaffa licenser (konton, etc.)
-uuid: 51b95676-2121-4d8b-8756-9fd097185a13
 translation-type: tm+mt
-source-git-commit: 9792aff8586c46aabb5bfb70864cfe98c28e602d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
