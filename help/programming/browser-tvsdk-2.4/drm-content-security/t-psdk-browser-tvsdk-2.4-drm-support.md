@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK stöder flera DRM-system (Digital Rights Management) med W3C-specifikationen för krypterade medietillägg (EME). DRM-funktionerna görs tillgängliga för programmet via ett enhetligt API och arbetsflöde.
-seo-description: Browser TVSDK stöder flera DRM-system (Digital Rights Management) med W3C-specifikationen för krypterade medietillägg (EME). DRM-funktionerna görs tillgängliga för programmet via ett enhetligt API och arbetsflöde.
-seo-title: DRM-system som stöds
 title: DRM-system som stöds
-uuid: 7dd30633-ab28-4fca-a662-c84e95f6ef16
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
