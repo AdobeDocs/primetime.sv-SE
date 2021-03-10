@@ -1,13 +1,10 @@
 ---
 description: När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelsetyp att avlyssna och namnet på återanropet. När en händelse inträffar anropar webbläsaren TVSDK ditt återanrop och skickar ett händelseobjekt av lämplig typ till den.
-seo-description: När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelsetyp att avlyssna och namnet på återanropet. När en händelse inträffar anropar webbläsaren TVSDK ditt återanrop och skickar ett händelseobjekt av lämplig typ till den.
-seo-title: Händelsetyper och klasser för återanrop
 title: Händelsetyper och klasser för återanrop
-uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
