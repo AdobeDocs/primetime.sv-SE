@@ -1,9 +1,9 @@
 ---
-seo-title: Inköp av innehåll
 title: Inköp av innehåll
-uuid: f3d8b4ef-bc45-4c2d-962b-638512ca0ef3
+description: Inköp av innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
