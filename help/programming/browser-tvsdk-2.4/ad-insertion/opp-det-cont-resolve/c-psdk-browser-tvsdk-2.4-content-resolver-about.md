@@ -1,13 +1,10 @@
 ---
 description: Webbläsarens TVSDK innehåller standardgeneratorer för affärsmöjligheter och innehållslösningar som placerar annonser i tidslinjen, och dessa generatorer och lösare är baserade på taggar som inte är standard i manifestet. Programmet kan behöva ändra tidslinjen baserat på de möjligheter som identifieras i manifestet.
-seo-description: Webbläsarens TVSDK innehåller standardgeneratorer för affärsmöjligheter och innehållslösningar som placerar annonser i tidslinjen, och dessa generatorer och lösare är baserade på taggar som inte är standard i manifestet. Programmet kan behöva ändra tidslinjen baserat på de möjligheter som identifieras i manifestet.
-seo-title: Generatorer för affärsmöjligheter och lösningar för innehåll
 title: Generatorer för affärsmöjligheter och lösningar för innehåll
-uuid: e462ad89-1609-4efa-aa67-cfd04f045927
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
