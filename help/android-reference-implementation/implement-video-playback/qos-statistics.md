@@ -1,13 +1,10 @@
 ---
 description: Du kan ställa in spelaren så att den läser uppspelnings- och enhetsstatistik från QoSProvider så ofta som behövs.
-seo-description: Du kan ställa in spelaren så att den läser uppspelnings- och enhetsstatistik från QoSProvider så ofta som behövs.
-seo-title: Visa QoS-uppspelning och enhetsstatistik
 title: Visa QoS-uppspelning och enhetsstatistik
-uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
