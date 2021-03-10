@@ -1,13 +1,10 @@
 ---
 description: Du kan lyssna efter meddelanden och lägga till egna meddelanden i meddelandehistoriken.
-seo-description: Du kan lyssna efter meddelanden och lägga till egna meddelanden i meddelandehistoriken.
-seo-title: Konfigurera meddelandesystemet
 title: Konfigurera meddelandesystemet
-uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
