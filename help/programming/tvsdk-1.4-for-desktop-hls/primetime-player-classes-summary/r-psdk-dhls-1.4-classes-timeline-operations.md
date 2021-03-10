@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser är till hjälp när du utför åtgärder som påverkar tidslinjen.
-seo-description: Dessa klasser är till hjälp när du utför åtgärder som påverkar tidslinjen.
-seo-title: Klasser för tidslinjeåtgärder
 title: Klasser för tidslinjeåtgärder
-uuid: ecf0f27c-b2f2-46a9-b57c-1401f6ce934e
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
