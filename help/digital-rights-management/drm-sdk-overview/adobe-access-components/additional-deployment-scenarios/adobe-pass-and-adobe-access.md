@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Primetime-autentisering och Adobe Primetime DRM
 title: Adobe Primetime-autentisering och Adobe Primetime DRM
-uuid: 44fe3956-efb5-4fc5-97e2-37abb6554322
+description: Adobe Primetime-autentisering och Adobe Primetime DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
