@@ -1,13 +1,10 @@
 ---
 description: Du kan anpassa eller åsidosätta annonsbeteenden.
-seo-description: Du kan anpassa eller åsidosätta annonsbeteenden.
-seo-title: Konfigurera anpassad uppspelning
 title: Konfigurera anpassad uppspelning
-uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '159'
 ht-degree: 1%
 
 ---
