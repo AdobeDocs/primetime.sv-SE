@@ -1,13 +1,10 @@
 ---
 description: TVSDK Primetime Reference är en Android-applikation som byggts runt ramverken TVSDK och AVE.
-seo-description: TVSDK Primetime Reference är en Android-applikation som byggts runt ramverken TVSDK och AVE.
-seo-title: Bygg Primetimes referensimplementering
 title: Bygg Primetimes referensimplementering
-uuid: ab12660a-1563-49a4-82d9-1ab13f8a92be
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '216'
 ht-degree: 1%
 
 ---
