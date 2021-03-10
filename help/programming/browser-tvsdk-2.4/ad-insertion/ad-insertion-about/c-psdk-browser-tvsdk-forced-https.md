@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Säker annonsinläsning över HTTPS
 title: Säker annonsinläsning över HTTPS
-uuid: 10657f59-cfbf-4c75-9249-fc154952bc51
+description: Säker annonsinläsning över HTTPS
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
