@@ -1,13 +1,10 @@
 ---
 description: När DRM-metadata för en video är åtskilda från medieströmmen ska du autentisera innan uppspelningen börjar.
-seo-description: När DRM-metadata för en video är åtskilda från medieströmmen ska du autentisera innan uppspelningen börjar.
-seo-title: DRM-autentisering före uppspelning
 title: DRM-autentisering före uppspelning
-uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 1%
 
 ---
