@@ -1,13 +1,10 @@
 ---
 description: Primetime-spelaren stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Detta innebär att ditt program måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp.
-seo-description: Primetime-spelaren stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Detta innebär att ditt program måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp.
-seo-title: Skydd av DRM-innehåll
 title: Skydd av DRM-innehåll
-uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
