@@ -1,16 +1,13 @@
 ---
 title: Versionsinformation om DRM 5.3.1
-seo-title: Versionsinformation om DRM 5.3.1
 description: Versionsinformationen för DRM 5.3.1 beskriver de nya funktionerna och de kända problemen i DRM 5.3.1.
-seo-description: Versionsinformationen för DRM 5.3.1 beskriver de nya funktionerna och de kända problemen i DRM 5.3.1.
-uuid: bb61b79f-a5b3-42ed-8016-495b1ac99ea6
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -35,7 +32,7 @@ Nu kan alla begäranden (som kommer från en HTML5 CDM) dirigeras till en enda s
 
 Den här ändringen är bakåtkompatibel med andra plattformar än CDM, till exempel Flash Player, Android och iOS.
 
-* **RBOP-nedskalning -** Specifikt för HTML5-utrymmet, innehåller RBOP automatisk nedskalningsfunktion, där innehållet kommer att nedskalas till högsta möjliga upplösning om en bithastighet som överskrider den tillåtna bithastigheten som anges i DRM-principen. Om till exempel en 1080p-ström direktuppspelas till en klient som visar innehållet på en bildskärm som inte är HDCP-kompatibel, kan DRM-principen indikera att den maximala upplösningen ska vara 720p. Primetime DRM avkodar 1080p-strömmen och nedskalar den sedan till 720p innan den återges på skärmen. Om webbläsaren som spelar upp videon sedan dras över till en bildskärm som har stöd för HDCP, kommer Primetime DRM att avbryta nedskalningen av innehållet och tillåta uppspelning vid 1080.
+* **RBOP-nedskalning -** Specifikt för HTML5-utrymmet, innehåller RBOP automatisk nedskalningsfunktion, där innehållet skalas ned till högsta möjliga upplösning om en bithastighet som överskrider den tillåtna bithastigheten som anges i DRM-principen. Om till exempel en 1080p-ström direktuppspelas till en klient som visar innehållet på en bildskärm som inte är HDCP-kompatibel, kan DRM-principen indikera att den maximala upplösningen ska vara 720p. Primetime DRM avkodar 1080p-strömmen och nedskalar den sedan till 720p innan den återges på skärmen. Om webbläsaren som spelar upp videon sedan dras över till en bildskärm som har stöd för HDCP, kommer Primetime DRM att avbryta nedskalningen av innehållet och tillåta uppspelning vid 1080.
 
 ## Kända fel i version 5.3 {#known-issues}
 
