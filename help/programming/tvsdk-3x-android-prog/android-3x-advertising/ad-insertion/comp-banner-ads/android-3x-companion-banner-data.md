@@ -1,13 +1,10 @@
 ---
 description: Innehållet i en AdAsset beskriver en tilläggsbanderoll.
-seo-description: Innehållet i en AdAsset beskriver en tilläggsbanderoll.
-seo-title: Kompletterande banderolldata
 title: Kompletterande banderolldata
-uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
