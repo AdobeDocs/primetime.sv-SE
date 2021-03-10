@@ -1,9 +1,9 @@
 ---
-seo-title: Användning av kommandorad
 title: Användning av kommandorad
-uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
+description: Användning av kommandorad
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
