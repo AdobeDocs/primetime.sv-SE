@@ -1,13 +1,10 @@
 ---
 description: HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på den aktuella buffertnivån och den tillgängliga bandbredden.
-seo-description: HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på den aktuella buffertnivån och den tillgängliga bandbredden.
-seo-title: Adaptiva bithastigheter (ABR) för videokvalitet
 title: Adaptiva bithastigheter (ABR) för videokvalitet
-uuid: 87fd7d97-8d13-430d-a88e-bcbff8026679
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
