@@ -1,9 +1,9 @@
 ---
-seo-title: Förgenererande licenser
 title: Förgenererande licenser
-uuid: 31430753-11f1-4ce5-b402-cf4279119a05
+description: Förgenererande licenser
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Förgenererande licenser{#pre-generating-licenses}
 
-Om du vill förgenerera licenser använder du `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` för att hämta en instans av `LicenseFactory`. En autentiseringsuppgift för licensservern måste anges för att de licenser som genereras av den här fabriken ska kunna signeras. Den här klassen har stöd för generering av Leaf-licenser utan licenskedning samt Leaf- och Root-licenser med [Förbättrad licenskedning](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
+Om du vill förgenerera licenser använder du `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` för att hämta en instans av `LicenseFactory`. En autentiseringsuppgift för licensservern måste anges för att de licenser som skapas av den här fabriken ska kunna signeras. Den här klassen har stöd för generering av Leaf-licenser utan licenskedning samt Leaf- och Root-licenser med [Förbättrad licenskedning](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
 När en Leaf-licens genereras måste innehållets metadata anges med `initContentInfo()`. Om metadata innehåller flera principer, eller om du vill använda en profil som inte fanns i metadata, använder du `setSelectedPolicy()` för att ange vilken profil som ska användas för att generera licensen. Om du använder en principuppdateringslista för att spåra uppdateringar av profiler kan du tillhandahålla principuppdateringslistan till License Factory innan du initierar metadata med `setPolicyUpdateList()`.
 
