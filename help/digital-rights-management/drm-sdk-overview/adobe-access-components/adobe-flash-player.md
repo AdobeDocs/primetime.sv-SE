@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Flash Player
 title: Adobe Flash Player
-uuid: 838777c2-6d54-4b65-bad3-375f559a6b47
+description: Adobe Flash Player
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
