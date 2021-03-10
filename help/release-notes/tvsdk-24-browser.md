@@ -1,17 +1,13 @@
 ---
 title: Versionsinformation för Browser TVSDK 2.4
-seo-title: Versionsinformation för Browser TVSDK 2.4
 description: Versionsinformationen för Browser TVSDK 2.4 beskriver de nya funktionerna som stöds och inte stöds samt de kända problemen i Browser TVSDK 2.4.
-seo-description: Versionsinformationen för Browser TVSDK 2.4 beskriver de nya funktionerna som stöds och inte stöds samt de kända problemen i Browser TVSDK 2.4.
-uuid: 3a1eb1a5-0e72-4658-beeb-bca8816570e7
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6834'
+source-wordcount: '6812'
 ht-degree: 0%
 
 ---
@@ -101,7 +97,7 @@ Klassen AdobePSDK.ForceHttpsAdConfiguration.
 
 Den här uppdateringen innehåller korrigeringar för viktiga kundproblem. En lista finns i *Åtgärdade fel*.
 
-**Version 2.4.8**
+**Version 2.4.9**
 
 Följande förbättringar och tillägg finns i Browser TVSDK 2.4.8:
 
