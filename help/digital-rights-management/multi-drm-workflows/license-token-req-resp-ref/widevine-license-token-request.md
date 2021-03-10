@@ -1,13 +1,10 @@
 ---
 description: Gränssnittet för globala licenstoken tillhandahåller produktions- och testtjänster.
-seo-description: Gränssnittet för globala licenstoken tillhandahåller produktions- och testtjänster.
-seo-title: Tokenbegäran för Widewin-licens/svar
 title: Tokenbegäran för Widewin-licens/svar
-uuid: a3522422-7075-49a7-bc55-137ef84ee430
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 5%
 
 ---
@@ -250,7 +247,7 @@ Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder 
    <td> Värde för säkerhetsnivå saknas </td> 
   </tr> 
   <tr> 
-   <td> -7004 </td> 
+   <td> -7002 </td> 
    <td> Ogiltigt säkerhetsnivåvärde </td> 
   </tr> 
   <tr> 
