@@ -1,9 +1,9 @@
 ---
-seo-title: Exempel på en anpassad VOD-resurs
 title: Exempel på en anpassad VOD-resurs
-uuid: 599054c3-d6ef-4f85-9a0f-39c7e4f6ab24
+description: Exempel på en anpassad VOD-resurs
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
