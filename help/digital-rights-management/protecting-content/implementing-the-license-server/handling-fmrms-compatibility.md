@@ -1,13 +1,10 @@
 ---
 description: Hantera FMRMS-kompatibilitet
-seo-description: Hantera FMRMS-kompatibilitet
-seo-title: Uppgraderar klienter
 title: Uppgraderar klienter
-uuid: c32ee087-2edf-4d11-be36-e2b31f3769de
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
