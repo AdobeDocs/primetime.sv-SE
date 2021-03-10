@@ -1,13 +1,10 @@
 ---
 description: Medieströmmar kan innehålla ytterligare metadata i form av taggar i MPD-filen (Media Presentation Description), och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
-seo-description: Medieströmmar kan innehålla ytterligare metadata i form av taggar i MPD-filen (Media Presentation Description), och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
-seo-title: Egna taggar
 title: Egna taggar
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
