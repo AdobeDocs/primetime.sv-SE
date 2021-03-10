@@ -1,13 +1,10 @@
 ---
-seo-title: Hämta och konfigurera programvara som krävs
 title: Hämta och konfigurera programvara som krävs
 description: Installationsprocessen är enkel. Om du redan har JDK installerat på datorn kan du hoppa över det här steget, men tänk på att JDK, Eclipse IDE och OS måste vara kompatibla.
-seo-description: Installationsprocessen är enkel. Om du redan har JDK installerat på datorn kan du hoppa över det här steget, men tänk på att JDK, Eclipse IDE och OS måste vara kompatibla.
-uuid: ca29144f-8088-4c8d-93cf-aa59007da034
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
