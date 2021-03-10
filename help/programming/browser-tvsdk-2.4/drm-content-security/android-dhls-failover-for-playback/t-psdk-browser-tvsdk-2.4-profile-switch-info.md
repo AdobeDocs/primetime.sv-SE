@@ -1,13 +1,10 @@
 ---
 description: När mediespelaren byter sin aktuella profil till en ny profil kan du hämta information om växeln, bland annat när den växlades, information om bredd och höjd eller varför en annan bithastighet användes.
-seo-description: När mediespelaren byter sin aktuella profil till en ny profil kan du hämta information om växeln, bland annat när den växlades, information om bredd och höjd eller varför en annan bithastighet användes.
-seo-title: Hämta information om profilväxling
 title: Hämta information om profilväxling
-uuid: 0ff1aeac-882a-4209-b19f-1aa3141404d9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
