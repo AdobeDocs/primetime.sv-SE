@@ -1,9 +1,9 @@
 ---
-seo-title: Använd Adobe Media Server
 title: Använd Adobe Media Server
-uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
+description: Använd Adobe Media Server
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 3%
