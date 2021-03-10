@@ -1,13 +1,10 @@
 ---
 description: Paketera innehåll är processen att förbereda videomaterial för uppspelning på webben. Paketeringen innefattar att omvandla råvideo till manifestfiler och att eventuellt kryptera innehållet med olika DRM-lösningar för olika enheter och webbläsare.
-seo-description: Paketera innehåll är processen att förbereda videomaterial för uppspelning på webben. Paketeringen innefattar att omvandla råvideo till manifestfiler och att eventuellt kryptera innehållet med olika DRM-lösningar för olika enheter och webbläsare.
-seo-title: Paketera ditt innehåll
 title: Paketera ditt innehåll
-uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
