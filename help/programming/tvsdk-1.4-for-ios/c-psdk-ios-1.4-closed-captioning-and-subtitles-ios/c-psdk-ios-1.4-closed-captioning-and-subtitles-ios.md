@@ -1,13 +1,10 @@
 ---
 description: Undertexter och undertexter har vissa unika skillnader och du kan aktivera dem på olika sätt.
-seo-description: Undertexter och undertexter har vissa unika skillnader och du kan aktivera dem på olika sätt.
-seo-title: Undertexter och undertexter
 title: Undertexter och undertexter
-uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
