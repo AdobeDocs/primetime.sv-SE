@@ -1,9 +1,9 @@
 ---
-seo-title: Policyfil för korsdomän
 title: Policyfil för korsdomän
-uuid: fc05aa5e-6fbd-445f-a22a-f795d5a0b3ad
+description: Policyfil för korsdomän
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
