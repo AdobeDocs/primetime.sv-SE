@@ -1,13 +1,10 @@
 ---
 description: Webbläsarens TVSDK kan identifiera ändrad uppspelningsinformation i överordnad m3u8-manifest för direktuppspelning och uppdatera uppspelningsinformationen medan strömmen spelas upp. Webbläsarens TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från det överordnad manifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
-seo-description: Webbläsarens TVSDK kan identifiera ändrad uppspelningsinformation i överordnad m3u8-manifest för direktuppspelning och uppdatera uppspelningsinformationen medan strömmen spelas upp. Webbläsarens TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från det överordnad manifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
-seo-title: Live överordnad-manifest update
 title: Live överordnad-manifest update
-uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -27,7 +24,7 @@ Följande funktioner stöds:
 Alla följande villkor måste vara uppfyllda:
 
 * Strömmen är live.
-* Både tiden och taggen ändras.
+* Både tid och tagg ändras.
 * All återgivningsinformation är densamma (förutom att URL:er kan variera).
 * DRM-åtkomstinformationen är densamma.
 * Segment paketeras runt samma PTS och bildrutegränser i ett litet felintervall.
