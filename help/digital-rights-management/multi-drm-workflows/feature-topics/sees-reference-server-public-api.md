@@ -1,13 +1,10 @@
 ---
 description: Begäran om berättigande och svar skickas via en ömsesidigt autentiserad SSL-anslutning mellan licensservern och kundens tillståndstjänst.
-seo-description: Begäran om berättigande och svar skickas via en ömsesidigt autentiserad SSL-anslutning mellan licensservern och kundens tillståndstjänst.
-seo-title: SE Offentligt API
 title: SE Offentligt API
-uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
-source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
