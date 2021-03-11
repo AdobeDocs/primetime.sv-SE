@@ -1,9 +1,9 @@
 ---
-seo-title: Minsta klientversion
 title: Minsta klientversion
-uuid: f2b56cff-96fa-4954-a08a-9b3e78f496d6
+description: Minsta klientversion
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
