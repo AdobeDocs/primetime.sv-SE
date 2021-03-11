@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Kommandoradsanvändning för principhanteraren
 title: Kommandoradsanvändning för principhanteraren
-uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
+description: Kommandoradsanvändning för principhanteraren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
