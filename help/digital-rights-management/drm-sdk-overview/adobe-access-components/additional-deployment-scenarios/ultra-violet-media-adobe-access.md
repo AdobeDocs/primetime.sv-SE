@@ -1,9 +1,9 @@
 ---
-seo-title: UltraViolet media och Adobe Primetime DRM
 title: UltraViolet media och Adobe Primetime DRM
-uuid: 7076c0f9-e092-48e4-9118-8a414bd03c7a
+description: UltraViolet media och Adobe Primetime DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
