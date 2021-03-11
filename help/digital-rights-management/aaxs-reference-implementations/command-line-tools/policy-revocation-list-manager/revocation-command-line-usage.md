@@ -1,9 +1,9 @@
 ---
-seo-title: Användning av kommandorad
 title: Användning av kommandorad
-uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
+description: Användning av kommandorad
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issurName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som identifieras av <span class="codeph"> utfärdarnamn</span> och <span class="codeph"> serienummer</span> på det angivna datumet. <span class="codeph"> utfärdarnamn</span> måste följa 509-namnformatet (till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Ange serienummer i hexadecimal form. Ange spärrdatumet som <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd-h24:min:sek</span>, till exempel 2008-12-1 eller 2008-12-1-00:00:00 för midnatt den 1, 2008. Om återkallningsdatumet inte anges används det aktuella datumet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som identifieras av <span class="codeph"> utfärdarnamn</span> och <span class="codeph"> serienummer</span> på det angivna datumet. <span class="codeph">-utfärdarens namn</span> måste följa 509-namnformatet (till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Ange serienummer i hexadecimal form. Ange spärrdatumet som <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">ååå-mm-dd-h24:min:sek</span>, till exempel 2008-12-1 eller 2008-12-1-00:00:00 för midnatt den 1, 2008. Om återkallningsdatumet inte anges används det aktuella datumet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
