@@ -1,13 +1,10 @@
 ---
 description: På enheter som stöder GPU-acceleration (maskinvara) kan du använda ett flash.media.StageVideo-objekt för att bearbeta video på enhetens maskinvara. Tillgängligheten för StageVideo beror på vilka versioner och funktioner olika delar av systemet har, inklusive Flash Player, videomaskinvara, operativsystem, drivrutiner, webbläsare, nätverksanslutning och visningssammanhang.
-seo-description: På enheter som stöder GPU-acceleration (maskinvara) kan du använda ett flash.media.StageVideo-objekt för att bearbeta video på enhetens maskinvara. Tillgängligheten för StageVideo beror på vilka versioner och funktioner olika delar av systemet har, inklusive Flash Player, videomaskinvara, operativsystem, drivrutiner, webbläsare, nätverksanslutning och visningssammanhang.
-seo-title: StageVideo-funktioner och -begränsningar
 title: StageVideo-funktioner och -begränsningar
-uuid: 7556f30b-4b9f-4258-beb6-2a4ce8f05d1a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
