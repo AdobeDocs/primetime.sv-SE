@@ -1,13 +1,10 @@
 ---
 description: Om du vill göra undertexter tillgängliga för din klientspelare måste du aktivera dem. Användaren kan aktivera eller inaktivera undertexter och välja formatering.
-seo-description: Om du vill göra undertexter tillgängliga för din klientspelare måste du aktivera dem. Användaren kan aktivera eller inaktivera undertexter och välja formatering.
-seo-title: Visa undertexter
 title: Visa undertexter
-uuid: 209b34ca-f14e-499e-af5f-2d8c7b359ef8
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
