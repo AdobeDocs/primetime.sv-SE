@@ -1,13 +1,10 @@
 ---
 description: Med anpassade annonsmarkörer kan du skicka en uppsättning TimeRange-specifikationer som representerar tidslinjesegment till TVSDK.
-seo-description: Med anpassade annonsmarkörer kan du skicka en uppsättning TimeRange-specifikationer som representerar tidslinjesegment till TVSDK.
-seo-title: Klassen TimeRange
 title: Klassen TimeRange
-uuid: af3ce5e6-44b5-457f-a6e7-aa232defb91e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
