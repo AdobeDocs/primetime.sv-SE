@@ -1,9 +1,9 @@
 ---
-seo-title: Användningsregler
 title: Användningsregler
-uuid: 361d07b9-e4c8-47ab-8c45-a1de98c9fed7
+description: Användningsregler
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
