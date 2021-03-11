@@ -1,13 +1,10 @@
 ---
-seo-title: Externt CEK-arbetsflöde för AXS DRM
 title: Externt CEK-arbetsflöde för AXS DRM
 description: Det här arbetsflödet skiljer sig från de flesta befintliga DRM-system eftersom det inte kräver att något centralt arkiv eller CMS (Content Key Management System) används
-seo-description: Det här arbetsflödet skiljer sig från de flesta befintliga DRM-system eftersom det inte kräver att något centralt arkiv eller CMS (Content Key Management System) används
-uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
-source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
