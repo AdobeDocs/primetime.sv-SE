@@ -1,13 +1,10 @@
 ---
 description: Adobe Access Server för skyddad strömning kräver två typer av konfigurationsfiler, en global konfigurationsfil (flashaccess-global.xml) och en klientkonfigurationsfil för varje klientorganisation (flashaccess-tenant.xml).
-seo-description: Adobe Access Server för skyddad strömning kräver två typer av konfigurationsfiler, en global konfigurationsfil (flashaccess-global.xml) och en klientkonfigurationsfil för varje klientorganisation (flashaccess-tenant.xml).
-seo-title: Struktur för konfigurationskatalog
 title: Struktur för konfigurationskatalog
-uuid: c6cfc734-6b7c-4502-9bdb-c7aaca156e0e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
