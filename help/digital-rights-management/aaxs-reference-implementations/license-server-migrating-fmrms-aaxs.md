@@ -1,9 +1,9 @@
 ---
-seo-title: Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare
 title: Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare
-uuid: 05caeb39-0c62-4053-87a9-8e89030a188d
+description: Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
