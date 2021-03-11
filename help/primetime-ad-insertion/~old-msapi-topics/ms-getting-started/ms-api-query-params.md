@@ -1,13 +1,10 @@
 ---
 title: Frågeparametrar för Manifest-server
 description: Frågeparametrar talar om för manifestservern vilken typ av klient som skickade begäran och vad klienten vill att manifestservern ska göra. Vissa är obligatoriska och andra har särskilda godkända format eller värden.
-seo-title: Frågeparametrar för Manifest-server
-seo-description: Frågeparametrar talar om för manifestservern vilken typ av klient som skickade begäran och vad klienten vill att manifestservern ska göra. Vissa är obligatoriska och andra har särskilda godkända format eller värden.
-uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -38,7 +35,7 @@ Manifestservern känner igen följande parametrar. De bearbetas eller skickas, t
 | `ptcdn` | Lista över ett eller flera CDN:er som ska vara värd för omkodade resurser. Se [Multi CDN-stöd](/help/primetime-ad-insertion/~old-creative-repackaging-service/multi-cdn-supportt.md). | Nej (default=Akamai) | Exempel: Akamai, Level3, Limelight, Comcast |
 | `ptcueformat` | Namnet på det anpassade annonsreferenformatet som finns i M3U8. | Nej | DPISimple, DPIScte35, Elemental, NBC, NFL eller Turner |
 | `ptfailover` | Signalerar manifestservern för att identifiera primära strömmar och failover-strömmar som anges i den överordnad spellistan och för att behandla dem som osammanhängande uppsättningar. Detta underlättar redundans och förhindrar timingfel. (Endast för Apple HLS-enheter). Se [Underlätta växling av HLS-spelare](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/hls-switching-to-failover.md). | Nej | true |
-| `ptmulticall` | Om detta anges som sant, görs flera Auditude-annonser för FER. en för varje annonsbrytning. Om värdet är false eller om det inte finns något annonsanrop görs ett anrop till granskning för FER. | Nej | Boolean <br> **Obs**: Följande krav: <ul><li>`ptcueformat` parametern måste anges till nbc</li><li>parametern pttimeline ignoreras.</li></ul> |
+| `ptmulticall` | Om detta anges som sant, görs flera Auditude-annonser för FER. en för varje annonsbrytning. Om värdet är falskt eller saknas anropas en annons för granskning av FER. | Nej | Boolean <br> **Obs**: Följande krav: <ul><li>`ptcueformat` parametern måste anges till nbc</li><li>parametern pttimeline ignoreras.</li></ul> |
 | `ptplayer` | Spelare som gör begäran. | iOS/Safari | ios-mobileweb |
 | `ptrendition` | Automatiskt genererad genom annonsinfogning och används av Akamai. Lägg inte till eller ta bort. | Akamai Ad Scaler |  |
 | `pttagds` | Aktivera [EXT-X- DISCONTINUITY- SEQUENCE](https://tools.ietf.org/html/draft-pantos-http-live-streaming-19#section-4.3.3.3)-taggar | Nej | true - manifestservern innehåller en sekvenstagg före innehållet i varje m3u8-fil som skickas. om parametern inte finns eller inte är true, innehåller manifestservern ingen sekvenstagg. |
