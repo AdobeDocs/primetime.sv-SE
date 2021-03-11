@@ -1,9 +1,9 @@
 ---
-seo-title: Viktiga funktioner
 title: Viktiga funktioner
-uuid: b1bded0f-4e45-4ff8-a7ce-dac3d3ec0ab0
+description: Viktiga funktioner
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 0%
