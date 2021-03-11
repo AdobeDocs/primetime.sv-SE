@@ -1,13 +1,10 @@
 ---
 description: Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gränssnittet PlacementOpportunityDetector.
-seo-description: Du kan implementera egna affärsmöjlighetsdetektorer genom att implementera gränssnittet PlacementOpportunityDetector.
-seo-title: Implementera en anpassad affärsmöjlighetsdetektor
 title: Implementera en anpassad affärsmöjlighetsdetektor
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
