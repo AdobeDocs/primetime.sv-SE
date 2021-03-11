@@ -1,13 +1,10 @@
 ---
 description: Den här guiden innehåller information om hur du utvecklar videospelarprogram med TVSDK for Desktop HLS, som implementeras i ActionScript.
-seo-description: Den här guiden innehåller information om hur du utvecklar videospelarprogram med TVSDK for Desktop HLS, som implementeras i ActionScript.
-seo-title: Översikt
 title: Översikt
-uuid: 9752a239-690b-4b2b-aab1-1e82470d84d1
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
