@@ -1,13 +1,10 @@
 ---
 description: 'Gränssnittet com.adobe.mediacore.timeline.TimelineMarker innehåller nu en ny metod '
-seo-description: 'Gränssnittet com.adobe.mediacore.timeline.TimelineMarker innehåller nu en ny metod '
-seo-title: 'Uppgradera från 2.5.x Lazy Ad Resolving till 3.0.0 Lazy Ad Resolving (API/Workflow changes) '
 title: 'Uppgradera från 2.5.x Lazy Ad Resolving till 3.0.0 Lazy Ad Resolving (API/Workflow changes) '
-uuid: 5870ceb4-93a8-4c8b-b716-673396122644
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
