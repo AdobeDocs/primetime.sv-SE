@@ -1,13 +1,10 @@
 ---
-description: Händelser från webbläsarens TVSDK visar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, t.ex. att en video börjar spelas upp eller åtgärder som utförs implicit, t.ex. att en annons slutförs.
-seo-description: Händelser från webbläsarens TVSDK visar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, t.ex. att en video börjar spelas upp eller åtgärder som utförs implicit, t.ex. att en annons slutförs.
-seo-title: Lyssna efter händelser för Primetime Player
+description: Händelser från webbläsarens TVSDK anger spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, t.ex. att en video börjar spelas upp eller åtgärder som utförs implicit, t.ex. att en annons slutförs.
 title: Lyssna efter händelser för Primetime Player
-uuid: 7b7c28ac-22ae-46a3-bbeb-bef1b04baeb3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Översikt {#listen-for-primetime-player-events-overview}
 
-Händelser från webbläsarens TVSDK visar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, t.ex. att en video börjar spelas upp eller åtgärder som utförs implicit, t.ex. att en annons slutförs.
+Händelser från webbläsarens TVSDK anger spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, t.ex. att en video börjar spelas upp eller åtgärder som utförs implicit, t.ex. att en annons slutförs.
 
 Eftersom ditt program behöver svara på många av dessa händelser måste du implementera händelsehanteringsrutiner och registrera dessa rutiner med Browser TVSDK. Rutinerna anropar webbläsarens TVSDK-metoder för att svara korrekt.
 
