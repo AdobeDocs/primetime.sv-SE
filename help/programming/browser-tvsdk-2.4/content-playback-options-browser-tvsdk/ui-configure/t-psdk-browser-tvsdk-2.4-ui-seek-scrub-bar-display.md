@@ -1,13 +1,10 @@
 ---
 description: I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktuppspelning kan vara en uppspelningslista med glidfönster eller VOD-innehåll (video on demand).
-seo-description: I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktuppspelning kan vara en uppspelningslista med glidfönster eller VOD-innehåll (video on demand).
-seo-title: Hantera sökning när sökfältet används
 title: Hantera sökning när sökfältet används
-uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
