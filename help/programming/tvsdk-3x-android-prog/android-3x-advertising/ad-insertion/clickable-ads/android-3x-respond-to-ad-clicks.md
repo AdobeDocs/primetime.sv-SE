@@ -1,13 +1,10 @@
 ---
 description: När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
-seo-description: När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
-seo-title: Svara på klickningar på annonser
 title: Svara på klickningar på annonser
-uuid: abc5de2f-3ab0-4e00-908c-ea8b31387d4f
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
