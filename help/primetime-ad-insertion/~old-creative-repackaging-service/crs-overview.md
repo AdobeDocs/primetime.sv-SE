@@ -1,13 +1,10 @@
 ---
 description: Med den kreativa ompaketeringstjänsten (CRS) kan en annan typ av skribent spelas upp korrekt i HLS-strömmar. Manifestservern anropar CRS när en annons som inte är HLS påträffas.
-seo-description: Med den kreativa ompaketeringstjänsten (CRS) kan en annan typ av skribent spelas upp korrekt i HLS-strömmar. Manifestservern anropar CRS när en annons som inte är HLS påträffas.
-seo-title: Översikt över CRS
 title: Översikt över CRS
-uuid: 3ae75fa7-397f-47ba-8e3d-50543ca25458
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
