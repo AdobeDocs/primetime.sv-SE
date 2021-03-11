@@ -1,9 +1,9 @@
 ---
-seo-title: Hantera begäran om domänregistrering
 title: Hantera begäran om domänregistrering
-uuid: d92db6c2-5a16-41ea-a1aa-541c59780678
+description: Hantera begäran om domänregistrering
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
