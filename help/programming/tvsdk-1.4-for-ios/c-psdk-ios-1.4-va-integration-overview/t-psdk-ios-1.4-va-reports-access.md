@@ -1,13 +1,10 @@
 ---
 description: Videoanalysrapporter dirigeras till Adobe Analytics rapportplattformar.
-seo-description: Videoanalysrapporter dirigeras till Adobe Analytics rapportplattformar.
-seo-title: Få tillgång till videoanalysrapporter
 title: Få tillgång till videoanalysrapporter
-uuid: 7fcbfb96-dc8f-4b0d-8417-5bb1b6264fdd
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
