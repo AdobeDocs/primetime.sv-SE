@@ -1,13 +1,10 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
-seo-description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
-seo-title: Annonsinfogning och failover för VOD
 title: Annonsinfogning och failover för VOD
-uuid: 98505f63-ac43-4ff5-9f7b-895b6135df47
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -45,7 +42,7 @@ TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsva
 
 När annonslösningsfasen är klar har TVSDK en ordnad lista över annonsresurser som grupperas i annonsbrytningar. Varje annonsbrytning placeras på huvudinnehållets tidslinje med ett starttidsvärde som uttrycks i millisekunder (ms). Varje annons i en annonsbrytning har en duration-egenskap som också uttrycks i ms. Annonserna i en annonsbrytning är sammankopplade, den ena efter den andra. Följaktligen är längden på en annonsbrytning lika med summan av varaktigheten för de enskilda dispositionsannonserna.
 
-Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsbrytningar kan annonssegmenten överlappa varandra. Överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tas den efterföljande annonbrytningen bort och annonsinfogningsprocessen fortsätter med nästa objekt i listan tills alla annonbrytningar infogas eller tas bort.
+Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsavbrott kan annonssegmenten överlappa varandra. Överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tas den efterföljande annonbrytningen bort och annonsinfogningsprocessen fortsätter med nästa objekt i listan tills alla annonbrytningar infogas eller tas bort.
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
