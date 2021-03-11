@@ -1,13 +1,10 @@
 ---
 description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
-seo-description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
-seo-title: Lägg in metadata
 title: Lägg in metadata
-uuid: f40ed53b-eba1-4f70-a29c-90cac51e8a9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
