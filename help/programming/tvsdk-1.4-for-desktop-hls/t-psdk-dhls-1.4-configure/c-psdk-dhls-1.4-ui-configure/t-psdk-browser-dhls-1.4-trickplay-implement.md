@@ -1,13 +1,10 @@
 ---
 description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill gå över till trickuppspelningsläget måste du ange ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
-seo-description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill gå över till trickuppspelningsläget måste du ange ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
-seo-title: Implementera snabbt framåt och bakåt
 title: Implementera snabbt framåt och bakåt
-uuid: bd190534-c871-4673-b79d-1413277f480f
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -54,7 +51,7 @@ Om du vill växla hastighet måste du ange ett värde.
 
 ## API-element för hastighetsändring {#rate-change-api}
 
-TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om tricks-play stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
+TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om trippelning stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
 
 Använd följande API-element om du vill ändra uppspelningsfrekvensen:
 
