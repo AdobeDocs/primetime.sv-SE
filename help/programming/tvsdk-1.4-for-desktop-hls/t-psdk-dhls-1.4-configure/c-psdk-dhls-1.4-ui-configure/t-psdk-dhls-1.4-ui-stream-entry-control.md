@@ -1,14 +1,11 @@
 ---
 description: Som standard startar VOD-media vid uppspelning vid 0 och direktmedia vid klientens direktpunkt (DefaultMediaPlayer.LIVE_POINT).
-seo-description: Som standard startar VOD-media vid uppspelning vid 0 och direktmedia vid klientens direktpunkt (DefaultMediaPlayer.LIVE_POINT).
-seo-title: Ange en ström vid en viss tidpunkt
 title: Ange en ström vid en viss tidpunkt
-uuid: f58d908a-77b9-465f-b3a9-8fe63a249d39
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 
