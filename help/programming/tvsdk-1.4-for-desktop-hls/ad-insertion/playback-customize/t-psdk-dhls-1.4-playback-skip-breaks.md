@@ -1,13 +1,10 @@
 ---
 description: Som standard tvingar TVSDK en annonsbrytning att spelas upp när användaren söker över en annonsbrytning. Du kan anpassa beteendet för att hoppa över en annonsbrytning om tiden som gått från en tidigare avbruten brytning är inom ett visst antal minuter.
-seo-description: Som standard tvingar TVSDK en annonsbrytning att spelas upp när användaren söker över en annonsbrytning. Du kan anpassa beteendet för att hoppa över en annonsbrytning om tiden som gått från en tidigare avbruten brytning är inom ett visst antal minuter.
-seo-title: Hoppa över annonsbrytningar under en tidsperiod
 title: Hoppa över annonsbrytningar under en tidsperiod
-uuid: 1a18d5fd-c957-481b-83ae-2129590c1678
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
