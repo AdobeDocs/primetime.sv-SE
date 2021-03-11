@@ -1,14 +1,11 @@
 ---
 description: När TVSDK påträffar en trasig VMAP i ett annonsserversvar skickas ett 1109-fel (NETWORK_AD_URL_FAILED).
-keywords: 1109;NETWORK_AD_URL_FAILED;broken VMAP
-seo-description: När TVSDK påträffar en trasig VMAP i ett annonsserversvar skickas ett 1109-fel (NETWORK_AD_URL_FAILED).
-seo-title: Klientfelhantering för trasig VMAP
+keywords: 1109;NETWORK_AD_URL_FAILED;trasig VMAP
 title: Klientfelhantering för trasig VMAP
-uuid: 7cc68c86-bb49-4a1b-a1ec-65ca4c94d75d
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
