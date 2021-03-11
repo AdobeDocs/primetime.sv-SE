@@ -1,9 +1,9 @@
 ---
-seo-title: Distribuera certifikat
 title: Distribuera certifikat
-uuid: adf72b51-be0f-49ec-83f7-152a378b04e6
+description: Distribuera certifikat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
