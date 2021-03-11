@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerNotification-objekt innehåller information om ändringar i spelartillstånd, varningar och fel. Fel som stoppar videouppspelningen orsakar också en ändring av spelarens tillstånd.
-seo-description: MediaPlayerNotification-objekt innehåller information om ändringar i spelartillstånd, varningar och fel. Fel som stoppar videouppspelningen orsakar också en ändring av spelarens tillstånd.
-seo-title: Meddelandeinnehåll
 title: Meddelandeinnehåll
-uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
@@ -28,7 +25,7 @@ TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification`-meddel
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
 
-   * `type`: INFORMATION, VARNING eller FEL.
+   * `type`: INFORMATION, VARNING ELLER FEL.
    * `code`: En numerisk representation av anmälan.
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
