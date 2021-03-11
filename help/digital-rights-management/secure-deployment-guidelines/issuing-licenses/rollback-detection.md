@@ -1,13 +1,10 @@
 ---
 description: Om din implementering av Adobe Primetime DRM använder affärsregler som kräver att klienten behåller läget (till exempel intervallet för uppspelningsfönstret), rekommenderar Adobe att servern håller reda på återställningsräknaren och använder AIR eller SWF som Tillåt listning.
-seo-description: Om din implementering av Adobe Primetime DRM använder affärsregler som kräver att klienten behåller läget (till exempel intervallet för uppspelningsfönstret), rekommenderar Adobe att servern håller reda på återställningsräknaren och använder AIR eller SWF som Tillåt listning.
-seo-title: Återställningsigenkänning
 title: Återställningsigenkänning
-uuid: f161ed41-488a-478a-b6a8-468cf6d11e89
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
