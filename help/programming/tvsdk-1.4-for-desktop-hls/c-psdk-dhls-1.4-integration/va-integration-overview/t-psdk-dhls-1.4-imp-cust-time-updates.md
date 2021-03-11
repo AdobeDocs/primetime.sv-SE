@@ -1,13 +1,10 @@
 ---
 description: I vissa analysimplementeringar kanske klientprogrammet vill ange en annan spelhuvudposition än den som rapporteras av TVSDK localTime-värdet. Under en LINEAR-direktuppspelning kan till exempel varje programs spelhuvud anges i förhållande till dess starttid.
-seo-description: I vissa analysimplementeringar kanske klientprogrammet vill ange en annan spelhuvudposition än den som rapporteras av TVSDK localTime-värdet. Under en LINEAR-direktuppspelning kan till exempel varje programs spelhuvud anges i förhållande till dess starttid.
-seo-title: Implementera anpassade tidsuppdateringar
 title: Implementera anpassade tidsuppdateringar
-uuid: 2b46eca9-3815-4c44-ab5e-21678c35f410
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
