@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Konfigurera videoanalysrapporter på serversidan
 title: Konfigurera videoanalysrapporter på serversidan
-uuid: 85e96d14-7da6-4f42-b853-b44bffe33560
+description: Konfigurera videoanalysrapporter på serversidan
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
