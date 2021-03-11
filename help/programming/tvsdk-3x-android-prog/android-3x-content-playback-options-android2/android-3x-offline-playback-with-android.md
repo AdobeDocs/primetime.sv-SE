@@ -1,12 +1,10 @@
 ---
 description: 'Nya API:er har introducerats som instruerar TVSDK att ignorera nätverksanslutningsstatus när manifest hämtas. '
-seo-description: 'Nya API:er har introducerats som instruerar TVSDK att ignorera nätverksanslutningsstatus när manifest hämtas. '
-seo-title: Uppspelning offline med Android
 title: Uppspelning offline med Android
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
