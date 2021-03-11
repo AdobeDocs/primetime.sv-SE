@@ -1,9 +1,9 @@
 ---
-seo-title: Paketera media
 title: Paketera media
-uuid: f6e877be-d916-4766-bc44-99891a3df3a8
+description: Paketera media
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
