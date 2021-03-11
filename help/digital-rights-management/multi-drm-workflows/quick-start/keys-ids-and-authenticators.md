@@ -1,13 +1,10 @@
 ---
 description: För att kunna implementera DRM behöver du särskilda certifikat och nycklar, inklusive en krypteringsnyckel eller CEK för att kryptera ditt innehåll, en kundautentiserare för att skydda kommunikationen med ExpressPlay-servrar och CEKSID för att identifiera dina krypteringsnycklar som sparade i ett nyckelhanteringssystem.
-seo-description: För att kunna implementera DRM behöver du särskilda certifikat och nycklar, inklusive en krypteringsnyckel eller CEK för att kryptera ditt innehåll, en kundautentiserare för att skydda kommunikationen med ExpressPlay-servrar och CEKSID för att identifiera dina krypteringsnycklar som sparade i ett nyckelhanteringssystem.
-seo-title: Tangenter, ID:n och autentiserare
 title: Tangenter, ID:n och autentiserare
-uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
