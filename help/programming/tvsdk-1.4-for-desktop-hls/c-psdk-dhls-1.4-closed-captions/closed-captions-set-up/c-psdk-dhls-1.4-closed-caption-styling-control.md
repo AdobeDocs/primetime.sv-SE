@@ -1,13 +1,10 @@
 ---
 description: Du kan ange formatinformation för textningsspår med klassen ClosedCaptionStyles. Detta anger formatet för alla undertexter som visas av spelaren.
-seo-description: Du kan ange formatinformation för textningsspår med klassen ClosedCaptionStyles. Detta anger formatet för alla undertexter som visas av spelaren.
-seo-title: Styr textningsformat
 title: Styr textningsformat
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -85,7 +82,7 @@ public function TextFormat(
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardstorlek </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR  </span> - Cirka 30 % större än mediet </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medium </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medel </li> 
       <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Bildtextens standardstorlek; samma som medium </li> 
      </ul> </p> <p>Tips:  Du kan ändra teckenstorleken för WebVTT-bildtexter genom att ändra parametern size för funktionen <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>. </p> </td> 
   </tr> 
