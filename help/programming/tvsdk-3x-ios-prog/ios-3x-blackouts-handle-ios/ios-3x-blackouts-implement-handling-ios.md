@@ -1,13 +1,10 @@
 ---
 description: TVSDK tillhandahåller API:er och exempelkod för hantering av utbrottsperioder.
-seo-description: TVSDK tillhandahåller API:er och exempelkod för hantering av utbrottsperioder.
-seo-title: Implementera hantering av strömavbrott
 title: Implementera hantering av strömavbrott
-uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
