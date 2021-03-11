@@ -1,9 +1,9 @@
 ---
-seo-title: Butiksnycklar
 title: Butiksnycklar
-uuid: 81836adf-6cb9-46f2-be2f-8a20f6685c9d
+description: Butiksnycklar
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
