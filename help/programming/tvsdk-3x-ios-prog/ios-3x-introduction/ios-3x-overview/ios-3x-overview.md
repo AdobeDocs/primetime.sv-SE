@@ -1,9 +1,9 @@
 ---
-seo-title: Introduktion
 title: Introduktion
-uuid: 7c7d5fb0-bc4d-47e9-8856-53df57b8c6d3
+description: Introduktion
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
