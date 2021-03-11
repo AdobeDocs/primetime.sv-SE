@@ -1,9 +1,9 @@
 ---
-seo-title: Inställningar för Packager
 title: Inställningar för Packager
-uuid: 3e9c971d-3a5f-4f3e-97e7-baab63b1f67f
+description: Inställningar för Packager
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
