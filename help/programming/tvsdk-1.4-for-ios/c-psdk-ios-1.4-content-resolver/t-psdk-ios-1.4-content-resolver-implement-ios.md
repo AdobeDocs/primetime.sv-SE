@@ -1,13 +1,10 @@
 ---
 description: Du kan implementera dina lösningar baserat på standardlösare.
-seo-description: Du kan implementera dina lösningar baserat på standardlösare.
-seo-title: Implementera en anpassad lösning för affärsmöjlighet/innehåll
 title: Implementera en anpassad lösning för affärsmöjlighet/innehåll
-uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
