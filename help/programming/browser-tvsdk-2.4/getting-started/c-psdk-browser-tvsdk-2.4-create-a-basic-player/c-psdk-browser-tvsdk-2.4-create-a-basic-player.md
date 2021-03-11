@@ -1,13 +1,10 @@
 ---
 description: Om du vill använda Browser TVSDK måste du skapa och konfigurera en grundspelare. Om du vill spela upp videoinnehåll kan du skapa en grundläggande spelare på två sätt med webbläsarens TVSDK eller med gränssnittets ramverk.
-seo-description: Om du vill använda Browser TVSDK måste du skapa och konfigurera en grundspelare. Om du vill spela upp videoinnehåll kan du skapa en grundläggande spelare på två sätt med webbläsarens TVSDK eller med gränssnittets ramverk.
-seo-title: Grundläggande spelare
 title: Grundläggande spelare
-uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
