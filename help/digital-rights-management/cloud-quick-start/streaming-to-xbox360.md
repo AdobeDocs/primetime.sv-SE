@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Ange XSTS-token i spelaren
 title: Ange XSTS-token i spelaren
-uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
+description: Ange XSTS-token i spelaren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c37061c116b8a6bc8ce085dc89dc8aadd0a2e490
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
