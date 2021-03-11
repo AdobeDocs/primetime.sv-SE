@@ -1,13 +1,10 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. När oväntade situationer uppstår vidtar TVSDK lämpliga åtgärder.
-seo-description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. När oväntade situationer uppstår vidtar TVSDK lämpliga åtgärder.
-seo-title: Annonsinfogning och failover för VOD
 title: Annonsinfogning och failover för VOD
-uuid: 74cc35e6-6479-4572-a3b3-05ff6344272a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
