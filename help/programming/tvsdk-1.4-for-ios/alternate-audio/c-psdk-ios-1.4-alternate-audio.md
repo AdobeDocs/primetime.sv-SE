@@ -1,13 +1,10 @@
 ---
 description: Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
-seo-description: Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
-seo-title: Alternativt ljud
 title: Alternativt ljud
-uuid: 9dc3bec6-2135-4083-8db2-50a492e6bd67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
