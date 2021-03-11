@@ -1,13 +1,10 @@
 ---
 description: TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
-seo-description: TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
-seo-title: Hantering av fel vid borttagning och ersättning av annonser
 title: Hantering av fel vid borttagning och ersättning av annonser
-uuid: e2e06f13-9813-4d86-b6fe-3d09f3bdb100
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
