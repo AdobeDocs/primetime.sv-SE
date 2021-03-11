@@ -1,13 +1,10 @@
 ---
 description: De flesta annonsörer behöver detaljerad information om när, hur länge och hur bra deras annonser har visats. Det effektivaste sättet är att låta klientspelaren skicka rapporter när annonserna spelas upp, men manifestservern har också stöd för annonsspårning på serversidan och hybridsidan.
-seo-description: De flesta annonsörer behöver detaljerad information om när, hur länge och hur bra deras annonser har visats. Det effektivaste sättet är att låta klientspelaren skicka rapporter när annonserna spelas upp, men manifestservern har också stöd för annonsspårning på serversidan och hybridsidan.
-seo-title: Annonsspårning
 title: Annonsspårning
-uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
