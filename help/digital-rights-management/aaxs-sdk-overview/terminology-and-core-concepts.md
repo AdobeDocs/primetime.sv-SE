@@ -1,9 +1,9 @@
 ---
-seo-title: Terminologi och centrala begrepp
 title: Terminologi och centrala begrepp
-uuid: 89a9e4b0-f5e1-4dc2-9cf8-0c8d7e9b7d62
+description: Terminologi och centrala begrepp
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
