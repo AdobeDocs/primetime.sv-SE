@@ -1,13 +1,10 @@
 ---
 description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
-seo-description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
-seo-title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
-uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '230'
 ht-degree: 1%
 
 ---
@@ -26,7 +23,7 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
    * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: Den första listan med spår för undertextning är tillgänglig
 
-1. Hämta en lista med alla tillgängliga undertextningsspår.
+1. Hämta en lista över alla tillgängliga undertextningsspår.
 
    Exempel:
 
