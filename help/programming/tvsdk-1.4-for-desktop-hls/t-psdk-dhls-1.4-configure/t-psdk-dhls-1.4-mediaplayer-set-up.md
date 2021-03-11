@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer-gränssnittet kapslar in en mediespelares funktioner och beteende.
-seo-description: MediaPlayer-gränssnittet kapslar in en mediespelares funktioner och beteende.
-seo-title: Konfigurera MediaPlayer
 title: Konfigurera MediaPlayer
-uuid: 4b27643c-9ccd-4abb-9793-475d06ee2a88
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
