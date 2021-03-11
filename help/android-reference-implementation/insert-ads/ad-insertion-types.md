@@ -1,13 +1,10 @@
 ---
 description: TVSDK har för närvarande inbyggt stöd för annonsleverantörens metadata för TVSDK-annonser, direkta annonsbrytningar och anpassade annonsmarkörer.
-seo-description: TVSDK har för närvarande inbyggt stöd för annonsleverantörens metadata för TVSDK-annonser, direkta annonsbrytningar och anpassade annonsmarkörer.
-seo-title: Annonsinfogningstyper
 title: Annonsinfogningstyper
-uuid: 6b5c3555-1ddd-4215-8bb2-03d16bb818c5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
