@@ -1,9 +1,9 @@
 ---
-seo-title: Paketera innehåll
 title: Paketera innehåll
-uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
+description: Paketera innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
