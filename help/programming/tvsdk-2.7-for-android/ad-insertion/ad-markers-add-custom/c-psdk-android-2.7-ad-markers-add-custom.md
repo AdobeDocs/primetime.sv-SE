@@ -1,13 +1,10 @@
 ---
 description: Genom att använda anpassade annonsmarkörer kan du markera specifika avsnitt i huvudinnehållet som reklamrelaterade innehållsperioder.
-seo-description: Genom att använda anpassade annonsmarkörer kan du markera specifika avsnitt i huvudinnehållet som reklamrelaterade innehållsperioder.
-seo-title: Lägga till egna annonsmärken
 title: Lägga till egna annonsmärken
-uuid: 712da406-094a-49b2-b21d-4d5d73fff8cf
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
