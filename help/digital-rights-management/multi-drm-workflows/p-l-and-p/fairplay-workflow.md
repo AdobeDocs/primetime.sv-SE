@@ -1,13 +1,10 @@
 ---
 description: DRM-arbetsflödena innefattar att paketera ditt innehåll, tillhandahålla licensiering för innehållet och spela upp det skyddade innehållet från ditt eget videoprogram. Arbetsflödet liknar vanligtvis för varje DRM-lösning, men med vissa skillnader finns i informationen.
-seo-description: DRM-arbetsflödena innefattar att paketera ditt innehåll, tillhandahålla licensiering för innehållet och spela upp det skyddade innehållet från ditt eget videoprogram. Arbetsflödet liknar vanligtvis för varje DRM-lösning, men med vissa skillnader finns i informationen.
-seo-title: Arbetsflöde med flera DRM-DRM för FairPlay
 title: Arbetsflöde med flera DRM-DRM för FairPlay
-uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
