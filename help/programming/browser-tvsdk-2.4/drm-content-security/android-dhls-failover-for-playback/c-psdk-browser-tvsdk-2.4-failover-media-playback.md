@@ -1,13 +1,10 @@
 ---
 description: För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta den spellista som är associerad med den mellanupplösta bithastigheten och sedan hämta segment för den mellanupplösta bithastigheten som definieras av spellistan.
-seo-description: För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta den spellista som är associerad med den mellanupplösta bithastigheten och sedan hämta segment för den mellanupplösta bithastigheten som definieras av spellistan.
-seo-title: Medieuppspelning
 title: Medieuppspelning
-uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
