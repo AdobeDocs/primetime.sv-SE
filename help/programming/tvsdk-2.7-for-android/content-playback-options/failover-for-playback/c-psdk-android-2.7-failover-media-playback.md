@@ -1,13 +1,10 @@
 ---
 description: För live- och video-on-demand-media (VOD) börjar TVSDK uppspelningen genom att ladda ned den spellista som är associerad med den mellanupplösta bithastigheten och hämtar de mediesegment som definieras av den spellistan. Den väljer snabbt spelningslistan med hög upplösning och tillhörande media och fortsätter hämtningsprocessen.
-seo-description: För live- och video-on-demand-media (VOD) börjar TVSDK uppspelningen genom att ladda ned den spellista som är associerad med den mellanupplösta bithastigheten och hämtar de mediesegment som definieras av den spellistan. Den väljer snabbt spelningslistan med hög upplösning och tillhörande media och fortsätter hämtningsprocessen.
-seo-title: Medieuppspelning och failover
 title: Medieuppspelning och failover
-uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
