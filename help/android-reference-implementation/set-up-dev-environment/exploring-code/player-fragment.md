@@ -1,13 +1,10 @@
 ---
 description: Klassen PlayerFragment är den plats där du redigerar koden för att skapa de fullständigt aktiverade funktionshanterarna.
-seo-description: Klassen PlayerFragment är den plats där du redigerar koden för att skapa de fullständigt aktiverade funktionshanterarna.
-seo-title: PlayerFragment
 title: PlayerFragment
-uuid: 83f02c31-f3b1-4d16-97c8-5b391e8c999a
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
