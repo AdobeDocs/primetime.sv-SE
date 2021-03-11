@@ -1,9 +1,9 @@
 ---
-seo-title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
-uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
+description: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
