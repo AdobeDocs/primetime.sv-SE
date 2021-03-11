@@ -1,9 +1,9 @@
 ---
-seo-title: Distribuera Adobe Primetime DRM
 title: Distribuera Adobe Primetime DRM
-uuid: c14c2792-d207-4f39-b856-610520bdaa28
+description: Distribuera Adobe Primetime DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
