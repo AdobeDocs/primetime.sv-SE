@@ -1,13 +1,10 @@
 ---
 description: Om du genererar licenser i förväg som innehåller tidsbaserade användningsregler, bör licensen innehålla synkroniseringskrav för att på ett säkert sätt tillämpa licensens förfallodatum.
-seo-description: Om du genererar licenser i förväg som innehåller tidsbaserade användningsregler, bör licensen innehålla synkroniseringskrav för att på ett säkert sätt tillämpa licensens förfallodatum.
-seo-title: Förgenererande licenser
 title: Förgenererande licenser
-uuid: 9d2c3b9a-455f-4ac9-aa15-b9b2a3267c9b
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
