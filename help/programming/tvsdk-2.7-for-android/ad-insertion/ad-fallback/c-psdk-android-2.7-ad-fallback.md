@@ -1,14 +1,11 @@
 ---
 description: För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
-keywords: zero length ad;empty ad
-seo-description: För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
-seo-title: Annonsersättning för VAST- och VMAP-annonser
+keywords: nollängd och tom annons
 title: Annonsersättning för VAST- och VMAP-annonser
-uuid: ecfeff31-b723-4a0d-99f2-48705a37b5f0
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
