@@ -1,9 +1,9 @@
 ---
-seo-title: Prestandajustering
 title: Prestandajustering
-uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
+description: Prestandajustering
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Förseningar under dessa åtgärder beror ofta på en låg entropispool på Linu
 
 I Linux genereras slumpmässiga tal från servermiljöns entropypool. Enropy-poolen underhålls normalt genom att maskinvaruavbrott tas emot av Linux-kärnan. Om en server är isolerad och inte får regelbundna indata från maskinvaruresurser (t.ex. en mus eller ett tangentbord) kan väntan på att återfylla entroppoolen utökas. I det här scenariot kan åtgärder som väntar på data från [!DNL /dev/random] pausa.
 
-Du kan använda slumpmässiga generatorer för maskinvarubaserade nummer på Linux-servrar för att säkerställa att tillräcklig entropi genereras. Om det inte finns några slumpmässiga generatorer för maskinvaruantal i ett visst distributionsscenario kan du använda programvarubaserade lösningar för att öka uppdateringsfrekvensen för entropisolen. En sådan programvarulösning på Linux är [!DNL haveged] (HArdware Volatile Entropy Gatering and Expansion daemon).
+Du kan använda slumpmässiga generatorer för maskinvarubaserade nummer på Linux-servrar för att säkerställa att tillräcklig entropi genereras. Om det inte finns några slumpmässiga generatorer för maskinvaruantal i ett visst distributionsscenario kan du använda programvarubaserade lösningar för att öka uppdateringsfrekvensen för entropisolen. En sådan programvarulösning i Linux är [!DNL haveged] (HArdware Volatile Entropy Gatering and Expansion daemon).
 
 ## Identifierar tillgänglig Entropy {#section_686B311FE6144566B6939E9F20915ADC}
 
