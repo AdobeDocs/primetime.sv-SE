@@ -1,13 +1,10 @@
 ---
 description: 'Du kan välja följande krypteringsalternativ när du skapar ett paket. Du kan dock inte ändra krypteringsalternativen när du skaffar licenser '
-seo-description: 'Du kan välja följande krypteringsalternativ när du skapar ett paket. Du kan dock inte ändra krypteringsalternativen när du skaffar licenser '
-seo-title: Nyckelrotation
 title: Nyckelrotation
-uuid: 6ac3b828-2cd1-42df-b9ee-4daa8e553d5e
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
