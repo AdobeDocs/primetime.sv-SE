@@ -1,9 +1,9 @@
 ---
-seo-title: Komma igång
 title: Komma igång
-uuid: 2002cf94-c8a7-4820-a560-6d9f7f33ee97
+description: Komma igång
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
