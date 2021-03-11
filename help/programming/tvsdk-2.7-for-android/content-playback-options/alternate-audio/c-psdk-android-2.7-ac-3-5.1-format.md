@@ -1,13 +1,10 @@
 ---
 description: Med ljudkodek 3 (AC-3, även kallat Dolby Digital®) 5.1-format, kan innehållsleverantörer komprimera storleken på flerkanalsljudfiler utan att försämra ljudkvaliteten. AC-3 är ett 5.1-format, vilket innebär att det ger fem kanaler med full bandbredd för en bättre användarupplevelse.
-seo-description: Med ljudkodek 3 (AC-3, även kallat Dolby Digital®) 5.1-format, kan innehållsleverantörer komprimera storleken på flerkanalsljudfiler utan att försämra ljudkvaliteten. AC-3 är ett 5.1-format, vilket innebär att det ger fem kanaler med full bandbredd för en bättre användarupplevelse.
-seo-title: AC-3 5.1-format
 title: AC-3 5.1-format
-uuid: 11dab0ac-5aed-4909-b9fb-807781f88480
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
