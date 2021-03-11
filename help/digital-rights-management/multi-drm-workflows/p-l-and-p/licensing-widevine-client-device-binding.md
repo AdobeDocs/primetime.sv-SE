@@ -1,13 +1,10 @@
 ---
 description: I vissa fall kanske du vill hindra slutanvändare från att spela upp innehåll på flera enheter när innehållet köpts eller hyrts. Om kunden använder Expressplay kan detta göras genom att använda Expressplay-API:erna för att binda användarens Expressplay-token till användarens dator.
-seo-description: I vissa fall kanske du vill hindra slutanvändare från att spela upp innehåll på flera enheter när innehållet köpts eller hyrts. Om kunden använder Expressplay kan detta göras genom att använda Expressplay-API:erna för att binda användarens Expressplay-token till användarens dator.
-seo-title: Enhetsbindning
 title: Enhetsbindning
-uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
