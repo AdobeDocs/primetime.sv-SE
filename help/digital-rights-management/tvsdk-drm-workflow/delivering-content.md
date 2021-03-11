@@ -1,9 +1,9 @@
 ---
-seo-title: Leverera innehåll
 title: Leverera innehåll
-uuid: b277d369-fee3-4a20-9dd8-27b3a8a82a9e
+description: Leverera innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
