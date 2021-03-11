@@ -1,13 +1,10 @@
 ---
 description: Manifestservern koordinerar de system som tillhandahåller innehåll, tillhandahåller annonser, spelar upp video och spårar annonser. Den får M3U8-kodade spellistor (manifest) som klientvideospelare tar emot från innehållsleverantörer, knyter ihop annonser från annonsleverantörer i manifesten och skickar de sammanslagna manifesten till videospelare. Det har stöd för både annonsspårning på klientsidan och serversidan. Den utför sina interaktioner med ett HTTP-baserat webbtjänstgränssnitt.
-seo-description: Manifestservern koordinerar de system som tillhandahåller innehåll, tillhandahåller annonser, spelar upp video och spårar annonser. Den får M3U8-kodade spellistor (manifest) som klientvideospelare tar emot från innehållsleverantörer, knyter ihop annonser från annonsleverantörer i manifesten och skickar de sammanslagna manifesten till videospelare. Det har stöd för både annonsspårning på klientsidan och serversidan. Den utför sina interaktioner med ett HTTP-baserat webbtjänstgränssnitt.
-seo-title: Översikt över Manifest Server-interaktioner
 title: Översikt över Manifest Server-interaktioner
-uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
