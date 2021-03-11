@@ -1,9 +1,9 @@
 ---
-seo-title: Hantera licensreturbegäranden
 title: Hantera licensreturbegäranden
-uuid: d184faea-88cb-44f3-a253-e5314d577f17
+description: Hantera licensreturbegäranden
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -18,4 +18,4 @@ Om klientprogrammet behöver returnera en licens anropar det ActionScript-API:t 
 * Klassen för begärandehanteraren är com.adobe.flashaccess.sdk.protocol.licensereturn.LicenseReturnHandler
 * Begäranmeddelandeklassen är com.adobe.flashaccess.sdk.protocol.licenserurn.LicenseReturnRequestMessage
 
-Den lägsta version av Adobe Access SDK som krävs är version 5. URL:en för begäran blir &quot; `/flashaccess/lreturn/v5`&quot;. Precis som med domänavregistrering bör servern använda `getRequestPhase()` för att avgöra om klienten förhandsgranskar en licensretur.
+Den lägsta version av Adobe Access SDK som krävs är version 5. URL:en för begäran blir `/flashaccess/lreturn/v5`. Precis som med domänavregistrering bör servern använda `getRequestPhase()` för att avgöra om klienten förhandsgranskar en licensretur.
