@@ -1,9 +1,9 @@
 ---
-seo-title: Översikt
 title: Översikt
-uuid: 2bbf0aa1-df35-429d-84df-db357fa53e47
+description: Översikt
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
