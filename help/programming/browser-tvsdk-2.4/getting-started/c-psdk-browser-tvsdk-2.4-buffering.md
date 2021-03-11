@@ -1,14 +1,11 @@
 ---
 description: Du kan konfigurera visuellt för att meddela användaren att innehållet buffras.
-seo-description: Du kan konfigurera visuellt för att meddela användaren att innehållet buffras.
-seo-title: Buffring
 title: Buffring
-uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 2%
+source-wordcount: '56'
+ht-degree: 3%
 
 ---
 
