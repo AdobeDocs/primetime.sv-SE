@@ -1,14 +1,11 @@
 ---
 description: Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir det aktuella spåret, som visas när synligheten är aktiverad. Vissa spår kanske inte är tillgängliga från början, så lyssna efter händelsen som anger att fler har blivit tillgängliga.
-seo-description: Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir det aktuella spåret, som visas när synligheten är aktiverad. Vissa spår kanske inte är tillgängliga från början, så lyssna efter händelsen som anger att fler har blivit tillgängliga.
-seo-title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
-uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +19,7 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
    * `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`: Den inledande listan med spår för undertextning är tillgänglig.
 
-1. Hämta en lista med alla tillgängliga undertextningsspår.
+1. Hämta en lista över alla tillgängliga undertextningsspår.
 
    Exempel:
 
