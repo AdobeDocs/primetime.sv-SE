@@ -1,13 +1,10 @@
 ---
 description: Utgivare kan bygga HLS-kompatibla videospelare som fungerar med arbetsflödena för annonsuppföljning på klientsidan i Primetimes manifestfil. Gränssnitten till manifestservern för direktuppspelningen och VOD-fall (video on demand) skiljer sig något åt.
-seo-description: Utgivare kan bygga HLS-kompatibla videospelare som fungerar med arbetsflödena för annonsuppföljning på klientsidan i Primetimes manifestfil. Gränssnitten till manifestservern för direktuppspelningen och VOD-fall (video on demand) skiljer sig något åt.
-seo-title: Översikt över spårning på klientsidan som inte är TVSDK
 title: Översikt över spårning på klientsidan som inte är TVSDK
-uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
