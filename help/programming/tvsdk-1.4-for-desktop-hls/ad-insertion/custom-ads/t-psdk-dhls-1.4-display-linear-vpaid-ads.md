@@ -1,13 +1,10 @@
 ---
 description: TVSDK stöder visning av VPAID-annonser (linear Video Player-Ad Interface Definition) i en annonsbrytning. VPAID version 1.0 kräver Flash, medan version 2.0 också fungerar med Browser TVSDK och JavaScript.
-seo-description: TVSDK stöder visning av VPAID-annonser (linear Video Player-Ad Interface Definition) i en annonsbrytning. VPAID version 1.0 kräver Flash, medan version 2.0 också fungerar med Browser TVSDK och JavaScript.
-seo-title: Visa linjära VPAID-annonser i en annonsbrytning
 title: Visa linjära VPAID-annonser i en annonsbrytning
-uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
