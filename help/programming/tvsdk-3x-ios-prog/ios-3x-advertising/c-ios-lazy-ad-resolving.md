@@ -1,13 +1,10 @@
 ---
 description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att använda en strategi med två spelare.
-seo-description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att använda en strategi med två spelare.
-seo-title: Just-in-Time-annonsvisning
 title: Just-in-Time-annonsvisning
-uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
