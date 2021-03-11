@@ -1,13 +1,10 @@
 ---
 description: Gränssnittsramverket är ett UI-lager ovanpå webbläsarens TVSDK, som tillhandahåller olika videospelarrelaterade gränssnittskonstruktioner direkt. Du kan skapa en mycket anpassningsbar spelare genom att göra de punktändringar som passar just din miljö.
-seo-description: Gränssnittsramverket är ett UI-lager ovanpå webbläsarens TVSDK, som tillhandahåller olika videospelarrelaterade gränssnittskonstruktioner direkt. Du kan skapa en mycket anpassningsbar spelare genom att göra de punktändringar som passar just din miljö.
-seo-title: UI-ramverket
 title: UI-ramverket
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
