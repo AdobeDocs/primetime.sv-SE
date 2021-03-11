@@ -1,9 +1,9 @@
 ---
-seo-title: Brandväggsregler
 title: Brandväggsregler
-uuid: a5667030-c4d0-42e3-b56e-20a12c903954
+description: Brandväggsregler
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
