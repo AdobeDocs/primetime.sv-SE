@@ -1,13 +1,10 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-title: Meddelandekoder
 title: Meddelandekoder
-uuid: 6babb203-b6d4-4b11-9fae-41e7db7fd570
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
