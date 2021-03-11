@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
-seo-description: Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
-seo-title: Klasser för tidslinje
 title: Klasser för tidslinje
-uuid: 4acbe2f8-9552-491d-8043-2e0557b66a23
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
