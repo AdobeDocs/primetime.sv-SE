@@ -1,13 +1,10 @@
 ---
 description: Här är några exempel på processen att ta bort och ersätta annonser.
-seo-description: Här är några exempel på processen att ta bort och ersätta annonser.
-seo-title: Exempel på att ta bort och ersätta annonser
 title: Exempel på att ta bort och ersätta annonser
-uuid: 31ceb39a-aa30-472e-908a-3ba57559045f
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
