@@ -1,14 +1,11 @@
 ---
 description: För annonsinfogning live-strömmar kan du behöva avsluta en annonsbrytning innan alla annonser i pausen spelas upp tills de är klara.
-seo-description: För annonsinfogning live-strömmar kan du behöva avsluta en annonsbrytning innan alla annonser i pausen spelas upp tills de är klara.
-seo-title: Implementera en tidig radbrytning
 title: Implementera en tidig radbrytning
-uuid: 0e77414e-86f5-4979-9caa-eaf2f39144a2
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
