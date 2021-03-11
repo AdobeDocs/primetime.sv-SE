@@ -1,13 +1,10 @@
 ---
 description: Om du använder Adobe Primetime DRM Professional kan du generera licenser i förväg och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
-seo-description: Om du använder Adobe Primetime DRM Professional kan du generera licenser i förväg och bädda in licenser i innehållet. Den här funktionen kan kombineras med förbättrad licenskedning, så att en lövlicens är förgenererad och inbäddad i innehållet, och klienten kan begära en rotlicens (bunden till en dator eller domän) från en licensserver. Alternativt kan klientprogram implementera ett arbetsflöde där enheten förregistrerar sig hos en server, servern förgenererar licenser som är bundna till den enheten och klienten hämtar sina licenser från en enkel HTTP-webbserver.
-seo-title: Förgenererande licenser
 title: Förgenererande licenser
-uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
