@@ -1,13 +1,10 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
-seo-description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
-seo-title: Omdirigeringsoptimering för HTTP 302
 title: Omdirigeringsoptimering för HTTP 302
-uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
