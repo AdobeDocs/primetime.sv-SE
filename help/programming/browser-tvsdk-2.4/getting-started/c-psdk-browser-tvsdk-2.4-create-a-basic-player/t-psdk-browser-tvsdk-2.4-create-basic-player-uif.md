@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Skapa en grundläggande spelare med UI Framework
 title: Skapa en grundläggande spelare med UI Framework
-uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
+description: Skapa en grundläggande spelare med UI Framework
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
