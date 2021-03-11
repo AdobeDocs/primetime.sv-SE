@@ -1,13 +1,10 @@
 ---
 description: ID3-taggar ger information om en ljud- eller videofil, till exempel filens titel eller namnet på artisten. Browser TVSDK identifierar ID3-taggar på segmentnivån för transportströmmar (TS) i HLS-strömmar och skickar en händelse. Programmet kan extrahera data från taggen.
-seo-description: ID3-taggar ger information om en ljud- eller videofil, till exempel filens titel eller namnet på artisten. Browser TVSDK identifierar ID3-taggar på segmentnivån för transportströmmar (TS) i HLS-strömmar och skickar en händelse. Programmet kan extrahera data från taggen.
-seo-title: ID3-taggar
 title: ID3-taggar
-uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
