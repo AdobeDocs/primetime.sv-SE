@@ -1,13 +1,10 @@
 ---
 description: Du kan använda ExpressPlays Bento4-paketerare för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
-seo-description: Du kan använda ExpressPlays Bento4-paketerare för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
-seo-title: ExpressPlay Packager / Cloud DRM / TVSDK
 title: ExpressPlay Packager / Cloud DRM / TVSDK
-uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
