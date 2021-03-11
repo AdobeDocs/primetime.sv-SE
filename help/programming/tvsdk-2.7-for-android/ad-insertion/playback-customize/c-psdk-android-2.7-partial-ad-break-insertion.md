@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Insättning av delvis annonsradbrytning
 title: Insättning av delvis annonsradbrytning
-uuid: cc071c89-f813-419e-a2b2-4f6a9fdccd6a
+description: Insättning av delvis annonsradbrytning
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
