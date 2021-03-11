@@ -1,17 +1,13 @@
 ---
 title: Versionsinformation om TVSDK 2.1 PlayStation 4
-seo-title: Versionsinformation om TVSDK 2.1 PlayStation 4
 description: Versionsinformationen för TVSDK 2.1 för PlayStation 4 beskriver de funktioner som stöds och de kända problemen i TVSDK 2.1 PlayStation 4.
-seo-description: Versionsinformationen för TVSDK 2.1 för PlayStation 4 beskriver de funktioner som stöds och de kända problemen i TVSDK 2.1 PlayStation 4.
-uuid: 494569cf-07e2-476a-b88e-e46c9cca4cdc
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: ebfc8819-f5a9-47a2-b454-0e4e6f9e4640
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
