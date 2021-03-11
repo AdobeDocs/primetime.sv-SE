@@ -1,13 +1,10 @@
 ---
 description: CRS erbjuder JIT (just-in-time) och asynkron ompaketering och HLS-to-HLS-konvertering. Resultatet av ompaketeringen är en HLS-formaterad version av den ursprungliga annonsdesignen. CRS placerar den HLS-formaterade versionen på CDN-servern (Content Delivery Network) för användning vid behov.
-seo-description: CRS erbjuder JIT (just-in-time) och asynkron ompaketering och HLS-to-HLS-konvertering. Resultatet av ompaketeringen är en HLS-formaterad version av den ursprungliga annonsdesignen. CRS placerar den HLS-formaterade versionen på CDN-servern (Content Delivery Network) för användning vid behov.
-seo-title: Huvudsaklig användning av CRS
 title: Huvudsaklig användning av CRS
-uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
