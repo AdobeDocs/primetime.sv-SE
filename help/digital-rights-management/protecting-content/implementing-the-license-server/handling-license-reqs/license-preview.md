@@ -1,9 +1,9 @@
 ---
-seo-title: Förhandsgranska licens
 title: Förhandsgranska licens
-uuid: 3069aa16-5bf3-4af6-801c-ad823530d7eb
+description: Förhandsgranska licens
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
