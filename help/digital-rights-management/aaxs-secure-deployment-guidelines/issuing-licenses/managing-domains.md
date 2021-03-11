@@ -1,9 +1,9 @@
 ---
-seo-title: Hantera domäner
 title: Hantera domäner
-uuid: aee02196-8704-46ee-add9-82b371722f0f
+description: Hantera domäner
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
