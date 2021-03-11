@@ -1,13 +1,10 @@
 ---
 description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
-seo-description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
-seo-title: Spara videopositionen och återuppta den senare
 title: Spara videopositionen och återuppta den senare
-uuid: 007c8e89-54f4-4dfd-81f8-b931e216e724
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
