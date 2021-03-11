@@ -1,14 +1,11 @@
 ---
 description: Du kan konfigurera en plats för att hantera fel.
-seo-description: Du kan konfigurera en plats för att hantera fel.
-seo-title: Konfigurera felhantering
 title: Konfigurera felhantering
-uuid: 7c122830-6259-4e95-882e-fb1700454e6e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 2%
 
 ---
 
