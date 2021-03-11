@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser innehåller information som hjälper dig att avgöra hur bra spelaren fungerar.
-seo-description: Dessa klasser innehåller information som hjälper dig att avgöra hur bra spelaren fungerar.
-seo-title: QoS-klasser
 title: QoS-klasser
-uuid: f145b744-6385-40df-aaee-ae9430d85895
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
