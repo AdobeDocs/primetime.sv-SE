@@ -1,13 +1,10 @@
 ---
 description: Med MediaPlayerItemLoader kan du få information om en medieström utan att initiera en MediaPlayer-instans. Detta är särskilt användbart i pre-buffring av strömmar så att uppspelningen kan börja utan fördröjning.
-seo-description: Med MediaPlayerItemLoader kan du få information om en medieström utan att initiera en MediaPlayer-instans. Detta är särskilt användbart i pre-buffring av strömmar så att uppspelningen kan börja utan fördröjning.
-seo-title: Läsa in en medieresurs med MediaPlayerItemLoader
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-uuid: 504063af-1dd4-4268-88e7-ad5a247fdff7
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
