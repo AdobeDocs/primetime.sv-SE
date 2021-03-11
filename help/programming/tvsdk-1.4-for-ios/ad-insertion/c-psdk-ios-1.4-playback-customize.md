@@ -1,13 +1,10 @@
 ---
 description: När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller slutar i en annonsbrytning definierar TVSDK ett standardbeteende för positionen av det aktuella spelhuvudet.
-seo-description: När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller slutar i en annonsbrytning definierar TVSDK ett standardbeteende för positionen av det aktuella spelhuvudet.
-seo-title: Anpassa uppspelning med annonser
 title: Anpassa uppspelning med annonser
-uuid: 58002ec2-65ab-4e3b-8e3b-f755ced5cb5a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
