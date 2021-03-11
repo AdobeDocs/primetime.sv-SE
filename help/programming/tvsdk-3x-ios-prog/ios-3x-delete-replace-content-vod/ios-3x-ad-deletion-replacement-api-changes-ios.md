@@ -1,13 +1,10 @@
 ---
 description: TVSDK stöder programmatisk borttagning och ersättning av annonsinnehåll i VOD-strömmar.
-seo-description: TVSDK stöder programmatisk borttagning och ersättning av annonsinnehåll i VOD-strömmar.
-seo-title: Ändringar i API:t för borttagning och ersättning av annonser
 title: Ändringar i API:t för borttagning och ersättning av annonser
-uuid: 3689d31f-4feb-4ea5-ac49-ef2e71472f4b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
