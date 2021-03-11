@@ -1,13 +1,10 @@
 ---
 description: Manifestservern returnerar överordnad spellistor i M3U8-format, enligt den föreslagna standarden för HTTP-direktuppspelning. Den består av en uppsättning olika TS-strömmar (Variant Transport Streams), som var och en innehåller renderingar av samma innehåll för olika bithastigheter och format. Adobe Primetime-annonsinfogning lägger till direktivet EXT-X-MARKER, som ska tolkas av klientvideospelare.
-seo-description: Manifestservern returnerar överordnad spellistor i M3U8-format, enligt den föreslagna standarden för HTTP-direktuppspelning. Den består av en uppsättning olika TS-strömmar (Variant Transport Streams), som var och en innehåller renderingar av samma innehåll för olika bithastigheter och format. Adobe Primetime-annonsinfogning lägger till direktivet EXT-X-MARKER, som ska tolkas av klientvideospelare.
-seo-title: EXT-X-MARKER-direktivet
 title: EXT-X-MARKER-direktivet
-uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
