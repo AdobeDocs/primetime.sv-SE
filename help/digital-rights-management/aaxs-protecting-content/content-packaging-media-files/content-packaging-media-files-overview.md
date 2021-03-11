@@ -1,9 +1,9 @@
 ---
-seo-title: Översikt
 title: Översikt
-uuid: 11cf1f1f-a4b2-4ac2-aae7-e925d96729d2
+description: Översikt
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Paketeringsalternativen omfattar:
 
 Adobe Access tillhandahåller ett API för att skicka CEK. Om inget CEK anges genereras det slumpmässigt av SDK. Vanligtvis behöver du olika CEK för varje del av innehållet. I Dynamic Streaming skulle du emellertid troligtvis använda samma CEK för alla filer för det innehållet, så användaren behöver bara en licens och kan smidigt gå över från en bithastighet till en annan. Om du vill använda samma nyckel och licens för flera innehållsdelar skickar du samma `DRMParameters`-objekt till `MediaEncrypter.encryptContent()` eller skickar CEK med `V2KeyParameters.setContentEncryptionKey()`. Om du vill använda en annan nyckel och licens för varje del av innehållet skapar du en ny `DRMParameters`-instans för varje fil.
 
-När du paketerar innehåll med tangentrotation kan du styra vilka rotationstangenter som används och hur ofta tangenterna ändras. `F4VDRMParameters` och  `FLVDRMParameters` implementera  `KeyRotationParameters` gränssnittet. I det här gränssnittet kan du aktivera tangentrotation. Du måste också ange en `RotatingContentEncryptionKeyProvider`. För varje krypterat exempel avgör den här klassen vilken rotationsnyckel som ska användas. Du kan implementera din egen leverantör eller använda `TimeBasedKeyProvider` som ingår i SDK:n. Implementeringen genererar slumpmässigt en ny nyckel efter ett angivet antal sekunder.
+När du paketerar innehåll med tangentrotation kan du styra vilka rotationstangenter som används och hur ofta tangenterna ändras. `F4VDRMParameters` och  `FLVDRMParameters` implementera  `KeyRotationParameters` gränssnittet. I det här gränssnittet kan du aktivera tangentrotation. Du måste också ange en `RotatingContentEncryptionKeyProvider`. För varje krypterat exempel avgör den här klassen vilken rotationsnyckel som ska användas. Du kan implementera din egen leverantör eller använda `TimeBasedKeyProvider` som ingår i SDK:n. Implementeringen genererar slumpmässigt en ny nyckel efter ett visst antal sekunder.
 
 I vissa fall kan du behöva lagra innehållets metadata som en separat fil och göra den tillgänglig för klienten separat från innehållet. Det gör du genom att anropa `MediaEncrypter.encryptContent()`, som returnerar ett `MediaEncrypterResult`-objekt. Anropa `MediaEncrypterResult.getKeyInfo()` och omvandla resultatet till `V2KeyStatus`. Hämta sedan innehållets metadata och lagra dem i en fil.
 
