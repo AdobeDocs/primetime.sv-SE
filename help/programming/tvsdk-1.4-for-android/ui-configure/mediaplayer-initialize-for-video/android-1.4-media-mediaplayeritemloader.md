@@ -1,13 +1,10 @@
 ---
 description: Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
-seo-description: Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
-seo-title: Läsa in en medieresurs med MediaPlayerItemLoader
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
