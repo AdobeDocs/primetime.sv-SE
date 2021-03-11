@@ -1,13 +1,10 @@
 ---
 description: TVSDK för Android 3.4 innehåller en mängd funktioner som du kan implementera i dina spelare.
-seo-description: TVSDK för Android 3.4 innehåller en mängd funktioner som du kan implementera i dina spelare.
-seo-title: Funktioner i Primetime TVSDK
 title: Funktioner i Primetime TVSDK
-uuid: 6e26c09c-2858-47d1-80e8-1d7c6a468b86
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
