@@ -1,9 +1,9 @@
 ---
-seo-title: Kodleverans/paketinnehåll
 title: Kodleverans/paketinnehåll
-uuid: 13de2fd4-9079-496c-a087-25176c118864
+description: Kodleverans/paketinnehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
