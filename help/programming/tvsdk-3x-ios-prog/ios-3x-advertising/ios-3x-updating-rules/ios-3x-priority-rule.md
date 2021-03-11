@@ -1,14 +1,11 @@
 ---
 description: Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väljs för uppspelning från ett VAST/VMAP-svar.
-keywords: priority rule;creative selection rules
-seo-description: Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väljs för uppspelning från ett VAST/VMAP-svar.
-seo-title: Prioritetsregler
+keywords: prioritetsregel;regler för kreativt urval
 title: Prioritetsregler
-uuid: 86b9d654-c85c-45de-a512-969234c56bef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
