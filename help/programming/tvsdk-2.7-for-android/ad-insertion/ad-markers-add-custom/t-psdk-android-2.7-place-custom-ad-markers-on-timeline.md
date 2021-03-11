@@ -1,13 +1,10 @@
 ---
 description: I det här exemplet visas det rekommenderade sättet att inkludera anpassade annonsmarkörer på tidslinjen för uppspelningen.
-seo-description: I det här exemplet visas det rekommenderade sättet att inkludera anpassade annonsmarkörer på tidslinjen för uppspelningen.
-seo-title: Placera anpassade annonsmarkörer på tidslinjen
 title: Placera anpassade annonsmarkörer på tidslinjen
-uuid: ee74d1f3-7186-44b8-bad7-55af579842e8
 translation-type: tm+mt
-source-git-commit: 9f1f27bc6c23994338775a32f978a2e768a0f3aa
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
