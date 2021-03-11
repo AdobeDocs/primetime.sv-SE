@@ -1,9 +1,9 @@
 ---
-seo-title: Skapa anpassade DRM-profiler (valfritt)
 title: Skapa anpassade DRM-profiler (valfritt)
-uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
+description: Skapa anpassade DRM-profiler (valfritt)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -31,7 +31,7 @@ java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 
 Om du använder anpassad autentisering/tillstånd för Primetime Cloud DRM och vill skapa en ny DRM-princip dynamiskt för varje licensbegäran (i stället för att hämta principer från en förgenererad pool), rekommenderar Adobe att du använder Primetime DRM Java SDK direkt. Det går snabbare att använda Java SDK direkt än [!DNL AdobePolicyManager.jar]-verktyget, som automatiskt matar ut principfilen till disken, vilket medför I/O-diskpålägg.
 
-Exempelkod med Java SDK finns i katalogen [!DNL /Primetime DRM PolicyManager/sampleCode/] med namnen [!DNL CreatePolicy.java] och [!DNL CreatePolicyWithOutputProtection.java]. Javadocs och dokumentation för Java SDK finns på [En översikt över Adobe Primetime DRM SDK](../../../digital-rights-management/drm-sdk-overview/overview.md)
+Exempelkod som använder Java SDK finns i katalogen [!DNL /Primetime DRM PolicyManager/sampleCode/] med namnen [!DNL CreatePolicy.java] och [!DNL CreatePolicyWithOutputProtection.java]. Javadocs och dokumentation för Java SDK finns på [En översikt över Adobe Primetime DRM SDK](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
 Om du vill skapa och köra exemplen kopierar du .java-filerna till mappen ../libs/ och kör:
 
