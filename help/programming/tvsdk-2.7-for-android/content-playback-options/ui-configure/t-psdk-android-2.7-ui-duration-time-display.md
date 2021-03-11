@@ -1,13 +1,10 @@
 ---
 description: Du kan använda TVSDK för att hämta information om spelarens position i mediet och visa den i sökfältet.
-seo-description: Du kan använda TVSDK för att hämta information om spelarens position i mediet och visa den i sökfältet.
-seo-title: Visa videons varaktighet, aktuella tid och återstående tid
 title: Visa videons varaktighet, aktuella tid och återstående tid
-uuid: 13627fa2-8cd8-4336-bc4b-7e3226330389
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
