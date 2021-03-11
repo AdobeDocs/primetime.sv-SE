@@ -1,13 +1,10 @@
 ---
 description: Det viktigaste klientelementet i Primetime DRM-lösningen är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller också en DRMHelper-klass som kan användas för att göra vissa DRM-åtgärder enklare att implementera.
-seo-description: Det viktigaste klientelementet i Primetime DRM-lösningen är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller också en DRMHelper-klass som kan användas för att göra vissa DRM-åtgärder enklare att implementera.
-seo-title: Översikt över Primetime DRM-gränssnittet
 title: Översikt över Primetime DRM-gränssnittet
-uuid: 9e6f6ae6-7193-40fe-bc9d-d8de33705f5d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
