@@ -1,9 +1,9 @@
 ---
-seo-title: Återkallar datorautentiseringsuppgifter
 title: Återkallar datorautentiseringsuppgifter
-uuid: 3647c843-5f1a-457e-949d-10a6278b1c29
+description: Återkallar datorautentiseringsuppgifter
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
