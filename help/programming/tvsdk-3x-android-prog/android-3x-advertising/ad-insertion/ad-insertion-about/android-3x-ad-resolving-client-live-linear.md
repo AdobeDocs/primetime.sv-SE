@@ -1,13 +1,10 @@
 ---
 description: För direktsänt/linjärt innehåll ersätter TVSDK en del av huvudströmsinnehållet med en annonsbrytning med samma varaktighet, så att tidslinjens varaktighet förblir densamma.
-seo-description: För direktsänt/linjärt innehåll ersätter TVSDK en del av huvudströmsinnehållet med en annonsbrytning med samma varaktighet, så att tidslinjens varaktighet förblir densamma.
-seo-title: Lös och infoga Live/linear-annonser
 title: Lös och infoga Live/linear-annonser
-uuid: 722569f2-d260-4fcc-b6b9-01d86aa00e28
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
