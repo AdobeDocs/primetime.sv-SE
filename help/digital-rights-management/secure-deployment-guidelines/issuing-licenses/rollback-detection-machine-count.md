@@ -1,13 +1,10 @@
 ---
 description: Om affärsreglerna kräver att antalet datorer för en användare spåras, måste licensservern eller domänservern lagra de dator-ID som är associerade med användaren.
-seo-description: Om affärsreglerna kräver att antalet datorer för en användare spåras, måste licensservern eller domänservern lagra de dator-ID som är associerade med användaren.
-seo-title: Antal datorer när licenser utfärdas
 title: Antal datorer när licenser utfärdas
-uuid: 7ba8a8d4-a31f-4f37-82a7-755cfa443544
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
