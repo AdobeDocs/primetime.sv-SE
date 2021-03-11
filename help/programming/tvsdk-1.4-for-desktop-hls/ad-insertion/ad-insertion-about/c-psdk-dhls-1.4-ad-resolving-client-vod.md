@@ -1,13 +1,10 @@
 ---
 description: För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
-seo-description: För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
-seo-title: VOD-annonsmatchning och infogning
 title: VOD-annonsmatchning och infogning
-uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
