@@ -1,9 +1,9 @@
 ---
-seo-title: Skapar licensservern
 title: Skapar licensservern
-uuid: d7ca8a8f-c778-41a2-b823-93fac9ab07c5
+description: Skapar licensservern
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
