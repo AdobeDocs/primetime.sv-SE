@@ -1,13 +1,10 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
-seo-description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
-seo-title: Varningsmeddelandekoder
 title: Varningsmeddelandekoder
-uuid: da1a561d-3b9a-468a-a24a-7b6fa62aa2e8
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '341'
 ht-degree: 3%
 
 ---
@@ -139,7 +136,7 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_VARNING  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_VARNING  </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
    <td colname="5"> <p>Varning: Se beskrivning av sitecatalyst-varning. </p> </td> 
