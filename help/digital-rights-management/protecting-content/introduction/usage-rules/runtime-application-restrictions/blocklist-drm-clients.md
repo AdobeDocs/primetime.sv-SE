@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll
 title: Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll
-uuid: 38bc024e-0c5b-4c1c-8d4b-94b9e0fec67e
+description: Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
