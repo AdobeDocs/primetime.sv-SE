@@ -1,13 +1,10 @@
 ---
 description: Du bör separera spelarens gränssnittslogik från processen som hanterar och klickar. Ett sätt att göra detta är att implementera flera fragment för en aktivitet.
-seo-description: Du bör separera spelarens gränssnittslogik från processen som hanterar och klickar. Ett sätt att göra detta är att implementera flera fragment för en aktivitet.
-seo-title: Avgränsa klickbara annonser
 title: Avgränsa klickbara annonser
-uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
