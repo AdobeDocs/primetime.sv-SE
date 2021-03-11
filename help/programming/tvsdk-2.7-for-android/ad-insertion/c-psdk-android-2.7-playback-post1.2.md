@@ -1,13 +1,10 @@
 ---
 description: Medieuppspelningens beteende påverkas av sökning, pausning, snabb framåtspolning eller tillbakaspolning samt annonsering.
-seo-description: Medieuppspelningens beteende påverkas av sökning, pausning, snabb framåtspolning eller tillbakaspolning samt annonsering.
-seo-title: Standardbeteende och anpassat uppspelningsbeteende med annonser
 title: Standardbeteende och anpassat uppspelningsbeteende med annonser
-uuid: 272cdfd0-799f-41e5-bf41-1620d48c992a
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
