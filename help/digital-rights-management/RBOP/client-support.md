@@ -1,13 +1,10 @@
 ---
 description: I det här avsnittet beskrivs de funktioner som finns i olika versioner av Flash Player och TVSDK.
-seo-description: I det här avsnittet beskrivs de funktioner som finns i olika versioner av Flash Player och TVSDK.
-seo-title: Stöd för RBOP-klient
 title: Stöd för RBOP-klient
-uuid: d1d0f788-7bc1-488c-807e-be47f83725e9
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
