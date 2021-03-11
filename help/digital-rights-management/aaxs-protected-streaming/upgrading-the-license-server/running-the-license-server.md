@@ -1,13 +1,10 @@
 ---
 description: Om du vill uppgradera en server som kör Adobe Access Server för skyddad direktuppspelning ersätter du filen flashaccess.war som är distribuerad på programservern med filen som ingår i den senaste Adobe Access-filen. Om du vill använda de nya konfigurationsalternativen som beskrivs ovan uppdaterar du serverns flashaccess-tenant.xml. Du måste också uppdatera jsafe.dll eller libjsafe.so till den version som ingår i den senaste Adobe Access-versionen.
-seo-description: Om du vill uppgradera en server som kör Adobe Access Server för skyddad direktuppspelning ersätter du filen flashaccess.war som är distribuerad på programservern med filen som ingår i den senaste Adobe Access-filen. Om du vill använda de nya konfigurationsalternativen som beskrivs ovan uppdaterar du serverns flashaccess-tenant.xml. Du måste också uppdatera jsafe.dll eller libjsafe.so till den version som ingår i den senaste Adobe Access-versionen.
-seo-title: Köra Adobe Access Server för skyddad strömning
 title: Köra Adobe Access Server för skyddad strömning
-uuid: 3819500d-ad2f-49eb-8aa4-e50a55461608
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
