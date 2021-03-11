@@ -1,13 +1,10 @@
 ---
 description: Från den stund du skapar MediaPlayer-instansen till den tidpunkt då du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar mellan statusarna.
-seo-description: Från den stund du skapar MediaPlayer-instansen till den tidpunkt då du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar mellan statusarna.
-seo-title: MediaPlayer-objektets livscykel
 title: MediaPlayer-objektets livscykel
-uuid: 1452ae3a-7ce9-439e-951c-9d3db63b1d20
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
