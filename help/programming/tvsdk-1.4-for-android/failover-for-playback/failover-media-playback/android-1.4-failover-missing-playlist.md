@@ -1,13 +1,10 @@
 ---
 description: När en hel spelningslista saknas, till exempel när M3U8-filen som anges i en manifestfil på översta nivån inte hämtas, försöker TVSDK att återställas. Om programmet inte kan återställas bestäms nästa steg.
-seo-description: När en hel spelningslista saknas, till exempel när M3U8-filen som anges i en manifestfil på översta nivån inte hämtas, försöker TVSDK att återställas. Om programmet inte kan återställas bestäms nästa steg.
-seo-title: Redundans för spelningslista saknas
 title: Redundans för spelningslista saknas
-uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
