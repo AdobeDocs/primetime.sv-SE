@@ -1,13 +1,10 @@
 ---
 description: Använd Adobe Primetime DRM API:er för att verifiera signaturen om du vill förbruka lokalt genererade listor över återkallade certifikat (CRL:er) och principuppdateringslistor.
-seo-description: Använd Adobe Primetime DRM API:er för att verifiera signaturen om du vill förbruka lokalt genererade listor över återkallade certifikat (CRL:er) och principuppdateringslistor.
-seo-title: Använda lokalt genererade listor över återkallade certifikat
 title: Använda lokalt genererade listor över återkallade certifikat
-uuid: 2e20b8ca-8606-4c27-b585-2f020b93be32
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
