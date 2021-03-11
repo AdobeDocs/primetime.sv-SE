@@ -1,13 +1,10 @@
 ---
 description: På enheter som stöder GPU-acceleration (maskinvara) kan du använda ett flash.media.StageVideo-objekt för att bearbeta video direkt på enhetens maskinvara.
-seo-description: På enheter som stöder GPU-acceleration (maskinvara) kan du använda ett flash.media.StageVideo-objekt för att bearbeta video direkt på enhetens maskinvara.
-seo-title: Lägsta krav för StageVideo
 title: Lägsta krav för StageVideo
-uuid: 8916dbac-33e0-4efd-8105-9ddbc85f0a3f
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
