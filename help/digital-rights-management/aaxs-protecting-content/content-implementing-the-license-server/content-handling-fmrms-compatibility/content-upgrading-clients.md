@@ -1,9 +1,9 @@
 ---
-seo-title: Uppgraderar klienter
 title: Uppgraderar klienter
-uuid: 9c9bc7da-2a97-4659-945a-554d778d30a3
+description: Uppgraderar klienter
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
