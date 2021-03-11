@@ -1,9 +1,9 @@
 ---
-seo-title: Uppgradera Adobe Primetime DRM Server for Protected Streaming
 title: Uppgradera Adobe Primetime DRM Server for Protected Streaming
-uuid: 5c507ae3-d1d9-40ad-ba97-501ec92b45dc
+description: Uppgradera Adobe Primetime DRM Server for Protected Streaming
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
