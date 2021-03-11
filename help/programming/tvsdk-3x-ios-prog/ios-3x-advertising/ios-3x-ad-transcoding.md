@@ -1,13 +1,10 @@
 ---
 description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas i innehållsströmmen för HTTP-direktuppspelning (HLS) eftersom deras videoformat inte är kompatibelt med HLS. Primetimes annonsinfogning och TVSDK kan som tillval försöka paketera om inkompatibla annonser i kompatibla M3U8-videor.
-seo-description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas i innehållsströmmen för HTTP-direktuppspelning (HLS) eftersom deras videoformat inte är kompatibelt med HLS. Primetimes annonsinfogning och TVSDK kan som tillval försöka paketera om inkompatibla annonser i kompatibla M3U8-videor.
-seo-title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
 title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
-uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
