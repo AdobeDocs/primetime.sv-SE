@@ -1,13 +1,10 @@
 ---
 description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
-seo-description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
-seo-title: Välj ett aktuellt bildtextspår bland tillgängliga spår
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
-uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
