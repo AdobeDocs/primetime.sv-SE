@@ -1,13 +1,10 @@
 ---
 description: När en MediaPlayer-vy har använts för att spela upp video kan du dölja den och visa den igen med en TVSDK-metod eller manuellt.
-seo-description: När en MediaPlayer-vy har använts för att spela upp video kan du dölja den och visa den igen med en TVSDK-metod eller manuellt.
-seo-title: Dölja en videovy
 title: Dölja en videovy
-uuid: 7cc02bf4-41ee-4af0-98ba-df070b50b88d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
