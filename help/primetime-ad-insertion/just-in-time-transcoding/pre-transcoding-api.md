@@ -1,13 +1,10 @@
 ---
 title: API för förkodning
 description: Du kan använda API:t för just-in-time-ompaketering för att koda annonsprojekt i förväg, så att det finns en innehållskompatibel version tillgänglig när det behövs, vilket eliminerar den 2-4 minuters fördröjning som är kopplad till just-in-time-ompaketering (JIT).
-seo-description: Du kan använda API:t för just-in-time-ompaketering för att koda annonsprojekt i förväg, så att det finns en innehållskompatibel version tillgänglig när det behövs, vilket eliminerar den 2-4 minuters fördröjning som är kopplad till just-in-time-ompaketering (JIT).
-seo-title: API för förkodning
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
