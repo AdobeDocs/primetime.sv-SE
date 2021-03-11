@@ -1,13 +1,10 @@
 ---
 description: Klientförfrågningar om annonsinfogning anger vanligtvis mer än en bithastighet i variantens M3U8-formaterade spelningslista. Manifestservern genererar och returnerar en ny variant av M3U8-fil som innehåller en separat M3U8-länk för varje bithastighet. Det genererar också ett unikt grupp-ID som knyter ihop dessa M3U8s.
-seo-description: Klientförfrågningar om annonsinfogning anger vanligtvis mer än en bithastighet i variantens M3U8-formaterade spelningslista. Manifestservern genererar och returnerar en ny variant av M3U8-fil som innehåller en separat M3U8-länk för varje bithastighet. Det genererar också ett unikt grupp-ID som knyter ihop dessa M3U8s.
-seo-title: Flera bithastighetsströmmar
 title: Flera bithastighetsströmmar
-uuid: f59cb765-e000-43e0-8d3a-8149a3c5b96e
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
