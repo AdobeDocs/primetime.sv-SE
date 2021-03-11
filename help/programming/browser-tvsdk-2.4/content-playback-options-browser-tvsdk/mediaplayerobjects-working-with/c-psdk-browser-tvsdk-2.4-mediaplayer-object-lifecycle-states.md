@@ -1,13 +1,10 @@
 ---
 description: Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här instansen från ett läge till nästa.
-seo-description: Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här instansen från ett läge till nästa.
-seo-title: Livscykel och lägen för MediaPlayer-objektet
 title: Livscykel och lägen för MediaPlayer-objektet
-uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
