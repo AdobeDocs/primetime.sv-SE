@@ -1,13 +1,10 @@
 ---
 description: Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
-seo-description: Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
-seo-title: Ändringar i API:t för borttagning och ersättning av annonser
 title: Ändringar i API:t för borttagning och ersättning av annonser
-uuid: 7cc50e7a-666f-4588-9c16-ad6d7d75cb65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
