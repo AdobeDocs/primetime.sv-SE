@@ -1,13 +1,10 @@
 ---
 description: Om du vill konfigurera Primetime DRM kopierar du filerna från dvd-skivan. Dessa filer innehåller JAR-filer som innehåller kod, certifikat och klasser från tredje part. Dessutom måste du begära ett certifikat från Adobe Systems, Incorporated. Adobe skickar sedan ut flera autentiseringsuppgifter som du använder för att skydda integriteten för ditt paketerade innehåll, licenser och kommunikation mellan klient och server.
-seo-description: Om du vill konfigurera Primetime DRM kopierar du filerna från dvd-skivan. Dessa filer innehåller JAR-filer som innehåller kod, certifikat och klasser från tredje part. Dessutom måste du begära ett certifikat från Adobe Systems, Incorporated. Adobe skickar sedan ut flera autentiseringsuppgifter som du använder för att skydda integriteten för ditt paketerade innehåll, licenser och kommunikation mellan klient och server.
-seo-title: Konfigurera utvecklingsmiljön
 title: Konfigurera utvecklingsmiljön
-uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
