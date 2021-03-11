@@ -1,13 +1,10 @@
 ---
 description: TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga.
-seo-description: TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga.
-seo-title: DRM-händelser
 title: DRM-händelser
-uuid: c4d96e06-2268-4e38-9d05-68ccbe912484
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
