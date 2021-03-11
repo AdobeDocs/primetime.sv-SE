@@ -1,12 +1,10 @@
 ---
 description: 'Tabellen innehåller detaljerad information om meddelanden om intäktsoptimering. '
-seo-description: 'Tabellen innehåller detaljerad information om meddelanden om intäktsoptimering. '
-seo-title: Kod för intäktsoptimering
 title: Kod för intäktsoptimering
 translation-type: tm+mt
-source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -35,7 +33,7 @@ Aktivera den här rapporteringen genom att använda PTMediaPlayer-API: `[mediaPl
 | **AD_OPPORTUNITY_** GENERATEDDskickas i TVSDK när en affärsmöjlighet genereras. | clientTimestamp, event, opportunityId, placementDuration, clientId |
 | **AD_OPPORTUNITY_RESOLVE_** STARTD skickas i TVSDK när en affärsmöjlighet börjar matchas. | clientTimestamp, event, opportunityId, placementDuration, clientId |
 | **AD_OPPORTUNITY_RESOLVE_** FAILEDDskickas i TVSDK när en annonslösare anropar MediaPlayerClient::notifyFailed(). Behöver fylla i data | opportunityId, notificationAD |
-| **AD_RESOURCE_** LOADDskickas när en annonsresurs hämtas av URL. responseStartTime:Unix-tidsstämpel för när begäran först startades. responseTotalTime:Total tid (i sekunder) som det tog för ett svar att läsas in. responseStatus:Statuskoden som påträffades när resursen hämtades. status:&quot;error&quot; eller&quot;success&quot; referenceAdId:Det refererande annons-ID som begärde hämtning av den här resursen (om sådan finns). referenceUrl:Den refererande URL som begärde hämtning av den här resursen. errorMessage:Om statusen är &quot;error&quot;, finns orsaken till felet här. | opportunityId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, referenceURL, referenceAdId |
+| **AD_RESOURCE_** LOADDskickas när en annonsresurs hämtas av URL. responseStartTime:Unix-tidsstämpel för när begäran först startades. responseTotalTime:Total tid (i sekunder) som det tog för ett svar att läsas in. responseStatus:Statuskoden som påträffades när resursen hämtades. status:&quot;error&quot; eller&quot;success&quot; referenceAdId:Det refererande annons-ID som begärde hämtning av den här resursen (om sådan finns). referenceUrl:Den refererande URL som begärde hämtning av den här resursen. errorMessage:Om statusen är &quot;error&quot;, finns orsaken till felet här. | OpportunityId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, referenceURL, referenceAdId |
 | **AD_RESOURCE_LOAD_** CRSD skickas i TVSDK när en CRS används på en resurs samt svaret för m3u8. resourceType:always &quot;crs&quot;. responseStartTime:Unix-tidsstämpel för när begäran först startades. responseTotalTime:Total tid (i sekunder) som det tog för ett svar att läsas in. responseStatus:Statuskoden som påträffades när resursen hämtades. status:&quot;error&quot; eller&quot;success&quot;. errorMessage:Om statusen är &quot;error&quot;, finns orsaken till felet här. mediaFileUrl:Den ursprungliga mediefilens URL som markerades. mediaFileBitrate:Bithastigheten för den valda mediefilen. mediaFileMimeType: MIME-typen för den valda mediefilen. url:Den sista resurs-URL:en. | OpportunityId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, mediaFileURL, mediaFileBitrate, mediaFileMimeType, url |
 | **AD_TIMELINE_** PLACEDskickas i TVSDK efter att en adBreak placerats på tidslinjen. Den här händelsen inträffar en gång för varje annonsbrytning. proposedTime:Den tid då annonsbrytningen begärdes att placeras. actualTime:Den tid då annonsbrytningen faktiskt placerades. proposedDuration:Varaktigheten för den annonsbrytning som begärdes för infogning. För direktinnehåll är detta referenslängden. För VOD-innehåll är detta normalt -1. actualDuration:Den faktiska längden på den infogade annonsbrytningen. Beräknas som den sammanlagda längden för alla annonser, som definieras av deras respektive segmentvaraktighet, som läggs till eller ersätts på den ursprungliga strömmens tidslinje. proposedAds:Antalet annonser i den föreslagna reklambrytningen. totalAds:Antalet annonser som har placerats ut. annonser...n:De infogade annonserna infogas här. Hela annonsmanifestinformationen kan hämtas från AD_OPPORTUNITY_RESOLVE_PROCESS | OpportunityId, status, errorMessage, proposedTime, proposedDuration, actualTime, actualDuration, proposedAds, totalAds, ads_id, ads_type, ads_duration, ads_url |
 | **AD_PLAYBACK_** STARTD skickas i TVSDK när en annons börjar spelas upp. | clientTimestamp, event, id, url, duration, type, opportunityId, clientId |
