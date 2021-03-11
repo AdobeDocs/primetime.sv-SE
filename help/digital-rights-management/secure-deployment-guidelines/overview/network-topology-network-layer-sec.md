@@ -1,13 +1,10 @@
 ---
 description: Säkerhetsluckor för nätverk är bland de första hoten mot alla Internetanslutna eller intranätriktade programservrar, och du måste värdar i nätverket mot dessa sårbarheter.
-seo-description: Säkerhetsluckor för nätverk är bland de första hoten mot alla Internetanslutna eller intranätriktade programservrar, och du måste värdar i nätverket mot dessa sårbarheter.
-seo-title: Säkerhet för nätverkslager
 title: Säkerhet för nätverkslager
-uuid: c750c595-a784-47ce-be0b-17b8d60c5753
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
