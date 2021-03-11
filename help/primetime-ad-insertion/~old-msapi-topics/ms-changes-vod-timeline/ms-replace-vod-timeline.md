@@ -1,13 +1,10 @@
 ---
 description: Tidslinjen för annonsen som är lämplig för en uppspelning av VOD-innehåll kan vara olämplig för efterföljande uppspelningar. Du kan ersätta en VOD-tidslinje utan att ändra innehållet.
-seo-description: Tidslinjen för annonsen som är lämplig för en uppspelning av VOD-innehåll kan vara olämplig för efterföljande uppspelningar. Du kan ersätta en VOD-tidslinje utan att ändra innehållet.
-seo-title: Ändringar i VOD
 title: Ändringar i VOD
-uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
