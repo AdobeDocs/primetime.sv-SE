@@ -1,9 +1,9 @@
 ---
-seo-title: Översikt över out-of-band-licenser
 title: Översikt över out-of-band-licenser
-uuid: 82e4529a-ee1b-4c0c-8885-e0e68319d1a0
+description: Översikt över out-of-band-licenser
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
