@@ -1,9 +1,9 @@
 ---
-seo-title: Använda översikten över klassen DRMErrorEvent
 title: Använda översikten över klassen DRMErrorEvent
-uuid: cbb9c1a7-3c50-479d-b7e5-63010a696dfa
+description: Använda översikten över klassen DRMErrorEvent
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
