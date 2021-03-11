@@ -1,13 +1,10 @@
 ---
 description: CRS kan mata in ID3-metadata i HLS-format och andra kreatörer för att underlätta annonsspårning på klientsidan.
-seo-description: CRS kan mata in ID3-metadata i HLS-format och andra kreatörer för att underlätta annonsspårning på klientsidan.
-seo-title: Använda CRS för att mata in ID3 Timed Metadata-taggar
 title: Använda CRS för att mata in ID3 Timed Metadata-taggar
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
