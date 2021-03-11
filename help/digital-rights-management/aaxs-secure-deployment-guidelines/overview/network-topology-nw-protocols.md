@@ -1,9 +1,9 @@
 ---
-seo-title: Nätverksprotokoll som används av Adobe Access
 title: Nätverksprotokoll som används av Adobe Access
-uuid: 4f2ee3f5-6758-4fbe-b5cd-cead1e5ccde8
+description: Nätverksprotokoll som används av Adobe Access
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
