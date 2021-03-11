@@ -1,9 +1,9 @@
 ---
-seo-title: Hantera begäranden om hämtning av serverversion
 title: Hantera begäranden om hämtning av serverversion
-uuid: a3084faa-cf3d-45cc-a244-298308c4cf15
+description: Hantera begäranden om hämtning av serverversion
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
