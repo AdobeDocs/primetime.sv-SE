@@ -1,13 +1,10 @@
 ---
 description: Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
-seo-description: Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
-seo-title: Släpp en MediaPlayer-instans och resurser
 title: Släpp en MediaPlayer-instans och resurser
-uuid: e7b2112e-8add-4789-9345-5f829d39d639
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
