@@ -1,13 +1,10 @@
 ---
 description: Standardscenariot för den kreativa ompaketeringstjänsten (CRS) är att använda ett CDN (Content Delivery Network), men du kan distribuera CRS-resurser på mer än ett CDN.
-seo-description: Standardscenariot för den kreativa ompaketeringstjänsten (CRS) är att använda ett CDN (Content Delivery Network), men du kan distribuera CRS-resurser på mer än ett CDN.
-seo-title: Flera CDN-funktioner för CRS och leverans
 title: Flera CDN-funktioner för CRS och leverans
-uuid: c5557a38-aa49-4161-bb58-3e8dff9a4d64
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
