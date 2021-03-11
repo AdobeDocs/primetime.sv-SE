@@ -1,9 +1,9 @@
 ---
-seo-title: Tidsbaserade regler
 title: Tidsbaserade regler
-uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
+description: Tidsbaserade regler
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
