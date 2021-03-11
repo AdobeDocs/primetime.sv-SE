@@ -1,13 +1,10 @@
 ---
 description: Du kan använda Primetime Player-API:t för att anpassa spelarens beteende. Dessa klasser beskriver din mediespelare och dess resurser.
-seo-description: Du kan använda Primetime Player-API:t för att anpassa spelarens beteende. Dessa klasser beskriver din mediespelare och dess resurser.
-seo-title: Mediacore-klasser
 title: Mediacore-klasser
-uuid: f43d6968-cb08-4a8e-aebd-7934763df680
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
