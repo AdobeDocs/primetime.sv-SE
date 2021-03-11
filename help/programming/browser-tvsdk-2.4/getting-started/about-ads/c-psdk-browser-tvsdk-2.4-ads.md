@@ -1,13 +1,10 @@
 ---
 description: När innehåll spelas upp kan webbläsarens TVSDK visa annonser och skicka information om annonser när MediaResource-objektet skapas.
-seo-description: När innehåll spelas upp kan webbläsarens TVSDK visa annonser och skicka information om annonser när MediaResource-objektet skapas.
-seo-title: Annonser
 title: Annonser
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
