@@ -1,14 +1,11 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
-seo-description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
-seo-title: Omdirigeringsoptimering för HTTP 302
 title: Omdirigeringsoptimering för HTTP 302
-uuid: 91ed8919-a3c1-4e57-9eaf-e3ba430de35f
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 1%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +18,7 @@ Om en huvudmanifestbegäran omdirigeras och 302-optimering aktiveras i spelaren 
 
 ## Inaktivera eller aktivera 302 omdirigeringsoptimering {#section_8977448B268E41D69A8F75B60EB9DA3B}
 
-Använd egenskapen `useRedirectedUrl` om du vill aktivera eller inaktivera 302 omdirigering ( `true`) eller ( `false`).
+Använd egenskapen `useRedirectedUrl` för att aktivera eller inaktivera 302 omdirigering ( `true`) eller ( `false`).
 
 <!--<a id="example_888749F70C8A43279D06A29BD68E7E4D"></a>-->
 
