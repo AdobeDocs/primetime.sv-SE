@@ -1,16 +1,12 @@
 ---
 title: Versionsinformation om TVSDK 3.13 för Android
-seo-title: Versionsinformation om TVSDK 3.13 för Android
 description: Versionsinformation för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13
-seo-description: Versionsinformation för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13
-uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '5471'
+source-wordcount: '5443'
 ht-degree: 0%
 
 ---
