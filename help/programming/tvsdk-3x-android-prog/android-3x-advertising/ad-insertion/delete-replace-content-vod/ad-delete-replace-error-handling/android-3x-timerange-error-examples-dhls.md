@@ -1,13 +1,10 @@
 ---
 description: TVSDK svarar på felaktiga specifikationer för tidsintervall genom att sammanfoga eller ersätta tidsintervallen efter behov.
-seo-description: TVSDK svarar på felaktiga specifikationer för tidsintervall genom att sammanfoga eller ersätta tidsintervallen efter behov.
-seo-title: Exempel på tidsintervallfel
 title: Exempel på tidsintervallfel
-uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
