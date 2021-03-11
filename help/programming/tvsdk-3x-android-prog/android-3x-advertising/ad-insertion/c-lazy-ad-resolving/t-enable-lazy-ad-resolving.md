@@ -1,14 +1,11 @@
 ---
 description: Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).
-seo-title: Aktivera lat och löst
+keywords: Lazy;Annonsupplösning;Annonsinläsning;delayLoading
 title: Aktivera lat och löst
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
