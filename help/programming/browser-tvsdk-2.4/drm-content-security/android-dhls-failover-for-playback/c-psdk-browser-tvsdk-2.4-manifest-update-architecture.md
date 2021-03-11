@@ -1,13 +1,10 @@
 ---
 description: Här är information och exempel på hur webbläsaren TVSDK kan hantera uppdaterade överordnad manifest.
-seo-description: Här är information och exempel på hur webbläsaren TVSDK kan hantera uppdaterade överordnad manifest.
-seo-title: Live överordnad-manifest update architecture
 title: Live överordnad-manifest update architecture
-uuid: 6f253502-8dec-4b42-9ee1-99ad9bfd6080
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
