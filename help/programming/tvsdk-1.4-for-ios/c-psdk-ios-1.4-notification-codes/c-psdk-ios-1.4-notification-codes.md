@@ -1,13 +1,10 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-title: Meddelandekoder
 title: Meddelandekoder
-uuid: 8a332057-8fda-4497-9264-a2caac92e900
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -31,7 +28,7 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
    <td colname="1"><span class="codeph"> type</span></td> 
    <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräkningstyp med möjliga värden för 
     <pre>
-      INFORMATION, VARNING eller FEL. Det här är den översta grupperingen för meddelanden.
+      INFORMATION, VARNING ELLER FEL. Det här är den översta grupperingen för meddelanden.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
