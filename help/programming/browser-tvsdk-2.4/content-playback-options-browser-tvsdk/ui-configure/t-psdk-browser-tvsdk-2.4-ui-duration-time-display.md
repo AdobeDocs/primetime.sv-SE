@@ -1,13 +1,10 @@
 ---
 description: Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
-seo-description: Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
-seo-title: Visa videons varaktighet, aktuella tid och återstående tid
 title: Visa videons varaktighet, aktuella tid och återstående tid
-uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
