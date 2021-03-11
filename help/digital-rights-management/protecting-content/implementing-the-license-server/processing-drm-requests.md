@@ -1,9 +1,9 @@
 ---
-seo-title: Bearbeta Adobe Primetime DRM-begäranden
 title: Bearbeta Adobe Primetime DRM-begäranden
-uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
+description: Bearbeta Adobe Primetime DRM-begäranden
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1251'
 ht-degree: 0%
