@@ -1,13 +1,10 @@
 ---
 description: Du kan spåra videoanvändning genom att integrera Browser TVSDK med Adobe Analytics.
-seo-description: Du kan spåra videoanvändning genom att integrera Browser TVSDK med Adobe Analytics.
-seo-title: Videoanalys
 title: Videoanalys
-uuid: 6351933b-c0f3-4e3e-ad27-bedc8eecc312
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
