@@ -1,13 +1,10 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
-seo-description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
-seo-title: Överväganden och bästa praxis
 title: Överväganden och bästa praxis
-uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
