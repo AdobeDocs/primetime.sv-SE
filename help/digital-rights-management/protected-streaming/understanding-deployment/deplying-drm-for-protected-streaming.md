@@ -1,9 +1,9 @@
 ---
-seo-title: Driftsätta Adobe Primetime DRM Server for Protected Streaming
 title: Driftsätta Adobe Primetime DRM Server for Protected Streaming
-uuid: 83ef8237-0026-4677-b42b-ea4b6de19630
+description: Driftsätta Adobe Primetime DRM Server for Protected Streaming
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
