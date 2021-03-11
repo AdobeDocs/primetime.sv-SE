@@ -1,13 +1,10 @@
 ---
 description: Adobe tillhandahåller en molntjänst för DRM till Adobe Primetime DRM-kunder som inte vill utveckla och underhålla sin egen Primetime DRM-licensserver. Genom att använda den här tjänsten kan kunderna minska komplexiteten vad gäller drift och utveckling i samband med utfärdandet av DRM-licenser. Primetime Cloud DRM kan utfärda DRM-licenser till alla enheter som kan köra en Primetime Browser TVSDK-aktiverad videoapplikation, som iOS, Android, stationära datorer och Xbox360. Den här DRM-tjänsten hanteras av Adobe, med drifttid dygnet runt.
-seo-description: Adobe tillhandahåller en molntjänst för DRM till Adobe Primetime DRM-kunder som inte vill utveckla och underhålla sin egen Primetime DRM-licensserver. Genom att använda den här tjänsten kan kunderna minska komplexiteten vad gäller drift och utveckling i samband med utfärdandet av DRM-licenser. Primetime Cloud DRM kan utfärda DRM-licenser till alla enheter som kan köra en Primetime Browser TVSDK-aktiverad videoapplikation, som iOS, Android, stationära datorer och Xbox360. Den här DRM-tjänsten hanteras av Adobe, med drifttid dygnet runt.
-seo-title: Bakgrund
 title: Bakgrund
-uuid: 11a5b9ea-ebd2-47e0-b078-af2a3e1f7bf6
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
