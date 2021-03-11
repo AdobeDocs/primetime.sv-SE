@@ -1,14 +1,11 @@
 ---
 description: Du kan använda TVSDK-konfigurationsfilen (AdobeTVSDKConfig.json) för att uppdatera prioriteterna för annonsmarkering på VAST-/VMAP-svar. Du kan också använda den här konfigurationsfilen för att definiera URL-transformeringsreglerna för källa för annonskreatörer.
-keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
-seo-description: Du kan använda TVSDK-konfigurationsfilen (AdobeTVSDKConfig.json) för att uppdatera prioriteterna för annonsmarkering på VAST-/VMAP-svar. Du kan också använda den här konfigurationsfilen för att definiera URL-transformeringsreglerna för källa för annonskreatörer.
-seo-title: Uppdatera och skapa regler för urval
+keywords: regler för kreativt urval;AdobeTVSDKConfig;ad creative priority;transformeringsregler
 title: Uppdatera och skapa regler för urval
-uuid: b7d316ef-323e-4769-83d9-036422ae1707
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
