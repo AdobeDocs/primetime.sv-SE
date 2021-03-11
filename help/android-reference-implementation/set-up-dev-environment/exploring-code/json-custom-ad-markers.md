@@ -1,9 +1,9 @@
 ---
-seo-title: JSON-objekt för anpassade annonsmarkörer
 title: JSON-objekt för anpassade annonsmarkörer
-uuid: 2c05d9ce-a22f-4829-bfea-9dcf0dc7cd6d
+description: JSON-objekt för anpassade annonsmarkörer
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
