@@ -1,9 +1,9 @@
 ---
-seo-title: Underhåll en tillåtelselista av pålitliga innehållspaket
 title: Underhåll en tillåtelselista av pålitliga innehållspaket
-uuid: ad40993c-15c3-43b2-9593-7b75802cfe69
+description: Underhåll en tillåtelselista av pålitliga innehållspaket
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
