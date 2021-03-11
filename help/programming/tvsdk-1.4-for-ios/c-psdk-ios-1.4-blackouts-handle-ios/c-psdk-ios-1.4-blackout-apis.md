@@ -1,13 +1,10 @@
 ---
 description: TVSDK innehåller API-element som är användbara när du implementerar utfall, inklusive metoder, metadata och meddelanden.
-seo-description: TVSDK innehåller API-element som är användbara när du implementerar utfall, inklusive metoder, metadata och meddelanden.
-seo-title: API-element för svart
 title: API-element för svart
-uuid: ddc81558-4218-44d2-92df-15926c7c96b3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
