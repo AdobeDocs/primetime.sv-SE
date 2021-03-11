@@ -1,13 +1,10 @@
 ---
 description: Du kan lägga till TVSDK-beteende för att pausa och spela upp knappar.
-seo-description: Du kan lägga till TVSDK-beteende för att pausa och spela upp knappar.
-seo-title: Spela upp och pausa en video
 title: Spela upp och pausa en video
-uuid: 04b3b23f-5ef1-4cc4-a22f-f6ffa9cefce5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
