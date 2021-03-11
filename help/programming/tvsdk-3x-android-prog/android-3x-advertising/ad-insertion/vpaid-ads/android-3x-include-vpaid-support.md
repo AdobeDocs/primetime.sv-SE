@@ -1,13 +1,10 @@
 ---
 description: Om du vill lägga till stöd för VPAID 2.0 lägger du till en anpassad annonsvy och lämpliga avlyssnare.
-seo-description: Om du vill lägga till stöd för VPAID 2.0 lägger du till en anpassad annonsvy och lämpliga avlyssnare.
-seo-title: Implementera VPAID 2.0-integrering
 title: Implementera VPAID 2.0-integrering
-uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
-source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
