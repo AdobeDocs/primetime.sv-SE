@@ -1,13 +1,10 @@
 ---
 description: Du kan använda HTML-övertäckningar med StageVideo för att visa gränssnittselement i videoplanet för visningslistan i Flash. Det här planet är ovanför StageVideo-planet, så StageVideo visas alltid bakom alla visningslisteelement i Flash.
-seo-description: Du kan använda HTML-övertäckningar med StageVideo för att visa gränssnittselement i videoplanet för visningslistan i Flash. Det här planet är ovanför StageVideo-planet, så StageVideo visas alltid bakom alla visningslisteelement i Flash.
-seo-title: StageVideo- och HTML-övertäckningar
 title: StageVideo- och HTML-övertäckningar
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
