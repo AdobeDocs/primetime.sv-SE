@@ -1,13 +1,10 @@
 ---
 description: I AdobeTVSDKConfig.json kan du ange standardregler samt regler för specifika zoner.
-seo-description: I AdobeTVSDKConfig.json kan du ange standardregler samt regler för specifika zoner.
-seo-title: Exempel på regler för kreativt urval
 title: Exempel på regler för kreativt urval
-uuid: 4e5fd912-6f87-4fa2-9bf7-7185a5d434e1
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
