@@ -1,9 +1,9 @@
 ---
-seo-title: Skapa JKS för en XSTS-validerare
 title: Skapa JKS för en XSTS-validerare
-uuid: e02b517d-0b72-4e95-92b2-09b8f785cce6
+description: Skapa JKS för en XSTS-validerare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
