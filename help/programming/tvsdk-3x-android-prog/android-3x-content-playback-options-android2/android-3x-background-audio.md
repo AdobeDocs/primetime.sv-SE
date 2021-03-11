@@ -1,9 +1,9 @@
 ---
-seo-title: Aktivera bakgrundsljud
 title: Aktivera bakgrundsljud
-uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
+description: Aktivera bakgrundsljud
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
