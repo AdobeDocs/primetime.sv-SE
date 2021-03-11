@@ -1,13 +1,10 @@
 ---
 description: Att hämta video och ljud parallellt, i stället för i en serie, minskar startfördröjningarna.
-seo-description: Att hämta video och ljud parallellt, i stället för i en serie, minskar startfördröjningarna.
-seo-title: Parallella nedladdningar
 title: Parallella nedladdningar
-uuid: 11d37a39-391d-4127-9aa7-c94eb8a6a6a8
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
