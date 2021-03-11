@@ -1,13 +1,10 @@
 ---
 description: Du kan konfigurera spelaren så att den spårar och analyserar videoanvändningen.
-seo-description: Du kan konfigurera spelaren så att den spårar och analyserar videoanvändningen.
-seo-title: Initiera och konfigurera videoanalys
 title: Initiera och konfigurera videoanalys
-uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
