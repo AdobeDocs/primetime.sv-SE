@@ -1,13 +1,10 @@
 ---
 description: I vissa fall måste du veta om medieinnehållet är direktsänt eller VOD.
-seo-description: I vissa fall måste du veta om medieinnehållet är direktsänt eller VOD.
-seo-title: Identifiera om innehållet är live eller VOD
 title: Identifiera om innehållet är live eller VOD
-uuid: cd71b8d3-259a-48f8-a6ad-02b57da146a7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
