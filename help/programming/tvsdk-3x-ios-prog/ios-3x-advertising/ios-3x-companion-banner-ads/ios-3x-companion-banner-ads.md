@@ -1,13 +1,10 @@
 ---
 description: TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
-seo-description: TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
-seo-title: Companion banner ads
 title: Companion banner ads
-uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
-Följ de här rekommendationerna när du visar följeslagarannonser:
+Följ dessa rekommendationer när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
 * Visa bara en tilläggsbanderoll om du har en plats som exakt matchar den angivna höjden och bredden.
