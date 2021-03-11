@@ -1,13 +1,10 @@
 ---
 description: Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
-seo-description: Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
-seo-title: Läge för annonssignalering
 title: Läge för annonssignalering
-uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
