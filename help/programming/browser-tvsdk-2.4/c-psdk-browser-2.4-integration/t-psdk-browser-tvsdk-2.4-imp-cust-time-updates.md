@@ -1,13 +1,10 @@
 ---
 description: I vissa analysimplementeringar kanske klientprogrammet vill ange en annan spelhuvudposition än den position som rapporteras av Browser TVSDK localTime-värdet.
-seo-description: I vissa analysimplementeringar kanske klientprogrammet vill ange en annan spelhuvudposition än den position som rapporteras av Browser TVSDK localTime-värdet.
-seo-title: Implementera anpassade tidsuppdateringar
 title: Implementera anpassade tidsuppdateringar
-uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
