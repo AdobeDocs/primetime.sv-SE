@@ -1,14 +1,11 @@
 ---
 description: Du kan skapa en Browserify-kompatibel spelare med JS-filer som tillhandahålls av Browser TVSDK.
-seo-description: Du kan skapa en Browserify-kompatibel spelare med JS-filer som tillhandahålls av Browser TVSDK.
-seo-title: Browserify-kompatibel spelare
 title: Browserify-kompatibel spelare
-uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 2%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
 
