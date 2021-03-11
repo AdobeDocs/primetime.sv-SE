@@ -1,14 +1,11 @@
 ---
-description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen"PREPARED" samt för medelrullar och efterrullningar efter statusen"PREPARED". Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen"PREPARED" samt för medelrullar och efterrullningar efter statusen"PREPARED". Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
-seo-title: Just-in-time Ad Resolving
+description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen"PREPARED" och"för- och efterrullningar" efter statusen"PREPARED". Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
+keywords: Lazy;Annonslösningar;Annonsinläsning
 title: Just-in-time Ad Resolving
-uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -16,7 +13,7 @@ ht-degree: 0%
 
 # Översikt {#just-in-time-ad-resolving-overview}
 
-Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen&quot;PREPARED&quot; samt för medelrullar och efterrullningar efter statusen&quot;PREPARED&quot;. Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
+Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen&quot;PREPARED&quot; och&quot;för- och efterrullningar&quot; efter statusen&quot;PREPARED&quot;. Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
 
 * Grundläggande annonslösning och inläsningsprocess:
 
