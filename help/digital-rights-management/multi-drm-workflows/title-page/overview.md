@@ -1,13 +1,10 @@
 ---
 description: Du kan implementera flera DRM-lösningar för dina TVSDK-appar med Primetime DRM Cloud, som drivs av ExpressPlay. DRM-lösningarna inkluderar Apples FairPlay, Googles WideVM, Microsofts PlayReady och Primetime Access från Adobe.
-seo-description: Du kan implementera flera DRM-lösningar för dina TVSDK-appar med Primetime DRM Cloud, som drivs av ExpressPlay. DRM-lösningarna inkluderar Apples FairPlay, Googles WideVM, Microsofts PlayReady och Primetime Access från Adobe.
-seo-title: Översikt över flera DRM
 title: Översikt över flera DRM
-uuid: 1705a338-baeb-4fcd-ae16-08963da55ab8
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
