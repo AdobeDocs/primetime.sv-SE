@@ -1,9 +1,9 @@
 ---
-seo-title: Krav
 title: Krav
-uuid: a5a13187-be20-4feb-ad9e-5ebd81b7e5a3
+description: Krav
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
