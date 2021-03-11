@@ -1,13 +1,10 @@
 ---
 description: Upplösningsbaserat utdataskydd (RBOP) är en mekanism som ger utdataskydd baserat på innehållets lodräta pixelantal.
-seo-description: Upplösningsbaserat utdataskydd (RBOP) är en mekanism som ger utdataskydd baserat på innehållets lodräta pixelantal.
-seo-title: Översikt över RBOP
 title: Översikt över RBOP
-uuid: 57219331-d949-443c-88b3-6f714ab6c82e
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
