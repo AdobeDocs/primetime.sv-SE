@@ -1,13 +1,10 @@
 ---
 description: Du kan använda Adobe Offline Packager för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
-seo-description: Du kan använda Adobe Offline Packager för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
-seo-title: Primetime Packager / Cloud DRM / TVSDK
 title: Primetime Packager / Cloud DRM / TVSDK
-uuid: e54a0e4d-c8ea-46d4-b1b0-bed8a680f8f5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
