@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser tillhandahåller gränssnittet mellan TVSDK och Adobe Video Analytics.
-seo-description: Dessa klasser tillhandahåller gränssnittet mellan TVSDK och Adobe Video Analytics.
-seo-title: Klasser för videoanalys
 title: Klasser för videoanalys
-uuid: 25f1c306-ed50-4a37-a16c-ddd4266012b3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
