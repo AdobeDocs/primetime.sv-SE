@@ -1,13 +1,10 @@
 ---
-description: Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att uppnå JIT-ompaketering. Båda använder samma logik för annonsval.
-seo-description: Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att uppnå JIT-ompaketering. Båda använder samma logik för annonsval.
-seo-title: Detaljerade arbetsflöden för JIT-ompaketering
+description: Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att få JIT-ompaketering. Båda använder samma logik för annonsval.
 title: Detaljerade arbetsflöden för JIT-ompaketering
-uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Detaljerade arbetsflöden för JIT-ompaketering {#detailed-workflows-for-jit-repackaging}
 
-Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att uppnå JIT-ompaketering. Båda använder samma logik för annonsval.
+Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att få JIT-ompaketering. Båda använder samma logik för annonsval.
 
 ## JIT-ompaketering initierad av manifestservern {#section_1F1C1B7DD146403890C2B43E24FEF0EB}
 
