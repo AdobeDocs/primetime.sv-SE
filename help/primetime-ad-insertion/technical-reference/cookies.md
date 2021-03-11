@@ -1,13 +1,10 @@
 ---
 description: Primetimes annonsinfogning använder cookies för interna syften och för att underlätta arbetet med strömmar och annonsservrar.
-seo-description: Primetimes annonsinfogning använder cookies för interna syften och för att underlätta arbetet med strömmar och annonsservrar.
-seo-title: Cookies
 title: Cookies
-uuid: 514ca7bd-e5ef-41be-ac63-52ef2d2a60bb
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
