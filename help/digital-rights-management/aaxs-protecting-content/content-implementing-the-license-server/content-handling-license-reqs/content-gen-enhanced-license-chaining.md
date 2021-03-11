@@ -1,9 +1,9 @@
 ---
-seo-title: Förbättrad licenskedja
 title: Förbättrad licenskedja
-uuid: dc0e0a46-d3cd-44e8-a45d-3e22787be44e
+description: Förbättrad licenskedja
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
