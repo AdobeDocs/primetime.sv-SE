@@ -1,9 +1,9 @@
 ---
-seo-title: Översikt över nätverkstopologin
 title: Översikt över nätverkstopologin
-uuid: b8b072dc-8dc0-46ba-bb01-1e9b58af2681
+description: Översikt över nätverkstopologin
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
