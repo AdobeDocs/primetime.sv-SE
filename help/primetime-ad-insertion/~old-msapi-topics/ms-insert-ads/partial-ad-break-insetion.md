@@ -1,13 +1,10 @@
 ---
 description: Funktionen Partial Ad Break Insertion (PABI) påminner om en TV-liknande upplevelse där användaren, om han eller hon går med i en liveström i en mellanrollsbrytning, visas på medelversionssidan i stället för en förhandsgranskningsannons eller skiffer.
-seo-description: Funktionen Partial Ad Break Insertion (PABI) påminner om en TV-liknande upplevelse där användaren, om han eller hon går med i en liveström i en mellanrollsbrytning, visas på medelversionssidan i stället för en förhandsgranskningsannons eller skiffer.
-seo-title: Inläggning av delvis annonsbrytning
 title: Inläggning av delvis annonsbrytning
-uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
