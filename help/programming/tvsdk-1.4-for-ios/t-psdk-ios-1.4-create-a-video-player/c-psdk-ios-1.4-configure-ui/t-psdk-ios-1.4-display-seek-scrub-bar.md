@@ -1,13 +1,10 @@
 ---
 description: Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
-seo-description: Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
-seo-title: Visa ett söknavigeringsfält med aktuell position för uppspelningstid
 title: Visa ett söknavigeringsfält med aktuell position för uppspelningstid
-uuid: db57eb6f-3c67-4a64-a0f4-7e39027eb3e0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
