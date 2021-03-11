@@ -1,9 +1,9 @@
 ---
-seo-title: Information om NATIVE_ERROR-meddelandet
 title: Information om NATIVE_ERROR-meddelandet
-uuid: d16ef930-d1f4-4984-be6e-1cf4993ab71d
+description: Information om NATIVE_ERROR-meddelandet
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6888'
 ht-degree: 2%
@@ -27,7 +27,7 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
    <td colname="col1"><span class="codeph"> NATIVE_ERROR_CODE</span> </td> 
    <td colname="col2"> <p>Inbyggd felkod från AVE. </p> <p>Dessa koder representerar följande: 
      <ul id="ul_1F33D523DDFE4CE8B4F0DC279FF7E4F8"> 
-      <li id="li_07A2D9BEE6364935A61EF3BD4AB6DE27">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder för Flash Player </li> 
+      <li id="li_07A2D9BEE6364935A61EF3BD4AB6DE27">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder i Flash Player </li> 
       <li id="li_433BA22DE3504AEEB623598BB4F939FA">Videouppspelningsfel (-1 till 89) </li> 
       <li id="li_B347CB151DB94DE0A1DDEB1B33D2DABA">Kryptografifel (300 till 307) </li> 
      </ul> </p> </td> 
@@ -447,7 +447,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col3"> <p>Det här felet inträffar när innehållet har konfigurerats för att be klienterna autentisera innan licenserna hämtas. </p> 
     <ul id="ul_712D29B8B5A6401FB014C4A283918E32"> 
      <li id="li_2D56905EB50D4FDEAD69CA8EAE38AD1A">Distributörens programvara ska autentisera användaren och sedan hämta licensen igen. <p>Om tjänsten inte har för avsikt att använda autentisering loggar du identifieringen av det innehåll som orsakar felet. </p> </li> 
-     <li id="li_B3BCF899B8BE41C7A4F7CF84B0503483">Det här felet ska inte kräva eskalering, såvida inte innehållet ska konfigureras för att kräva autentisering. <p>I det här fallet bör du paketera om det felaktiga innehållet med rätt policy. Om innehållet är rätt paketerat finns mer information i Diagnostikpolicy/licensavvikelser. </p> </li> 
+     <li id="li_B3BCF899B8BE41C7A4F7CF84B0503483">Det här felet ska inte kräva eskalering, såvida inte innehållet inte ska konfigureras för att kräva autentisering. <p>I det här fallet bör du paketera om det felaktiga innehållet med rätt policy. Om innehållet är rätt paketerat finns mer information i Diagnostikpolicy/licensavvikelser. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -742,7 +742,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Åtgärden lyckades. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> Asynkron åtgärd. Åtgärden har begärts. Information om lyckade/misslyckade åtgärder kommer att vara tillgänglig senare. </td> 
   </tr> 
@@ -752,7 +752,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Åtgärden är inte möjlig på grund av ett filslutsvillkor (EOF). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> Avkodaren misslyckades vid körning. </td> 
   </tr> 
@@ -1047,7 +1047,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Infogningar efter rullning är inte tillåtna på direktmedia. De tillåts dock efter att servern har markerat mediet som fullständigt. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
    <td colname="col3"> Ett mycket sällsynt problem som aldrig skulle inträffa. </td> 
   </tr> 
@@ -1132,7 +1132,7 @@ Gränssnittet Video Encoder i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det finns ingen ljudmottagare i en intern datastruktur. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Det gick inte att öppna filen. </td> 
   </tr> 
