@@ -1,13 +1,10 @@
 ---
 description: Om pttrackingmode=simple eller ptplayer=ios-mobileweb skickar manifestservern tillbaka en JSON-formaterad fil som innehåller Överordnad-M3U8, en URL som klienten kan använda för att begära M3U8-filen som beskriver innehållet.
-seo-description: Om pttrackingmode=simple eller ptplayer=ios-mobileweb skickar manifestservern tillbaka en JSON-formaterad fil som innehåller Överordnad-M3U8, en URL som klienten kan använda för att begära M3U8-filen som beskriver innehållet.
-seo-title: JSON-format för URL för begäran om spellista för variantmanifest
 title: JSON-format för URL för begäran om spellista för variantmanifest
-uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
