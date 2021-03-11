@@ -1,13 +1,10 @@
 ---
 description: Medieuppspelningens beteende påverkas av sökning, pausning, snabb framåtspolning eller tillbakaspolning (trickläge) och inkludering av annonsering.
-seo-description: Medieuppspelningens beteende påverkas av sökning, pausning, snabb framåtspolning eller tillbakaspolning (trickläge) och inkludering av annonsering.
-seo-title: Standardbeteende och anpassat uppspelningsbeteende med annonser
 title: Standardbeteende och anpassat uppspelningsbeteende med annonser
-uuid: 58f11167-a764-4647-8490-05ca66eb6c47
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
