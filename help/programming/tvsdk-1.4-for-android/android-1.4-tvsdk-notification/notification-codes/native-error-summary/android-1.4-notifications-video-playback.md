@@ -1,13 +1,10 @@
 ---
 description: Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
-seo-description: Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
-seo-title: NATIVE_ERROR Videouppspelningsvärden
 title: NATIVE_ERROR Videouppspelningsvärden
-uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -47,7 +44,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Åtgärden är inte möjlig på grund av ett filslutsvillkor (EOF). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> Avkodaren misslyckades vid körning. </td> 
   </tr> 
@@ -327,7 +324,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> HLS-uppspelning har inte aktiverats i Flash Player. Se AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Avkodaren tog emot ett felaktigt prov som inte kan avkodas. Det här är vanligtvis inget allvarligt fel, men det indikerar att det kan finnas fel i ljud/video. För många instanser av det här felet indikerar felaktig kodning eller felaktig fil. </td> 
   </tr> 
@@ -427,7 +424,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det finns ingen ljudmottagare i en intern datastruktur. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Det gick inte att öppna filen. </td> 
   </tr> 
@@ -442,7 +439,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det går inte att läsa från en fil. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Det uppstod ett fel vid analys av ID3-data. </td> 
   </tr> 
