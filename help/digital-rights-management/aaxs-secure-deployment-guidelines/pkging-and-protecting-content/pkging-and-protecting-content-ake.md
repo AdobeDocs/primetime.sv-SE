@@ -1,9 +1,9 @@
 ---
-seo-title: Asymmetrisk nyckelkryptering
 title: Asymmetrisk nyckelkryptering
-uuid: 0aae25f1-a609-4c73-9aef-13f8ae63f6e1
+description: Asymmetrisk nyckelkryptering
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
