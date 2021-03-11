@@ -1,13 +1,10 @@
 ---
 description: För att förhindra användare från att säkerhetskopiera och återställa filer för att kringgå domänavregistrering måste du implementera vissa domänhanteringsmetoder.
-seo-description: För att förhindra användare från att säkerhetskopiera och återställa filer för att kringgå domänavregistrering måste du implementera vissa domänhanteringsmetoder.
-seo-title: Hantera domäner
 title: Hantera domäner
-uuid: 30b73e38-d6ed-43c6-89ba-ae8616383779
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
