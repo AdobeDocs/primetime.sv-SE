@@ -1,13 +1,10 @@
 ---
 description: Flash Runtime TVSDK behöver en signerad token för att validera att du har rätt att anropa TVSDK API på domänen där ditt program finns.
-seo-description: Flash Runtime TVSDK behöver en signerad token för att validera att du har rätt att anropa TVSDK API på domänen där ditt program finns.
-seo-title: Läs in din signerade token
 title: Läs in din signerade token
-uuid: 8760eab3-3d6d-47c6-9aa7-f64f6aa5ddcf
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
