@@ -1,9 +1,9 @@
 ---
-seo-title: Hämta certifikat för domän-certifikatutfärdare
 title: Hämta certifikat för domän-certifikatutfärdare
-uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
+description: Hämta certifikat för domän-certifikatutfärdare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Till skillnad från licensservern, paketeraren eller transportcertifikatet utfärdas inte domänkontrollantcertifikatet av Adobe. Du kan hämta det här certifikatet från en certifikatutfärdare, eller så kan du generera ett självsignerat certifikat som kan användas för detta ändamål.
 
-Domäncertifikatutfärdarcertifikatet bör använda en 1024-bitars nyckel och innehålla de standardattribut som krävs i ett certifikatutfärdarcertifikat:
+Domäncertifikatutfärdarcertifikatet bör använda en 1024-bitarsnyckel och innehålla de standardattribut som krävs i ett certifikatutfärdarcertifikat:
 
 * Tillägget Grundläggande begränsningar med CA-flaggan inställd på true
 * Tillägget för nyckelanvändning som anger certifikatsignering är tillåtet
