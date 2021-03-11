@@ -1,13 +1,10 @@
 ---
 description: En tillåtelselista är en lista över betrodda enheter.
-seo-description: En tillåtelselista är en lista över betrodda enheter.
-seo-title: Underhåll en tillåtelselista av pålitliga innehållspaket
 title: Underhåll en tillåtelselista av pålitliga innehållspaket
-uuid: 9a132ef9-eb56-408a-939e-1acd32d83a33
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
