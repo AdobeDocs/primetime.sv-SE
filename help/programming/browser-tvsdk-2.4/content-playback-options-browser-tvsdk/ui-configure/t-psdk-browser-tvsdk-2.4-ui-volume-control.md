@@ -1,13 +1,10 @@
 ---
 description: Du kan ange en gränssnittskontroll för ljudvolymen.
-seo-description: Du kan ange en gränssnittskontroll för ljudvolymen.
-seo-title: Ange volymkontroll
 title: Ange volymkontroll
-uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
