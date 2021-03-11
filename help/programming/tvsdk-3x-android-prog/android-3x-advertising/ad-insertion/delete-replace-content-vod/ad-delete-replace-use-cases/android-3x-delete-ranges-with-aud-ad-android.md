@@ -1,13 +1,10 @@
 ---
 description: Du kan ta bort TimeRanges mellan början och slutet i localTime från tidslinjen.
-seo-description: Du kan ta bort TimeRanges mellan början och slutet i localTime från tidslinjen.
-seo-title: Ta bort intervall
 title: Ta bort intervall
-uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
