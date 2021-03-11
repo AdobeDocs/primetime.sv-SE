@@ -1,13 +1,10 @@
 ---
 description: Programmet måste använda rätt PTTimedMetadata-objekt vid rätt tidpunkt.
-seo-description: Programmet måste använda rätt PTTimedMetadata-objekt vid rätt tidpunkt.
-seo-title: Lagra tidsbestämda metadataobjekt när de skickas
 title: Lagra tidsbestämda metadataobjekt när de skickas
-uuid: 38e72a9b-571a-48da-9c17-80be453e6a98
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
