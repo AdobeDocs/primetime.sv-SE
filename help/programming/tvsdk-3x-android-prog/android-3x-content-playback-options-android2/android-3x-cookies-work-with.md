@@ -1,13 +1,10 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
-seo-description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
-seo-title: Arbeta med cookies
 title: Arbeta med cookies
-uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -68,7 +65,7 @@ Så här arbetar du med cookies:
 
    >[!NOTE]
    >
-   >När du har angett värdet false för setReadSetCookieHeader anger du cookies för nyckelbegäranden med hjälp av JAVA cookie-hanteraren.
+   >När du har angett värdet false för denna setReadSetCookieHeader anger du cookies för nyckelbegäranden med hjälp av JAVA cookie-hanteraren.
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Det här återanrops-API:t aktiveras när det finns en uppdatering i C++-cookies (cookies som kommer från http-svar). Programmet behöver lyssna på det här återanropet och kan uppdatera JAVA CookieStore så att deras nätverksanrop i JAVA kan använda cookies enligt nedan:
