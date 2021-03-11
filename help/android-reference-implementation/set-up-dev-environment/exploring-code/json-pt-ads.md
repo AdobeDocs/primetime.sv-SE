@@ -1,13 +1,10 @@
 ---
-seo-title: JSON-objekt för Primetime-annonser
 title: JSON-objekt för Primetime-annonser
-uuid: acf968d2-9856-4ed6-a046-1ac17d176571
 description: Kodblocket nedan definierar JSON-objektet details när typvärdet är Primetime ads.
-seo-description: Kodblocket nedan definierar JSON-objektet details när typvärdet är Primetime ads.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
