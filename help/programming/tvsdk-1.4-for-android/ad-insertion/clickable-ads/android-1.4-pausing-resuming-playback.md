@@ -1,13 +1,10 @@
 ---
 description: När en användare klickar på en annons bör programmet pausa uppspelningen av huvudvideoinnehållet.
-seo-description: När en användare klickar på en annons bör programmet pausa uppspelningen av huvudvideoinnehållet.
-seo-title: Pausa och återuppta uppspelning
 title: Pausa och återuppta uppspelning
-uuid: a8fec392-3a71-4086-abf1-23522d023680
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '67'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
