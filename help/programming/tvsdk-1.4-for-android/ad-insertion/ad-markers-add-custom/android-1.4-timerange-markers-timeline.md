@@ -1,13 +1,10 @@
 ---
 description: I det här exemplet visas det rekommenderade sättet att inkludera TimeRange-specifikationer på tidslinjen för uppspelningen.
-seo-description: I det här exemplet visas det rekommenderade sättet att inkludera TimeRange-specifikationer på tidslinjen för uppspelningen.
-seo-title: Placera markörer för TimeRange på tidslinjen
 title: Placera markörer för TimeRange på tidslinjen
-uuid: 12935eba-2e91-40ea-a60e-02d0060c3cce
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
