@@ -1,13 +1,10 @@
 ---
 description: När du har läst in MediaResource-objektet skapar TVSDK en instans av MediaPlayerItem-klassen som ger åtkomst till resursen.
-seo-description: När du har läst in MediaResource-objektet skapar TVSDK en instans av MediaPlayerItem-klassen som ger åtkomst till resursen.
-seo-title: Om klassen MediaPlayerItem
 title: Om klassen MediaPlayerItem
-uuid: fc79c442-2e38-48c4-8ef9-6dce9ad6790a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
