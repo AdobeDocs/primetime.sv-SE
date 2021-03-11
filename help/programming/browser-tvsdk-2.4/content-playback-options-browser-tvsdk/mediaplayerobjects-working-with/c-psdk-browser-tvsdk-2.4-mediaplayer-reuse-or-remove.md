@@ -1,13 +1,10 @@
 ---
 description: Du kan återställa, återanvända eller frigöra en MediaPlayer-instans som du inte längre behöver.
-seo-description: Du kan återställa, återanvända eller frigöra en MediaPlayer-instans som du inte längre behöver.
-seo-title: Återanvända eller ta bort en MediaPlayer-instans
 title: Återanvända eller ta bort en MediaPlayer-instans
-uuid: 0b9a06b0-ece7-4e18-9221-a4528bcbc141
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
