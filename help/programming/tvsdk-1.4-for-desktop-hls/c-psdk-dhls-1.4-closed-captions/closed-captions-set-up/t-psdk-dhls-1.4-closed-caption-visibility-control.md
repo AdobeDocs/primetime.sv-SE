@@ -1,13 +1,10 @@
 ---
 description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
-seo-description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
-seo-title: Kontrollera synlighet för undertexter
 title: Kontrollera synlighet för undertexter
-uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
