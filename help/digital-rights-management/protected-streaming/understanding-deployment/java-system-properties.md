@@ -1,13 +1,10 @@
 ---
 description: Det finns flera Java System-egenskaper som du kan konfigurera på licensservern för att styra platsen för konfigurations- och loggfiler.
-seo-description: Det finns flera Java System-egenskaper som du kan konfigurera på licensservern för att styra platsen för konfigurations- och loggfiler.
-seo-title: Java-systemegenskaper
 title: Java-systemegenskaper
-uuid: d8c72359-bf61-47e0-9cd5-b21225d5fe49
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
