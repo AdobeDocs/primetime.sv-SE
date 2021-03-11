@@ -1,13 +1,10 @@
 ---
 description: Det finns två typer av förfrågningar relaterade till kompatibiliteten Flash Media Rights Management Server 1.x. En typ av begäran används för att uppmana 1.x-klienter att uppgradera till en runtime som stöder Adobe Primetime DRM 2.0 eller senare. Ett annat sätt används för att uppdatera 1.x-metadata till Primetimes DRM-format innan en licens kan begäras. Stöd för dessa förfrågningar behövs bara om du tidigare har distribuerat innehåll som använder FMRMS 1.0 eller 1.5.
-seo-description: Det finns två typer av förfrågningar relaterade till kompatibiliteten Flash Media Rights Management Server 1.x. En typ av begäran används för att uppmana 1.x-klienter att uppgradera till en runtime som stöder Adobe Primetime DRM 2.0 eller senare. Ett annat sätt används för att uppdatera 1.x-metadata till Primetimes DRM-format innan en licens kan begäras. Stöd för dessa förfrågningar behövs bara om du tidigare har distribuerat innehåll som använder FMRMS 1.0 eller 1.5.
-seo-title: Hantera FMRMS-kompatibilitet
 title: Hantera FMRMS-kompatibilitet
-uuid: c32ee087-2edf-4d11-be36-e2b31f3769de
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
