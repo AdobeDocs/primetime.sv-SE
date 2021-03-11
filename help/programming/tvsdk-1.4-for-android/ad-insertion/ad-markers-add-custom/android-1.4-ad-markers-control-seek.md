@@ -1,13 +1,10 @@
 ---
 description: Du kan åsidosätta standardbeteendet för hur TVSDK söker efter annonser när du använder anpassade annonsmarkörer.
-seo-description: Du kan åsidosätta standardbeteendet för hur TVSDK söker efter annonser när du använder anpassade annonsmarkörer.
-seo-title: Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer
 title: Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer
-uuid: cf973caf-be29-46ce-bfa4-651e7653f8d4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
