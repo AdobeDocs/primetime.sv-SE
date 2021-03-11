@@ -1,13 +1,10 @@
 ---
 description: All användning av Adobe Primetime DRM består av två huvudsteg vid olika tidpunkter i arbetsflödet. Förberedelsen av innehållet måste göras en gång per resurs, vilket resulterar i att skyddat innehåll skapas. Inköp av innehåll görs flera gånger, en gång för varje konsument som vill titta på den skyddade resursen.
-seo-description: All användning av Adobe Primetime DRM består av två huvudsteg vid olika tidpunkter i arbetsflödet. Förberedelsen av innehållet måste göras en gång per resurs, vilket resulterar i att skyddat innehåll skapas. Inköp av innehåll görs flera gånger, en gång för varje konsument som vill titta på den skyddade resursen.
-seo-title: Förbereda innehåll
 title: Förbereda innehåll
-uuid: edb633f0-b623-41ea-a52a-19017d45fb18
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
