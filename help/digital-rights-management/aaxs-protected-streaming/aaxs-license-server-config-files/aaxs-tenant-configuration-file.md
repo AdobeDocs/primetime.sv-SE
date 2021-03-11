@@ -1,9 +1,9 @@
 ---
-seo-title: Konfigurationsfil för innehavare
 title: Konfigurationsfil för innehavare
-uuid: 6e5c82c9-b8f5-4fca-8325-a884b2c779f7
+description: Konfigurationsfil för innehavare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Klientkonfigurationsfilen innehåller:
 
    * **Licenscache**  - valfritt. Anger hur länge licensen kan lagras på klienten. Som standard är cachning av licenser inaktiverat. Om du vill aktivera cache-lagring av licenser under en begränsad tidsperiod anger du slutdatumet eller antalet sekunder som licensen ska lagras för (med början när licensen utfärdas). Om du anger antalet sekunder till 0 inaktiveras licenscachelagring.
 
-      Observera att alla licenser som utfärdas av servern för skyddad direktuppspelning har en förfalloperiod på 24 timmar (8 6400 sekunder). Det här värdet gäller därför implicit som en övre gräns till vilket slutdatum eller vilken varaktighet som helst som är inställt för licenscachning, med ett maximalt värde på 86400 sekunder, även om schemat har högre gränser.
+      Observera att alla licenser som utfärdas av servern för skyddad direktuppspelning har en förfalloperiod på 24 timmar (8 6400 sekunder). Det här värdet gäller därför implicit som en övre gräns för vilket slutdatum eller vilken varaktighet som helst som är inställt för licenscachning, med ett maximalt värde på 86400 sekunder, även om schemat har högre gränser.
 
    * **Spela upp höger**  - minst en höger måste anges. Om flera rättigheter anges kommer klienten att använda den första rättigheten som den uppfyller alla krav för.
 
