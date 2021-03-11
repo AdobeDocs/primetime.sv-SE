@@ -1,13 +1,10 @@
 ---
 description: Om du vill få meddelanden om taggar i manifestet måste du implementera lämpliga händelseavlyssnare.
-seo-description: Om du vill få meddelanden om taggar i manifestet måste du implementera lämpliga händelseavlyssnare.
-seo-title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
 title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
-uuid: 336882e7-e2d8-49b8-a23d-f236c7e6a594
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
