@@ -1,13 +1,10 @@
 ---
 description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av Browser TVSDK. Den här beskrivningen är användbar när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
-seo-description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av Browser TVSDK. Den här beskrivningen är användbar när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
-seo-title: Inspect tidslinjen för uppspelning
 title: Inspect tidslinjen för uppspelning
-uuid: b2049e53-7c78-40f9-a43f-7ff7ee5581d0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
