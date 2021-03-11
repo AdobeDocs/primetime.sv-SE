@@ -1,12 +1,11 @@
 ---
 title: Implementering av Primetime-referens
-seo-title: Hjälp om implementering av Adobe Primetime Reference
-description: 'null'
-seo-description: 'null'
+description: Implementering av Primetime-referens
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
