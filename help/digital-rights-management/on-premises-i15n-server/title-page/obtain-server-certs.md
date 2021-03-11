@@ -1,9 +1,9 @@
 ---
-seo-title: Hämta certifikat för enskilda servrar
 title: Hämta certifikat för enskilda servrar
-uuid: ae1e848e-0a19-4ec3-8419-ce5fd783c279
+description: Hämta certifikat för enskilda servrar
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
