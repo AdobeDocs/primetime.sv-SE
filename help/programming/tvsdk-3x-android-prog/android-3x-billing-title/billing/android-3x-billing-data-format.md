@@ -1,13 +1,10 @@
 ---
 description: TVSDK skickar faktureringsstatistik till Adobe i XML-format.
-seo-description: TVSDK skickar faktureringsstatistik till Adobe i XML-format.
-seo-title: Skicka faktureringsmått
 title: Skicka faktureringsmått
-uuid: c925800c-0fb7-4781-94e8-7e7ad94bb965
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
