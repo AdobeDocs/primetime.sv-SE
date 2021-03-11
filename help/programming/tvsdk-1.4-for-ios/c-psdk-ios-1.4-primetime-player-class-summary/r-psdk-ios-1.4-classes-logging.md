@@ -1,13 +1,10 @@
 ---
 description: Med dessa klasser kan du anpassa loggning.
-seo-description: Med dessa klasser kan du anpassa loggning.
-seo-title: Loggningsklasser
 title: Loggningsklasser
-uuid: feb4ee77-37de-4260-85fa-4931e059e034
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
