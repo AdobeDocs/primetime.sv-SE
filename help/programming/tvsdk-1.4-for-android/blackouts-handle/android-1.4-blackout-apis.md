@@ -1,13 +1,10 @@
 ---
 description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
-seo-description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
-seo-title: API-element för svart
 title: API-element för svart
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
