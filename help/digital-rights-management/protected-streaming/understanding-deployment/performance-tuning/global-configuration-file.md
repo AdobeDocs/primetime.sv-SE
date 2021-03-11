@@ -1,13 +1,10 @@
 ---
 description: I det här avsnittet beskrivs prestandarelaterade överväganden. Eventuella inställningar i den globala konfigurationsfilen som kallas flashaccess-global.xml påverkar prestandan.
-seo-description: I det här avsnittet beskrivs prestandarelaterade överväganden. Eventuella inställningar i den globala konfigurationsfilen som kallas flashaccess-global.xml påverkar prestandan.
-seo-title: Global konfigurationsfil
 title: Global konfigurationsfil
-uuid: 254925b5-d441-4a35-ad6f-f99db5de7591
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
