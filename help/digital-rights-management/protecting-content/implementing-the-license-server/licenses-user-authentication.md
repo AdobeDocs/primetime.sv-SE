@@ -1,9 +1,9 @@
 ---
-seo-title: Användarautentisering
 title: Användarautentisering
-uuid: 5cbd76b9-ff64-4a4b-8cfd-54f05c04eaa3
+description: Användarautentisering
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
