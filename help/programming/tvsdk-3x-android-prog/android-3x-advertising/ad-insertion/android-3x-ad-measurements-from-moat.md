@@ -1,13 +1,10 @@
 ---
 description: TVSDK hämtar information från FreeWheel och andra annonsservrar som tillhandahåller VAST-svar. FreeWheel ger, inom VAST-svar, information från tjänsten Moat. Tjänsten Moat räknar med en noggrannhet som bättre visar om kreatörerna fångar upp eller försummar en viss målgrupps intressen.
-seo-description: TVSDK hämtar information från FreeWheel och andra annonsservrar som tillhandahåller VAST-svar. FreeWheel ger, inom VAST-svar, information från tjänsten Moat. Tjänsten Moat räknar med en noggrannhet som bättre visar om kreatörerna fångar upp eller försummar en viss målgrupps intressen.
-seo-title: Annonsmätningar från Moat
 title: Annonsmätningar från Moat
-uuid: 4de4ea5e-ef52-4b6b-b215-7601a2dfdb96
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
