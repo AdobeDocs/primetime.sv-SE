@@ -1,9 +1,9 @@
 ---
-seo-title: Referens för serveregenskaper
 title: Referens för serveregenskaper
-uuid: 24a187fe-9b7d-411f-a358-d10c70a5dd0e
+description: Referens för serveregenskaper
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -96,7 +96,7 @@ ht-degree: 0%
    <td></td> 
    <td> 
     <ul id="ul_b3b_g1f_jr"> 
-     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceInfo.key =</span> [Encrypted Base64 encoded key used to HMAC device info before include it in the machine token. Nyckeln kan vara annorlunda för Dev/Staging/Production-miljöerna, men måste vara densamma för alla servrar i en viss miljö. ] </li> 
+     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceInfo.key =</span> [Encrypted Base64 encoded key used to HMAC device info before include it in the machine token. Nyckeln kan vara annorlunda för Dev/Staging/Production-miljöerna, men måste vara densamma för alla servrar i en viss miljö. _ </li> 
      <li id="li_B19C77FD6F91496294DBF836A1922EE1"><span class="codeph"> keys.kgs.server =</span> [Location of Key Gen Server (a single host/port, representing a pool of key servers) ] </li> 
      <li id="li_5DA3C89770804B148EF6FAF01A5AD958"><span class="codeph"> keys.MinQueueSize =</span> [Hämta en annan uppsättning nycklar från KGS när så här många nycklar finns kvar i kön] </li> 
      <li id="li_0C2E5F2FDB824182A6BE418B041D2F28"><span class="codeph"> status.Timeout =</span> [Statussidan pingar KGS för att avgöra om den kan nå servern. Tidsgränsen uppnås om inget svar tas emot igen inom den angivna tiden.] </li> 
