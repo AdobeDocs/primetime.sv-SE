@@ -1,13 +1,10 @@
 ---
 description: Primetime DRM är integrerat i TVSDK, vilket förenklar implementeringen av innehållsskydd i en TVSDK-applikation.
-seo-description: Primetime DRM är integrerat i TVSDK, vilket förenklar implementeringen av innehållsskydd i en TVSDK-applikation.
-seo-title: Implementera Primetime DRM i ett TSVDK-program
 title: Implementera Primetime DRM i ett TSVDK-program
-uuid: 57f9d7ac-1148-4f69-9c9e-aa218d869f3e
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
