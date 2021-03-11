@@ -1,13 +1,10 @@
 ---
 description: Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att använda olika kombinationer av annonssignaleringsläge och metadata. Olika kombinationer av signaleringsläge och metadata ger olika beteenden.
-seo-description: Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att använda olika kombinationer av annonssignaleringsläge och metadata. Olika kombinationer av signaleringsläge och metadata ger olika beteenden.
-seo-title: Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer
 title: Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer
-uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
