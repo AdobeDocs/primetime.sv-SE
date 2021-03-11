@@ -1,9 +1,9 @@
 ---
-seo-title: Fysisk säkerhet och åtkomst
 title: Fysisk säkerhet och åtkomst
-uuid: 804e8854-be3b-4ec7-bf96-f0fe5fd8a92b
+description: Fysisk säkerhet och åtkomst
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
