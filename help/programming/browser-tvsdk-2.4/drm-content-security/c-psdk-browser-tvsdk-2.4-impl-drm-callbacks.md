@@ -1,13 +1,10 @@
 ---
 description: Med följande nya API:er kan du definiera DRM-återanrop.
-seo-description: Med följande nya API:er kan du definiera DRM-återanrop.
-seo-title: Implementera DRM-återanrop
 title: Implementera DRM-återanrop
-uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
