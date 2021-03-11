@@ -1,13 +1,10 @@
 ---
 description: Du kan använda Adobe Primetime-autentisering för att hantera användarberättiganden i din spelare.
-seo-description: Du kan använda Adobe Primetime-autentisering för att hantera användarberättiganden i din spelare.
-seo-title: Översikt
 title: Översikt
-uuid: defd718d-849b-4e79-8e0f-114c43c5bcf7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
