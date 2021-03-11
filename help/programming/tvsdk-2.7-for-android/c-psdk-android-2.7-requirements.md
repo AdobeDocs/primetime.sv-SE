@@ -1,13 +1,10 @@
 ---
 description: TVSDK har specifika krav för mediematerial, manifestinnehåll, DRM och programversioner.
-seo-description: TVSDK har specifika krav för mediematerial, manifestinnehåll, DRM och programversioner.
-seo-title: Krav
 title: Krav
-uuid: aa51fb78-31d1-4403-8808-2d54a87f6153
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
