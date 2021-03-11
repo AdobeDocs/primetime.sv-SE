@@ -1,13 +1,10 @@
 ---
 description: Just-in-time-transcoding kan ge ID3 tidsbestämda metadata till annonskreatörer för att underlätta annonsspårning på klientsidan.
-seo-description: Just-in-time-transcoding kan mata in ID3-metadata i HLS-format och andra kreatörer för att underlätta annonsspårning på klientsidan.
-seo-title: Använda just-in-time-omkodning för att mata in ID3 Timed Metadata-taggar
 title: Använda just-in-time-omkodning för att mata in ID3 Timed Metadata-taggar
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
