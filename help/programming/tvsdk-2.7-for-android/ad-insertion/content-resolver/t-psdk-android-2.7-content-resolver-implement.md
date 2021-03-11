@@ -1,13 +1,10 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
-seo-description: Du kan implementera egna innehållslösningar baserat på standardlösare.
-seo-title: Implementera en anpassad innehållshanterare
 title: Implementera en anpassad innehållshanterare
-uuid: bc0eda17-9b5d-4733-8e93-790758e68df5
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
