@@ -1,9 +1,9 @@
 ---
-seo-title: Information om licensinhämtningsprocess
 title: Information om licensinhämtningsprocess
-uuid: 4825c49e-fa6f-4c98-9d21-a2743930ca2e
+description: Information om licensinhämtningsprocess
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 3fdef12b717bb6f70ca27d9278de61d709f8349c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
