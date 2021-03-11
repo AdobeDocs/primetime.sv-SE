@@ -1,13 +1,10 @@
 ---
 description: Du kan ange format, till exempel teckensnitt, storlek, färg, kant och opacitet för undertextad text.
-seo-description: Du kan ange format, till exempel teckensnitt, storlek, färg, kant och opacitet för undertextad text.
-seo-title: Ange format för undertexter
 title: Ange format för undertexter
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
