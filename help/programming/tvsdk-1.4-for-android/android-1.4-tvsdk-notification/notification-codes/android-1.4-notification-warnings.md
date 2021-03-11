@@ -1,13 +1,10 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
-seo-description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
-seo-title: Varningsmeddelandekoder
 title: Varningsmeddelandekoder
-uuid: 32b54e6c-f107-4e8e-aad6-34e1057719b0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '407'
 ht-degree: 2%
 
 ---
