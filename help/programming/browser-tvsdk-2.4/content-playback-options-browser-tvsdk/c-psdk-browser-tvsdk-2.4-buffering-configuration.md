@@ -1,13 +1,10 @@
 ---
 description: Webbläsare-TVSDK buffrar ibland videoströmmen för att ge en smidigare visning. Du kan konfigurera hur spelaren buffrar.
-seo-description: Webbläsare-TVSDK buffrar ibland videoströmmen för att ge en smidigare visning. Du kan konfigurera hur spelaren buffrar.
-seo-title: Buffring
 title: Buffring
-uuid: 9937731d-013e-41e9-a4c9-f7a54a5e654d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
