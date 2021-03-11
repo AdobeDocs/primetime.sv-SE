@@ -1,21 +1,18 @@
 ---
-description: TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om tricks-play stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
-seo-description: TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om tricks-play stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
-seo-title: API-element för prisändring
+description: TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om trippelning stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
 title: API-element för prisändring
-uuid: 0040d35c-f9cb-4066-9bee-828ed5541194
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 2%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 
 
 # API-element för ändring av hastighet{#rate-change-api-elements}
 
-TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om tricks-play stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
+TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om trippelning stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
 
 <!--<a id="section_36576E92DE6343AEBD0BBD662502365D"></a>-->
 
