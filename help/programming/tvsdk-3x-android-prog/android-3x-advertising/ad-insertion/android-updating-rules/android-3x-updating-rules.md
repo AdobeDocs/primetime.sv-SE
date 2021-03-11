@@ -1,14 +1,11 @@
 ---
 description: Du kan använda TVSDK-konfigurationsfilen (AdobeTVSDKConfig.json) för att uppdatera prioriteterna för annonsmarkering på VAST-/VMAP-svar. Du kan också använda den här konfigurationsfilen för att definiera URL-transformeringsreglerna för källa för annonskreatörer.
-keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
-seo-description: Du kan använda TVSDK-konfigurationsfilen (AdobeTVSDKConfig.json) för att uppdatera prioriteterna för annonsmarkering på VAST-/VMAP-svar. Du kan också använda den här konfigurationsfilen för att definiera URL-transformeringsreglerna för källa för annonskreatörer.
-seo-title: Uppdatera och skapa regler för urval
+keywords: regler för kreativt urval;AdobeTVSDKConfig;ad creative priority;transformeringsregler
 title: Uppdatera och skapa regler för urval
-uuid: 77d8e186-01b5-4d62-8686-28f431d18876
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ När videospelaren skickar en begäran till en annonsserver innehåller VAST/VMA
 >[!IMPORTANT]
 >
 >* Ändra inte namnet på TVSDK-konfigurationsfilen. Namnet måste vara kvar [!DNL AdobeTVSDKConfig.json].
->* Filen måste placeras i mappen [!DNL assets/] i projektet.
+>* Den här filen måste placeras i mappen [!DNL assets/] i ditt projekt.
 >* Ljudspåret ändras inte om du ändrar ljudspår när annonsen spelas upp. En spelare bör inte tillåta användare att ändra ljudspåret när en annons spelas upp.
 
 >
