@@ -1,9 +1,9 @@
 ---
-seo-title: Antal datorer när licenser utfärdas
 title: Antal datorer när licenser utfärdas
-uuid: d57f8b0b-0363-4b26-bd71-76f4abe5b68f
+description: Antal datorer när licenser utfärdas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
