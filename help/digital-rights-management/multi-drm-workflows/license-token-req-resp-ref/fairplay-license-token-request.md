@@ -1,13 +1,10 @@
 ---
 description: Licenstoken för FairPlay ger produktions- och testtjänster.
-seo-description: Licenstoken för FairPlay ger produktions- och testtjänster.
-seo-title: FairPlay-licenstokenbegäran/svar
 title: FairPlay-licenstokenbegäran/svar
-uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '814'
 ht-degree: 5%
 
 ---
@@ -60,7 +57,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
 | **Frågeparameter** | **Beskrivning** | **Obligatoriskt?** |
 |---|---|---|
 | `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. &quot;0000&quot; är det enda tillåtna värdet. | Nej |
-| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). Om `kek` anges måste antingen en av `kid`- eller `ek`-parametrarna anges, *men inte båda*. | Nej |
+| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). Om `kek` anges måste antingen en av `kid`- eller `ek`-parametrarna anges, *men inte båda.* | Nej |
 | `kid` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng `'^somestring'`. Längden på strängen följt av `'^'` får inte vara längre än 64 tecken. | Nej |
 | `ek` | En hexadecimal strängrepresentation av den krypterade innehållsnyckeln. | Nej |
 | `contentKey` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln | Ja, såvida inte `kek` och `ek` eller `kid` anges. |
@@ -81,7 +78,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
  <tbody> 
   <tr> 
    <td> <span class="codeph"> expirationTime  </span> </td> 
-   <td> Förfallotid för denna token. Detta värde MÅSTE vara en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339 </a> datum-/tidsformat i zondesignern för Z ("Zulu time") eller ett heltal föregånget av tecknet "+". Ett exempel på ett RFC 3339-datum/tid är <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Om värdet är en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339 </a> datum-/tidsformat representerar det ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av ett plustecken tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. </p> <span class="codeph"> +60 </span> anger till exempel en minut. Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. </td> 
+   <td> Förfallotid för denna token. Detta värde MÅSTE vara en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339 </a> datum-/tidsformat i zondesignern för Z ("Zulu time") eller ett heltal föregånget av tecknet "+". Ett exempel på ett RFC 3339-datum/tid är <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Om värdet är en sträng i <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> datum-/tidsformat representerar det ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av ett plustecken tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. </p> <span class="codeph"> +60 </span> anger till exempel en minut. Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. </td> 
    <td> Nej </td> 
   </tr> 
  </tbody> 
@@ -252,7 +249,7 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
    <td> Ogiltig <span class="codeph"> iv </span>-parameter har angetts </td> 
   </tr> 
   <tr> 
-   <td> -6002 </td> 
+   <td> -6004 </td> 
    <td> Det gick inte att generera CKC för FP </td> 
   </tr> 
   <tr> 
