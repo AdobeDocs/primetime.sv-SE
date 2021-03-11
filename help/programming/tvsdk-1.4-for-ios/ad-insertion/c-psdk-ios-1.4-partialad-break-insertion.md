@@ -1,13 +1,10 @@
 ---
 description: TVSDK ger en TV-liknande upplevelse av att kunna vara med mitt i en annons i liveströmmar.
-seo-description: TVSDK ger en TV-liknande upplevelse av att kunna vara med mitt i en annons i liveströmmar.
-seo-title: Insättning av delvis annonsbrytning
 title: Insättning av delvis annonsbrytning
-uuid: b6ee62da-c4d1-42f2-b03d-f73247f8e585
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
