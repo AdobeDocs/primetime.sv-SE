@@ -1,9 +1,9 @@
 ---
-seo-title: Återkalla DRM-klient- och körningsreferenser
 title: Återkalla DRM-klient- och körningsreferenser
-uuid: 774b8ac7-51bb-42fc-a05d-cfa718e24a81
+description: Återkalla DRM-klient- och körningsreferenser
+copied-description: true
 translation-type: tm+mt
-source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
