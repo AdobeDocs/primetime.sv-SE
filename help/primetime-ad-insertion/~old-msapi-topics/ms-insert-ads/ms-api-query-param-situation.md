@@ -1,13 +1,10 @@
 ---
 description: Förutom de grundläggande frågeparametrarna gör valfria frågeparametrar att manifestservern kan arbeta med olika klienter och situationer.
-seo-description: Förutom de grundläggande frågeparametrarna gör valfria frågeparametrar att manifestservern kan arbeta med olika klienter och situationer.
-seo-title: Valfria frågeparametrar per klient och situation
 title: Valfria frågeparametrar per klient och situation
-uuid: e3fae41e-9f7d-4f01-9a01-52a1d5f5dad5
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
