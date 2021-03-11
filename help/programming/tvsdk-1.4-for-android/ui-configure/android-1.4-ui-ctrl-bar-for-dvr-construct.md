@@ -1,13 +1,10 @@
 ---
 description: Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelning. DVR-stödet innefattar begreppet sökbart fönster och klientens direktpunkt.
-seo-description: Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelning. DVR-stödet innefattar begreppet sökbart fönster och klientens direktpunkt.
-seo-title: Skapa ett kontrollfält förbättrat för DVR
 title: Skapa ett kontrollfält förbättrat för DVR
-uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
