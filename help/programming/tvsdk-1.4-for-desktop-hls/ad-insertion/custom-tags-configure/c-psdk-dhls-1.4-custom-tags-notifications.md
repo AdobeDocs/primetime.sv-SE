@@ -1,13 +1,10 @@
 ---
 description: Egenskapen MediaPlayerItem.timedMetadata ger dig åtkomst till alla TimedMetadata-objekt som skapats från taggarna playlist/manifest eller från ID3-taggar i medieströmmen. Egenskapen MediaPlayerItem.hasTimedMetadata anger om det finns en anpassad tagg som du prenumererar på i det aktuella mediet.
-seo-description: Egenskapen MediaPlayerItem.timedMetadata ger dig åtkomst till alla TimedMetadata-objekt som skapats från taggarna playlist/manifest eller från ID3-taggar i medieströmmen. Egenskapen MediaPlayerItem.hasTimedMetadata anger om det finns en anpassad tagg som du prenumererar på i det aktuella mediet.
-seo-title: Meddelanden om manifesttaggar
 title: Meddelanden om manifesttaggar
-uuid: 87bee41b-b44e-4d12-afd2-7a63023f992c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
