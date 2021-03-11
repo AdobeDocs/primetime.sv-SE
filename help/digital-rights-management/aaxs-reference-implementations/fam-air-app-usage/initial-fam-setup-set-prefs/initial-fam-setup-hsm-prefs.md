@@ -1,9 +1,9 @@
 ---
-seo-title: HSM-inställningar
 title: HSM-inställningar
-uuid: 1b97d582-d4b6-48cd-9c24-2d13493571e9
+description: HSM-inställningar
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
