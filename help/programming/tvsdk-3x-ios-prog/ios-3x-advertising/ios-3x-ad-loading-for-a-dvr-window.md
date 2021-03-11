@@ -1,13 +1,10 @@
 ---
 description: Du kan bestämma om du bara vill matcha annonser som inträffar efter användarens aktuella Live Point eller om du även vill matcha annonser som inträffar före den aktuella Live-punkten.
-seo-description: Du kan bestämma om du bara vill matcha annonser som inträffar efter användarens aktuella Live Point eller om du även vill matcha annonser som inträffar före den aktuella Live-punkten.
-seo-title: Läs in annons för ett DVR-fönster
 title: Läs in annons för ett DVR-fönster
-uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
