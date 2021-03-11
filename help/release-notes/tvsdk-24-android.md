@@ -1,16 +1,12 @@
 ---
 title: Versionsinformation om TVSDK 2.4.1 för Android
-seo-title: Versionsinformation om TVSDK 2.4.1 för Android
 description: Versionsinformation om TVSDK 2.4.1 för Android beskriver de nya och stödda funktionerna och de kända problemen och begränsningarna i TVSDK Android 2.4.1.
-seo-description: Versionsinformation om TVSDK 2.4.1 för Android beskriver de nya och stödda funktionerna och de kända problemen och begränsningarna i TVSDK Android 2.4.1.
-uuid: 929fc577-e851-4e03-9201-13280cc6137a
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: a6dbcc4a-9e14-4452-9004-b39ed13fad6f
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1963'
 ht-degree: 0%
 
 ---
@@ -124,7 +120,7 @@ Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffe
 
 * **Fakturering**
 
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
 
 ## Funktioner som stöds {#supported-features}
 
