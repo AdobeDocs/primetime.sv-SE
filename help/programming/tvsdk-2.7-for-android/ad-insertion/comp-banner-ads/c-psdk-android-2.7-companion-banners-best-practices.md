@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Bästa tillvägagångssätt för annonser på följeslagare
 title: Bästa tillvägagångssätt för annonser på följeslagare
-uuid: d844babb-20ab-4380-9487-eb1c24b58877
+description: Bästa tillvägagångssätt för annonser på följeslagare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ TVSDK har stöd för banners som är annonser som medföljer en linjär annons o
 
 ## Bästa tillvägagångssätt för annonser på följeslagare {#best-practices-for-companion-banner-ads}
 
-Följ de här rekommendationerna när du visar följeslagarannonser:
+Följ dessa rekommendationer när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
 * Visa bara en tilläggsbanderoll om du har en plats som matchar annonsens angivna höjd och bredd.
