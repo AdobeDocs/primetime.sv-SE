@@ -1,9 +1,9 @@
 ---
-seo-title: Bädda in licenser
 title: Bädda in licenser
-uuid: e3d55376-07de-479c-9a53-04bc8071ced4
+description: Bädda in licenser
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
