@@ -1,13 +1,10 @@
 ---
 description: När Primetimes annonsbeslut påträffar en VAST-annons (creative) som är tom eller som har en medietyp som är ogiltig för HLS, utvärderas reservannonserna för att avgöra vad som ska returneras.
-seo-description: När Primetimes annonsbeslut påträffar en VAST-annons (creative) som är tom eller som har en medietyp som är ogiltig för HLS, utvärderas reservannonserna för att avgöra vad som ska returneras.
-seo-title: Annonsbeteende för VAST och VMAP
 title: Annonsbeteende för VAST och VMAP
-uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
