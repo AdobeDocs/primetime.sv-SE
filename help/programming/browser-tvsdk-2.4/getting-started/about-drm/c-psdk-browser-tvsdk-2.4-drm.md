@@ -1,13 +1,10 @@
 ---
 description: Du kan slutföra DRM-specifika arbetsflöden (Digital Rights Management).
-seo-description: Du kan slutföra DRM-specifika arbetsflöden (Digital Rights Management).
-seo-title: Digital Rights Management
 title: Digital Rights Management
-uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
