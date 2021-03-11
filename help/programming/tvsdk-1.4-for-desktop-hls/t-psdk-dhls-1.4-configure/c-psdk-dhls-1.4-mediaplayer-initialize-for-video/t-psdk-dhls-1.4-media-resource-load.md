@@ -1,13 +1,10 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
-seo-description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
-seo-title: Läsa in en medieresurs i MediaPlayer
 title: Läsa in en medieresurs i MediaPlayer
-uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
 translation-type: tm+mt
-source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
