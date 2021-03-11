@@ -1,12 +1,11 @@
 ---
 title: Versionsinformation om Primetime
-seo-title: Versionsinformation för Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Versionsinformation om Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
