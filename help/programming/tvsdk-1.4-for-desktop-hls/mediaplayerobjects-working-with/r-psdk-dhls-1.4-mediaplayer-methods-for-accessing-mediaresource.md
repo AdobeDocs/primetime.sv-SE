@@ -1,13 +1,10 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
-seo-description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
-seo-title: MediaPlayer-metoder för åtkomst till MediaResource-information
 title: MediaPlayer-metoder för åtkomst till MediaResource-information
-uuid: c2d18f8e-4107-42bc-a975-9b881aadd27b
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
