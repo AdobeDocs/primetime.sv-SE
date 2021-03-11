@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Konfigurera licensserverdatabasen
 title: Konfigurera licensserverdatabasen
-uuid: aa6185f2-8e9d-4b65-971a-b7534d910580
+description: Konfigurera licensserverdatabasen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ Anonym licensköp kräver inte att databasen körs.
 
 Om du vill köra licensservern måste du installera och konfigurera MySQL:
 
-1. Gå till mappen [!DNL Third Party\MySQL\Installer\5.1] på dvd-skivan och starta installationsprogrammet.
+1. På dvd-skivan går du till mappen [!DNL Third Party\MySQL\Installer\5.1] och startar installationsprogrammet.
 1. Slutför MySQL-installationen.
 1. Välj **[!UICONTROL Configure MySQL Server Now]** för att starta konfigurationsguiden.
 1. Använd standardinställningarna eller välj specifika inställningar för testningen tills den femte skärmen visas.
