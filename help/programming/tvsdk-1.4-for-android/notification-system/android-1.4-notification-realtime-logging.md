@@ -1,13 +1,10 @@
 ---
 description: Du kan använda meddelanden för att implementera loggning i realtid i videoprogrammet.
-seo-description: Du kan använda meddelanden för att implementera loggning i realtid i videoprogrammet.
-seo-title: Lägg till loggning och felsökning i realtid
 title: Lägg till loggning och felsökning i realtid
-uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
