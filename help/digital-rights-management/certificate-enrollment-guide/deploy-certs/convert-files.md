@@ -1,9 +1,9 @@
 ---
-seo-title: Konvertera filer
 title: Konvertera filer
-uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
+description: Konvertera filer
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Med hjälp av ett verktyg som OpenSSL och den privata nyckeln skapar den begära
 
    >[!NOTE]
    >
-   >Även om det inte är nödvändigt rekommenderar Adobe att du använder olika lösenord för den privata nyckeln (private_key_password) och PFX (pfx_password).
+   >Även om det inte är obligatoriskt rekommenderar Adobe att du använder olika lösenord för den privata nyckeln (private_key_password) och PFX (pfx_password).
 
    Den här slutliga PEM-filen innehåller bara ditt certifikat.
 
