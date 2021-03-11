@@ -1,13 +1,10 @@
 ---
 description: 'Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du kan göra detta med något av följande '
-seo-description: 'Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du kan göra detta med något av följande '
-seo-title: Tillämpa egenskaper på servermiljöer
 title: Tillämpa egenskaper på servermiljöer
-uuid: a1ee0d6c-b5e7-4689-b7c8-b155176faf1c
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
