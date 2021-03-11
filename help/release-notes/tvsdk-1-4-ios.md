@@ -1,16 +1,12 @@
 ---
 title: Versionsinformation om TVSDK 1.4 för iOS
-seo-title: Versionsinformation om TVSDK 1.4 för iOS
 description: Versionsinformationen för TVSDK 1.4 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 1.4
-seo-description: Versionsinformation om TVSDK 1.4 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 1.4
-uuid: c1df12bd-aa21-47e8-ade4-1e497882ce9b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6578'
+source-wordcount: '6550'
 ht-degree: 0%
 
 ---
@@ -274,7 +270,7 @@ Comment Type: draft
 * (ZD#34385) - Uppspelningen stoppas med en felaktig URL vid återgång från signalbaserad annonsinfogning.
 
    Öka det maximala antalet samtidiga för CustomAVAssetLoaderOperations, så att manifestläsningarna kan fortsätta att köras.
-* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
+* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
    Annons-ID för den slutliga annonseringen hämtas nu i VHL-pingar vid VAST-/VMAP-omdirigeringar.
@@ -832,7 +828,7 @@ Alla varningar har åtgärdats.
 
 * Zendesk #3875 - Tab S kraschar vid uppspelning
 
-Återställer surfHTTP-beroendet för CRS eftersom TVSDK nu använder httpurlconnection i stället för curl. Problemet löstes genom att undantagen rensades innan ett nytt JNI-anrop gjordes.
+Återställer surfHTTP-beroendet för CRS eftersom TVSDK nu använder httpurlconnection direkt i stället för curl. Problemet löstes genom att undantagen rensades innan ett nytt JNI-anrop gjordes.
 
 * Zendesk #4487 - Tracking Linear Channel of Content
 
