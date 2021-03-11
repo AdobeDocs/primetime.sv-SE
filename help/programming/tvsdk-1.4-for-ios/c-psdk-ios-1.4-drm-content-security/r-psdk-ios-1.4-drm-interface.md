@@ -1,13 +1,10 @@
 ---
 description: Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
-seo-description: Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
-seo-title: Översikt över Primetime DRM-gränssnittet
 title: Översikt över Primetime DRM-gränssnittet
-uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
