@@ -1,13 +1,10 @@
 ---
 description: 'När en konsument köper en skyddad innehållsfil från en webbplats eller ett CDN-nummer måste konsumenten också skaffa en licens som innehåller en nyckel för att dekryptera videon innan den kan spelas upp. Följande steg visar ett vanligt arbetsflöde för hur skyddat innehåll används av en dator som kör Flash Player eller Adobe AIR '
-seo-description: 'När en konsument köper en skyddad innehållsfil från en webbplats eller ett CDN-nummer måste konsumenten också skaffa en licens som innehåller en nyckel för att dekryptera videon innan den kan spelas upp. Följande steg visar ett vanligt arbetsflöde för hur skyddat innehåll används av en dator som kör Flash Player eller Adobe AIR '
-seo-title: Inköp av innehåll
 title: Inköp av innehåll
-uuid: 80253746-bc31-43f0-b28b-7a1aa7fe34a7
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
