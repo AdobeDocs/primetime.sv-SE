@@ -1,13 +1,10 @@
 ---
 description: När DRM-metadata för en video inkluderas i medieströmmen ska du autentisera under uppspelningen.
-seo-description: När DRM-metadata för en video inkluderas i medieströmmen ska du autentisera under uppspelningen.
-seo-title: DRM-autentisering under uppspelning
 title: DRM-autentisering under uppspelning
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
