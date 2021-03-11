@@ -1,9 +1,9 @@
 ---
-seo-title: Hantera FMRMS-kompatibilitet
 title: Hantera FMRMS-kompatibilitet
-uuid: c8d36281-cb20-4716-a58c-209e012a69bd
+description: Hantera FMRMS-kompatibilitet
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
