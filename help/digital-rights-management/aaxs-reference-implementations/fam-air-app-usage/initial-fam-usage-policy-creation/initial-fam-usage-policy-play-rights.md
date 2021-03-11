@@ -1,9 +1,9 @@
 ---
-seo-title: Uppspelningsrättigheter
 title: Uppspelningsrättigheter
-uuid: 90f2a7a6-6637-4d10-9afe-6d2e77fc4185
+description: Uppspelningsrättigheter
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
