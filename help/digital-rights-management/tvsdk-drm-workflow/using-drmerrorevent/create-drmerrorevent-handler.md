@@ -1,9 +1,9 @@
 ---
-seo-title: Skapa en DRMErrorEvent-hanterare
 title: Skapa en DRMErrorEvent-hanterare
-uuid: dde660fc-6899-47d4-97d4-46acda2db262
+description: Skapa en DRMErrorEvent-hanterare
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
