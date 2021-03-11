@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring och sökning av händelser.
-seo-description: Browser TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring och sökning av händelser.
-seo-title: QoS-händelser
 title: QoS-händelser
-uuid: 3384bc51-b435-4cd9-a1f8-9abf2605205b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '105'
 ht-degree: 1%
 
 ---
