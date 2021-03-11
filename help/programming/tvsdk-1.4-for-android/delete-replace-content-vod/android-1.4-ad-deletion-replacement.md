@@ -1,13 +1,10 @@
 ---
 description: Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta annonser.
-seo-description: Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta annonser.
-seo-title: Ändringar i API:t för borttagning och ersättning av annonser
 title: Ändringar i API:t för borttagning och ersättning av annonser
-uuid: 2bb8a331-6851-4442-99de-b01500a0e1e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -84,7 +81,7 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 
    * I `prepareToPlay()`: Gör en inledande sökning till 0, eftersom mediespelaren inte spelas upp automatiskt om intervallet `[0,n]` tas bort.
 
-   * I `prepareToPlay()`: Går igenom listan med inledande placeringsinformation som `mediaplayerclient` ska matchas.
+   * I `prepareToPlay()`: Slingar igenom listan med inledande placeringsinformation som `mediaplayerclient` ska matchas.
 
    * I `extractAdSignalingMode()`: Anpassa för det nya läget Anpassat tidsintervall.
    * Ny `private static List<PlacementInformation> createInitalPlacementInformations()`: Genererar inledande placeringsinformation för annonseringssigneringsläget och innehållslösningar (härledda från annonseringsmetadata).
