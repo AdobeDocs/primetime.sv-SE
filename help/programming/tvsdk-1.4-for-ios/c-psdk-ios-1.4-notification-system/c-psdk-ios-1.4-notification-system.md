@@ -1,13 +1,10 @@
 ---
 description: PTNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
-seo-description: PTNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
-seo-title: Meddelanden om spelarstatus, aktivitet, fel och loggar
 title: Meddelanden om spelarstatus, aktivitet, fel och loggar
-uuid: 59716a66-3736-4076-8011-8104bfe3a83a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -36,7 +33,7 @@ TVSDK tillhandahåller en kronologisk lista med `PTNotification`-meddelanden. Va
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
 
-   * `type`: INFORMATION, VARNING eller FEL.
+   * `type`: INFORMATION, VARNING ELLER FEL.
    * `code`: En numerisk representation av anmälan.
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
