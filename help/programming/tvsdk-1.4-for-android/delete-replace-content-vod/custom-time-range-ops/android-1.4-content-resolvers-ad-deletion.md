@@ -1,13 +1,10 @@
 ---
 description: Du kan använda flera innehållslösare för att hantera olika tidslinjeåtgärder.
-seo-description: Du kan använda flera innehållslösare för att hantera olika tidslinjeåtgärder.
-seo-title: Innehållslösningar för borttagning/ersättning av annonser
 title: Innehållslösningar för borttagning/ersättning av annonser
-uuid: 2954ce0f-aed2-4a85-8e53-d4e89d1497b6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
