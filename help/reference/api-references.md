@@ -1,13 +1,11 @@
 ---
 title: Adobe Primetime API-referenser
-seo-title: Adobe Primetime API-referenser
 description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
-seo-description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
