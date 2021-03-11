@@ -1,13 +1,10 @@
 ---
 description: Adobe Offline Packager används som okrypterat MP4-innehåll.
-seo-description: Adobe Offline Packager används som okrypterat MP4-innehåll.
-seo-title: Paketera ditt innehåll med Adobe Offline Packager
 title: Paketera ditt innehåll med Adobe Offline Packager
-uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
