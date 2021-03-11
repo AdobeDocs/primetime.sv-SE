@@ -1,13 +1,10 @@
 ---
 description: 'Adobe® Access™ är en avancerad lösning för hantering av digitala rättigheter och skydd av innehåll för högvärdigt audiovisuellt innehåll. Med verktyg som du skapar med Java API:er kan du skapa profiler, tillämpa profiler på filer som innehåller ljud- och videoinnehåll och kryptera dessa filer. Stegen på hög nivå för att utföra dessa uppgifter är följande '
-seo-description: 'Adobe® Access™ är en avancerad lösning för hantering av digitala rättigheter och skydd av innehåll för högvärdigt audiovisuellt innehåll. Med verktyg som du skapar med Java API:er kan du skapa profiler, tillämpa profiler på filer som innehåller ljud- och videoinnehåll och kryptera dessa filer. Stegen på hög nivå för att utföra dessa uppgifter är följande '
-seo-title: Översikt
 title: Översikt
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
