@@ -1,9 +1,9 @@
 ---
-seo-title: Anpassade metadata
 title: Anpassade metadata
-uuid: 9433fd74-730d-4306-8ff3-a6857745a039
+description: Anpassade metadata
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
