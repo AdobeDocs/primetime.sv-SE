@@ -1,9 +1,9 @@
 ---
-seo-title: Egenskaper för konfigurationsfil
 title: Egenskaper för konfigurationsfil
-uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
+description: Egenskaper för konfigurationsfil
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
