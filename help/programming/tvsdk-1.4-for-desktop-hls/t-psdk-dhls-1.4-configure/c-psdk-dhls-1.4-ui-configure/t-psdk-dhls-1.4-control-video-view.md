@@ -1,13 +1,10 @@
 ---
 description: Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
-seo-description: Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
-seo-title: Styra videovyns placering och storlek
 title: Styra videovyns placering och storlek
-uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 
-TVSDK försöker som standard att behålla videovyns proportioner när videons storlek eller position ändras (på grund av en ändring som gjorts av programmet, en profilväxel eller en innehållsväxel, osv.).
+TVSDK försöker som standard att behålla videovyns proportioner när videons storlek eller position ändras (på grund av en ändring som gjorts av programmet, en profilväxel eller en innehållsväxel etc.).
 
 Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan *skalprincip*. Ange skalningsprincipen med `MediaPlayerView`-objektets `scalePolicy`-egenskap. Standardskalningsprincipen för `MediaPlayerView` anges med en instans av klassen `MaintainAspectRatioScalePolicy`. Om du vill återställa skalprincipen ersätter du standardinstansen av `MaintainAspectRatioScalePolicy` på `MediaPlayerView.scalePolicy` med din egen princip. (Du kan inte ange egenskapen `scalePolicy` till ett null-värde.)
 
