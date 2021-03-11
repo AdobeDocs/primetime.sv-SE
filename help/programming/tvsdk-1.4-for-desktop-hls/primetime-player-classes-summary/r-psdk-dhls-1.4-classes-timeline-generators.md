@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser hjälper till att identifiera möjligheter i en tidslinje för placering av innehåll, som annonser.
-seo-description: Dessa klasser hjälper till att identifiera möjligheter i en tidslinje för placering av innehåll, som annonser.
-seo-title: Klasser för generatorer för tidslinje
 title: Klasser för generatorer för tidslinje
-uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
