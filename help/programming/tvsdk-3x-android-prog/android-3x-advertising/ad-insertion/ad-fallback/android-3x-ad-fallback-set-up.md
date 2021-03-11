@@ -1,13 +1,10 @@
 ---
 description: Du kan aktivera reserv när en intern VMAP-fil innehåller en ogiltig medietyp.
-seo-description: Du kan aktivera reserv när en intern VMAP-fil innehåller en ogiltig medietyp.
-seo-title: Definiera reservannonsbeteenden för VMAP-textbundna annonser
 title: Definiera reservannonsbeteenden för VMAP-textbundna annonser
-uuid: bc8cb0b4-5ea9-429b-ab5d-746c6f03e74b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
