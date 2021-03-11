@@ -1,9 +1,9 @@
 ---
-seo-title: Vanliga frågor
 title: Vanliga frågor
-uuid: 7e7409b5-9b3f-4dc3-96b6-42a06d9b1265
+description: Vanliga frågor
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
