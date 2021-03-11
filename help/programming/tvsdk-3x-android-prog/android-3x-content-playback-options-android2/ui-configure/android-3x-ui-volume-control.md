@@ -1,14 +1,11 @@
 ---
 description: Du kan ställa in en gränssnittskontroll för att justera volymen för videon.
-seo-description: Du kan ställa in en gränssnittskontroll för att justera volymen för videon.
-seo-title: Ange volymkontroll
 title: Ange volymkontroll
-uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
