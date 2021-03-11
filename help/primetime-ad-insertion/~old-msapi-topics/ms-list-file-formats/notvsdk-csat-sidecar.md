@@ -1,13 +1,10 @@
 ---
 description: Om klienten begär spårningsinformation i JSON-format skickar manifestservern tillbaka en fil i något av JSON-formaten.
-seo-description: Om klienten begär spårningsinformation i JSON-format skickar manifestservern tillbaka en fil i något av JSON-formaten.
-seo-title: JSON-format för spårning av URL:er
 title: JSON-format för spårning av URL:er
-uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
