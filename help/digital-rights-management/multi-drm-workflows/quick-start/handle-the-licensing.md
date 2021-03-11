@@ -1,13 +1,10 @@
 ---
 description: Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
-seo-description: Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
-seo-title: Licenser
 title: Licenser
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
