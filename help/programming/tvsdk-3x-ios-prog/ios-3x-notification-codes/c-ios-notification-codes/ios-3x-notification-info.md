@@ -1,13 +1,10 @@
 ---
 description: Den här tabellen innehåller detaljerad information om INFO-typmeddelanden.
-seo-description: Den här tabellen innehåller detaljerad information om INFO-typmeddelanden.
-seo-title: INFO-meddelandekoder
 title: INFO-meddelandekoder
-uuid: 21297863-dac1-45a4-ac9d-309d1f746f8b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '180'
 ht-degree: 4%
 
 ---
