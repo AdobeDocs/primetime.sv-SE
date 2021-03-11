@@ -1,13 +1,10 @@
 ---
 description: Du kan anropa anpassad auktoriseringslogik under licensköp för att bestämma om en licens ska utfärdas till den begärande klienten.
-seo-description: Du kan anropa anpassad auktoriseringslogik under licensköp för att bestämma om en licens ska utfärdas till den begärande klienten.
-seo-title: Anpassade auktoriseringstillägg
 title: Anpassade auktoriseringstillägg
-uuid: 588b05e5-3402-4586-bbd4-58b7e9a58ee4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
