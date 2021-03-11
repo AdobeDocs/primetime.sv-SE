@@ -1,13 +1,10 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
-seo-title: 'null'
-title: 'null'
-uuid: 20828188-817a-471c-acbc-aeb5f336356b
+title: FELMEDDELANDEkoder
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 5%
 
 ---
@@ -243,7 +240,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_ERROR  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
    <td colname="5"> <p>Platskatalysatorfel. Se beskrivning. </p> </td> 
