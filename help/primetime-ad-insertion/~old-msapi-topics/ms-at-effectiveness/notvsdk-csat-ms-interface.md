@@ -1,13 +1,10 @@
 ---
 description: Använd valfria frågeparametrar för paketläge, paketversion och paketposition för att hämta URL:er dit annonsspårningsinformation om den aktuella videon ska skickas. Svaren varierar beroende på spårningsversionen och om videoströmmen är live eller on demand (VOD).
-seo-description: Använd valfria frågeparametrar för paketläge, paketversion och paketposition för att hämta URL:er dit annonsspårningsinformation om den aktuella videon ska skickas. Svaren varierar beroende på spårningsversionen och om videoströmmen är live eller on demand (VOD).
-seo-title: API för spelare som ska interagera med manifestservern
 title: API för spelare som ska interagera med manifestservern
-uuid: ab7a19e7-6c28-4960-a56b-3b33c525e6b3
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
