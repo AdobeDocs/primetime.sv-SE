@@ -1,14 +1,11 @@
 ---
 description: Flaggan forceflash i källlistan tvingar fram Flash som reserv för en URL. För den här URL:en kan du använda Adobe Flash Player för att spela upp innehållet.
-seo-description: Flaggan forceflash i källlistan tvingar fram Flash som reserv för en URL. För den här URL:en kan du använda Adobe Flash Player för att spela upp innehållet.
-seo-title: Tvinga Flash-reserv med hjälp av mediekälllistan
 title: Tvinga Flash-reserv med hjälp av mediekälllistan
-uuid: 04b09734-15f7-4e7e-8802-344f550f9b05
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 1%
+source-wordcount: '86'
+ht-degree: 2%
 
 ---
 
