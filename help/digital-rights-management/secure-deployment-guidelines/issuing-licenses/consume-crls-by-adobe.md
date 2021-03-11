@@ -1,13 +1,10 @@
 ---
 description: SDK hämtar regelbundet listor över återkallade certifikat som publiceras av Adobe. Du måste se till att åtkomsten till de här filerna inte blockeras eller att kontrollen av dessa listor över återkallade certifikat inte förhindras.
-seo-description: SDK hämtar regelbundet listor över återkallade certifikat som publiceras av Adobe. Du måste se till att åtkomsten till de här filerna inte blockeras eller att kontrollen av dessa listor över återkallade certifikat inte förhindras.
-seo-title: Använda listor över återkallade certifikat som publicerats av Adobe
 title: Använda listor över återkallade certifikat som publicerats av Adobe
-uuid: 7a9088bd-dde6-4445-958c-3e7272215b3c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
