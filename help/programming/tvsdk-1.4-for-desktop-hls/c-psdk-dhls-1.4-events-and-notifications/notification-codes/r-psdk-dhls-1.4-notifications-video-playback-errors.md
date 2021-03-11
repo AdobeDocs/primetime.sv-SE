@@ -1,13 +1,10 @@
 ---
 description: Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
-seo-description: Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
-seo-title: NATIVE_ERROR Videouppspelningsvärden
 title: NATIVE_ERROR Videouppspelningsvärden
-uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1339'
 ht-degree: 6%
 
 ---
@@ -442,7 +439,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
    <td colname="col3"> Det går inte att läsa från en fil. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Det uppstod ett fel vid analys av ID3-data. </td> 
   </tr> 
