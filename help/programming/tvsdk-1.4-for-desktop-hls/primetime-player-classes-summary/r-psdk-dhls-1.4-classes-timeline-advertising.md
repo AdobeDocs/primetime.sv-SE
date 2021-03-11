@@ -1,13 +1,10 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
-seo-description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
-seo-title: Tidslinjeannonsklasser
 title: Tidslinjeannonsklasser
-uuid: f424fa13-778b-458d-bc82-389441a8a56a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ Paket: [com.adobe.mediacore.timeline.advertising.policy](https://help.adobe.com/
 |---|---|
 | [Annons](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och ett `MediaResource`. `MediaResource` innehåller URL:en där det faktiska annonsinnehållet finns. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | En klass som representerar en resurs som ska visas. En klass som representerar en annonsresurs. |
-| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. |
+| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. |
 | [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakPolicy.html) | En uppräkning som definierar annonsuppspelningsprincipen som relaterar till användaren som åsidosätter annonser vid sökning. |
 | [AdBreakTimelineItem](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreakTimelineItem.html) | Tidslinjeobjekt som är associerat med en viss annonsbrytning. |
 | [AdBreakWatchedPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakWatchedPolicy.html) | Uppräkningsklass för möjliga principer för när en annonsbrytning ska markeras som bevakad. |
