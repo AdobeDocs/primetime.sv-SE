@@ -1,13 +1,10 @@
 ---
 description: Använd Browser TVSDK i din app för att skapa en Browserify-kompatibel spelare.
-seo-description: Använd Browser TVSDK i din app för att skapa en Browserify-kompatibel spelare.
-seo-title: Skapa en Browserify-kompatibel spelare utan UI-Framework
 title: Skapa en Browserify-kompatibel spelare utan UI-Framework
-uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
