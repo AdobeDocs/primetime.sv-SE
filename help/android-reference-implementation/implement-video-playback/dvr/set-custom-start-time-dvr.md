@@ -1,9 +1,9 @@
 ---
-seo-title: Ange en anpassad starttid i referensimplementeringen
 title: Ange en anpassad starttid i referensimplementeringen
-uuid: ec404e61-9dce-4bd3-ac48-c2dbd834b6f8
+description: Ange en anpassad starttid i referensimplementeringen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
