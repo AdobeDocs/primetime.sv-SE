@@ -1,9 +1,9 @@
 ---
-seo-title: Definiera tidsbaserade regler
 title: Definiera tidsbaserade regler
-uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
+description: Definiera tidsbaserade regler
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
