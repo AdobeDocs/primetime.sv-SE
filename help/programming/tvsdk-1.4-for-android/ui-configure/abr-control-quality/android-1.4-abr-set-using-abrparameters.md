@@ -1,13 +1,10 @@
 ---
 description: Du kan bara ange ABR-kontrollvärden med ABRControlParameters, men du kan när som helst skapa en ny.
-seo-description: Du kan bara ange ABR-kontrollvärden med ABRControlParameters, men du kan när som helst skapa en ny.
-seo-title: Konfigurera adaptiva bithastigheter med ABRControlParameters
 title: Konfigurera adaptiva bithastigheter med ABRControlParameters
-uuid: c877c5cc-ad72-46dc-afc4-d41ee097a9a4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
