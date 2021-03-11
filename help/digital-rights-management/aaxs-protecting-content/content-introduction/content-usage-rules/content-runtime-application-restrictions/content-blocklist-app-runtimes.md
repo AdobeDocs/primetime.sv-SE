@@ -1,9 +1,9 @@
 ---
-seo-title: Blockeringslista i programkörningsmiljön hindras från att komma åt skyddat innehåll
 title: Blockeringslista i programkörningsmiljön hindras från att komma åt skyddat innehåll
-uuid: 462a2c09-b335-4768-bd0e-1359db169d69
+description: Blockeringslista i programkörningsmiljön hindras från att komma åt skyddat innehåll
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
