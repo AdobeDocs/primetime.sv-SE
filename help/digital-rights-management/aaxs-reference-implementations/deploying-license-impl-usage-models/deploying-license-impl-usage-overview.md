@@ -1,9 +1,9 @@
 ---
-seo-title: Implementera översikten över användningsmodeller
 title: Implementera översikten över användningsmodeller
-uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
+description: Implementera översikten över användningsmodeller
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du vill aktivera demonstrationen av användningsmodellen anger du den anpassa
 
 I filmen styr serverns affärslogik de faktiska attributen för de genererade licenserna. Vid paketeringen får innehållet endast innehålla minimal policyinformation. Principen behöver bara ange om autentisering krävs för att få tillgång till innehållet. Om du vill aktivera alla fyra användningsmodellerna inkluderar du en policy som tillåter anonym åtkomst (för den annonsfinansierade modellen) och en princip som kräver autentisering av användarnamn/lösenord (för de övriga tre användningsmodellerna). När ett klientprogram begär en licens kan det avgöra om användaren ska tillfrågas om autentisering baserat på autentiseringsinformationen i profilerna.
 
-För att styra den användningsmodell som en viss användare ska få en licens enligt kan poster läggas till i databasen för referensimplementering. Tabellen `Customer` innehåller användarnamn och lösenord för autentisering av användare. Det anger också om användaren har en prenumeration. Användare med prenumerationer får licenser enligt *prenumerationsmodellen*. Om du vill ge en användare åtkomst under användningsmodellerna *Ladda ned till Own* eller *Video on Demand* kan en post läggas till i tabellen `CustomerAuthorization`, som anger varje innehållsdel som användaren har åtkomst till och användningsmodellen. Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql]-skriptet.
+För att styra den användningsmodell som en viss användare ska få en licens enligt kan poster läggas till i databasen för referensimplementering. Tabellen `Customer` innehåller användarnamn och lösenord för autentisering av användare. Det anger också om användaren har en prenumeration. Användare med prenumerationer får licenser enligt *prenumerationsmodellen*. Om du vill ge en användare åtkomst under *Ladda ned till Own* eller *Video on Demand*-användningsmodellerna, kan en post läggas till i tabellen `CustomerAuthorization` som anger varje innehållsdel som användaren har åtkomst till och användningsmodellen. Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql]-skriptet.
 
 När en användare begär en licens kontrollerar Reference Implementation-servern de metadata som klienten skickade för att avgöra om innehållet paketerades med egenskapen `RI_UsageModelDemo`. I så fall används följande affärsregler:
 
