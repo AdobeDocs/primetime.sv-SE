@@ -1,13 +1,10 @@
 ---
 description: Den här tabellen innehåller detaljerad information om meddelanden om ERROR-typer.
-seo-description: Den här tabellen innehåller detaljerad information om meddelanden om ERROR-typer.
-seo-title: FELMEDDELANDEkoder
 title: FELMEDDELANDEkoder
-uuid: 50624782-3d0b-4ac4-b883-355c1f7e9bff
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '514'
 ht-degree: 4%
 
 ---
@@ -109,7 +106,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="2"><span class="codeph"> GET_QOS_DATA_ERROR  </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
-   <td colname="5"> <p>Det uppstod ett fel när QOS-informationen skulle hämtas. </p> </td> 
+   <td colname="5"> <p>Ett fel uppstod när QOS-informationen skulle hämtas. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101200  </span> </td> 
