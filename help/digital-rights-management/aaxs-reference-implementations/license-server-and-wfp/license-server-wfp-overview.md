@@ -1,9 +1,9 @@
 ---
-seo-title: Licensserver och bevakad mapppaketerare - översikt
 title: Licensserver och bevakad mapppaketerare - översikt
-uuid: 3dd6f699-a5c0-44c4-897a-34e06abe3d71
+description: Licensserver och bevakad mapppaketerare - översikt
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
