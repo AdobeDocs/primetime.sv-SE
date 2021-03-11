@@ -1,13 +1,10 @@
 ---
 description: 'Ni måste se till att ni på ett säkert sätt utfärdar licenser. Tänk på följande när det gäller att skydda licensservern '
-seo-description: 'Ni måste se till att ni på ett säkert sätt utfärdar licenser. Tänk på följande när det gäller att skydda licensservern '
-seo-title: Skydda licensservern
 title: Skydda licensservern
-uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
