@@ -1,13 +1,10 @@
 ---
-seo-title: Viktiga åtgärder för videouppspelning
 title: Viktiga åtgärder för videouppspelning
 description: PlaybackManager tillhandahåller viktiga åtgärder för HLS-direktuppspelning
-seo-description: PlaybackManager tillhandahåller viktiga åtgärder för HLS-direktuppspelning
-uuid: 7ac93f1f-9233-4462-a4be-528d1aa524a9
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
