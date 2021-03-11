@@ -1,9 +1,9 @@
 ---
-seo-title: Distribuera översikten över Primetime DRM Key Server
 title: Distribuera översikten över Primetime DRM Key Server
-uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
+description: Distribuera översikten över Primetime DRM Key Server
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 0%
