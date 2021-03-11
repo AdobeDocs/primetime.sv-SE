@@ -1,9 +1,9 @@
 ---
-seo-title: Skydd av utdata
 title: Skydd av utdata
-uuid: a0518392-cd33-4ef0-834c-f90145a9b421
+description: Skydd av utdata
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
 |---|---|---|
 | **Obligatoriskt**  - Utdataskydd för analog kopiering (ACP) eller Copy Generation Management System - analog (CGMS-A) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Primetime DRM-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker Primetime DRM 3.0-klienterna aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. | JA | JA |
 | **Krävs**  förAVS - AVS-utdataskydd krävs. Uppspelning tillåts inte på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Ingen uppspelning har angetts. | JA | - |
-| **Använd om tillgängligt**  - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Primetime DRM 3.0-klienter försöker aktivera både ACP och CGMS-A, om möjligt. Primetime DRM 2.0-klienter försöker bara aktivera antingen ACP eller CGMS-A. Ett försök görs av Primetime DRM-klienten att aktivera antingen ACP eller CGMS-A. Om försöket lyckas kan det andra alternativet inte aktiveras. Om försöket misslyckas görs sedan ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet upp ändå. | JA | JA |
+| **Använd om tillgängligt**  - Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåt uppspelning om det inte är tillgängligt. Primetime DRM 3.0-klienter försöker aktivera både ACP och CGMS-A, om möjligt. Primetime DRM 2.0-klienter försöker bara aktivera antingen ACP eller CGMS-A. Ett försök görs av Primetime DRM-klienten att aktivera antingen ACP eller CGMS-A. Om försöket lyckas går det inte att aktivera det andra alternativet. Om försöket misslyckas görs sedan ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet upp ändå. | JA | JA |
 | **Använd ACP om det är tillgängligt**  - Försök att aktivera AVS-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på CGMS-A. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Inget skydd har angetts. | JA | - |
 | **Använd CGMS-A om tillgängligt **— Försök aktivera CGMS-A-utdataskydd om det är tillgängligt, men tillåt uppspelning om det inte är tillgängligt. Skydd är inte tillgängligt på AVS. Primetime DRM 2.0-klienter stöder inte det här alternativet. Om detta anges fungerar en Primetime DRM 2.0-klient som om alternativet Inget skydd har angetts. | JA | - |
 | **Inget skydd**  - Ingen aktivering av utdataskydd krävs för analoga och digitala utdata. | JA | JA |
