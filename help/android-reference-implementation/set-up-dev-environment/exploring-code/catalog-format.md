@@ -1,13 +1,10 @@
 ---
 description: Referensimplementeringen för Primetime använder ett JSON-baserat feedformat för svar. Det här formatet tolkas med en implementering av IFeedItemAdapter-gränssnittet.
-seo-description: Referensimplementeringen för Primetime använder ett JSON-baserat feedformat för svar. Det här formatet tolkas med en implementering av IFeedItemAdapter-gränssnittet.
-seo-title: Katalogformat
 title: Katalogformat
-uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
