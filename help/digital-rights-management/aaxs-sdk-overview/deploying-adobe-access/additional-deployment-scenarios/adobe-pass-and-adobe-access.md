@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Pass och Adobe Access
 title: Adobe Pass och Adobe Access
-uuid: 09e75cd7-00b3-4f0f-869e-43dc4d5c3bf7
+description: Adobe Pass och Adobe Access
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
