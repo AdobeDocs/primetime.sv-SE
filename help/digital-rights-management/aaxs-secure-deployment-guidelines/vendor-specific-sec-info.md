@@ -1,9 +1,9 @@
 ---
-seo-title: Leverantörsspecifik säkerhetsinformation
 title: Leverantörsspecifik säkerhetsinformation
-uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
+description: Leverantörsspecifik säkerhetsinformation
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
