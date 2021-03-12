@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 # Versionsinformation om Primetime
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
+
+## Förbättringar och korrigeringar i TVSDK 3.13 iOS
+
+I versionen finns stöd för DEMUXED HLS/CMAF-annonser (pre-roll, midroll och postroll) för LIVE-, VOD- och FER-strömmar.
+
+Andra korrigeringar och detaljer finns i [TVSDK för iOS versionsinformation](../release-notes/tvsdk-3x-ios.md)
 
 ## Förbättringar och korrigeringar i PTAI 21.2.2
 
