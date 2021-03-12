@@ -1,16 +1,16 @@
 ---
-title: Versionsinformation om TVSDK 3.12 för iOS
-description: Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
+title: Versionsinformation om TVSDK 3.13 för iOS
+description: Versionsinformationen för TVSDK 3.13 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.13.
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7713'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för TVSDK 3.12 för iOS {#tvsdk-for-ios-release-notes}
+# Versionsinformation för TVSDK 3.13 för iOS {#tvsdk-for-ios-release-notes}
 
 Versionsinformationen för TVSDK 3.12 för iOS beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK iOS 3.12.
 
@@ -20,13 +20,17 @@ Innan du laddar ned iOS 3.12 bör du kontrollera att maskinvaru-, operativsystem
 
 Operativsystem: iOS 8.0 eller senare.
 
-## iOS TVSDK 3.12
+## iOS TVSDK 3.13
 
-Korrigerade ett problem där direktuppspelningen misslyckades efter 15 minuters uppspelning.
+I versionen finns stöd för DEMUXED HLS/CMAF-annonser (pre-roll, midroll och postroll) för LIVE-, VOD- och FER-strömmar.
 
-Information om korrigeringar i den aktuella versionen finns i [Kundproblem som har korrigerats](#resolved-issues) och om begränsningar finns i [avsnittet Kända fel och begränsningar](#known-issues-and-limitations).
+Korrigeringar av kundrapporterade problem finns i [Lösta problem](#resolved-issues). Mer information om begränsningar finns i [Kända fel och begränsningar](#known-issues-and-limitations).
 
 ### Nya funktioner och korrigeringar i tidigare versioner {#whats-new-previous}
+
+**iOS TVSDK 3.12**
+
+Korrigerade ett problem där direktuppspelningen misslyckades efter 15 minuters uppspelning.
 
 **iOS TVSDK 3.11**
 
@@ -301,6 +305,14 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 -->
 
+**iOS TVSDK 3.13**
+
+* (ZD 42085) - Problem med uppspelning i CMAF-strömmar.
+
+* (ZD-43215) - Krasch när spelaren stängs medan en annons pågår.
+
+* (ZD 43210) - iOS HLS-uppspelningen slutar fungera när WebVTT-underrubriken är aktiverad.
+
 **iOS TVSDK 3.12**
 
 * Direktuppspelningen misslyckas efter 15 minuters uppspelning när TVSDK används för iOS 3.10.
@@ -349,7 +361,7 @@ Inga nya problem i den här versionen.
 
 * **Biljett#36588**  - En krasch inträffar när STOP-metoden för MediaPlayer anropas.
 
-Korrigerad intermittent krasch som observerades när STOP-metoden anropades för några strömmar med undertexter.
+Korrigerad intermittent krasch när STOP-metoden anropas för några strömmar med undertexter.
 
 * **Ticket#37080** - Dubblettbegäranden för manifestanrop visas.
 Åtgärdade dubblettbegäranden som gjorts för manifest-URL:er under uppspelning. TVSDK gör nu ett anrop per manifest.
@@ -366,7 +378,7 @@ Korrigerad intermittent krasch som observerades när STOP-metoden anropades för
 
 **Version 3.0**
 
-* **Biljett35311** - Spelarstatus PAUSAS inte under ett avbrott i telefonsamtalet Tillagd avbrottshanterare för att stoppa spelaren från att avbrytas. Vid avbrott ändras spelarstatusen till PAUSED och uppspelningen återupptas när du klickar på uppspelningsknappen.
+* **Biljett35311**  - Spelarstatus PAUSAS inte under ett avbrott i telefonsamtalet Tillagd avbrottshanterare för att stoppa spelaren från att avbrytas. Vid avbrott ändras spelarstatusen till PAUSED och uppspelningen återupptas när du klickar på uppspelningsknappen.
 
 * **Biljett36685**  - Live-resurser - Tidsmatchningsfel med spelarens tidsförlopp och SCTE-markörtid Korrekt tid beräknas för SCTE-markörerna som ligger före direktpunkten.
 
@@ -415,7 +427,7 @@ Förbättrad korrigering för stängda utgåvor nr 34385 i version 1.4.42. Tilla
 
    Öka det maximala antalet samtidiga för `CustomAVAssetLoaderOperations` så att manifestläsningarna kan fortsätta att köras.
 
-* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
+* (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelning inte tillåts.
 
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
@@ -978,7 +990,7 @@ Alla varningar har åtgärdats.
 
 * Zendesk #3875 - Tab S kraschar vid uppspelning
 
-Återställer surfHTTP-beroendet för CRS eftersom TVSDK nu använder httpurlconnection i stället för curl. Problemet löstes genom att undantagen rensades innan ett nytt JNI-anrop gjordes.
+Återställer surfHTTP-beroendet för CRS eftersom TVSDK nu använder httpurlconnection direkt i stället för curl. Problemet löstes genom att undantagen rensades innan ett nytt JNI-anrop gjordes.
 
 * (Zendesk #4487) - Spårning av innehållets linjära kanal
 
