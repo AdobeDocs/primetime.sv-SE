@@ -2,9 +2,9 @@
 description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
 title: Krav för annonsering
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Om du vill lägga in annonser i videomaterialet måste du se till att annonsen o
 * Om huvudinnehållet innehåller en ström med enbart ljud måste annonsinnehållet även innehålla en ström med enbart ljud.
 * Om huvudinnehållet innehåller undertextströmmar måste annonsinnehållet vara okrypterat.
 * Om huvudinnehållet är en flerbithastighet (MBR) måste även annonsinnehållet vara MBR.
-* Om huvudinnehållet har alternativa ljudspår måste varje annons ha minst en ström med enbart ljud.
-
-Om annonsen inte har minst en ljudström hoppas annonsen över.
+* Om huvudinnehållet har alternativa ljudspår måste varje annons ha minst en ström med enbart ljud, annars ska annonserna demultiplexas. Om annonsen varken har minst en ström med enbart ljud eller är demuxerad hoppas annonsen över.
