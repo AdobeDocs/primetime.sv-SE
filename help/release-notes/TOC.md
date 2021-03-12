@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
    + [Versionsinformation om PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK för iOS {#tvsdk-ios}
-   + [Versionsinformation om TVSDK 3.12 för iOS](tvsdk-3x-ios.md)
+   + [Versionsinformation om TVSDK 3.13 för iOS](tvsdk-3x-ios.md)
    + [Versionsinformation om TVSDK 1.4 för iOS](tvsdk-1-4-ios.md)
 + TVSDK för Android {#tvsdk-android}
    + [Versionsinformation om TVSDK 3.13 för Android](tvsdk-3x-android.md)
