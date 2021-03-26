@@ -2,7 +2,7 @@
 title: Adobe Primetime Ad Insertion
 description: Kommentarer om de senaste funktionsreleaserna och andra relaterade nyheter om Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Minska programmatiska annonseringsfel via tidsgränser för annonsupplösning
 
-Publicerad 1 december 2000
+Publicerad 1 december 2020
 
 Adobe fokuserar på att hjälpa våra Primetime Ad Insertion-kunder att maximera avkastningen på sitt annonslager. Vi är särskilt uppmärksamma på att minska komplexiteten med att uppfylla programmatiska krav, som enligt eMarketer står för över tre fjärdedelar av USA:s utgifter för digital video och annonsering. Programmatisk försäljning ger utgivaren möjlighet att maximera efterfrågan på sitt annonslager, vilket leder till högre fyllnadsgrad och avkastning. Men det ökar också exponeringen för annonsfel som felaktiga VAST-svar, HTTP-fel och andra som kan leda till förlorade intäkter och/eller dåliga tittarupplevelser.
 
