@@ -5,15 +5,15 @@ description: Adobe Primetime-specifikationer
 seo-description: Adobe Primetime-specifikationer
 topic-tags: Adobe Primetime Specifications
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime API-specifikationer
+# Adobe Primetime-specifikationer
 
 Adobe Primetime tar TV till alla IP-anslutna skärmar. Det ger programmerare och operatörer modulära möjligheter att strömma, skydda, analysera och tjäna pengar på video på datorer och enheter. De här upplevelserna är ett antal strömningstekniker som används för att leverera innehåll och annonser till videospelare på Primetime.
 
