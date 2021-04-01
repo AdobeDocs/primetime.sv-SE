@@ -1,16 +1,15 @@
 ---
-cloud: experience-cloud
-solution-title: Läs mer & Support
-solution-hub-url: https://helpx.adobe.com/support/primetime.html
-solution-image: https://www.adobe.com
-getting-started-title: Komma igång
-getting-started-url: https://www.adobe.com/devnet/primetime.html
-tutorials-title: Självstudiekurser
-tutorials-url: https://www.adobe.com/devnet/primetime.html
-git-repo: https://github.com/AdobeDocs/primetime.en
+cloud: Experience Cloud
+type: Dokumentation
+product: adobe primetime
+solution: Primetime
+git-repo: https://git.corp.adobe.com/AdobeDocs/primetime.sv-SE
 index: y
 translation-type: tm+mt
-source-git-commit: a648b6c9dd606304328dc6b5bed4c847e54813eb
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
@@ -27,4 +26,4 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 | getting-started-url | Länk till hjälpsidan Komma igång |
 | tutorials-url | Länka till videosjälvstudiekurser - antingen hjälpstudiekurser eller självstudiekurser på engelska |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. standard är 2 |
-| git-repo | Anger platsen för huvudrapporten för intern användning |
+| git-repo | Anger platsen för den överordnad rapporten för intern användning |
