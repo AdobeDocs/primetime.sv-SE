@@ -1,14 +1,15 @@
 ---
 title: Övervakning av live-händelse
-description: null
+description: Övervakning av live-händelse
+copied-description: true
+exl-id: 004672c9-d064-46b7-8c8f-b4411b96e7cb
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '55'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
-
 
 # Övervakning av live-händelse {#live-event-monitoring}
 
