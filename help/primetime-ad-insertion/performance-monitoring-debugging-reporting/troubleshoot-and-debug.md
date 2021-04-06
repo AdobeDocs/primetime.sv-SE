@@ -1,14 +1,15 @@
 ---
 title: Felsöka och felsöka
-description: null
+description: Felsöka och felsöka
+copied-description: true
+exl-id: 1fcacd29-627d-4536-a746-16ddcfc8bc34
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
-
 
 # Felsök och felsök {#troubleshooting-debugging}
 
