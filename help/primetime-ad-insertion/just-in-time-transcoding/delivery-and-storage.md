@@ -1,14 +1,15 @@
 ---
 title: Leverans och lagring
-description: null
+description: Leverans och lagring
+copied-description: true
+exl-id: 84ccc140-02e6-4293-b087-13f87aee355b,8af58261-9277-4f46-9349-10b641238e1d
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Leverans och lagring {#delivery-and-storage}
 
