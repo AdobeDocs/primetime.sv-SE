@@ -1,14 +1,15 @@
 ---
 title: Viktiga mått och datamått
-description: null
+description: Viktiga mått och datamått
+copied-description: true
+exl-id: 71da0c5e-646e-4238-88ee-b6e0b068f6e3
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
-
 
 # Viktiga mått och datamått {#key-metrics-data-dimensions}
 
