@@ -1,14 +1,15 @@
 ---
 title: Optimera annonsupplevelserna
-description: null
+description: Optimera annonsupplevelserna
+copied-description: true
+exl-id: 0cdfbfe5-95f2-4509-8a67-623b77febbc8
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
-
 
 # Optimera annonsupplevelser {#optimizing-ad-experiences}
 
