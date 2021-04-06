@@ -1,14 +1,15 @@
 ---
 title: Analysera prestanda
-description: null
+description: Analysera prestanda
+copied-description: true
+exl-id: bef14bc2-30dc-44e5-bdfe-8b79f3af2cec
 translation-type: tm+mt
-source-git-commit: 0392466ae8779d62054232352ce039377818caca
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
-
 
 # Analysera prestanda {#analyze-performnce}
 
