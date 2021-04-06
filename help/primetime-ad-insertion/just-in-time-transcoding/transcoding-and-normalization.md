@@ -1,14 +1,15 @@
 ---
 title: Omkodning och normalisering
-description: null
+description: Omkodning och normalisering
+copied-description: true
+exl-id: 48d9d971-4b15-4f1b-8740-c21983a3e835
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
-
 
 # Omkodning och normalisering {#transcoding-and-normalization}
 
