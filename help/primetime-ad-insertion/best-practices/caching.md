@@ -1,14 +1,15 @@
 ---
 title: Cachelagring
-description: null
+description: Cachelagring
+copied-description: true
+exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
 translation-type: tm+mt
-source-git-commit: 76dc54fabdae400ad708ba83fcf6f7fd5caa2b22
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
-
 
 # HTTP-cachelagring {#caching}
 
