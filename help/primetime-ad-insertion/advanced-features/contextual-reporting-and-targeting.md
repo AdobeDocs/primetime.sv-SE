@@ -1,14 +1,15 @@
 ---
 title: Sammanhangsbaserad rapportering och målinriktning
-description: null
+description: Sammanhangsbaserad rapportering och målinriktning
+copied-description: true
+exl-id: 6d6c1f48-95ca-4055-a369-97ff27782ff0
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
-
 
 # Sammanhangsbaserad rapportering och målinriktning {#contextual-reporting-and-targeting}
 
