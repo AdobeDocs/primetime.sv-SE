@@ -1,14 +1,15 @@
 ---
 title: Utförlig loggning
-description: null
+description: Utförlig loggning
+copied-description: true
+exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2157'
 ht-degree: 0%
 
 ---
-
 
 # Utförlig loggning {#verbose-logging}
 
