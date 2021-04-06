@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Hjälp om Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 + [Adobe Primetime Ad Insertion](home.md)
 + Primetime Ad Insertion Announcements{#announcements}
    + [Meddelanden](announcements/overview.md)
-   + [Versionsinformation](/help/release-notes/ptai-21x-release-notes.md)
+   + [Versionsinformation](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
 + Kom igång med Primetime Ad Insertion{#get-started}
    + [Översikt](getting-started/get-started-overview.md)
    + [Förbered användning av Primetime Ad Insertion](getting-started/setup-ptai.md)
@@ -28,7 +28,7 @@ ht-degree: 0%
 + Just-in-Time-omkodning{#just-in-time-transcoding}
    + [Översikt](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Omkodning och normalisering](just-in-time-transcoding/transcoding-and-normalization.md)
-   + [Leverans och lagring](just-in-time-transcoding/delivery-and-storage.md)
+   + [Leverans och lagring](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
    + [API för förtranskodning](just-in-time-transcoding/pre-transcoding-api.md)
    + [Stöd för ID3-injektion](just-in-time-transcoding/id3-injection-support.md)
 + Avancerade funktioner{#advanced-features}
