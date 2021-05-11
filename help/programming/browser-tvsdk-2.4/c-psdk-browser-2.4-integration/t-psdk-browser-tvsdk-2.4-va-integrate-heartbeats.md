@@ -1,14 +1,14 @@
 ---
 description: Du kan konfigurera spelaren så att den spårar och analyserar videoanvändningen.
 title: Initiera och konfigurera videoanalys
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # Initiera och konfigurera videoanalys {#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ Innan du påbörjar en ny innehållsuppspelningssession ska du förstöra den ti
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. Markera Live-/Linear-strömmen manuellt som slutförd.
 Om du har olika avsnitt i ett direktflöde kan du manuellt markera ett avsnitt som fullständigt med det fullständiga API:t. Detta avslutar videospårningssessionen för det aktuella videoavsnittet och du kan starta en ny spårningssession för nästa avsnitt.
       >[!TIP]
@@ -146,5 +147,5 @@ Om du har olika avsnitt i ett direktflöde kan du manuellt markera ett avsnitt s
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
