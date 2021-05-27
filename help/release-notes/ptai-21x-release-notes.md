@@ -1,28 +1,43 @@
 ---
-title: Versionsinformation om PTAI 21.2.2
+title: Versionsinformation om PTAI 21.5.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2021.
-translation-type: tm+mt
-source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
+exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
+source-git-commit: 02e43df4d9b58b4b1ed8fdbc086771bbf3380c0f
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
-# Versionsinformation om Primetime Ad Insertion 21.2.2
+# Versionsinformation om Primetime Ad Insertion 21.5.1
 
 Versionsinformationen för Primetime Ad Insertion 21.x.x beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2021.
 
-## Nyheter i PTAI 21.2.2
+## Nyheter i PTAI 21.5.1
+
+När:  Onsdagen den 26 maj 2021 från 3:30 till 06:30 ESTERN
+
+* Stöd för den inaktuella segmenteringstypen 0x01 (UPID) för SCTE-baserade cue-format har lagts till.
+* Ny telemetri har lagts till för kommande ändringar av instrumentpanelen.
+
+## Förbättringar och korrigeringar i tidigare versioner
+
+### Version 21.4.1
+
+**När:** Torsdag den 22 april 2021: från kl. 23.00 till kl. 17.00 ÖSTRA
+
+**Ändringar**
+
+* Begränsning av sessionsbegäran aktiveras för att skydda mot potentiella DDOS-attacker. Sessionerna begränsas till 10 begäranden per sekund, med ett tak på 100 begäranden i kö. Vi räknar inte med någon effekt för spelare som beter sig enligt HLS/DASH-specifikationerna.
+* Andra förbättringar av underhåll och säkerhet
+
+### Version 21.2.2
 
 **När:** tisdag den 23 februari 2021 från 1:00 till 04:00 Eastern Time
 
 **Ändringar**
 
 * Stöd för infogning/synkronisering av EXT-X-IMAGE-STREAM-INF-strömmar i HLS-strömmar har lagts till. Funktionen aktiveras via en konfiguration på serversidan. Kontakta din tekniska kontorepresentant för att aktivera funktionen.
-
-## Förbättringar och korrigeringar i tidigare versioner
 
 ### Version 21.2.1
 
