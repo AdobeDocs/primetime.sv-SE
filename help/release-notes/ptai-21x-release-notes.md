@@ -2,9 +2,9 @@
 title: Versionsinformation om PTAI 21.5.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 02e43df4d9b58b4b1ed8fdbc086771bbf3380c0f
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,22 @@ Versionsinformationen för Primetime Ad Insertion 21.x.x beskriver vad som är n
 
 ## Nyheter i PTAI 21.5.1
 
-När:  Onsdagen den 26 maj 2021 från 3:30 till 06:30 ESTERN
+När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 * Stöd för den inaktuella segmenteringstypen 0x01 (UPID) för SCTE-baserade cue-format har lagts till.
+
 * Ny telemetri har lagts till för kommande ändringar av instrumentpanelen.
 
 ## Förbättringar och korrigeringar i tidigare versioner
 
 ### Version 21.4.1
 
-**När:** Torsdag den 22 april 2021: från kl. 23.00 till kl. 17.00 ÖSTRA
+**När:** Torsdag den 22 april 2021: från kl. 02.00 till kl. 17.00 (östtid)
 
 **Ändringar**
 
 * Begränsning av sessionsbegäran aktiveras för att skydda mot potentiella DDOS-attacker. Sessionerna begränsas till 10 begäranden per sekund, med ett tak på 100 begäranden i kö. Vi räknar inte med någon effekt för spelare som beter sig enligt HLS/DASH-specifikationerna.
+
 * Andra förbättringar av underhåll och säkerhet
 
 ### Version 21.2.2
