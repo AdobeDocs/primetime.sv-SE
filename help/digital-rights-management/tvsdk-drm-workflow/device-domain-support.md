@@ -1,14 +1,13 @@
 ---
 description: Vanligtvis är alla Primetime DRM-licenser bundna till en unik enhet när de skapas. Denna bindning förhindrar att användare delar licenser mellan olika enheter utan behörighet. Förutom bindning per enhet ger Primetime DRM möjlighet att binda licenser till en enhetsdomän eller grupp av enheter.
 title: Spela upp krypterat innehåll med domänstöd
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för enhetsdomän {#device-domain-support}
 
@@ -32,6 +31,6 @@ Så här spelar du upp krypterat innehåll med Primetime DRM:
    1. Anropa `DRMManager.addToDeviceGroup()`
 1. Hämta licensen för innehållet genom att utföra någon av följande åtgärder:
    1. Använd metoden `DRMManager.loadVoucher()`.
-   1. Hämta licensen från en annan enhet som är registrerad i samma enhetsgrupp och ge licensen till ` DRMManager` genom metoden `DRMManager.storeVoucher()`.
+   1. Hämta licensen från en annan enhet som är registrerad i samma enhetsgrupp och ge licensen till `DRMManager` genom metoden `DRMManager.storeVoucher()`.
 1. Spela upp det krypterade innehållet med metoden `Primetime.play()`.
 Om du vill exportera licensen för innehållet, kan alla enheter tillhandahålla licensens rå-byte med metoden `DRMVoucher.toByteArray()` efter att licensen har hämtats från Primetimes DRM-licensserver. Innehållsleverantörer begränsar vanligtvis antalet enheter i en enhetsgrupp. Om gränsen nås kan du behöva anropa metoden `DRMManager.removeFromDeviceGroup()` på en oanvänd enhet innan du registrerar den aktuella enheten.
