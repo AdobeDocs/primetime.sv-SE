@@ -1,14 +1,13 @@
 ---
 description: Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga status genom att avlyssna händelser som skickas av TVSDK.
 title: Sammanfattning av händelser för Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # Sammanfattning av händelser i Primetime-spelaren {#primetime-player-events-summary}
 
@@ -109,7 +108,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * **Händelsekod** `BUFFERING_END`
 
-`BufferPreparedEventListener&#39;
+`BufferPreparedEventListener`
 
 * **Betydelse** Bufferten förbereds.
 
