@@ -39,7 +39,7 @@ Med den här funktionen kan du använda samma WAR-fil för alla servermiljöer. 
 
     *`DEV`
     *`STAGE`
-    *`PROD
+    *`PROD`
 
 <!--<a id="example_A7A58E3EE8DA4114B4F7A9EEB69D50CA"></a>-->
 
