@@ -3,15 +3,15 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 2b7f0e3202107320168e5b0b37b3a9296029a0cd
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för Primetime {#release-notes}
+# Versionsinformation om Primetime {#release-notes}
 
 + [Översikt över versionsinformation](home.md)
 + Primetime Ad Insertion {#ptai}
@@ -28,7 +28,7 @@ ht-degree: 0%
    + [Versionsinformation om TVSDK 1.4 för Android](tvsdk-1-4-android.md)
 + Webbläsare-TVSDK {#browser-tvsdk}
    + [Versionsinformation för Browser TVSDK 2.4](tvsdk-24-browser.md)
-+ TVSDK for Desktop HLS {tvsdk-desktop-hls}
++ TVSDK för Desktop HLS {#tvsdk-desktop-hls}
    + [Versionsinformation om TVSDK 1.4 för Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Primetime Offline Packager version 2 - utgåvor](offline-packager-2x-release-note.md)
