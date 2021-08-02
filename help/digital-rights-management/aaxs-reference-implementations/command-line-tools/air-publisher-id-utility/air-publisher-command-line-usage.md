@@ -28,8 +28,7 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* anger sökvägen till AIR-programmets signatures.xml-fil, som finns i  [!DNL META-INF] programkatalogen
+* `signaturefile` anger sökvägen till AIR-programmets signatures.xml-fil, som finns i  [!DNL META-INF] programkatalogen
 
 * `signingcert` anger det certifikat som används för att signera AIR-programmet
 
