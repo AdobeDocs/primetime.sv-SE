@@ -1,16 +1,15 @@
 ---
-description: 'Versionen av #EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för ditt program och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.'
-title: '#EXT-X-VERSION requirements'
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Versionen av `#`EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för programmet och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
+title: '`#`EXT-X-VERSION-krav'
+exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
+source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
-# #EXT-X-VERSION requirements{#ext-x-version-requirements}
+# `#`Krav för EXT-X-VERSION{#ext-x-version-requirements}
 
 Versionen av #EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för ditt program och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
 
@@ -48,4 +47,3 @@ Här är lite information om taggen `#EXT-X-VERSION` som anger HLS-protokollvers
   </tr> 
  </tbody> 
 </table>
-
