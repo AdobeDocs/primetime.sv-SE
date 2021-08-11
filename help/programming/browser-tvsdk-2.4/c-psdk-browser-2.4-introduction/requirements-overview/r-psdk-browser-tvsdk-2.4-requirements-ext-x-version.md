@@ -1,17 +1,17 @@
 ---
-description: Versionen av `#`EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för programmet och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
-title: '`#`EXT-X-VERSION-krav'
+description: Versionen av EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för programmet och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
+title: Krav för EXT-X-VERSION
 exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
-source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
+source-git-commit: e2a796dc5eb017929297d127cc79b65ba51a0c75
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-# `#`Krav för EXT-X-VERSION{#ext-x-version-requirements}
+# Krav för EXT-X-VERSION{#ext-x-version-requirements}
 
-Versionen av #EXT-X-VERSION i .m3u8-filen påverkar vilka funktioner som är tillgängliga för ditt program och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
+Versionen av `#EXT-X-VERSION` i .m3u8-filen påverkar vilka funktioner som är tillgängliga för ditt program och vilka EXT-taggar som är giltiga i din spellista/ditt manifest.
 
 <!--<a id="section_8850183988124049A001758F117AD3A6"></a>-->
 
