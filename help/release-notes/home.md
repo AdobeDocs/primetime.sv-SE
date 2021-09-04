@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
-## Förbättringar och korrigeringar i PTAI 21.5.1
+## Förbättringar och korrigeringar i PTAI 21.8.1
 
-Versionen innehåller ny telemetri för kommande ändringar av instrumentpaneler och stöd för den inaktuella segmenteringstypen 0x01 (UPID) för SCTE-baserade cue-format.
+Versionen innehåller stöd för DASH Live/Linear-strömmar.
 
 Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
 

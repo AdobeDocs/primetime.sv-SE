@@ -1,27 +1,56 @@
 ---
-title: Versionsinformation om PTAI 21.5.1
+title: Versionsinformation om PTAI 21.8.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Primetime Ad Insertion 21.5.1
+# Versionsinformation om Primetime Ad Insertion 21.8.1
 
-Versionsinformationen för Primetime Ad Insertion 21.x.x beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2021.
+Versionsinformationen för Primetime Ad Insertion 21.x.x beskriver vad som är nytt eller ändrat, vilka problem som lösts och kända problem i Primetime Ad Insertion under 2021
 
-## Nyheter i PTAI 21.5.1
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## Nyheter i PTAI 21.8.1
+
+När: Tisdagen den 24 augusti 2021 från kl. 02:00 till kl. 05:00 Eastern Time
+
+* Stöd för DASH Live-/Linear-strömmar (VOD stöds redan).
+
+## Förbättringar och korrigeringar i tidigare versioner
+
+### Version 21.5.1
 
 När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
+
+**Ändringar**
 
 * Stöd för den inaktuella segmenteringstypen 0x01 (UPID) för SCTE-baserade cue-format har lagts till.
 
 * Ny telemetri har lagts till för kommande ändringar av instrumentpanelen.
-
-## Förbättringar och korrigeringar i tidigare versioner
 
 ### Version 21.4.1
 
