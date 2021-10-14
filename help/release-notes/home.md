@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,11 @@ Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion]
 
 I versionen finns stöd för DEMUXED HLS/CMAF-annonser (pre-roll, midroll och postroll) för LIVE-, VOD- och FER-strömmar.
 
-Andra korrigeringar och detaljer finns i [TVSDK för iOS versionsinformation](../release-notes/tvsdk-3x-ios.md)
+Andra korrigeringar och detaljer finns i [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md)
 
-## Korrigeringar i TVSDK 3.13 Android
+## Korrigeringar i TVSDK 3.14 Android
 
-Den här versionen innehåller en lösning på problemet med frysning av DRM-strömmen på Widewin eller visning av svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
-
-Du löser problemet genom att ange API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` för de angivna Fire TV-enheterna innan du påbörjar uppspelningen. Standardvärdet är false.
+Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONTROL CDATA]-noden är tom för något av elementen [!UICONTROL ClickTracking], [!UICONTROL CustomClick] eller [!UICONTROL CompanionClickTracking] i [!UICONTROL VAST]-svaret.
 
 Mer information finns i [versionsinformationen för TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
@@ -44,7 +42,7 @@ Mer information finns i [versionsinformationen för TVSDK for Android](../releas
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM) |
 | [Hjälp om Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
-| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
+| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Hämta PDF av den arkiverade dokumentationen. |
 
 ## Användbara resurser
 

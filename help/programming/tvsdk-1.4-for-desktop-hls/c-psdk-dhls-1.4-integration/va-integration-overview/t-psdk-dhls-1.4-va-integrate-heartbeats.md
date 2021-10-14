@@ -1,14 +1,13 @@
 ---
 description: Du kan konfigurera spelaren så att den spårar och analyserar videoanvändningen.
 title: Initiera och konfigurera videoanalys
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Initiera och konfigurera videoanalys{#initialize-and-configure-video-analytics}
 
@@ -27,7 +26,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
@@ -182,4 +181,3 @@ Så här konfigurerar du videospårning i spelaren:
       >[!TIP]
       >
       >Detta API är valfritt och behövs inte för VOD-videospårning.
-

@@ -1,20 +1,19 @@
 ---
-title: Versionsinformation om TVSDK 3.13 för Android
-description: Versionsinformation för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13
+title: Versionsinformation om TVSDK 3.14 för Android
+description: Versionsinformationen för TVSDK 3.14 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.14
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
+source-git-commit: 988bcf8cbc0175e15bcc899a6f6954cc31c5e127
 workflow-type: tm+mt
-source-wordcount: '5443'
+source-wordcount: '5480'
 ht-degree: 0%
 
 ---
 
+# Versionsinformation om TVSDK 3.14 för Android {#tvsdk-for-android-release-notes}
 
-# Versionsinformation för TVSDK 3.13 för Android {#tvsdk-for-android-release-notes}
-
-Versionsinformationen för TVSDK 3.13 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.13.
+Versionsinformationen för TVSDK 3.14 för Android beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android 3.14.
 
 Android-referensspelaren ingår i Android TVSDK i katalogen samples/ i din distribution. I den medföljande README.md-filen beskrivs hur du skapar referensspelaren.
 
@@ -30,17 +29,21 @@ TVSDK för Android har många prestandaförbättringar jämfört med tidigare ve
 
 Den omfattande uppsättningen funktioner som stöds och inte stöds finns i [Funktionsmatris](#feature-matrix) i versionsinformationen.
 
-## Android TVSDK 3.13
+## Android TVSDK 3.14
+
+Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONTROL CDATA]-noden är tom för något av elementen [!UICONTROL ClickTracking], [!UICONTROL CustomClick] eller [!UICONTROL CompanionClickTracking] i VAST-svaret.
+
+### Nya funktioner och förbättringar i tidigare versioner
+
+**Android TVSDK 3.13**
 
 DRM-strömmen i stora volymer fryser eller visar svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
 
 Du löser problemet genom att ange API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` för de angivna Fire TV-enheterna innan du påbörjar uppspelningen. Standardvärdet är false.
 
-### Nya funktioner och förbättringar i tidigare versioner
+**Android TVSDK 3.12**
 
-## Android TVSDK 3.12
-
-Primetime Reference-programmets gråskaleversion har nu uppdaterats till version 5.6.4.
+Primetime Reference-programmets gråskaleversion har uppdaterats till version 5.6.4.
 
 Följ instruktionerna från Viktigt-filen som finns i TVSDK zip på `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md` för att installera och köra referensappen med Android Studio.
 
@@ -423,13 +426,19 @@ I funktionstabellerna nedan anger &quot;Y&quot; att funktionen stöds i den aktu
 
 Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-referens, till exempel ZD#xxxxx.
 
-**Android TVSDK 3.12**
 
-I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.12 Android-versionen.
 
-* ZD#40584 - Primetimes referensapp byggs inte med den senaste övertoningsversionen.
+**Android TVSDK 3.14**
+
+I det här avsnittet finns en sammanfattning av problemet som löstes i TVSDK 3.14 Android-versionen.
+
+* ZD#46903 - Programmet kraschar när [!UICONTROL CDATA]-noden är tom för något av elementen [!UICONTROL ClickTracking], [!UICONTROL CustomClick] eller [!UICONTROL CompanionClickTracking] i [!UICONTROL VAST]-svaret.
 
 ### Lösta problem i tidigare versioner
+
+**Android TVSDK 3.12**
+
+* ZD#40584 - Primetimes referensapp byggs inte med den senaste övertoningsversionen.
 
 **Android TVSDK 3.11**
 
@@ -657,7 +666,7 @@ WebViewDebbuging är som standard inställt på False. Om du vill aktivera fels�
 
 * Enhetsspecifik (Samsung Galaxy Tab 4) krasch. VOD DRM LBA med Auditude och klicka på annonser.
 * VHL - Felaktiga hjärtslagsanrop skickas när innehåll från en förskjutning startas.
-* När VPAID-annonser spelas upp, saknas anrop från VHL-pulsslag för händelse:type:play och.
+* När VPAID-annonser spelas upp saknas anrop till VHL-pulsslag för händelsen:type:play-annons.
 * När du har försatts i COMPLETE-status återgår spelaren till uppspelningsstatus med SKIP och BreakPolicy för postrollannonser.
 * Cookies kopplas inte till utgående annonsåteranrop.
 * Referenspunkter för annonser visas inte.

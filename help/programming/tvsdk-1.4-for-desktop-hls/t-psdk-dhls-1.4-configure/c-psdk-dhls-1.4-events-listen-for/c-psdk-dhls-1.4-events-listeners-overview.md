@@ -1,22 +1,19 @@
 ---
 description: Händelser från TVSDK indikerar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, till exempel att en video börjar spelas upp eller åtgärder som utförs implicit, till exempel att en annons slutförs.
 title: Lyssna efter händelser för Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#implement-event-listeners-and-callbacks-overview}
 
 Händelsehanterare gör att TVSDK kan svara på händelser. När en händelse inträffar anropar TVSDK:s händelsemekanism din registrerade händelsehanterare och skickar händelseinformationen till hanteraren.
 
 Flash Runtime har en generisk händelsemekanism som TVSDK också använder och definierar en serie anpassade händelser. Ditt program måste implementera händelseavlyssnare för TVSDK-händelser som påverkar ditt program.
-
-En fullständig lista över händelser för videoanalys finns i [Spåra grundläggande videouppspelning](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html).
 
 1. Avgör för vilka händelser ditt program måste avlyssna.
 
@@ -55,5 +52,3 @@ En fullständig lista över händelser för videoanalys finns i [Spåra grundlä
      MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
      onStatusChanged);
    ```
-
-

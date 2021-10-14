@@ -2,14 +2,13 @@
 title: Initiera och konfigurera videoanalys
 description: Initiera och konfigurera videoanalys
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: add832e3-5a17-4235-a76f-ae342e1d85f0
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Initiera och konfigurera videoanalys {#initialize-and-configure-video-analytics}
 
@@ -33,7 +32,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
@@ -90,7 +89,7 @@ Så här konfigurerar du videospårning i spelaren:
    1. Kompilera och skapa programmet.
    1. Distribuera och kör det paketerade programmet.
 
-      Mer information om de här AppMeasurement-inställningarna finns i [Mäta video i Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Mer information om de här AppMeasurement-inställningarna finns i [Mäta video i Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
 1. Initiera och konfigurera metadata för spårning av pulsslag.
 
@@ -169,4 +168,3 @@ Så här konfigurerar du videospårning i spelaren:
           videoAnalyticsProvider.trackVideoComplete();    
       }
       ```
-
