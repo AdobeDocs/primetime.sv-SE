@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 0%
 # Versionsinformation om Primetime
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
+
+## Korrigeringar i TVSDK 3.14 Android
+
+Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONTROL CDATA]-noden är tom för något av elementen [!UICONTROL ClickTracking], [!UICONTROL CustomClick] eller [!UICONTROL CompanionClickTracking] i [!UICONTROL VAST]-svaret.
+
+Mer information finns i [versionsinformationen för TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
 ## Förbättringar och korrigeringar i PTAI 21.8.1
 
@@ -25,12 +31,6 @@ Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion]
 I versionen finns stöd för DEMUXED HLS/CMAF-annonser (pre-roll, midroll och postroll) för LIVE-, VOD- och FER-strömmar.
 
 Andra korrigeringar och detaljer finns i [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md)
-
-## Korrigeringar i TVSDK 3.14 Android
-
-Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONTROL CDATA]-noden är tom för något av elementen [!UICONTROL ClickTracking], [!UICONTROL CustomClick] eller [!UICONTROL CompanionClickTracking] i [!UICONTROL VAST]-svaret.
-
-Mer information finns i [versionsinformationen för TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
 ## Se även
 
