@@ -1,46 +1,43 @@
 ---
-title: Versionsinformation om PTAI 21.8.1
+title: Versionsinformation om PTAI 21.10.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Primetime Ad Insertion 21.8.1
+# Versionsinformation om Primetime Ad Insertion 21.10.1
 
-Versionsinformationen för Primetime Ad Insertion 21.x.x beskriver vad som är nytt eller ändrat, vilka problem som lösts och kända problem i Primetime Ad Insertion under 2021
+Versionsinformationen för Primetime Ad Insertion 21.xx.x beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2021.
 
-<!---
-Primetime Ad Insertion 21.9.1
-When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+## Nyheter i PTAI 21.10.1
 
+När:  Tisdagen den 12 oktober 2021 mellan kl. 7:45 och kl. 1:45 Eastern Time
 
+* Den här versionen fokuserar på konsolidering av servrar, vilket eliminerar icke-produktion och icke-användbara servrar.
 
+## Förbättringar och korrigeringar i tidigare versioner
 
+### Primetime Ad Insertion Maintenance-release
 
+När: Tisdagen den 28 september 2021 från kl. 17.00 till kl. 18.00 Eastern Time
 
+* Uppdateringar av belastningsutjämningsstacken från AWS Elastic Load Balancer till AWS Application Load Balancer för förbättrad funktionalitet och skalbarhet. Dessa belastningsutjämnare används för att dirigera och begära trafik till Auditude-serverdelen från Ad Insertion-lagret (SSAI/CSAI).
 
+### Version 21.9.1
 
+När: Tisdagen den 7 september 2021 från 02:30 till 05:30 Eastern Time
 
-What:  Primetime Ad Insertion 21.9.1
+* Uppdateringar av infrastrukturkomponenter bakom Primetimes medlings- och rapporteringskomponenter i Ad Insertion (Primetime Ads GUI).
 
-When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
-
-Changes:
-
-* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
--->
-
-## Nyheter i PTAI 21.8.1
+### Version 21.8.1
 
 När: Tisdagen den 24 augusti 2021 från kl. 02:00 till kl. 05:00 Eastern Time
 
 * Stöd för DASH Live-/Linear-strömmar (VOD stöds redan).
-
-## Förbättringar och korrigeringar i tidigare versioner
 
 ### Version 21.5.1
 

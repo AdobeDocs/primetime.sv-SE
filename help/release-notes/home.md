@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
+source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONT
 
 Mer information finns i [versionsinformationen för TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
-## Förbättringar och korrigeringar i PTAI 21.8.1
+## Förbättringar och korrigeringar i PTAI 21.10.1
 
-Versionen innehåller stöd för DASH Live/Linear-strömmar.
+Versionen fokuserar på konsolidering av servrar, vilket eliminerar icke-produktion och icke-användbara servrar.
 
-Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
+Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 
 ## Förbättringar och korrigeringar i TVSDK 3.13 iOS
 
 I versionen finns stöd för DEMUXED HLS/CMAF-annonser (pre-roll, midroll och postroll) för LIVE-, VOD- och FER-strömmar.
 
-Andra korrigeringar och detaljer finns i [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md)
+Andra korrigeringar och detaljer finns i [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md).
 
 ## Se även
 
