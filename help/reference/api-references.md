@@ -3,9 +3,9 @@ title: Adobe Primetime API-referenser
 description: API:erna hjälper dig att snabbt och enkelt skapa funktionella program eller integrering.
 topic-tags: API-references
 exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
-source-git-commit: bf9adba0bace7e1327446d936c4bfe27f66fb2ac
+source-git-commit: 61904f8bf2ed2942072f75fd4b2d9b3f4bbe21f9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 + Primetime Dynamic Ad Insertion {#server-side}
    + [API-referens för Bootstrap](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
-   + [API-referens för rapport](../primetime-ad-insertion/assets/auditude-report-api.pdf)
+   + [API-referens för rapport](../primetime-ad-insertion/technical-reference/report-api.md)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 för Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)

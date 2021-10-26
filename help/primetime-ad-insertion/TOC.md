@@ -2,9 +2,9 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Hjälp om Primetime Ad Insertion
-source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
+source-git-commit: 23930068020475ef32a03e63c8a90d9c08429082
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 + [Övervakning av live-event](live-event-monitoring.md)
 + Referens {#technical-reference}
    + [Bootstrap API](technical-reference/bootstrap-api.md)
-   + [Rapporter-API](assets/auditude-report-api.pdf)
+   + [Rapporter-API](technical-reference/report-api.md)
    + God praxis{#best-practices}
       + [Översikt](best-practices/best-practices-overview.md)
       + [Optimera starttiden för video](best-practices/optimize-video-startup-time.md)
