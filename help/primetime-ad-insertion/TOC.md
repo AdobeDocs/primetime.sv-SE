@@ -2,10 +2,9 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Hjälp om Primetime Ad Insertion
-translation-type: tm+mt
-source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
+source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,7 +24,7 @@ ht-degree: 0%
    + [Använda annonsinfogning i live/linjär strömning](getting-started/ad-insertion-live-linear-stream.md)
    + [Använd annonsinfogning för VOD](getting-started/ad-insertion-vod.md)
    + [Ställ in annonsspårning](getting-started/set-up-ad-tracking.md)
-+ Just-in-Time-omkodning{#just-in-time-transcoding}
++ Just-in-Time Transcoding{#just-in-time-transcoding}
    + [Översikt](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Omkodning och normalisering](just-in-time-transcoding/transcoding-and-normalization.md)
    + [Leverans och lagring](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
@@ -38,7 +37,7 @@ ht-degree: 0%
    + [Sammanhangsbaserad rapportering och målinriktning](advanced-features/contextual-reporting-and-targeting.md)
 + Prestanda: övervakning, felsökning och rapportering{#performance}
    + [Översikt](performance-monitoring-debugging-reporting/performance-overview.md)
-   + Övervaka och felsök{#monitor-debug}
+   + Övervaka och felsöka{#monitor-debug}
       + [Prestandaövervakning](performance-monitoring-debugging-reporting/performance-monitoring.md)
       + [Felsöka och felsöka](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
    + [Rapportering och fakturering](performance-monitoring-debugging-reporting/reporting-and-billing.md)
@@ -47,7 +46,8 @@ ht-degree: 0%
    + [Viktiga mått och datamått](advanced-telemetry/key-metrics.md)
 + [Övervakning av live-event](live-event-monitoring.md)
 + Referens {#technical-reference}
-   + [API-referens/Bootstrap API](technical-reference/bootstrap-api.md)
+   + [Bootstrap API](technical-reference/bootstrap-api.md)
+   + [Rapporter-API](assets/auditude-report-api.pdf)
    + God praxis{#best-practices}
       + [Översikt](best-practices/best-practices-overview.md)
       + [Optimera starttiden för video](best-practices/optimize-video-startup-time.md)
