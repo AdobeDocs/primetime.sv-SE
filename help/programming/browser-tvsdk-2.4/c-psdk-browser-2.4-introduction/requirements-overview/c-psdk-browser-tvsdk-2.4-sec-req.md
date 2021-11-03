@@ -1,14 +1,13 @@
 ---
 description: Det finns vissa säkerhetsfrågor att tänka på när det gäller webbläsarens TVSDK.
 title: Säkerhetsaspekter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bc98890a-082a-4e2d-b927-ecb3bd878de9
+source-git-commit: 78be1575cc7bd6630a7bf85faa061327e5c414d7
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhetsaspekter{#security-considerations}
 
@@ -16,7 +15,7 @@ Det finns vissa säkerhetsfrågor att tänka på när det gäller webbläsarens 
 
 * **Adobe Flash Player**
 
-   * Flash Player tillåter inte åtkomst till data som finns utanför den domän som SWF-filen kommer från.
+   * Flash Player tillåter inte åtkomst till data som finns utanför den domän som SWF härstammar från.
 
       Om du vill tillåta åtkomst ska du ha en korsdomänprincipfil med lämpliga behörigheter i roten på den server där data lagras. I Flash-återställningsläget i webbläsarens TVSDK (Flash Player version 23 och senare) behöver du en autentiseringstoken för din domän. Kontakta din Adobe-representant om du vill generera token.
 
@@ -35,4 +34,3 @@ Det finns vissa säkerhetsfrågor att tänka på när det gäller webbläsarens 
       >[!IMPORTANT]
       >
       >Från och med version 2.4.5 konverteras HTTP-anropen till HTTPS om spelaren lagras via HTTPS med Browser TVSDK när MSE-teknik används.
-
