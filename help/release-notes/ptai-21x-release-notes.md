@@ -1,25 +1,31 @@
 ---
-title: Versionsinformation om PTAI 21.10.1
+title: Versionsinformation om PTAI 21.11.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Primetime Ad Insertion 21.10.1
+# Versionsinformation om Primetime Ad Insertion 21.11.1
 
 Versionsinformationen för Primetime Ad Insertion 21.xx.x beskriver vad som är nytt eller ändrat, vilka problem som har lösts och kända problem i Primetime Ad Insertion under 2021.
 
-## Nyheter i PTAI 21.10.1
+## Nyheter i PTAI 21.11.1
 
-När:  Tisdagen den 12 oktober 2021 mellan kl. 7:45 och kl. 1:45 Eastern Time
+När: Tisdagen den 9 november 2021 från kl. 13.30 till kl. 04.30 Eastern Time
 
-* Den här versionen fokuserar på konsolidering av servrar, vilket eliminerar icke-produktion och icke-användbara servrar.
+* [!UICONTROL EXT-X-IMAGE-STREAM-INF] kan nu konfigureras per zon.
 
 ## Förbättringar och korrigeringar i tidigare versioner
+
+### Version 21.10.1
+
+När: Tisdagen den 12 oktober 2021 mellan kl. 7:45 och kl. 1:45 Eastern Time
+
+* Konsoliderade servrar, eliminerade icke-produktion och icke-användbara servrar.
 
 ### Primetime Ad Insertion Maintenance-release
 
@@ -41,7 +47,7 @@ När: Tisdagen den 24 augusti 2021 från kl. 02:00 till kl. 05:00 Eastern Time
 
 ### Version 21.5.1
 
-När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
+När: Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 **Ändringar**
 
@@ -51,7 +57,7 @@ När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 ### Version 21.4.1
 
-**När:** Torsdag den 22 april 2021: från kl. 02.00 till kl. 17.00 (östtid)
+**När:** Torsdag den 22 april 2021 mellan kl. 17.00 och 17.00 (östra tid)
 
 **Ändringar**
 
@@ -61,7 +67,7 @@ När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 ### Version 21.2.2
 
-**När:** tisdag den 23 februari 2021 från 1:00 till 04:00 Eastern Time
+**När:** Tisdagen den 23 februari 2021 från kl. 13.00 till kl. 04.00 Eastern Time
 
 **Ändringar**
 
@@ -69,7 +75,7 @@ När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 ### Version 21.2.1
 
-**När:** onsdag den 3 februari 2021 från kl. 13.00 till kl. 04.00 Eastern Time
+**När:** Onsdagen den 3 februari 2021 från kl. 13.00 till kl. 04.00 Eastern Time
 
 **Ändringar**
 
@@ -77,7 +83,7 @@ När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 ### Version 21.1.2
 
-**När:** tisdag den 19 januari 2021 från 12:30 till 08:30 Eastern Time
+**När:** Tisdagen den 19 januari 2021 från kl. 12.30 till kl. 08.30 Eastern Time
 
 **Ändringar**
 
@@ -85,7 +91,7 @@ När:  Onsdagen den 26 maj 2021 från kl. 3:30 till kl. 06:30 (östra tid)
 
 ### Version 21.1.1
 
-**När:** onsdag den 13 januari 2021 från 01:00 till 04:00 Eastern Time
+**När:** Onsdagen den 13 januari 2021 från 01:00 till 04:00 Eastern Time
 
 **Ändringar**
 

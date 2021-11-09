@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,13 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
+## Förbättringar och korrigeringar i PTAI 21.11.1
+
+The [!UICONTROL EXT-X-IMAGE-STREAM-INF] kan nu konfigureras per zon.
+
 ## Korrigeringar i TVSDK 3.15 Android
 
 Den här versionen åtgärdar ett problem där programmet kraschar när en kreativ tagg saknas eller när [!UICONTROL url CDATA] är tom i [!UICONTROL VAST] svar.
-
-Kolla in [Versionsinformation om TVSDK för Android](../release-notes/tvsdk-3x-android.md) för mer information.
-
-## Förbättringar och korrigeringar i PTAI 21.10.1
-
-Versionen fokuserar på konsolidering av servrar, vilket eliminerar icke-produktion och icke-användbara servrar.
 
 Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 

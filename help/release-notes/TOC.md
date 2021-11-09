@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 + [Översikt över versionsinformation](home.md)
 + Primetime Ad Insertion {#ptai}
-   + [Versionsinformation om PTAI 21.10.1](ptai-21x-release-notes.md)
+   + [Versionsinformation om PTAI 21.11.1](ptai-21x-release-notes.md)
    + [Versionsinformation om PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK för iOS {#tvsdk-ios}
