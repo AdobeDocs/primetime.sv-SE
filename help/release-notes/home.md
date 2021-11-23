@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas
 
 ## Förbättringar och korrigeringar i PTAI 21.11.1
 
-The [!UICONTROL EXT-X-IMAGE-STREAM-INF] kan nu konfigureras per zon.
+The [!UICONTROL EXT-X-IMAGE-STREAM-INF] kan nu konfigureras per zon och [!UICONTROL Roku Trick] play stöds helt.
 
 ## Korrigeringar i TVSDK 3.15 Android
 
