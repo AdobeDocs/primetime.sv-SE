@@ -1,14 +1,13 @@
 ---
 description: Dessa klasser beskriver händelser som TVSDK skickar till din mediespelare som svar på olika aktiviteter.
 title: Händelseklasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a349984a-5e47-4895-a56f-ef25eb372c79
+source-git-commit: 776d3d1668f063f1595bd3ecb53603171905014a
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
-
 
 # Händelseklasser {#events-classes}
 
@@ -22,13 +21,13 @@ Paket: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/p
 | [AdClickEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html) | Klass. Användaren klickade på en annons. |
 | [AdPlaybackEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html) | Klass. Spelaren spelade en annons. |
 | [BufferEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html) | Klass. Spelaren började eller slutade buffra. |
-| [CustomAdEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/CustomAdEvent.html) | Klass. Spelaren visar anpassad annonsstatus och kan ignorera annonser som innehåller fel eller tar för lång tid att läsa in. |
+| [CustomAdEvent](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-desktop-hls/advertising/custom-ads/r-psdk-dhls-1.4-custom-ad-events.html?lang=en) | Klass. Spelaren visar anpassad annonsstatus och kan ignorera annonser som innehåller fel eller tar för lång tid att läsa in. |
 | [DRMMetadataInfoEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html) | Klass. Nya DRM-metadata är associerade med det aktuella objektet. |
 | [LoadInformationEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/LoadInformationEvent.html) | Klass. Det finns hämtningsinformation för den aktuella medieströmmen som spelas upp. |
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Klass. Ett mediespelarobjekt har skapats. |
-| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Klass. En inläsningsåtgärd har slutförts. Skickas av `MediaPlayerItemLoader` för att meddela sina klienter. |
+| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Klass. En inläsningsåtgärd har slutförts. Skickas av `MediaPlayerItemLoader` att meddela sina kunder. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Klass. Mediespelarens status har ändrats. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Klass. Klicka på `MediaPlayerView`. |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Klass. The `MediaPlayerView` har klickats. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Klass. Mediespelarens uppspelningshastighet ändras. |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Klass. Mediespelarens adaptiva bytesalgoritm för bithastighet har växlat till en annan profil på grund av nätverks- eller datorförhållanden. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Klass. Spelaren började söka eller sökningen slutfördes. |
