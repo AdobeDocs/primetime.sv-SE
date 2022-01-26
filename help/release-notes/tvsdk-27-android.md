@@ -4,9 +4,9 @@ description: Versionsinformation om TVSDK 2.7 för Android™ beskriver vad som 
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 * **Inläggning av delvis annonsbrytning**
 
    TV-liknande upplevelse av att gå med mitt i en annons utan att aktivera spårningen för den delvis bevakade annonsen.\
-   Exempel**: **Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
+   Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
    * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
    * Ad trackers for the part ad ad ad ad (second ad) are not fire. Spåraren för endast den tredje annonsen aktiveras.
 
@@ -71,7 +71,7 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
-   * Inkludera nu AdSystem och CreativeId som nya parametrar i förfrågningarna 1401 och 1403.
+   * Nu med `AdSystem` och `CreativeId` som nya parametrar i förfrågningarna 1401 och 1403.
 
 * **API setEncodeUrlForTracking i klassen NetworkConfiguration har tagits bort** eftersom osäkra tecken i en URL-adress ska kodas.
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4 erbjuder följande uppdateringar och API-ändringar:
 
 * Ändringar i standardvärdet för `WebViewDebbuging`
 
-   `WebViewDebbuging` som standard är värdet Falskt. Om du vill aktivera det anropar du setWebCon`tentsDebuggingEnabled(true) i programmet.
+   The `WebViewDebbuging` värdet är inställt på _Falskt_ som standard. Om du vill aktivera det ringer du `setWebContentsDebuggingEnabled` till _True_ i programmet.
+
 * Uppgradering av OpenSSL- och Curl-version uppdaterad `libcurl` till v7.57.0 och OpenSSL till v1.0.2k.
 * Åtkomst på appnivå för VAST-svarsobjekt Introducerade ett nytt API NetworkAdInfo::getVastXml() som ger åtkomst till VAST-svarsobjektet för programmet.
 
