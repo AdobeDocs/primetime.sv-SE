@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
-## Förbättringar och korrigeringar i PTAI 21.11.1
+## Förbättringar och korrigeringar i PTAI 22.2.2
 
-The [!UICONTROL EXT-X-IMAGE-STREAM-INF] kan nu konfigureras per zon och [!UICONTROL Roku Trick] play stöds helt.
+Den här versionen fokuserar på att fånga upp nya händelser för annonsresultat, t.ex. reklamsamtal, annonssamtal, serversamtal och händelser för tillgänglig lösning. Dessa händelser kommer att exponeras via det nya grafiska användargränssnittet i Primetime Ad Insertion i en kommande version.
 
 ## Korrigeringar i TVSDK 3.15 Android
 
