@@ -2,37 +2,36 @@
 title: Information om policyarbetsflöde
 description: Information om policyarbetsflöde
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
-
 
 # BEES-arbetsflöde {#bees-workflow}
 
 **Sammanfattning:**
 
-* **Policy**  - Skapa en BEES-kompatibel DRM-princip som anger att BEES krävs för allt innehåll som paketeras med den här principen.
-* **Paketera**  - Paketera innehåll med den BEES-medvetna DRM-principen.
-* **Autentisering**  - Autentisera din klientenhet och använd Primetimes DRM API, eller Primetime API, för att associera denna token med Primetime Cloud DRM. Om du gör det skickar klientenheten denna autentiseringstoken upp till Primetime Cloud DRM tillsammans med alla licensbegäranden. Primetime Cloud DRM kommer inte att bearbeta den här token, utan skickar den (som en ogenomskinlig blob) till BEES-slutpunkten för bearbetning.
-* **Licensiering**  - Begär en licens för ditt skyddade innehåll. Klientenheten lägger automatiskt till din tidigare angivna autentiseringstoken till samtalet.
-* **Tillstånd**  - Primetime Cloud DRM avgör att innehållet paketerades med en profil som requiresBEES. Primetime Cloud DRM skapar en JSON-begäran som skickas till BEES-slutpunkten. Svaret på BEES instruerar Primetime Cloud DRM om huruvida en licens ska utfärdas eller inte, och eventuellt vilken DRM-princip som ska användas.
+* **Policy** - Skapa en DRM BEES-kompatibel profil som anger att BEES krävs för allt innehåll som paketeras med den här principen.
+* **Paketering** - Paketera innehåll med den BEES-medvetna DRM-principen.
+* **Autentisering** - Autentisera klientenheten och använd Primetimes DRM API, eller Primetime API, för att associera denna token med Primetime Cloud DRM. Om du gör det skickar klientenheten denna autentiseringstoken upp till Primetime Cloud DRM tillsammans med alla licensbegäranden. Primetime Cloud DRM kommer inte att bearbeta den här token, utan skickar den (som en ogenomskinlig blob) till BEES-slutpunkten för bearbetning.
+* **Licenser** - Begär licens för ditt skyddade innehåll. Klientenheten lägger automatiskt till din tidigare angivna autentiseringstoken till samtalet.
+* **Tillstånd** - Primetime Cloud DRM fastställer att innehållet har paketerats med en profil som kräver BEES. Primetime Cloud DRM skapar en JSON-begäran som skickas till BEES-slutpunkten. Svaret på BEES instruerar Primetime Cloud DRM om huruvida en licens ska utfärdas eller inte, och eventuellt vilken DRM-princip som ska användas.
 
 ## Information om policyarbetsflöde {#policy-workflow-details}
 
-När Primetime Cloud DRM bearbetar en licensbegäran tolkas DRM-principen i begäran för att avgöra om ett anrop till en serverdelstjänst krävs innan innehållet kan visas. Om ett BEES-anrop *är* krävs skapar Primetime Cloud DRM BEES-begäran och tolkar sedan DRM-principen för att erhålla en angiven BEES URL-slutpunkt för BEES-begäran.
+När Primetime Cloud DRM bearbetar en licensbegäran tolkas DRM-principen i begäran för att avgöra om ett anrop till en serverdelstjänst krävs innan innehållet kan visas. Om ett BEES-samtal *är* om det behövs skapar Primetime Cloud DRM BEES-begäran och tolkar sedan DRM-principen för att få en angiven BEES URL-slutpunkt för BEES-begäran.
 
 Använd DRM-principen som anger BEES-kravet och ange följande två anpassade egenskaper i profilen:
 
-    *`policy.customProp.1=bees.required=&lt;true>`
-    *`policy.customProp.2=bees.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>`
+* `policy.customProp.1=bees.required=<true | false>`
+* `policy.customProp.2=bees.url=<url to your BEES endpoint>`
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
-Om du till exempel använder principhanteraren för DRM-princip för Primetime ( [!DNL AdobePolicyManager.jar]) skulle du ange följande två anpassade egenskaper i konfigurationsfilen [!DNL flashaccesstools.properties]:
+Använd till exempel Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) anger du följande två anpassade egenskaper i [!DNL flashaccesstools.properties] konfigurationsfil:
 
 * `policy.customProp.1=bees.required=true`
 * `policy.customProp.2=bees.url=https://mybeesserver.example.com/bees`
@@ -49,13 +48,13 @@ Under paketeringen av ditt Adobe Access-skyddade innehåll måste du tillämpa e
 
 För att BEES-slutpunkten ska kunna fatta beslut om tillstånd måste klientenheten tillhandahålla autentiseringsinformation. Du uppnår detta genom att använda din egen kundspecifika autentiseringstoken.
 
-Primetime Cloud DRM behöver inte förstå denna token, utan skickar bara denna token till din BEES-slutpunkt. Klientenheten ansvarar för att skapa eller hämta denna token och ställa in den med API:t `DRMManager.setAuthenticationToken()`.
+Primetime Cloud DRM behöver inte förstå denna token, utan skickar bara denna token till din BEES-slutpunkt. Klientenheten ansvarar för att skapa eller hämta denna token och ställa in den med `DRMManager.setAuthenticationToken()` API.
 
 Gör följande för att associera denna token med Primetime Cloud DRM så att den skickas med licensbegäran:
 
-Instansiera `DRMManager`-objektet med DRM-metadata för innehållet som paketerades för Primetime Cloud DRM.
+Instansiera `DRMManager` -objekt med DRM-metadata för innehållet som paketerades för Primetime Cloud DRM.
 
-Metoden `setAuthenticationToken()` fungerar genom att associera den angivna bytearrayen med licensserverns URL som finns i DRM-metadata som användes för att instansiera `DRMManager`.
+The `setAuthenticationToken()` metoden fungerar genom att associera den angivna bytearrayen med licensserverns URL som finns i DRM-metadata som användes för att instansiera `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  
@@ -69,7 +68,7 @@ Token skickas med alla licensbegäranden tills token rensas genom att anropa `.s
 
 Begär en licens från Primetime Cloud DRM genom att ringa `mgr.loadVoucher()`.
 
-## Tillståndsbegäran och svarsinformation{#entitlement-request-and-response-details}
+## Berättigandebegäran och svarsinformation{#entitlement-request-and-response-details}
 
 När Primetime Cloud DRM fastställer att innehållet har paketerats med en BEES-kompatibel DRM-princip skapas följande JSON-begäran som ska skickas till BEES-slutpunkten som anges i DRM-principen:
 
@@ -153,4 +152,4 @@ Följande svar förväntas från BEES-slutpunkten:
 }
 ```
 
-Primetime Cloud DRM använder svaret för att avgöra om den ska utfärda en licens till den begärande enheten eller inte, och om den ska ersätta en ny DRM-princip i licensgenereringsprocessen. Om `isAllowed` är `true` och ingen princip anges i svaret, kommer den ursprungliga DRM-principen som användes under paketeringstiden att användas för att generera licensen.
+Primetime Cloud DRM använder svaret för att avgöra om den ska utfärda en licens till den begärande enheten eller inte, och om den ska ersätta en ny DRM-princip i licensgenereringsprocessen. If `isAllowed` är `true` och ingen princip har angetts i svaret kommer den ursprungliga DRM-principen som användes under paketeringen att användas för att generera licensen.
