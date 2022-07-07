@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
-## Förbättringar och korrigeringar i PTAI 22.2.2
+## Förbättringar och korrigeringar i PTAI 22.6.2
 
-Den här versionen fokuserar på att fånga upp nya händelser för annonsresultat, t.ex. reklamsamtal, annonssamtal, serversamtal och händelser för tillgänglig lösning. Dessa händelser kommer att exponeras via det nya grafiska användargränssnittet i Primetime Ad Insertion i en kommande version.
+Den här versionen fokuserar på förbättringar av loggning av annonsprestanda med mer information om tillgänglighetsförluster och ytterligare nettolagringsplatser för CRS.
 
 ## Korrigeringar i TVSDK 3.15 Android
 
