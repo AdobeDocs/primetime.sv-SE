@@ -2,10 +2,9 @@
 audience: end-user
 user-guide-title: Hjälp om Primetime-programmering
 user-guide-description: Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter.
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '4342'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,24 +28,24 @@ ht-degree: 0%
          + [Återanvända eller ta bort en MediaPlayer-instans](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
          + [Inspect tidslinjen för uppspelning](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [Pausa och återställa MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
-      + Lyssna efter Primetime Player-händelser {#listen-primetime-player-events}
+      + Lyssna efter händelser för Primetime Player {#listen-primetime-player-events}
          + [Översikt](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
          + [Implementera händelseavlyssnare och återanrop](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-event-listeners-implement.md)
       + [Konfigurera felhantering](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-error-handling-set-up.md)
-      + Konfigurera spelarens användargränssnitt {#configure-player-user-interface}
+      + Konfigurera användargränssnittet för spelaren {#configure-player-user-interface}
          + [Vänta på en giltig status](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)
          + [Spela upp och pausa en video](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-pause-play-implement.md)
          + [Identifiera om innehållet är live eller VOD](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-content-live-vod-identify.md)
          + [Ange volymkontroll](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-volume-control.md)
          + [Visa videons varaktighet, aktuella tid och återstående tid](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-duration-time-display.md)
-         + [Visa ett söknavigeringsfält med aktuell uppspelningsposition](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md)
+         + [Visa ett söknavigeringsfält med den aktuella uppspelningspositionen](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md)
          + [Skapa ett kontrollfält förbättrat för DVR](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-ctrl-bar-for-dvr-construct.md)
          + [Ange en ström vid en viss tidpunkt](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-stream-entry-control.md)
       + Initiera mediespelaren för en viss video {#initialize-the-media-player-for-a-specific-video}
          + [Skapa en medieresurs](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-create.md)
          + [Läsa in en medieresurs i mediespelaren](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md)
          + [Läsa in en medieresurs med MediaPlayerItemLoader](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)
-      + Implementera snabbt framåt och spola tillbaka {#implement-fast-forward}
+      + Implementera snabbt framåt och bakåt {#implement-fast-forward}
          + [Översikt](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-implement.md)
          + [API-element för prisändring](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-apis.md)
          + [Begränsningar och beteenden för trick play](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-limitations.md)
@@ -66,7 +65,7 @@ ht-degree: 0%
          + [Få tillgång till alternativa ljudspår](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-alternate-audio-implement.md)
       + [Aktivera bakgrundsljud](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-background-audio.md)
       + [ID3-taggar](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md)
-      + Buffrar {#buffering}
+      + Buffring {#buffering}
          + [Översikt](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/buffering-configuration/android-3x-buffering-configuration.md)
          + [Direkt på](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md)
       + [Parallella nedladdningar](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-parallel-downloads.md)
@@ -91,23 +90,23 @@ ht-degree: 0%
          + [Klientfelhantering för trasig VMAP](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-broken-vmap-error.md)
          + [Säker annonsinläsning över HTTPS](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-secure-ad-loading.md)
          + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-playback-post.md)
-      + Anpassa uppspelningen med annonser {#customize-playback}
+      + Anpassa uppspelning med annonser {#customize-playback}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-customize.md)
          + [API-element för annonsuppspelning](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-ad-custom-elements.md)
          + [Använd standardbeteendet för uppspelning](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-use-default.md)
          + [Hoppa över annonsbrytningar under en tidsperiod](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-skip-breaks.md)
          + [Spara videopositionen och återuppta den senare](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-save-position.md)
          + [Insättning av delvis annonsradbrytning](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-partial-ad-break-insertion.md)
-      + Just-in-Time Ad Resolving {#just-in-time}
+      + Just-in-time Ad Resolving {#just-in-time}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md)
          + [Aktivera lat och löst](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)
          + [Uppgradera från 2.7.x Lazy Ad Resolving to 3.x Lazy Ad Resolving (API/Workflow changes)](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
-      + Lägg till metadata {#ad-insertion-metadata}
+      + Lägg in metadata {#ad-insertion-metadata}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [Ställ in metadata för annonsinfogning](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
          + [Aktivera annonser i repriser vid helhändelse](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [Läge för annonssignalering](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
-      + Banderollannonser {#companion-banner-ads}
+      + Companion banner ads {#companion-banner-ads}
          + [Bästa tillvägagångssätt för annonser på följeslagare](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
          + [Kompletterande banderolldata](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-companion-banner-data.md)
          + [Visa banners](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-companion-banner-ads-display.md)
@@ -116,11 +115,11 @@ ht-degree: 0%
          + [Avgränsa klickbara annonser](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
          + [Pausa och återuppta uppspelning](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)
       + [Paketera inkompatibla annonser med Adobe CRS-översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
-      + Lägg till reserv för VAST- och VMAP-annonser {#ad-fallback}
+      + Annonsersättning för VAST- och VMAP-annonser {#ad-fallback}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md)
          + [Definiera reservannonsbeteenden för VMAP-textbundna annonser](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-set-up.md)
          + [Annonsbeteende för VAST och VMAP](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-behavior.md)
-      + Anpassade taggar {#custom-tags}
+      + Egna taggar {#custom-tags}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-configure.md)
          + [Exempel på en anpassad VOD-resurs](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-overview.md)
          + [Konfig-klassmetoder för taggar](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-psdkconfig-methods.md)
@@ -128,18 +127,18 @@ ht-degree: 0%
          + [Prenumerera på egna taggar](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
          + [Lägg till avlyssnare för tidsbestämda metadataaviseringar](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
          + [Lagra tidsbestämda metadataobjekt när de skickas](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
-      + Stöd för VPAID 2.0 och {#vpaid-ad-support}
+      + Stöd för VPAID 2.0 {#vpaid-ad-support}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [Implementera VPAID 2.0-integrering](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
       + [Annonsmätningar från Moat](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
-      + Lägg till anpassade annonsmarkörer {#add-custom-ad}
+      + Lägga till egna annonsmärken {#add-custom-ad}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-add-custom.md)
          + [Klassen TimeRange](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-timerange-class.md)
          + [Klasserna MediaPlayer och MediaResource](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-mediaplayer-mediaresource-classes.md)
          + [Klassen ReplaceTimeRange](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-replacetimerange-class.md)
          + [Placera anpassade annonsmarkörer på tidslinjen](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-place-custom-ad-markers-on-timeline.md)
          + [Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-control-seek.md)
-      + Anpassa generatorer för affärsmöjligheter och innehållslösare {#customize-opportunity}
+      + Anpassa generatorer och innehållslösare för affärsmöjligheter {#customize-opportunity}
          + [Översikt](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md)
          + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver-about.md)
          + [Implementera en generator för anpassade affärsmöjligheter](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md)
@@ -162,7 +161,7 @@ ht-degree: 0%
          + [Normalisera regler](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-normalize-rule.md)
          + [Exempel på regler för kreativt urval](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-sample-rule-files.md)
          + [Använd regler för kreativt urval](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-how-tvsdk-applies-csr.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [DRM, Widewin](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-interface.md)
       + [DRM-autentisering före uppspelning](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-before-playback.md)
@@ -193,7 +192,7 @@ ht-degree: 0%
    + Alternativ för uppspelning av innehåll {#content-playback-options}
       + [Konfigurera PTMediaPlayer](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-mediaplayer-set-up-ios.md)
       + [Konfigurera meddelanden](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-notification.md)
-   + Konfigurera spelarens användargränssnitt {#configure-interface}
+   + Konfigurera användargränssnittet för spelaren {#configure-interface}
       + [Översikt](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-configure-ui.md)
       + [Vänta på ett giltigt tillstånd](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-ui-state-prepared-wait-for.md)
       + [Implementera en uppspelnings-/pausknapp](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-implement-pause-play.md)
@@ -212,7 +211,7 @@ ht-degree: 0%
       + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-post1.2.md)
       + [Anpassa uppspelning med annonser](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-customize.md)
       + [Just-in-Time-annonsvisning](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
-   + Metadata för primär tid och server {#ad-server-metadata}
+   + Metadata för Primetime och server {#ad-server-metadata}
       + [Konfigurera metadata för Primetime och server](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
       + [Aktivera annonser i repriser vid helhändelse](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [Läge för annonssignalering](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
@@ -223,7 +222,7 @@ ht-degree: 0%
    + [Stöd för VPAID 2.0](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-vpaid-2.0-ads.md)
    + [Annonsersättning för VAST- och VMAP-annonser](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-fallback.md)
    + [Läs in annons för ett DVR-fönster](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-loading-for-a-dvr-window.md)
-   + Anpassade taggar {#custom-tags}
+   + Egna taggar {#custom-tags}
       + [Översikt](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-configure.md)
       + [Exempel på en anpassad VOD-resurs](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-overview.md)
       + [Konfig-klassmetoder för taggar](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-psdkconfig-methods.md)
@@ -239,7 +238,7 @@ ht-degree: 0%
       + [Exempel på regler för kreativt urval](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-sample-rule-files.md)
       + [Använd regler för kreativt urval](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-how-tvsdk-applies-csr.md)
    + [Tokeniserade segmentströmmar](tvsdk-3x-ios-prog/ios-3x-tokenized-segment-streams.md)
-   + Anpassa affärsmöjlighetsdetektorer och innehållslösare {#customize-content-resolvers}
+   + Anpassa affärsmöjlighetsdetektorer och innehållslösningar {#customize-content-resolvers}
       + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-about.md)
       + [Implementera en anpassad lösning för affärsmöjlighet/innehåll](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-implement-ios.md)
    + Ta bort och ersätta annonser i VOD-strömmar {#delete-replace-content-vod}
@@ -265,9 +264,9 @@ ht-degree: 0%
       + [Implementera anpassade tidsuppdateringar](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-imp-cust-time-updates.md)
       + [Konfigurera videoanalysrapporter på serversidan](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-server-side-reporting-set-up.md)
       + [Få tillgång till videoanalysrapporter](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-reports-access.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
-      + [Apple FairPlay i TVSDK-applikationer](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
+      + [Apple FairPlay i TVSDK-program](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
       + [Tillåtelselista ditt iOS-program](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [Meddelanden om spelarstatus, aktivitet, fel och loggar](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Anpassad loggning](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
@@ -308,20 +307,20 @@ ht-degree: 0%
          + [Översikt](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
          + [Implementera händelseavlyssnare och återanrop](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
       + [Konfigurera felhantering](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md)
-      + Konfigurera spelarens användargränssnitt {#configure-user-interface}
+      + Konfigurera användargränssnittet för spelaren {#configure-user-interface}
          + [Vänta på en giltig status](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-state-prepared-wait-for.md)
          + [Spela upp och pausa en video](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-pause-play-implement.md)
          + [Identifiera om innehållet är live eller VOD](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-content-live-vod-identify.md)
          + [Ange volymkontroll](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-volume-control.md)
          + [Visa videons varaktighet, aktuella tid och återstående tid](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-duration-time-display.md)
-         + [Visa ett söknavigeringsfält med aktuell uppspelningsposition](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)
+         + [Visa ett söknavigeringsfält med den aktuella uppspelningspositionen](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)
          + [Skapa ett kontrollfält förbättrat för DVR](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-ctrl-bar-for-dvr-construct.md)
          + [Ange en ström vid en viss tidpunkt](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-stream-entry-control.md)
       + Initiera mediespelaren för en viss video {#initialize-specific-video}
          + [Skapa en medieresurs](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-create.md)
          + [Läsa in en medieresurs i mediespelaren](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)
          + [Läsa in en medieresurs med MediaPlayerItemLoader](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)
-      + Implementera snabbt framåt och spola tillbaka {#implement-fast-forward}
+      + Implementera snabbt framåt och bakåt {#implement-fast-forward}
          + [Översikt](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/t-psdk-android-2.7-trick-play-implement.md)
          + [API-element för prisändring](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/r-psdk-android-2.7-trick-play-apis.md)
          + [Begränsningar och beteenden för trick play](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-limitations.md)
@@ -342,7 +341,7 @@ ht-degree: 0%
          + [Få tillgång till alternativa ljudspår](tvsdk-2.7-for-android/content-playback-options/alternate-audio/t-psdk-android-2.7-alternate-audio-implement.md)
       + [Aktivera bakgrundsljud](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-background-audio.md)
       + [ID3-taggar](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)
-      + Buffrar {#buffering}
+      + Buffring {#buffering}
          + [Översikt](tvsdk-2.7-for-android/content-playback-options/buffering-configuration/c-psdk-android-2.7-buffering-configuration.md)
          + [Direkt på](tvsdk-2.7-for-android/content-playback-options/buffering-configuration/c-psdk-android-2.7-instant-on.md)
       + [Parallella nedladdningar](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-parallel-downloads.md)
@@ -365,7 +364,7 @@ ht-degree: 0%
          + [Klientfelhantering för trasig VMAP](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-broken-vmap-error.md)
          + [Säker annonsinläsning över HTTPS](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-secure-ad-loading.md)
          + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-playback-post1.2.md)
-      + Anpassa uppspelningen med annonser {#customize-playback}
+      + Anpassa uppspelning med annonser {#customize-playback}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-customize.md)
          + [API-element för annonsuppspelning](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-ad-custom-elements.md)
          + [Använd standardbeteendet för uppspelning](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-use-default.md)
@@ -375,12 +374,12 @@ ht-degree: 0%
       + Lazy ad resolving {#lazy-ad-resolving}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/c-psdk-android-2.7-lazy-ad-resolving.md)
          + [Aktivera lat och löst](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)
-      + Lägg till metadata {#ad-insertion-metadata}
+      + Lägg in metadata {#ad-insertion-metadata}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [Ställ in metadata för annonsinfogning](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
          + [Aktivera annonser i repriser vid helhändelse](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [Läge för annonssignalering](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
-      + Banderollannonser {#companion-banner-ads}
+      + Companion banner ads {#companion-banner-ads}
          + [Bästa tillvägagångssätt för annonser på följeslagare](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
          + [Kompletterande banderolldata](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/r-psdk-android-2.7-companion-banner-data.md)
          + [Visa banners](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/t-psdk-android-2.7-companion-banner-ads-display.md)
@@ -389,11 +388,11 @@ ht-degree: 0%
          + [Avgränsa klickbara annonser](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
          + [Pausa och återuppta uppspelning](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-pausing-resuming-playback.md)
       + [Paketera inkompatibla annonser med hjälp av Adobe Creative Repackaging Service (CRS)](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
-      + Lägg till reserv för VAST- och VMAP-annonser {#ad-fallback}
+      + Annonsersättning för VAST- och VMAP-annonser {#ad-fallback}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/ad-fallback/c-psdk-android-2.7-ad-fallback.md)
          + [Definiera reservannonsbeteenden för VMAP-textbundna annonser](tvsdk-2.7-for-android/ad-insertion/ad-fallback/t-psdk-android-2.7-ad-fallback-set-up.md)
          + [Annonsbeteende för VAST och VMAP](tvsdk-2.7-for-android/ad-insertion/ad-fallback/r-psdk-android-2.7-ad-fallback-behavior.md)
-      + Anpassade taggar {#custom-tags}
+      + Egna taggar {#custom-tags}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)
          + [Exempel på en anpassad VOD-resurs](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-overview.md)
          + [Konfig-klassmetoder för taggar](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-psdkconfig-methods.md)
@@ -401,18 +400,18 @@ ht-degree: 0%
          + [Prenumerera på egna taggar](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
          + [Lägg till avlyssnare för tidsbestämda metadataaviseringar](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
          + [Lagra tidsbestämda metadataobjekt när de skickas](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
-      + Stöd för VPAID 2.0 och {#vpaid-ad-support}
+      + Stöd för VPAID 2.0 {#vpaid-ad-support}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [Implementera VPAID 2.0-integrering](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
       + [Annonsmätningar från Moat](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
-      + Lägg till anpassade annonsmarkörer {#add-custom-markers}
+      + Lägga till egna annonsmärken {#add-custom-markers}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/c-psdk-android-2.7-ad-markers-add-custom.md)
          + [Klassen TimeRange](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-timerange-class.md)
          + [Klasserna MediaPlayer och MediaResource](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-mediaplayer-mediaresource-classes.md)
          + [Klassen ReplaceTimeRange](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-replacetimerange-class.md)
          + [Placera anpassade annonsmarkörer på tidslinjen](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/t-psdk-android-2.7-place-custom-ad-markers-on-timeline.md)
          + [Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/t-psdk-android-2.7-ad-markers-control-seek.md)
-      + Anpassa generatorer för affärsmöjligheter och innehållslösare {#customize-opportunity}
+      + Anpassa generatorer och innehållslösare för affärsmöjligheter {#customize-opportunity}
          + [Översikt](tvsdk-2.7-for-android/ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver.md)
          + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-2.7-for-android/ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md)
          + [Implementera en generator för anpassade affärsmöjligheter](tvsdk-2.7-for-android/ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md)
@@ -427,7 +426,7 @@ ht-degree: 0%
             + [Ersätt tidsintervall med en annons](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-replace-ranges-with-aud-ad-android.md)
             + [Ta bort intervall](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-delete-ranges-with-aud-ad-android.md)
          + [Exempel på att ta bort och ersätta annonser](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-ad-delete-replace-examples.md)
-         + Hantering av borttagning och ersättningsfel {#ad-deletion-and-replacement}
+         + Hantering av fel vid borttagning och ersättning av annonser {#ad-deletion-and-replacement}
             + [Översikt](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-ad-delete-replace-error-handling.md)
             + [Exempel på tidsintervallfel](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-timerange-error-examples-dhls.md)
       + Uppdatera och skapa regler för urval {#update-ad-rules}
@@ -436,7 +435,7 @@ ht-degree: 0%
          + [Normalisera regler](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/r-psdk-android-2.7-normalize-rule.md)
          + [Exempel på regler för kreativt urval](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/r-psdk-android-2.7-sample-rule-files.md)
          + [Använd regler för kreativt urval](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/c-psdk-android-2.7-how-tvsdk-applies-csr.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [Översikt](tvsdk-2.7-for-android/drm-content-security/c-psdk-android-2.7-drm-content-security.md)
       + [DRM, Widewin](tvsdk-2.7-for-android/drm-content-security/r-psdk-android-2.7-drm-widevine.md)
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-2.7-for-android/drm-content-security/r-psdk-android-2.7-drm-interface.md)
@@ -455,7 +454,7 @@ ht-degree: 0%
          + [Översikt](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-notification-codes.md)
          + [Information om NATIVE_ERROR-meddelandet](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-native-error-summary.md)
       + [Sammanfattning av händelser för Primetime Player](tvsdk-2.7-for-android/events-and-notifications/events-summary/c-psdk-android-2.7-events-summary.md)
-      + Faktureringsmått {#billing-metrics}
+      + Faktureringsstatistik {#billing-metrics}
          + [Översikt](tvsdk-2.7-for-android/billing/c-psdk-android-2.7-billing.md)
          + [Konfigurera faktureringsmått](tvsdk-2.7-for-android/billing/t-psdk-android-2.7-billing-config.md)
          + [Skicka faktureringsmått](tvsdk-2.7-for-android/billing/r-psdk-android-2.7-billing-data-format.md)
@@ -466,19 +465,19 @@ ht-degree: 0%
       + [Överväganden och bästa praxis](tvsdk-1.4-for-android/android-1.4-introduction/overview-prod-audience-guide/android-1.4-considerations.md)
       + [Krav](tvsdk-1.4-for-android/android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
    + [Konfigurera MediaPlayer](tvsdk-1.4-for-android/android-1.4-mediaplayer-set-up.md)
-   + Lyssna efter Primetime Player-händelser {#listen-primetime-player-events}
+   + Lyssna efter händelser för Primetime Player {#listen-primetime-player-events}
       + [Översikt](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-events-listen-for.md)
       + [Implementera händelseavlyssnare och återanrop](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-event-listeners-implement.md)
    + [Konfigurera felhantering](tvsdk-1.4-for-android/android-1.4-error-handling-set-up.md)
-   + Konfigurera spelarens användargränssnitt {#configure-user-interface}
+   + Konfigurera användargränssnittet för spelaren {#configure-user-interface}
       + [Vänta på ett giltigt tillstånd](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)
       + [Spela upp och pausa en video](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-pause-play-implement.md)
       + [Identifiera om innehållet är live eller VOD](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-content-live-vod-identify.md)
       + [Ange volymkontroll](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-volume-control.md)
       + [Visa videons varaktighet, aktuella tid och återstående tid](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-duration-time-display.md)
-      + [Visa ett söknavigeringsfält med aktuell uppspelningsposition](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md)
+      + [Visa ett söknavigeringsfält med den aktuella uppspelningspositionen](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md)
       + [Skapa ett kontrollfält förbättrat för DVR](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-ctrl-bar-for-dvr-construct.md)
-      + Implementera snabbt framåt och spola tillbaka {#implement-fast-forward-rewind}
+      + Implementera snabbt framåt och bakåt {#implement-fast-forward-rewind}
          + [Översikt](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-implement.md)
          + [API-element för prisändring](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-apis.md)
          + [Begränsningar och beteenden för trick play](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-limitations.md)
@@ -491,7 +490,7 @@ ht-degree: 0%
          + [Skapa en medieresurs](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-create.md)
          + [Läsa in en medieresurs i MediaPlayer](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)
          + [Läsa in en medieresurs med MediaPlayerItemLoader](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)
-      + Kvalitetsstatistik för tjänsten {#qos-statistics}
+      + Kvalitetsstatistik för tjänster {#qos-statistics}
          + [Spåra på fragmentnivå med hjälp av inläsningsinformation](tvsdk-1.4-for-android/qos-statistics-monitor/android-1.4-qos-fragment-tracking.md)
          + [Läs QOS-uppspelning, buffring och enhetsstatistik](tvsdk-1.4-for-android/qos-statistics-monitor/android-1.4-qos-stats-read.md)
       + [Arbeta med cookies](tvsdk-1.4-for-android/android-1.4-cookies-work-with.md)
@@ -518,7 +517,7 @@ ht-degree: 0%
          + [Säker annonsinläsning över HTTPS](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-secure-ad-loading.md)
          + [Inaktivera annonser före rullning](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-disable-preroll-ads.md)
       + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-1.4-for-android/ad-insertion/android-1.4-playback-post1.2.md)
-      + Anpassa uppspelningen med annonser {#customize-playback}
+      + Anpassa uppspelning med annonser {#customize-playback}
          + [Översikt](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-customize.md)
          + [API-element för annonsuppspelning](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-ad-custom-elements.md)
          + [Använd standardbeteendet för uppspelning](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-use-default.md)
@@ -526,7 +525,7 @@ ht-degree: 0%
          + [Hoppa över annonsbrytningar under en tidsperiod](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-skip-breaks.md)
          + [Spara videopositionen och återuppta den senare](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-save-position.md)
          + [Insättning av delvis annonsradbrytning](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-partial-adbreak-insertion.md)
-      + Lägg till metadata {#ad-insertion-metadata}
+      + Lägg in metadata {#ad-insertion-metadata}
          + [Översikt](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [Ställ in metadata för annonsinfogning](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
          + [Aktivera annonser i repriser vid helhändelse](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
@@ -540,7 +539,7 @@ ht-degree: 0%
       + [Annonsersättning för VAST- och VMAP-annonser](tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)
       + [Annonsmätningar från Moat](tvsdk-1.4-for-android/ad-insertion/android-1.4-ad-measurements-from-moat.md)
       + [Stöd för VPAID 2.0](tvsdk-1.4-for-android/ad-insertion/vpaid-2.0-ads/android-1.4-vpaid-2.0-ads.md)
-      + Anpassade taggar {#custom-tags}
+      + Egna taggar {#custom-tags}
          + [Översikt](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-configure.md)
          + [Exempel på en anpassad VOD-resurs](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-overview.md)
          + [Konfig-klassmetoder för taggar](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-psdkconfig.md)
@@ -549,20 +548,20 @@ ht-degree: 0%
          + [Lägg till avlyssnare för tidsbestämda metadataaviseringar](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
          + [Lagra tidsbestämda metadataobjekt när de skickas](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
          + [Använd tidsbestämda metadata](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-use.md)
-      + Lägg till anpassade annonsmarkörer {#ad-markers}
+      + Lägga till egna annonsmärken {#ad-markers}
          + [Översikt](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-add-custom.md)
          + [Klassen TimeRange](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-class.md)
          + [Klasserna MediaPlayer och MediaResource](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-mediaplayer-mediaresource-classes.md)
          + [Klassen TimeRangeCollection](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerangecollection-class.md)
          + [Placera markörer för TimeRange på tidslinjen](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-markers-timeline.md)
          + [Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-control-seek.md)
-      + Uppdaterar och skapar urvalsregler {#updating-ad-rules}
+      + Uppdatera och skapa regler för urval {#updating-ad-rules}
          + [Översikt](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-updating-rules.md)
          + [Prioritetsregler](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-priority-rule.md)
          + [Normalisera regler](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-normalize-rule.md)
          + [Exempel på regler för kreativt urval](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-sample-rule-files.md)
          + [Använda kreativa markeringsregler](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-how-tvsdk-applies-csr.md)
-      + Anpassa affärsmöjlighetsdetektorer och innehållslösare {#customize-opportunity-detectors}
+      + Anpassa affärsmöjlighetsdetektorer och innehållslösningar {#customize-opportunity-detectors}
          + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md)
          + [Implementera en anpassad affärsmöjlighetsdetektor](tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md)
          + [Implementera en anpassad innehållshanterare](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-implement.md)
@@ -600,7 +599,7 @@ ht-degree: 0%
          + [Implementera anpassade tidsuppdateringar](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-android/configure-user-interface/inserting-ads/android-1.4-imp-cust-time-updates.html?lang=en#tvsdk-1-4-for-android)
          + [Konfigurera videoanalysrapporter på serversidan](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
          + [Få tillgång till videoanalysrapporter](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-reports-access.md)
-      + Innehållsskydd {#content-protection}
+      + Skydd av innehåll {#content-protection}
          + Primetime DRM-gränssnitt {#drm-interface}
             + [Översikt](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-interface.md)
             + [DRM-autentisering före uppspelning](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-before-playback.md)
@@ -617,7 +616,7 @@ ht-degree: 0%
          + [Ad-resolving phase](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-resolving-phase.md)
          + [Fas för annonsinfogning](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-insertion-phase.md)
          + [Ad-uppspelningsfas](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-playback-phase.md)
-      + Sammanfattning av händelser i Primetime-spelaren {#primetime-player-events-summary}
+      + Sammanfattning av händelser för Primetime Player {#primetime-player-events-summary}
          + [Uppspelningshändelser](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-playback.md)
          + [Lägg till uppspelningshändelser](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer.md)
          + [QoS-händelser](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-qos.md)
@@ -650,7 +649,7 @@ ht-degree: 0%
    + Alternativ för uppspelning av innehåll {#content-playback-options}
       + [Konfigurera PTMediaPlayer](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/t-psdk-ios-1.4-mediaplayer-set-up-ios.md)
       + [Konfigurera meddelanden](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-notification.md)
-   + Konfigurera spelarens användargränssnitt {#configure}
+   + Konfigurera användargränssnittet för spelaren {#configure}
       + [Översikt](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/c-psdk-ios-1.4-configure-ui.md)
       + [Vänta på ett giltigt tillstånd](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-ui-state-prepared-wait-for.md)
       + [Implementera en uppspelnings-/pausknapp](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-implement-pause-play.md)
@@ -667,7 +666,7 @@ ht-degree: 0%
       + [Infoga annonser](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-insertion-about.md)
       + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-post1.2.md)
       + [Anpassa uppspelning med annonser](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-customize.md)
-   + Metadata för primär tid och server {#ad-server-metadata}
+   + Metadata för Primetime och server {#ad-server-metadata}
       + [Översikt](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/c-psdk-ios-1.4-primetime-ad-serving-metadata.md)
       + [Läge för annonssignalering](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
    + [Companion banner ads](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-companion-banner-ads/c-psdk-ios-1.4-companion-banner-ads.md)
@@ -677,7 +676,7 @@ ht-degree: 0%
    + [Stöd för VPAID 2.0](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)
    + [Annonsersättning för VAST- och VMAP-annonser](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)
    + [Läs in annons för ett DVR-fönster](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-loading-for-a-dvr-window.md)
-   + Anpassade taggar {#custom-tags}
+   + Egna taggar {#custom-tags}
       + [Översikt](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-configure.md)
       + [Exempel på en anpassad VOD-resurs](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-overview.md)
       + [Konfig-klassmetoder för taggar](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-psdkconfig-methods.md)
@@ -693,7 +692,7 @@ ht-degree: 0%
       + [Exempel på regler för kreativt urval](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/r-psdk-ios-1.4-sample-rule-files.md)
       + [Använd regler för kreativt urval](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/c-psdk-ios-1.4-how-tvsdk-applies-csr.md)
    + [Tokeniserade segmentströmmar](tvsdk-1.4-for-ios/c-psdk-ios-1.4-tokenized-segment-streams.md)
-   + Anpassa affärsmöjlighetsdetektorer och innehållslösare {#customize-opportunity-content}
+   + Anpassa affärsmöjlighetsdetektorer och innehållslösningar {#customize-opportunity-content}
       + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/c-psdk-ios-1.4-content-resolver-about.md)
       + [Implementera en anpassad lösning för affärsmöjlighet/innehåll](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/t-psdk-ios-1.4-content-resolver-implement-ios.md)
    + Ta bort och ersätta annonser i VOD-strömmar {#delete-replace-content-vod}
@@ -719,11 +718,11 @@ ht-degree: 0%
       + [Implementera anpassade tidsuppdateringar](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-imp-cust-time-updates.md)
       + [Konfigurera videoanalysrapporter på serversidan](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-server-side-reporting-set-up.md)
       + [Få tillgång till videoanalysrapporter](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-reports-access.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
-      + [Apple FairPlay i TVSDK-applikationer](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
+      + [Apple FairPlay i TVSDK-program](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
       + [Tillåtelselista ditt iOS-program](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
-   + [Meddelande om spelarstatus, aktivitet, fel och loggar  ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
+   + [Meddelande om spelarstatus, aktivitet, fel och loggar ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [Anpassad loggning](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [Redundans](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
    + [Faktureringsstatistik](tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)
@@ -760,7 +759,7 @@ ht-degree: 0%
    + Alternativ för uppspelning av innehåll {#content-playback-options}
       + [Konfigurera MediaPlayer](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-mediaplayer-set-up.md)
       + [Läs in din signerade token](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)
-   + Lyssna efter Primetime Player-händelser {#listen}
+   + Lyssna efter händelser för Primetime Player {#listen}
       + [Översikt](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listen-for.md)
       + Implementera händelseavlyssnare och återanrop {#implement}
          + [Översikt](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listeners-overview.md)
@@ -771,7 +770,7 @@ ht-degree: 0%
          + [Loader-händelser](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-loader.md)
          + [Händelser för tidsbestämda metadata](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-timed-metadata.md)
       + [Konfigurera felhantering](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-error-handling-set-up.md)
-      + Konfigurera spelarens användargränssnitt {#configure-interface}
+      + Konfigurera användargränssnittet för spelaren {#configure-interface}
          + [Vänta på ett giltigt tillstånd](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)
          + [Spela upp och pausa en video](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-pause-play-implement.md)
          + [Identifiera om innehållet är live eller VOD](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-content-live-vod-identify.md)
@@ -798,7 +797,7 @@ ht-degree: 0%
          + [Återställa eller återanvända en MediaPlayer-instans](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [Släpp en MediaPlayer-instans och resurser](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
       + [Inspect tidslinjen för uppspelning](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
-   + Buffrar {#buffering}
+   + Buffring {#buffering}
       + [Buffringstidsregler](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [Ange buffringstider](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
    + [Dölja en videovy](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-video-view-hiding.md)
@@ -812,7 +811,7 @@ ht-degree: 0%
          + [Klientannonsspårning](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-tracking-client.md)
       + [Aktivera lazy och loading](tvsdk-1.4-for-desktop-hls/ad-insertion/t-psdk-dhls-1.4-ad-delay-enable.md)
       + [Standardbeteende och anpassat uppspelningsbeteende med annonser](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-playback-post1.2.md)
-      + Anpassa uppspelningen med annonser {#customize-playback-with-ads}
+      + Anpassa uppspelning med annonser {#customize-playback-with-ads}
          + [Översikt](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-customize.md)
          + [API-element för annonsuppspelning](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-ad-custom-elements.md)
          + [Använd standardbeteendet för uppspelning](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-use-default.md)
@@ -822,7 +821,7 @@ ht-degree: 0%
       + [Lägg in metadata](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md)
       + [Companion banner ads](tvsdk-1.4-for-desktop-hls/ad-insertion/companion-banner-ads/c-psdk-dhls-1.4-companion-banner-ads.md)
       + [Klickbara annonser](tvsdk-1.4-for-desktop-hls/ad-insertion/clickable-ads/c-psdk-dhls-1.4-clickable-ads.md)
-      + Anpassade taggar {#custom-tags}
+      + Egna taggar {#custom-tags}
          + [Översikt](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-configure.md)
          + [Exempel på en anpassad VOD-resurs](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-overview.md)
          + [Konfig-klassmetoder för taggar](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-psdkconfig-methods.md)
@@ -836,20 +835,20 @@ ht-degree: 0%
          + [Anpassade annonskrav](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
          + [Anpassade annonshändelser](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/r-psdk-dhls-1.4-custom-ad-events.md)
          + [Visa linjära VPAID-annonser i en annonsbrytning](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/t-psdk-dhls-1.4-display-linear-vpaid-ads.md)
-      + Lägg till anpassade annonsmarkörer {#add-markers}
+      + Lägga till egna annonsmärken {#add-markers}
          + [Översikt](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/c-psdk-dhls-1.4-ad-markers-add-custom.md)
          + [Klassen TimeRange](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerange-class.md)
          + [Klasserna MediaPlayer och MediaResource](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-mediaplayer-mediaresource-classes.md)
          + [Klassen TimeRangeCollection](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerangecollection-class.md)
          + [Placera markörer för TimeRange på tidslinjen](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-timerange-markers-on-timeline.md)
          + [Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-ad-markers-control-seek.md)
-      + Uppdaterar och skapar urvalsregler {#updating-ad-rules}
+      + Uppdatera och skapa regler för urval {#updating-ad-rules}
          + [Översikt](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/c-psdk-dhls-1.4-updating-rules.md)
          + [Prioritetsregler](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-priority-rule.md)
          + [Normalisera regler](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-normalize-rule.md)
          + [Exempel på regler för kreativt urval](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-sample-rule-files.md)
          + [Använda kreativa markeringsregler](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/c-psdk-dhls-1.4-how-tvsdk-applies-csr.md)
-   + Anpassa affärsmöjlighetsdetektorer och innehållslösare {#customize-opportunities}
+   + Anpassa affärsmöjlighetsdetektorer och innehållslösningar {#customize-opportunities}
       + [Översikt](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver.md)
       + [Generatorer för affärsmöjligheter och lösningar för innehåll](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver-about.md)
       + [Implementera en anpassad affärsmöjlighetsdetektor](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/t-psdk-dhls-1.4-opp-detector-impl.md)
@@ -887,7 +886,7 @@ ht-degree: 0%
       + [Implementera anpassade tidsuppdateringar](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-imp-cust-time-updates.md)
       + [Konfigurera videoanalysrapporter på serversidan](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-server-side-reporting-set-up.md)
       + [Få tillgång till videoanalysrapporter](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-reports-access.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [DRM-system som stöds](tvsdk-1.4-for-desktop-hls/drm-content-security/t-psdk-dhls-1.4-drm-support.md)
       + [Översikt över Primetime DRM-gränssnittet](tvsdk-1.4-for-desktop-hls/drm-content-security/r-psdk-dhls-1.4-drm-interface.md)
       + [Implementera Primetime DRM i ett TSVDK-program](tvsdk-1.4-for-desktop-hls/drm-content-security/c-psdk-dhls-1.4-tvsdk-drm-workflow.md)
@@ -904,7 +903,7 @@ ht-degree: 0%
       + [Annonsinfogning och failover för VOD](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-failover-ad-insertion-for-vod.md)
       + [Live överordnad-manifest update](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-manifest-update-intro.md)
       + [Hämta information om profilväxling](tvsdk-1.4-for-desktop-hls/failover-for-playback/t-psdk-dhls-1.4-profile-switch-info.md)
-   + Sammanfattning av händelser i Primetime-spelaren {#events-summary}
+   + Sammanfattning av händelser för Primetime Player {#events-summary}
       + [Uppspelningshändelser](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-playback.md)
       + [Lägg till uppspelningshändelser](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adplayback.md)
       + [Ad-servning/tidsbestämda metadatahändelser](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adserving.md)
@@ -960,13 +959,13 @@ ht-degree: 0%
          + [Översikt](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/c-psdk-browser-tvsdk-2.4-create-a-basic-player.md)
          + [Skapa en basspelare med TVSDK](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)
          + [Skapa en grundläggande spelare med UI Framework](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md)
-      + Browserify-compatible player {#browserify-compatible-browser}
+      + Browserify-kompatibel spelare {#browserify-compatible-browser}
          + [Översikt](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/c-psdk-browser-tvsdk-2.4-browserify.md)
          + [Skapa en Browserify-kompatibel spelare utan UI-Framework](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-no-uif.md)
          + [Skapa en Browserify-kompatibel spelare med UI-Framework](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-with-uif.md)
       + [Anpassade skal](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-custom-skins.md)
       + [Bildtexter](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-captions.md)
-      + Ads {#ads}
+      + Annonser {#ads}
          + [Översikt över annonser](browser-tvsdk-2.4/getting-started/about-ads/c-psdk-browser-tvsdk-2.4-ads.md)
          + [Lägg till annonsering](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
       + [Digital Rights Management](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
@@ -974,7 +973,7 @@ ht-degree: 0%
       + [Mått](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-metrics.md)
       + [Tvinga Flash-reserv med hjälp av mediekälllistan](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
       + [Felsökning och loggning](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-debugging.md)
-   + Användargränssnittets ramverk {#user-interface-framework}
+   + Ramverk för användargränssnitt {#user-interface-framework}
       + [UI-ramverket](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-ui-framework.md)
       + [Skalförändra spelaren](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)
    + Alternativ för uppspelning av innehåll {#content-playback-options}
@@ -987,7 +986,7 @@ ht-degree: 0%
       + [Google Cast-app för webbläsare TVSDK](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/r-psdk-browser-tvsdk-2.4-chromecast.md)
       + [Extensionslösa strömmar](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-extensionless-streams.md)
       + [Buffring](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-buffering-configuration.md)
-      + Lyssna efter Primetime Player-händelser {#listen-events}
+      + Lyssna efter händelser för Primetime Player {#listen-events}
          + [Översikt](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-listen-for.md)
          + [Implementera händelseavlyssnare och återanrop](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/t-psdk-browser-tvsdk-2.4-event-listeners-implement.md)
          + [Händelsetyper och klasser för återanrop](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/r-psdk-browser-tvsdk-2.4-event-listeners-type-table.md)
@@ -1000,7 +999,7 @@ ht-degree: 0%
       + Adaptiva bithastigheter (ABR) för videokvalitet {#abr-video-quality}
          + [Översikt](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/abr-control-quality/c-psdk-browser-tvsdk-2.4-abr-control-quality.md)
          + [Konfigurera adaptiva bithastigheter med ABRControlParameters](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/abr-control-quality/t-psdk-browser-tvsdk-2.4-abr-set-using-abrparameters.md)
-      + Konfigurera spelarens användargränssnitt {#configure-ui}
+      + Konfigurera användargränssnittet för spelaren {#configure-ui}
          + [Vänta på ett giltigt tillstånd](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)
          + [Spela upp och pausa en video](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-pause-play-implement.md)
          + [Identifiera om innehållet är live eller VOD](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-content-live-vod-identify.md)
@@ -1023,7 +1022,7 @@ ht-degree: 0%
          + [Översikt](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
          + [Kontrollera synlighet för undertexter](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
          + [Tillåt användaren att ändra spåret](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-track-allow-user-to-change.md)
-         + Kontroll av textningsformat {#styling}
+         + Styr textningsformat {#styling}
             + [Översikt](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/c-psdk-browser-tvsdk-2.4-closed-caption-styling-control.md)
             + [Ange format för undertexter](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/t-psdk-browser-tvsdk-2.4-closed-caption-styles-set.md)
             + [Alternativ för textningsformat](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-styling-options.md)
@@ -1042,14 +1041,14 @@ ht-degree: 0%
          + [FER, lösning och infogning](browser-tvsdk-2.4/ad-insertion/ad-insertion-about/c-psdk-browser-tvsdk-2.4-ad-resolving-client-fer.md)
          + [Klientannonsspårning](browser-tvsdk-2.4/ad-insertion/ad-insertion-about/c-psdk-browser-tvsdk-2.4-ad-tracking-client.md)
          + [Säker annonsinläsning över HTTPS](browser-tvsdk-2.4/ad-insertion/ad-insertion-about/c-psdk-browser-tvsdk-forced-https.md)
-      + Anpassade taggar {#custom-tags}
+      + Egna taggar {#custom-tags}
          + [Översikt](browser-tvsdk-2.4/ad-insertion/custom-tags/c-psdk-browser-tvsdk-2.4-custom-tags-configure.md)
          + [Konfig-klassmetoder för taggar](browser-tvsdk-2.4/ad-insertion/custom-tags/c-psdk-browser-tvsdk-2.4-custom-tags-psdkconfig-methods.md)
          + [Timed metadata, klass](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-custom-tags-timedmetadata-class.md)
          + [Meddelanden om manifesttaggar](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-manifest-tag-notifications.md)
          + [Prenumerera på anpassade annonstaggar](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-subscribe.md)
          + [Lägga till avlyssnare för meddelanden om tidsbestämda metadata](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
-      + Anpassa affärsmöjlighetsdetektorer och innehållslösare {#customize}
+      + Anpassa affärsmöjlighetsdetektorer och innehållslösningar {#customize}
          + [Översikt](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver.md)
          + [Generatorer för affärsmöjligheter och lösningar för innehåll](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver-about.md)
          + [Implementera en generator för anpassade affärsmöjligheter](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-opp-detector-impl.md)
@@ -1057,26 +1056,26 @@ ht-degree: 0%
       + [Annonsmätning från Moat](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-moat.md)
       + [Annonser som inte är kompatibla med ompaketering (trancode)](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-ad-transcoding.md)
       + [Standardbeteende och anpassat uppspelningsbeteende med annonser](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-playback-post1.2.md)
-      + Lägg till metadata {#ad-insertion-metadata}
+      + Lägg in metadata {#ad-insertion-metadata}
          + [Översikt](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)
          + [Ställ in metadata för annonsinfogning](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/t-psdk-browser-tvsdk-2.4-ad-insertion-metadata-set-up.md)
          + [Anpassa metadata för annonsinfogning](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/t-psdk-browser-tvsdk-2.4-cust-ad-metadata.md)
          + [Giltiga MIME-typer](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/r-psdk-browser-tvsdk-2.4-valid-mime-types.md)
          + [Målinformation](browser-tvsdk-2.4/ad-insertion/ad-insertion-metadata/r-psdk-browser-tvsdk-2.4-targeting-info.md)
-      + Banderollannonser {#companion}
+      + Companion banner ads {#companion}
          + [Översikt](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/c-psdk-browser-tvsdk-2.4-companion-banner-ads.md)
          + [Kompletterande banderolldata](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/r-psdk-browser-tvsdk-2.4-companion-banner-data.md)
          + [Visa banners](browser-tvsdk-2.4/ad-insertion/companion-banner-ads/t-psdk-browser-tvsdk-2.4-companion-banner-ads-display.md)
       + Klickbara annonser {#clickable-ads}
          + [Översikt](browser-tvsdk-2.4/ad-insertion/clickable-ads/c-psdk-browser-tvsdk-2.4-clickable-ads.md)
          + [Hantera klickbara annonser](browser-tvsdk-2.4/ad-insertion/clickable-ads/t-psdk-browser-tvsdk-2.4-handle-clickable-ads.md)
-   + Integrera webbläsarens TVSDK med Adobe Analytics {#integrating-browser}
+   + Integrera Browser TVSDK med Adobe Analytics {#integrating-browser}
       + [Videoanalys](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/c-psdk-browser-tvsdk-2.4-va-integration-overview.md)
       + [Initiera och konfigurera videoanalys](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-integrate-heartbeats.md)
       + [Implementera stöd för anpassade metadata](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-custom-metadata.md)
       + [Stöd för implementeringskapitel](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-chapter-support.md)
       + [Implementera anpassade tidsuppdateringar](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-imp-cust-time-updates.md)
-   + Innehållsskydd {#content-protection}
+   + Skydd av innehåll {#content-protection}
       + [DRM-system som stöds](browser-tvsdk-2.4/drm-content-security/t-psdk-browser-tvsdk-2.4-drm-support.md)
       + [Översikt över DRM-gränssnittet](browser-tvsdk-2.4/drm-content-security/r-psdk-browser-tvsdk-2.4-drm-interface.md)
       + [Aktivera FairPlay för Safari HLS](browser-tvsdk-2.4/drm-content-security/t-psdk-browser-tvsdk-2.4-drm-enable-fairplay-safari.md)
@@ -1089,7 +1088,7 @@ ht-degree: 0%
          + [Använd överordnad manifestuppdatering live](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/t-psdk-browser-tvsdk-2.4-manifest-update-use.md)
          + [Hämta information om profilväxling](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/t-psdk-browser-tvsdk-2.4-profile-switch-info.md)
       + [Implementera DRM-återanrop](browser-tvsdk-2.4/drm-content-security/c-psdk-browser-tvsdk-2.4-impl-drm-callbacks.md)
-   + Faktureringsmått {#billing-metrics}
+   + Faktureringsstatistik {#billing-metrics}
       + [Översikt](browser-tvsdk-2.4/billing/c-psdk-browser-tvsdk-2.4-billing.md)
       + [Konfigurera faktureringsmått](browser-tvsdk-2.4/billing/t-psdk-browser-tvsdk-2.4-billing-config.md)
       + [Skicka faktureringsmått](browser-tvsdk-2.4/billing/r-psdk-browser-tvsdk-2.4-billing-data-format.md)

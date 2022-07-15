@@ -3,10 +3,9 @@ product: primetime
 audience: end-user
 user-guide-title: Hjälp om implementering av Primetime Reference
 user-guide-description: Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare.
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 # PSDK 1.4 för Android-referensimplementering {#reference-implementation}
 
 + [Översikt över implementering av Android-referenser](home.md)
-+ Primetime-referensimplementering {#reference}
++ Referensimplementering för Primetime {#reference}
    + [Så här använder du implementeringen av Primetimes referens](ref-implementation/how-to-use-ref-player.md)
    + [Referensimplementationsstruktur](ref-implementation/ref-player-structure.md)
    + Så här använder du funktionshanterare {#feature-managers}
@@ -59,7 +58,7 @@ ht-degree: 0%
       + [Integrera ljud med senare bindning](late-binding-audio/aa-enable.md)
       + [Välj ljudspår](late-binding-audio/select-audio-tracks.md)
       + [Relaterad API-dokumentation](late-binding-audio/aa-api-callbacks.md)
-   + Rättighetsflöden för autentisering av primär tid {#primetime-authentications}
+   + Rättighetsflöden för Primetime-autentisering {#primetime-authentications}
       + [Översikt](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Tillståndshanteraren - översikt](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrera Primetime-autentisering](paytvpass-entitlement/integrate-pass.md)

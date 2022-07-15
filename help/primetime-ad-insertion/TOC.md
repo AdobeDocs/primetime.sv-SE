@@ -4,7 +4,7 @@ audience: end-user
 user-guide-title: Hjälp om Primetime Ad Insertion
 source-git-commit: 23930068020475ef32a03e63c8a90d9c08429082
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
