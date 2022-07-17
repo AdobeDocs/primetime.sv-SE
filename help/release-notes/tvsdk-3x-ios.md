@@ -2,9 +2,9 @@
 title: Versionsinformation om TVSDK 3.13 för iOS
 description: Versionsinformation för TVSDK 3.13 för iOS beskriver vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända samt enhetsproblemen i TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -1205,6 +1205,6 @@ Obs! I vissa iOS-versioner läser operativsystemet inte in resurserna i `PSDKLib
 
 ## Användbara resurser {#helpful-resources}
 
-* [TVSDK 3.4 for iOS Programmer&#39;s Guide](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [TVSDK 3.4 for iOS Programmer&#39;s Guide](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [TVSDK API-referens för iOS 3.4](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * Se den fullständiga hjälpdokumentationen på [Adobe Primetime Läs mer &amp; Support](https://experienceleague.adobe.com/docs/primetime.html) sida.

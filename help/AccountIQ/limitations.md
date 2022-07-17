@@ -1,0 +1,42 @@
+---
+title: Begränsningar och kända fel
+description: 'Kända fel i produkten. '
+source-git-commit: 4b840a1a722b3dd403d70f4ba838529d7d4d0b35
+workflow-type: tm+mt
+source-wordcount: '411'
+ht-degree: 0%
+
+---
+
+
+# Kända fel och begränsningar {#known-issues}
+
+Adobe strävar efter att erbjuda robust funktionalitet och smidiga användarupplevelser genom sina erbjudanden. Den aktuella versionen (version 1.0) av konto-IQ ger användnings- och prenumerationsdelningsanalyser till direktuppspelningsleverantörer med hög grad av förtroende. Följande begränsningar kommer dock att åtgärdas i kommande versioner.
+
+* När du definierar kohorter på kontrollpanelen eller rapportsidorna finns det för närvarande inget alternativ för att lägga till mått som **antal enheter** för att förfina segmentet. Den här funktionen kommer att finnas tillgänglig i en framtida version.
+
+* Vid beräkning av poängdelning för enskilda konton har konto-IQ en konservativ metod som gör att företag kan agera på delning med stor tillförlitlighet. Detta tillvägagångssätt tenderar dock att underskatta det totala beloppet för delning när det slås samman över många konton.
+
+* The [Generell delningspoäng](/help/AccountIQ/dashboard.md#overall-sharing-score) för närvarande bara faktorer i [Delningsnivå](/help/AccountIQ/dashboard.md#sharing-level) och [Användning från delade konton](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Framtida versioner kommer att ta hänsyn till ytterligare mätvärden.
+
+* När du definierar kohorter på kontrollpanelen eller rapportsidorna saknar väljarna för programmeringsdokumentskydd och kanaler sökmekanismen redan nu.
+
+* När du definierar kohorter på kontrollpanelen eller rapportsidorna finns det en begränsning för att bara välja upp till 10 programmerare och programmerare.
+
+* Alternativet att exportera kontostatistik är begränsat till att exportera 1 000 konton från och med nu.
+
+* Alternativet som ska väljas [Segmenttyp](#segment-type) när åtgärder definieras begränsas till **Fast antal konton**. The **Variabelt antal konton** i en senare version.
+
+* Avsnitten Benchmarking, Detection Models, Segments, Snapshots och Rules i den vänstra navigeringen är för närvarande inaktiverade och kommer att vara tillgängliga i en kommande version.
+
+* När du skapar [Operationer](/help/AccountIQ/operation-affecting-user-segment.md)kan du bara identifiera två typer av [Åtgärder](/help/AccountIQ/operation-affecting-user-segment.md) från och med nu - Concurrency Monitor-regler och externa åtgärder.
+
+* För närvarande kan åtgärder bara skapas och [schemalagd](/help/AccountIQ/operation-affecting-user-segment.md#action). I framtida versioner kan du pausa, återuppta och hantera dem helt.
+
+* På grund av den mer begränsade uppsättning data som används återspeglar isoleringsläget inte riktigt mängden delning. Därför går det inte att jämföra MVPD i isoleringsläge med något annat MVPD-värde.
+
+* När du definierar ett nytt [segment](/help/AccountIQ/segments-timeframe.md) för en åtgärd kan du lägga till mått. Men om du markerar ett sparat segment kan du inte lägga till fler mått för att förfina segmentet.
+
+* Grund- och tidsbildruteväljaren är begränsad till en vecka eller en månad, vilket innebär att data kan utvärderas endast för en vecka eller en månad.
+
+* Fördefinierade intervall är för närvarande inaktiverade i granularitets- och tidsbildruteväljare och kommer att vara tillgängliga i en framtida version.

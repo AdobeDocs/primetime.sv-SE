@@ -4,9 +4,9 @@ description: Versionsinformation för TVSDK 3.15 för Android beskriver vad som 
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Den här versionen åtgärdar ett problem där programmet kraschar när [!UICONT
 
 **Android TVSDK 3.13**
 
-DRM-strömmen i stora volymer fryser eller visar svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
+DRM-strömmen i världsklass fryser eller visar svarta bildrutor på ABR-omkopplare på FireTV-enheter, som innehåller 3:e generationens Fire TV-enheter av typen Pendant och Fire TV Cube 1:a och 2:a generationen.
 
 Lös problemet genom att ange API:t `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` för de angivna Fire TV-enheterna innan uppspelningen startar. Standardvärdet är false.
 
@@ -772,8 +772,8 @@ Den här versionen av TVSDK har följande problem:
 
 ## Användbara resurser {#helpful-resources}
 
-* [Systemkrav](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [TVSDK 3.10 for Android Programmer&#39;s Guide](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [Systemkrav](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [TVSDK 3.10 for Android Programmer&#39;s Guide](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [TVSDK Android Javadoc for API Reference](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [TVSDK Android C++ API-dokument](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Varje Java-klass har en motsvarande C++-klass, och C++-dokumentationen innehåller mer förklarande material än JavaOS, så se C++-dokumentationen för en mer detaljerad förståelse av Java API.
 * [TVSDK 1.4 till 2.5 för migreringshandbok för Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
