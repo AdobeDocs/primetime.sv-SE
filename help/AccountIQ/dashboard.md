@@ -2,7 +2,7 @@
 title: Instrumentpanel för konto-IQ
 description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Värdena hjälper er att förstå omfattningen av dina prenumeranters delning av
 
 
 *Bild: Genomsnittlig poängpanel för delning - aggregerad för det aktuella segmentet*
-
-![](assets/aggregate-sharing-score.svg)
 
 Följande tre mätvärden är komponenter i medeldelningspoängen.
 
