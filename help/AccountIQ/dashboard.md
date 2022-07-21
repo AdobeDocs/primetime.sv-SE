@@ -1,13 +1,13 @@
 ---
 title: Instrumentpanel för konto-IQ
-description: 'Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollpanelen {#dashboard}
 
@@ -15,13 +15,15 @@ Kontrollpanelen sammanfattar och sammanställer data i en samling diagram och ra
 
 ![kontonamall för IQ](assets/dashboard-capture.png)
 
-## Aggregerad delningspoäng {#aggregated-sharing}
+## Genomsnittlig delningspoäng - aggregerad för aktuellt segment {#aggregated-sharing}
 
 Panelen Aggregated Sharing Score (Aggregated Sharing Score) innehåller en översta avläsning som sammanfattar hur stor del av materialet som delas i konton och strömningsvolymer.
 
 Värdena hjälper er att förstå omfattningen av dina prenumeranters delning av autentiseringsuppgifter, vilket ger ett mått på behovet av att agera på den.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 Följande tre mätvärden är komponenter i Aggregate Sharing Score.
 
