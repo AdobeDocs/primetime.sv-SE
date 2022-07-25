@@ -2,9 +2,9 @@
 title: Definiera ett segment och en tidsram
 description: Definiera ett segment och en tidsram
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -55,8 +55,10 @@ Välj önskade programmeringskanaler på menyn **Kanaler i segment** alternativ:
 
    Listobjekt på den översta nivån i **Kanaler i segment** är [programmerare](/help/AccountIQ/product-concepts.md#programmer-def) företag och listobjekten under programmerarnamn är deras [kanaler](/help/AccountIQ/product-concepts.md#channel-def). Du kan antingen välja enskilda kanaler under programmerare eller välja programmerare och alla aktiviteter för kanalerna under den programmeraren inkluderas i rapport- och diagramresultaten.
 
-   <!--![](assets/programmer-channels.png)
-   *Figure: Programmers and channels listed in channels selector*-->
+   ![](assets/programmer-channels.png)
+
+
+   *Bild: Programmerare och kanaler listade i kanalväljaren*
 
    >[!IMPORTANT]
    >
@@ -95,7 +97,10 @@ Så här väljer du en utvärderingsperiod:
 
 1. Välj antingen **Vecka** eller **Månad** från **Sammanställd av** för att ange granularitet för utvärderingen.
 
-   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
+   ![](assets/granularity-timeframe-weekwise.png)
+
+
+   *Bild: Datumväljaren för att välja Kornighet och tidsram*
 
 1. När du har valt granularitet kan du använda framåt- eller bakåtpilarna för att flytta framåt eller bakåt i tiden.
 
