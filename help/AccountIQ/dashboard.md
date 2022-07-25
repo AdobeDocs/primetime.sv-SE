@@ -2,7 +2,7 @@
 title: Instrumentpanel för konto-IQ
 description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Diagrammet delas upp i intervall med sannolika quinles för delning från mycket
 
 ### Antal konton och användning genom att dela sannolikhetsnivå {#number-of-accounts-usage-sharing-probability}
 
-Den här panelen ger en tabellvy över konton som är uppdelade i intervall där sannolikhetsfrågor för delning delas, från mycket låga (0-20 %) till mycket höga (80=100 %) med varje quintiles associerade användning från delade konton.
+Den här panelen ger en tabellvy över konton som är uppdelade i intervall med delning av sannolikhetsknappar från mycket låga (0-20 %) till mycket höga (80-100 %) med varje quintiles associerade användning från delade konton.
 
 ![](assets/no-acc-usage-prob-level.png)
 
