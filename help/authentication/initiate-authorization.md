@@ -82,7 +82,7 @@ Hämtar auktoriseringssvar. 
 </br>
   * **XML:**
   </br>
-    "XML
+    ```XML
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <authorization>
     <expires>1348148289000</expires>
@@ -90,7 +90,7 @@ Hämtar auktoriseringssvar. 
     <requestor>sampleRequestorId</requestor>
     <resource>sampleResourceId</resource>
     </authorization>
-    "
+    ```
 
 
 
