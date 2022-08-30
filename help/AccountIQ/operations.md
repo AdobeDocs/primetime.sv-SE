@@ -1,13 +1,13 @@
 ---
 title: Operationer i konto IQ
 description: Operationer med konto-IQ innefattar att vidta åtgärder för att utföra automatisering och gruppåtgärder på prenumerantkonton och spåra deras effekter.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # Operationer {#operations-tab-next-steps}
 
@@ -55,19 +55,30 @@ Du kan analysera effekterna av en åtgärd genom att visa dess rapport. Så här
 
 1. Markera åtgärdsnamnet på huvudsidan.
 
-   Rapporten visas i form av ett staplat stolpdiagram.
+   Rapporten visas i form av ett skiktat stolpdiagram.
 
    ![](assets/operation-impact-report.png)
 
    *Bild: Verksamhetsrapport för att visa verksamhetens konsekvenser*
 
-   X-axeln ritar upp utvärderingsperioden och y-axeln ritar en variabel för att mäta effekten av operationen.
+   X-axeln representerar utvärderingsperioden och y-axeln beskriver åtgärdens inverkan (i antal konton i ett segment under utvärderingsperioden). Varje stapel är uppdelad i tre delar.
 
-   I ovanstående bild är variabeln på y-axeln antalet konton. Om du tittar på diagrammet kan du jämföra antalet konton som finns i operationssegmentet med antalet konton som ligger utanför operationssegmentet vid en viss tidpunkt (t.ex. vecka 2 i operationsutvärderingsperioden). Därför kan du analysera hur antalet konton varierar inom operationssegmentet och utanför segmentet under utvärderingsperioden.
+   * En del representerar antalet konton som fortfarande uppfyller operationssegmentets villkor.
 
-   Om din åtgärd var att skicka ut varningsmeddelanden till misstänkta konton, och konton i operationssegmentet var sådana med en delningssannolikhet på mer än 90 enheter och som använder mer än 5 enheter för att strömma innehåll, är konton i början av utvärderingsperioden mer än 7 miljoner. Detta antal ändras under utvärderingsperioden enligt diagrammet, vilket visar effekten av åtgärden. Baserat på utvärderingen kan du vidta korrigerande åtgärder för att misstänka konton, eller fortsätta med åtgärden, eller justera din strategi för att få bättre resultat för att förhindra delning av autentiseringsuppgifter.
+   * En annan del representerar antalet aktiva konton för den perioden som ursprungligen fanns i segmentet, men som inte längre uppfyller operationssegmentets villkor.
 
-2. Om du vill stänga rapporten och gå tillbaka till huvudsidan väljer du **Operationer** option under **Åtgärder** i vänster navigering.
+   * Den tredje delen representerar konton som inte var aktiva under den perioden.
+   >[!NOTE]
+   >
+   >Den första raden representerar antalet konton som uppfyller villkoren för operationssegmentet i början av utvärderingsperioden.
+
+   Med tiden visar diagrammet effekten av åtgärden (genom åtgärden) genom att ange antalet konton som har ändrat beteendet i förhållande till de ursprungliga kriterierna (till exempel med en delningssannolikhet på mer än 90 och som använder fler än 5 enheter) eller har blivit inaktivt.
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. Om du vill stänga rapporten och gå tillbaka till huvudsidan väljer du **Operationer** option under **Åtgärder** i vänster navigering.
 
 <!--
 
