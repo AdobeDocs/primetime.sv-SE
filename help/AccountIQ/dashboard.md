@@ -2,9 +2,9 @@
 title: Instrumentpanel för konto-IQ
 description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Kontrollpanelen {#dashboard}
 
 Kontrollpanelen sammanfattar och sammanställer data i en samling diagram och rapporter som utformats för att ge en översikt över omfattningen och effekten av kontodelning. Den innehåller en enda sida med de viktigaste rapporterna och mätvärdena från konto-IQ.
-
-<table><tr><th>
-
-+++Dashboard för programmerare
 
 ![kontonamall för IQ](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Den här panelen ger en tabellvy över konton som är uppdelade i intervall med 
 
 *Bild: Antal konton, trender och användningar inom olika sannolikhetsintervall*
 
-+++
 
-</th><th>
-
-+++Dashboard för MVPD-program Kontrollpanelen för MVPD-användare skiljer sig något från programmeringsanvändarnas.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Bild: MVPD&#39;s Dashboard*
-
-## De viktigaste programmerarna inom segment efter övergripande poängdelning {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Bild: Panel med ledande programmerare i ett segment*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers
