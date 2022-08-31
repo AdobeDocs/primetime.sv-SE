@@ -2,7 +2,7 @@
 title: Instrumentpanel för konto-IQ
 description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### Branschövergripande poäng för utbyte av videofiler {#top-mvpds}
+## Branschövergripande poäng för utbyte av videofiler {#top-mvpds}
 
 I den här tabellen visas en jämförande vy över de olika aggregerade delningspoängen för de programmerade videofilerna i segmentet.
 
@@ -85,7 +85,7 @@ I den här tabellen visas en jämförande vy över de olika aggregerade delnings
 
 *Bild: MVPD i segment efter totalpoäng*
 
-### Dela poäng via kanaler och videoprogrammeringsfönster {#sharin-score-by-channels-and-mvpds}
+## Dela poäng via kanaler och videoprogrammeringsfönster {#sharin-score-by-channels-and-mvpds}
 
 I den här tabellen visas en jämförande vy över delningspoängen för de valda kanalerna för de olika programmeringsversionerna i det aktuella segmentet.
 
@@ -94,7 +94,7 @@ I den här tabellen visas en jämförande vy över delningspoängen för de vald
 
 *Bild: Dela bakgrundsmusik per kanal och videoprogrammerare*
 
-### Sannolikhet för kontodelning {#accounts-sharing-probability}
+## Sannolikhet för kontodelning {#accounts-sharing-probability}
 
 Diagrammet delas upp i intervall med sannolika quinles för delning från mycket låg (0-20 %) till mycket hög (80=100 %).
 
@@ -108,7 +108,7 @@ Diagrammet delas upp i intervall med sannolika quinles för delning från mycket
 
 *Bild: Antal och procentandelar av prenumerantkonton i olika delningssannolikhetsintervall*
 
-### Antal konton och användning genom att dela sannolikhetsnivå {#number-of-accounts-usage-sharing-probability}
+## Antal konton och användning genom att dela sannolikhetsnivå {#number-of-accounts-usage-sharing-probability}
 
 Den här panelen ger en tabellvy över konton som är uppdelade i intervall med delning av sannolikhetsknappar från mycket låga (0-20 %) till mycket höga (80-100 %) med varje quintiles associerade användning från delade konton.
 
