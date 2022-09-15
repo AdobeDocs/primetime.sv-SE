@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionsinformation om Primetime
 user-guide-description: Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,7 @@ ht-degree: 0%
 
 + [Översikt över versionsinformation](home.md)
 + Primetime Ad Insertion {#ptai}
-
-   + [Versionsinformation om PTAI 22.7.1](ptai-22x-release-notes.md)
+   + [Versionsinformation om PTAI 22.9.2](ptai-22x-release-notes.md)
    + [Versionsinformation om PTAI 21.11.1](ptai-21x-release-notes.md)
    + [Versionsinformation om PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Versionsinformation om PTAI 19.11.1](ptai-19x-release-notes.md)

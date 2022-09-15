@@ -3,9 +3,9 @@ title: Versionsinformation om Primetime
 description: Versionsinformation om Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,17 @@ ht-degree: 0%
 
 Välkommen till versionsinformationen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel.
 
-## Förbättringar och korrigeringar i PTAI 22.7.1
+## Förbättringar och korrigeringar i PTAI 22.9.2
 
-Den här versionen fokuserar på förbättringar av annonsloggning med introduktion av tillgänglighetsrelaterade mått för DASH-arbetsflöden.
+Den här versionen fokuserar på förbättringar av telemetridata för annonsprestanda, som inkluderar loggningsdata för annonseringsanrop och tillgänglighet.
+
+Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-22x-release-notes.md).
 
 ## Korrigeringar i TVSDK 3.15 Android
 
 Den här versionen åtgärdar ett problem där programmet kraschar när en kreativ tagg saknas eller när [!UICONTROL url CDATA] är tom i [!UICONTROL VAST] svar.
 
-Andra korrigeringar och detaljer finns i [Versionsinformation för Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
+Andra korrigeringar och detaljer finns i [Versionsinformation om TVSDK för Android](/help/release-notes/tvsdk-3x-android.md)
 
 ## Förbättringar och korrigeringar i TVSDK 3.13 iOS
 
