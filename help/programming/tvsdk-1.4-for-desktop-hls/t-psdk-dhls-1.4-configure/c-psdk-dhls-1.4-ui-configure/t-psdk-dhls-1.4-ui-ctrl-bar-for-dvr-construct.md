@@ -1,14 +1,13 @@
 ---
 description: Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelning. DVR-stödet innefattar begreppet sökbart fönster och klientens direktpunkt.
 title: Skapa ett kontrollfält förbättrat för DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8e70f03c-880a-48c5-8728-a4b967c19925
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett kontrollfält förbättrat för DVR{#construct-a-control-bar-enhanced-for-dvr}
 
@@ -25,7 +24,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
 1. Om du vill implementera ett kontrollfält med DVR-stöd följer du stegen för att visa en sökningslist med några små skillnader:
 
@@ -34,7 +33,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
 
       För ett kontrollfält:
    1. Lägg till en övertäckning i kontrollfältet som representerar uppspelningsintervallet.
-   1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med egenskapen `MediaPlayer.seekableRange`.
+   1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med hjälp av `MediaPlayer.seekableRange` -egenskap.
 
       Exempel:
 
@@ -49,12 +48,10 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
       }
       ```
 
-      Du kan också välja att söka till klientens direktpunkt med konstanten `MediaPlayer.LIVE_POINT`.
+      Du kan också välja att söka till klientens direktpunkt med `MediaPlayer.LIVE_POINT` konstant.
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
           _player.seek(DefaultMediaPlayer.LIVE_POINT); 
       }
       ```
-
-

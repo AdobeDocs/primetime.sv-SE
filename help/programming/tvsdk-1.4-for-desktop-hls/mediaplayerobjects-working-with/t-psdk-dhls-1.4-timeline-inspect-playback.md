@@ -1,14 +1,13 @@
 ---
 description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av TVSDK. Detta är mest användbart när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
 title: Inspect tidslinjen för uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 38b5ce0e-5554-462e-986f-f3864f7cf879
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
-
 
 # Inspect tidslinjen för uppspelning{#inspect-the-playback-timeline}
 
@@ -17,13 +16,13 @@ Du kan få en beskrivning av tidslinjen som är associerad med det markerade obj
 Här är ett exempel på implementering som visas i följande skärmbild.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
-![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Kom åt `Timeline`-objektet i `MediaPlayer` med metoden `get`.
+1. Öppna `Timeline` objekt i `MediaPlayer` med `get` -metod.
 
-   Klassen `Timeline` kapslar in informationen som är relaterad till innehållet i tidslinjen som är associerad med mediaobjektet som för närvarande är inläst av `MediaPlayer`-instansen. Klassen `Timeline` ger åtkomst till en skrivskyddad vy av den underliggande tidslinjen. Klassen `Timeline` innehåller en get-metod för att hämta alla monterade `TimelineMarker`-objekt.
+   The `Timeline` klassen kapslar in informationen som är relaterad till innehållet på tidslinjen som är associerad med mediaobjektet som för närvarande är inläst av `MediaPlayer` -instans. The `Timeline` -klassen ger åtkomst till en skrivskyddad vy av den underliggande tidslinjen. The `Timeline` klassen innehåller en get-metod för att hämta alla placerade `TimelineMarker` objekt.
 
-1. Iterera genom listan med `TimelineMarkers` och använd den returnerade informationen för att implementera tidslinjen.
+1. Upprepa i listan `TimelineMarkers` och använd den returnerade informationen för att implementera tidslinjen.
 
        Ett TimelineMarker-objekt innehåller två informationsdelar:
    
@@ -51,4 +50,3 @@ markers.forEach(function(item:TimelineMarker,
     // draw the marker on the scrub-bar 
 }
 ```
-
