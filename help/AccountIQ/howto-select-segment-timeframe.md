@@ -2,9 +2,9 @@
 title: Definiera ett segment och en tidsram
 description: Definiera ett segment och en tidsram
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ Förutom att ändra markeringen i dialogrutan **MVPD i segment** och **Kanaler i
 * Markera **Ta bort** ikon (![ta bort ikon](assets/remove-icon.png)) på namnen på de markerade videofilmarna och kanalerna som visas under segmentväljaren.
 
 * Du kan också använda **Radera markering** om du vill ta bort alla tidigare markerade programmeringsskyltar eller kanaler.
-
-![](assets/segment-panel-selection1.png)
-
-*Bild: Valda videofilmsprogram och kanaler i segment- och tidsbildrutepanelen*
 
 ![](assets/segment-panel-selection.png)
 

@@ -1,25 +1,27 @@
 ---
 title: Översikt över konto-IQ
-description: 'Med hjälp av IQ kan programmerare och distributörer förstå riskerna för sina intäkter och sin verksamhet och fastställa de mest effektiva åtgärder som ska vidtas för att minska verkningarna av kreditbedrägeri. '
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+description: Med hjälp av IQ kan programmerare och distributörer förstå riskerna för sina intäkter och sin verksamhet och fastställa de mest effektiva åtgärder som ska vidtas för att minska verkningarna av kreditbedrägeri.
+exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
+source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
-
 # Översikt över konto-IQ {#account-iq-overview}
 
 Delning av autentiseringsuppgifter av prenumeranter på direktuppspelningstjänster är ett stort och växande problem för branschen. Att förstå, identifiera och hantera delning av autentiseringsuppgifter är dessutom en komplex process. Det är komplicerat att förstå prenumerantens användningsbeteende och att få en helhetssyn på deras verksamhet - till exempel genom att skilja på medlemmarna inom samma hushåll och utanför. På grund av detta kan leverantörer av direktuppspelningstjänster ha hinder att agera mot delning av autentiseringsuppgifter.
 
-Leverantörer av direktuppspelningstjänster för video är i allmänhet medvetna om riskerna och kostnaderna med att dela till sin verksamhet, men har begränsade möjligheter att vidta åtgärder, som att blockera aktieägarna eller erbjuda dem. Vi rekommenderar dock en välinformerad och målinriktad strategi, som gör det möjligt för tjänster att förstå hur materialet delas på rätt sätt och att anta strategier som belönar ett bra tittarbeteende och samtidigt inriktas på affärstillväxt.
+
+<div class "preview">
+Leverantörer av direktuppspelningstjänster för video är i allmänhet medvetna om riskerna och kostnaderna med att dela till sin verksamhet, men har begränsade möjligheter att vidta åtgärder, som att blockera aktieägarna eller erbjuda dem. Vi rekommenderar dock en välinformerad och målinriktad strategi, som gör det möjligt för tjänster att förstå hur materialet delas på rätt sätt och att anta strategier som belönar ett bra tittarbeteende och samtidigt inriktas på affärstillväxt. </span>
 
 ![IQ-flödesdiagram för konto](assets/aiq-intro.png)
 
 *Bild: IQ-informationsflöde för konto*
 
-Med Adobe Primetime Account IQ kan videoströmningstjänster förstå abonnenternas användningsmönster och identifiera delning av autentiseringsuppgifter. Genom att grundligt analysera det långa spåret av data som lämnas kvar av varje abonnent med hjälp av Adobe egna maskininlärningsmodell i flera lager, kan direktuppspelningstjänster förstå användarbeteendet och identifiera delning av autentiseringsuppgifter med större säkerhet. Dessutom kan åtgärder vidtas genom integreringar med andra system, som att begränsa samtidiga strömmar eller anpassa erbjudanden, och validerar effekten av dessa åtgärder, oavsett om det gäller att uppmuntra till ett lagligt tittande eller öka antalet abonnenter och intäkterna.
+Med Adobe Primetime Account IQ kan videoströmningstjänster förstå abonnenternas användningsmönster och identifiera delning av autentiseringsuppgifter. Genom att grundligt analysera det långa spåret av data som lämnas kvar av varje abonnent med hjälp av en maskininlärningsmodell som är tillverkad i flera lager från Adobe, kan direktuppspelningstjänster förstå användarbeteendet och identifiera delning av autentiseringsuppgifter med större säkerhet. Dessutom kan åtgärder vidtas genom integreringar med andra system, som att begränsa samtidiga strömmar eller anpassa erbjudanden, och validerar effekten av dessa åtgärder, oavsett om det gäller att uppmuntra till ett lagligt tittande eller öka antalet abonnenter och intäkterna.
 
 Konto-IQ innehåller verktyg och funktioner för att mäta, hantera och tjäna pengar på delning av autentiseringsuppgifter. Rapporter, analyser och kontrollpaneler gör det möjligt att utforska data för att identifiera mönster. Direktåtgärder stöds genom export och integrering med Adobe och tredjepartssystem som kampanjhantering, valutagränsbegränsning eller prenumerationsregistrering. Och dedikerade spårningsverktyg mäter framgången för dessa åtgärder så att de kan uppdateras eller utökas.
 
@@ -54,9 +56,9 @@ Generally, video streaming service providers consider password sharing as fatal 
 
 Adobe Primetime Account IQ enables video streaming services understand the subscriber usage patterns and identify password sharing by analyzing usage behavior. Moreover, it validates the impact of applying actions to encourage legitimate viewing behavior while maximizing business ROI, eventually growing subscribers and revenue.
 
-By deeply analyzing the long, winding trail of data left behind by each subscriber using Adobe’s proprietary multi-layer machine learning model, customers can understand usage behavior and identify password sharing with a greater degree of certainty, use the insights to validate the impact of applying actions to encourage legitimate viewing behavior while maximizing business growth, eventually act on password sharing using validated tactics to improve viewer experience, growing subscribers and revenue (for e.g. converting sharers to paid subscribers, managing ad loads based on sharing behavior, rewarding good behavior with better viewer experience).
+By deeply analyzing the long, winding trail of data left behind by each subscriber using Adobe's proprietary multi-layer machine learning model, customers can understand usage behavior and identify password sharing with a greater degree of certainty, use the insights to validate the impact of applying actions to encourage legitimate viewing behavior while maximizing business growth, eventually act on password sharing using validated tactics to improve viewer experience, growing subscribers and revenue (for e.g. converting sharers to paid subscribers, managing ad loads based on sharing behavior, rewarding good behavior with better viewer experience).
 
-Account IQ is helps you understand usage patterns and identify password sharing by leveraging the Primetime Authentication  solution that processes a huge volume of TV Everywhere transactions. A proprietary multi-layer machine learning model trained by this real-world TVE data accurately characterizes usage patterns and helps video streaming services understand usage patterns and identify password sharing at an individual account level. Based on Adobe’s customer experience management solutions, Account IQ enables video streaming services to effectively use their audience data to create actionable sharing profiles as well powers integrations with other Adobe Digital Experience and 3rd party solutions—for example, Adobe Primetime Concurrency Monitoring or Adobe Analytics—to enable understanding usage patterns, identify and act upon password sharing.
+Account IQ is helps you understand usage patterns and identify password sharing by leveraging the Primetime Authentication  solution that processes a huge volume of TV Everywhere transactions. A proprietary multi-layer machine learning model trained by this real-world TVE data accurately characterizes usage patterns and helps video streaming services understand usage patterns and identify password sharing at an individual account level. Based on Adobe's customer experience management solutions, Account IQ enables video streaming services to effectively use their audience data to create actionable sharing profiles as well powers integrations with other Adobe Digital Experience and 3rd party solutions—for example, Adobe Primetime Concurrency Monitoring or Adobe Analytics—to enable understanding usage patterns, identify and act upon password sharing.
 
 
 <!-- The widespread availability of video content and streaming services bring with it problem of account sharing; eventually leading to the loss of revenue by content providers. Account IQ helps TV Everywhere and VOD (video on demand) providers understand the risks to their revenue and business operations, and determine the most effective actions to take to mitigate the impacts of credential fraud. It helps these media companies (MVPDs, Programmers, and VOD providers) manage and uncover the instances of password sharing with a high level of confidence, enabling them deliver better business outcomes and provide better viewing experiences for subscribers.

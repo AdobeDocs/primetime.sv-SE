@@ -1,23 +1,23 @@
 ---
 title: Användningsmönster
 description: Visa kontodelningsbeteende för olika användartypologier.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Användningsmönster {#usage-patterns}
 
-Med konto-IQ delas abonnentkontots användare in i olika kategorier utifrån deras sociala beteende, som t.ex. resenär eller dator, stor familj och communitydelning. The **Användningsmönster** på sidan visas flera olika analyser och rapporter för dessa användartypologier. Till exempel: **Distribution av användningsmönster - användare i segment kontra branscher** rapporten jämför hur det aktuella segmentet används och hela branschen.
+Med konto-IQ delas abonnentkontots användare in i olika kategorier utifrån deras sociala beteende, t.ex. resenärer eller datorer, stora familjer och communitydelning. The **Användningsmönster** på sidan visas flera olika analyser och rapporter för dessa användartypologier. Till exempel: **Distribution av användningsmönster - användare i segment kontra totalt** rapporten jämför hur det aktuella segmentet används och hela branschen.
 
 Analyserna och rapporterna baseras på det aktuella segmentet enligt definitionen i [segmentpanel](/help/AccountIQ/segments-timeframe.md).
 
 ## Distribution av användningsmönster {#usage-pattern-dis}
 
-Stolpdiagrammet i **Distribution av användningsmönster - Användare i segment kontra branscher** visar antalet och procentandelen prenumeranter för varje socialt beteende, eller användningsmönster. Förutom att jämföra de olika användningsmönstren i det aktuella segmentet med hela branschen, jämförs de också med ett segment som innehåller alla kanaler.
+Stolpdiagrammet i **Distribution av användningsmönster - Användare i segment kontra totalt** visar antalet och procentandelen prenumeranter för varje socialt beteende, eller användningsmönster. Förutom att jämföra de olika användningsmönstren i det aktuella segmentet med hela branschen, jämförs de också med ett segment som innehåller alla kanaler.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ I bilden ovan:
 
 * Och 15,7 % (24 073 311) av det totala antalet spelförfrågningar (153 076 350) görs av vanliga användare.
 
-## Distribution av användningsmönster för PDF-filer {#usage-pattern-dis-mvpd}
+## Fördelning av användningsmönster efter segmentpartner {#usage-pattern-dis-mvpd}
 
-The **Distribution av användningsmönster för PDF-filer** tabellen innehåller en jämförelse av användningsmönsterfördelningen för de olika versionerna av PDF-filerna i det aktuella segmentet.
++++Programmer - Distribution av användningsmönster för totalt antal segment och segmentpartners
+
+The **Distribution av användningsmönster** tabellen innehåller en jämförelse av användningsmönsterfördelningen för de olika versionerna av PDF-filerna i det aktuella segmentet.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD - Fördelning av användningsmönster för totalt antal segment och segmentpartners
+
+The **Distribution av användningsmönster** tabellen innehåller en jämförelse av användningsmönsterfördelningen för programmeringskanalerna i det aktuella segmentet.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++

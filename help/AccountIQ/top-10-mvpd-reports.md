@@ -1,15 +1,15 @@
 ---
 title: Hur man visar rapporter för de 10 bästa PDF-filerna per programmerarprofil.
 description: Visa rapporter för de 10 bästa PDF-filerna.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# Hur man visar rapporter för de 10 bästa PDF-filerna <!--and Programmers--> {#view-top-10-mvpd-reports}
+# Visa kontodelningsrapporter för de 10 viktigaste PDF-filerna <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 Med konto-IQ kan du visa och analysera kontodelningsstatistik för de 10 bästa PDF-filerna (i en definierad [segment](/help/AccountIQ/product-concepts.md#segmet-def)) med:
 

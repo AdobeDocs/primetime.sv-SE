@@ -1,17 +1,17 @@
 ---
 title: Exportera information för konton med hög delning
 description: Exportera information för konton med hög delningspoäng.
-source-git-commit: 17a44bde5cf320f519cc537d37df0fe823cf51a6
+exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
 
-
 # Exportera information för konton med hög delning {#export-account-info-high-score}
 
-Med konto-IQ kan du exportera kontodelningsinformation för de 1 000 vanligaste prenumerantkontona baserat på deras [delningssannolikhet](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Data i den exporterade CSV-filen sorteras i minskande ordning efter delningssannolikhet för prenumerantkonton - för de valda MVPD-programmen i [segment](/help/AccountIQ/product-concepts.md#segment-def), för [angiven tidsram](/help/AccountIQ/product-concepts.md#time-frame-def).
+Med konto-IQ kan du exportera kontodelningsinformation för de 1 000 vanligaste prenumerantkontona baserat på deras [delningssannolikhet](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Data i den exporterade CSV-filen sorteras i minskande ordning för delningssannolikhet för prenumerantkonton i [segment](/help/AccountIQ/product-concepts.md#segment-def), för [angiven tidsram](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 Alternativet att exportera kontodelningsinformation är tillgängligt på [Allmänna användningsrapporter](/help/AccountIQ/general-usage-reports.md) och [Rapporter om delade konton](/help/AccountIQ/shared-acc-reports.md) sidor.
 
@@ -23,13 +23,7 @@ Alternativet att exportera kontodelningsinformation är tillgängligt på [Allm�
 
 Så här exporterar du kontodelningsinformation till prenumeranter:
 
-1. Ange ett segment i segmentväljaren. Så här markerar du ett segment:
-
-   1. Välj önskad MVPD från **MVPD i segment** alternativ.
-
-   1. Välj önskade kanaler från **Kanaler i segment** alternativ.
-
-   1. Välj en tidsram från **Kornighet och tidsram** möjlighet att visa rapporter för det.
+1. Definiera ett önskat segment enligt stegen i [Definiera segment och markera tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) för utvärdering från [segment och tidsram](/help/AccountIQ/segments-timeframe.md) -panelen.
 
 1. Välj **Exportera de 1 000 populäraste kontona** möjlighet att exportera kontoinformation för 1 000 prenumeranter med störst sannolikhet för delning.
 
@@ -51,7 +45,7 @@ Veckan eller månaden som du valde den **Kornighet och tidsram** i segmentvälja
 
 **MVPD**
 
-Om du är programmerare visar kolumnen vilken MVPD som prenumerantkontot tillhör.
+Om du är programmerare visar kolumnen vilket MVPD prenumerantkontot tillhör.
 
 **Prenumerant-ID**
 
@@ -105,13 +99,13 @@ Antalet gånger som användarna har loggat in under perioden med det kontot.
 
 Antal gånger ett MVPD har auktoriserat en ström eller beviljat åtkomst (till innehåll) till det kontot.
 
->[!NOTE]
->
->The **# AuthZ OK** är relaterad till **# uppspelningsbegäranden**; den är mindre än **# uppspelningsbegäranden** eftersom Adobe cachar de tillstånd som normalt gäller för luftvärdighetsbevis (MVPD) i 24 timmar.
-
 **# uppspelningsbegäranden**
 
 Det faktiska antalet strömmar under tidsperioden.
+
+>[!NOTE]
+>
+>**# AuthZ OK** är vanligtvis mindre än **# uppspelningsbegäranden** eftersom Adobe cachelagrar tillstånd från sidovaccinationsprogram i upp till 24 timmar. Den här kolumnen är inte tillgänglig för MVPD.
 
 **Antal kanaler**
 

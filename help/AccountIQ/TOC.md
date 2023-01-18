@@ -1,10 +1,10 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-description: 'IQ-hjälpen för Primetime-kontot ger information om IQ-komponenterna för kontot och vägleder dig genom användarresor för att använda de olika komponenterna. '
-source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
+user-guide-description: IQ-hjälpen för Primetime-kontot ger information om IQ-komponenterna för kontot och vägleder dig genom användarresor för att använda de olika komponenterna.
+source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,21 @@ ht-degree: 0%
       + [Operationer](/help/AccountIQ/operations.md)
 + Så här {#use-aiq}
    + [Definiera ett segment och en tidsram](/help/AccountIQ/howto-select-segment-timeframe.md)
-   + Visa rapporter om kontodelning {#view-account-sharing-reports}
-      + [Rapporter för ett specifikt MVPD-program](/help/AccountIQ/reports-for-specific-mvpds.md)
-      + [Rapporter för de 10 bästa PDF-filerna](/help/AccountIQ/top-10-mvpd-reports.md)
-      + [Rapporter för flera programmeringsdokument](viewrep-multiple-mvpd-channel.md)
-      + [Isoleringsläge och delningsbeteende](/help/AccountIQ/isolation-mode.md)
-   + [Exportera MVPD- och kanalrapporter](/help/AccountIQ/export-segment-metrics.md)
+   + Exportera rapporter {#export-reports}
+      + [Programmer - exportrapporter](/help/AccountIQ/export-segment-metrics-progr.md)
+      + [MVPD - Exportrapporter](/help/AccountIQ/export-segment-metrics-mvpd.md)
    + [Exportera konton med hög delning](/help/AccountIQ/export-acc-information.md)
    + [Skapa en åtgärd för ett användarsegment](/help/AccountIQ/operation-affecting-user-segment.md)
+   + Visa rapporter om kontodelning {#view-account-sharing-reports}
+      + Programmerare - visa rapporter om kontodelning {#view-programmer-reports}
+         + [Rapporter för ett specifikt MVPD-program](/help/AccountIQ/reports-for-specific-mvpds.md)
+         + [Rapporter för de 10 bästa PDF-filerna](/help/AccountIQ/top-10-mvpd-reports.md)
+         + [Rapporter för flera programmeringsdokument](viewrep-multiple-mvpd.md)
+         + [Isoleringsläge och delningsbeteende](/help/AccountIQ/isolation-mode.md)
+      + MVPD - Visa rapporter om kontodelning {#view-mvpd-reports}
+         + [Rapporter för en viss programmerare eller kanal](/help/AccountIQ/reports-for-specific-programmers.md)
+         + [Rapporter för de 10 främsta programmerarna](/help/AccountIQ/top-10-programmer-reports.md)
+         + [Rapporter för flera programmerare och kanaler](viewrep-multiple-programmer.md)
 + [God praxis](/help/AccountIQ/best-practices.md)
 + [Begränsningar](/help/AccountIQ/limitations.md)
 + [Felsökning](/help/AccountIQ/troubleshoot.md)

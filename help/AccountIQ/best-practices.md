@@ -1,13 +1,13 @@
 ---
 title: Bästa praxis
 description: Läs vidare för att lära dig hur du bättre använder IQ-verktyget för konton.
-source-git-commit: 3ee1620dad552c76545f5441ea8530a45143fc4b
+exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis {#aiq-best-practices}
 
@@ -28,6 +28,7 @@ Så här förstår du hur delning påverkar ditt företag:
 ## Inkrementell målinriktad åtgärd {#incremental-targeted-action}
 
 Vidta åtgärder med ett definierat målsegment. Genom att börja från liten med ett väldefinierat segment minskar du risken för oavsiktliga konsekvenser och kan bättre förstå resultatet. Oavsett var du befinner dig längs banan kan du alltid förfina eller utöka åtgärdens mål.
+
 Att börja litet och börja om är en försiktig strategi. Använd tidigare identifierade segment och vidta åtgärder (som experiment) med specifika mål.
 
 Använd åtgärdsverktyget för att definiera målsegmentet och en drifttidsram. På så sätt kan du spåra effekter i nästa fas.
@@ -98,7 +99,7 @@ How many additional ads were viewed?
 
 Did the number of borrowers decrease?
 
-Account IQ’s sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
+Account IQ's sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
 
 Improve and repeat
 Based on the outcomes of your experiments and targeted actions on small groups of users, you can expand the reach of your strategies to rest of the user segment or reset the strategy and audience to act on.

@@ -1,13 +1,13 @@
 ---
 title: Allmänna användningsrapporter
 description: Allmänna användningsrapporter
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
+source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
-
 
 # Allmänna användningsrapporter {#general-usage-reports}
 
@@ -41,7 +41,26 @@ Alla rapporter baseras på det aktuella segment som valts med [Segment och tidsr
 
 I linjediagrammen här visas hur värdena för AuthN OK, AuthZ OK, Play-begäranden och Unika prenumeranter ändras över tiden i en vald tidsram för det definierade segmentet.
 
-![](assets/line-graph-gu.png)
++++Programmer- **AuthN OK/AuthZ OK/Uppspelningsbegäranden/unika prenumeranter**
+
+![](assets/progr-line-graph-gu.png)
+
+
+*Bild: AuthN OK/AuthZ OK/Play-begäranden/unika prenumeranter för programmeraren*
+
+
++++
+
+
++++MVPD- **AuthN OK / AuthZ OK / Unika prenumeranter**
+
+![](assets/mvpd-line-graph-gu.png)
+
+
+*Bild: AuthN OK/AuthZ OK/Unika prenumeranter för MVPD-användare*
+
+
++++
 
 X-axeln visar enheterna inom den aktuella tidsramen och y-axeln representerar grundläggande aktivitetsmått för prenumeranten under den perioden. Med linjediagrammen kan du jämföra följande värden för de som prenumererar på videofilmsprogram och kanaler som du har valt på segmentmarkeringspanelen:
 
@@ -57,13 +76,18 @@ X-axeln visar enheterna inom den aktuella tidsramen och y-axeln representerar gr
 
    Uppspelningsbegäranden är antalet uppspelningsbegäranden. Mer information och definitioner finns i [Produktbegrepp: Spela upp begäranden](/help/AccountIQ/product-concepts.md#play-requests-def)
 
+   >[!NOTE]
+   >
+   >Linjediagrammet för uppspelningsförfrågningar är inte tillgängligt för MVPD-användare.
+
+
 * **Unika prenumeranter**
 
    Unika prenumeranter är antalet godkända unika prenumeranter. Mer information och definitioner finns i [Produktbegrepp: Unika prenumeranter](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
    >[!NOTE]
    >
-   >Det totala antalet unika prenumeranter omfattar även antalet unika enheter om en programmerare använder Adobe TempPass (dvs. kostnadsfri förhandsgranskning) ingår i segmentet.
+   >Det totala antalet unika prenumeranter omfattar även antalet unika enheter om en programmerare använder Adobe TempPass (som är en kostnadsfri förhandsversion) som en del av segmentet.
 
 ## Översikt över ögonblicksbild - konton över tröskelvärden {#snapshot-overview}
 
@@ -105,7 +129,7 @@ I diagrammet visas följande:
 
 ## Enheter per vecka (eller månad) per konto {#devices-week-account}
 
-The **stolpdiagram** ger insikter om hur prenumeranterna på MVPD använder sina enheter för att komma åt innehåll från din kanal.
+The **stolpdiagram** ger insikter om hur abonnenterna använder sina enheter för att komma åt innehåll.
 
 X-axeln visar Antal konton och y-axeln visar Antal enheter. Baserat på det tröskelvärde som du anger för antal enheter per konto markeras det absoluta antalet prenumerantkonton som förbrukar innehåll från ett visst antal enheter under en veckas tid.
 
@@ -135,7 +159,7 @@ Resultat från det här måttet kombinerat med antal [Enheter per vecka (eller m
 
 ![](assets/graph-loc-week-acc.png)
 
-När du har definierat ett segment (genom att välja distributörer och kanaler) och angett tröskelvärdet för antalet platser, kan du identifiera från diagrammet:
+När du har definierat ett segment och angett tröskelvärdet för antal platser, kan du identifiera från diagrammet:
 
 * Antal (och procentandel) prenumeranter som konsumerar innehåll från (ett visst) x antal platser under en vecka.
 
@@ -163,7 +187,7 @@ När du har definierat ett segment (genom att markera MVPD-program och kanaler) 
 
 I diagrammet med historikvyn kan du jämföra användningsstatistik för olika tidsramar. Dessutom ritas de olika användningsmåtten tillsammans, som [Enheter per vecka (eller månad) per konto](#devices-week-account), [Platser per vecka (eller månad) per konto](#locations-week-account)och [IP-adresser per vecka (eller månad) per konto](#ip-week-account).
 
-* X-axeln ritar upp tidsramen och y-axeln visar antalet abonnentkonton, enheter, platser och IP-adresser.
+* X-axeln ritar upp tidsramen och y-axeln visar antalet prenumerantkonton, enheter, platser och IP-adresser.
 
 * De orangefärgade strecken betecknar segment i olika tidsramar.
 
@@ -179,5 +203,5 @@ I diagrammet med historikvyn kan du jämföra användningsstatistik för olika t
 
 >[!MORELIKETHIS]
 >
->* Lär dig hur du exporterar rapporter för de 1 000 vanligaste prenumeranterna för utvalda MVPD-program med hjälp av filter i rapporten om allmän användning med [Exportera de 1 000 populäraste kontona](/help/AccountIQ/export-acc-information.md) alternativ.
+>* Lär dig hur du exporterar rapporter för de 1000 mest populära prenumeranterna i det valda segmentet med hjälp av filter i den allmänna användningsrapporten med hjälp av [Exportera de 1 000 populäraste kontona](/help/AccountIQ/export-acc-information.md) alternativ.
 

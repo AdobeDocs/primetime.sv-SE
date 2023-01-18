@@ -1,13 +1,13 @@
 ---
-title: 'Skapa en åtgärd för ett användarsegment och spåra effekt '
+title: Skapa en åtgärd för ett användarsegment och spåra effekt
 description: Så här skapar du en åtgärd som påverkar och spårar effekten för ett definierat användarsegment.
-source-git-commit: 1d6beb69470fcf6a3193b4d2f508c503d4f957f1
+exl-id: ab74f857-e178-4120-8f9c-655ec921d096
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en åtgärd för ett användarsegment {#operation-to-track-segment}
 
@@ -34,10 +34,21 @@ Så här skapar du en åtgärd:
 
 ## Operationsinformation {#operation-details}
 
++++Programmer- åtgärdsinformation
+
 Namnge den nya åtgärden i **Åtgärdsnamn** fält under Åtgärdsinformation. Till exempel &quot;*Testa effekten av multifaktorautentisering på MVPD X-prenumeranter eller Begränsa antalet strömmar i Concurrency Monitoring eller Begränsa MVPD D-prenumeranternas visningskanal N från 20 plus-enheter*&quot;.
 
++++
+
++++MVPD- åtgärdsinformation
+
+Namnge den nya åtgärden i **Åtgärdsnamn** fält under Åtgärdsinformation. Till exempel &quot;*Testa effekten av multifaktorautentisering på kanalens N-tittare eller Begränsa antalet strömmar i Concurrency Monitoring eller Begränsa prenumerantens tittarkanal N från 20 plus-enheter*&quot;.
+
++++
 
 ## Målsegment {#segment}
+
++++Programmer- Målsegment
 
 The **Segment** Här definieras vilka användare som kommer att användas av denna operation. eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på sidan med huvudrapporter eller kontrollpaneler i steg 1 ovan.
 
@@ -47,7 +58,22 @@ The **Segment** Här definieras vilka användare som kommer att användas av den
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Det här segmentet definierar prenumeranterna för de videofilmsprogram och kanaler som kommer att påverkas av den åtgärd som skapas. Ditt (standard) segment innehåller till exempel *alla abonnentkonton för MVPD med namnet &#39;C&#39; som visar kanalen &#39;N Sports&#39;*.
+Det här segmentet definierar de prenumeranter som påverkas av den åtgärd som skapas. Det valda segmentet kan till exempel ange *alla abonnentkonton för MVPD med namnet &#39;C&#39; som visar kanalen &#39;N Sports&#39;*.
+
++++
+
++++MVPD- Målsegment
+
+The **Segment** Här definieras vilka användare som kommer att användas av denna operation. eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på sidan med huvudrapporter eller kontrollpaneler i steg 1 ovan.
+
+<!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
+
+* The **segment evaluation period** is the time period of analysis you selected in step 1 from **Granularity and Timeframe** option.
+![](assets/operations-segment-selection.png)
+*Figure: Segment and timeframe selection on the main page*-->
+
+Det här segmentet definierar dina prenumeranter (som är tittare av specifika kanaler) som påverkas av den åtgärd som skapas. Ditt (standard) segment innehåller till exempel *alla abonnentkonton som visar kanalen &#39;N Sports&#39;*.
++++
 
 ### Ytterligare segmentering {#additional-segmentation}
 
