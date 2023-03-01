@@ -4,7 +4,7 @@ user-guide-title: Hjälp om Primetime-programmering
 user-guide-description: Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---

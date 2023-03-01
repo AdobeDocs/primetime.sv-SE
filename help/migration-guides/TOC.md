@@ -5,7 +5,7 @@ user-guide-title: Hjälp om migrering av Primetime
 user-guide-description: Beskriver konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generations programsvit.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '37'
 ht-degree: 0%
 
 ---
