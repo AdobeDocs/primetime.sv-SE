@@ -2,18 +2,17 @@
 title: Prenumerationssegment och tidsram
 description: Definiera kohorter eller välj abonnentsegment för att mäta möjligheterna och mönstren för kontodelning för era kanaltittare så att de kan använda grafiska verktyg och rapporter i konto-IQ.
 exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
+
 # Prenumerationssegment och tidsram {#cohorts-segments}
 
 När du loggar in på konto-IQ finns det en panel längst upp där du kan definiera prenumeranten [segment](/help/AccountIQ/product-concepts.md#segment-segmet-def) om du vill filtrera resultaten för att visa rapporter för abonnenternas delningsbeteende och mönster.
-
-
 
 <!--![](assets/segment-timeframe-panel.png)-->
 
@@ -30,6 +29,7 @@ Följande listrutealternativ används för att definiera segment:
 The **MVPD i segment** väljer du [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) (personer eller grupp) vars prenumerant du vill visa rapporterna om kontodelning för.
 
 I den här väljaren kan du förutom att markera de enskilda programmeringsversionerna även välja följande grupper:
+
 * [Top 10 MVPDs by sharing score](/help/AccountIQ/product-concepts.md#top-mvpds-def)
 
 * [De 10 viktigaste videobandspelare per användning](/help/AccountIQ/product-concepts.md#top-mvpds-def)
@@ -46,9 +46,11 @@ När du är inloggad som programmerare kan du välja dina kanaler för att visa 
 
 +++Segmentmarkeringspanel för sidoskydd
 
-**Kanaler i segment**
-
 ![](assets/segment-panel-mvpd.png)
+
+Följande listrutealternativ används för att definiera segment:
+
+**Kanaler i segment**
 
 The **Kanaler i segment** Med väljaren kan du begränsa filtret ytterligare för att markera kanaler som motsvarar de valda programmeringsgränssnitten.
 
@@ -69,11 +71,13 @@ När du är inloggad som en MVPD-användare visas ditt namn i fältet för **MVP
 
 <!--For example, you can define your segment as the "subscribers of the MVPD A that watched the channels X, Y, and Z".-->
 
-![](assets/segment-programmer-persona.png)
 
-* **Kornighet och tidsram**
 
-   The **Kornighet och tidsram** Med väljaren kan du ange datum och varaktighet, eller tidsstorlek som du vill visa delningsbeteendet för prenumeranter.
+## Kornighet och tidsram {#granularity-timeframe}
+
+The **Kornighet och tidsram** Med väljaren kan du ange datum och varaktighet, eller tidsstorlek som du vill visa delningsbeteendet för prenumeranter.
+
+![Kornighet och tidsram](assets/granularity-timeframe-weekwise.png)
 
 Med de här kontrollerna kan du definiera din problemlösning som&quot;prenumeranter på MVPD A som tittade på kanalerna X, Y och Z i maj-månaden&quot;.
 

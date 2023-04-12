@@ -2,16 +2,16 @@
 title: Exportera information för konton med hög delning
 description: Exportera information för konton med hög delningspoäng.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # Exportera information för konton med hög delning {#export-account-info-high-score}
 
-Med konto-IQ kan du exportera kontodelningsinformation för de 1 000 vanligaste prenumerantkontona baserat på deras [delningssannolikhet](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Data i den exporterade CSV-filen sorteras i minskande ordning för delningssannolikhet för prenumerantkonton i [segment](/help/AccountIQ/product-concepts.md#segment-def), för [angiven tidsram](/help/AccountIQ/product-concepts.md#time-frame-def).
+Med konto-IQ kan du exportera kontodelningsinformation för de 1 000 vanligaste prenumerantkontona baserat på deras [delningssannolikhet](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Data i den exporterade CSV-filen sorteras i minskande ordning efter delningssannolikhet för prenumerantkonton - för de valda MVPD-programmen i [segment](/help/AccountIQ/product-concepts.md#segment-def), för [angiven tidsram](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 Alternativet att exportera kontodelningsinformation är tillgängligt på [Allmänna användningsrapporter](/help/AccountIQ/general-usage-reports.md) och [Rapporter om delade konton](/help/AccountIQ/shared-acc-reports.md) sidor.
 
@@ -45,7 +45,7 @@ Veckan eller månaden som du valde den **Kornighet och tidsram** i segmentvälja
 
 **MVPD**
 
-Om du är programmerare visar kolumnen vilket MVPD prenumerantkontot tillhör.
+Om du är programmerare visar kolumnen vilken MVPD som prenumerantkontot tillhör.
 
 **Prenumerant-ID**
 
@@ -99,13 +99,13 @@ Antalet gånger som användarna har loggat in under perioden med det kontot.
 
 Antal gånger ett MVPD har auktoriserat en ström eller beviljat åtkomst (till innehåll) till det kontot.
 
+>[!NOTE]
+>
+>The **# AuthZ OK** är relaterad till **# uppspelningsbegäranden**; den är mindre än **# uppspelningsbegäranden** eftersom Adobe cachar de tillstånd som normalt gäller för luftvärdighetsbevis (MVPD) i 24 timmar.
+
 **# uppspelningsbegäranden**
 
 Det faktiska antalet strömmar under tidsperioden.
-
->[!NOTE]
->
->**# AuthZ OK** är vanligtvis mindre än **# uppspelningsbegäranden** eftersom Adobe cachelagrar tillstånd från sidovaccinationsprogram i upp till 24 timmar. Den här kolumnen är inte tillgänglig för MVPD.
 
 **Antal kanaler**
 
@@ -127,7 +127,7 @@ Siffrorna i den här kolumnen är identifierare som mappar till ett av de 14 mö
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Användningsmönster | Vanlig användare | Resa eller dator | Stor familj | Nära släkt och vänner | Delning i sociala grupper | Stor grupp av vänner | Samtidig strömning | Community-delning | Osäkert beteende | Liten familj | Andra hemmet | Onormal användning |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Sannolikhet för delning**
 

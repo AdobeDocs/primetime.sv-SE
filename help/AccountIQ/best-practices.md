@@ -2,7 +2,7 @@
 title: Bästa praxis
 description: Läs vidare för att lära dig hur du bättre använder IQ-verktyget för konton.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ Så här förstår du hur delning påverkar ditt företag:
 ## Inkrementell målinriktad åtgärd {#incremental-targeted-action}
 
 Vidta åtgärder med ett definierat målsegment. Genom att börja från liten med ett väldefinierat segment minskar du risken för oavsiktliga konsekvenser och kan bättre förstå resultatet. Oavsett var du befinner dig längs banan kan du alltid förfina eller utöka åtgärdens mål.
-
 Att börja litet och börja om är en försiktig strategi. Använd tidigare identifierade segment och vidta åtgärder (som experiment) med specifika mål.
 
 Använd åtgärdsverktyget för att definiera målsegmentet och en drifttidsram. På så sätt kan du spåra effekter i nästa fas.

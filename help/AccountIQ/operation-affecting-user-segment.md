@@ -2,9 +2,9 @@
 title: Skapa en åtgärd för ett användarsegment och spåra effekt
 description: Så här skapar du en åtgärd som påverkar och spårar effekten för ett definierat användarsegment.
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ The **Åtgärd** definierar vilken åtgärd du ska utföra på det definierade s
 
 Det finns två typer av åtgärder du kan utföra:
 
-* Åtgärder med hjälp av system som är integrerade med konto-IQ. som [Övervakning av samtidig användning](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* Åtgärder med hjälp av system som är integrerade med konto-IQ. som **Övervakning av samtidig användning** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Åtgärder för att skapa och bearbeta arbetsflöden som ligger utanför konto-IQ och inte är integrerade med konto-IQ-systemet. En åtgärd för kanalprogrammeraren &#39;N&#39; som skickar massutskick till alla prenumeranter på MVPD &#39;C&#39;.
 

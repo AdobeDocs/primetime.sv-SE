@@ -1,13 +1,13 @@
 ---
 title: Visa rapporter i isoleringsläge
-description: 'Visa rapporter i isoleringsläge för Xfinity. '
-source-git-commit: afa77dd0d7ffe38d353fed21dc9591b994b11193
+description: Visa rapporter i isoleringsläge för Xfinity.
+exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
-
 
 # Visa delningsrapporter i isoleringsläge {#report-isolation-mode}
 
@@ -40,7 +40,7 @@ Så här visar du mått i isoleringsläge:
 
    >[!IMPORTANT]
    >
-   >Eftersom kontodelning är mer relevant när den mäts för direktuppspelning i alla programmerarprogram, kommer du att se lägre delningsresultat och vissa variationer i mätvärdena i isoleringsläge.
+   >Eftersom kontodelning är mer relevant när den mäts för direktuppspelning i alla programmerarens program, kommer du att se lägre delningspoäng och vissa variationer i mätvärdena i isoleringsläge.
 
    ![](assets/aggregate-sharing-isolation.png)
 

@@ -2,7 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-description: IQ-hjälpen för Primetime-kontot ger information om IQ-komponenterna för kontot och vägleder dig genom användarresor för att använda de olika komponenterna.
-source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -17,14 +17,15 @@ ht-degree: 0%
    + [Segment och tidsram](/help/AccountIQ/segments-timeframe.md)
    + [Kontrollpanel](/help/AccountIQ/dashboard.md)
    + Rapporter {#reports-account-iq}
-      + [Allmänna användningsrapporter](/help/AccountIQ/general-usage-reports.md)
-      + [Rapporter om delade konton](/help/AccountIQ/shared-acc-reports.md)
+   + [Allmänna användningsrapporter](/help/AccountIQ/general-usage-reports.md)
+   + [Rapporter om delade konton](/help/AccountIQ/shared-acc-reports.md)
    + Dela komponenter {#sharing-components}
       + [Användningsmönster](/help/AccountIQ/usage-patterns.md)
    + Åtgärder {#further-next-steps-actions}
       + [Operationer](/help/AccountIQ/operations.md)
-+ Så här {#use-aiq}
-   + [Definiera ett segment och en tidsram](/help/AccountIQ/howto-select-segment-timeframe.md)
++ How tos {#use-aiq}
+   + [Skapa segment](/help/AccountIQ/build-segment.md)
+   + [Markera segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md)
    + Exportera rapporter {#export-reports}
       + [Programmer - exportrapporter](/help/AccountIQ/export-segment-metrics-progr.md)
       + [MVPD - Exportrapporter](/help/AccountIQ/export-segment-metrics-mvpd.md)
