@@ -1,14 +1,13 @@
 ---
 title: Adobe Primetime Ad Insertion
 description: Hjälp om Adobe Primetime Ad Insertion
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+exl-id: e758044e-a1f5-498a-a809-b6a351dfe8f0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#ptai-overview}
 
@@ -38,7 +37,7 @@ Den här guiden visar hur Primetime Ad Insertion kan hjälpa utgivare att maxime
 | [Referensimplementering](../android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
 | [Digital Rights Management](../digital-rights-management/home.md) | Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM) |
 | [API-referenser för Primetime](../reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
-| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
+| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Hämta PDF av den arkiverade dokumentationen. |
 
 ## Användbara resurser {#helpful-resources}
 

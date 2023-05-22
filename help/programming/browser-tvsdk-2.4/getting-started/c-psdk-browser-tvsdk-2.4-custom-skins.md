@@ -1,14 +1,13 @@
 ---
 description: Om du vill använda de anpassade skalen måste du skriva en anpassning som liknar default-video-controls.css och hänvisa till den nya anpassningen i spelaren.
 title: Anpassade skal
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4d627545-942d-4883-a010-afddcffb8dd5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade skal{#custom-skins}
 
@@ -23,13 +22,13 @@ Du kan göra följande typer av ändringar:
 
 * Förgrundsfärg för knappar och text
 
-   Alla kontroller som har en förgrund använder klassen `vid-skin-fgcolor`. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med klassen `vid-skin-fgcolor` och anger önskad färg.
+   Alla kontroller som har en förgrund använder `vid-skin-fgcolor` klassen. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med `vid-skin-fgcolor` och ange önskad färg.
 * Bakgrundsfärg för knappar och text
 
-   Alla kontroller som har en förgrund använder klassen `vid-skin-bgcolor`. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med klassen `vid-skin-bgcolor` och anger önskad färg.
+   Alla kontroller som har en förgrund använder `vid-skin-bgcolor` klassen. Om du vill ändra förgrunden för alla kontroller itererar du igenom alla element med `vid-skin-bgcolor` och ange önskad färg.
 * Spelhuvudets form
 
-   Spelhuvudet kan vara fyrkantigt eller runt. Om du vill ändra spelhuvudet lägger du till `square` eller `round`-klassen i `playhead`-elementet.
+   Spelhuvudet kan vara fyrkantigt eller runt. Om du vill ändra spelhuvudet lägger du till `square` eller `round` klass till `playhead` -element.
 * Buffertspinnarnas format
 
    Referensspelaren innehåller följande stilar för att dela upp när spelaren buffrar innehåll:
@@ -37,15 +36,14 @@ Du kan göra följande typer av ändringar:
    * Överläggningstext ( `overlay-text`)
    * Rektangulär snurra ( `spinner`)
    * Signal ( `signal`)
-   * Lodräta staplar ( `vertical`)
+   * Lodräta streck ( `vertical`)
 
       >[!TIP]
       >
-      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Om du till exempel vill använda `overlay-text` lägger du till följande rader i `BufferOverlay.js`-filen:
+      >Om du vill använda någon av buffertspinnarna måste du lägga till klassen i elementet buffering-overlay. Använd till exempel `overlay-text`lägger du till följande rader i `BufferOverlay.js` fil:
       >
       >
       ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
       >```
-

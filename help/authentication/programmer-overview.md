@@ -1,13 +1,13 @@
 ---
 title: Översikt för programmerare
 description: Översikt för programmerare
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
 
 ---
-
 
 # Översikt för programmerare {#programmers-overview}
 

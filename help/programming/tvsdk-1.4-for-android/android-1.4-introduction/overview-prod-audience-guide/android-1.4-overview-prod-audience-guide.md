@@ -1,14 +1,13 @@
 ---
 description: Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK för Android, som implementeras i Java.
 title: Översikt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 21d224fe-a843-4200-ad13-9b8eba52d74f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#overview}
 
@@ -18,7 +17,7 @@ Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK
 
 TVSDK innehåller API-beskrivningar och kodexempel som hjälper dig att integrera avancerade videofunktioner, innehållsskydd och annonsfunktioner i spelaren. Du använder Java för att skapa ett videospelargränssnitt. TVSDK hjälper dig att ansluta användargränssnittet till mediespelaren. På så sätt kan ni spela upp videor och annonser baserat på mediematerial. Du kan också använda TVSDK för att hämta information om videon, hantera säkerheten samt styra och övervaka uppspelningen.
 
-Specifika maskin- och programvarukrav för TVSDK finns i [Krav.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
+Specifika maskin- och programvarukrav för TVSDK finns på [Krav.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
 
 ## Målgrupp {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
@@ -28,11 +27,10 @@ Den här guiden förutsätter att du förstår hur du utvecklar program och vide
 
 Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare genom att använda Java på Android-enheter.
 
-## Namnområdesnotering i den här guiden {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namnområdesnotering i den här handboken {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->API-namnområdesprefixet `com.adobe.mediacore` för TVSDK utelämnas av utrymmesskäl.
+>API-namnområdesprefixet för TVSDK `com.adobe.mediacore` utelämnas av utrymmesskäl.
 >
 >Många API-element refereras utan sin överordnade klassbeteckning om kontexten är klar.
-

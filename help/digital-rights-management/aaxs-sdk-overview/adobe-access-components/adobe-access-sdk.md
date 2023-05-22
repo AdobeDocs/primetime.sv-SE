@@ -1,14 +1,13 @@
 ---
 description: Huvudkomponenterna i Adobe Access består av en Java SDK och klientmiljöerna för Flash Player och Adobe AIR.
 title: Java SDK, Flash Player och Adobe AIR-klient
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2df4da13-8df9-442b-8638-317c41d62fbe
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Access-komponenter{#adobe-access-components}
 
@@ -42,7 +41,7 @@ Dessa API:er används för att definiera rättigheter och förbereda innehåll f
 
    Innehållspaketerings-API:t används för att kryptera innehåll och hämta metadata från det paketerade innehållet.
 
-## Java API:er för utfärdande av licenser {#java-apis-for-issuing-licenses}
+## Java-API:er för utfärdande av licenser {#java-apis-for-issuing-licenses}
 
 Dessa API:er används när en klient begär en licens från servern. SDK:n stöder följande begäranden från klienten:
 
@@ -56,11 +55,11 @@ Dessa API:er används när en klient begär en licens från servern. SDK:n stöd
 
 * Stöd för Adobe AIR version 1.5-klienter och innehåll
 
-   För bakåtkompatibilitet har SDK API:er för att hantera begäranden från AIR-program som skapats för användning med AIR version 1.5 och tidigare och skyddat innehåll.
+   För bakåtkompatibilitet har SDK API:er för att hantera begäranden från AIR-program som skapats för användning med AIR version 1.5 och tidigare samt skyddat innehåll.
 
 ## Referensimplementering {#reference-implementation}
 
-SDK innehåller en referensimplementering, en enkel Adobe Access-distribution som visar hur du använder Java API:er. Referensimplementeringen innehåller en licensserver, övervakad mapppaketerare, Adobe Access Manager AIR-program och kommandoradsverktyg för innehållspaketering och principhantering baserat på Java API:erna. Mer information om referensimplementeringen av Adobe Access finns i *Skydda innehåll*.
+SDK innehåller en referensimplementering, en enkel Adobe Access-distribution som visar hur du använder Java API:er. Referensimplementeringen innehåller en licensserver, övervakad mapppaketerare, AIR-program för Adobe Access Manager samt kommandoradsverktyg för innehållspaketering och principhantering baserat på Java API:erna. Mer information om hur du implementerar referenshandboken för Adobe Access finns i *Skydda innehåll*.
 
 ## Adobe Access Server for Protected Streaming {#adobe-access-server-for-protected-streaming}
 
@@ -74,13 +73,13 @@ Mer information om Flash Player finns på [www.adobe.com/go/flashplayer](https:/
 
 ## Adobe AIR {#adobe-air}
 
-Adobe AIR är en operativsystemsoberoende runtime som gör det möjligt för innehållsproducenter att utöka sina investeringar på webben till datorn genom att designa anpassade multimedieprogram. Den bygger på beprövade, öppna teknologier och är ett tillförlitligt och förenklat sätt för företag att utveckla och driftsätta skräddarsydda applikationer som är tillförlitliga och ger en säkrare och roligare användarupplevelse. Med Adobe AIR kan företag enkelt integrera multimedia för att skapa en mer engagerande och interaktiv användarupplevelse. Det gör att utvecklare kan använda välkända verktyg som HTML, JavaScript, Flash och Adobe® Flex® för att driftsätta en unik kombination av RIA-program i Windows, Macintosh och Linux.
+Adobe AIR är en operativsystemsoberoende runtime som gör det möjligt för innehållsproducenter att utöka sina befintliga webbinvesteringar till datorn genom att designa anpassade multimedieprogram. Den bygger på beprövade, öppna teknologier och är ett tillförlitligt och förenklat sätt för företag att utveckla och driftsätta skräddarsydda applikationer som är tillförlitliga och ger en säkrare och roligare användarupplevelse. Med Adobe AIR kan företag enkelt integrera multimedia för att skapa en mer engagerande och interaktiv användarupplevelse. Det gör att utvecklare kan använda välkända verktyg som HTML, JavaScript, Flash och Adobe® Flex® för att driftsätta en unik kombination av RIA-program i Windows, Macintosh och Linux.
 
 Företag har fullständig kontroll över användargränssnittet och kan utforma en användarupplevelse som speglar och stärker deras varumärke. Med inbyggt stöd för uppspelning av innehåll som skyddas med Adobe Access SDK kan Adobe AIR skapa anpassade och kompletta innehållsdistributionskedjor.
 
 Mer information om Adobe AIR finns här: [www.adobe.com/go/air](https://www.adobe.com/go/air)
 
-## Inbyggda iOS- och Android-program {#native-ios-and-android-applications}
+## iOS- och Android-program {#native-ios-and-android-applications}
 
 Inbyggda iOS- och Android-program som endast är tillgängliga för Adobe Primetime-kunder kan användas med Adobe Access DRM 4.0 eller senare för att skydda video som används i inbyggda (ej Flash) program på mobila enheter. För att ett program ska kunna använda det här skyddade innehållet måste det implementeras med Adobe Primetime Client Libraries.
 

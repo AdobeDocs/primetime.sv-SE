@@ -1,14 +1,13 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. Webbläsarens TVSDK innehåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Kvalitetsstatistik för tjänster
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b7486ed5-e59f-428c-942c-a2fee7a869c9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Kvalitetsstatistik för tjänster{#quality-of-service-statistics}
 
@@ -18,10 +17,10 @@ QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. Web
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
+The `QOSProvider` -klassen innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
+1. Skapa en `QOSProvider` och bifoga det till mediespelaren.
 
    ```js
    // Create Media Player.qosProvider =  
@@ -31,7 +30,7 @@ Klassen `QOSProvider` innehåller olika statistik, bland annat information om bu
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Till exempel:
 
    ```js
    var qosTimer = (function () { 

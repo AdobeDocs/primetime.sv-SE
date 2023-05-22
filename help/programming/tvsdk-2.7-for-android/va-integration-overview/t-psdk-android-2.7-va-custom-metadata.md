@@ -1,14 +1,13 @@
 ---
 description: Du kan tillhandahålla anpassade metadata för innehåll, annonser och kapitelspårningsanrop med hjälp av callback-funktioner.
 title: Implementera stöd för anpassade metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b14d3550-db25-4521-babd-ddfa6bc9f4f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
-
 
 # Implementera stöd för anpassade metadata {#implement-custom-metadata-support}
 
@@ -105,4 +104,3 @@ Du kan tillhandahålla anpassade metadata för innehåll, annonser och kapitelsp
    vaMetadata.setChapterMetadataBlock( 
      new ChapterMetadataBlockImpl("chapter-1234", "1.2.3.4")); 
    ```
-

@@ -2,20 +2,19 @@
 title: Skapa ett autentiseringsgränssnitt
 description: Skapa ett autentiseringsgränssnitt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 54853dcf-2241-44e6-9565-7eca94cc84cc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
-
 # Skapa ett autentiseringsgränssnitt {#create-an-authentication-ui}
 
 1. Skapa ett användargränssnitt för att hämta användarens autentiseringsuppgifter.
 
-   Nedan följer ett Flex-exempel på ett enkelt användargränssnitt för att hämta inloggningsuppgifter. Det består av ett panelobjekt som innehåller två `TextInput`-objekt, ett för varje användarnamn och lösenord. Panelen innehåller även en knapp som startar metoden `credentials()`.
+   Nedan följer ett Flex-exempel på ett enkelt användargränssnitt för att hämta inloggningsuppgifter. Det består av ett panelobjekt som innehåller två `TextInput` -objekt, en för varje användarnamn och lösenord. Panelen innehåller även en knapp som startar `credentials()` -metod.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -44,9 +43,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. Skriv metoden `credentials()` om du vill bearbeta de autentiseringsvärden som användaren anger.
+1. Skriv `credentials()` metod för att bearbeta de autentiseringsvärden som användaren anger.
 
-   Metoden `credentials()` är en användardefinierad metod som skickar värdena för användarnamn och lösenord till metoden `setDRMAuthenticationCredentials()`. När värdena har skickats återställer metoden `credentials()` värdena för `TextInput`-objekten.
+   The `credentials()` är en användardefinierad metod som skickar värdena för användarnamn och lösenord till `setDRMAuthenticationCredentials()` -metod. När värdena har skickats `credentials()` metoden återställer värdena för `TextInput` objekt.
 
    ```
    <mx:Script> 
@@ -59,7 +58,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   Ett sätt att implementera den här typen av enkelt gränssnitt är att inkludera panelen i ett nytt läge. Det nya läget kommer från basläget när objektet `DRMAuthenticateEvent` kastas. Följande exempel innehåller ett `VideoDisplay`-objekt med ett källattribut som pekar på en skyddad videofil. I det här fallet ändras metoden `credentials()` så att den också returnerar programmet till basläget. Den här metoden gör det efter att användarinloggningsuppgifterna har skickats och TextInput-objektets värden har återställts.
+   Ett sätt att implementera den här typen av enkelt gränssnitt är att inkludera panelen i ett nytt läge. Det nya läget kommer från grundläget när `DRMAuthenticateEvent` -objektet genereras. Följande exempel innehåller en `VideoDisplay` objekt med ett källattribut som pekar på en skyddad videofil. I det här fallet `credentials()` metoden ändras så att den också returnerar programmet till grundläget. Den här metoden gör det efter att användarinloggningsuppgifterna har skickats och TextInput-objektets värden har återställts.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
@@ -133,4 +132,3 @@ ht-degree: 0%
                     source="https://www.example.com/flv/Video.flv" /> 
    </mx:WindowedApplication> 
    ```
-

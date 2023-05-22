@@ -1,14 +1,13 @@
 ---
 title: Android SDK med registrering av dynamisk klient
 description: Android SDK med registrering av dynamisk klient
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 0%
 
 ---
-
-
 
 # Android SDK med registrering av dynamisk klient {#android-sdk-with-dynamic-client-registration}
 

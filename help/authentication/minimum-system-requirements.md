@@ -1,13 +1,13 @@
 ---
 title: Lägsta systemkrav
 description: Lägsta systemkrav
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
-
 
 # Lägsta systemkrav {#minimum-system-requirements}
 

@@ -1,14 +1,13 @@
 ---
 description: Webbläsare-TVSDK har stöd för ett antal DASH-funktioner som du kan implementera för att lägga till funktioner i dina videoprogram.
 title: DASH-funktioner som stöds
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 29a5d1a3-e31e-459c-90b5-80227df46e4b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
 
 ---
-
 
 # DASH-funktioner som stöds{#supported-dash-features}
 
@@ -23,7 +22,7 @@ Webbläsare-TVSDK har stöd för ett antal DASH-funktioner som du kan implemente
 
 >[!TIP]
 >
->![](assets/supported15.png) i funktionens matristabeller nedan
+>I tabellen nedan i funktionsmatrisen  ![](assets/supported15.png)
 >betyder att funktionen stöds i den aktuella versionen.
 
 Följande funktioner stöds:
@@ -81,7 +80,7 @@ Följande funktioner stöds:
 
 ## DASH-integreringar {#dash-integrations}
 
-| Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
+| Kategori | Innehållstyp | Funktion | HTML 5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Integreringar | VOD + Live | Integrering med Adobe Analytics VHL | ![](assets/supported15.png) |
 | Integreringar | VOD + Live | Fakturering | ![](assets/supported15.png) |
@@ -89,7 +88,7 @@ Följande funktioner stöds:
 
 ## DASH - avancerade funktioner för annonsinfogning (CSAI) {#dash-advanced-insertion-features}
 
-| Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
+| Kategori | Innehållstyp | Funktion | HTML 5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Ad Insertion | VOD | Endast annons | Stöds inte |
 | Ad Insertion | VOD | Målparametrar | Endast VOD |
@@ -99,9 +98,9 @@ Följande funktioner stöds:
 | Ad Insertion | VOD | Annonser, banners och klickbara annonser | Stöds inte |
 | Ad Insertion | VOD | VPAID 2.0 | Stöds inte |
 
-## Funktioner för annonsinfogning i DASH-kärna (CSAI) {#dash-core-ad-insertion}
+## Funktioner för infogning av annonser i DASH-kärnan (CSAI) {#dash-core-ad-insertion}
 
-| Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
+| Kategori | Innehållstyp | Funktion | HTML 5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Ad Insertion | VOD + Live | Före rullning | Endast VOD |
 | Ad Insertion | VOD + Live | Mid-roll | Endast VOD |
@@ -120,7 +119,7 @@ Följande funktioner stöds:
    <th colname="col1" class="entry"> Kategori </th> 
    <th colname="col2" class="entry"> Innehållstyp </th> 
    <th colname="col3" class="entry"> Funktion </th> 
-   <th colname="col6" class="entry"> HTML5 FF, IE, Chrome, Android Chrome</th>
+   <th colname="col6" class="entry"> HTML 5 FF, IE, Chrome, Android Chrome</th>
   </tr> 
  </thead>
  <tbody> 
@@ -157,7 +156,7 @@ Följande funktioner stöds:
 
 ## Avancerade DASH-uppspelningsfunktioner {#dash-advanced-playback}
 
-| Kategori | Innehållstyp | Funktion | HTML5, FF, IE, Chrome, Android Chrome |
+| Kategori | Innehållstyp | Funktion | HTML 5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Uppspelning | VOD | Uppspelning vid förskjutning | ![](assets/supported15.png) |
 | Uppspelning | VOD | Uppspelning med endast ljud | ![](assets/supported15.png) |
@@ -171,7 +170,7 @@ Följande funktioner stöds:
 
 ## Uppspelningsfunktioner för DASH-kärna {#dash-core-playback}
 
-| Kategori | Innehållstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
+| Kategori | Innehållstyp | Funktion | HTML 5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Uppspelning | VOD + Live | Allmän uppspelning (Play, Pause, Seek) | ![](assets/supported15.png) |
 | Uppspelning | FER VOD | Allmän uppspelning (Play, Pause, Seek) | Stöds inte |

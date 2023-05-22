@@ -1,13 +1,13 @@
 ---
 title: Hämta lista över förauktoriserade resurser per webbapp för sekundär skärm
 description: Hämta lista över förauktoriserade resurser per webbapp för sekundär skärm
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
-
 
 # Hämta lista över förauktoriserade resurser per webbapp för sekundär skärm {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
@@ -108,4 +108,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-

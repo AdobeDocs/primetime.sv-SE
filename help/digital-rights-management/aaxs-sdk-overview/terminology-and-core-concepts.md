@@ -2,14 +2,13 @@
 title: Terminologi och centrala begrepp
 description: Terminologi och centrala begrepp
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 29d83bf8-5f4e-4651-a523-4472942c09a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
 
 ---
-
 
 # Terminologi och centrala begrepp {#terminology-and-core-concepts}
 
@@ -17,15 +16,15 @@ Följande termer och begrepp används i hela dokumentet:
 
 **Konsument**
 
-*konsumenten* är den slutanvändare som hämtar eller direktuppspelar innehåll.
+The *konsument* är slutanvändaren som hämtar eller direktuppspelar innehåll.
 
 **Innehåll**
 
-*Innehållet* består av digitala ljud- eller videofiler.
+*Innehåll* består av digitala ljud- eller videofiler.
 
 **Innehållskrypteringsnyckel**
 
-*Nyckeln för innehållskryptering* (CEK) är en krypteringsnyckel som används för att kryptera innehållet.
+The *Innehållskrypteringsnyckel* (CEK) är en krypteringsnyckel som används för att kryptera innehållet.
 
 **Innehållsägare**
 
@@ -37,15 +36,15 @@ Följande termer och begrepp används i hela dokumentet:
 
 **Digitalt certifikat**
 
-*Digitala certifikat*  (kallas även  *certifikat*) binder en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
+*Digitala certifikat* (kallas även *certifikat*) binda en enhet, till exempel en individ, organisation eller system, till ett specifikt nyckelpar för offentlig och privat nyckel. Digitala certifikat kan ses som elektroniska referenser som verifierar identiteten hos en individ, ett system eller en organisation.
 
 **Digital signatur**
 
-En *digital signatur* binder utgivarens identitet till innehållet som de har publicerat och tillhandahåller en mekanism för att upptäcka manipulering. Algoritmer för digitala signaturer använder kryptografiska hash-funktioner och asymmetriska - eller publika/privata nyckelpar - krypteringsalgoritmer. Vissa digitala signaturer utnyttjar också digitala certifikat och infrastruktur för publika nycklar (PKI) för att binda publika nycklar till identiteterna för innehållsägare eller distributörer.
+A *digital signatur* binder utgivarens identitet till innehållet som de har publicerat och tillhandahåller en mekanism för att upptäcka manipulering. Algoritmer för digitala signaturer använder kryptografiska hash-funktioner och asymmetriska - eller publika/privata nyckelpar - krypteringsalgoritmer. Vissa digitala signaturer utnyttjar också digitala certifikat och infrastruktur för publika nycklar (PKI) för att binda publika nycklar till identiteterna för innehållsägare eller distributörer.
 
 **Distributör**
 
-*Distributörer*  (även kallade  *innehållsdistributörer** återförsäljare*) är affärsenheter som säkrar distributionsrättigheter från innehållsägare för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
+*Distributörer* (kallas även *innehållsdistributörer* eller* återförsäljare*) är affärsenheter som säkrar distributionsrättigheter från rättighetsinnehavare för att publicera och distribuera innehåll till konsumenter. I vissa fall är samma enhet både innehållsägare och innehållsdistributör.
 
 **DRM-metadata**
 
@@ -57,7 +56,7 @@ En *licens *är en datastruktur som innehåller en krypterad nyckel som används
 
 **Licenshämtning**
 
-*Licenshämtning* innebär att man köper en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning inträffar när en klient skickar information som identifierar det begärda innehållet (DRM-metadata *) och datorcertifikatet (identifierar konsumentens dator) till licensservern (se nedan).*
+*Licenshämtning* är processen att köpa en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning sker när en kund skickar information som identifierar det begärda innehållet ( *DRM-metadata*) och datorcertifikatet (som identifierar konsumentens dator) till licensservern (se nedan).
 
 **Licensserver**
 
@@ -67,13 +66,13 @@ Du måste skapa och distribuera en licensserver med Adobe Access SDK.
 
 **Policy**
 
-En *princip* är en behållare för användningsreglerna som avgör hur konsumenter kan använda skyddat innehåll. Profiler definieras oberoende av vilket innehåll som skyddas. En profil tillämpar inte rättigheter förrän den är bunden till innehållet via licensen. En policy listar de användarregler som innebär de behörigheter eller&quot;rättigheter&quot; som konsumenterna har till det innehåll de köper. Innehållsägare kan till exempel skapa en policy som ser till att skyddat innehåll endast är tillgängligt för konsumenter under en viss tidsperiod. Den här principen tillämpas sedan på allt innehåll som innehållsägaren vill tillämpa den här begränsningen för.
+A *policy* är en behållare för användningsreglerna som avgör hur konsumenter kan använda skyddat innehåll. Profiler definieras oberoende av vilket innehåll som skyddas. En profil tillämpar inte rättigheter förrän den är bunden till innehållet via licensen. En policy listar de användarregler som innebär de behörigheter eller&quot;rättigheter&quot; som konsumenterna har till det innehåll de köper. Innehållsägare kan till exempel skapa en policy som ser till att skyddat innehåll endast är tillgängligt för konsumenter under en viss tidsperiod. Den här principen tillämpas sedan på allt innehåll som innehållsägaren vill tillämpa den här begränsningen för.
 
 Profiler skapas med Adobe Access SDK.
 
 **Skyddat innehåll**
 
-*Skyddat innehåll*  (även kallat  *paketerat innehåll*) avser FLV- och F4V-videoinnehåll som har krypterats med Adobe Access SDK eller andra verktyg som stöds.
+*Skyddat innehåll* (kallas även *paketerat innehåll*) avser FLV- och F4V-videoinnehåll som har krypterats med Adobe Access SDK eller andra verktyg som stöds.
 
 **Återförsäljare**
 

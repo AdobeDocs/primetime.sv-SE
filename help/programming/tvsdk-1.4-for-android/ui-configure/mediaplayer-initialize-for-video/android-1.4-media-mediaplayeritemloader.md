@@ -1,22 +1,21 @@
 ---
 description: Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9d129497-8a71-433a-a542-f49be519893b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
-
 # Läsa in en medieresurs med MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
 Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 
-Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer`-instans, vilket skulle leda till allokering av maskinvaruresurser för videoavkodning. Processen att hämta `MediaPlayerItem`-instansen är asynkron.
+Via `MediaPlayerItemLoader` -klassen kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer` som skulle leda till att maskinvaruresurserna för videoavkodning allokeras. Processen för att få `MediaPlayerItem` -instansen är asynkron.
 
-1. Implementera `MediaPlayerItemLoader.LoaderListener`-återanropsgränssnittet.
+1. Implementera `MediaPlayerItemLoader.LoaderListener` callback-gränssnitt.
 
        Gränssnittet definierar två metoder:
    
@@ -26,12 +25,12 @@ Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvar
 
    * `LoaderListener.onError` callback-funktion
 
-      TVSDK använder detta för att informera programmet om att den begärda informationen finns tillgänglig i form av en `MediaPlayerItem`-instans som skickas som en parameter till återanropet.
+      TVSDK använder detta för att informera programmet om att den begärda informationen finns tillgänglig i form av en `MediaPlayerItem` -instans som skickas som en parameter till återanropet.
 
-1. Registrera den här instansen hos TVSDK genom att skicka den som en parameter till konstruktorn för `MediaPlayerItemLoader`.
-1. Anropa `MediaPlayerItemLoader.load` och skicka en instans av ett `MediaResource`-objekt.
+1. Registrera den här instansen för TVSDK genom att skicka den som en parameter till konstruktorn i `MediaPlayerItemLoader`.
+1. Utlysning `MediaPlayerItemLoader.load`, skicka en instans av en `MediaResource` -objekt.
 
-   URL:en för `MediaResource`-objektet måste peka på den ström som du vill få information om. Exempel:
+   URL:en för `MediaResource` -objektet måste peka på den ström som du vill få information om. Till exempel:
 
    ```java
    // instantiate the listener interface 
@@ -57,4 +56,3 @@ Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvar
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

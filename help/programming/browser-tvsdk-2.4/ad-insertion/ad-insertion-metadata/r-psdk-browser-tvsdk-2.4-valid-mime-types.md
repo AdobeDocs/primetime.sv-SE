@@ -1,14 +1,13 @@
 ---
 description: En annons kan ha flera kreativa alternativ, varav en kan spelas upp.
 title: Giltiga MIME-typer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 878cae20-2a94-4795-8908-be7daffefb41
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
-
 
 # Giltiga MIME-typer{#valid-mime-types}
 
@@ -26,4 +25,4 @@ auditudeSettings.validMimeTypes = mimeTypes;
 
 där `mimeTypes` är en array med strängar, och varje sträng representerar en MIME-typ.
 
-Om flera mediefiler returneras för en annons beror valet på i vilken ordning mediefilerna visas i `validMimeTypes`-arrayen. De MIME-typer som har lägre index ges en inställning framför de som har högre index.
+Om flera mediefiler returneras för en annons beror valet på i vilken ordning mediefilerna visas i `validMimeTypes` array. De MIME-typer som har lägre index ges en inställning framför de som har högre index.

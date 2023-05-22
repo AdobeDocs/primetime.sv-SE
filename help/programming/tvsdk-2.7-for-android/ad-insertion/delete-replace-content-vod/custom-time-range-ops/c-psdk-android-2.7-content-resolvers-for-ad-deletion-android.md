@@ -1,16 +1,15 @@
 ---
 description: Du kan använda flera innehållslösare för att hantera olika tidslinjeåtgärder.
 title: Innehållslösningar för borttagning/ersättning av annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 62184c6a-0da6-47da-9799-47d6cce0ed3f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
-
-# Innehållslösningar för borttagning/ersättning av annonser {#content-resolvers-for-ad-deletion-replacement}
+# Innehållslösningar för borttagning/ersättning av annonser  {#content-resolvers-for-ad-deletion-replacement}
 
 Du kan använda flera innehållslösare för att hantera olika tidslinjeåtgärder.
 
@@ -39,4 +38,3 @@ public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) {
     return resolvers; 
 } 
 ```
-

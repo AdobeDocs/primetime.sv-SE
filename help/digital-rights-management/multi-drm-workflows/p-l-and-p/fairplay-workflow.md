@@ -1,16 +1,15 @@
 ---
 description: DRM-arbetsflödena innefattar att paketera ditt innehåll, tillhandahålla licensiering för innehållet och spela upp det skyddade innehållet från ditt eget videoprogram. Arbetsflödet liknar vanligtvis för varje DRM-lösning, men med vissa skillnader finns i informationen.
 title: Arbetsflöde med flera DRM-DRM för FairPlay
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a66cecda-762b-48f7-afed-6fef6303d169
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
 
 ---
 
-
-# Multi-DRM Workflow for FairPlay {#multi-drm-workflow-for-fairplay}
+# Arbetsflöde med flera DRM-DRM för FairPlay {#multi-drm-workflow-for-fairplay}
 
 DRM-arbetsflödena innefattar att paketera ditt innehåll, tillhandahålla licensiering för innehållet och spela upp det skyddade innehållet från ditt eget videoprogram. Arbetsflödet liknar vanligtvis för varje DRM-lösning, men med vissa skillnader finns i informationen.
 
@@ -18,22 +17,22 @@ Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licen
 
 ## Aktivera ExpressPlay-tjänsten för FairPlay {#enable-expressplay-service-for-fairplay}
 
-FairPlay DRM-lösningen från Apple kräver lite konfiguration när du använder den med ExpressPlay DRM-tjänsterna. Detta innebär att du måste hämta inloggningsuppgifter från Apple och överföra dem till ExpressPlay.
+FairPlay DRM-lösningen från Apple kräver vissa inställningar när du använder den med ExpressPlay DRM-tjänsterna. Detta innebär att du måste hämta inloggningsuppgifter från Apple och överföra dem till ExpressPlay.
 
 Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda FairPlay-innehåll.
 
-1. Hämta inloggningsuppgifter från Apple.
+1. Hämta autentiseringsuppgifter från Apple.
 
    Dessa autentiseringsuppgifter tilldelas unikt till varje tjänsteleverantör. Du måste beställa dem genom att fylla i följande formulär: [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
-   >Välj **[!UICONTROL Content Provider]** som primär roll.
+   >Välj **[!UICONTROL Content Provider]** för primär roll.
 
-   När din begäran har godkänts skickar Apple ett *FairPlay-distributionspaket* till dig.
+   När din begäran är godkänd skickar Apple en *Distribution av FairPlay-direktuppspelning*.
 1. Skapa en CSR-fil (Certificate Signing Request).
 
-   Du kan använda [!DNL openssl] för att generera ditt par med offentlig/privat nyckel och din CSR-signerade CSR-begäran.
+   Du kan använda [!DNL openssl] för att generera ditt nyckelpar för offentlig/privat nyckel och din CSR-signerade begäran (Certificate Signing).
 
    1. Generera nyckelpar.
 
@@ -50,20 +49,20 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
 
       >[!NOTE]
       >
-      >Instruktionerna för det här steget finns i ditt *FairPlay Streaming Deployment Package*, men finns här. Om du har problem med den här delen av processen läser du instruktionerna i *FairPlayCertificateCreation.pdf* (i ditt distributionspaket).
+      >Instruktionerna för det här steget finns i *Distribution av FairPlay-direktuppspelning*, men finns här för att underlätta för dig. Om du har problem med den här delen av processen kan du läsa instruktionerna i *FairPlayCertificateCreation.pdf* (i ditt distributionspaket).
 
-1. Överför din CSR via Apples utvecklarportal.
-   1. Utvecklingsteamets teamagent måste logga in på [!DNL developer.apple.com/account].
-   1. Klicka på **[!UICONTROL Certificates, Identifiers & Profiles]**, välj listrutan **[!UICONTROL iOS, tvOS, watchOS]** längst upp till vänster på sidan och klicka sedan på **[!UICONTROL Certificates->Production]** till vänster på sidan.
-   1. Klicka på knappen **[!UICONTROL +]** längst upp till höger på sidan om du vill begära ett nytt certifikat. Välj alternativet **[!UICONTROL FairPlay Streaming Certificate]** under **[!UICONTROL Production]**.
+1. Överför CSR via Apple utvecklarportal.
+   1. Teamagenten för ditt utvecklingsteam måste logga in [!DNL developer.apple.com/account].
+   1. Klicka på **[!UICONTROL Certificates, Identifiers & Profiles]** väljer du **[!UICONTROL iOS, tvOS, watchOS]** nedrullningsbar meny längst upp till vänster på sidan och klicka sedan på **[!UICONTROL Certificates->Production]** till vänster på sidan.
+   1. Klicka på **[!UICONTROL +]** på sidans övre högra hörn för att begära ett nytt certifikat. Välj **[!UICONTROL FairPlay Streaming Certificate]** option under **[!UICONTROL Production]**.
 
-      Dialogrutan *Lägg till iOS-certifikat* öppnas.
-   1. I *Lägg till iOS-certifikat* överför du CSR-filen som du skapade i steg 2.b. och klickar på **[!UICONTROL Generate]**.
+      The *Lägg till iOS-certifikat* öppnas.
+   1. I *Lägg till iOS-certifikat*, överför CSR-filen som du skapade i steg 2.b och klickar på **[!UICONTROL Generate]**.
 
       Din programhemlighetsnyckel (ASK) visas i samma dialogruta.
    1. Skriv ned ASK och lagra den på en säker plats.
-   1. Nyckel i ASK för att slutföra certifikatgenereringen och klicka på **[!UICONTROL Continue]**.
-   1. När du har verifierat att du har sparat ASK klickar du på **[!UICONTROL Generate]** för att fortsätta.
+   1. Nyckel i ASK för att slutföra certifikatgenerering och klicka på **[!UICONTROL Continue]**.
+   1. När du har verifierat att du har sparat din ASK klickar du på **[!UICONTROL Generate]** för att fortsätta.
 
       >[!NOTE]
       >
@@ -74,17 +73,17 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
       Spara en säkerhetskopia av din privata nyckel (från steg 2.a) och din offentliga nyckel (det FPS-certifikat du laddade ned i det här steget) på en säker plats.
 1. Konfigurera ditt ExpressPlay-konto med dina FairPlay-inloggningsuppgifter.
    1. Säg namnet på certifikatet som du laddade ned i steg 3.h. är [!DNL fairplay.cer].
-   1. Öppna filen [!DNL fairplay.cer] med Apple Keychain Access-verktyget.
+   1. Öppna [!DNL fairplay.cer] med Apple Keychain Access-verktyget.
    1. Filtrera dina många certifikat genom att ange &quot; `fairplay`&quot; i sökfältet som finns uppe till höger.
    1. Identifiera företagets FairPlay-certifikat.
 
-      Ditt företagsnamn ska kopplas till det certifikat som utfärdas av Apple.
+      Ditt företagsnamn ska kopplas till certifikatet som utfärdas av Apple.
    1. Expandera certifikatet genom att markera pilen Expandera och högerklicka på din privata nyckel.
-   1. Välj **[!UICONTROL Export "Your Company Name"]** och spara [!DNL .p12]-filen.
+   1. Välj **[!UICONTROL Export "Your Company Name"]** och spara [!DNL .p12] -fil.
 
       Du ombeds att ange ett lösenord för att skydda den här filen. Anteckna det här lösenordet eftersom du måste skicka det tillsammans med ditt autentiseringspaket.
-   1. Logga in på ditt konto på [www.expressplay.com](https://www.expressplay.com).
-   1. Klicka på **[!UICONTROL DRM SERVICES]** i det övre vänstra hörnet och välj sedan fliken **[!UICONTROL FairPlay]**.
+   1. Logga in på ditt konto [www.expressplay.com](https://www.expressplay.com).
+   1. Klicka **[!UICONTROL DRM SERVICES]** uppe till vänster väljer du **[!UICONTROL FairPlay]** -fliken.
    1. Överför dina FairPlay-inloggningsuppgifter till ditt ExpressPlay-konto.
 
       1. Skapa en textfil som innehåller ASK-värdet (det ska vara 32 tecken, till exempel: `1234567890abcdef1234567890abcdef`) och välj den här filen för överföring.
@@ -92,7 +91,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
       1. Ange lösenordet för PKCS12-filen från steg 4.f.
       1. Klicka på knappen Överför.
 
-Nu kan du skapa iOS-program eller HTML5-sidor med FairPlay-innehållsskydd tillsammans med ditt [!DNL fairplay.cer]-certifikat med ExpressPlay-tjänsten för FairPlay.
+Nu kan du skapa iOS-program eller HTML 5-sidor med FairPlay-materialskydd tillsammans med [!DNL fairplay.cer] certifikat med ExpressPlay-tjänsten för FairPlay.
 
 <!--<a id="fig_sjr_2pn_sv"></a>-->
 
@@ -113,7 +112,7 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
 
 1. Paketera innehållet.
 
-   Här är ett exempel på paketering med Adobe Offline Packager. I Packager används en konfigurationsfil (t.ex. [!DNL fairplay.xml]) som ser ut ungefär så här:
+   Här är ett exempel på paketering med Adobe Offline Packager. Packager använder en konfigurationsfil (t.ex. [!DNL fairplay.xml]), som ser ut ungefär så här:
 
    ```
    <config>
@@ -134,15 +133,15 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
    * `in_path` - Den här posten pekar på var källvideon finns på den lokala paketeringsdatorn.
    * `out_type` - Den här posten beskriver typen av paketerade utdata, i det här fallet HLS för FairPlay.
    * `out_path` - Den plats på den lokala datorn där du vill att dina utdata ska hamna.
-   * `drm_sys` - Den DRM-lösning du packar för. Detta är `FAIRPLAY` i det här fallet.
+   * `drm_sys` - Den DRM-lösning du packar för. Det här är `FAIRPLAY` i detta fall.
    * `frag_dur` - Fragmentets varaktighet i sekunder.
    * `target_dur` - Mållängden för HLS-utdata.
    * `key_file_path` - Det här är den plats där licensfilen finns på paketeringsdatorn som fungerar som CK (Content Encryption Key). Det är en Base-64-kodad 16-byte hex-sträng.
    * `iv_file_path` - Det här är platsen för IV-filen på paketeringsdatorn.
-   * `key_url` - URI-parametern för  `EXT-X-KEY` taggen i  [!DNL .m3u8] filen.
+   * `key_url` - URI-parametern för `EXT-X-KEY` -taggen i [!DNL .m3u8] -fil.
    * `content_id` - Standardvärde.
 
-   Som anges i [Packager-dokumentationen](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7) skapar du en konfigurationsfil som innehåller de vanliga alternativen som du vill använda för att generera utdata. Skapa sedan utdata genom att ange specifika alternativ som kommandoradsargument.&quot;
+   Som anges i [Packager-dokumentation](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)&quot;Det bästa sättet är att skapa en konfigurationsfil som innehåller de vanliga alternativ som du vill använda för att generera utdata. Skapa sedan utdata genom att ange specifika alternativ som kommandoradsargument.&quot;
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -150,7 +149,7 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
    -key_url "user_provided_value"
    ```
 
-   Den genererade M3U8-filen har ett `EXT-X-KEY`-attribut som visas så här:
+   Den genererade M3U8-filen har en `EXT-X-KEY` -attribut som ser ut så här:
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES,URI="user_provided_value",​
@@ -161,7 +160,7 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
 
 Du kan ange principer för FairPlay-skyddat innehåll med hjälp av en tillståndsserver. Du kan konfigurera en egen eller använda en exempeltillståndsserver som tillhandahålls av Adobe.
 
-Adobe tillhandahåller en exempelserver för ExpressPlay-tillstånd (SEES) som visar hur du gör *tidsbaserat* och *enhetsbindningsberättigande*-tillstånd. Denna exempeltillståndsserver är byggd på ExpressPlay-tjänster.
+Adobe har en exempelserver för ExpressPlay-tillstånd (SEES) som visar hur man gör *tidsbaserad* och *enhetsbindning* berättigande. Denna exempeltillståndsserver är byggd på ExpressPlay-tjänster.
 
 [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
@@ -172,13 +171,13 @@ Adobe tillhandahåller en exempelserver för ExpressPlay-tillstånd (SEES) som v
 
 Licensiering och uppspelning av FairPlay-skyddat innehåll kräver byte av URL-scheman, mellan schemat som används i videomanifestfilen (skd:) och det som används i ExpressPlay-tokenbegäranden (https:).
 
-Anvisningar för hur du implementerar licensiering och uppspelning från en iOS TVSDK-klient finns här: [Aktivera Apple FairPlay i TVSDK-program](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). Du kan också implementera uppspelning offline och licensrotation för FairPlay.
+Anvisningar om hur du implementerar licensiering och uppspelning från en iOS TVSDK-klient finns här: [Aktivera Apple FairPlay i TVSDK-program](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). Du kan också implementera uppspelning offline och licensrotation för FairPlay.
 
-## HLS är offline med FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
+## HLS offline med FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
 
 Du kanske vill göra det möjligt för användare att spela upp FairPlay-skyddat innehåll när licensieringen inte kan hämtas eftersom spelaren är isolerad från webben (till exempel på ett flygplan).
 
-Innan du påbörjar den här uppgiften hämtar och läser du Apple-dokumentet **&quot;Offline Playback with FairPlay Streaming and HTTP Live Streaming&quot;**. Läs guiden och lär dig hur du hämtar TS-segment (Transport Stream) och sparar dem på din lokala dator.
+Innan du påbörjar den här uppgiften ska du hämta och läsa Apple-dokumentet **&quot;Offline Playback with FairPlay Streaming and HTTP Live Streaming&quot;**. Läs guiden och lär dig hur du hämtar TS-segment (Transport Stream) och sparar dem på din lokala dator.
 
 Implementera offlineuppspelning för FairPlay med det här arbetsflödet:
 
@@ -191,7 +190,7 @@ Implementera offlineuppspelning för FairPlay med det här arbetsflödet:
 >
 >FairPlay-direktuppspelning på klienten startar inte dekrypteringen om den beständiga innehållsnyckeln har upphört att gälla. Användaren fortsätter dock att uppleva om innehållsnyckeln upphör under uppspelningen.
 >
->Mer information finns i [Arbeta med HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3)-dokument.
+>Se [Arbeta med HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) för mer information.
 
 ### FairPlay-licensrotation {#section_D32AA08C61474B4F876AC2A5F18CB879}
 

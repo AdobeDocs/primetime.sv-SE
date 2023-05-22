@@ -1,13 +1,13 @@
 ---
 title: Initiera autentisering
 description: Initiera autentisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
-
 
 # Initiera autentisering {#initiate-authentication}
 
@@ -95,5 +95,3 @@ Initierar autentiseringsprocessen genom att informera om en MVPD-markeringshänd
 * The `redirect_url` parametern måste vara den sista i ordningen
 
 * Värdet för `redirect_url` parametern måste vara URL-kodad
-
-

@@ -1,7 +1,6 @@
 ---
 description: CRS kan mata in ID3-metadata i HLS-format och andra kreatörer för att underlätta annonsspårning på klientsidan.
 title: Använda CRS för att mata in ID3 Timed Metadata-taggar
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '141'
@@ -22,8 +21,8 @@ Klientspelaren läser ID3-metadata för att möjliggöra bildruteexakt annonssp�
 
 ## Arbetsflöde för CRS för ID3-injektion {#workflow-for-crs-for-id3-injection}
 
-Arbetsflödet för ID3-injektion är detsamma som i [Detaljerade arbetsflöden för JIT-ompaketering.](../~old-creative-repackaging-service/jit-repackage.md) Om manifestservern tar emot  `ptplayer=ios-mobileweb` parametern instrueras CRS att mata in ID3-paket i den omkodade och kreativa innan den överförs till CDN-servern.
+Arbetsflödet för ID3-injektion är detsamma som i [Detaljerade arbetsflöden för JIT-ompaketering.](../~old-creative-repackaging-service/jit-repackage.md) Om manifestservern tar emot `ptplayer=ios-mobileweb` anger den att CRS ska mata in ID3-paket i den omkodade och kreativa innan de överförs till CDN-servern.
 
 >[!NOTE]
 >
->I en multi-CDN-konfiguration använder manifestservern parametern `ptcdn` i bootstrap-URL:en för att identifiera CDN-servern för att överföra annonsens kreativitet.
+>I en multi-CDN-konfiguration använder manifestservern `ptcdn` -parametern i bootstrap-URL för att identifiera CDN-servern som ska överföra annonsens kreativitet.

@@ -1,14 +1,13 @@
 ---
 description: Den här versionen innehåller spelare och har stöd för ett stort antal webbläsare.
 title: Krav
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#requirements-overview}
 

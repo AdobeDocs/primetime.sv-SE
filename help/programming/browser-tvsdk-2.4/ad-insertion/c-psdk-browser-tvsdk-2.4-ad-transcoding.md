@@ -1,14 +1,13 @@
 ---
 description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas med innehållsströmmen för HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming over HTTP (DASH) eftersom deras videoformat inte är kompatibelt med HLS/DASH. Adobe Primetime annonsinfogning och webbläsarens TVSDK kan som tillval försöka paketera om inkompatibla videor (transkoda) till kompatibla m3u8/mpd-videor.
 title: Annonser som inte är kompatibla med ompaketering (trancode)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aaa78d5a-4b4b-4d50-b516-d39b47174487
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
-
 
 # Annonser som inte är kompatibla med ompaketering (trancode){#repackage-transcode-incompatible-ads}
 

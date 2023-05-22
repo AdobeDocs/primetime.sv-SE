@@ -1,14 +1,13 @@
 ---
 description: Innan något innehåll kan paketeras måste en eller flera profiler skapas. En översikt över användningsreglerna som kan anges i en profil finns i Användningsregler i Översikt över Adobe Access SDK.
 title: Skapa en ny princip
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c8c78983-3578-4895-8f61-8f812aa59e20
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en ny princip {#create-a-new-policy}
 

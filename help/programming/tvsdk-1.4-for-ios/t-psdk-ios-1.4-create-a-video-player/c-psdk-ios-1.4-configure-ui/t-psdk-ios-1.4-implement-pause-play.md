@@ -1,14 +1,13 @@
 ---
 description: Du kan ställa in knappar som anropar TVSDK-metoder för att pausa och spela upp media.
 title: Implementera en uppspelnings-/pausknapp
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 72b90a67-d5a3-4575-a67e-58a0f0d0acf1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
-
 
 # Implementera en uppspelnings-/pausknapp{#implement-a-play-pause-button}
 
@@ -38,4 +37,3 @@ _playPauseButton =
     } 
 } 
 ```
-

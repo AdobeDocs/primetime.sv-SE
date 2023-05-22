@@ -1,13 +1,13 @@
 ---
 title: Tillåt PDF-filer i dialogrutan Markering
 description: Tillåt PDF-filer i dialogrutan Markering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # Tillåt PDF-filer i dialogrutan Markering {#allow-mvpds-selection-dialog}
 

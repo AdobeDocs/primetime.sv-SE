@@ -1,13 +1,13 @@
 ---
 title: Amazon FireOS - programregistrering
 description: Amazon FireOS - programregistrering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
-
 
 # Amazon FireOS - programregistrering {#amazon-fireos-application-registration}
 

@@ -2,18 +2,17 @@
 title: Konfigurera demoläge för användningsmodell
 description: Konfigurera demoläge för användningsmodell
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 593acfbd-fd37-4bab-ac8e-5cb62963fac4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera demoläge för användningsmodell{#configure-usage-model-demo-mode}
 
-Innan referensimplementeringsservern kan utfärda licenser för demonstrationen av användningsmodellen måste du konfigurera servern så att den anger hur licenser genereras för var och en av de fyra användningsmodellerna. Det innebär att du måste ange en DRM-princip för varje användningsmodell. Referensimplementeringen innehåller följande exempel på DRM-principer i katalogen [!DNL Reference Implementation/Server/Reference Implementation Server/resources/]:
+Innan referensimplementeringsservern kan utfärda licenser för demonstrationen av användningsmodellen måste du konfigurera servern så att den anger hur licenser genereras för var och en av de fyra användningsmodellerna. Det innebär att du måste ange en DRM-princip för varje användningsmodell. Referensimplementeringen innehåller följande exempel på DRM-principer i [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] katalog:
 
 * `dto-policy.pol` - (ladda ned till egen enhet)
 * `vod-policy.pol` - (Uthyrning/video-on-demand)
@@ -37,4 +36,4 @@ Innan referensimplementeringsservern kan utfärda licenser för demonstrationen 
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. Kopiera dina exempelprincipfiler till den katalog du anger i egenskapen `config.resourcesDirectory` i [!DNL flashaccess-refimpl.properties].
+1. Kopiera dina exempelprincipfiler till den katalog du anger i dialogrutan `config.resourcesDirectory` egenskap i [!DNL flashaccess-refimpl.properties].

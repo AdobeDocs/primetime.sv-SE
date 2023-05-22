@@ -2,14 +2,13 @@
 title: Out-of-band-licenser
 description: Out-of-band-licenser
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d9e54c8f-ff82-4834-a62e-20e67c4343dd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Out-of-band-licenser {#out-of-band-licenses}
 

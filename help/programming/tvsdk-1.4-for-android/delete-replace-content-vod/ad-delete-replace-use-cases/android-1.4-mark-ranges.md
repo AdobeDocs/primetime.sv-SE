@@ -1,24 +1,23 @@
 ---
 description: Du kan ange tidsintervall i VOD-innehåll som annonsbrytningar.
 title: Markera intervall
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cd661327-20b2-4a49-8002-6ecee86c2a2c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # Markera intervall{#mark-ranges}
 
 Du kan ange tidsintervall i VOD-innehåll som annonsbrytningar.
 
-I det här fallet markeras `TimeRanges` mellan `begin` och `end` i `localTime` som `AdBreak` i tidslinjen. Andra annonsinställningar ignoreras.
+I detta fall `TimeRanges` mellan `begin` och `end` in `localTime` markeras som `AdBreak` på tidslinjen. Andra annonsinställningar ignoreras.
 
 >[!NOTE]
 >
->Om du bara vill markera vissa intervall i innehållet som annonser (utan dynamisk annonsinfogning) skapar du en `CustomRangeMetadata`-instans och anger typen som en MARK-åtgärd med de definierade anpassade intervallen.
+>Om du bara vill markera vissa intervall i innehållet som annonser (utan dynamisk annonsinfogning) skapar du en `CustomRangeMetadata` och ange typen som en MARK-åtgärd med de definierade anpassade intervallen.
 
 1. Markera intervall.
 
@@ -62,4 +61,3 @@ I det här fallet markeras `TimeRanges` mellan `begin` och `end` i `localTime` s
        "id": "vod_004"
    }
    ```
-

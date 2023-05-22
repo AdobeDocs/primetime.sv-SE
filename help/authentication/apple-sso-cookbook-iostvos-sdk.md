@@ -1,14 +1,13 @@
 ---
 title: Apple SSO Cookbook (iOS/tvOS SDK)
 description: Apple SSO Cookbook (iOS/tvOS SDK)
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2d59cd33-ccfd-41a8-9697-1ace3165bc44
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1867'
 ht-degree: 0%
 
 ---
-
-
 
 # Apple SSO Cookbook (iOS/tvOS SDK) {#apple-sso-cookbook-iostvos-sdk}
 

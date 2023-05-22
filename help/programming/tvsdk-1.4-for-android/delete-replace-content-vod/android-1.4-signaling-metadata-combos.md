@@ -1,14 +1,13 @@
 ---
 description: Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att använda olika kombinationer av annonssignaleringsläge och metadata. Olika kombinationer av signaleringsläge och metadata ger olika beteenden.
 title: Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0b265471-2d5c-432b-b1c9-c850ce99f2f5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
 
 ---
-
 
 # Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
@@ -26,7 +25,7 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
    <th class="entry"> Läge för annonssignalering </th> 
    <th class="entry"> Lägg till metadata </th> 
    <th class="entry"> Skapade lösare </th> 
-   <th class="entry"><span class="codeph"> </span> PlacementInformationskapad </th> 
+   <th class="entry"><span class="codeph"> PlacementInformation</span> skapad </th> 
    <th class="entry"> Resulterande beteende </th> 
   </tr> 
  </thead>
@@ -51,7 +50,7 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
    <td> Ta bort, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervall borttagna, annonser infogade </td> 
@@ -237,4 +236,3 @@ Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att anv
   </tr> 
  </tbody> 
 </table>
-

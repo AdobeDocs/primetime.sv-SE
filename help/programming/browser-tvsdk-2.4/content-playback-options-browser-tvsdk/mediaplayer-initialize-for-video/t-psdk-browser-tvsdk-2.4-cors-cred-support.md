@@ -2,31 +2,30 @@
 description: Stöd för attributet withCredentials i XMLHttpRequests tillåter resursdelningsbegäranden mellan ursprung (CORS) att inkludera måldomänens cookies för en mängd olika typer av begäranden.
 keywords: CORS;korsorigo;resursdelning;cookies;withCredentials
 title: Resursdelning mellan olika ursprung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 02826c87-b0c6-495b-a17d-67c5693a9772
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-
-# Resursdelning mellan ursprung {#cross-origin-resource-sharing}
+# Resursdelning mellan olika ursprung {#cross-origin-resource-sharing}
 
 Stöd för attributet withCredentials i XMLHttpRequests tillåter resursdelningsbegäranden mellan ursprung (CORS) att inkludera måldomänens cookies för en mängd olika typer av begäranden.
 
-När klienten begär ett manifest, segment eller en nyckel kan servern ange en cookie som klienten måste skicka för efterföljande begäranden. Om klienten ska kunna läsa och skriva cookies måste attributet `withCredentials` anges till `true` för korsorikbegäranden.
+När klienten begär ett manifest, segment eller en nyckel kan servern ange en cookie som klienten måste skicka för efterföljande begäranden. Klienten måste ange `withCredentials` attribut till `true` för förfrågningar om korsursprung.
 
-Så här aktiverar du stöd för `withCredentials` för de flesta typer av begäranden när en viss medieresurs spelas:
+Aktivera `withCredentials` stöd för de flesta typer av begäranden när en viss medieresurs spelas upp:
 
-1. Skapa `CORSConfig`-objektet.
+1. Skapa `CORSConfig` -objekt.
 
    ```js
    var corsConfig = new AdobePSDK.CORSConfig();  
    corsConfig.enableEncryptionRequest = true; 
    ```
 
-1. Koppla `corsConfig` till `NetworkConfiguration`-objektet och ställ in `useCookieHeaderForAllRequests` på `true`.
+1. Bifoga `corsConfig` till `NetworkConfiguration` objekt och ange `useCookieHeaderForAllRequests` till `true`.
 
    ```js
    var networkConfig = new AdobePSDK.NetworkConfiguration();  
@@ -34,14 +33,14 @@ Så här aktiverar du stöd för `withCredentials` för de flesta typer av begä
    networkConfiguration.useCookieHeaderForAllRequests= true;
    ```
 
-1. Ange `networkConfig` i `MediaPlayerItemConfig`-objektet.
+1. Ange `networkConfig` i `MediaPlayerItemConfig` -objekt.
 
    ```js
    var mediaPlayerItemConfig = new AdobePSDK.MediaPlayerItemConfig();  
    mediaPlayerItemConfig.networkConfiguration = networkConfig; 
    ```
 
-1. Skicka `MediaPlayerItemConfig` till metoden `MediaPlayer.replaceCurrentResource`.
+1. Pass `MediaPlayerItemConfig` till `MediaPlayer.replaceCurrentResource` -metod.
 
    ```js
    var player = new AdobePSDK.MediaPlayer(); 
@@ -52,7 +51,7 @@ Så här aktiverar du stöd för `withCredentials` för de flesta typer av begä
 
 >[!IMPORTANT]
 >
->Flaggan `useCookieHeaderForAllRequests` påverkar inte licensbegäranden. Om du vill ange attributet `withCredentials` till `true` för en licensbegäran måste du ange attributet `withCredentials` i skyddsdata eller ange en auktoriseringsnyckel i `httpRequestHeaders` för skyddsdata. Exempel:
+>The `useCookieHeaderForAllRequests` -flaggan påverkar inte licensförfrågningar. Så här anger du `withCredentials` attribut till `true` för en licensförfrågan måste du ange `withCredentials` i dina skyddsdata eller ange en auktoriseringsnyckel i `httpRequestHeaders` av dina skyddsdata. Till exempel:
 
 ```
 # Example 1 
@@ -75,9 +74,9 @@ Så här aktiverar du stöd för `withCredentials` för de flesta typer av begä
 }
 ```
 
-Flaggan påverkar inte en licensbegäran eftersom vissa servrar har angett jokertecknet (*) i fältet `Access-Control-Allow-Origin`. Men om flaggan för autentiseringsuppgifter är `true` kan jokertecknet inte användas i `Access-Control-Allow-Origin`. Om du anger `useCookieHeaderForAllRequests` till `true` för alla typer av begäranden kan följande fel uppstå för en licensbegäran:
+Flaggan påverkar inte en licensförfrågan eftersom vissa servrar har angett `Access-Control-Allow-Origin` fält till jokertecken (&#39;&#42;&#39;) i sitt svar. Men när inloggningsflaggan är inställd på `true`kan jokertecknet inte användas i `Access-Control-Allow-Origin`. Om du anger `useCookieHeaderForAllRequests` till `true` för alla typer av förfrågningar kan följande fel uppstå för en licensförfrågan:
 
 Kom ihåg följande information:
 
-* När ett anrop med `withCredentials=true` misslyckas, försöker webbläsaren TVSDK att ringa anropet utan `withCredentials`.
-* När ett anrop görs med `networkConfiguration.useCookieHeaderForAllRequests=false`, görs XHR-förfrågningar utan attributet `withCredentials`.
+* När ett samtal med `withCredentials=true` misslyckas, webbläsaren TVSDK försöker ringa om utan `withCredentials`.
+* När ett samtal görs med `networkConfiguration.useCookieHeaderForAllRequests=false`, görs XHR-förfrågningar utan `withCredentials` -attribut.

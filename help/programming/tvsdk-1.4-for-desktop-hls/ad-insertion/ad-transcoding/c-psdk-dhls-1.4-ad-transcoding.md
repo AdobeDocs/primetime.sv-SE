@@ -1,14 +1,13 @@
 ---
 description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas i innehållsströmmen för HTTP-direktuppspelning (HLS) eftersom deras videoformat inte är kompatibelt med HLS. Primetimes annonsinfogning och TVSDK kan som tillval försöka paketera om inkompatibla annonser i kompatibla M3U8-videor.
 title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dddc7e44-88ba-438b-aa45-ed03f436cd53
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # Paketera inkompatibla annonser med Adobe Creative Repackaging Service {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
 
@@ -22,7 +21,7 @@ Om du vill aktivera den här valfria funktionen kontaktar du Adobe.
 
 Mer information om CRS finns i [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
 
-## Flera CDN-stöd för CRS och leverans {#multiple-cdn-support-for-crs-ad-delivery}
+## Flera CDN-funktioner för CRS och leverans {#multiple-cdn-support-for-crs-ad-delivery}
 
 Standardscenariot för Creative Repackaging Service (CRS) är att använda ett CDN (Content Data Network), men du kan distribuera CRS-resurser på mer än ett CDN.
 
@@ -37,13 +36,13 @@ Här är API-tilläggen i TVSDK:
 
 * `URLTransformer` Ett gränssnitt som beskriver de metoder som krävs för att omforma CRS- och URL:er som begärs av TVSDK. Applikationerna kan implementera det här gränssnittet och tillhandahålla implementeringar för de metoder som krävs.
 
-* `DefaultURLTransformer` Den standardinstans av URL-transformatorn som skapas i TVSDK och som implementerar  `URLTransformer` gränssnittet. Program kan åsidosätta den här klassen eller lägga till en post-URL-omformningshanterare. Den här hanteraren är användbar när programmet vill göra ändringar i URL-begäran efter att standardomformningen har tillämpats.
+* `DefaultURLTransformer` Den standardinstans av URL-transformatorn som skapas i TVSDK och som implementerar `URLTransformer` gränssnitt. Program kan åsidosätta den här klassen eller lägga till en post-URL-omformningshanterare. Den här hanteraren är användbar när programmet vill göra ändringar i URL-begäran efter att standardomformningen har tillämpats.
 
-* `NetworkConfiguration.urlTransformer` En set-metod som anges i  `NetworkConfiguration` metadatainstansen för att ställa in  `URLTransformer` implementeringen.
+* `NetworkConfiguration.urlTransformer` En set-metod som anges på `NetworkConfiguration` metadatainstans för att ange `URLTransformer` implementering.
 
 >[!IMPORTANT]
 >
->Appimplementeringarna måste kontrollera `URLTransformerInputType`-uppräkningen och endast transformera URL:er av typen `URLTransformerInputType.CRSCreative` för CRS.
+>Appimplementeringarna måste kontrollera om `URLTransformerInputType` uppräkning och endast transformera URL:er av typen `URLTransformerInputType.CRSCreative` för CRS.
 
 I följande kodexempel visas hur ditt program kan ändra standardvärdkomponenten till en annan sträng (till exempel `cdn.mycrsdomain.com`):
 

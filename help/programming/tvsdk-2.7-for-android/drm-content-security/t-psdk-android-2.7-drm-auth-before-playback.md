@@ -1,14 +1,13 @@
 ---
 description: När DRM-metadata för en video är separata från medieströmmen bör du autentisera innan du påbörjar uppspelningen.
 title: DRM-autentisering före uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b3267363-f734-44a6-99f5-e155deb53f3e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # DRM-autentisering före uppspelning {#drm-authentication-before-playback}
 
@@ -19,7 +18,7 @@ En videoresurs kan ha en associerad DRM-metadatafil, till exempel:
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-I det här exemplet kan du använda `DRMHelper`-metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering behövs.
+I det här exemplet kan du använda `DRMHelper` metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering krävs.
 
 1. Använd `loadDRMMetadata` för att läsa in URL-metadatainnehållet och tolka de hämtade byten till en `DRMMetadata`.
 
@@ -34,7 +33,7 @@ I det här exemplet kan du använda `DRMHelper`-metoder för att hämta innehål
        final DRMLoadMetadataListener loadMetadataListener); 
    ```
 
-   Exempel:
+   Till exempel:
 
    ```java
    DRMHelper.loadDRMMetadata(drmManager,  
@@ -46,9 +45,9 @@ I det här exemplet kan du använda `DRMHelper`-metoder för att hämta innehål
 
    Om användarna inte vet om åtgärden är asynkron kan de undra varför uppspelningen ännu inte har startats. Du kan till exempel visa ett rotationshjul medan DRM-metadata hämtas och tolkas.
 
-1. Implementera återanropen i `DRMLoadMetadataListener`.
+1. Implementera återanrop i `DRMLoadMetadataListener`.
 
-   `loadDRMMetadata` anropar dessa händelsehanterare.
+   The `loadDRMMetadata` anropar dessa händelsehanterare.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -71,13 +70,13 @@ I det här exemplet kan du använda `DRMHelper`-metoder för att hämta innehål
    * `onLoadMetadataUrlComplete` identifierar när metadata-URL:en har lästs in.
    * `onLoadMetadataUrlError` anger att det inte gick att läsa in metadata.
 
-1. När inläsningen är klar kontrollerar du `DRMMetadata`-objektet för att avgöra om DRM-autentisering krävs.
+1. När inläsningen är klar kontrollerar du `DRMMetadata` -objekt för att avgöra om DRM-autentisering krävs.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-   Exempel:
+   Till exempel:
 
    ```java
    @Override 

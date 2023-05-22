@@ -1,14 +1,13 @@
 ---
 description: Du kan välja att använda standardbeteenden för annonser.
 title: Använd standardbeteendet för uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c277db2a-546e-4097-96ce-83914b726576
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
-
 
 # Använd standardbeteendet för uppspelning {#use-the-default-playback-behavior}
 

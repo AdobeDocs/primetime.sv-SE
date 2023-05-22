@@ -2,14 +2,13 @@
 title: Krav för synkronisering
 description: Krav för synkronisering
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0368e363-893f-4b51-a317-00791d0ab54f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
-
 
 # Krav för synkronisering {#requirements-for-synchronization}
 
@@ -17,9 +16,9 @@ Krav för synkronisering anger hur ofta klienten synkroniserar sitt tillstånd m
 
 Synkroniseringsbeteendet definieras med följande parametrar:
 
-* **Startintervall**  - Anger hur lång tid det tar att vänta efter den senaste lyckade synkroniseringen för att starta en annan synkroniseringsbegäran.
-* **Hårt stoppintervall**  - (valfritt). Tillåt inte uppspelning om en lyckad synkronisering inte har utförts under den angivna tiden.
-* **Tvinga synkroniseringssannolikhet**  - (valfritt). Sannolikhet med vilken klienten ska skicka ett synkroniseringsmeddelande före nästa startintervall.
+* **Startintervall** - Anger hur lång tid det tar att vänta efter den senaste lyckade synkroniseringen för att starta en annan synkroniseringsbegäran.
+* **Hårt stoppintervall** - (Valfritt). Tillåt inte uppspelning om en lyckad synkronisering inte har utförts under den angivna tiden.
+* **Tvinga synkroniseringssannolikhet** - (Valfritt). Sannolikhet med vilken klienten ska skicka ett synkroniseringsmeddelande före nästa startintervall.
 
 >[!NOTE]
 >

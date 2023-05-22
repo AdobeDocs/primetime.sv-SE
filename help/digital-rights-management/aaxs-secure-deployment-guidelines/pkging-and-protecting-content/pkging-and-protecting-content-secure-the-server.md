@@ -2,14 +2,13 @@
 title: Skydda servern
 description: Skydda servern
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 736bc194-8058-469f-8c73-ebe67d3111ae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
-
 
 # Skydda servern {#secure-the-server}
 

@@ -2,14 +2,13 @@
 title: Information om NATIVE_ERROR-meddelandet
 description: Information om NATIVE_ERROR-meddelandet
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3819b932-47a2-4adb-830b-0a95a5fec70b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
-
 
 # Information om NATIVE_ERROR-meddelandet {#details-for-the-native-error-notification}
 
@@ -24,7 +23,7 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE  </span> </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
     <pre>
       Inbyggd felkod från AVE. 
@@ -36,19 +35,19 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME  </span> </td> 
-   <td colname="col2"> En sträng som innehåller felets namn; till exempel <span class="codeph"> AXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME </span> </td> 
+   <td colname="col2"> En sträng som innehåller felets namn; till exempel <span class="codeph"> AAXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE  </span> </td> 
-   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar underfelskoden <span class="codeph"> DRMErrorEvents </span> som returneras av Flash Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE </span> </td> 
+   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar <span class="codeph"> DRMErrorEvents </span> suberror-kod som returneras av Flash Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
    <td colname="col2"> För DRM är detta den anpassade felsträngen från DRM-serverdistributionen, om du har definierat någon. Inkludera även detta när du rapporterar fel till Adobe. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="col1"> <span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="col2"> Strängbeskrivning för felet. Vanligtvis mediets URL. </td> 
   </tr> 
  </tbody> 
@@ -58,4 +57,4 @@ TVSDK tar emot dessa felkoder och strängar från videomotorn.
 
 >[!IMPORTANT]
 >
->En fullständig lista över Adobe Primetime DRM-klientfelkoder finns i [Felmeddelandereferens för DRM-klient](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>En fullständig lista över Adobe Primetime DRM-klientfelkoder finns på [Felmeddelandereferens för DRM-klient](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).

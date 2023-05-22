@@ -1,16 +1,15 @@
 ---
 description: Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
 title: Klasser för tidslinje
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bb879592-aef2-4adb-acbc-c927133a5cc5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-
-# Tidslinjeklasser{#timeline-classes}
+# Klasser för tidslinje{#timeline-classes}
 
 Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
 
@@ -46,4 +45,3 @@ Paket: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api
   </tr> 
  </tbody> 
 </table>
-

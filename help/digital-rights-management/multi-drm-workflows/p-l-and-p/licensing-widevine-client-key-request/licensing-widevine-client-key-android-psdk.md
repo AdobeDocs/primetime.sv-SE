@@ -1,14 +1,13 @@
 ---
 description: Klientkoden skickar data till ett Android-API.
 title: Arbetsflöde för nyckelbegäran i Android PSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3ff52c0d-0789-4fe5-bf9d-f03184bad488
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
-
 
 # Arbetsflöde för nyckelbegäran i Android PSDK{#key-request-workflow-on-android-psdk}
 
@@ -48,4 +47,3 @@ class MediaPlayer
    public void setDRMScheme(String drm) throws MediaPlayerException 
    }
 ```
-

@@ -1,14 +1,13 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f5d3e0ff-675f-4bd4-bfda-71988d25c85d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
 
 ---
-
 
 # Överväganden och bästa praxis {#considerations-and-best-practices}
 
@@ -28,7 +27,7 @@ Kom ihåg följande information när du använder TVSDK:
 
 * TVSDK-API:t implementeras i mål-C.
 
-* Videouppspelning kräver det inbyggda Apple AV Foundation-ramverket. Detta påverkar hur och när medieresurser, inklusive undertexter och tidslinjer, kan nås:
+* Videouppspelning kräver Apple AV Foundation-ramverket. Detta påverkar hur och när medieresurser, inklusive undertexter och tidslinjer, kan nås:
 
    * Det går inte att ändra tidslinjejusteringar efter den första konfigurationen.
 
@@ -38,7 +37,7 @@ Kom ihåg följande information när du använder TVSDK:
 
       Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
 
-   * Den inkommande användaragenten för alla HTTP-begäranden från TVSDK på den här plattformen bestäms av enheten och iOS-versionen som körs på enheten.
+   * Inkommande användaragent för alla HTTP-begäranden från TVSDK på den här plattformen bestäms av enheten och den iOS-version som körs på enheten.
 
       Standardvärdet för användaragentsträngen är det som tilldelas av operativsystemet.
 
@@ -48,7 +47,7 @@ Här följer rekommenderad praxis för TVSDK:
 
 * Använd HLS version 3.0 eller senare för programinnehåll.
 
-* Använd Apples mediastreamvalidator för att validera VOD-strömmar.
+* Använd Apple mediastreamvalidator för att validera VOD-strömmar.
 
 * Klassen PTSDKConfig innehåller metoder för att framtvinga SSL på begäranden som görs till Primetimes annonsnings-, DRM- och videoanalysservrar.
 

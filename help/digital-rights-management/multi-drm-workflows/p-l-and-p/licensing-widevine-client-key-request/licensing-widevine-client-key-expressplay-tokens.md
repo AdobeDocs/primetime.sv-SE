@@ -1,14 +1,13 @@
 ---
 description: Du kan generera uttryckstoken för deras krypterade innehåll genom att skicka tokenbegäranden till rätt Expressplay-tokenserver.
 title: Uttryckstoken
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 38faba06-6737-4dec-ac97-27db3124b993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
-
 
 # Uttryckstoken {#expressplay-tokens}
 
@@ -25,7 +24,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-Lagrings-ID:t för innehållskrypteringsnyckeln eller CEKSID som anges för parametern `kid` och den innehållskrypteringsnyckel eller CEK som anges för parametern `contentKey` måste matcha ID:t för innehållskrypteringsnyckeln och den innehållskrypteringsnyckel som används för paketeringen. Följande text är ett exempel på tokenserversvaret:
+Lagring-ID:t för innehållskrypteringsnyckeln eller CEKSID:t som anges för `kid` -parametern och innehållskrypteringsnyckeln eller CEK som ges till `contentKey` -parametern måste matcha innehållskrypteringsnyckelns lagrings-ID och innehållskrypteringsnyckeln som används för paketering. Följande text är ett exempel på tokenserversvaret:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/

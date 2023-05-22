@@ -1,7 +1,6 @@
 ---
 description: Använd valfria frågeparametrar för paketläge, paketversion och paketposition för att hämta URL:er dit annonsspårningsinformation om den aktuella videon ska skickas. Svaren varierar beroende på spårningsversionen och om videoströmmen är live eller on demand (VOD).
 title: API för spelare som ska interagera med manifestservern
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '260'
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # API för spelare som ska interagera med manifestservern {#api-for-players-to-interact-with-the-manifest-server}
 
-Använd de valfria frågeparametrarna `pttrackingmode`, `pttrackingversion` och `pttrackingposition` för att hämta URL:er dit annonsspårningsinformation om den aktuella videon ska skickas. Svaren varierar beroende på spårningsversionen och om videoströmmen är live eller on demand (VOD).
+Använd det valfria `pttrackingmode`, `pttrackingversion`och `pttrackingposition` frågeparametrar för att hämta URL:er dit annonsspårningsinformation om den aktuella videon ska skickas. Svaren varierar beroende på spårningsversionen och om videoströmmen är live eller on demand (VOD).
 
 ## Frågeparametrar {#query-parameters}
 

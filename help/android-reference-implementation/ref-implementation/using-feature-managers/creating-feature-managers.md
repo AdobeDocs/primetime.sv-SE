@@ -1,14 +1,13 @@
 ---
 description: TVSDK-funktioner drivs av konfiguration och implementeras via MediaPlayer.
 title: Skapa funktionshanterare genom att skicka konfigurationsinformation till MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 47377ceb-ed3e-4dca-9b55-82e4fe6b0194
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
-
 
 # Skapa funktionshanterare genom att skicka konfigurationsinformation till MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
@@ -24,9 +23,9 @@ TVSDK-funktioner drivs av konfiguration och implementeras via MediaPlayer.
 
    Funktionshanterare registrerar TVSDK-händelseavlyssnare för det här spelarobjektet, hämtar data från uppspelningssessionen och utlöser TVSDK-funktioner till uppspelningssessionen.
 
-Varje funktion har ett motsvarande konfigurationsgränssnitt. `CCManager` använder till exempel `ICCConfig` för att hämta konfigurationen. `ICCConfig` innehåller metoder för att hämta konfigurationsinformation som endast gäller undertextning.
+Varje funktion har ett motsvarande konfigurationsgränssnitt. Till exempel: `CCManager` använder `ICCConfig` för att hämta konfigurationen. `ICCConfig` innehåller metoder för att hämta konfigurationsinformation som endast gäller undertextning.
 
-I följande exempel visas filen [!DNL ICCConfig.java] som är konfigurerad att ta emot information om synlighet för undertexter, teckensnittsstil och teckensnittskant från `MediaPlayer`:
+I följande exempel visas [!DNL ICCConfig.java] -fil, konfigurerad att ta emot information om synlighet för undertexter, teckensnittsstil och teckensnittskant från `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +63,7 @@ I följande exempel visas filen [!DNL ICCConfig.java] som är konfigurerad att t
 }
 ```
 
-Ett program som använder en TVSDK-funktion kan skapa sin funktionshanterare med en konfigurationsprovider och ett `MediaPlayer`-objekt. Exempel:
+Ett program som använder en TVSDK-funktion kan skapa en funktionshanterare med en konfigurationsprovider och en `MediaPlayer` -objekt. Till exempel:
 
 ```java
 // This application needs to use the advertising workflow feature 

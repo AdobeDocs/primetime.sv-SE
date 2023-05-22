@@ -1,7 +1,6 @@
 ---
 description: Alla autentiseringstoken som genereras av Adobe Primetime DRM SDK har ett tidsgränsintervall för att skydda programsäkerheten.
 title: Timeout för autentiseringstoken
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '110'

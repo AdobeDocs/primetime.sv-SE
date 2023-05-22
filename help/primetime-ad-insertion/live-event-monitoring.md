@@ -3,7 +3,6 @@ title: Övervakning av live-händelse
 description: Övervakning av live-händelse
 copied-description: true
 exl-id: 004672c9-d064-46b7-8c8f-b4411b96e7cb
-translation-type: tm+mt
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
 source-wordcount: '58'

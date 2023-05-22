@@ -2,14 +2,13 @@
 title: Delvis krypteringsnivå
 description: Delvis krypteringsnivå
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 47bcd5e1-f45a-44b8-8a00-209a6d0abd0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
 
 ---
-
 
 # Delvis krypteringsnivå {#partial-encryption-level}
 

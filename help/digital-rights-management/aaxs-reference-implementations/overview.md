@@ -2,14 +2,13 @@
 title: Översikt - Använda referensimplementeringar
 description: Översikt - Använda referensimplementeringar
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2a5075f4-3e7b-4e4c-b69d-c044b064e282
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
-
 
 # Översikt - Använda referensimplementeringar {#overview-using-the-reference-implementations}
 

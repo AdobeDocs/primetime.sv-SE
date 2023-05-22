@@ -1,16 +1,15 @@
 ---
 description: Upplösningsbaserat utdataskydd (RBOP) är en mekanism som ger utdataskydd baserat på innehållets lodräta pixelantal.
 title: Översikt över RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 57c39c4e-d8f3-4f28-95a5-2e61a1bd7793
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-
-# RBOP-översikt {#rbop-overview}
+# Översikt över RBOP {#rbop-overview}
 
 Upplösningsbaserat utdataskydd (RBOP) är en mekanism som ger utdataskydd baserat på innehållets lodräta pixelantal.
 
@@ -20,8 +19,7 @@ För att förenkla processen att ange säkerhetskrav för utdata tillhandahålle
 
 Avsnitt i den här handboken:
 
-* [RBOP ](../RBOP/output-protection-concepts.md) Conceptsger en konceptuell översikt över konfiguration, alternativ och innebörd för skydd av utdata.
-* [Stöd ](../RBOP/client-support.md) för RBOP-klient beskriver de funktioner som finns i olika versioner av Flash Player och TVSDK.
-* [Exempel på RBOP-](../RBOP/sample-output-protection-config.md) konfiguration är en exempelkonfiguration som illustrerar koncept och form för konfigurationen.
-* [RBOP ](../RBOP/output-protection-grammar.md) Grammares täcker in-konfigurationens grammatik, framhäver giltiga och ogiltiga indataalternativ och förklarar hur utelämnade valfria fält tolkas.
-
+* [RBOP-begrepp](../RBOP/output-protection-concepts.md) ger en konceptuell översikt över konfiguration, alternativ och innebörd för utdataskydd.
+* [Stöd för RBOP-klient](../RBOP/client-support.md) beskriver de funktioner som finns i olika versioner av Flash Player och TVSDK.
+* [Exempel på RBOP-konfiguration](../RBOP/sample-output-protection-config.md) visar ett exempel på en konfiguration som illustrerar koncept och form för konfigurationen.
+* [RBOP-grammatik](../RBOP/output-protection-grammar.md) täcker grammatiken för konfigurationsindata, framhäver giltiga och ogiltiga indataalternativ och förklarar hur utelämnade valfria fält tolkas.

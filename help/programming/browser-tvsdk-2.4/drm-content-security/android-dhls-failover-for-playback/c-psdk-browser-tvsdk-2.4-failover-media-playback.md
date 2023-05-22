@@ -1,14 +1,13 @@
 ---
 description: För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta den spellista som är associerad med den mellanupplösta bithastigheten och sedan hämta segment för den mellanupplösta bithastigheten som definieras av spellistan.
 title: Medieuppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 56033ca2-8a63-4a0d-ac7d-bf208273a238
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
-
 
 # Medieuppspelning {#media-playback}
 
@@ -16,7 +15,7 @@ För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta de
 
 Browser TVSDK väljer snabbt den högupplösta spellistan med bithastighet och tillhörande media och fortsätter nedladdningen.
 
-## Misslyckad spelningslista {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## Redundans för spelningslista saknas {#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 När en hel spelningslista saknas, till exempel när M3U8-filen som anges i en manifestfil på den översta nivån inte hämtas, försöker webbläsaren TVSDK att återställas. Om det inte kan återställas bestäms nästa steg av programmet.
 

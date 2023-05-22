@@ -2,18 +2,17 @@
 title: Stöd för implementeringskapitel
 description: Stöd för implementeringskapitel
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2db335b3-1d9b-4339-b1b6-e12ee0f06566
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# Stöd för implementeringskapitel {#implement-chapter-support}
 
-# Implementera kapitelstöd {#implement-chapter-support}
-
-Du kan definiera och spåra *anpassade* kapitel för videospårning i TVSDK-baserade program.
+Du kan definiera och spåra *anpassad* kapitel för videospårning i TVSDK-baserade program.
 
 Anpassade kapitel hanteras av programmet och baseras på CMS-data eller på något annat sätt som programmet använder för att definiera kapitel.
 

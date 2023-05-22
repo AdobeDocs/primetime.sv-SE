@@ -1,30 +1,29 @@
 ---
 description: Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
 title: Läge för annonssignalering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ddee6753-522f-46e8-8ba2-38b9593e7abe
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
-
-# Läget Lägg till signalering {#ad-signaling-mode}
+# Läge för annonssignalering {#ad-signaling-mode}
 
 Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
 
-Giltiga värden är `DEFAULT`, `SERVER_MAP` och `MANIFEST_CUES`.
+Giltiga värden är `DEFAULT`, `SERVER_MAP`och `MANIFEST_CUES`.
 
-I följande tabell beskrivs effekten av `AdSignalingMode`-värden för de olika typerna av HLS-strömmar:
+I följande tabell beskrivs effekten av `AdSignalingMode` värden för de olika typerna av HLS-strömmar:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> </th> 
-   <th colname="2" class="entry"> <b>Standard  </b></th> 
+   <th colname="2" class="entry"> <b>Standard </b></th> 
    <th colname="3" class="entry"><b> Manifest cues</b> </th> 
-   <th colname="4" class="entry"> <b>Ad server map  </b></th> 
+   <th colname="4" class="entry"> <b>Ad server map </b></th> 
   </tr> 
  </thead>
  <tbody> 

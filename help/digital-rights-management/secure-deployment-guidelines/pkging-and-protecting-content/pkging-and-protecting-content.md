@@ -1,14 +1,13 @@
 ---
 description: Information om paketering och skydd av innehåll gör att du kan skydda ditt innehåll.
 title: Paketera och skydda innehåll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f33d382b-07d7-4630-9e44-820d6249fee4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
 
 ---
-
 
 # Paketera och skydda innehåll {#packaging-protecting-content}
 
@@ -22,11 +21,11 @@ Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-
 
 Om implementeringen av innehållspaketeringen kräver nätverksanslutning måste du skaffa ett extra operativsystem och implementera en lämplig brandväggslösning. Mer information finns i [Nätverkstopologi](../../secure-deployment-guidelines/overview/network-topology.md).
 
-## Paketera innehåll {#securely-packaging-content} på ett säkert sätt
+## Säker paketering av innehåll {#securely-packaging-content}
 
 Konfigurationsfilen för kommandoradsverktyget Adobe Primetime DRM Media Packager kräver en PKCS12-autentiseringsuppgift som används vid paketeringen.
 
-I verktygen för referensimplementering lagras lösenordet för PKCS12-inloggningsfilen i `flashaccess.properties`-filen i klartext. Därför bör du vara extra försiktig när du skyddar datorn som är värd för filen och ser till att datorn är i en säker miljö. Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-guidelines/physical-sec-and-access.md).
+I kommandoradsverktygen för referensimplementering lagras lösenordet för PKCS12-inloggningsfilen i `flashaccess.properties` i klartext. Därför bör du vara extra försiktig när du skyddar datorn som är värd för filen och ser till att datorn är i en säker miljö. Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Paketeraren använder även transportcertifikaten för licensservern och licensservern, och integriteten och sekretessen för informationen måste skyddas. Endast behöriga enheter bör tillåtas att använda paketeraren. Om dina privata nycklar har komprometterats ska du omedelbart informera Adobe Systems Incorporated så att certifikatet kan återkallas.
 
@@ -44,7 +43,7 @@ Om innehåll paketeras med en princip med felaktiga attribut måste profilen upp
 
 När paketeringen är klar skräpsamlas paketeringsnyckeln och tas inte bort explicit. Därför finns paketeringsnyckeln kvar i minnet en tid. Du måste skydda dig mot obehörig åtkomst till datorn och se till att du inte visar några filer, t.ex. kärndumpar, som kan avslöja den här informationen.
 
-## Säker lagring av profiler {#securely-storing-policies}
+## Lagra profiler på ett säkert sätt {#securely-storing-policies}
 
 Med Adobe Primetime DRM SDK kan du utveckla program som kan användas för att paketera innehåll och skapa policyer.
 
@@ -52,13 +51,13 @@ När du skapar dessa program kan du tillåta vissa användare att skapa och änd
 
 Profiler signeras inte och skyddas inte från att ändras förrän de används i paketeringen. Om du är oroad över att användare av paketeringsverktyget kan ändra profiler, ska du signera profilerna för att säkerställa att profilerna inte kan ändras.
 
-Mer information om hur du skapar program med SDK finns i Primetime DRM API:er i [API Primetime API-referenser](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Mer information om hur du skapar program med SDK finns i Primetimes DRM API:er på [API-referenser för API-prioritet](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
 ## Asymmetrisk nyckelkryptering {#asymmetric-key-encryption}
 
 Asymmetrisk nyckelkryptering, som även kallas kryptering med offentlig nyckel, använder nyckelpar. Den ena nyckeln är för kryptering och den andra för dekryptering.
 
-Dekrypteringsnyckeln, eller *`private key`*, hålls hemlig. krypteringsnyckeln, eller *`public key`*, är tillgänglig för alla som har behörighet att kryptera innehåll. Alla som har tillgång till den offentliga nyckeln kan kryptera innehållet. Det är dock bara någon som har tillgång till den privata nyckeln som kan dekryptera innehållet. Den privata nyckeln kan inte rekonstrueras från den offentliga nyckeln.
+dekrypteringsnyckeln eller *`private key`*&#x200B;är hemlig, krypteringsnyckeln eller *`public key`*, är tillgängligt för alla som har behörighet att kryptera innehåll. Alla som har tillgång till den offentliga nyckeln kan kryptera innehållet. Det är dock bara någon som har tillgång till den privata nyckeln som kan dekryptera innehållet. Den privata nyckeln kan inte rekonstrueras från den offentliga nyckeln.
 
 När du paketerar innehåll används licensserverns offentliga nyckel för att kryptera innehållskrypteringsnyckeln (CEK) i DRM-metadata. Du måste se till att bara licensservern har tillgång till licensserverns privata nyckel. Om någon annan har nyckeln kan de dekryptera och visa innehållet.
 

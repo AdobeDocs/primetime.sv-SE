@@ -1,22 +1,21 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 title: Läsa in en medieresurs i MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8258c45e-f8bf-434d-9621-88c189e1530d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
-# Läs in en medieresurs i MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
+# Läsa in en medieresurs i MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
 
 Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 
-1. Ange det uppspelningsbara objektet `MediaPlayer` med den nya resurs som ska spelas upp.
+1. Ange `MediaPlayer` objektets uppspelningsbara objekt med den nya resurs som ska spelas upp.
 
-   Ersätt det befintliga MediaPlayers uppspelningsbara objekt genom att anropa `MediaPlayer.replaceCurrentResource` och skicka en befintlig `MediaResource`-instans.
+   Ersätt det befintliga MediaPlayer-objektet genom att anropa `MediaPlayer.replaceCurrentResource` och skicka en befintlig `MediaResource` -instans.
 
 1. Kontrollera om det finns minst följande ändringar:
 
@@ -24,22 +23,22 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
    * FÖRBEREDD
    * FEL
 
-      Genom dessa händelser kan `MediaPlayer`-objektet meddela programmet när mediaresursen har lästs in.
+      Genom dessa evenemang `MediaPlayer` -objektet kan meddela programmet när mediaresursen har lästs in.
 
 1. När mediespelarens tillstånd ändras till INITIALIZED kan du anropa `MediaPlayer.prepareToPlay`
 
-   Initieringstillståndet anger att mediet har lästs in. Om du anropar `prepareToPlay` startar du annonsupplösningen och placeringsprocessen, om det finns någon.
+   Initieringstillståndet anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
 
 1. När mediespelarens status ändras till PREPARED har medieströmmen lästs in och förbereds för uppspelning.
 
-   När medieströmmen läses in skapas en `MediaPlayerItem`.
+   När medieströmmen läses in, `MediaPlayerItem` skapas.
 
-Om ett fel inträffar växlar MediaPlayer till FELstatus. Programmet meddelas också genom att `STATUS_CHANGED`-händelsen skickas till `MediaPlayerStatusChangeEvent`-återanropet.
+Om ett fel inträffar växlar MediaPlayer till FELstatus. Programmet meddelas också genom att `STATUS_CHANGED` för `MediaPlayerStatusChangeEvent` återanrop.
 
 Detta skickar flera parametrar:
-* En `type`-parameter av typen sträng med värdet `ERROR`.
+* A `type` parameter av typen sträng med värdet `ERROR`.
 
-* En `MediaError`-parameter som du kan använda för att få ett meddelande som innehåller diagnostikinformation om felhändelsen.
+* A `MediaError` parameter som du kan använda för att få ett meddelande som innehåller diagnostikinformation om felhändelsen.
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->

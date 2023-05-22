@@ -1,14 +1,13 @@
 ---
 description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
 title: API-element för svart
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # API-element för svart{#blackout-api-elements}
 
@@ -23,7 +22,7 @@ För att hantera strömavbrott i liveströmmar:
    TVSDK upptäcker inte ensam strömslutningstaggar. du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under tolkningen av manifestfilen.
 1. Skapa händelseavlyssnare för taggar som spelaren prenumererar på (i det här fallet PLAYBACK- och BLACKOUTS-taggar).
 
-   När en tagg inträffar som spelaren har prenumererat på (till exempel en out-tagg) i antingen förgrunden (huvudinnehåll) eller bakgrundsströmmanifest (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar en `TimedMetadataObject` för `TimedMetadataEvent`.
+   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar `TimedMetadataObject` för `TimedMetadataEvent`.
 
 1. Implementera hanterare för tidsbestämda metadatahändelser för både förgrunds- och bakgrundsströmmarna.
 
@@ -41,7 +40,7 @@ Du kan använda följande när du implementerar en svartpunkt i din spelare.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Sparar den inlästa resursen som bakgrundsresurs. Om `replaceCurrentResource` anropas efter den här metoden fortsätter TVSDK att hämta bakgrundsobjektets manifest tills du anropar `unregisterCurrentBackgroundItem`, `release` eller `reset`.
+   * `registerCurrentItemAsBackgroundItem` Sparar den inlästa resursen som bakgrundsresurs. If `replaceCurrentResource` anropas efter den här metoden fortsätter TVSDK att hämta bakgrundsobjektets manifest tills du anropar `unregisterCurrentBackgroundItem`, `release`, eller `reset`.
 
    * `unregisterCurrentBackgroundItem` Anger att bakgrundsobjektet ska vara null och stoppar hämtning och tolkning av bakgrundsmanifestet.
 
@@ -49,13 +48,13 @@ Du kan använda följande när du implementerar en svartpunkt i din spelare.
 
    En metadataklass som är specifik för strömavbrott.
 
-   På så sätt kan du ställa in icke sökbara intervall (en matris på `TimeRanges`) på TVSDK. TVSDK söker efter dessa intervall varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas tvingar TVSDK användaren till slutet av det intervall som inte går att söka i.
+   På så sätt kan du ange icke sökbara intervall (en array med `TimeRanges`) på TVSDK. TVSDK söker efter dessa intervall varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas tvingar TVSDK användaren till slutet av det intervall som inte går att söka i.
 
-* **STARTA HÄR NÄSTA** AdvertisingMetadataAktivera eller inaktivera inledning i en liveström genom  `enableLivePreroll` att ange true eller false. Om värdet är false gör inte TVSDK något explicit annonsserveranrop för pre-roll-annonser före innehållsuppspelningen och spelar därför inte upp pre-roll. Detta påverkar inte mittrullarna. Standardvärdet är true.
+* **STARTA HÄR NÄSTA ANNONSMETOD** Aktivera eller inaktivera inledning i en liveström genom att ange `enableLivePreroll` till true eller false. Om värdet är false gör inte TVSDK något explicit annonsserveranrop för pre-roll-annonser före innehållsuppspelningen och spelar därför inte upp pre-roll. Detta påverkar inte mittrullarna. Standardvärdet är true.
 
 * **MediaPlayer.BlackoutsEventListener**
 
-   * `onTimedMetadataInBackgroundItem` - Skickas när identifierar en prenumerationstagg i bakgrundsmanifestet och en ny  `TimedMetadata` instans förbereds. `TimedMetadata`-instansen skickas som en parameter.
+   * `onTimedMetadataInBackgroundItem` - Skickas när identifierar en prenumerationstagg i bakgrundsmanifestet och en ny `TimedMetadata` -instansen förbereds från den. The `TimedMetadata` -instansen skickas som en parameter.
 
    * `onBackgroundManifestFailed` - Skickas när mediespelaren helt inte kan läsa in bakgrundsmanifestet, det vill säga att alla strömmens URL returnerar antingen ett fel eller ett ogiltigt svar.
 

@@ -1,20 +1,19 @@
 ---
 description: Flaggan forceflash i källlistan tvingar fram Flash som reserv för en URL. För den här URL:en kan du använda Adobe Flash Player för att spela upp innehållet.
 title: Tvinga Flash-reserv med hjälp av mediekälllistan
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Tvinga Flash-reserv med hjälp av mediekälllistan{#forcing-the-flash-fallback-using-the-media-source-list}
 
 Flaggan forceflash i källlistan tvingar fram Flash som reserv för en URL. För den här URL:en kan du använda Adobe Flash Player för att spela upp innehållet.
 
-I listan över mediekällor (till exempel i filen `sources.js`) kan du ställa in `forceflash` på `true`. Exempel:
+I listan över mediekällor (till exempel i `sources.js` fil), kan du ange `forceflash` till `true`. Till exempel:
 
 ```js
 { 
@@ -31,4 +30,3 @@ I listan över mediekällor (till exempel i filen `sources.js`) kan du ställa i
         "forceflash" : true
 },
 ```
-

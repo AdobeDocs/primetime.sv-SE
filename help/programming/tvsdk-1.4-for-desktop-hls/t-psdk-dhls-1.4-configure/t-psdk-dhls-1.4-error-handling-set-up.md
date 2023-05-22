@@ -1,14 +1,13 @@
 ---
 description: Skapa en enda plats för att hantera fel.
 title: Konfigurera felhantering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ce4a2954-0166-43af-afdf-0aa24659f1ae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera felhantering{#set-up-error-handling}
 
@@ -16,15 +15,15 @@ Skapa en enda plats för att hantera fel.
 
 1. Implementera en händelseåteranropsfunktion för `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
 
-   TVSDK skickar händelseinformation, till exempel ett `MediaPlayerStatusChangeEvent`-objekt.
-1. I återanropet, när statusen från händelseparametern är `MediaPlayerStatus.ERROR`, tillhandahåller du logik för att hantera alla fel.
-1. När felet har hanterats återställer du objektet `MediaPlayer` eller läser in en ny medieresurs.
+   TVSDK skickar händelseinformation, till exempel `MediaPlayerStatusChangeEvent` -objekt.
+1. I återanropet, när statusen från händelseparametern är `MediaPlayerStatus.ERROR`, tillhandahåller logik för att hantera alla fel.
+1. När felet har hanterats återställer du `MediaPlayer` eller läsa in en ny medieresurs.
 
-   När `MediaPlayer`-objektet är i feltillstånd kan det inte avsluta det här läget förrän du antingen återställer `MediaPlayer`-objektet (via metoden `MediaPlayer.reset`) eller läser in en ny medieresurs ( `MediaPlayer.replaceCurrentItem`).
+   När `MediaPlayer` objektet är i feltillstånd, det kan inte avsluta det här läget förrän du återställer `MediaPlayer` objekt (via `MediaPlayer.reset` eller läsa in en ny medieresurs ( `MediaPlayer.replaceCurrentItem`).
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
-Exempel:
+Till exempel:
 
 ```
 mediaPlayer.addEventListener(MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
@@ -37,4 +36,3 @@ private void onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
     } 
 } 
 ```
-

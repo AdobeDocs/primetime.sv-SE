@@ -1,14 +1,13 @@
 ---
 description: Verktygsklassen TimeRangeCollection abstraherar begreppet om en ordnad samling med TimeRange-specifikationer och tillhandahåller tjänster som kan översättas till en Metadata-instans.
 title: Klassen TimeRangeCollection
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1af41267-c222-43ac-84ca-0bf37b6a59de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
-
 
 # Klassen TimeRangeCollection{#timerangecollection-class}
 
@@ -32,4 +31,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Parametern `type`, som är den första positionsparametern i signaturen för konstruktormetoderna, är en instans av uppräkningen `TimeRangeCollection#Type`. Detta är en del av klassen `TimeRangeCollection`. De värden som för närvarande definieras av den här uppräkningen är `MARK_RANGES`, `DELETE_RANGES` och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection`-objekt med dessa tre typer.
+The `type` parameter, som är den första positionsparametern i signaturen för konstruktormetoderna, är en instans av `TimeRangeCollection#Type` uppräkning. Detta är en del av `TimeRangeCollection` klassen. Värdena som för närvarande definieras av den här uppräkningen är `MARK_RANGES`, `DELETE_RANGES`och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection` objekt som använder dessa tre typer.

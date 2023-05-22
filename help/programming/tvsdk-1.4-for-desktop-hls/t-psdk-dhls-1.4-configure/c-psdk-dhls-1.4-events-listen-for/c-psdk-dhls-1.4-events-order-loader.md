@@ -1,14 +1,13 @@
 ---
-description: 'Spelaren kan implementera åtgärder baserat på följande händelser '
+description: Spelaren kan implementera åtgärder baserat på följande händelser
 title: Loader-händelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c9fd00fb-1872-4bfb-8ce3-fdece4af45fe
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
 
 ---
-
 
 # Loader-händelser{#loader-events}
 
@@ -18,4 +17,3 @@ Spelaren kan implementera åtgärder baserat på följande händelser:
 |---|---|
 | `MediaPlayerItemLoader.completed` | Inläsningen av medieresursen har slutförts. |
 | `MediaPlayerItemLoader.failed` | Ett problem uppstod vid inläsning av medieresurser. |
-

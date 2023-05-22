@@ -1,20 +1,19 @@
 ---
 description: När DRM-metadata för en video inkluderas i medieströmmen kan du utföra autentisering under uppspelningen.
 title: DRM-autentisering under uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f6e6e73a-d455-4b2c-b35c-2db173372092
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # DRM-autentisering under uppspelning {#drm-authentication-during-playback}
 
 När DRM-metadata för en video inkluderas i medieströmmen kan du utföra autentisering under uppspelningen.
 
-Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks används `DRMHelper`-metoderna för att kontrollera om DRM-metadata kräver DRM-autentisering.
+Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks visas `DRMHelper` metoder används för att kontrollera om DRM-metadata kräver DRM-autentisering.
 
 >[!TIP]
 >
@@ -35,7 +34,7 @@ Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya D
    };
    ```
 
-1. Använd `DRMMetadata` för att kontrollera om autentisering behövs.
+1. Använd `DRMMetadata` för att kontrollera om autentisering krävs.
 
    * Om autentisering inte krävs behöver du inte göra något, och uppspelningen fortsätter utan avbrott.
    * Om autentisering krävs, slutför DRM-autentisering.
@@ -46,7 +45,7 @@ Med licensrotation krypteras en resurs med flera DRM-licenser. Varje gång nya D
 
 <!--<a id="example_939B95F831A245869F9248E2767F260C"></a>-->
 
-Exempel:
+Till exempel:
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  
@@ -111,4 +110,3 @@ DRMMetadataInfoEventListener drmMetadataInfoEventListener =
     } 
 }; 
 ```
-

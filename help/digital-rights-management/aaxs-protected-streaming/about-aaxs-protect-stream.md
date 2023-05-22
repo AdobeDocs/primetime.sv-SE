@@ -2,16 +2,15 @@
 title: Om Adobe Access Server för skyddad strömning
 description: Om Adobe Access Server för skyddad strömning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 69fbc99d-ee1a-4066-ae01-d61838db32a3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
 
 ---
 
-
-# Om Adobe Access Server för skyddad direktuppspelning{#about-adobe-access-server-for-protected-streaming}
+# Om Adobe Access Server för skyddad strömning{#about-adobe-access-server-for-protected-streaming}
 
 Adobe® Access™ Server for Protected Streaming är en licensserverimplementering som bygger på Adobe Access SDK. Den här servern utfärdar licenser för skyddat innehåll till Adobe Access-klienter.
 

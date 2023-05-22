@@ -2,18 +2,17 @@
 title: Egenskaper för konfigurationsfil
 description: Egenskaper för konfigurationsfil
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ce4193fa-d217-4134-b08e-715c2cc57c84
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
-
 # Egenskaper för konfigurationsfil {#configuration-file-properties}
 
-Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna. Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåller *n* representerar *n* ett heltal som börjar med 1 och ökar för varje instans av egenskapen.
+Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna. Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåller *n*, *n* representerar ett heltal som börjar med 1 och ökar för varje instans av egenskapen.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_qk1_rry_n4"> 
  <thead class="- topic/thead "> 
@@ -37,7 +36,7 @@ Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">Lösenordet som används för att skydda filen som anges av <span class="+ topic/ph pr-d/codeph codeph"> licensgen.sign.certfile.</span> </td> 
+   <td colname="2" class="- topic/entry ">Lösenordet som används för att skydda filen som anges av <span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile.</span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.domainca.n</span> </td> 
@@ -45,7 +44,7 @@ Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric.licenseServerCredential.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Valfri PKCS12-fil med ytterligare autentiseringsuppgifter för licensservern för dekryptering av CEK i metadata och principen. Ytterligare autentiseringsuppgifter kan konfigureras om innehållet tidigare paketerats med ett annat licensservercertifikat än det som anges av <span class="codeph"> licensgen.sign.certfile</span>. Den här egenskapen bör referera till en <span class="filepath"> .pfx</span>-fil som innehåller ett certifikat och en privat nyckel. n måste öka monotont, med början från 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Valfri PKCS12-fil med ytterligare autentiseringsuppgifter för licensservern för dekryptering av CEK i metadata och principen. Ytterligare autentiseringsuppgifter kan konfigureras om innehållet tidigare har paketerats med ett annat licensservercertifikat än det som anges av <span class="codeph"> licensegen.sign.certfile</span>. Den här egenskapen ska referera till en <span class="filepath"> .pfx</span> som innehåller ett certifikat och en privat nyckel. n måste öka monotont, med början från 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric.licenseServerCredential.n.password</span> </td> 
@@ -53,4 +52,3 @@ Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna
   </tr> 
  </tbody> 
 </table>
-

@@ -1,14 +1,13 @@
 ---
 description: Innehållet i en AdAsset beskriver en tilläggsbanderoll.
 title: Kompletterande banderolldata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fae96cb8-0092-43ed-a26b-cdaa1389a368
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
-
 
 # Kompletterande banderolldata {#companion-banner-data}
 
@@ -16,12 +15,12 @@ Innehållet i en AdAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Var `AdAsset` innehåller information om hur resursen visas.
+Varje `AdAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> <b>Tillgänglig information  </b></th> 
+   <th colname="col1" class="entry"> <b>Tillgänglig information </b></th> 
    <th colname="col2" class="entry"> <b>Beskrivning</b> </th> 
   </tr> 
  </thead>
@@ -44,7 +43,7 @@ Var `AdAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1"> statisk URL </td> 
-   <td colname="col2"> <p>Ibland har den tillhörande banderollen också en <span class="codeph"> staticURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild eller swf för att visa banderollen på scenen Flash i stället. I det här fallet kan du använda den statiska URL:en <span class="codeph"></span> för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
+   <td colname="col2"> <p>Ibland har den andra banderollen också en <span class="codeph"> staticURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild eller swf för att visa banderollen på scenen Flash i stället. I det här fallet kan du använda <span class="codeph"> staticURL</span> för att visa banderollen. </p> <p>Viktigt: Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
   </tr> 
  </tbody> 
 </table>

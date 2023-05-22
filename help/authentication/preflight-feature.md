@@ -1,13 +1,13 @@
 ---
 title: Preflight-funktion, Aktivera, Felsök eller Bestäm problemet
 description: Preflight-funktion, Aktivera, Felsök eller Bestäm problemet
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
 
 ---
-
 
 # Preflight-funktion: Så här aktiverar, felsöker eller fastställer du problemet {#preflight-feature}
 
@@ -39,4 +39,3 @@ Detta är alltså saker som man bör tänka på när man aktiverar/felsöker pre
 **Begränsning**
 
 Observera att vi inte får tillbaka något resurs-ID från Preflight-anropet för vissa MVPD-program som AT&amp;T &amp; TWC om något av resurs-ID:n är ett falskt ID eller ett okänt ID i listan över resurs-ID:n som de skickar i preflight-anropet, även om vi har giltiga och auktoriserade resurser i den listan.
-

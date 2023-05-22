@@ -1,16 +1,15 @@
 ---
 description: Video Player Ad-Serving Interface Definition (VPAID) 2.0 är ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Stöd för VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ee3e0cd9-463e-4de9-a94f-292e968b6f08
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
-
-# Stöd för VPAID 2.0 och {#vpaid-ad-support}
+# Stöd för VPAID 2.0 {#vpaid-ad-support}
 
 Video Player Ad-Serving Interface Definition (VPAID) 2.0 är ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 
@@ -37,11 +36,11 @@ Följande funktioner stöds inte:
 
 Följande ändringar har gjorts i API:t:
 
-* En `getCustomAdView`-funktion har lagts till i `MediaPlayer` och returnerar webbvyn som återger VPAID-annonsen.
+* A `getCustomAdView` funktionen har lagts till i `MediaPlayer` och returnerar webbvyn som återger VPAID-annonsen.
 
-   Mer information om `CustomAdView`-objektet som returneras av den här funktionen finns i [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
+   Mer information om `CustomAdView` objekt som returneras av den här funktionen, se [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
 
-* En `CUSTOM_AD`-händelse skickas från mediespelarinstansen.
+* A `CUSTOM_AD` -händelsen skickas från mediespelarinstansen.
 
    Programmet kan registrera ett händelseåteranrop genom att implementera `CustomAdEventListener`.
 
@@ -54,7 +53,7 @@ Följande ändringar har gjorts i API:t:
 Under uppspelningen av VPAID-annonsen:
 
 * VPAID-annonsen visas i en visningsbehållare ovanför spelarvyn, så koden som är beroende av att användarna trycker på spelarvyn fungerar inte.
-* Huvudinnehållsspelaren är pausad och anrop till `pause` och `play` på spelarinstansen används för att pausa och återuppta annonsen för VPAID.
+* Huvudspelaren är pausad och anropar `pause` och `play` på spelarinstansen används för att pausa och återuppta annonsen för VPAID.
 
 * VPAID-annonser har ingen fördefinierad varaktighet eftersom annonsen kan vara interaktiv.
 

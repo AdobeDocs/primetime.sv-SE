@@ -1,14 +1,13 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste webbläsarens TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
 title: Annonsinfogning och failover för VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 62b82f56-e8c7-4c44-8b70-f204908777c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
 
 ---
-
 
 # Annonsinfogning och failover för VOD{#advertising-insertion-and-failover-for-vod}
 
@@ -35,7 +34,7 @@ Browser TVSDK stöder följande typer av annonseringsleverantörer:
       Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
    Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Ad-insertion phase {#section_88A0E4FA12394717A9D85689BD11D59F}
+## Fas för annonsinfogning {#section_88A0E4FA12394717A9D85689BD11D59F}
 
 Webbläsarens TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 
@@ -45,7 +44,7 @@ Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidsli
 
 Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Annonsuppspelningsfas {#section_7B0073BE9A744C74929263182C1243FC}
+## Ad-uppspelningsfas {#section_7B0073BE9A744C74929263182C1243FC}
 
 Webbläsaren TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 

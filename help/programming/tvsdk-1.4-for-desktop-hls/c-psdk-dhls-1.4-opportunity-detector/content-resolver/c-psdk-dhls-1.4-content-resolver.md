@@ -1,14 +1,13 @@
 ---
 description: En affärsmöjlighetsdetektor är en TVADK-komponent som identifierar anpassade taggar i en ström och identifierar placeringsmöjligheter. Dessa möjligheter skickas till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa affärsmöjlighetsdetektorer och innehållslösningar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0721278c-e128-4afc-ae81-4f23c2644859
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#customize-opportunity-detectors-and-content-resolvers-overiew}
 
@@ -30,4 +29,3 @@ Du kan åsidosätta standardfunktioner för att identifiera affärsmöjligheter 
 * Identifiera anpassade taggar för annonsinfogning
 * Skapa en anpassad annonsleverantör
 * Svart ut-innehåll
-

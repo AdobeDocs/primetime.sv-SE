@@ -2,22 +2,21 @@
 title: Undersöker krypterat filinnehåll
 description: Undersöker krypterat filinnehåll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a8a61d1c-c259-4346-9a71-6741f70697ae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
-
 # Undersöker krypterat filinnehåll {#examining-encrypted-file-content}
 
 Så här undersöker du innehållet i en FLV- eller F4V-fil med Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i projektet.
-1. Skapa en `MediaEncrypter`-instans.
-1. Skicka den krypterade filen till metoden `MediaEncrypter.examineEncryptedContent`, som returnerar ett `KeyMetaData`-objekt.
-1. Inspect informationen i `KeyMetaData`-objektet.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i ditt projekt.
+1. Skapa en `MediaEncrypter` -instans.
+1. Skicka den krypterade filen till `MediaEncrypter.examineEncryptedContent` metod, som returnerar `KeyMetaData` -objekt.
+1. Inspect the information within the `KeyMetaData` -objekt.
 
-Exempelkod som visar hur du extraherar DRM-metadata från en krypterad fil finns i `com.adobe.flashaccess.samples.mediapackager.ExamineContent` i katalogen &quot;samples&quot; i Reference Implementation Command Line Tools.
+Exempelkod som visar hur du extraherar DRM-metadata från en krypterad fil finns i `com.adobe.flashaccess.samples.mediapackager.ExamineContent` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.

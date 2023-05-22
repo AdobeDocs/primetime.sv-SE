@@ -1,14 +1,13 @@
 ---
 description: Flash Media Rights Management Server 1.x och Adobe Primetime DRM använder olika metadata för att paketera innehåll och begära licenser. För att Primetime DRM ska kunna använda FMRMS version 1.x-innehåll måste metadata konverteras.
 title: Säkerställer kompatibilitet med Flash Media Rights Management Server 1.x
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 737c853f-4e27-47e6-9248-857c7800795a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
 
 ---
-
 
 # Säkerställer kompatibilitet med Flash Media Rights Management Server 1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}
 
@@ -27,6 +26,6 @@ Primetime DRM SDK har stöd för följande alternativ för konvertering av metad
    >
    >Primetimes DRM 1.x-metadata innehåller inte CEK.
 
-   För att kunna konvertera metadata måste Primetime DRM ha tillgång till innehållskrypteringsnycklarna Primetime DRM 1.x. När du migrerar från Flash Media Rights Management Server 1.x kan du fortsätta att lagra innehållskrypteringsnycklarna i LiveCycle ES-databasen eller implementera en anpassad lösning för att säkert lagra innehållskrypteringsnycklarna på en annan plats. Om du bestämmer dig för att lagra innehållskrypteringsnycklarna i LiveCycle ES-databasen följer du rekommendationerna som beskrivs i *Skydda åtkomst till känsligt innehåll i databasen* i **Förbättring och skydd för LiveCycle® ES2**.
+   För att kunna konvertera metadata måste Primetime DRM ha tillgång till innehållskrypteringsnycklarna Primetime DRM 1.x. När du migrerar från Flash Media Rights Management Server 1.x kan du fortsätta att lagra innehållskrypteringsnycklarna i LiveCycle ES-databasen eller implementera en anpassad lösning för att säkert lagra innehållskrypteringsnycklarna på en annan plats. Om du bestämmer dig för att lagra innehållskrypteringsnycklarna i LiveCycle ES-databasen följer du de rekommendationer som beskrivs i *Skydda åtkomst till känsligt innehåll i databasen* in **Härdning och säkerhet för LiveCycle® ES2**.
 
 Mer information om hur du säkerställer kompatibilitet med innehåll som paketerats med Flash Media Rights Management Server 1.x finns i Adobe Primetime DRM API:er på [Adobe Primetime API-referenser](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).

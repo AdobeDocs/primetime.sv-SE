@@ -1,13 +1,13 @@
 ---
 title: Förstå användar-ID:n
 description: Förstå användar-ID:n
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 813a8501-db72-4850-a387-c8db6120db80
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
-
 
 # Förstå användar-ID:n {#understanding-user-ids}
 
@@ -39,4 +39,3 @@ Hur du använder användar-ID beror på användningsfallet:
 * Om du behöver det för att spåra/analysera är det mest praktiska stället att få det från `sendTrackingData()`.
 * Om du behöver det på serversidan för att kunna frigöra dataströmmar, utföra bedrägeri eller använda data kan du hämta det från Media Token-valideraren.
 * Om du behöver det för kontolänkning och djupare bedrägerier bör du kontakta Adobe för att få reda på om de finns tillgängliga.
-

@@ -2,14 +2,13 @@
 title: Primetime DRM på klienten
 description: Primetime DRM på klienten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 157d558f-3014-4d05-bba1-e73134cedc23
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
-
 
 # Primetime DRM på klienten{#primetime-drm-on-the-client}
 

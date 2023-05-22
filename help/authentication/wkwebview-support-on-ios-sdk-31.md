@@ -1,13 +1,13 @@
 ---
 title: Stöd för WKWebView i iOS SDK 3.1+
 description: Stöd för WKWebView i iOS SDK 3.1+
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 90062be0-1a0a-44ae-8d8e-f4d97a92b17a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för WKWebView i iOS SDK 3.1+ {#wkwebview-support-on-ios-sdk-3.1}
 

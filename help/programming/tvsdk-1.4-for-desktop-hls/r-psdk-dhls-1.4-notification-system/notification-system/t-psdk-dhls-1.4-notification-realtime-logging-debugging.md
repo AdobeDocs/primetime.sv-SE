@@ -1,14 +1,13 @@
 ---
 description: Du kan använda meddelanden för att implementera loggning i realtid i videoprogrammet.
 title: Lägg till loggning och felsökning i realtid
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 06ba7207-bb6e-4f77-8575-746505b131bd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till loggning och felsökning i realtid{#add-real-time-logging-and-debugging}
 
@@ -34,4 +33,4 @@ Här är ett exempel på hur du hämtar meddelanden.
    Fjärrservern kan sedan grafiskt visa de data som tillhandahålls i realtid.
 1. Om du vill identifiera förlust av meddelandehändelser ska du leta efter luckor i sekvensen med händelseindexvärden.
 
-   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av klassen `NotificationHistory`.
+   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av `NotificationHistory` klassen.

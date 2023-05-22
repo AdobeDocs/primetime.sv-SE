@@ -1,16 +1,15 @@
 ---
 description: All användning av Adobe Access består av två huvudsteg vid olika tidpunkter i arbetsflödet. Förberedelsen av innehållet måste göras en gång per resurs, vilket resulterar i att skyddat innehåll skapas. Inköp av innehåll görs flera gånger, en gång för varje konsument som vill titta på den skyddade resursen.
 title: Förbereda innehåll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c658c7e9-2583-4d74-a94b-800023cf5196
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
-# Innehållsförberedelse {#content-preparation}
+# Förbereda innehåll {#content-preparation}
 
 All användning av Adobe Access består av två huvudsteg vid olika tidpunkter i arbetsflödet. Förberedelsen av innehållet måste göras en gång per resurs, vilket resulterar i att skyddat innehåll skapas. Inköp av innehåll görs flera gånger, en gång för varje konsument som vill titta på den skyddade resursen.
 
@@ -34,4 +33,3 @@ Stegen för att koda, paketera och distribuera innehåll är följande:
 1. Gör det skyddade innehållet tillgängligt för distribution till konsumenter.
 
    Det skyddade innehållet distribueras vanligtvis via ett nätverk för innehållsdistribution (CDN). CDN kan använda vilken mekanism som helst som stöds av klientmiljön, till exempel Flash Media Server, Adobe HTTP Dynamic Streaming för direktuppspelning med flera bithastigheter eller en HTTP-webbserver för progressiv nedladdning.
-

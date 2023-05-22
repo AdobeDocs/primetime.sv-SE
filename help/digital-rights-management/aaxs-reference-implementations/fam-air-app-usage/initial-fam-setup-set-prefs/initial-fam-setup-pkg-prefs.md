@@ -2,14 +2,13 @@
 title: Inställningar för Packager
 description: Inställningar för Packager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 43e49372-a875-413a-ba27-25e3ce5c64c4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
-
 
 # Inställningar för Packager {#packager-preferences}
 
@@ -22,7 +21,7 @@ Fliken innehåller inställningar som krävs för att paketera innehåll. I föl
 | Alternativ för nyckelkryptering | Anger hur innehållskrypteringsnyckeln krypteras vid paketering |
 | Licensservercertifikat | License Server-certifikatet som utfärdas av Adobe. Filen måste finnas i resurskatalogen. CEK krypteras med den offentliga nyckeln för licensservern. Endast innehavare av licensserverns privata nyckel får dekryptera CEK. |
 | Packager Credential | Packager-autentiseringsuppgifterna som utfärdas av Adobe. Den här filen används för att signera metadata under paketeringen. |
-| Filnamn | Filen `PKCS#12` (.pfx) som innehåller certifikat och privat nyckel. Filen måste finnas i resurskatalogen. |
+| Filnamn | The `PKCS#12` (.pfx) som innehåller certifikat och privat nyckel. Filen måste finnas i resurskatalogen. |
 | Fillösenord | Lösenord för pfx-fil |
 | Egenskaper för global bevakad mapp | Anger inställningar som är gemensamma för alla bevakade mappar som har konfigurerats på den här servern. |
 | Kontrollintervall i millisekunder | Anger hur ofta bevakade mappar ska söka efter nytt innehåll som ska paketeras. Servern itererar genom alla konfigurerade bevakade mappar och väljer sedan så här länge. |

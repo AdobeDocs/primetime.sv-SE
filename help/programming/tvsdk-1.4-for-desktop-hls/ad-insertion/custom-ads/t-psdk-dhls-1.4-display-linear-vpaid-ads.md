@@ -1,20 +1,19 @@
 ---
 description: TVSDK stöder visning av VPAID-annonser (linear Video Player-Ad Interface Definition) i en annonsbrytning. VPAID version 1.0 kräver Flash, medan version 2.0 också fungerar med Browser TVSDK och JavaScript.
 title: Visa linjära VPAID-annonser i en annonsbrytning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 316a38ac-ec2d-498c-b441-304e2fa75993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Visa linjära VPAID-annonser i en annonsbrytning{#display-linear-vpaid-ads-in-an-ad-break}
 
 TVSDK stöder visning av VPAID-annonser (linear Video Player-Ad Interface Definition) i en annonsbrytning. VPAID version 1.0 kräver Flash, medan version 2.0 också fungerar med Browser TVSDK och JavaScript.
 
-Om du vill visa VPAID-annonser korrekt måste du ange en annonsbehållare ( `AdContainerView`) i `MediaPlayerContext`-instansen.
+Om du vill visa VPAID-annonser korrekt måste du ange en annonsbehållare ( `AdContainerView`) i `MediaPlayerContext` -instans.
 
 Begränsningar för VPAID-annonser:
 
@@ -55,4 +54,3 @@ Så här ställer du in en annonsbehållare för visning av VPAID-annonser (vers
    >{ _adContainer.setSize(stage.stageWidth, stage.stageHeight, stage.displayState); } 
    >}
    >```
-

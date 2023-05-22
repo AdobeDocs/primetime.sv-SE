@@ -2,14 +2,13 @@
 title: Leverantörsspecifik säkerhetsinformation
 description: Leverantörsspecifik säkerhetsinformation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 668321c5-b2c7-4bb3-9f68-2dba622a54de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
-
 
 # Leverantörsspecifik säkerhetsinformation{#vendor-specific-security-information}
 
@@ -83,4 +82,3 @@ När du skyddar programservern måste du implementera de mått som beskrivs av s
 * Stänger portar som inte behövs
 * Begränsa administrativa gränssnitt med IP-adresser eller domäner
 * Använda Java™ Security Manager
-

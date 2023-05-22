@@ -2,14 +2,13 @@
 title: Konfigurera licensserverdatabasen
 description: Konfigurera licensserverdatabasen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: be6232b4-bf51-486f-9c85-ab6f6ec6d9bd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera licensserverdatabasen{#set-up-the-license-server-database}
 
@@ -28,22 +27,21 @@ Anonym licensköp kräver inte att databasen körs.
 
 Om du vill köra licensservern måste du installera och konfigurera MySQL:
 
-1. På dvd-skivan går du till mappen [!DNL Third Party\MySQL\Installer\5.1] och startar installationsprogrammet.
+1. På DVD:n går du till [!DNL Third Party\MySQL\Installer\5.1] och starta installationsprogrammet.
 1. Slutför MySQL-installationen.
 1. Välj **[!UICONTROL Configure MySQL Server Now]** för att starta konfigurationsguiden.
 1. Använd standardinställningarna eller välj specifika inställningar för testningen tills den femte skärmen visas.
-1. På den femte skärmen väljer du **[!UICONTROL Online Transaction Processing (OLTP)]** eller **[!UICONTROL Manual Setting]** och anger maximalt antal tillåtna anslutningar.
+1. På femte skärmen väljer du **[!UICONTROL Online Transaction Processing (OLTP)]** eller **[!UICONTROL Manual Setting]** och ange maximalt antal tillåtna anslutningar.
 1. Skriv ned rotlösenordet.
 1. Så här installerar du om MySQL om du behöver starta servern senare:
-   1. Ta bort mappen *system drive:*.
+   1. Ta bort *systemenhet:* mapp.
 
       Mappen finns i [!DNL \Documents and Settings\All Users\Application Data\MySQL].
    1. Ta bort den gamla installationsmappen för MySQL.
 
-      Exempel: *systemenhet:*, som finns i [!DNL \Program Files\MySQL\MySQL Server 5.1].
-1. Om du vill installera MySQL JDBC Driver 5.1.7 kopierar du filen [!DNL mysql-connector-java-5.1.7-bin.jar] i mappen [!DNL Third Party\MySQL\Installer\5.1] på dvd-skivan till katalogen [!DNL ...\Tomcat6.0\lib] på Tomcat-servern.
+      Till exempel: *systemenhet:* som finns i [!DNL \Program Files\MySQL\MySQL Server 5.1].
+1. Om du vill installera MySQL JDBC Driver 5.1.7 kopierar du [!DNL mysql-connector-java-5.1.7-bin.jar] i [!DNL Third Party\MySQL\Installer\5.1] på dvd-skivan till [!DNL ...\Tomcat6.0\lib] på Tomcat Server.
 
    >[!NOTE]
    >
    >MySQL JDBC Driver 5.1.7 fungerar med Tomcat 6.0. Äldre versioner av Tomcat stöds inte längre.
-

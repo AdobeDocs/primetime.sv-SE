@@ -1,14 +1,13 @@
 ---
 description: Skapa en PlaybackManager som hanterar konfigurationen och uppspelningen av HLS-strömmen. Ingen annan konfiguration krävs.
 title: Aktivera videouppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b53f602b-5752-4471-9905-2e4351dfc8d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera videouppspelning {#enable-video-playback}
 
@@ -30,7 +29,7 @@ Skapa en PlaybackManager som hanterar konfigurationen och uppspelningen av HLS-s
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementera `PlaybackManagerEventListener` i `PlayerFragment` för att hantera uppspelningshändelserna:
+1. Implementera `PlaybackManagerEventListener` i `PlayerFragment` för att hantera uppspelningshändelser:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  

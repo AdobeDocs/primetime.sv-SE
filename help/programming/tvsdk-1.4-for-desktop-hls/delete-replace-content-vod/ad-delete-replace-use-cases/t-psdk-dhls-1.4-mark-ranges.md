@@ -2,18 +2,17 @@
 title: Markera intervall
 description: Markera intervall
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
-
 # Markera intervall{#mark-ranges}
 
-Markera `TimeRanges` mellan `begin` och `end` i `localTime` som en `AdBreak` från tidslinjen. Andra annonsinställningar ignoreras.
+Mark `TimeRanges` mellan `begin` och `end` in `localTime` som `AdBreak` från tidslinjen. Andra annonsinställningar ignoreras.
 
 1. Markera tidsintervall.
 
@@ -58,4 +57,3 @@ Markera `TimeRanges` mellan `begin` och `end` i `localTime` som en `AdBreak` fr�
        "id": "vod_004"
    }
    ```
-

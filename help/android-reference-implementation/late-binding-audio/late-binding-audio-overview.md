@@ -1,14 +1,13 @@
 ---
 description: Du kan aktivera och bygga kontroller för det sena ljudbindningen.
 title: Översikt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: be3b41c5-1c30-430c-9baa-06b6496aceb4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#overview}
 
@@ -22,4 +21,3 @@ Du kan implementera olika arbetsflöden beroende på vilket användargränssnitt
 1. När användaren trycker på knappen Inställningar i användargränssnittet visas alternativen för ljudspår.
 1. När ett ljudspår är markerat blir det aktiva ljudspåret.
 1. Slutanvändaren kan trycka på knappen Inställningar för att växla tillbaka till det ursprungliga ljudspåret.
-

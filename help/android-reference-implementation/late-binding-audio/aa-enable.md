@@ -1,16 +1,15 @@
 ---
 description: Du kan integrera ljudströmmar med senare bindning eller alternativa ljudformat i spelaren genom att skapa en alternativ ljudfunktionshanterare.
 title: Integrera ljud med senare bindning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 43be9042-d547-4646-a920-cdd2a5dbb1fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
-
-# Integrera det senast bindande ljudet {#integrate-late-binding-audio}
+# Integrera ljud med senare bindning {#integrate-late-binding-audio}
 
 Du kan integrera ljudströmmar med senare bindning eller alternativa ljudformat i spelaren genom att skapa en alternativ ljudfunktionshanterare.
 
@@ -20,7 +19,7 @@ Du kan integrera ljudströmmar med senare bindning eller alternativa ljudformat 
    AAManager aaManager = new AAManagerOn(); 
    ```
 
-* Om du vill använda ManagerFactory för att aktivera alternativt ljud kontrollerar du att följande kodrad finns i `PlayerFragment.java`-filen:
+* Om du vill använda ManagerFactory för att aktivera alternativt ljud kontrollerar du att följande kodrad finns i `PlayerFragment.java` fil:
 
    ```java
    aaManager = ManagerFactory.getAAManager( 
@@ -33,4 +32,3 @@ Du kan integrera ljudströmmar med senare bindning eller alternativa ljudformat 
    aaManager = ManagerFactory.getAAManager( 
    <b>false</b>,config, mediaPlayer);
    ```
-

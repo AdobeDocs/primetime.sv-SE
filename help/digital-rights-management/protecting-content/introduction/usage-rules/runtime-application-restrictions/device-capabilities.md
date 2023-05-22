@@ -2,14 +2,13 @@
 title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 description: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 540fbb53-ec1a-43be-b51b-9937ed31e384
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # Enhetsfunktioner som krävs för att spela upp skyddat innehåll {#device-capabilities-required-to-play-protected-content}
 
@@ -45,4 +44,3 @@ Följande attribut kan identifiera enhetsfunktionerna:
 >Den här användningsregeln stöds av Adobe Primetime DRM-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern.
 >
 >Se [Minsta klientversion](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-

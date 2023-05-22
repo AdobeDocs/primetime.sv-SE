@@ -1,24 +1,23 @@
 ---
 description: Från det ögonblick du skapar MediaPlayer-instansen till det ögonblick du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar mellan lägen i den här instansen.
 title: MediaPlayer-objektets livscykel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: efb39fea-1050-41e5-93d8-1175a54f81e5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
-
 # MediaPlayer-objektets livscykel{#mediaplayer-object-lifecycle}
 
 Från det ögonblick du skapar MediaPlayer-instansen till det ögonblick du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar mellan lägen i den här instansen.
 
-Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Det är till exempel inte tillåtet att anropa `play` i `IDLE`. Du kan bara anropa den här statusen efter att spelaren har nått `PREPARED`-läget.
+Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Anropa till exempel `play` in `IDLE` är inte tillåtet. Du kan bara anropa den här statusen när spelaren når `PREPARED` tillstånd.
 
 Så här arbetar du med lägen:
 
-* Du kan hämta det aktuella läget för `MediaPlayer`-objektet med `MediaPlayer.getStatus`.
+* Du kan hämta aktuell status för `MediaPlayer` objekt med `MediaPlayer.getStatus`.
 
    ```java
    PlayerState getStatus() throws IllegalStateException;
@@ -26,7 +25,7 @@ Så här arbetar du med lägen:
 
 * Listan med lägen definieras i `MediaPlayer.PlayerState`.
 
-Delövergångsdiagram för livscykeln för en `MediaPlayer`-instans:
+Delövergångsdiagram för en livscykel för en `MediaPlayer` instans:
 <!--<a id="fig_1C55DE3F186F4B36AFFDCDE90379534C"></a>-->
 
 ![](assets/player-state-transitions-diagram-android_1.2_web.png)
@@ -42,47 +41,47 @@ I följande tabell finns mer information:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> IDLE  </span> </td> 
-   <td colname="col2"> <p>Programmet begärde en ny mediespelare genom att anropa <span class="codeph"> DefaultMediaPlayer.create </span>. Den nya spelaren väntar på att du ska ange ett mediespelarobjekt. Detta är mediespelarens startläge. </p> </td> 
+   <td colname="col1"> <span class="codeph"> IDLE </span> </td> 
+   <td colname="col2"> <p>Programmet begärde en ny mediespelare genom att ringa <span class="codeph"> DefaultMediaPlayer.create </span>. Den nya spelaren väntar på att du ska ange ett mediespelarobjekt. Detta är mediespelarens startläge. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> INITIERAR  </span> </td> 
-   <td colname="col2"> <p>Ditt program anropade <span class="codeph"> MediaPlayer.replaceCurrentItem </span> och mediespelaren läses in. </p> </td> 
+   <td colname="col1"> <span class="codeph"> INITIERAR </span> </td> 
+   <td colname="col2"> <p>Ditt program har anropats <span class="codeph"> MediaPlayer.replaceCurrentItem </span>och mediespelaren läses in. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> INITIERAD  </span> </td> 
+   <td colname="col1"> <span class="codeph"> INITIERAD </span> </td> 
    <td colname="col2"> <p>TVSDK har angett mediespelarobjektet. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> FÖRBEREDER  </span> </td> 
-   <td colname="col2"> <p>Programmet anropade <span class="codeph"> MediaPlayer.prepareToPlay </span>. Mediespelaren läser in mediespelarobjektet och tillhörande resurser. </p> <p>Tips:  En del buffring av huvudmediet kan förekomma. </p> <p>TVSDK förbereder medieströmmen och försöker genomföra annonsupplösning och annonsinfogning (om det är aktiverat). </p> <p>Tips:  Om du vill ställa in starttiden på ett värde som inte är noll anropar du <span class="codeph"> prepareToPlay(startTime) </span> med tiden i millisekunder. </p> </td> 
+   <td colname="col1"> <span class="codeph"> FÖRBEREDER </span> </td> 
+   <td colname="col2"> <p>Ditt program har anropats <span class="codeph"> MediaPlayer.prepareToPlay </span>. Mediespelaren läser in mediespelarobjektet och tillhörande resurser. </p> <p>Tips: En del buffring av huvudmediet kan förekomma. </p> <p>TVSDK förbereder medieströmmen och försöker genomföra annonslösningar och annonsinfogning (om det är aktiverat). </p> <p>Tips: Om du vill ställa in starttiden på ett värde som inte är noll anropar du <span class="codeph"> prepareToPlay(startTime) </span> med tiden i millisekunder. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> FÖRBEREDD  </span> </td> 
+   <td colname="col1"> <span class="codeph"> FÖRBEREDD </span> </td> 
    <td colname="col2"> <p>Innehållet förbereds och annonser har infogats på tidslinjen, eller så misslyckades annonseringsproceduren. Buffring eller uppspelning kan börja. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> SPELA UPP  </span> </td> 
-   <td colname="col2"> <p>Programmet har anropat <span class="codeph"> play </span>, så TVSDK försöker spela upp videon. Viss buffring kan inträffa innan videon spelas upp. </p> </td> 
+   <td colname="col1"> <span class="codeph"> SPELA UPP </span> </td> 
+   <td colname="col2"> <p>Ditt program har anropat <span class="codeph"> play </span>så TVSDK försöker spela upp videon. Viss buffring kan inträffa innan videon spelas upp. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PAUSAT  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PAUSAT </span> </td> 
    <td colname="col2"> <p>När ditt program spelar upp och pausar media flyttas mediespelaren mellan detta läge och SPELNING. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> UPPHÄVD  </span> </td> 
+   <td colname="col1"> <span class="codeph"> UPPHÄVD </span> </td> 
    <td colname="col2"> <p>Ditt program navigerade bort från uppspelningen, stängde av enheten eller växlade program medan spelaren spelades upp eller pausades. Mediespelaren har pausats och resurser har släppts. Återställ mediespelaren för att fortsätta. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> SLUTFÖRD  </span> </td> 
+   <td colname="col1"> <span class="codeph"> SLUTFÖRD </span> </td> 
    <td colname="col2"> <p>Spelaren har nått slutet av strömmen och uppspelningen har stoppats. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> SLÄPPT  </span> </td> 
+   <td colname="col1"> <span class="codeph"> SLÄPPT </span> </td> 
    <td colname="col2"> <p>Ditt program har släppt mediespelaren, som också frigör associerade resurser. Du kan inte längre använda den här instansen </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> FEL  </span> </td> 
+   <td colname="col1"> <span class="codeph"> FEL </span> </td> 
    <td colname="col2"> <p>Ett fel uppstod under processen. Ett fel kan också påverka vad ditt program kan göra härnäst. </p> </td> 
   </tr> 
  </tbody> 
@@ -92,7 +91,7 @@ I följande tabell finns mer information:
 >
 >Du kan använda läget för att ge feedback om processen (till exempel en snurra som väntar på nästa lägesändring) eller för att ta nästa steg i uppspelningen av media, till exempel vänta på rätt läge innan du anropar nästa metod.
 
-Exempel:
+Till exempel:
 
 ```java
 @Override 
@@ -113,4 +112,3 @@ public void onStateChanged(MediaPlayer.PlayerState state,
     } 
 }
 ```
-

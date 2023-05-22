@@ -2,21 +2,20 @@
 title: Skapa en profil med Java API
 description: Skapa en profil med Java API
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en profil med Java API {#creating-a-policy-using-the-java-api}
 
 Så här skapar du en profil med hjälp av Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i projektet.
-1. Skapa ett `com.adobe.flashaccess.sdk.policy.Policy`-objekt och ange dess egenskaper, till exempel rättigheter, varaktighet för licenscache och principslutdatum.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i ditt projekt.
+1. Skapa en `com.adobe.flashaccess.sdk.policy.Policy` -objektet och ange dess egenskaper, t.ex. rättigheter, varaktighet för licenscache och principens slutdatum.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +51,7 @@ Så här skapar du en profil med hjälp av Java API:
      }
    ```
 
-1. Serialisera `Policy`-objektet och lagra det i en fil eller databas.
+1. Serialisera `Policy` och lagra det i en fil eller databas.
 
    ```java
      // Serialize the policy  
@@ -66,4 +65,4 @@ Så här skapar du en profil med hjälp av Java API:
      out.close();
    ```
 
-Den fullständiga källan till den här exempelkoden finns i *com.adobe.flashaccess.samples.policy.CreatePolicy* i katalogen Reference Implementation Command Line Tools &quot;[!DNL samples]&quot;.
+Om du vill se den fullständiga källan för den här exempelkoden går du till *com.adobe.flashaccess.samples.policy.CreatePolicy* i kommandoradsverktygen för referensimplementering &quot; [!DNL samples]&quot;.

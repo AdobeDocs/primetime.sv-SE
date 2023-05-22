@@ -1,14 +1,13 @@
 ---
 description: Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
 title: Alternativt ljud
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c8158888-2e2a-42a6-a948-dc6ba4ce7a9c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#alternate-audio-overview}
 
@@ -16,11 +15,11 @@ Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för 
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-När TVSDK skapar instansen `MediaPlayerItem` för den aktuella videon skapas ett `AudioTrack`-objekt för varje tillgängligt ljudspår. Objektet innehåller en `name`-egenskap, en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard.
+När TVSDK skapar `MediaPlayerItem` -instans för den aktuella videon, skapar den `AudioTrack` objekt för varje tillgängligt ljudspår. Objektet innehåller en `name` -egenskap, en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket i det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard.
 
 När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill låta användaren välja ett, och ställa in videon som ska spelas upp med det valda spåret.
 
-Om ett ytterligare ljudspår blir tillgängligt efter att `MediaPlayerItem` har skapats aktiveras en `MediaPlayerItem.AUDIO_UPDATED`-händelse av TVSDK, även om det är sällsynt.
+Om ett extra ljudspår blir tillgängligt efter att det skapats `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_UPDATED` -händelse.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -94,4 +93,3 @@ PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack
     return result; 
 }
 ```
-

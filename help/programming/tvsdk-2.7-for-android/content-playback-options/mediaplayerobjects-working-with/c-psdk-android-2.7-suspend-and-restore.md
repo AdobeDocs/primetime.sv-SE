@@ -1,25 +1,24 @@
 ---
-description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
+description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
 keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
 title: Pausa och återställa MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 159f0f4f-2bb7-40a1-9747-be970dfbb04d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# Pausa och återställa MediaPlayer {#suspend-and-restore-mediaplayer}
 
-# Pausa och återställ MediaPlayer {#suspend-and-restore-mediaplayer}
+Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
 
-Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
+Du kan hantera åtgärder för uppehåll och återställning på `MediaPlayer` i Androids sändningsmottagare för att slå på/av på skärmen.
 
-Du kan hantera pausa- och återställningsåtgärder på `MediaPlayer` inuti Androids sändningsmottagare för skärm på/av.
+TVSDK kan inte avgöra när ett fragment (eller en aktivitet) finns i bakgrunden eller förgrunden. Dessutom kan Android `SurfaceView` förstörs inte när enhetsskärmen stängs av (men aktiviteten pausas). Men `SurfaceView` *gör* förstörs när enheten placerar programmet i bakgrunden. TVSDK kan inte identifiera någon av dessa ändringar, så de måste hanteras av ditt program.
 
-TVSDK kan inte avgöra när ett fragment (eller en aktivitet) finns i bakgrunden eller förgrunden. Dessutom tas Android `SurfaceView` inte bort när enhetsskärmen är inaktiverad (men aktiviteten är pausad). `SurfaceView` *förstörs dock när enheten placerar programmet i bakgrunden.* TVSDK kan inte identifiera någon av dessa ändringar, så de måste hanteras av ditt program.
-
-Följande exempelkod visar hur programmet kan hantera uppehåll och återställning av `MediaPlayer` när enhetsskärmen är påslagen och inaktiverad på programnivå:
+Följande exempelkod visar hur programmet kan hantera uppehåll och återställning av `MediaPlayer` när enhetens skärm är påslagen och avstängd på programnivå:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 

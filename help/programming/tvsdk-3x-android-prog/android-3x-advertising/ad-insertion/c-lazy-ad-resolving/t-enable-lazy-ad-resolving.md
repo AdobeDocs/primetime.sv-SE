@@ -2,28 +2,27 @@
 description: Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).
 keywords: Lazy;Annonsupplösning;Annonsinläsning;delayLoading
 title: Aktivera lat och löst
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
 
 ---
 
-
 # Aktivera lat och löst {#enable-lazy-ad-resolving}
 
 Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).
 
-Du kan aktivera eller inaktivera Lazy Ad Resolving genom att anropa [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) med true eller false.
+Du kan aktivera eller inaktivera Lazy Ad Resolving genom att ringa [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) med true eller false.
 
-* Använd de booleska metoderna *hasDelayAdLoading* och *setDelayAdLoading* i AdvertisingMetadata för att styra tidpunkten för annonsupplösningen och placeringen av annonser på tidslinjen:
+* Använda det booleska värdet *hasDelayAdLoading* och *setDelayAdLoading* metoder i AdvertisingMetadata för att styra timing för annonsupplösning och placering av annonser på tidslinjen:
 
-   * Om *hasDelayAdLoading* returnerar false väntar TVSDK tills alla annonser har lösts och placerats innan övergången till tillståndet PREPARED görs.
-   * Om *hasDelayAdLoading* returnerar true tolkas bara de initiala annonserna och övergångarna till tillståndet PREPARED.
+   * If *hasDelayAdLoading* returnerar false, TVSDK väntar tills alla annonser är lösta och placerade innan övergången till tillståndet PREPARED görs.
+   * If *hasDelayAdLoading* returnerar true, tolkar TVSDK bara de initiala annonserna och övergångarna till tillståndet PREPARED.
 
       * De återstående annonserna löses och placeras under uppspelningen.
-   * När *hasPreroll *eller *hasLivePreroll* returnerar false antar TVSDK att det inte finns någon förhandsgranskning och att uppspelningen av innehållet startar omedelbart. Dessa är som standard inställda på true.
+   * När *hasPreroll *eller *hasLivePreroll* return false, TVSDK antar att det inte finns någon förhandsgranskning och startar uppspelningen av innehållet omedelbart. Dessa är som standard inställda på true.
 
 
 **API:er som är relevanta för lata annonsupplösningar:**
@@ -46,7 +45,7 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Om du exakt vill spegla annonser som tips i ett navigeringsfält lyssnar du efter händelsen `TimelineEvent`och ritar om navigeringsfältet varje gång du tar emot den här händelsen.
+Lyssna efter `TimelineEvent`och rita om rensningsfältet varje gång du får den här händelsen.
 
 När Lazy Ad Resolving är aktiverat för VOD-strömmar placeras alla annonsbrytningar på tidslinjen, men många av annonsbrytningarna kommer inte att åtgärdas än. Programmet kan avgöra om markörerna ska ritas eller inte genom att kontrollera `TimelineMarker::getDuration()`. Om värdet är större än noll har annonserna inom annonsbrytningen lösts.
 

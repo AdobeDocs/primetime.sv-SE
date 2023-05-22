@@ -2,18 +2,17 @@
 title: Krav för att använda Primetime DRM Key Server
 description: Krav för att använda Primetime DRM Key Server
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
 
 ---
 
-
 # Introduktion {#introduction}
 
-Primetime DRM Key Server är en multi-tenant Key Server för fjärr-iOS och/eller leverans av Xbox 360-nycklar. Om Remote Key Delivery är aktiverat i en princip för iOS måste en Primetime DRM Key Server distribueras för att aktivera innehållsuppspelning på iOS-klienter. Primetime DRM Key Server krävs alltid för Xbox 360.
+Primetime DRM Key Server är en multi-tenant Key Server för Remote iOS och/eller Xbox 360 key delivery. Om Remote Key Delivery är aktiverat i en princip för iOS måste en Primetime DRM Key Server distribueras för att aktivera innehållsuppspelning på iOS-klienter. Primetime DRM Key Server krävs alltid för Xbox 360.
 
 ## Krav för att använda Primetime DRM Key Server {#requirements-for-using-primetime-drm-key-server}
 
@@ -23,7 +22,7 @@ Minimikraven för att använda Primetime DRM Key Server är:
 
    >[!NOTE]
    >
-   >64-bitars PKCS11 stöds nu i OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131) och Oracle-JDK: [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
+   >64-bitars PKCS11 stöds nu i OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)och Oracle-JDK: [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
 
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * Autentiseringsuppgifter utfärdade av Adobe

@@ -1,14 +1,13 @@
 ---
 description: HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på tillgänglig bandbredd.
 title: Adaptiva bithastigheter (ABR) för videokvalitet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 97862cf7-7315-4ca6-a2b4-f9b98047edd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
 
 ---
-
 
 # Adaptiva bithastigheter (ABR) för videokvalitet {#adaptive-bit-rates-abr-for-video-quality}
 
@@ -72,7 +71,7 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Uppdatera din `PTMediaPlayer`-instans med den konfigurerade `PTABRControlParameters`-instansen.
+1. Uppdatera dina `PTMediaPlayer` instans med konfigurerad `PTABRControlParameters` -instans.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +80,9 @@ Så här konfigurerar du adaptiva bithastighetsparametrar för TVSDK:
 
 Kom ihåg följande:
 
-* Programmet måste ställa in egenskapen `abrControlParameters` på `PTMediaPlayer` innan en `PTMediaPlayerItem`-instans konfigureras för att de inledande och lägsta bithastighetsinställningarna ska börja gälla.
+* Programmet måste ange `abrControlParameters` egenskap på `PTMediaPlayer` innan en `PTMediaPlayerItem` -instans för de initiala och lägsta bithastighetsinställningarna som ska börja gälla.
 
    När uppspelningen av innehållet startar påverkas inställningen för en ny instans bara den maximala bithastigheten.
 
-* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters`-instans och anger den på spelarinstansen.
-* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. I tidigare versioner används det `maxBitrate`-värde som angavs innan innehållsuppspelningen startades.
+* Om du vill uppdatera den maximala bithastighetsinställningen under uppspelning skapar du en ny `PTABRControlParameters` och ange den på spelarinstansen.
+* Du kan bara uppdatera inställningen för högsta bithastighet under uppspelning på iOS 8.0 och senare. För tidigare versioner är `maxBitrate` ett värde som angavs innan innehållsuppspelningen startades.

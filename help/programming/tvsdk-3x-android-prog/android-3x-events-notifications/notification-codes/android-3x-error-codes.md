@@ -1,14 +1,13 @@
 ---
 title: PSDK-felkoder
 description: Information om olika felkoder, varningar och inbyggda felkoder.
-translation-type: tm+mt
-source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+exl-id: 90d66c13-c40c-4602-83da-186c2b623375
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 6%
 
 ---
-
 
 # PSDK-felkoder {#psdk-error-codes}
 
@@ -41,7 +40,7 @@ Följande tabell innehåller detaljerad information om meddelanden om ERROR-type
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>1</td>
+    <td>3</td>
     <td>Åtgärden stöds inte i det aktuella spelarläget.</td>
   </tr>
   <tr>
@@ -226,7 +225,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>1</td>
+    <td>3</td>
     <td>Avkodaren misslyckades vid körning.</td>
   </tr>
   <tr>
@@ -501,7 +500,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
-    <td>78</td>
+    <td>58</td>
     <td>Avkodaren tog emot ett felaktigt prov som inte kan avkodas. Det här är vanligtvis inget allvarligt fel, men det indikerar att det kan finnas fel i ljud/video. För många instanser av det här felet indikerar felaktig kodning eller felaktig fil.</td>
   </tr>
   <tr>
@@ -516,7 +515,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
-    <td>81</td>
+    <td>61</td>
     <td>Ett mycket sällsynt problem som aldrig skulle inträffa.</td>
   </tr>
   <tr>  
@@ -616,7 +615,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
-    <td>61</td>
+    <td>81</td>
     <td>Det uppstod ett fel vid analys av ID3-data.</td>
   </tr>
   <tr>

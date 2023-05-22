@@ -1,20 +1,19 @@
 ---
 description: Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
 title: Licenser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # Licenser{#licensing}
 
 Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
 
-Innan din app eller webbsida på en slutanvändares enhet kan spela upp DRM-skyddat innehåll måste den hämta en token från en berättigande- eller butiksserver som du, kunden, använder. Adobe tillhandahåller en exempelreferensserver för detta ändamål: [Referensserver: Exempel på ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Innan din app eller webbsida på en slutanvändares enhet kan spela upp DRM-skyddat innehåll måste den hämta en token från en berättigande- eller butiksserver som du, kunden, använder. Adobe tillhandahåller en exempelreferensserver för detta ändamål: [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 Din berättigande- eller butiksserver begär en licenstoken från den relevanta ExpressPlay-servern först efter att ha kontrollerat med dina egna bakomliggande system för att avgöra om den specifika användaren har rätt att titta på det begärda innehållet. Svaret som returneras från licenstokenbegäran är antingen en färdig URL för licensservern, eller så innehåller svaret URL:en i en JSON-struktur, beroende på vilken DRM-lösning du arbetar med.
 
@@ -27,7 +26,7 @@ Din berättigande- eller butiksserver begär en licenstoken från den relevanta 
 
 1. Gör en begäran om licenstoken.
 
-   I ett snabbstartsscenario där du bara vill försäkra dig om att de olika komponenterna fungerar tillsammans, kanske du vill använda något som [!DNL curl] för att göra din licensförfrågan (till skillnad från att först få igång ett program och testa anrop därifrån). Exempel:
+   I ett snabbstartsscenario där du bara vill försäkra dig om att de olika komponenterna fungerar ihop, kanske du vill använda något som [!DNL curl] för att begära din licenstoken (i motsats till att initialt få igång ett program och testa samtal därifrån). Till exempel:
 
    * WideVM:
 

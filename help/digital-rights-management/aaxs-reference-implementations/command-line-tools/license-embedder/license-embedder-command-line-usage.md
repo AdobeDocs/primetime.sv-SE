@@ -2,16 +2,15 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 51b11ef8-438e-4747-be3e-e1774dc9f31a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-
-# Kommandoradsanvändning {#command-line-usage}
+# Användning av kommandorad {#command-line-usage}
 
 Använd följande syntax när du bäddar in en licens:
 
@@ -36,21 +35,20 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
-   <td colname="2" class="- topic/entry "> Namnet på filen som innehåller licensen som ska bäddas in. Flera <span class="codeph"> -l </span>-alternativ kan anges för att bädda in flera licenser. </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
+   <td colname="2" class="- topic/entry "> Namnet på filen som innehåller licensen som ska bäddas in. Flera <span class="codeph"> -l </span> kan anges för att bädda in flera licenser. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filnamn  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filnamn </span> </td> 
    <td colname="2" class="- topic/entry "> Ange de metadata för innehållet som en licens ska genereras för. (Krävs för att generera licens) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> inte har angetts returneras ett fel. </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
+   <td colname="2" class="- topic/entry "> Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> är inte inställt returneras ett fel. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
    <td colname="2" class="- topic/entry "> Om målfilen redan finns skriver du över den utan att fråga. </td> 
   </tr> 
  </tbody> 
 </table>
-

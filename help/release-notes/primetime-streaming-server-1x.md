@@ -3,16 +3,15 @@ title: Primetime Streaming Server-versioner
 description: Nyheter i Primetime Streaming Server 1.3 och 1.4.
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 80c4687e-b0ac-48f2-a1c3-8751552da9d1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1916'
 ht-degree: 0%
 
 ---
 
-
-# Primetime Streaming Server släpper {#primetime-streaming-server-x-releases}
+# Primetime Streaming Server-versioner {#primetime-streaming-server-x-releases}
 
 Nyheter i Primetime Streaming Server 1.3 och 1.4.
 
@@ -30,7 +29,7 @@ Nyheter i Primetime Streaming Server 1.3 och 1.4.
 
 * HLS AES-kryptering är tillgängligt för Live- och VOD-arbetsflöden. Primetime Origin kan Just in Time använda HLS AES-kryptering på inkommande HLS-strömmar eller MP4-filer.
 * Den kan också tillämpa JIT HLS AES-kryptering när den används för att konvertera inkommande HDS-strömmar till HLS-strömmar.
-* Primetime Origin har nu stöd för att visa en lista över tillåtna SWF-flöden för PHLS-strömmar. Tidigare stöddes den bara för PHDS-strömmar
+* Primetime Origin har nu stöd för att tillåta listning av PHLS-strömmar i SWF. Tidigare stöddes den bara för PHDS-strömmar
 
 **Primetime Live Packager**
 
@@ -148,8 +147,8 @@ Flera prestandaförbättringar har lagts till i JIT-paketeringsfunktionerna i Pr
 
 **Installera direktuppspelningsserver**
 
-1. Hämta Java SE- och JDK-programmet från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-2. Extrahera arkivfilen `Primetime- StreamingServer-1-4-0-b206-12042014.zip` för Adobe Primetime-Streaming Server 1.4 till hårddisken.
+1. Ladda ned Java SE och JDK från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+2. Extrahera arkivfilen Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` till skivan.
 
 **Starta Primetime Streaming Server**
 
@@ -227,15 +226,15 @@ Systemkraven ovan gäller både origin-servern och Live Packager.
 
 **Installera Live Packager**
 
-1. Hämta Java SE- och JDK-programmet från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-1. Extrahera arkivfilen `Primetime-LivePackager-1-4-0-b206-12042014.zip` för Adobe Primetime Live Packager 1.4 till hårddisken.
+1. Ladda ned Java SE och JDK från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Extrahera arkivfilen Adobe Primetime Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` till skivan.
 
 **Installerar HTTP Origin Server**
 
-1. Hämta Java JRE och JDK från [Oraclena](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-1. Extrahera arkivfilen `Primetime-HttpOrigin-1-4-0-b206-12042014.zip` för Adobe Primetime - HTTP Origin Server 1.4 till hårddisken.
+1. Ladda ned Java JRE och JDK från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Extrahera arkivfilen Adobe Primetime - HTTP Origin Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`till skivan.
 
-**Starta Live** PackagerKör följande kommando från paketerarens rotkatalog när du vill starta paketeraren:\
+**Starta Live Packager** Starta paketeraren genom att köra följande kommando från paketerarens rotkatalog:\
 `$packager_start.sh`
 
 **Starta HTTP Origin Server**
@@ -257,7 +256,7 @@ Om du vill stoppa HTTP Origin Server kör du följande kommando i origin-servern
 
 Starta om paketeraren genom att stoppa och starta paketeraren.
 
-**Obs**: När paketeraren startas försöker den initiera bootstrap-informationen från fragmentmålet i den tillfälliga katalogen. Om bootstrap-informationen hittas vid fragmentmålet betyder det att paketeraren har startats om. Vid omstart väntar paketeraren tills nästa fragmentgräns nås och börjar sedan paketera. Paketeraren infogar en mellanrumspost i bootstrap för att ange att det saknas fragment.
+**Anteckning**: När paketeraren startas försöker den initiera bootstrap-informationen från fragmentmålet i den tillfälliga katalogen. Om bootstrap-informationen hittas vid fragmentmålet betyder det att paketeraren har startats om. Vid omstart väntar paketeraren tills nästa fragmentgräns nås och börjar sedan paketera. Paketeraren infogar en mellanrumspost i bootstrap för att ange att det saknas fragment.
 
 **Starta om HTTP Origin Server**
 
@@ -316,11 +315,11 @@ Om du vill avinstallera HTTP Origin Server stoppar du HTTP Origin Server och tar
 
 Så här installerar du Offline Packager:
 
-1. Hämta Java SE-programmet från [Oraclet](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-1. Extrahera arkivfilen `Primetime- OfflinePackager-1-4-0-b206-12042014.zip` för Adobe Primetime Offline Packager 1.4 till hårddisken.
+1. Ladda ned Java SE från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Extrahera arkivfilen Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`till skivan.
 
-Information om konfigurationen som är tillgänglig [här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) finns i dokumentet Primetime Offline Packager Getting Started.
+Information om tillgänglig konfigurationsinformation finns i dokumentet Komma igång för Primetime Offline Packager [här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
+* Se den fullständiga hjälpdokumentationen på [Adobe Primetime Läs mer &amp; Support](https://helpx.adobe.com/support/primetime.html) sida.

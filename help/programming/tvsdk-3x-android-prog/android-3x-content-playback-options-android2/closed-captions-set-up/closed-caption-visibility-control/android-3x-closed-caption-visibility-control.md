@@ -1,14 +1,13 @@
 ---
 description: Du kan styra synligheten för undertexter. När synlighet har aktiverats visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 title: Kontrollera synlighet för undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1fe978c5-b9ae-4e72-ac32-e3ba4e948683
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Kontrollera synlighet för undertexter {#control-closed-caption-visibility}
 
@@ -28,9 +27,9 @@ Du kan styra synligheten för undertexter. När synlighet har aktiverats visas d
 >}
 >```
 
-1. Vänta tills `MediaPlayer` har statusen PREPARED. Mer information finns i [Vänta på en giltig status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
+1. Vänta på `MediaPlayer` vara i åtminstone statusen FÖRBEREDD. Mer information finns i [Vänta på en giltig status](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
-1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
+1. Använd metoden get i för att hämta den aktuella synlighetsinställningen för undertexter `MediaPlayer`, som returnerar ett synlighetsvärde.
 
    ```java
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
@@ -38,7 +37,7 @@ Du kan styra synligheten för undertexter. När synlighet har aktiverats visas d
 
 1. Om du vill ändra synligheten för undertexter använder du metoden set och skickar ett synlighetsvärde från `MediaPlayer.Visibility`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    mediaPlayer.setCCVisibility(MediaPlayer.Visibility visibility);

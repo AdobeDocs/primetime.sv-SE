@@ -1,14 +1,13 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Kvalitetsstatistik för tjänster
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7684605f-e049-47bf-8073-155d1ff000e0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Kvalitetsstatistik för tjänster{#quality-of-service-statistics}
 
@@ -16,20 +15,20 @@ QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVS
 
 ## Läs QOS-uppspelning, buffring och enhetsstatistik {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Du kan läsa uppspelning, buffring och enhetsstatistik från klassen `PTQOSProvider`.
+Du kan läsa uppspelnings-, buffrings- och enhetsstatistik från `PTQOSProvider` klassen.
 
-Klassen `PTQOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
+The `PTQOSProvider` -klassen innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
 
 Det innehåller även information om enheten, till exempel modell, operativsystem och tillverkarens enhets-ID.
 
 >[!TIP]
 >
->Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som  `playbackBufferFull` och  `playbackLikelyToKeepUp`.
+>Du kan inte ändra storleken på uppspelningsbufferten, men du kan övervaka statusen för buffertstorleken för felsökning eller analys. `PTPlaybackInformation` innehåller egenskaper som `playbackBufferFull` och `playbackLikelyToKeepUp`.
 
 1. Skapa en mediespelare.
-1. Skapa ett `PTQOSProvider`-objekt och koppla det till mediespelaren.
+1. Skapa en `PTQOSProvider` och bifoga det till mediespelaren.
 
-   Konstruktorn `PTQOSProvider` har en spelarkontext så att den kan hämta enhetsspecifik information.
+   The `PTQOSProvider` konstruktorn använder en spelarkontext så att den kan hämta enhetsspecifik information.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +36,7 @@ Det innehåller även information om enheten, till exempel modell, operativsyste
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer, t.ex. en `NSTimer`, som regelbundet hämtar de nya QoS-värdena från `PTQOSProvider`. Exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer, till exempel en `NSTimer`, som regelbundet hämtar de nya QoS-värdena från `PTQOSProvider`. Till exempel:
 
    ```
    - (void)printPlaybackInfoLog { 
@@ -62,4 +61,3 @@ Det innehåller även information om enheten, till exempel modell, operativsyste
    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self  
       selector:@selector(printPlaybackInfoLog) userInfo:nil repeats:YES];
    ```
-

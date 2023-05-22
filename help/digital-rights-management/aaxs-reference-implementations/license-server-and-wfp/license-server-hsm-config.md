@@ -2,14 +2,13 @@
 title: HSM-konfiguration
 description: HSM-konfiguration
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0418bcc1-0a85-4074-9616-915f77507bdd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
 
 ---
-
 
 # HSM-konfiguration {#hsm-configuration}
 
@@ -25,4 +24,3 @@ Om du ser dina autentiseringsuppgifter i listan är HSM korrekt konfigurerat.
 >[!NOTE]
 >
 >Från och med Java 1.7 har 64-bitars Sun Java för Windows inte stöd för de PKCS11-gränssnitt som krävs för att Adobe Access DRM ska kunna kommunicera med HSM-enheter. Om du tänker använda ett HSM-kort bör du använda en 32-bitarsversion av Java, eller använda en JDK som har stöd för de fullständiga PKCS1-gränssnitten.
-

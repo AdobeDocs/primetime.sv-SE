@@ -1,14 +1,13 @@
 ---
 description: Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 title: Skapa en medieresurs
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 754515e9-567d-4f9f-911d-e9dad22f71a1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en medieresurs {#create-a-media-resource}
 
@@ -16,9 +15,9 @@ För varje nytt videoinnehåll initierar du en MediaResource-instans med informa
 
 Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 
-1. Skapa en `MediaResource` genom att skicka information om mediet till konstruktorn `MediaResource`.
+1. Skapa en `MediaResource` genom att skicka information om mediet till `MediaResource` konstruktor.
 
-   Konstruktorn `MediaResource` kräver följande parametrar:
+   The `MediaResource` konstruktorn kräver följande parametrar:
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302">
       <thead>
@@ -29,21 +28,21 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
       </thead>
       <tbody>
       <tr>
-      <td colname="col1"> <span class="codeph"> url  </span> </td>
+      <td colname="col1"> <span class="codeph"> url </span> </td>
       <td colname="col2"> En sträng som representerar URL:en för mediets manifest/spellista. </td>
       </tr>
       <tr>
-      <td colname="col1"> <span class="codeph"> type  </span> </td>
-      <td colname="col2"> En av följande medlemmar i uppräkningen <span class="codeph"> MediaResource.Type </span>, som motsvarar den angivna filtypen:
+      <td colname="col1"> <span class="codeph"> type </span> </td>
+      <td colname="col2"> En av följande medlemmar i <span class="codeph"> MediaResource.Type </span> enum, motsvarande den angivna filtypen:
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282">
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS  </span> - M3U8 </li>
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF  </span> - ISO basmediefilformat (MP4) </li>
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH  </span> - MPEG-DASH mediepresentationsbeskrivning (MPD) </li>
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li>
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-format för basmediefil (MP4) </li>
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Beskrivning av MPEG-DASH-mediepresentation (MPD) </li>
       </ul> </td>
       </tr>
       <tr>
-      <td colname="col1"> <span class="codeph"> metadata  </span> </td>
-      <td colname="col2"> En instans av klassen <span class="codeph"> Metadata </span> (en ordlisteliknande struktur), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Om du använder annonsering ska du ställa in <span class="codeph"> AuditudeSettings </span> innan du använder konstruktorn. </td>
+      <td colname="col1"> <span class="codeph"> metadata </span> </td>
+      <td colname="col2"> En instans av <span class="codeph"> Metadata </span> class (a dictionary-like structure), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Konfigurera <span class="codeph"> AuditudeSettings </span> innan den här konstruktorn används. </td>
       </tr>
       </tbody>
    </table>
@@ -54,7 +53,7 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
    >
    >För MP4-VOD-innehåll (video-on-demand) stöder inte TVSDK tricks play, ABR-strömning (adaptive bit rate), annonsinfogning, undertexter eller DRM.
 
-   I följande kod skapas en `MediaResource`-instans:
+   I följande kod skapas en `MediaResource` instans:
 
    ```java
    // To do: Create metadata here
@@ -64,12 +63,12 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
      metadata);
    ```
 
-   När som helst efter det här steget kan du använda `MediaResource`-accessorer (getters) för att undersöka resursens typ, URL och metadata.
+   När som helst efter det här steget kan du använda `MediaResource` accessorer (getters) för att undersöka resursens typ, URL och metadata.
 
 1. Läs in medieresursen med något av följande alternativ:
 
    * MediaPlayer-instansen.
-   * `MediaPlayerItemLoader` Mer information finns i  [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
+   * `MediaPlayerItemLoader` Mer information finns i [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
    >[!IMPORTANT]
    >

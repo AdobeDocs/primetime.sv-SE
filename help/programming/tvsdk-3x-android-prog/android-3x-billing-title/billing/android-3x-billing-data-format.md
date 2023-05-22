@@ -1,14 +1,13 @@
 ---
 description: TVSDK skickar faktureringsstatistik till Adobe i XML-format.
 title: Skicka faktureringsmått
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 55009ce6-a814-4a20-bfa5-e8cf2d7ba923
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
-
 
 # Skicka faktureringsmått {#transmit-billing-metrics}
 
@@ -40,4 +39,4 @@ Om du använder ett verktyg för nätverksregistrering för att övervaka statis
 </request>
 ```
 
-De booleska egenskaperna `drmProtected`, `adsEnabled` och `midrollEnabled` visas bara om de är sanna.
+De booleska egenskaperna `drmProtected`, `adsEnabled`och `midrollEnabled` visas bara om de är sanna.

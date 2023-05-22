@@ -2,14 +2,13 @@
 title: Begränsningar och beteenden för trick play
 description: Begränsningar och beteenden för trick play
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5d9cae7b-d850-4ebc-8780-5abec847bb82
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
 
 ---
-
 
 # Begränsningar och beteenden för trick play {#limitations-and-behavior-for-trick-play}
 
@@ -31,11 +30,10 @@ Begränsningar för uppspelningsläge för trick:
    * Det aktuella tidsvärdet hoppar framåt (snabbt framåt) eller bakåt (vid snabb tillbakaspolning) med varaktigheten för den överhoppade annonsbrytningen.
 
       Detta hoppbeteende för den aktuella tiden gör att strömmens varaktighet förblir oförändrad under trippelning. Spelaren kan bara spåra tiden i förhållande till huvudinnehållet. Inga tidshopp utförs för de värden som returneras för lokal tid när en annons hoppas över.
-   * `MediaPlayerEvent.AD_BREAK_SKIPPED`-händelsen skickas omedelbart innan en annonsbrytning håller på att hoppas över.
+   * The `MediaPlayerEvent.AD_BREAK_SKIPPED` -händelsen skickas omedelbart innan en annonsbrytning kommer att hoppas över.
 
       Spelaren kan använda den här händelsen för att implementera anpassad logik som är relaterad till de överhoppade annonsbrytningarna.
 
    * När du avslutar trick play anropas samma annonsuppspelningsprincip som när sökningen avslutas.
 
       Precis som vid sökning beror beteendet på om programmets uppspelningsprincip skiljer sig från standardinställningen. Standardinställningen är att den senast hoppade annonsbrytningen spelas upp där du kommer ut ur tricksspelet.
-

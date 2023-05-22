@@ -1,16 +1,15 @@
 ---
 description: Video Player Ad-Serving Interface Definition (VPAID) 2.0 är ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Stöd för VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6d29e53c-8fb4-4dd7-9859-8c105923bdef
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
-
-# Stöd för VPAID 2.0 och {#vpaid-ad-support}
+# Stöd för VPAID 2.0 {#vpaid-ad-support}
 
 Video Player Ad-Serving Interface Definition (VPAID) 2.0 är ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 
@@ -38,18 +37,18 @@ Följande funktioner stöds inte:
 
 Följande ändringar har gjorts i API:t:
 
-* `PTAuditudeMetadata` har en  `customAdLoadTimeout` egenskap som ändrar standardtidsgränsen för VPAID-inläsningsprocessen.
+* `PTAuditudeMetadata` har en `customAdLoadTimeout` egenskapen för att ändra standardtimeout för VPAID-inläsningsprocessen.
 
    Standardvärdet för timeout är 10 sekunder.
 
-* `PTMediaPlayerCustomAdNotification` skickas från  `PTMediaPlayer` instansen
+* `PTMediaPlayerCustomAdNotification` skickas från `PTMediaPlayer` instance
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
 Under uppspelningen av VPAID-annonsen:
 
 * VPAID-annonsen visas i en visningsbehållare ovanför spelarvyn, så koden som är beroende av att användarna trycker på spelarvyn fungerar inte.
-* Huvudinnehållsspelaren är pausad och anrop till `pause` och `play` på spelarinstansen används för att pausa och återuppta annonsen för VPAID.
+* Huvudspelaren är pausad och anropar `pause` och `play` på spelarinstansen används för att pausa och återuppta annonsen för VPAID.
 
 * VPAID-annonser har ingen fördefinierad varaktighet eftersom annonsen kan vara interaktiv.
 

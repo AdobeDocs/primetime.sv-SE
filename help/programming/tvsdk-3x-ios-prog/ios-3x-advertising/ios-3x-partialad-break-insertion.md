@@ -1,14 +1,13 @@
 ---
 description: TVSDK ger en TV-liknande upplevelse av att kunna vara med mitt i en annons i liveströmmar.
 title: Insättning av delvis annonsbrytning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d1a4b347-a86d-423c-bd19-f7e166a171ce
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
-
 
 # Insättning av delvis annonsbrytning {#partial-ad-break-insertion}
 
@@ -22,7 +21,7 @@ Om en användare till exempel ansluter sig mitt i en 90-sekunders annonsbrytning
 
 Annonsspårare för annonsen som spelas delvis (den andra annonsen) aktiveras inte. I exemplet ovan aktiveras bara spåraren för den tredje annonsen.
 
-## Beteende med förrullning {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
+## Beteende med pre-roll {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
 
 Funktionen fungerar när en pre-roll-annons spelas upp med livematerial. Direktuppspelningen spelas upp från direktpunkten när pre-roll-annonsen avslutas.
 

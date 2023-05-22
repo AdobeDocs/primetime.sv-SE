@@ -1,14 +1,13 @@
 ---
 description: Att hämta video och ljud parallellt, i stället för i en serie, minskar startfördröjningarna.
 title: Parallella nedladdningar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6c93154b-8de4-448b-bc33-776fcc1f6243
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
-
 
 # Parallella nedladdningar {#parallel-downloads}
 
@@ -43,4 +42,3 @@ HTTP-anslutningen kan fördröjas i följande steg:
 * När en HTTP-begäran skickas för ett segment eller ett manifest via TCP/IP-anslutningen.
 
    Servern tar emot begäran, bearbetar den och börjar skicka data tillbaka till klienten. Hur lång tid det tar beror på belastningen och komplexiteten hos programvaran på servern och något på överföringshastigheten när klienten skickar begäran.
-

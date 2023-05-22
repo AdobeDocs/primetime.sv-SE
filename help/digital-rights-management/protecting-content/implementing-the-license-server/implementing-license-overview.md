@@ -2,14 +2,13 @@
 title: Licensserver - översikt
 description: Licensserver - översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 101d9f63-b9b9-4281-a069-8c66427b34cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#license-server-overview}
 
@@ -26,4 +25,4 @@ Så här implementerar du en licensserver:
 
 Dessutom måste servern tillhandahålla affärslogik för autentisering av användare, avgöra om användare har behörighet att visa innehåll och eventuellt spåra licensanvändning.
 
-Mer information om Java API finns i *API-referens för Adobe Primetime DRM*.
+Se *API-referens för Adobe Primetime DRM* om du vill ha mer information om Java API.

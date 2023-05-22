@@ -1,11 +1,10 @@
 ---
 description: Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 title: Läs QOS-uppspelning, buffring och enhetsstatistik
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -14,12 +13,12 @@ ht-degree: 1%
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
+The `QOSProvider` -klassen innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
 
 Det innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version och skärmstorlek/skärmtäthet.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
+1. Skapa en `QOSProvider` och bifoga det till mediespelaren.
 
    ```
    // Create Media Player. 
@@ -29,7 +28,7 @@ Det innehåller även information om enheten, t.ex. tillverkare, modell, operati
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Till exempel:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

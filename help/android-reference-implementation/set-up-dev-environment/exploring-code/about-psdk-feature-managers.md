@@ -1,14 +1,13 @@
 ---
 title: Funktionschefer
 description: Med funktionshanterare kan du styra enskilda funktioner utan att behöva gå igenom hela TVSDK för att söka efter en funktion som kan vara utspridd på flera platser.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dbf2dc8b-6067-4d94-9c3c-553452b7ffd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '390'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Funktionschefer {#feature-managers}
 
@@ -17,11 +16,11 @@ Med funktionshanterare kan du styra enskilda funktioner utan att behöva gå ige
 Funktionshanterarna utför följande uppgifter:
 
 * **Utlöser TVSDK-funktioner.**
-Detta är funktionsanrop som utlöser en TVSDK-funktion. Exempel: 
+Detta är funktionsanrop som utlöser en TVSDK-funktion. Till exempel: 
 `PlaybackManager.play()` anropas när spelarprogrammet behöver starta videouppspelningen.
 
 * **Lyssnar på TVSDK-händelser.**
-Funktionshanteraren måste lyssna på TVSDK-händelser för att få information från TVSDK. Exempel: 
+Funktionshanteraren måste lyssna på TVSDK-händelser för att få information från TVSDK. Till exempel: 
 `AdsManager` lyssnar på TVSDK Ads-händelser som ska meddelas när annonsbrytningar börjar.
 
 * **Skickar händelser till hanteraren.**

@@ -1,14 +1,13 @@
 ---
 description: Den här proceduren är ett exempel på hur du skapar en knapp som gör att en användare kan välja ett textningsspår.
 title: Tillåt användare att ändra bildtextspåret
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cf273f06-ae0d-458c-aeef-7f70dad6106f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
-
 
 # Tillåt användare att ändra bildtextspåret {#allow-users-to-change-the-caption-track}
 

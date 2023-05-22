@@ -1,14 +1,13 @@
 ---
 description: Krypteringsmetoden AES-128 krypterar hela TS-behållaren (Transport Stream) inklusive rubriker, men krypteringen i SAMPLE-AES krypterar bara ljudet och en del av videodata.
 title: Exempel på AES-krypterade HLS-strömmar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 04bda50f-5ca4-4a00-bb5a-97259a2cb005
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på AES-krypterade HLS-strömmar{#sample-aes-encrypted-hls-streams}
 
@@ -26,4 +25,3 @@ Följande kodekar stöds:
 
 * För video stöds H.264.
 * För ljud stöds sample-AES bara för AAC.
-

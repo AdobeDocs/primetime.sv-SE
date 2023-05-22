@@ -1,7 +1,6 @@
 ---
 description: CRS erbjuder JIT (just-in-time) och asynkron ompaketering och HLS-to-HLS-konvertering. Resultatet av ompaketeringen är en HLS-formaterad version av den ursprungliga annonsdesignen. CRS placerar den HLS-formaterade versionen på CDN-servern (Content Delivery Network) för användning vid behov.
 title: Huvudsaklig användning av CRS
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '351'
@@ -30,9 +29,9 @@ Sekvensen för JIT-ompaketering är följande:
 1. Om formatet inte är HLS och CDN-servern inte har någon omkodad version skickar manifestservern annonsen till CRS, som omkodar annonsens kreativitet och lagrar resultatet på CDN-servern för senare bruk.
 1. Manifestservern returnerar innehållet utan annonsen.
 
-## Asynkron ompaketering {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
+## Asynkron ompackning {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-Du kan använda API:t som beskrivs i [API:t för ompaketering](../~old-creative-repackaging-service/api-repackage.md) för att förkoda en annan typ av arbete än HLS för att minimera förlust av visningar och maximera intäktsgenereringen.
+Du kan använda API:t som beskrivs i [API för ompaketering](../~old-creative-repackaging-service/api-repackage.md) förkoda en icke-HLS-kreativ för att minimera förlust av visningar och maximera intäktsgenereringen.
 
 ## HLS-till-HLS-konvertering {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 

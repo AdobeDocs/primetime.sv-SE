@@ -1,7 +1,8 @@
 ---
 title: Exportera mätvärden för en programmerare och utvalda programmeringsvideoprogrammeringsprogram i ett segment
 description: Exportera mätvärden för en programmerare och utvalda programmeringsvideoprogrammeringsprogram i ett segment
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 129f3ae3-09ff-4b40-98a1-157dbd14f13e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%

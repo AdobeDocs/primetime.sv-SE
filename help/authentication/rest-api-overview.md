@@ -1,13 +1,13 @@
 ---
 title: REST API - översikt
 description: Översikt över övriga API:er
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5533d852-f644-417e-bf80-6f7aa1edd6b2
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 0%
 
 ---
-
 
 # REST API - översikt {#rest-api-overview}
 
@@ -99,5 +99,3 @@ Följande gäller för både Server-to-Server- och Connected Device-program.
 ## Lägsta enhetskrav {#min_reqs}
 
 För att kunna använda Primetimes REST API för autentisering måste enheterna uppfylla eller överskrida de lägsta tekniska kraven som anges i REST API-avsnittet i [Primetime authentication Platform / Device / Tools Requirements document](#general_clientless_reqs).
-
-

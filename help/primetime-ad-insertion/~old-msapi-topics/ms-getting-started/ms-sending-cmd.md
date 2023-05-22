@@ -1,7 +1,6 @@
 ---
 description: Använd kommandot HTTP GET för att interagera med manifestservern.
 title: Skicka ett kommando till manifestservern
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '235'
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Använd kommandot HTTP GET för att interagera med manifestservern.
 
-1. Skicka en `HTTP GET`-begäran för en bootstrap-URL som konstruerats med följande mönster:
+1. Skicka ett `HTTP GET` begäran om en bootstrap-URL som konstruerats med följande mönster:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,13 +21,13 @@ Använd kommandot HTTP GET för att interagera med manifestservern.
     ?{query parameters}
    ```
 
-* **** PublisherAssetIDRequired. Utgivarens unika ID för det specifika innehållet.
+* **PublisherAssetID** Obligatoriskt. Utgivarens unika ID för det specifika innehållet.
 
-* **Innehållet** URLRequired. URL för M3U8-innehållsfilen, Base64-kodad för att vara säker i manifestserverns URL. Innehålls-URL:en måste peka på en variant M3U8-fil, även om det bara finns en bithastighetsström.
+* **Innehålls-URL** Obligatoriskt. URL för M3U8-innehållsfilen, Base64-kodad för att vara säker i manifestserverns URL. Innehålls-URL:en måste peka på en variant M3U8-fil, även om det bara finns en bithastighetsström.
 
-* **FrågeparametrarVissa** är obligatoriska, andra är valfria. Dessa utgör den mest varierade delen av begäran. De talar om för manifestservern vilken typ av klient som begär och vad den vill att manifestservern ska göra.
+* **Frågeparametrar** Vissa är obligatoriska, andra är valfria. Dessa utgör den mest varierade delen av begäran. De talar om för manifestservern vilken typ av klient som begär och vad den vill att manifestservern ska göra.
 
-   Exempel:
+   Till exempel:
 
    ```
    https://manifest.auditude.com/auditude/variant/

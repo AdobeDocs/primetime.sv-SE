@@ -1,14 +1,13 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 title: Inaktivera eller aktivera 302 omdirigeringsoptimering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b1bdb6d6-b34d-4e0a-8c96-7fd4ce77b5c9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Omdirigeringsoptimering för HTTP 302 {#http-302-redirect-optimization}
 
@@ -20,8 +19,8 @@ Den här funktionen är aktiverad som standard och du kan ändra den här instä
 
 ## Inaktivera eller aktivera 302 omdirigeringsoptimering{#disable-or-enable-redirect-optimization}
 
-Använd egenskapen `useRedirectedUrl` för att aktivera (true) eller inaktivera 302 omdirigering (false).
-Exempel:
+Använd `useRedirectedUrl` egenskapen för att aktivera 302 omdirigering (true) eller av (false).
+Till exempel:
 
 ```java
 // Set useRedirectedUrl property to false 
@@ -39,4 +38,3 @@ MediaResource resource = MediaResource.createFromURL(url, resourceMetadata);
 //Load the resource 
 mediaPlayer.replaceCurrentItem(resource);
 ```
-

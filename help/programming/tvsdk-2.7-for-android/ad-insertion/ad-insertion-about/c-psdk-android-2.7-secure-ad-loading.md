@@ -2,16 +2,15 @@
 title: Säker annonsinläsning över HTTPS
 description: Säker annonsinläsning över HTTPS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f9de1a2b-4eea-4028-83db-1b4021d1fbb7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-
-# Säker annons som läses in via HTTPS {#secure-ad-loading-over-https}
+# Säker annonsinläsning över HTTPS {#secure-ad-loading-over-https}
 
 Adobe Primetime erbjuder ett alternativ för att begära första samtal till Primetime-annonsservern och CRS-relaterade samtal via HTTPS.
 
@@ -21,4 +20,3 @@ Funktionen är inte aktiverad som standard. Använd följande för att aktivera 
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
 auditudeSettings. getForceHttpsConfiguration().setAdServerCalls(true);
 ```
-

@@ -1,20 +1,19 @@
 ---
 description: När DRM-metadata för en video inkluderas i medieströmmen ska du autentisera under uppspelningen.
 title: DRM-autentisering under uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3f190d37-291e-4a5e-811d-7e9984a6a44a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
 # DRM-autentisering under uppspelning {#drm-authentication-during-playback}
 
 När DRM-metadata för en video inkluderas i medieströmmen ska du autentisera under uppspelningen.
 
-Ta en titt på licensrotationsfunktionen, där en resurs krypteras med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks använder du `DRMHelper`-metoder för att kontrollera om DRM-metadata kräver DRM-autentisering.
+Ta en titt på licensrotationsfunktionen, där en resurs krypteras med flera DRM-licenser. Varje gång nya DRM-metadata upptäcks, använder du `DRMHelper` metoder för att kontrollera om DRM-metadata kräver DRM-autentisering.
 
 >[!NOTE]
 >
@@ -34,7 +33,7 @@ Ta en titt på licensrotationsfunktionen, där en resurs krypteras med flera DRM
    };
    ```
 
-1. Använd `DRMMetadata` för att kontrollera om autentisering behövs. Om inte, gör ingenting; uppspelningen fortsätter utan avbrott.
+1. Använd `DRMMetadata` för att kontrollera om autentisering krävs. Om inte, gör ingenting; uppspelningen fortsätter utan avbrott.
 1. Annars måste du utföra DRM-autentisering. Eftersom den här åtgärden är asynkron och hanteras i en annan tråd påverkas inte användargränssnittet och inte heller videouppspelningen.
 1. Om autentiseringen misslyckas kan användaren inte fortsätta att visa videon och uppspelningen avbryts. Annars fortsätter uppspelningen oavbrutet.
 

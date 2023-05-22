@@ -8,7 +8,6 @@ moreHelpPaths: /content/help/en/primetime/morehelp/ad-insertion;/content/help/en
 pagecreatedat: en
 pagelayout: video
 sidecolumn: left
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '2414'
@@ -33,7 +32,7 @@ När du initierar en manifestserversession kan du ställa in en parameter på be
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
-## Alternativ för felsökningsverktyget {#debugging-tool-options}
+## Alternativ för felsökningsverktyg {#debugging-tool-options}
 
 När du anropar felsökningsverktyget har du flera alternativ för vilken information manifestservern returnerar i HTTP-rubriker. Alternativen påverkar inte vad manifestservern placerar i loggfiler.
 
@@ -41,8 +40,8 @@ När du anropar felsökningsverktyget har du flera alternativ för vilken inform
 
 När du initierar felsökningsloggning för en manifestserversession kan du lägga till parametern ptdebug i URL:en för begäran och ange följande alternativ för den information som manifestservern returnerar i HTTP-rubriker:
 
-* ptdebug=true Alla poster utom `TRACE_HTTP_HEADER` och de flesta `call/response data` från `TRACE_AD_CALL`-poster.
-* ptdebug=AdCall Only TRACE_AD_*type* (till exempel TRACE_AD_CALL) records.
+* ptdebug=true Alla poster utom `TRACE_HTTP_HEADER` och mest `call/response data` från `TRACE_AD_CALL` poster.
+* ptdebug=AdCall Only TRACE_AD_*type* (till exempel TRACE_AD_CALL) poster.
 * ptdebug=Header Only TRACE_HTTP_HEADER records.
 
 Alternativen påverkar inte vad manifestservern placerar i loggfilerna. Du har ingen kontroll över det, men loggfilerna är textfiler, så du kan använda en mängd olika verktyg för att extrahera och formatera information som intresserar dig.
@@ -256,7 +255,7 @@ Poster av den här typen loggar en annonsbyrå som saknas. Det enda fältet efte
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
-| ad_id | string | Fullständigt kvalificerat annons-ID `(FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\]\]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\]\]`-PROTOKOLL: AUDITUDE,VAST) |
+| ad_id | string | Fullständigt kvalificerat annons-ID `(FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\]\]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\]\]` PROTOKOLL: AUDITUDE,VAST) |
 
 ### TRACE_TRANSCODING_REQUESTED records {#trace-transcoding-requested-records}
 
@@ -280,7 +279,7 @@ Poster av den här typen indikerar en begäran om att utföra spårning på serv
 | start | float | Starttid för PTS-fragment (sekunder med millisekundprecision) |
 | end | float | Sluttid för PTS-fragment (sekunder med millisekundprecision) |
 
-### TRACE_TRACKING_REQUEST_URL records {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL-poster {#trace-tracking-request-url-records}
 
 Poster av den här typen har en spårnings-URL för spårning på serversidan. Fält efter TRACE_TRACKING_REQUEST_URL visas i den ordning som de visas i tabellen, avgränsade med tabbar.
 
@@ -303,7 +302,7 @@ Poster av den här typen loggar begär att manifestservern skapar WEBVTT-bildtex
 
 ### TRACE_WEBVTT_RESPONSE-poster {#trace-webvtt-response-records}
 
-Registrerar ``of ``den här ``type ``loggen ``responses ``på ``manifest ``servern ``sends ``till ``clients ``i `` `answer` `` till ``requests `` `for` ``WEBVTT ``beskrivningar. Fält efter TRACE_WEBVTT_RESPONSE visas i den ordning som de visas i tabellen, avgränsade `by`flikar.
+Poster ``of ``this ``type ``logg ``responses ``den ``manifest ``server ``sends ``till ``clients ``in `` `answer` ``till ``requests `` `for` ``WEBVTT ``bildtexter. Fält efter TRACE_WEBVTT_RESPONSE visas i den ordning som visas i tabellen, avgränsade `by`-tabbar.
 
 | Fält | Typ | Beskrivning |
 |--- |--- |--- |
@@ -325,25 +324,25 @@ Poster av den här typen loggar svar på begäranden som manifestservern gör f�
 Poster av den här typen gör att manifestservern kan logga händelser och information som annars inte planerats när den importerar annonser. Fältet efter TRACE_MISC består av en meddelandesträng. Följande meddelanden kan visas:
 
 * Ad ignore:AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
-* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*sekunder*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
+* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*sekunder*, ignore=*ignorera*, redirectAd=*redirectAd*, prioritet=*prioritet*
 * Annonsplaceringen returnerade null.
 * Reklamen har sammanfogats.
 * Annonsanropet misslyckades: *felmeddelande*.
-* Lägger till användaragent för att hämta råmanifestet: *user-agent*.
+* Lägger till användaragent för att hämta råmanifestet: *användaragent*.
 * Lägger till cookie för att hämta Raw-manifestfil: [cookie]
 * Felaktig URL *begärt URL-felmeddelande*. (Det gick inte att parsa variant-URL:en)
 * Anropad URL: URL *returnerade: svarskod*. (Live-URL)
 * Anropad URL: URL *returkod: svarskod*. ( VOD URL)
 * Konflikt vid lösning av annonser: antingen en av - mittrullstart eller mittrullslut ligger inom pre-roll eller pre-roll som finns i mittrullen (VOD).
-* Ett ohanterat undantag upptäcktes som genererades av hanteraren för URI: *begärande-URL*.
+* Ett ohanterat undantag upptäcktes som genererades av hanteraren för URI: *begäran-URL*.
 * Genereringen av variantmanifest har slutförts. (Variant)
 * Genereringen av variantmanifest har slutförts.
 * Undantag vid hantering av VAST-omdirigering *omdirigerings-URL *fel: *felmeddelande*.
-* Det gick inte att hämta annonsens spellista för *annonsens manifest-URL*.
+* Det gick inte att hämta annonsens spellista för *webbadress för annonstavla*.
 * Det gick inte att generera målmanifestet. (HLSManifestResolver)
 * Det gick inte att tolka första annonssamtalssvaret: *felmeddelande*.
-* Det gick inte att bearbeta *GET|POST *sökvägsbegäran: *begärande-URL*. (Live/VOD)
-* Det gick inte att bearbeta begäran om livemanifest: *begärande-URL*. (Live)
+* Det gick inte att bearbeta *GET|POST *sökvägsbegäran: *begäran-URL*. (Live/VOD)
+* Det gick inte att bearbeta begäran om livemanifest: *begäran-URL*. (Live)
 * Det gick inte att returnera ett variantmanifest: *felmeddelande*.
 * Det gick inte att verifiera grupp-ID: *grupp-ID*.
 * Hämtar raw-manifest: *innehålls-URL*. (Live)
@@ -353,8 +352,8 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * HTTP-begäran har tagits emot. (Mycket första meddelande)
 * Annonsen ignoreras eftersom skillnaden mellan annonssvarets varaktighet (*annonsens svarstid *sek) och den faktiska annonstiden (*faktisk varaktighet *sek) är större än gränsen. (HLSManifestResolver)
 * Ignorerar tillgänglighet som inte gav något ID-värde. (GroupAdResolver.java)
-* Ignorerar tillgänglighet som gav ett ogiltigt tidsvärde: *time *för availId = *Tillgängligt ID*.
-* Ignorerar tillgänglighet som angav ett ogiltigt tidsvärde: *duration *for availId = *Tillgängligt ID*.
+* Ignorerar tillgänglighet som gav ett ogiltigt tidsvärde: *time *for availId = *användar-ID*.
+* Ignorerar tillgänglighet som angav ett ogiltigt tidsvärde: *duration *for availId = *användar-ID*.
 * Initiera ny session. (Variant)
 * Ogiltig HTTP-metod. Det måste vara en GET. (VOD)
 * Ogiltig HTTP-metod. Spårningsbegäran måste vara en GET. (Live)
@@ -365,9 +364,9 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Ogiltig begäran. Spårningsbegäran måste göras efter att sessionen har upprättats. (VOD)
 * Ogiltig serverinstans för överlagringsgrupp-ID: *grupp-ID*. (Live)
 * Gränsen för VAST-omdirigeringar har uppnåtts - *tal*.
-* Ring annonser: *annonsanrop-URL*.
+* Ring annonser: *call URL*.
 * Inget manifest hittades för: *innehålls-URL*. (Live)
-* Det gick inte att hitta någon matchande tillgänglig för användar-ID: *Tillgängligt ID*. (HLSManifestResolver)
+* Det gick inte att hitta någon matchande tillgänglig för användar-ID: *användar-ID*. (HLSManifestResolver)
 * Ingen uppspelningssession hittades. (HLSManifestResolver)
 * Bearbetar VOD-begäran för manifest *innehålls-URL*.
 * Bearbetar variant.
@@ -380,14 +379,14 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Returnerat felsvar för GET-begäran som anger en ogiltig resurs: *ID för annonsförfrågan*. (VOD)
 * Returnerat felsvar för GET-begäran som anger ett ogiltigt eller tomt grupp-ID: *grupp-ID*. (VOD)
 * Returnerat felsvar för GET-begäran som anger ett ogiltigt värde för spårningsposition. (VOD)
-* Returnerat felsvar för GET-begäran med ogiltig syntax - *begäran URL*. (Live/VOD)
+* Returnerat felsvar för GET-begäran med ogiltig syntax - *begäran-URL*. (Live/VOD)
 * Returnerar felsvar för begäran med en HTTP-metod som inte stöds: *GET|POST*. (Live/VOD)
 * Returnerar manifest från cache. (VOD)
 * Servern är överbelastad. Fortsätt utan en förfrågan om sammanfogning. (Variant)
 * Börja generera målmanifest. (HLSManifestResolver)
 * Börja generera variantmanifest från: *innehålls-URL*. (Variant)
 * Sätt ihop annonser i manifest. (VODHLSResolver)
-* Försöker sy ihop annons på `HH:MM:SS`: AdPlacement \[adManifestURL=*och Manifest-URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*.]
+* Försöker sy ihop annons på `HH:MM:SS`: AdPlacement \[adManifestURL=*ad Manifest URL*, durationSeconds=*sekunder*, ignore=*ignorera*, redirectAd=*omdirigera*, prioritet=*prioritet*.\]
 * Det går inte att hämta annonser på grund av ogiltig tidslinje - returnerade innehållet utan annonser. (VOD)
 * Det går inte att hämta annonser - returnerade innehållet utan annonser. (VOD)
 * Det gick inte att hämta annonsfrågan och ingen innehålls-URL angavs. (VOD)
@@ -427,4 +426,4 @@ Manifestservern genererar poster av den här typen när den tar emot en signal o
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
+* Se den fullständiga hjälpdokumentationen på [Adobe Primetime Läs mer &amp; Support](https://helpx.adobe.com/support/primetime.html) sida.

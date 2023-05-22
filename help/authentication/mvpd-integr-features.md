@@ -1,13 +1,13 @@
 ---
 title: MVPD-integreringsfunktioner
 description: MVPD-integreringsfunktioner
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: fcd65940-9a86-49b2-9d52-9031fb763338
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1704'
 ht-degree: 2%
 
 ---
-
 
 # MVPD-integreringsfunktioner
 
@@ -37,7 +37,7 @@ Informationen i tabellerna är avsedd att driva integreringsprocessen för auten
 | 1.2 | [Kanalbaserad autentisering](/help/authentication/authz-usecase.md) | När den har autentiserats kan auktoriseringen (AuthZ) ske i bakgrunden, med bara en nätverkskanal-ID och en användaridentifierare skickas till MVPD. | A+ |  |
 | 1.3 | UserID-beständighet | MVPD tillhandahåller ett okomplicerat, beständigt användar-ID. | A |  |
 | 1.4 | [Stöd för enkel inloggning](/help/authentication/sso-support.md) | Visningsprogrammet loggar in med MVPD på webbplatsen för ett varumärke och kan sedan gå till ett annat varumärke och inte uppmanas att logga in igen. AuthN-sessionen delas mellan varumärkena. SSO-stöd gäller både webbplatser och mobilapplikationer/enhetsapplikationer.  För MVPD-program krävs att antingen ett användar-ID eller någon annan användartoken som kan användas för AuthZ för olika varumärken returneras. | A |  |
-| 1.5 | Enhetsoptimerad användarupplevelse vid inloggning (UX) | MVPD har stöd för att ändra storlek på inloggningsskärmen så att den passar dimensionerna för den enhet som vyn använder. | A |  |
+| 1.5 | Enhetsoptimerad användarupplevelse vid inloggning (UX) | MVPD har stöd för att ändra storlek på inloggningsskärmen så att den passar dimensionerna för enheten som vyn använder. | A |  |
 | 1.6 | Standardlogotyp för MVPD-väljare | MVPD tillhandahåller en URL till en standardlogotyp med lämpliga dimensioner (112x33 pixlar). | A | Logotypen ska skötas av MVPD och ska cachas av CDN. |
 | 1.7 | [Tjänstleverantörsomfång](/help/authentication/serv-provider-scoping.md) | MVPD stöder överföring av varumärkesidentifieraren (Requestor value) i AuthN-begäran. | A- | Detta aktiverar en tjänsteleverantörsspecifik inloggningsupplevelse. |
 | 1.8 | [Auktorisering för flera kanaler](/help/authentication/mvpd-preflight-authz.md#preflight-multich-authz) | MVPD stöder en programmerare som skickar flera kanaler i en enda auktoriseringsbegäran. | B+ |  |

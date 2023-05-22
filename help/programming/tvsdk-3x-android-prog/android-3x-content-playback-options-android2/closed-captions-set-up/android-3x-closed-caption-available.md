@@ -1,27 +1,26 @@
 ---
 description: Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir det aktuella spåret, som visas när synligheten är aktiverad. Vissa spår kanske inte är tillgängliga från början, så lyssna efter händelsen som anger att fler har blivit tillgängliga.
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9f1a0f7e-44f8-4595-8879-568ab237ca1c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Välj ett aktuellt bildtextspår bland tillgängliga spår {#select-a-current-caption-track-from-among-available-tracks}
 
 Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir det aktuella spåret, som visas när synligheten är aktiverad. Vissa spår kanske inte är tillgängliga från början, så lyssna efter händelsen som anger att fler har blivit tillgängliga.
 
-1. Vänta tills mediespelaren har minst statusen `PREPARED`.
+1. Vänta tills mediespelaren är i åtminstone `PREPARED` status.
 1. Lyssna efter dessa händelser:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`: Den inledande listan med spår för undertextning är tillgänglig.
+   * `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZED`: Den inledande listan med spår för undertextning är tillgänglig.
 
-1. Hämta en lista över alla tillgängliga undertextningsspår.
+1. Hämta en lista med alla tillgängliga undertextningsspår.
 
-   Exempel:
+   Till exempel:
 
    ```java
    List<ClosedCaptionsTrack> ccTracks = 
@@ -30,7 +29,7 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
 1. Välj ett tillgängligt spår som aktuellt spår.
 
-   Exempel:
+   Till exempel:
 
    ```java
    // Select the initial CC track. 

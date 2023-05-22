@@ -1,7 +1,6 @@
 ---
 description: Alla förfrågningar om annonsinfogning använder samma URL-struktur och samma grundläggande frågeparametrar. Ytterligare frågeparametrar gör att manifestservern kan arbeta med olika klienter och situationer.
 title: Begäranden om annonsinfogning
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '215'
@@ -22,8 +21,8 @@ Alla förfrågningar om annonsinfogning använder samma URL-struktur och samma g
 
 >[!NOTE]
 >
->Parametern `__sid__` omges av två understreck.
+>The `__sid__` parametern omges av två understreck.
 
-Manifestservern underhåller sessioner för enskilda klienter eller grupper av klienter för att säkerställa att sekvenserna av API-interaktioner för olika klienter hålls åtskilda. `__sid__` som klienten skickar i bootstrap-URL:en till manifestservern måste vara unik i sin miljö. Manifestservern använder den för att skapa ett globalt unikt ID som returneras till klienten.
+Manifestservern underhåller sessioner för enskilda klienter eller grupper av klienter för att säkerställa att sekvenserna av API-interaktioner för olika klienter hålls åtskilda. The `__sid__` som klienten skickar i bootstrap-URL:en till manifestservern ska vara unik i sin miljö. Manifestservern använder den för att skapa ett globalt unikt ID som returneras till klienten.
 
 De återstående frågeparametrarna gäller olika klienter och situationer.

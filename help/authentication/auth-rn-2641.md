@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om Adobe Primetime-autentisering 2.64.1
 description: Versionsinformation om Adobe Primetime-autentisering 2.64.1
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b0edbd90-ebb5-40a7-9034-1699dccfadb5
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation om Adobe Primetime-autentisering 2.64.1 {#authn-264-rn}
 

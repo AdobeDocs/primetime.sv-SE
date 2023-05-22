@@ -1,16 +1,15 @@
 ---
 description: PTNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
 title: Meddelanden om spelarstatus, aktivitet, fel och loggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7f622c42-bc39-46e9-9b8b-4b3e467f37f7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
-
-# Meddelanden om spelarstatus, aktivitet, fel och loggning {#notifications-for-player-status-activity-errors-and-logs-overview}
+# Meddelanden om spelarstatus, aktivitet, fel och loggning  {#notifications-for-player-status-activity-errors-and-logs-overview}
 
 PTNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
 
@@ -18,27 +17,27 @@ Programmet kan hämta information om meddelanden och status. Du kan också skapa
 
 >[!IMPORTANT]
 >
->TVSDK använder också *`notification`* för att referera till `NSNotifications` ( `PTMediaPlayer`-meddelanden) *`event`*-meddelanden som skickas för att ge information om spelaraktivitet.
+>TVSDK använder också *`notification`* referera till `NSNotifications` ( `PTMediaPlayer` meddelanden) *`event`* meddelanden, skickas för att ge information om spelaraktivitet.
 
-TVSDK utfärdar även `PTMediaPlayerNewNotificationItemEntryNotification` när `PTNotification` utfärdas.
+Problem även med TVSDK `PTMediaPlayerNewNotificationItemEntryNotification` när den `PTNotification`.
 
-Du implementerar händelseavlyssnare för att hämta och svara på händelser. Många händelser ger `PTNotification` statusmeddelanden.
+Du implementerar händelseavlyssnare för att hämta och svara på händelser. Många evenemang `PTNotification` statusmeddelanden.
 
 ## Meddelandeinnehåll {#notification-content}
 
 PTNotification ger information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista med `PTNotification`-meddelanden. Varje anmälan innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `PTNotification` meddelanden. Varje anmälan innehåller följande information:
 
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
 
-   * `type`: INFORMATION, VARNING ELLER FEL.
+   * `type`: INFORMATION, VARNING eller FEL.
    * `code`: En numerisk representation av anmälan.
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
-   * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
+   * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` tillhandahåller ett värde som är en URL som är relaterad till meddelandet.
 
-   * `innerNotification`: En referens till ett annat  `PTNotification` objekt som direkt påverkar det här meddelandet.
+   * `innerNotification`: En referens till en annan `PTNotification` objekt som direkt påverkar detta meddelande.
 
 Du kan lagra informationen lokalt för senare analys eller skicka den till en fjärrserver för loggning och grafisk representation.
 
@@ -51,7 +50,7 @@ Det finns två implementeringar för `PTNotification`:
 * Att lyssna
 * Lägga till anpassade meddelanden i `PTNotificationHistory`
 
-Om du vill lyssna på meddelanden instansierar TVSDK klassen `PTNotification` och kopplar den till en instans av `PTMediaPlayerItem`, som är kopplad till en PTMediaPlayer-instans. Det finns bara en `PTNotificationHistory`-instans per `PTMediaPlayer`.
+TVSDK instansierar `PTNotification` och bifogar den till en instans av `PTMediaPlayerItem`som är kopplad till en PTMediaPlayer-instans. Det finns bara en `PTNotificationHistory` instans per `PTMediaPlayer`.
 
 >[!IMPORTANT]
 >
@@ -59,9 +58,9 @@ Om du vill lyssna på meddelanden instansierar TVSDK klassen `PTNotification` oc
 
 ## Lyssna på meddelanden {#listen-to-notifications}
 
-Det finns två sätt att lyssna på `PTNotification`-meddelandet i `PTMediaPlayer`:
+Det finns två sätt att lyssna på `PTNotification` meddelandet i `PTMediaPlayer`:
 
-1. Kontrollera manuellt `PTNotificationHistory` för `PTMediaPlayerItem` med en timer och kontrollera skillnaderna:
+1. Kontrollera knappen manuellt `PTNotificationHistory` i `PTMediaPlayerItem` med en timer och kontrollera skillnaderna:
 
    ```
    //Access to the PTMediaPlayerItem  
@@ -72,8 +71,8 @@ Det finns två sätt att lyssna på `PTNotification`-meddelandet i `PTMediaPlaye
    NSArray *notifications = notificationHistory.notificationItems;
    ```
 
-1. Använd den publicerade [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) av `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
-1. Registrera dig på `NSNotification` med hjälp av instansen av `PTMediaPlayer` som du vill få meddelanden från:
+1. Använd bokförda [NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) i `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`.
+1. Anmäl dig till `NSNotification` genom att använda instansen av `PTMediaPlayer` som du vill få meddelanden från:
 
    ```
    //Register to the NSNotification 
@@ -86,7 +85,7 @@ Det finns två sätt att lyssna på `PTNotification`-meddelandet i `PTMediaPlaye
 
 Du kan implementera återanrop för meddelanden.
 
-1. Implementera återanropet genom att hämta `PTNotification` från `NSNotification`-användarinformationen och läsa dess värden med `PTMediaPlayerNotificationKey`:
+1. Implementera återanropet genom att hämta `PTNotification` från `NSNotification` användarinformation och läsning av värden med `PTMediaPlayerNotificationKey`:
 
    ```
    - (void) onMediaPlayerNotification:(NSNotification *) nsnotification { 
@@ -97,8 +96,7 @@ Du kan implementera återanrop för meddelanden.
 
 ## Lägg till anpassade meddelanden {#add-custom-notifications}
 
-Så här lägger du till ett anpassat meddelande:
-Skapa en ny `PTNotification` och lägg till den i `PTNotificationHistory` med aktuell `PTMediaPlayerItem`:
+Så här lägger du till ett anpassat meddelande: Skapa ett nytt `PTNotification` och lägg till det i `PTNotificationHistory` genom att använda aktuell `PTMediaPlayerItem`:
 
 ```
 //Access to the PTMediaPlayerItem  

@@ -1,14 +1,13 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d10532a5-bf96-4233-86f1-b135f6e1c0f5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
 
 ---
-
 
 # Överväganden och bästa praxis{#considerations-and-best-practices}
 
@@ -24,7 +23,7 @@ Kom ihåg följande information när du använder TVSDK:
 * Uppspelning stöds endast för HTTP-direktuppspelning (HLS).
 * Huvudinnehållet kan multiplexas, där video- och ljudströmmar finns i samma återgivning, eller icke-multiplexat, där video- och ljudströmmar finns i separata återgivningar.
 * TVSDK-API:t implementeras i mål-C.
-* Videouppspelning kräver det inbyggda Apple AV Foundation-ramverket. Detta påverkar hur och när medieresurser, inklusive undertexter och tidslinjer, kan nås:
+* Videouppspelning kräver Apple AV Foundation-ramverket. Detta påverkar hur och när medieresurser, inklusive undertexter och tidslinjer, kan nås:
 
    * Det går inte att ändra tidslinjejusteringar efter den första konfigurationen.
 
@@ -32,7 +31,7 @@ Kom ihåg följande information när du använder TVSDK:
    * Beroende på kodningsprecisionen kan den faktiska längden för kodade medier skilja sig från varaktigheten som registreras i strömmens resursmanifest.
 
       Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
-   * Den inkommande användaragenten för alla HTTP-begäranden från TVSDK på den här plattformen bestäms av enheten och iOS-versionen som körs på enheten.
+   * Inkommande användaragent för alla HTTP-begäranden från TVSDK på den här plattformen bestäms av enheten och den iOS-version som körs på enheten.
 
       Standardvärdet för användaragentsträngen är det som tilldelas av operativsystemet.
 
@@ -41,12 +40,11 @@ Kom ihåg följande information när du använder TVSDK:
 Här följer rekommenderad praxis för TVSDK:
 
 * Använd HLS version 3.0 eller senare för programinnehåll.
-* Använd Apples mediastreamvalidator för att validera VOD-strömmar.
-* Klassen `PTSDKConfig` innehåller metoder för att framtvinga SSL på begäranden som görs till Primetimes annonsservrar, DRM- och Video Analytics-servrar.
+* Använd Apple mediastreamvalidator för att validera VOD-strömmar.
+* The `PTSDKConfig` klassen innehåller metoder för att framtvinga SSL på begäranden som görs till Primetimes annonsbeslutsservrar, DRM- och Video Analytics-servrar.
 
-   Mer information finns i metoderna `forceHTTPS` och `isForcingHTTPS` i den här klassen.
+   Mer information finns i `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen.
 
    >[!IMPORTANT]
    >
    >Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande begäranden ändras inte. Innehållsleverantörerna och annonsservrarna ansvarar för att tillhandahålla URL:er som stöds via HTTPS.
-

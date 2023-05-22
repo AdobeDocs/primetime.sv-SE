@@ -1,13 +1,13 @@
 ---
 title: Stöd för SFSafariViewController i iOS SDK 3.2+
 description: Stöd för SFSafariViewController i iOS SDK 3.2+
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6691550f-c36f-4fae-aa77-082ca7d8a60a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för SFSafariViewController i iOS SDK 3.2+ {#sfsafariviewcontroller-support-on-ios-sdk-3.2}
 
@@ -70,4 +70,3 @@ För att manuellt kunna hantera SVC måste implementeraren utföra följande ste
    ```obj-c
    accessEnabler.setSelectedProvider(nil)
    ```
-

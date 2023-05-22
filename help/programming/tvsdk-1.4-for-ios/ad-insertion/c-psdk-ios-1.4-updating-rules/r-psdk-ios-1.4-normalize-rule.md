@@ -2,14 +2,13 @@
 description: Regeln normalize definierar en URL-omvandling som ska användas på en kreativ källwebbadress som hämtas från ett VAST/VMAP-svar.
 keywords: normalisera regel;regler för kreativt urval
 title: Normalisera regler
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0d9669bf-8d64-49da-b917-5a6d6c3ca776
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
-
 
 # Normalisera regler{#normalize-rules}
 
@@ -31,13 +30,13 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> normalisera</span></td> 
-   <td>Värdet måste alltid vara <span class="codeph"> normalize</span>.</td> 
+   <td>Värdet måste alltid vara <span class="codeph"> normalisera</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> artikel</span></td> 
    <td><span class="codeph"> Sträng</span></td> 
    <td><span class="codeph"> värd</span></td> 
-   <td>För närvarande stöds bara <span class="codeph"> host</span>. Det här attributet måste finnas när <span class="codeph"> matchar</span> och <span class="codeph"> värden</span>-attribut har definierats.</td> 
+   <td>Endast för närvarande <span class="codeph"> värd</span> stöds. Attributet måste finnas när <span class="codeph"> matchar</span> och <span class="codeph"> values</span> -attribut definieras.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matchar</span></td> 
@@ -45,19 +44,19 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
    <td></td> 
    <td>Möjliga värden:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> - equals</li> 
+     <li><span class="codeph"> eq</span> - är lika med</li> 
      <li><span class="codeph"> ne</span> - inte lika med</li> 
-     <li><span class="codeph"> co</span> - contains</li> 
-     <li><span class="codeph"> nc</span> - not contains</li> 
+     <li><span class="codeph"> co</span> - innehåller</li> 
+     <li><span class="codeph"> nc</span> - innehåller inte</li> 
      <li><span class="codeph"> sw</span> - börjar med</li> 
-     <li><span class="codeph"> Nytt</span>  - slutar med</li> 
+     <li><span class="codeph"> new</span> - slutar med</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK använder attributet <span class="codeph"> match</span> för <span class="codeph">-objektet</span> för källans kreativa del och matchar mot värdena som definieras i den här arrayen.</td> 
+   <td>TVSDK kommer att använda <span class="codeph"> matchar</span> på <span class="codeph"> artikel</span> av källans kreativa innehåll och matcha mot värdena som definieras i den här arrayen.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> sök</span></td> 
@@ -104,4 +103,3 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
     }
 }
 ```
-

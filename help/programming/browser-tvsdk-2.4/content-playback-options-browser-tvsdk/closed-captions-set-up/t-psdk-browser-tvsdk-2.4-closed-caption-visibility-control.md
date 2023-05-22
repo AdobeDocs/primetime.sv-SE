@@ -1,14 +1,13 @@
 ---
 description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret.
 title: Kontrollera synlighet för undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e74c0344-43f3-4ed7-bbf2-d89dd3df8a33
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollera synlighet för undertexter{#control-closed-caption-visibility}
 
@@ -24,5 +23,4 @@ Om undertextad text visas när spelaren går till sökningsläget visas inte tex
 >
 >Synlighetsvärdena för undertexter styrs med `MediaPlayer.VISIBLE` och `MediaPlayer.INVISIBLE`.
 
-1. Använd egenskapen `MediaPlayer.ccVisibility` för att komma åt den aktuella synlighetsinställningen för de stängda bildtexterna.
-
+1. Använd `MediaPlayer.ccVisibility` för att komma åt den aktuella synlighetsinställningen för de stängda bildtexterna.

@@ -1,20 +1,19 @@
 ---
-description: 'FER-innehåll (Full Event Replay) är ett direktflöde som konverteras till VOD genom att taggen #EXT-X-ENDLIST läggs till i slutet av manifestfilen. Strömmen behåller sina annonsmarkörer.'
+description: FER-innehåll (Full Event Replay) är ett direktflöde som konverteras till VOD genom att taggen
 title: FER, lösning och infogning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9075932d-4e77-4249-af5d-0b392033907f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
-# FER-annonsering löser och infogar{#fer-ad-resolving-and-insertion}
+# FER, lösning och infogning{#fer-ad-resolving-and-insertion}
 
 FER-innehåll (Full Event Replay) är ett direktflöde som konverteras till VOD genom att taggen #EXT-X-ENDLIST läggs till i slutet av manifestfilen. Strömmen behåller sina annonsmarkörer.
 
-Webbläsare-TVSDK hanterar en FER-ström som VOD, så som standard är annonslingsläget `SERVER_MAP`. Men eftersom flödet behåller sina annonsmarkörer kan du ställa in annonssignaleringsläget på `MANIFEST_CUES`, vilket gör att du kan använda annonsmarkörerna för annonsinfogning.
+Webbläsare-TVSDK hanterar en FER-ström som VOD, så som standard är annonsljudläget `SERVER_MAP`. Men eftersom dataströmmen behåller sina annonsmarkörer kan du ange att annonssigneringsläget ska vara `MANIFEST_CUES`som gör att du kan använda annonsmarkörerna för annonsinfogning.
 
 Så här aktiverar du annonsinfogning med markörer för en FER-ström:
 
@@ -31,4 +30,4 @@ FER-annonsupplösning och infogningsbeteende liknar live-annonsupplösning och i
 1. Ersätter delar av huvudinnehållet med annonsbrytningar med samma varaktighet
 1. Beräknar om den virtuella tidslinjen, om det behövs.
 
-**Begränsning:** Webbläsarens TVSDK stöder endast uppspelning av HLS FER-strömmar. MP4-annonser på mellannivå stöds inte heller med FER-strömmar.
+**Begränsning:** Webbläsarens TVSDK stöder bara uppspelning av HLS FER-strömmar. MP4-annonser på mellannivå stöds inte heller med FER-strömmar.

@@ -1,16 +1,15 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Kvalitetsstatistik för tjänster
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ab664d75-a24f-41d6-91d7-a26ad7baab9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-
-# Kvalitetsstatistik för tjänsten {#quality-of-service-statistics}
+# Kvalitetsstatistik för tjänster {#quality-of-service-statistics}
 
 QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 
@@ -24,7 +23,7 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
 
 Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från klassen LoadInformation.
 
-1. Implementera händelseavlyssnaren `onLoadInformationAvailable` för återanrop.
+1. Implementera `onLoadInformationAvailable` händelseavlyssnare för återanrop.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -52,37 +51,37 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> <p>Hämtningens varaktighet i millisekunder. </p> <p>TVSDK skiljer inte mellan den tid det tog för klienten att ansluta till servern och den tid det tog att hämta det fullständiga fragmentet. Om till exempel ett 10 MB-segment tar 8 sekunder att ladda ned, tillhandahåller TVSDK den informationen, men talar inte om för dig att det tog 4 sekunder innan den första byten och ytterligare 4 sekunder att ladda ned hela fragmentet. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> Medielängden för de hämtade fragmenten i millisekunder. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> size  </span> </td> 
+      <td colname="col01"> <span class="codeph"> size </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
       <td colname="col2"> Storleken på den hämtade resursen i byte. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
       <td colname="col2"> Index för motsvarande spår, om det är känt. annars 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Namnet på motsvarande spår, om det är känt. annars null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Typ av motsvarande spår, om den är känd. annars null. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type  </span> </td> 
+      <td colname="col01"> <span class="codeph"> type </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Vad TVSDK laddade ned. Något av följande: 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
@@ -92,7 +91,7 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
       </ul> Ibland är det inte möjligt att identifiera resurstypen. Om detta inträffar returneras FILE. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url  </span> </td> 
+      <td colname="col01"> <span class="codeph"> url </span> </td> 
       <td colname="col1"> <p>Sträng </p> </td> 
       <td colname="col2"> Den URL som pekar på den hämtade resursen. </td> 
    </tr> 
@@ -103,12 +102,12 @@ Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som frag
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
+The `QOSProvider` -klassen innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
 
 Det innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version och skärmstorlek/skärmtäthet.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
+1. Skapa en `QOSProvider` och bifoga det till mediespelaren.
 
    ```
    // Create Media Player. 
@@ -118,7 +117,7 @@ Det innehåller även information om enheten, t.ex. tillverkare, modell, operati
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Till exempel:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

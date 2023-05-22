@@ -1,27 +1,26 @@
 ---
 description: TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
 title: Hantering av fel vid borttagning och ersättning av annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 86970989-82e0-4e6f-81fb-beee70870c69
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
-
-# Hantering av borttagning och ersättningsfel {#ad-deletion-and-replacement-error-handling}
+# Hantering av fel vid borttagning och ersättning av annonser {#ad-deletion-and-replacement-error-handling}
 
 TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
 
-TVSDK hanterar `timeRanges`-fel genom att utföra standardsammanslagning och sortering. Först sorteras kunddefinierade tidsintervall efter *början*-tiden. Baserat på den här sorteringsordningen sammanfogar den sedan intilliggande intervall och sammanfogar dem om det finns delmängder och skärningar mellan intervallen.
+TVSDK hanterar `timeRanges` fel genom att utföra standardsammanslagning och sortering. För det första sorteras kunddefinierade tidsintervall efter *begin* tid. Baserat på den här sorteringsordningen sammanfogar den sedan intilliggande intervall och sammanfogar dem om det finns delmängder och skärningar mellan intervallen.
 
 TVSDK hanterar fel i tidsintervallet enligt följande:
 
 * Oordning - TVSDK ändrar ordning på tidsintervallen.
 * Delmängd - TVSDK sammanfogar delmängder av tidsintervall.
 * Överlappa - TVSDK sammanfogar de överlappande tidsintervallen.
-* Ersätt intervallkonflikt - TVSDK väljer ersättningstiden från den tidigaste `timeRange` som visas i den grupp som står i konflikt.
+* Ersätt intervallkonflikt - TVSDK väljer ersättningstiden från den tidigaste visas `timeRange` i gruppen som står i konflikt.
 
 TVSDK hanterar konflikter i signaleringsläge enligt följande:
 
@@ -31,7 +30,7 @@ TVSDK hanterar konflikter i signaleringsläge enligt följande:
 
 När servern inte returnerar giltig `AdBreaks`:
 
-* TVSDK genererar och bearbetar en `NOPTimelineOperation` för den tomma `AdBreak`. Ingen annons spelas.
+* TVSDK genererar och bearbetar en `NOPTimelineOperation` för tomma `AdBreak`. Ingen annons spelas.
 
 ## Exempel på tidsintervallfel {#time-range-error-examples}
 

@@ -2,23 +2,22 @@
 title: Definiera tidsbaserade regler
 description: Definiera tidsbaserade regler
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef72ee76-7d83-486d-86fe-df90c2aaca3a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-
 # Definiera tidsbaserade regler {#defining-time-based-rules}
 
-Adobe Access använder&quot;mjuk tillämpning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet upphör vid uppspelning av en video är standardbeteendet för Adobe Access att inte begränsa uppspelningen förrän nästa gång videoströmmen återskapas (genom att anropa `Netstream.stop()` och `Netstream.play()`).
+Adobe Access använder&quot;mjuk tillämpning&quot; av tidsbaserade licensbegränsningar. Om en tidsrättighet upphör vid uppspelning av en video är standardbeteendet för Adobe Access att inte begränsa uppspelningen förrän nästa gång videoflödet återskapas (genom att anropa `Netstream.stop()` och `Netstream.play()`).
 
 Även om mjuk tvång är standardbeteendet kan du även aktivera hård tvång genom att utföra någon av följande åtgärder:
 
-* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan uppnås genom att anropa `DRMManager.loadVoucher(LOCAL_ONLY).`En felkod anger att den lokalt lagrade licensen inte längre är giltig.
-* När användaren klickar på pausknappen kan du spela in den aktuella videons tidsstämpel och sedan anropa `Netstream.stop().`När användaren klickar på knappen Spela upp, kan du söka till den inspelade platsen och sedan anropa `Netstream.play()`.
+* Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan uppnås genom att ringa `DRMManager.loadVoucher(LOCAL_ONLY).`En felkod anger att den lokalt lagrade licensen inte längre är giltig.
+* När användaren klickar på pausknappen kan du spela in den aktuella videons tidsstämpel och sedan anropa `Netstream.stop().`När användaren klickar på uppspelningsknappen kan du söka efter den inspelade platsen och sedan anropa `Netstream.play()`.
 
 ## Startdatum {#start-date}
 
@@ -46,7 +45,7 @@ När cachens förfallodatum har passerat är licensen inte längre giltig och kl
 
 Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. vid uthyrning. En 30-dagars uthyrning kan anges (med cache-lagring av licenser) för att ange den totala licenstiden inom vilken innehållet ska konsumeras.
 
-## Uppspelningsfönstret {#playback-window}
+## Uppspelningsfönster {#playback-window}
 
 Anger hur länge en licens är giltig efter första gången den används för att spela upp skyddat innehåll.
 
@@ -64,4 +63,4 @@ Synkroniseringsbeteendet definieras med följande parametrar:
 
 >[!NOTE]
 >
->Den här användningsregeln stöds av Adobe Access-klienter version 3.0 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minsta klientversion](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Den här användningsregeln stöds av Adobe Access-klienter version 3.0 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se, [Minsta klientversion](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).

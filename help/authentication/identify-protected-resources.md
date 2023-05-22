@@ -1,13 +1,13 @@
 ---
 title: Identifiera skyddade resurser
 description: Identifiera skyddade resurser
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
-
 
 # Identifiera skyddade resurser {#identifying-protected-resources}
 

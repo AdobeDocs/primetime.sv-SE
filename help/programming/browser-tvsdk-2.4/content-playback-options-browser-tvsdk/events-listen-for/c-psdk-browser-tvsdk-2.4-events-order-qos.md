@@ -1,20 +1,19 @@
 ---
 description: Browser TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring och sökning av händelser.
 title: QoS-händelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b0fab68e-ef0f-4812-b4ad-3f69dcdf2d9e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # QoS-händelser{#qos-events}
 
 Browser TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring och sökning av händelser.
 
-Om du vill få meddelanden om alla QoS-relaterade händelser skapar du en instans av `AdobePSDK.QOSProvider` och kopplar MediaPlayer-instansen till den här `QOSProvider`-instansen:
+Om du vill få meddelanden om alla QoS-relaterade händelser skapar du en instans av `AdobePSDK.QOSProvider` och bifoga MediaPlayer-instansen till detta `QOSProvider` instans:
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
@@ -22,7 +21,7 @@ var qosProvider = new AdobePSDK.QOSProvider();
 qosProvider.attachMediaPlayer(player);
 ```
 
-Konfigurera en timer i programmet för att regelbundet kontrollera egenskapen `playbackInformation` för instansen `qosProvider`. Egenskapen `playbackInformation` ger en ögonblicksbild av aktuell uppspelningsstatistik. Exempel:
+Konfigurera en timer i programmet för att regelbundet kontrollera `playbackInformation` egenskapen för `qosProvider` -instans. The `playbackInformation` -egenskapen ger en ögonblicksbild av aktuell uppspelningsstatistik. Till exempel:
 
 ```js
 var startTimer = function () { 
@@ -34,4 +33,3 @@ var startTimer = function () {
 } 
 window.setTimeout(startTimer, 500) 
 ```
-

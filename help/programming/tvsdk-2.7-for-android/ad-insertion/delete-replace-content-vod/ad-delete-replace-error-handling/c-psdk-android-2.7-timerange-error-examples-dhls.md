@@ -1,14 +1,13 @@
 ---
 description: TVSDK svarar på felaktiga specifikationer för tidsintervall genom att sammanfoga eller ersätta tidsintervallen efter behov.
 title: Exempel på tidsintervallfel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 70bbd98b-4084-4a26-8420-fdbe9029194d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på tidsintervallfel{#time-range-error-examples}
 
@@ -73,4 +72,3 @@ I följande exempel definieras fyra REPLACE-tidsintervall med tidsintervall som 
     ]
 }
 ```
-

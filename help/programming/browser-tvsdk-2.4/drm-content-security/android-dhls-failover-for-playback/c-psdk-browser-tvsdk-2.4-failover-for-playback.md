@@ -1,14 +1,13 @@
 ---
 description: Direktuppspelning över Internet kräver en konstant och stabil anslutning för att spela upp en ström från en fjärrserver. Skillnaden mellan en tittares internetanslutning eller direktuppspelning innebär dock att fjärruppspelningen kanske inte har samma kvalitet som lokalt uppspelade medier.
 title: Uppspelning och failover
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8316dfb8-3a2e-4057-a3d7-e3d8860e5bd4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
 
 ---
-
 
 # Uppspelning och failover {#playback-and-failover}
 
@@ -22,7 +21,7 @@ För live- och VOD-media startar Browser TVSDK uppspelningen genom att hämta de
 
 Browser TVSDK väljer snabbt den högupplösta spellistan med bithastighet och tillhörande media och fortsätter nedladdningen.
 
-## Misslyckad spelningslista {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## Redundans för spelningslista saknas {#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 När en hel spelningslista saknas, till exempel när M3U8-filen som anges i en manifestfil på den översta nivån inte hämtas, försöker webbläsaren TVSDK att återställas. Om det inte kan återställas bestäms nästa steg av programmet.
 

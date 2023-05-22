@@ -1,14 +1,13 @@
 ---
 description: I AdobeTVSDKConfig.json kan du ange standardregler samt regler för specifika zoner.
 title: Exempel på regler för kreativt urval
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 22e6a68f-e6fe-4cde-a3e8-a2645a8f9f72
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på regler för kreativt urval{#sample-creative-selection-rules}
 
@@ -16,7 +15,7 @@ I AdobeTVSDKConfig.json kan du ange standardregler samt regler för specifika zo
 
 ## Exempelstandardregler {#section_xy4_3fx_hz}
 
-Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json]-fil som endast definierar standardregler:
+Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json] fil som endast definierar standardregler:
 
 ```
 {
@@ -66,7 +65,7 @@ Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json]-fil som endast def
 
 ## Exempelstandardregler med ytterligare zonregler {#section_ocv_3fx_hz}
 
-Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json]-fil som definierar standardregler plus ytterligare regler för ett specifikt zon-ID (i det här fallet zon **&quot;1234&quot;**):
+Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json] fil som definierar standardregler, plus ytterligare regler för ett specifikt zon-ID (i det här fallet zon **&quot;1234&quot;**):
 
 ```
 {
@@ -135,4 +134,3 @@ Följande är ett exempel på en [!DNL AdobeTVSDKConfig.json]-fil som definierar
     }
 }
 ```
-

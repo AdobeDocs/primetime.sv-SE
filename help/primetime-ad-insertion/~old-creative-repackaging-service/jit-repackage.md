@@ -1,7 +1,6 @@
 ---
 description: Antingen en klientvideospelare eller manifestserver kan interagera med CRS för att få JIT-ompaketering. Båda använder samma logik för annonsval.
 title: Detaljerade arbetsflöden för JIT-ompaketering
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '524'
@@ -26,7 +25,7 @@ Arbetsflödet för JIT-ompaketering på manifestserversidan är följande:
 
    >[!NOTE]
    >
-   >I en multi-CDN-konfiguration använder manifestservern parametern `ptcdn` i bootstrap-URL:en för att identifiera CDN-servern.
+   >I en multi-CDN-konfiguration använder manifestservern `ptcdn` parametern i bootstrap-URL för att identifiera CDN-servern.
 
 1. Manifestservern kontrollerar svaret:
 
@@ -54,7 +53,7 @@ En klient baserad på TVSDK eller med liknande funktioner kan interagera med CRS
 
       >[!NOTE]
       >
-      >I en multi-CDN-konfiguration använder manifestservern parametern `ptcdn` i bootstrap-URL:en för att identifiera CDN-servern.
+      >I en multi-CDN-konfiguration använder manifestservern `ptcdn` parametern i bootstrap-URL för att identifiera CDN-servern.
 
 1. Klienten kontrollerar svaret från CDN-servern.
 
@@ -64,7 +63,7 @@ En klient baserad på TVSDK eller med liknande funktioner kan interagera med CRS
 1. Annonsservern begär att icke-HLS ska kodas om till HLS.
 1. CRS skapar en HLS-version och överför den till CDN-servern för framtida bruk.
 
-## Prioriteter och tidslinje för annonseringsformat {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## Prioriteringar och tidslinje för annonseringsformat {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 Manifestservern och klienten använder samma urvalslogik för att fastställa prioriteter för uppspelning av tillgängliga annonser. HLS-formaterade annonser har högsta prioritet, följt av MP4, FLV och slutligen WebM.
 

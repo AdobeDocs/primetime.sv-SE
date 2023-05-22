@@ -1,14 +1,13 @@
 ---
 description: Du kan implementera ett eget loggningssystem.
 title: Skräddarsydd loggning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8b6a916e-783e-40e1-8a3d-706b57a6ff63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
-
 
 # Anpassad loggning {#customized-logging}
 
@@ -16,14 +15,14 @@ Du kan implementera ett eget loggningssystem.
 
 Förutom att logga med hjälp av fördefinierade meddelanden kan du implementera ett loggningssystem som använder dina loggmeddelanden och meddelanden som genereras av TVSDK. Mer information om fördefinierade meddelanden finns i [Meddelandesystemet](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System). Du kan använda dessa loggar för att felsöka dina spelarprogram och för att få en bättre förståelse för arbetsflödet för uppspelning och annonsering.
 
-Anpassad loggning använder en delad singleton-instans av `PSDKPTLogFactory`, som tillhandahåller en mekanism för att logga meddelanden till flera loggare. Du definierar och lägger till (registrerar) en eller flera loggare i `PTLogFactory`. På så sätt kan du definiera flera loggare med anpassade implementeringar, som en konsollogg, en webblogg eller en konsolhistoriklogg.
+Anpassad loggning använder en delad singleton-instans av `PSDKPTLogFactory`, som har en funktion för att logga meddelanden till flera loggare. Du definierar och lägger till (registrerar) en eller flera loggare i `PTLogFactory`. På så sätt kan du definiera flera loggare med anpassade implementeringar, som en konsollogg, en webblogg eller en konsolhistoriklogg.
 
-TVSDK genererar loggmeddelanden för många av sina aktiviteter, som `PTLogFactory` vidarebefordrar till alla registrerade loggare. Programmet kan också generera anpassade loggmeddelanden som vidarebefordras till alla registrerade loggare. Varje loggare kan filtrera meddelandena och vidta lämpliga åtgärder.
+TVSDK genererar loggmeddelanden för många av sina aktiviteter, som `PTLogFactory` vidarebefordra till alla registrerade loggare. Programmet kan också generera anpassade loggmeddelanden som vidarebefordras till alla registrerade loggare. Varje loggare kan filtrera meddelandena och vidta lämpliga åtgärder.
 
 Det finns två implementeringar för `PTLogFactory`:
 
 * För att lyssna på loggar.
-* För att lägga till loggar i en `PTLogFactory`.
+* Lägga till loggar i en `PTLogFactory`.
 
 ## Lyssna på loggar {#listen-to-logs}
 
@@ -45,7 +44,7 @@ Registrera dig för avlyssning av loggar:
    @end
    ```
 
-1. Om du vill registrera instansen för att ta emot loggningsposter lägger du till en instans av `PTLogger` i `PTLoggerFactory`:
+1. Om du vill registrera instansen för att ta emot loggningsposter lägger du till en instans av `PTLogger` till `PTLoggerFactory`:
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -58,7 +57,7 @@ Registrera dig för avlyssning av loggar:
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-Här är ett exempel på hur du filtrerar loggar med typen `PTLogEntry`:
+Här är ett exempel på hur du filtrerar loggar med `PTLogEntry` typ:
 
 ```
 @implementation PTConsoleLogger 
@@ -93,11 +92,11 @@ Här är ett exempel på hur du filtrerar loggar med typen `PTLogEntry`:
 
 Så här registrerar du dig för att lyssna på loggar:
 
-Skapa en ny `PTLogEntry` och lägg till den i `thePTLogFactory`:
+Skapa ett nytt `PTLogEntry` och lägg till `thePTLogFactory`:
 
-Du kan instansiera en `PTLogEntry`-instans manuellt och lägga till den i den delade `PTLogFactory`-instansen eller använda något av makrona för att utföra samma uppgift.
+Du kan instansiera en `PTLogEntry` och lägg till det i `PTLogFactory` delade instanser eller använd något av makrona för att utföra samma uppgift.
 
-Här är ett exempel på hur du loggar med hjälp av makrot `PTLogDebug`:
+Här är ett exempel på hur du loggar med `PTLogDebug` makro:
 
 <!--<a id="example_F014436E1686468F941F4EBD1A21B18E"></a>-->
 

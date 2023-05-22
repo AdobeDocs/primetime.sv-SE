@@ -2,14 +2,13 @@
 title: Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll
 description: Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 74ddb5ed-4e68-4570-9cd5-bfc699609972
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
 
 ---
-
 
 # Blockeringslista i DRM-klienter som inte har åtkomst till skyddat innehåll {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
@@ -25,7 +24,7 @@ En DRM-klientversion kan identifieras av attributen som anges i följande tabell
 |---|---|---|---|
 | Miljö | &quot;PC&quot;, &quot;PortingKit&quot; | Exakt matchning | Identifierar om klienten körs på en stationär dator eller någon annan enhet. |
 | OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exakt matchning | Plattform |
-| Arkitektur | &quot;32&quot;, &quot;64&quot; | Exakt matchning | 32-bitars eller 64-bitars |
+| Arkitektur | “32”, “64” | Exakt matchning | 32-bitars eller 64-bitars |
 | Skärmtyp | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Exakt matchning |  |
 | Körningsmiljöversioner | Ett giltigt versionsnummer. Exempel: &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; osv. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
 | DRM-biblioteksversion | Ett giltigt versionsnummer. Till exempel &quot;2.0.0&quot;. | Matchar om klientversionen är mindre än eller lika med den angivna versionen. | Versionsnummer anges som en kombination av siffror och punkter (&quot;.&quot;) av valfri längd. |
@@ -35,4 +34,3 @@ En DRM-klientversion kan identifieras av attributen som anges i följande tabell
 >[!NOTE]
 >
 >När du anger en post i blockeringslista kan värden anges för ett eller flera av de attribut som nämns i föregående tabell. Alla attribut som inte anges behandlas som jokertecken. Om DRM-klienten matchar alla värden som anges i en blockeringslista-post, kanske klienten inte kommer åt skyddat innehåll.
-

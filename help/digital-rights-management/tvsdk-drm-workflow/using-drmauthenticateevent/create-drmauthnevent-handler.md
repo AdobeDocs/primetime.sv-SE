@@ -1,14 +1,13 @@
 ---
 description: DRMAuthenticateEvent-objektet skickas när ett Primetime-objekt försöker att spela upp skyddat innehåll som kräver inloggningsuppgifter för autentisering innan uppspelning (och autentisering ännu inte har utförts). DRMAuthenticateEvent-hanteraren samlar in de inloggningsuppgifter som krävs (användarnamn, lösenord och typ) och skickar värdena till .setDRMAuthenticationCredentials()-metoden för validering.
 title: Skapa en DRMAuthenticateEvent-hanterare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fe01340b-8a76-4fd4-8c6c-85454d0e2218
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en DRMAuthenticateEvent-hanterare{#create-a-drmauthenticateevent-handler}
 

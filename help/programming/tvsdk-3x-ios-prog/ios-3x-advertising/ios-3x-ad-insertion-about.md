@@ -1,20 +1,19 @@
 ---
 description: Annonsinfogningen åtgärdar annonser för video-on-demand (VOD), för liveströmning och för linjär direktuppspelning med annonsspårning och annonsuppspelning. TVSDK skickar de begärda förfrågningarna till annonsservern, tar emot information om annonser för det angivna innehållet och placerar annonserna i innehållet i faser.
 title: Infoga annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 94262bd5-3f8c-449d-934f-8177869707bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
-
 # Infoga annonser {#insert-ads}
 
 Annonsinfogningen åtgärdar annonser för video-on-demand (VOD), för liveströmning och för linjär direktuppspelning med annonsspårning och annonsuppspelning. TVSDK skickar de begärda förfrågningarna till annonsservern, tar emot information om annonser för det angivna innehållet och placerar annonserna i innehållet i faser.
 
-En *`ad break`* innehåller en eller flera annonser som spelas upp i sekvens. TVSDK infogar annonser i huvudinnehållet som medlemmar i en eller flera annonsbrytningar.
+An *`ad break`* innehåller en eller flera annonser som spelas upp i sekvens. TVSDK infogar annonser i huvudinnehållet som medlemmar i en eller flera annonsbrytningar.
 
 >[!TIP]
 >
@@ -39,18 +38,18 @@ TVSDK stöder flera användningsfall för dynamisk och linjär annonsupplösning
 
 TVSDK löser annonserna och infogar annonserna när en referenspunkt påträffas i den aktiva eller linjära strömmen. Som standard stöder TVSDK följande kommandon som giltiga annonsmarkörer när annonser löses och placeras:
 
-* # EXT-X-CUEPOINT
-* # EXT-X-AD
-* # EXT-X-CUE
-* # EXT-X-CUE-OUT
+* #EXT-X-CUEPOINT
+* #EXT-X-AD
+* #EXT-X-CUE
+* #EXT-X-CUE-OUT
 
-Dessa markörer kräver att metadatafältet är `DURATION` på några sekunder och referensens unika ID. Exempel:
+Dessa markörer kräver metadatafältets `DURATION` på några sekunder och referensens unika ID. Till exempel:
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Mer information om ytterligare tips finns i [Prenumerera på anpassade taggar](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
+Mer information om ytterligare tips finns i [Prenumerera på egna taggar](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
 
 ## Spåra klientannons {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
@@ -58,7 +57,7 @@ TVSDK spårar automatiskt annonser för VOD och live/linjär direktuppspelning.
 
 Meddelanden används för att informera programmet om annonsens förlopp, inklusive information om när en annons börjar och när den slutar.
 
-## Implementera en tidig annonsradbrytning {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Implementera en tidig radbrytning {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
 För annonsinfogning live-strömmar kan du behöva avsluta en annonsbrytning innan alla annonser i pausen spelas upp tills de är klara.
 
@@ -71,7 +70,7 @@ Här är några exempel på en snabb radbrytning:
 
 Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad tagg i manifestet som kallas&quot;splice-in&quot; eller en cue-in-tagg. TVSDK tillåter att programmet prenumererar på dessa delningstaggar för att ge möjlighet till delning.
 
-* Så här använder du taggen `#EXT-X-CUE-IN` som en delningsmöjlighet och implementerar en tidig radbrytning:
+* Så här använder du `#EXT-X-CUE-IN` tagga som en möjlighet att dela upp och implementera en snabb radbrytning:
 
    1. Prenumerera på taggen.
 
@@ -91,11 +90,11 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
 
 * Så här delar du samma tagg för delning och delning:
 
-1. Om programmet delar samma cue för att indikera cue-out/splice-out och cue-in/splice-in, utöka `PTDefaultAdOpportunityResolver` och implementera metoden `preparePlacementOpportunity`.
+1. Om programmet delar samma cue för att indikera cue-out/splice-out och cue-in/splice-in, utöka `PTDefaultAdOpportunityResolver` och implementera `preparePlacementOpportunity` -metod.
 
    >[!TIP]
    >
-   >I följande kod antas att programmet har en implementering för metoden `isCueInOpportunity`.
+   >I följande kod antas att programmet har en implementering för `isCueInOpportunity` -metod.
 
    ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
@@ -111,7 +110,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
    }
    ```
 
-1. Registrera den utökade matcharen för affärsmöjligheten på `PTDefaultMediaPlayerClientFactory`-instansen.
+1. Registrera den utökade affärsmöjlighetslösaren på `PTDefaultMediaPlayerClientFactory` -instans.
 
 ```
    // self.player is the PTMediaPlayer instance created for content and ad playback 

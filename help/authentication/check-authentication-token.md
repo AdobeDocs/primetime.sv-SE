@@ -1,13 +1,13 @@
 ---
 title: Kontrollera autentiseringstoken
 description: Kontrollera autentiseringstoken
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9020f261-44d8-4bd5-b85b-a8667679f563
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollera autentiseringstoken {#check-authentication-token}
 

@@ -1,16 +1,15 @@
 ---
 description: VPAID 2.0 (Video Player ad-sting interface definition) ger ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Stöd för VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ea3dcd1d-c4e2-46c6-b613-e86c3e161ca8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
-
-# Stöd för VPAID 2.0 och {#vpaid-ad-support}
+# Stöd för VPAID 2.0 {#vpaid-ad-support}
 
 VPAID 2.0 (Video Player ad-sting interface definition) ger ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 
@@ -39,15 +38,15 @@ Följande funktioner stöds inte:
 
 Följande API-element stöder VPAID 2.0-annonser:
 
-* Metoden `getCustomAdView` för `MediaPlayer` returnerar ett `CustomAdView`-objekt, som representerar webbvyn som återger VPAID-annonsen.
+* The `getCustomAdView` metod för `MediaPlayer` returnerar `CustomAdView` -objekt, som representerar webbvyn som återger VPAID-annonsen.
 
-   Mer information om metoden `getCustomAdView` finns i [API-dokumentation för MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
+   Mer information om `getCustomAdView` metod, se [MediaPlayer API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` anger timeout för VPAID-inläsningsprocessen.
 
    Standardvärdet för timeout är 10 sekunder.
 
-* Med API:t `auditudeSettings.ignoreVPAIDAds` kan du ignorera VPAID-annonser som tagits emot från Auditude-servern. API:t fungerar inte för Flash Fallback.
+* API:t, `auditudeSettings.ignoreVPAIDAds`kan du ignorera VPAID-annonser som tagits emot från Auditude-servern. API:t fungerar inte för Flash Fallback.
 
 Under uppspelningen av VPAID-annonsen:
 

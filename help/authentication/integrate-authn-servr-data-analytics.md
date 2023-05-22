@@ -1,13 +1,13 @@
 ---
 title: Integrera data från Primetime-autentiseringsservern i Adobe Analytics
 description: Integrera data från Primetime-autentiseringsservern i Adobe Analytics
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: c1f1f2a3-c98c-4aed-92ad-1f9bfd80b82b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 4%
 
 ---
-
 
 # Integrera data från Primetime Authentication-serversidan i Adobe Analytics
 
@@ -19,7 +19,7 @@ Kunder som använder Adobe Primetime Authentication vill se serverdata på serve
 
 Dessa data används för att spåra viktiga TVE-mått som konverteringsgrader per MVPD, unika användare baserat på MVPD-användar-ID med mera.
 
-Den är inte avsedd att ersätta en implementering på klientsidan om det redan finns en sådan, eftersom användaraktiviteten inte kan spåras utöver de specifika händelserna nedan i avsaknad av ett besökar-ID. Om kunderna tillhandahåller ett besökar-ID för Pass-samtal kan vi låsa upp en annan typ av Analytics-integrering - i realtid - som kan koppla alla Pass-händelser till befintliga kunddata, mer information om den nya typen av möjlig integrering här: &quot;[Använda Experience Cloud-ID i Primetime-autentisering](/help/authentication/exp-cloud-id-authn.md)&quot;
+Den är inte avsedd att ersätta en implementering på klientsidan om det redan finns en implementering eftersom användaraktiviteten inte kan spåras utöver de specifika händelserna nedan om det inte finns något besökar-ID. Om kunderna tillhandahåller ett besökar-ID för Pass-samtal kan vi låsa upp en annan typ av Analytics-integrering - i realtid - som kan koppla alla Pass-händelser till befintliga kunddata, mer information om den nya typen av möjlig integrering här: &quot;[Använda Experience Cloud-ID i Primetime-autentisering](/help/authentication/exp-cloud-id-authn.md)&quot;
 
 ## Mätvärden ingår {#metrics-included-int-authn-analyt}
 

@@ -2,14 +2,13 @@
 title: Flera DRM-principer
 description: Flera DRM-principer
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 74c3a425-f771-46cc-bfb7-8665ed8dceda
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
-
 
 # Flera DRM-principer {#multiple-drm-policies}
 

@@ -2,14 +2,13 @@
 title: Felsökning
 description: Felsökning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4af7b625-63d3-48b6-98a5-b8894dd0c67f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
-
 
 # Felsökning {#troubleshooting}
 
@@ -22,7 +21,7 @@ Nedan visas vanliga problem och lösningar för distribution:
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Kontrollera att lösenordet är krypterat med den angivna klassen `ScrambleUtil`.
+   Kontrollera att lösenordet är krypterat med den angivna `ScrambleUtil` klassen.
 
 * Om följande fel visas:
 
@@ -39,4 +38,3 @@ Nedan visas vanliga problem och lösningar för distribution:
    ```
 
    Kontrollera att du har använt den lösenordsspårningsklass som ingår i referensimplementeringen (det här spårningsverktyget skiljer sig från det som finns i Adobe® Access™ Server for Protected Streaming).
-

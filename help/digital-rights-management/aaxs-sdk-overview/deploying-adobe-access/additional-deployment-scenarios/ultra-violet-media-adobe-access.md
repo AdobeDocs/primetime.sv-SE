@@ -1,20 +1,19 @@
 ---
 description: Adobe Access kan användas tillsammans med andra tredjepartslösningar för innehållsströmning för att skapa ett fullständigt och säkert DRM-baserat mediedistributionssystem.
 title: UltraViolet media och Adobe Access
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
-
-# UltraViolet-media och Adobe Access {#ultraviolet-media-and-adobe-access}
+# UltraViolet media och Adobe Access {#ultraviolet-media-and-adobe-access}
 
 Adobe Access kan användas tillsammans med andra tredjepartslösningar för innehållsströmning för att skapa ett fullständigt och säkert DRM-baserat mediedistributionssystem.
 
-UltraViolet ( [](https://www.uvvu.com/)) är ett system för autentisering av digitala rättigheter och molnbaserad distribution som gör det möjligt för konsumenter av digitalt innehåll för hemunderhållning att strömma och ladda ned köpt innehåll via flera plattformar och enheter. UltraViolet-innehåll laddas ned (eller direktuppspelas) i ett Common File Format (CFF) med Common Encryption (CENC).
+UltraViolet ( [](https://www.uvvu.com/)) är ett system för autentisering av digitala rättigheter och molnbaserad distribution som gör det möjligt för konsumenter av digitalt underhållningsinnehåll att strömma och ladda ned köpt innehåll via flera plattformar och enheter. UltraViolet-innehåll laddas ned (eller direktuppspelas) i ett Common File Format (CFF) med Common Encryption (CENC).
 
 Det är enkelt att skapa ett UltraViolet-system tillsammans med Adobe Access. I följande exempel visas hur innehållsflödet fungerar:
 
@@ -34,4 +33,3 @@ Det är enkelt att skapa ett UltraViolet-system tillsammans med Adobe Access. I 
 
    Innehållslicensen är bunden till domänen. Klientprogrammet kan infoga licensen i CFF-filen. Innehållet kan nu spelas upp i programmet, med alla skydd- och användningsregler hanterade av Adobe Access-komponenten i körningsmiljön.
 1. Andra enheter och program som ägs av samma slutanvändare kan registreras hos koordinatorn. Innehållet kan nu läsas in på andra Adobe Access-enheter utan att någon extern transaktion krävs.
-

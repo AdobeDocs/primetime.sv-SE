@@ -1,14 +1,13 @@
 ---
 description: Innehållet i en AdBannerAsset beskriver en tilläggsbanderoll.
 title: Kompletterande banderolldata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 94954233-4357-43be-a61f-6d8010c930ca
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
-
 
 # Kompletterande banderolldata{#companion-banner-data}
 
@@ -16,8 +15,8 @@ Innehållet i en AdBannerAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Händelsen `AdobePSDK.PSDKEventType.AD_STARTED` returnerar en `Ad`-instans som innehåller en `companionAssets`-egenskap ( `Array<AdBannerAsset>`).
-Var `AdBannerAsset` innehåller information om hur resursen visas.
+The `AdobePSDK.PSDKEventType.AD_STARTED` returnerar en `Ad` instans som innehåller en `companionAssets` egenskap ( `Array<AdBannerAsset>`).
+Varje `AdBannerAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -49,12 +48,11 @@ Var `AdBannerAsset` innehåller information om hur resursen visas.
     <pre>
       banderolldata
     </pre> </td> 
-   <td colname="col2"> Data av den typ som anges av <span class="codeph"> resourceType</span> för den här tilläggsbanderollen. </td> 
+   <td colname="col2"> Data av den typ som anges av <span class="codeph"> resourceType</span> för den här följeslagaren. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> statisk URL </td> 
-   <td colname="col2"> <p>Ibland kan den tillhörande banderollen också ha en statisk URL som är en direkt URL till bilden. </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild. I det här fallet kan du använda staticURL för att visa banderollen. </p> <p>Viktigt:  Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
+   <td colname="col2"> <p>Ibland kan den tillhörande banderollen också ha en statisk URL som är en direkt URL till bilden. </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild. I det här fallet kan du använda staticURL för att visa banderollen. </p> <p>Viktigt: Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

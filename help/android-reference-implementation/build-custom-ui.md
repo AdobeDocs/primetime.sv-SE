@@ -1,14 +1,13 @@
 ---
 description: Du kan enkelt skapa ett anpassat användargränssnitt baserat på ramverket för referensimplementering.
 title: Skapa ett anpassat användargränssnitt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 96008010-cd63-4fb1-a3fc-2fc94b624413
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett anpassat användargränssnitt {#build-a-custom-user-interface}
 
@@ -22,11 +21,11 @@ Gränssnittskomponenterna i följande funktioner är redan integrerade:
 * Undertexter
 * Lyssnare för alla ovanstående komponenter
 
-1. Redigera [!DNL PlayerFragment.java]-filen för att initiera de gränssnittskomponenter som du vill använda i spelaren.
+1. Redigera [!DNL PlayerFragment.java] för att initiera de UI-komponenter som du vill använda i spelaren.
 
-1. Redigera [!DNL res/player/player_fragment.xml]-filen för att anpassa användargränssnittet.
+1. Redigera [!DNL res/player/player_fragment.xml] -fil för att anpassa användargränssnittet.
 1. Bygg projektet.
 
 >[!NOTE]
 >
->Om du vill göra gränssnittsändringar i sökfältet kan du redigera klassen MarkableSeekBar. Klassen [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) hanterar skjutreglaget, skjutreglagets reglage, markörhållare, cue-markörer, buffertintervall och sökintervallbakgrunder.
+>Om du vill göra gränssnittsändringar i sökfältet kan du redigera klassen MarkableSeekBar. The [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) -klassen hanterar skjutreglaget, reglagets reglage, markörhållare, cue-markörer, buffertintervall och sökintervallbakgrunder.

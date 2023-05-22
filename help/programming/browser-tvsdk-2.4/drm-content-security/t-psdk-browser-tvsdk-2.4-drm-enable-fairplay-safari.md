@@ -1,14 +1,13 @@
 ---
 description: Du kan aktivera FairPlay för Safari när du arbetar med Primetime DRM Cloud, som drivs av ExpressPlay.
 title: Aktivera FairPlay för Safari HLS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 761c7cb8-3068-44c9-8ceb-6411c509c0a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera FairPlay för Safari HLS {#enable-fairplay-for-safari-hls}
 
@@ -21,10 +20,10 @@ Kontrollera att du har följande:
    Exempelappen måste kunna spela upp FairPlay-skyddat innehåll med licensieringen hanterad via Primetime DRM från ExpressPlay.
 * Exempel på HLS-innehåll (ett M3U8-manifest) som paketerats med FairPlay-skydd.
 
-Om du vill använda informationen här till fullo kan du lära dig mer om arbetsflöden med flera DRM från och med underavsnittet [Referensserver: Exempel på ExpressPlay Entitlement Server (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) i Multi-DRM Workflows Guide. Läs först dokumentationen om hur du konfigurerar ditt berättigande och nyckelservern, och informationen nedan blir mycket mer användbar.
+Om du vill utnyttja informationen fullt ut här kan du lära dig mer om arbetsflöden med flera DRM från och med underavsnittet [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) i Multi-DRM Workflows guide. Läs först dokumentationen om hur du konfigurerar ditt berättigande och nyckelservern, och informationen nedan blir mycket mer användbar.
 Du behöver följande objekt:
 
-* Din *produktion* kundautentiserare från ExpressPlay
+* Dina *produktion* Kundautentiserare från ExpressPlay
 * Samma innehållsnyckel och `iv` som innehållet paketerades med.
 * Platsen för det publika nyckelcertifikatet för FairPlay.
 
@@ -32,13 +31,13 @@ Så här ändrar du din FairPlay-/Safari-app:
 
 1. Ange platsen för det offentliga nyckelcertifikat för FairPlay som användes i licensserverbegäran för FairPlay.
 
-   Exempel:
+   Till exempel:
 
    ```js
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. Utför en manuell FairPlay-licens *token*-begäran till ExpressPlay för att erhålla en licenstoken-URL.
+1. Utför en manuell licens för FairPlay *token* förfrågan till ExpressPlay för att erhålla en licenstoken-URL.
 
        Du kan slutföra det här steget på något av följande sätt:
    
@@ -64,18 +63,18 @@ Så här ändrar du din FairPlay-/Safari-app:
 
 1. Ange en variabel med licensens token-URL från ExpressPlay.
 
-   Exempel:
+   Till exempel:
 
    ```js
    var myServerProcessSPCPath = 'https://fp.service.expressplay.com:80/hms/fp/rights/? 
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. Ändra URL-schemat för innehållet från `skd://` till `https://` innan appen kan spela upp skyddat innehåll.
+1. Ändra URL-schemat för innehållet från innan appen kan spela upp skyddat innehåll `skd://` till `https://`.
 
    Du måste lägga till den här URL-schemaändringen i appen innan du anropar licensservern som tillåter uppspelning.
 
-   Protokollen måste ändras eftersom innehålls-ID, som ger åtkomst till innehållsnyckeln i nyckelhanteringssystemet, paketeras i M3U8-manifestet med `skd://`-protokollet. När spelaren är redo att hämta licensen för att spela upp det skyddade innehållet måste den först byta protokoll för att kunna kommunicera med ExpressPlay-licensservern. I exemplet nedan ändras `myServerProcessSPCPath` så att det innehåller rätt URL-schema för licensserverbegäran:
+   Protokollen måste ändras eftersom innehålls-ID, som ger åtkomst till innehållsnyckeln i nyckelhanteringssystemet, paketeras i M3U8-manifestet med `skd://` -protokoll. När spelaren är redo att hämta licensen för att spela upp det skyddade innehållet måste den först byta protokoll för att kunna kommunicera med ExpressPlay-licensservern. I exemplet nedan är `myServerProcessSPCPath` har ändrats så att den innehåller rätt URL-schema för licensserverbegäran:
 
    ```js
    extractContentId(initData) {  
@@ -88,4 +87,3 @@ Så här ändrar du din FairPlay-/Safari-app:
        console.log("severProcessSPCPAth = " + serverProcessSPCPath); return link.hostname;  
    }
    ```
-

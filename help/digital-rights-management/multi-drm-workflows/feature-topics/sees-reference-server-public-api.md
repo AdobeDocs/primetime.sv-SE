@@ -1,22 +1,21 @@
 ---
 description: Begäran om berättigande och svar skickas via en ömsesidigt autentiserad SSL-anslutning mellan licensservern och kundens tillståndstjänst.
 title: SE Offentligt API
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
-
-# SEES Public API {#sees-public-api}
+# SE Offentligt API {#sees-public-api}
 
 Begäran om berättigande och svar skickas via en ömsesidigt autentiserad SSL-anslutning mellan licensservern och kundens tillståndstjänst.
 
-HTTPS-URI-schemat ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) används för att definiera tillståndsslutpunkten och HTTP-POSTENS begärandemetod ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) används för begäran. Slutpunkten för berättigandet, samt en flagga som anger serverdelsberättigandet, krävs och måste ingå i policyn vid paketeringstiden.
+HTTPS-URI-schemat ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) används för att definiera slutpunkten för berättigandet och förfrågningsmetoden för HTTP-POSTEN ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) används för begäran. Slutpunkten för berättigandet, samt en flagga som anger serverdelsberättigandet, krävs och måste ingå i policyn vid paketeringstiden.
 
-## Tillståndsbegäran {#section_BFBFEF0795CA46D6842C479256B95F95}
+## Berättigandebegäran {#section_BFBFEF0795CA46D6842C479256B95F95}
 
 Innehållet i berättigandebegäran blir ett JSON-objekt som definieras enligt nedan.
 

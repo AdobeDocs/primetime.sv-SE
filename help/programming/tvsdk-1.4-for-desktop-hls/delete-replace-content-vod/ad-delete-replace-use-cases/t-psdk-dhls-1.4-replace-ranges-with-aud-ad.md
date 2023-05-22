@@ -2,18 +2,17 @@
 title: Ersätta tidsintervall med en annonsannons från Adobe Primetime
 description: Ersätta tidsintervall med en annonsannons från Adobe Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 263274b7-4602-4be0-b0ad-040f6f0f2fae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# Ersätta tidsintervall med en annonsannons från Adobe Primetime{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-# Ersätt tidsintervall med en annons från Adobe Primetime{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
-
-Ta bort `TimeRanges` mellan `begin` och `end` i `localTime` från tidslinjen. Ersätt den med en AdBreak på `begin` till `begin+replaceDuration`.
+Ta bort `TimeRanges` mellan `begin` och `end` in `localTime` från tidslinjen. Ersätt den med en AdBreak of `begin` till `begin+replaceDuration`.
 
 Ersätt intervall med annonser för Primetimes annonsbeslut.
 
@@ -70,4 +69,3 @@ Ersätt intervall med annonser för Primetimes annonsbeslut.
     "id": "vod_003"
 }
 ```
-

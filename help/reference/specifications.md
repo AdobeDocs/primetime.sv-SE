@@ -1,17 +1,16 @@
 ---
 title: Adobe Primetime-specifikationer
-seo-title: Adobe Primetime-specifikationer
+seo-title: Adobe Primetime Specifications
 description: Adobe Primetime-specifikationer
-seo-description: Adobe Primetime-specifikationer
+seo-description: Adobe Primetime Specifications
 topic-tags: Adobe Primetime Specifications
-translation-type: tm+mt
-source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
+exl-id: 0d54855d-3fee-4324-ac51-644b4b64bc7a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Primetime-specifikationer
 
@@ -31,10 +30,10 @@ Adobe Primetime HTTP Live Streaming Profile (PT-HLS) är en uppsättning tilläg
 
 [Ladda ned profilspecifikationerna för Adobe Primetime HTTP Live Streaming](assets/PrimetimeHLS_April2014.pdf)
 
-## Adobe Primetime Dynamic Adaptive Streaming over HTTP (DASH) Interoperability Guidelines (January 2016) {#dynamic-adaptive-streaming-http}
+## Adobe Primetime Dynamic Adaptive Streaming over HTTP (DASH) Interoperability Guidelines (januari 2016) {#dynamic-adaptive-streaming-http}
 
 I det här dokumentet beskrivs kraven för att skapa DASH-innehåll som är kompatibelt med Adobe Primetime.
 
 [Ladda ned Adobe Primetime Dynamic Adaptive Streaming via riktlinjer för interoperabilitet med HTTP (DASH)](assets/PrimetimeDASH_Jan2016.pdf)
 
-Adobe tar allvarligt på synpunkter från communityn för att förbättra specifikationerna för Primetimes teknik. Dela otydlig eller potentiellt felaktig information i specifikationen till Adobe på primetime@adobe.com. Alla inskickade e-postmeddelanden ska omfattas av [användarvillkoren](https://www.adobe.com/legal/terms.html).
+Adobe tar allvarligt på synpunkter från communityn för att förbättra specifikationerna för Primetimes teknik. Dela otydlig eller potentiellt felaktig information i specifikationen till Adobe på primetime@adobe.com. Alla inskickade e-postmeddelanden ska omfattas av [Användarvillkor](https://www.adobe.com/legal/terms.html).

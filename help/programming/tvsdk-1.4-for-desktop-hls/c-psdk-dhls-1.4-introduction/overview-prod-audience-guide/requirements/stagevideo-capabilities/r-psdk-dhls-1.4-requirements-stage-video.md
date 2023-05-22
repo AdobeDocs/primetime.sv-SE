@@ -1,14 +1,13 @@
 ---
 description: På enheter som stöder GPU-acceleration (maskinvara) kan du använda ett flash.media.StageVideo-objekt för att bearbeta video direkt på enhetens maskinvara.
 title: Lägsta krav för StageVideo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f401682d-c47d-4284-8832-293515a76581
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # Lägsta krav för StageVideo{#stagevideo-minimum-requirements}
 
@@ -35,18 +34,17 @@ En kombination av olika faktorer avgör när och hur du kan använda `StageVideo
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">Webbläsare och <span class="codeph"> wmode</span>-inställningar </td> 
-   <td colname="col2"> <p><b>På Flash 15</b> kan du ange  <span class="codeph"> wmode=</span> opaquestionmed HTML-övertäckningar. </p> <p>Följande webbläsare stöder för närvarande inte maskinvaruacceleration: 
+   <td colname="col1">Webbläsare och <span class="codeph"> wmode</span> inställningar </td> 
+   <td colname="col2"> <p><b>På Flash 15</b>, ange <span class="codeph"> wmode=opaque</span> så att du kan använda HTML-övertäckningar. </p> <p>Följande webbläsare stöder för närvarande inte maskinvaruacceleration: 
      <ul id="ul_frv_ykf_jp"> 
       <li id="li_3D407A61FEE042A9B85A6EFACA6D7719">Mozilla Firefox på Microsoft Windows </li> 
       <li id="li_39B85AC352564DA8B86EA826638F1F4B">Google Chrome före 26 och alla versioner av Chrome i Windows XP och Vista </li> 
       <li id="li_0042BA6070C849E6B7C4B4BF4333F712">Microsoft Internet Explorer (alla versioner) </li> 
-     </ul>Andra kombinationer av webbläsare/operativsystem kan förhindra åtkomst till maskinvaruacceleration. I dessa scenarier återgår <span class="codeph"> StageVideo</span> till programvara med negativ påverkan på prestanda. </p> <p><b>Om webbläsaren inte stöder maskinvaruacceleration i Flash 14 eller tidigare</b> kan Flash Player återge direkt till grafikprocessorn, men ange  <span class="codeph"> wmode=</span> directo för att aktivera den här återgivningen. <p>Tips:  GPU-drivrutiner som är äldre än 2009 kan behöva uppdateras eftersom dessa drivrutiner kanske saknar stöd för maskinvaruacceleration. </p> </p> </td> 
+     </ul>Andra kombinationer av webbläsare/operativsystem kan förhindra åtkomst till maskinvaruacceleration. I dessa scenarier <span class="codeph"> StageVideo</span> använder programvara med negativ inverkan på prestanda. </p> <p><b>På Flash 14 och tidigare</b>om webbläsaren inte stöder maskinvaruacceleration kan Flash-spelaren återge direkt till grafikprocessorn, men ange <span class="codeph"> wmode=direct</span> för att aktivera den här återgivningen. <p>Tips: GPU-drivrutiner som är äldre än 2009 kan behöva uppdateras eftersom dessa drivrutiner kanske saknar stöd för maskinvaruacceleration. </p> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> NetStream-objekt </td> 
-   <td colname="col2">Händelsen <span class="codeph"> StageVideoEvent.RENDER_STATE</span> skickas inte om du inte kopplar ett <span class="codeph"> NetStream</span>-objekt till objektet <span class="codeph"> StageVideo</span>. </td> 
+   <td colname="col2">The <span class="codeph"> StageVideoEvent.RENDER_STATE</span> -händelsen skickas inte om du inte kopplar en <span class="codeph"> NetStream</span> objekt till <span class="codeph"> StageVideo</span> -objekt. </td> 
   </tr> 
  </tbody> 
 </table>
-

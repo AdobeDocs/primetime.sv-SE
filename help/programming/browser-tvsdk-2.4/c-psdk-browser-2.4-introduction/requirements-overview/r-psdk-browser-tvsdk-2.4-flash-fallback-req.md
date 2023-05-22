@@ -1,14 +1,13 @@
 ---
 description: För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
 title: Krav för Flash Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26531d0d-d34c-4134-8a05-0604f00a3107
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Krav för Flash Player{#flash-player-requirements}
 
@@ -18,19 +17,19 @@ För att kunna använda Flash Player måste du se till att din miljö uppfyller 
 
 Här är kraven för Flash Player:
 
-* Om du vill spela upp med `Primetime.js` måste du installera minst Flash Player version 23.
+* Spela upp med `Primetime.js`, installera minst Flash Player version 23.
 * Installera minst Flash Player version 11.0.0 om du vill bli tillfrågad om uppdateringar av Flash Player version 23 eller senare.
 
-## Paketeringskrav {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
+## Förpackningskrav {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
 För uppspelning med Flash Player krävs följande SWF-filer:
 
-* Den huvudsakliga SWF-programfilen som hanterar webbläsar-TVSDK-API:er.
-* Den `playerProductInstall.swf` SWF-fil som hanterar installation och uppdateringar av Flash Player.
+* Huvudfilen för programmet SWF som hanterar API:er för webbläsarens TVSDK.
+* The `playerProductInstall.swf` SWF-fil som hanterar installation och uppdatering av Flash Player.
 
-Dessutom kräver videouppspelning i Flash en auktoriseringstokenfil som kan vara en SWF- eller `.DAT`-fil. Sökvägen till SWF-filerna, auktoriseringstokenfilen samt tokenfilens namn och typ kan anges med API:erna för AdobePSDK.
+Dessutom kräver videouppspelning i Flash en auktoriseringstokenfil som kan vara SWF eller en `.DAT` -fil. Sökvägen till SWF-filerna, auktoriseringstokenfilen samt tokenfilens namn och typ kan anges med API:erna för AdobePSDK.
 
-Exempel:
+Till exempel:
 
 ```js
 // Set relative or http path to directory containing SWF.  
@@ -47,4 +46,3 @@ AdobePSDK.setAuthorizationTokenFilename("hlsaf_localhost.swf");
 //Set the token type, "DAT" or "SWF". Defaults to "DAT" 
 AdobePSDK.setAuthorizationTokenType("SWF");
 ```
-

@@ -1,14 +1,13 @@
 ---
 description: TVSDK skickar QoS-händelser (Quality of Service) för att meddela programmet om händelser som kan påverka beräkningen av QoS-statistik, som buffring och sökning av händelser.
 title: QoS-händelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 283555cd-9ba9-45e9-a73e-76aba6993e8a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
-
 
 # QoS-händelser{#qos-events}
 
@@ -34,4 +33,3 @@ private function onSeekCompleted(event:SeekEvent):void { ... }
 ...  SeekEvent.SEEK_POSITION_ADJUSTED...  //if the desired 
 // seek position is modified by the current advertising policies 
 ```
-

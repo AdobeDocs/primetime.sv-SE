@@ -1,14 +1,13 @@
 ---
 description: Du kan aktivera en TV-liknande upplevelse genom att kunna vara med mitt i en annons i liveströmmar.
 title: Insättning av delvis annonsradbrytning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cb0d2f5f-c760-450e-ab34-fd7639d1190b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
-
 
 # Insättning av delvis annonsradbrytning {#partial-ad-break-insertion}
 
@@ -203,4 +202,3 @@ Det här beteendet är inte aktiverat som standard. Så här aktiverar du den h�
          return new PartialAdBreakAdPolicySelector(mediaPlayerItem); 
       } 
       ```
-

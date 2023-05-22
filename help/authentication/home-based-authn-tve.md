@@ -1,13 +1,13 @@
 ---
 title: Hembaserad autentisering för TV överallt
 description: Hembaserad autentisering för TV överallt
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
 
 ---
-
 
 # Hembaserad autentisering för TV överallt
 
@@ -158,6 +158,3 @@ Mer information om de videofilmsprogram som stöder hembaserad autentisering fin
 * [Autentisering med SAML MVPD](/help/authentication/authn-usecase.md)
 * [Användarhandbok för Primetime TVE Dashboard](/help/authentication/tve-dashboard-user-guide.md)
 * [hba_status Användarmetadata](/help/authentication/user-metadata-feature.md#obtaining)
-
-
-

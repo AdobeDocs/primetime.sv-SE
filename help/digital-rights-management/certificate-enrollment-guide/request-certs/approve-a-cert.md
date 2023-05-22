@@ -2,25 +2,24 @@
 title: Godkänn ett certifikat (konto eller sekundär administratör)
 description: Godkänn ett certifikat (konto eller sekundär administratör)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 71e647a8-e325-4095-a0ac-775fb5898e9e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
-
 # Godkänn ett certifikat (konto eller sekundär administratör){#approve-a-certificate-account-or-secondary-administrator}
 
 1. Logga in på webbplatsen för certifikatregistrering.
-1. Välj fliken **[!UICONTROL Certificates]**.
+1. Välj **[!UICONTROL Certificates]** -fliken.
 1. Granska begäran för att verifiera att den är giltig.
 1. Om begäran är giltig klickar du på **[!UICONTROL Approve]**.
 
    Du kan också lägga till en kommentar. Ett e-postmeddelande skickas till den begärande parten som anger att begäran har godkänts av en av företagsadministratörerna. En kopia av det här e-postmeddelandet skickas till företaget och Adobe-administratörerna.
 
-1. Om begäran inte är giltig klickar du på **[!UICONTROL Reject]** och anger en kommentar i bekräftelsedialogrutan.
+1. Om begäran inte är giltig klickar du på **[!UICONTROL Reject]** och ange en kommentar i bekräftelsedialogrutan.
 
    Ett e-postmeddelande skickas till den begärande parten som anger att begäran har avvisats av en av företagsadministratörerna. En kopia av det här e-postmeddelandet skickas till företagsadministratörerna.
 
@@ -32,11 +31,10 @@ Administratören i Adobe försöker kontakta den begärande parten två gånger 
 >
 >Det är bara kontoadministratören och den sekundära administratören som kan ändra företagets telefonnummer och bestridande fras för beställaren.
 
-Om identiteten för den begärande parten verifieras får den begärande parten ett e-postmeddelande som innehåller PKCS#7-filen ( [!DNL p7b]).
+Om identiteten på den begärande parten verifieras får den begärande ett e-postmeddelande som innehåller PKCS#7-filen ( [!DNL p7b]).
 
 Beställaren kan kopiera PKCS#7-innehållet från e-postmeddelandet och spara det i en fil eller använda den fil som är bifogad i e-postmeddelandet. Adobe rekommenderar att du när du sparar PKSC#7-filen använder basnamnet som du använde för att generera den privata nyckeln och CSR-filen.
 
 >[!NOTE]
 >
 >Filen som skickades till den begärande innehåller bara certifikatet. Filen innehåller ingen information om privat nyckel.
-

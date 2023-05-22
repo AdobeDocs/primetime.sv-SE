@@ -1,14 +1,13 @@
 ---
-description: 'När du fastställer brandväggsregler bör du tänka på följande typer av URL-adresser '
+description: När du fastställer brandväggsregler bör du tänka på följande typer av URL-adresser
 title: Brandväggsregler
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Brandväggsregler {#firewall-rules}
 
@@ -86,7 +85,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Så här kan klienten konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Primetime. </p> <p>Obs!  Den här URL:en måste använda SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Så här kan klienten konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Primetime. </p> <p>Obs! Den här URL:en måste använda SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
@@ -117,4 +116,3 @@ Här är en lista över utgående URL:er som du kan använda:
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
 * `https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
-

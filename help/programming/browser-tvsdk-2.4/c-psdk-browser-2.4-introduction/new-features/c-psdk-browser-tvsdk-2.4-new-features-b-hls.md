@@ -1,14 +1,13 @@
 ---
 description: Webbläsare-TVSDK har stöd för ett antal HLS-funktioner som du kan implementera för att lägga till funktioner i dina videoprogram.
 title: HLS-funktioner som stöds
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 111a6683-fb5c-4f0a-8665-5b1aab77056c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
 
 ---
-
 
 # HLS-funktioner som stöds {#supported-hls-features}
 
@@ -23,7 +22,7 @@ Webbläsare-TVSDK har stöd för ett antal HLS-funktioner som du kan implementer
 
 >[!TIP]
 >
->I funktionsmatristabellerna nedan betyder ![ikonen](assets/supported15.png) som stöds att funktionen stöds i den aktuella versionen.
+>I tabellen nedan i funktionsmatrisen ![ikon som stöds](assets/supported15.png) betyder att funktionen stöds i den aktuella versionen.
 
 >[!TIP]
 >
@@ -98,7 +97,7 @@ Removed Nielsen row
 | Ad Insertion | VOD | Annonser, banners och klickbara annonser | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
-## HLS-huvudfunktioner för annonsinfogning (CSAI) {#hls-core-ad-insertion}
+## Funktioner för infogning av HLS-kärnannonser (CSAI) {#hls-core-ad-insertion}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -111,7 +110,7 @@ Removed Nielsen row
 | Ad Insertion | VOD + Live | VMAP 1.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Ad Insertion | VOD + Live | CRS v3.1 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 
-## HLS-innehållsskyddsfunktioner {#hls-content-protection}
+## Funktioner för skydd av HLS-innehåll {#hls-content-protection}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -119,7 +118,7 @@ Removed Nielsen row
 | Skydd av innehåll | VOD + Live | Sample-AES | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Skydd av innehåll | VOD | DRM | Adobe Access | Stöds inte | FairPlay |
 
-## HLS avancerade uppspelningsfunktioner {#hls-advanced-playback}
+## Avancerade HLS-uppspelningsfunktioner {#hls-advanced-playback}
 
 | Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |

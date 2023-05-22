@@ -2,26 +2,25 @@
 title: Lagra autentiseringsuppgifter
 description: Lagra autentiseringsuppgifter
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ceb1bc19-56a0-47ce-affd-ce4ecb896c3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
 
 ---
 
-
 # Lagra autentiseringsuppgifter{#storing-credentials}
 
 Primetimes DRM SDK har stöd för olika sätt att lagra autentiseringsuppgifter, bland annat via en HSM-modul (Hardware Security Module) eller som en PKCS12-fil. SDK använder en autentiseringsuppgift (certifikat för offentlig nyckel och associerad privat nyckel) när den privata nyckeln krävs. Paketeraren använder till exempel en autentiseringsuppgift för att signera metadata. License Server använder en autentiseringsuppgift för att dekryptera data som har krypterats med den offentliga nyckeln för licensservern eller transport.
 
-Du måste noga bevaka privata nycklar för att säkerställa säkerheten för ditt innehåll och licensservern. PKCS12 är ett standardfilformat för arkivering av inloggningsuppgifter som har krypterats med ett lösenord. (Du kan också kryptera och signera själva PKCS12-filen.) Filtillägget [!DNL .pfx] används vanligtvis för filer som har stöd för det här formatet.
+Du måste noga bevaka privata nycklar för att säkerställa säkerheten för ditt innehåll och licensservern. PKCS12 är ett standardfilformat för arkivering av inloggningsuppgifter som har krypterats med ett lösenord. (Du kan också kryptera och signera själva PKCS12-filen.) Filtillägget [!DNL .pfx] används ofta för filer som har stöd för det här formatet.
 
 >[!NOTE]
 >
 >Adobe rekommenderar att du använder en HSM för maximal säkerhet.
 >
->Se guiden *Adobe Primetime DRM Secure Deployment Guidelines*.
+>Se *Riktlinjer för säker driftsättning av Adobe Primetime DRM* guide.
 
 >[!NOTE]
 >
@@ -33,4 +32,4 @@ SunPKCS11-providern representerar ett exempel på en JCE-leverantör som du kan 
 
 I dokumentationen för Sun Java finns instruktioner om hur du använder den här providern.
 
-PEM och DER är sätt att koda ett certifikat för offentlig nyckel. PEM är en base-64-kodning och DER är en binär kodning. Certifikatfiler använder vanligtvis tillägget [!DNL .cer], [!DNL .pem] eller [!DNL .der]. Certifikat används där bara en offentlig nyckel krävs. Om en komponent endast kräver den offentliga nyckeln för att fungera, rekommenderar vi att du tillhandahåller komponenten certifikatet i stället för en autentiserings- eller PKCS12-fil.
+PEM och DER är sätt att koda ett certifikat för offentlig nyckel. PEM är en base-64-kodning och DER är en binär kodning. Certifikatfiler använder vanligtvis tillägget [!DNL .cer], [!DNL .pem], eller [!DNL .der]. Certifikat används där bara en offentlig nyckel krävs. Om en komponent endast kräver den offentliga nyckeln för att fungera, rekommenderar vi att du tillhandahåller komponenten certifikatet i stället för en autentiserings- eller PKCS12-fil.

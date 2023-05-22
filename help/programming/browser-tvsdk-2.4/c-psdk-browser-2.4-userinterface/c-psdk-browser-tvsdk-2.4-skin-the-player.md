@@ -1,16 +1,15 @@
 ---
 description: Du kan använda följande information om du vill skalförändra spelaren. För varje visuell konstruktion anges motsvarande beteenden i standardbeteendet.
 title: Skalförändra spelaren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4ad50f96-d174-401f-a731-21e5fbfdbe31
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%
 
 ---
 
-
-# Skala spelaren {#skinning-the-player}
+# Skalförändra spelaren {#skinning-the-player}
 
 Du kan använda följande information om du vill skalförändra spelaren. För varje visuell konstruktion anges motsvarande beteenden i standardbeteendet.
 
@@ -24,7 +23,7 @@ Här är formaten för behållar-divar:
 
 >[!TIP]
 >
->Dessa divar listas i filen `common-styles.css`.
+>Dessa divar listas i `common-styles.css` -fil.
 
 Här är formaten för huvud-div:
 
@@ -89,7 +88,7 @@ Här är formaten för allmänna spelarkontroller:
 
 >[!TIP]
 >
->Dessa format visas i filen `default-controls.css`.
+>De här formaten visas i `default-controls.css` -fil.
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -155,7 +154,7 @@ Här följer formatmallarna för kontrollfältet:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-control-bar</span>  (standardbeteende)</td>
+   <td colname="col1"><span class="codeph"> ptp-control-bar</span> (standardbeteende)</td>
    <td colname="col2"> <p>Gäller kontrollfältet </p> </td> 
   </tr> 
  </tbody> 
@@ -234,11 +233,11 @@ Här är formaten för uppspelnings-/pausknappen:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausei pausläget </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> i pausläget </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausei uppspelningsläge </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> i uppspelningsläge </p> </td>
   </tr>
  </tbody>
 </table>
@@ -351,7 +350,7 @@ Här visas den återstående tiden i kontrollfältet:
 
 Standardbeteendet är `timeRemainingBehavior`.
 
-## Snabb återspolning {#section_F6E6C65BD3BD493A89915DF9B92933BA}
+## Snabbspolning {#section_F6E6C65BD3BD493A89915DF9B92933BA}
 
 Här är formatet för snabbspolningsknappen:
 
@@ -393,7 +392,7 @@ Här är stilen för knappen för långsam tillbakaspolning:
 
 Standardbeteendet är `slowRewindButtonBehavior`.
 
-## Sakta framåt {#section_92ACF092EECC4A5EAF6AA090C05E552E}
+## Långsam framåt {#section_92ACF092EECC4A5EAF6AA090C05E552E}
 
 Här är formatet för knappen för långsam framåtriktad:
 
@@ -477,7 +476,7 @@ Här följer formaten för att konfigurera ljudspåret:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>Rubriken för panelen <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
+   <td colname="col2"> <p>Rubriken för <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>Markeringsmeny för ljudspår (N)</b> </p> </td>
@@ -485,12 +484,12 @@ Här följer formaten för att konfigurera ljudspåret:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
-   <td colname="col2"> <p>Menyalternativen i panelen <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
+   <td colname="col2"> <p>Menyalternativen i <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
 
-## Delar {#section_B2ADC76E76304A68AD648A00A12B676E}
+## Delning {#section_B2ADC76E76304A68AD648A00A12B676E}
 
 Här är formaten som konfigurerar delning:
 
@@ -508,7 +507,7 @@ Här är formaten som konfigurerar delning:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>Knappen för delning av sociala medier i kontrollfältet som öppnar <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
+   <td colname="col2"> <p>Knappen för delning av sociala medier i kontrollfältet som öppnas <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Standardbeteendet är <span class="codeph"> shareVideoButtonBehavior</span>. </td>
@@ -531,7 +530,7 @@ Här är formaten som konfigurerar delning:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>Rubriken för panelen <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
+   <td colname="col2"> <p>Rubriken för <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
@@ -560,7 +559,7 @@ Här är formaten som konfigurerar delning:
  </tbody>
 </table>
 
-## Textning {#section_A01BA68218564DA0B7D6BF51F045D7AB}
+## Undertexter {#section_A01BA68218564DA0B7D6BF51F045D7AB}
 
 Här är formaten för att konfigurera undertexter:
 
@@ -578,7 +577,7 @@ Här är formaten för att konfigurera undertexter:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-closed-caption</span> </td>
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Undertexter</span> i kontrollfältet. </p> </td>
+   <td colname="col2"> <p>The <span class="uicontrol"> Undertexter</span> på kontrollfältet. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Standardbeteendet är <span class="codeph"> closedCaptionButtonBehavior</span>. </td>
@@ -606,10 +605,10 @@ Här är formaten för att konfigurera undertexter:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>Rubriken för panelen <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
+   <td colname="col2"> <p>Rubriken för <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu:  </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu: </span> </td>
    <td colname="col2"> <p>Menyn i panelen med undertexter. </p> </td>
   </tr>
   <tr>
@@ -618,7 +617,7 @@ Här är formaten för att konfigurera undertexter:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-btn</span> </td>
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Alternativ</span> i alternativpanelen för undertexter. </p> </td>
+   <td colname="col2"> <p>The <span class="uicontrol"> Alternativ</span> i alternativpanelen för undertexter. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-panel</span> </td>
@@ -634,7 +633,7 @@ Här är formaten för att konfigurera undertexter:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Klar</span> i huvudet på alternativpanelen för stängda bildtexter. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> Klar</span> i huvudet på alternativpanelen för undertexter. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-menu</span> </td> 
@@ -658,7 +657,7 @@ Här är formaten för att konfigurera undertexter:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>Menyobjektet för den stängda bildtexten <span class="uicontrol"> Alternativ</span>. </p> </td> 
+   <td colname="col2"> <p>Den stängda bildtexten <span class="uicontrol"> Alternativ</span> menyalternativ. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-preview-panel</span> </td> 
@@ -670,11 +669,11 @@ Här är formaten för att konfigurera undertexter:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Återställ</span> i sidfoten på panelen med alternativ för undertexter. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> Återställ</span> i sidfoten på panelen med alternativ för undertexter. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-apply-button</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Använd</span> i sidfoten på panelen med alternativ för undertexter. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> Använd</span> i sidfoten på panelen med alternativ för undertexter. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Standardbeteendet är <span class="codeph"> closedCaptionOptionsPanelBehavior</span>. </td> 
@@ -696,11 +695,11 @@ Här följer formaten för att konfigurera ytterligare alternativ:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Fler alternativ</span>. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> Fler alternativ</span> -knappen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>De <span class="codeph"> ptp-btn-more-options</span> som används i kontrollfältet. </p> </td> 
+   <td colname="col2"> <p>The <span class="codeph"> ptp-btn-more-options</span> som används i kontrollfältet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -721,7 +720,7 @@ Standardbeteendet är `moreOptionsButtonBehavior`.
 
 ## PIP-knapp (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-Här är formatet för knappen [!UICONTROL PIP<]:
+Här är formatet för [!UICONTROL PIP<] knapp:
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -756,7 +755,7 @@ Här är formatet som används för att konfigurera helskärmsläge:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> Helskärm</span> i kontrollfältet. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> Helskärm</span> på kontrollfältet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -798,7 +797,7 @@ Här är ett format för att konfigurera multivyn:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>Knappen <span class="uicontrol"> MultiView</span> i kontrollfältet och det inledande tillståndet för knappen <span class="uicontrol"> Multiview</span>. </p> </td> 
+   <td colname="col2"> <p>The <span class="uicontrol"> MultiView</span> på kontrollfältet och det ursprungliga läget för <span class="uicontrol"> Multiview</span> -knappen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Standardbeteendet är <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -857,7 +856,7 @@ Här är ett format för att konfigurera felmeddelanden:
 
 Standardbeteendet är `errorMessagePanelBehavior`.
 
-## Buffrar övertäckning {#section_2FE8FDE2599E42BAA7411D0D38FA0A88}
+## Buffertövertäckning {#section_2FE8FDE2599E42BAA7411D0D38FA0A88}
 
 Här är ett format för att konfigurera miniatyrbilder:
 
@@ -900,11 +899,11 @@ Här är ett format för knappen för snabb framåtspolning:
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-slowforward</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-slowforward</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-slowrewind</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption  </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-seek-to-bar</span> </li> 
@@ -924,7 +923,7 @@ Här är ett format för knappen för snabb framåtspolning:
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
    <td colname="col2"> <p>Spelaren är i helskärmsläge. </p> <p>Gäller följande: 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 

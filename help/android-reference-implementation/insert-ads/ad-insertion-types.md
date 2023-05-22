@@ -1,14 +1,13 @@
 ---
 description: TVSDK har för närvarande inbyggt stöd för annonsleverantörens metadata för TVSDK-annonser, direkta annonsbrytningar och anpassade annonsmarkörer.
 title: Annonsinfogningstyper
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1634ff41-8a8f-4f34-9685-149ec58518ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # Annonsinfogningstyper {#ad-insertion-types}
 
@@ -28,17 +27,17 @@ Det stöder följande typer av arbetsflöden för annonsinfogning för VOD och d
   <tr> 
    <td colname="col1"> Adobe Primetime annonser för annonsbeslut </td> 
    <td colname="col2">VOD <p>Live </p> <p>Linjär </p> </td> 
-   <td colname="col3">Referensimplementeringen innehåller <span class="codeph"> AuditudeMetadata</span>-information för att ansluta till servern för Primetime-annonsbeslut (tidigare Auditude), baserat på informationen i Primetime-annonsdelen</a> i JSON-konfigurationsfilen</a>. </td> 
+   <td colname="col3">Referensimplementeringen innehåller <span class="codeph"> AuditudeMetadata</span> information för att ansluta till servern för Primetimes annonsbeslut (tidigare Auditude), baserat på informationen i Primetimes annonsdel</a> JSON-konfigurationsfilen</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Direktreklam </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Du måste ange annons-URL:er i JSON-indatafilen. När TVSDK försöker lösa en annons anropas den direkta annonsbrytningslösaren och annonserna löses baserat på den information om direkta annonsbrytningar som finns i JSON-konfigurationsfilen</a>. </td> 
+   <td colname="col3">Du måste ange annons-URL:er i JSON-indatafilen. När TVSDK försöker lösa en annons anropas den direkta annonsbrytningslösaren och annonserna löses baserat på informationen om direkta annonsbrytningar i JSON-konfigurationsfilen</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Anpassade annonsmarkörer </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Anpassade annonsmarkörer är användbara när videoflödet innehåller både huvudinnehåll och annonser, men inte innehåller information om annonsplacering och -timing. Om annonspositioneringsinformationen hämtas på ett annat sätt, till exempel via ett externt CMS-system, kan du definiera anpassade annonsmarkörer och skicka dem till spelarens tidslinje. <p>Om du vill konfigurera en spelare för annonsinfogning måste du skicka annonsmetadata i det anpassade avsnittet med annonseringsmetadata i JSON-konfigurationsfilen</a>, som har en kompatibel annonsleverantörsimplementering i referensimplementeringen. </p> </td>
+   <td colname="col3">Anpassade annonsmarkörer är användbara när videoflödet innehåller både huvudinnehåll och annonser, men inte innehåller information om annonsplacering och -timing. Om annonspositioneringsinformationen hämtas på ett annat sätt, till exempel via ett externt CMS-system, kan du definiera anpassade annonsmarkörer och skicka dem till spelarens tidslinje. <p>Om du vill konfigurera en spelare för annonsinfogning måste du skicka annonsmetadata i det anpassade avsnittet med annonseringsmetadata i JSON-konfigurationsfilen</a>, som har en stödjande implementering av annonsleverantör i referensimplementeringen. </p> </td>
   </tr>
  </tbody>
 </table>

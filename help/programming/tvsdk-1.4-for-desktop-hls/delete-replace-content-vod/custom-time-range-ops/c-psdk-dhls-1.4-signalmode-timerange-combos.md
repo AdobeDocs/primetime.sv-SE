@@ -2,14 +2,13 @@
 title: Signeringsläge och tidsintervall
 description: Signeringsläge och tidsintervall
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ccaf345f-63f2-42f1-8558-65c7e0dffa89
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
-
 
 # Signeringsläge och tidsintervall {#signaling-mode-and-time-range}
 
@@ -24,7 +23,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -43,7 +42,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ServerMap- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> ServerMap </span> Signeringsläge </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -66,7 +65,7 @@ ht-degree: 0%
    <td> Ej tillämpligt (automatiskt CustomRange-signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> ManifestCue </span> Signeringsläge </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -90,7 +89,7 @@ ht-degree: 0%
    <td> Ej tillämpligt (automatiskt CustomRange-signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Anpassat  </span> signaleringsläge </td> 
+   <td> <span class="codeph"> CustomRange </span> Signeringsläge </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -143,7 +142,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -162,7 +161,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> SeverMap- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> ServerMap </span> Signeringsläge </td> 
    <td> Finns inte (annonsen är inaktiverad). </td> 
    <td> 
     <code>
@@ -173,10 +172,10 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span>-signaleringsläge) </td> 
+   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span> signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue- </span> signaleringsläge </td> 
+   <td> <span class="codeph"> ManifestCue </span> Signeringsläge </td> 
    <td> Finns inte (annonsen är inaktiverad). </td> 
    <td> 
     <code>
@@ -187,13 +186,13 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span>-signaleringsläge) </td> 
+   <td> Ej tillämpligt (automatiskt <span class="codeph"> CustomRange </span> signaleringsläge) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Anpassat  </span> signaleringsläge </td> 
+   <td> <span class="codeph"> CustomRange </span> Signeringsläge </td> 
    <td> Finns inte (annonsen är inaktiverad). </td> 
    <td> Ingen </td> 
-   <td> Ingen (hanteras i <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Ingen (tas hand om <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>

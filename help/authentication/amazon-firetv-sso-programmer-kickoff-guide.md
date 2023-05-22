@@ -1,13 +1,13 @@
 ---
 title: Amazon fireTV SSO - Programmerarens startguide
 description: Amazon fireTV SSO - Programmerarens startguide
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
 
 ---
-
 
 # Amazon fireTV SSO - Programmerarens startguide {#amazon-firetv-sso---programmer-kick-off-guide}
 

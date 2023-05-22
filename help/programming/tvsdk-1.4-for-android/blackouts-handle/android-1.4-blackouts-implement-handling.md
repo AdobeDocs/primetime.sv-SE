@@ -1,14 +1,13 @@
 ---
 description: TVSDK tillhandahåller API:er och exempelkod för hantering av utbrottsperioder.
 title: Implementera hantering av strömavbrott
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9b23674d-76d5-4879-b595-3a6e368c45cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
-
 
 # Implementera hantering av strömavbrott{#implement-blackout-handling}
 
@@ -75,7 +74,7 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
    }; 
    ```
 
-1. Hantera `TimedMetadata`-objekt när `MediaPlayer`-tiden körs.
+1. Handtag `TimedMetadata` objekt när `MediaPlayer` tiden går.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -183,7 +182,7 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
 
    >[!NOTE]
    >
-   >För flera liveströmmar med bithastighet kan de justerbara bithastighetsprofilerna (ABR) ibland bli osynkroniserade. Detta orsakar duplicerade `timedMetadata`-objekt för samma prenumerationstagg. För att undvika felaktiga beräkningar som inte går att söka efter bör du kontrollera om det finns överlappande icke sökbara intervall efter dina beräkningar, som i följande exempel:
+   >För flera liveströmmar med bithastighet kan de justerbara bithastighetsprofilerna (ABR) ibland bli osynkroniserade. Detta orsakar en dubblett `timedMetadata` objekt för samma prenumerationstagg. För att undvika felaktiga beräkningar som inte går att söka efter bör du kontrollera om det finns överlappande icke sökbara intervall efter dina beräkningar, som i följande exempel:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +208,3 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

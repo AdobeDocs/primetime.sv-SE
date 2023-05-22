@@ -1,9 +1,10 @@
 ---
 title: Versionsinformation om Adobe Primetime-autentisering 2.62.1
 description: Versionsinformation om Adobe Primetime-autentisering 2.62.1
-source-git-commit: 0afc48ae0e423c2a851b3bf22803fbd730999c04
+exl-id: 7a43cb64-27c7-41ec-b02a-64cf7f476c5d
+source-git-commit: 79ec21744e682112a7e95c2ce7845d9a9458b8bc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---

@@ -1,14 +1,13 @@
 ---
 description: Med dessa klasser kan du anpassa loggning.
 title: Loggningsklasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e420f557-eb4f-4adf-9b87-1cffc6b36d53
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
-
 
 # Loggningsklasser{#logging-classes}
 
@@ -38,7 +37,7 @@ Paket: [com.adobe.mediacore.log](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Gränssnitt. De metoder som krävs för att implementera en anpassad loggare för <code>primetime-sdk-name</code>-fasen. </td> 
+   <td colname="2">Gränssnitt. De metoder som krävs för att implementera en anpassad loggare för <code>primetime-sdk-name</code> Fras. </td> 
   </tr> 
  </tbody>
 </table>

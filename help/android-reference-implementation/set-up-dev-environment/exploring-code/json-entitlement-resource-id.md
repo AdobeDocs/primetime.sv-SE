@@ -1,14 +1,13 @@
 ---
 title: JSON-objekt för berättiganderesurs-ID
 description: Följande kodblock innehåller ett exempel på ett JSON-objekt när berättiganderesurs-ID:t är en enkel textsträng.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 396c43e7-404a-40f5-8113-a720e2c834e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
-
 
 # JSON-objekt för berättiganderesurs-ID {#json-object-for-entitlement-resource-id}
 

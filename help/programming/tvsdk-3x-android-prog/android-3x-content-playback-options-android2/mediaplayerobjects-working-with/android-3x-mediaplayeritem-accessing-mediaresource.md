@@ -1,14 +1,13 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayerItem-metoder för åtkomst av MediaResource-information
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d6a547f3-0267-4a49-93a4-628b4879aef4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
 
 ---
-
 
 # MediaPlayerItem-metoder för åtkomst av MediaResource-information {#mediaplayeritem-methods-for-accessing-mediaresource-information}
 
@@ -17,32 +16,32 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
 | Metod | Beskrivning |
 |--- |--- |
 | **Annonstaggar** |  |
-| List`<String>` getAdTags() | Innehåller en lista med annonstaggar som används för annonsplaceringsprocessen. |
+| Lista`<String>` getAdTags() | Innehåller en lista med annonstaggar som används för annonsplaceringsprocessen. |
 | **Liveström** |  |
 | boolesk isLive(); | True om strömmen är live; false om det är VOD. |
 | **DRM-skyddad** |  |
 | boolesk isProtected(); | True om strömmen är DRM-skyddad. |
-| List`<DRMMetadataInfo>` getDRMMetadataInfos(); | Visar alla DRM-metadataobjekt som identifieras i manifestet. |
+| Lista`<DRMMetadataInfo>` getDRMMetadataInfos(); | Visar alla DRM-metadataobjekt som identifieras i manifestet. |
 | **Undertexter** |  |
 | boolesk hasClosedCaptions(); | True om det finns spår för undertextning. |
-| List`<ClosedCaptionsTrack>` getClosedCationsTracks(); | Innehåller en lista med tillgängliga spår för undertextning. |
+| Lista`<ClosedCaptionsTrack>` getClosedCationsTracks(); | Innehåller en lista med tillgängliga spår för undertextning. |
 | ClosedCaptionsTrack get SelectedClosedCaptionsTrack(); | Hämtar det aktuella textningsspåret som valts med SelectClosedCaptionsTrack . |
 | selectClosedCaptionsTrack ( ClosedCaptionsTrack closedCaptionsTrack) | Anger att ett undertextningsspår ska vara det aktuella undertextningsspåret. |
 | **Alternativa ljudspår** |  |
-| booleskt hasAlternateAudio(); | True om strömmen har alternativa ljudspår. Obs!  Huvudljudspåret (standardljudspåret) är också en del av den alternativa ljudspårslistan.  TVSDK för Android betraktar huvudljudspåret som ett av objekten i den alternativa ljudspårslistan. Därför är det enda fallet när MediaPlayerItem.hasAlternateAudio returnerar false när strömmen inte har något ljud alls. Om innehållet bara har ett ljudspår returnerar metoden true och `MediaPlayerItem.getAudioTracks` returnerar en lista med ett enda element (standardljudspåret). |
-| List`<AudioTrack>` getAudioTracks(); | Innehåller en lista med tillgängliga alternativa ljudspår. |
+| booleskt hasAlternateAudio(); | True om strömmen har alternativa ljudspår. Obs! Huvudljudspåret (standardljudspåret) är också en del av den alternativa ljudspårslistan.  TVSDK för Android betraktar huvudljudspåret som ett av objekten i den alternativa ljudspårslistan. Därför är det enda fallet när MediaPlayerItem.hasAlternateAudio returnerar false när strömmen inte har något ljud alls. Om innehållet bara har ett ljudspår returnerar metoden true och  `MediaPlayerItem.getAudioTracks`  returnerar en lista med ett enda element (standardljudspåret). |
+| Lista`<AudioTrack>` getAudioTracks(); | Innehåller en lista med tillgängliga alternativa ljudspår. |
 | AudioTrack getSelectedAudioTrack(); | Hämtar ljudspåret som valts med selectAudioTrack . |
 | selectAudioTrack ( AudioTrack audioTrack ) | Väljer att ett ljudspår ska vara aktuellt ljudspår. |
 | **Tidsbestämda metadata** |  |
 | boolean hasTimedMetadata(); | True if the stream has associated timed metadata. |
-| List`<TimedMetadata>` getTimedMetadata(); | Innehåller en lista med tidsbestämda metadataobjekt som är associerade med strömmen. |
+| Lista`<TimedMetadata>` getTimedMetadata(); | Innehåller en lista med tidsbestämda metadataobjekt som är associerade med strömmen. |
 | **Flera profiler (bithastighet)** |
 | boolean isDynamic(); | True if the stream is a multiple bit rate (MBR) stream. |
-| List`<Profile>` getProfiles(); | Innehåller en lista med associerade bithastighetsprofiler. För varje profil kan du hämta dess bithastighet och profilens höjd och bredd. |
+| Lista`<Profile>` getProfiles(); | Innehåller en lista med associerade bithastighetsprofiler. För varje profil kan du hämta dess bithastighet och profilens höjd och bredd. |
 | Profil getSelectedProfile() | Hämtar den markerade profilen. |
 | **Trick play** |  |
 | booleskt isTrickPlaySupported(); | True if the player supports fast forward, rewind, and resume. |
-| List`< Float>` getAvailablePlaybackRates() | Innehåller en lista med tillgängliga uppspelningsfrekvenser i samband med trippelfunktionen. |
+| Lista`< Float>` getAvailablePlaybackRates() | Innehåller en lista med tillgängliga uppspelningsfrekvenser i samband med trippelfunktionen. |
 | Float getSelectedPlaybackRate() | Hämtar den valda uppspelningshastigheten. |
 | MediaPlayerItemConfig getConfig() | Returnerar den MediaPlayerItemConfig-instans som är associerad med det här objektet. |
 | **Medieresurs** |  |

@@ -1,7 +1,6 @@
 ---
 description: Om klienten begär spårningsinformation i JSON-format skickar manifestservern tillbaka en fil i något av JSON-formaten.
 title: JSON-format för spårning av URL:er
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '211'
@@ -34,7 +33,7 @@ JSON-filen som manifestservern skickar om `pttrackingversion=v1` har följande a
 
 ## JSON-format för spårning av version 2 {#json_v2}
 
-JSON-filen som manifestservern skickar om `pttrackingversion=v2` har formatet i följande exempel, som kommer från ett vanligt JSON-block.
+JSON-filen som manifestservern skickar om `pttrackingversion=v2` har formatet för följande exempel, som kommer från ett typiskt JSON-block.
 
 Den har förkortats för att undvika onödig upprepning, så att strukturen blir tydligare. En ellips (tre punkter, avgränsade med blanksteg) anger utelämnad information i vissa URL-adresser och mellan vissa kodblock. Oförkortade URL:er visas på flera rader, men de visas på en rad i JSON-filen.
 
@@ -364,7 +363,7 @@ Den har förkortats för att undvika onödig upprepning, så att strukturen blir
 
 >[!NOTE]
 >
->Värdet `offset` för attributet `scte35` som extraherats från `ad breaks` kan vara negativt. Detta beror på att den underordnade JSON V2 innehåller information om annonsbrytningarna som delvis finns i det aktuella uppspelningsfönstret. Därför innehåller attributet `scte35` även information om sådana annonsbrytningar.
+>The `offset` värdet på `scte35` attribut som extraherats från `ad breaks` kan vara negativ. Detta beror på att den underordnade JSON V2 innehåller information om annonsbrytningarna som delvis finns i det aktuella uppspelningsfönstret. Så `scte35` -attributet innehåller även information om sådana annonsbrytningar.
 
 ## JSON-format för spårning av version 3 {#json_v3}
 

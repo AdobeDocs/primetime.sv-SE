@@ -1,14 +1,13 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
-title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
+exl-id: 8076521b-579d-491f-97de-c7b57daa9b2e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
-
 
 # Visa ett söknavigeringsfält med den aktuella uppspelningspositionen {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
@@ -30,12 +29,12 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
 
    Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING.
 
-1. Använd den inbyggda SeekBar för att ställa in `OnSeekBarChangeListener` för att se när användaren stegar igenom.
+1. Använd den inbyggda SeekBar för att ange `OnSeekBarChangeListener` för att se när användaren drar.
 1. Lyssna efter `QOSEventListener.onOperationFailed` och vidta lämpliga åtgärder.
 
    Den här händelsen skickar lämplig varning. Programmet avgör till exempel hur du ska gå vidare genom att försöka söka igen eller fortsätta uppspelningen från föregående position.
 
-1. Vänta på att TVSDK ska anropa `QOSEventListener.onSeekComplete`-återanropet.
+1. Vänta på att TVSDK ska ringa `QOSEventListener.onSeekComplete` återanrop.
 1. Hämta den slutliga justerade uppspelningspositionen med återanropets positionsparameter.
 
    Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Uppspelningsbeteendet kan påverkas om en sökning eller annan omplacering slutar mitt i en annonsbrytning eller hoppar över annonsbrytningar.
@@ -79,4 +78,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

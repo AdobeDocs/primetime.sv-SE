@@ -1,18 +1,17 @@
 ---
-description: Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan/manifestfilen, och den här filen anger annonsplaceringen. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
+description: Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan/manifestfilen, och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
 title: Egna taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5c1ba637-5113-455c-977b-d190a554396a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
-
 # Översikt {#custom-tags-overview}
 
-Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan/manifestfilen, och den här filen anger annonsplaceringen. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
+Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan/manifestfilen, och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
 
 ## HLS-innehållstaggar {#section_E99299152089418FBA56F5F09FC547B0}
 
@@ -20,7 +19,7 @@ Medieströmmar kan innehålla ytterligare metadata i form av taggar i spellistan
 >
 >Den här funktionen är inte tillgänglig för Safari på Apple-datorer eftersom TVSDK använder videotaggen i stället för Flash eller MSE för att spela upp HLS-innehåll.
 
-TVSDK har körklart stöd för specifika `#EXT`-annonstaggar. Ditt program kan använda anpassade taggar för att förbättra arbetsflödet för annonsering eller för att stödja svartoutscenarier. Om du vill ha stöd för avancerade arbetsflöden kan du med TVSDK ange och prenumerera på ytterligare taggar i manifestet. Du kan meddelas när dessa taggar visas i manifestfilen.
+TVSDK har körklart stöd för specifika `#EXT` reklamtaggar. Ditt program kan använda anpassade taggar för att förbättra arbetsflödet för annonsering eller för att stödja svartoutscenarier. Om du vill ha stöd för avancerade arbetsflöden kan du med TVSDK ange och prenumerera på ytterligare taggar i manifestet. Du kan meddelas när dessa taggar visas i manifestfilen.
 
 >[!TIP]
 >
@@ -64,8 +63,8 @@ seg5.ts
 
 Programmet kan konfigurera följande scenarier:
 
-* Det finns ett meddelande när `#EXT-X-ASSET`-taggar eller andra uppsättningar anpassade taggnamn som du har prenumererat på finns i filen.
-* Infoga annonser när en `#EXT-X-AD`-tagg eller något annat anpassat taggnamn hittas i strömmen.
+* Ett meddelande när `#EXT-X-ASSET` -taggar, eller andra uppsättningar egna taggnamn som du har prenumererat på, finns i filen.
+* Infoga annonser när en `#EXT-X-AD` -taggen, eller något annat anpassat taggnamn, finns i strömmen.
 
 Du kan prenumerera på följande taggar som anpassade taggar:
 
@@ -75,6 +74,6 @@ Du kan prenumerera på följande taggar som anpassade taggar:
 * `EXT-X-CUE`
 * `EXT-X-ENDLIST`
 
-Du meddelas med en `TimedMetadata`-händelse under tolkningen av manifestfiler.
+Du meddelas med en `TimedMetadata` -händelsen under tolkningen av manifestfiler.
 
-Det finns vissa annonstaggar, till exempel `EXT-X-CUE`, som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange egenskapen `adTags`.
+Det finns några reklamtaggar, som `EXT-X-CUE`som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` -egenskap.

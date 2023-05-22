@@ -2,16 +2,15 @@
 title: Säker paketering av innehåll
 description: Säker paketering av innehåll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f554852c-83d9-4b31-8dde-2af577c70989
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
-
-# Paketera innehåll {#securely-packaging-content} på ett säkert sätt
+# Säker paketering av innehåll {#securely-packaging-content}
 
 Konfigurationsfilen för kommandoradsverktyget Adobe Access Media Packager kräver en PKCS12-autentiseringsuppgift som används vid paketeringen.
 

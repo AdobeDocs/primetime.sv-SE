@@ -1,13 +1,13 @@
 ---
 title: Hämta plattformens SSO-profilbegäran
 description: Hämta plattformens SSO-profilbegäran
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
 
 ---
-
 
 # Hämta plattformens SSO-profilbegäran {#retrieve-platform-sso-profile-request}
 
@@ -44,5 +44,3 @@ Den här resursen skapar profilförfrågningar för begärande-ID och MVPD-tuppe
 | begärande | Programmerarens requestId som den här åtgärden är giltig för. |
 | mvpd | Det MVPD-ID som den här åtgärden är giltig för. |
 | deviceType | Den Apple-plattform som vi försöker få en profilbegäran för.  Antingen **iOS** eller **tvOS**. |
-
-

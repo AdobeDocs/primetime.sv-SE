@@ -1,13 +1,13 @@
 ---
 title: enkel inloggning via passiv autentisering
 description: enkel inloggning via passiv autentisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
 
 ---
-
 
 # enkel inloggning via passiv autentisering
 

@@ -1,13 +1,13 @@
 ---
 title: Välkommen till Adobe&reg; Primetime-autentisering!
 description: Välkommen till Adobe&reg; Översikt över Primetime-autentisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Välkommen till Adobe® Primetime Authentication {#pt-auth-overview}
 

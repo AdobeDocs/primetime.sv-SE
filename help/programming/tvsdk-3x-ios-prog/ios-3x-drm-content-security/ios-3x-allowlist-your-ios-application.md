@@ -1,18 +1,17 @@
 ---
-description: Du kan använda tillåtelselista iOS-appar genom att använda Adobe verktyg.
+description: Du kan tillåtelselista era iOS-program genom att använda Adobe Machotools-verktyget.
 title: Tillåtelselista ditt iOS-program
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3af75d9a-3b38-4d3c-9890-513a4abc1809
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
-
 # Tillåtelselista ditt iOS-program {#allowlist-your-ios-application}
 
-Du kan använda tillåtelselista iOS-appar genom att använda Adobe verktyg.
+Du kan tillåtelselista era iOS-program genom att använda Adobe Machotools-verktyget.
 
 När du slutför ett TVSDK-program kan du vanligtvis använda kommandoradsverktygen i Adobe Primetime DRM för att tillåtelselista din app.
 
@@ -20,7 +19,7 @@ När du slutför ett TVSDK-program kan du vanligtvis använda kommandoradsverkty
 >
 >Du kan också använda dessa verktyg för att skapa DRM-profiler och kryptera innehåll.
 
-Tillåt att appen listas så att skyddat innehåll endast kan spelas upp i videospelaren. Tillåt att ett iOS-program listas kräver dock att du slutför en särskild procedur som fungerar med Apples regler för att skicka in program.
+Tillåt att appen listas så att skyddat innehåll endast kan spelas upp i videospelaren. Tillåt att ett iOS-program listas kräver dock att du slutför en särskild procedur som fungerar med Apple regler för att skicka in program.
 
 Innan du skickar in en iOS-app måste du signera den och publicera den på Apple.
 
@@ -28,13 +27,13 @@ Innan du skickar in en iOS-app måste du signera den och publicera den på Apple
 >
 >Apple rensar din utvecklares signatur och signerar om programmet med sitt eget certifikat.
 
-På grund av den nya signeringen går det inte att använda den tillåtna listinformation som du genererade innan du skickade till Apple App Store.
+På grund av den nya signeringen går det inte att använda den tillståndslistinformation som du genererade innan du skickade till Apple App Store.
 
-Adobe har skapat ett `machotools`-verktyg som fingeravtrycksändrar iOS-programmet för att skapa ett sammanfattningsvärde, signera det här värdet och mata in värdet i iOS-programmet. När du har fingeravtryckt din iOS-app kan du skicka appen till Apple App Store. När en användare kör din app från App Store gör Primetime DRM en körningsberäkning av programmets fingeravtryck och bekräftar det med det sammanfattningsvärde som tidigare injicerades i programmet. Om fingeravtrycket matchar bekräftas att programmet är tillåtet i listan och skyddat innehåll får spelas upp.
+Adobe har skapat en `machotools` verktyg som fingeravtrycksändrar ditt iOS-program för att skapa ett sammanfattningsvärde, signera värdet och mata in värdet i ditt iOS-program. När du har fingeravtryckt din iOS-app kan du skicka den till Apple App Store. När en användare kör din app från App Store gör Primetime DRM en körningsberäkning av programmets fingeravtryck och bekräftar det med det sammanfattningsvärde som tidigare injicerades i programmet. Om fingeravtrycket matchar bekräftas att programmet är tillåtet i listan och skyddat innehåll får spelas upp.
 
-Verktyget Adobe `machotools` ingår i iOS TVSDK SDK, i [!DNL [..]/tools/DRM] mapp.
+Adobe `machotools` finns i iOS TVSDK SDK i [!DNL [...]/tools/DRM] mapp.
 
-Så här använder du `machotools`:
+Används `machotools`:
 
 1. Skapa ett nyckelpar.
 
@@ -80,7 +79,7 @@ Så här använder du `machotools`:
    Du kan använda det självsignerade certifikatet för att signera din iOS-app.
 
 1. Uppdatera platsen för PFX-filen och lösenordet.
-1. Innan du skapar programmet i Xcode går du till **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** och lägger till följande kommando i körningsskriptet:
+1. Innan du skapar programmet i Xcode ska du gå till  **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** och lägg till följande kommando i körningsskriptet:
 
    ```shell
    mkdir -p "${PROJECT_DIR}/generatedRes" "${PROJECT_DIR}/machotools" sign  
@@ -97,7 +96,7 @@ Så här använder du `machotools`:
    ```
 
 1. Skapa en ny DRM-princip eller uppdatera din befintliga princip så att den innehåller det returnerade hash-värdet för utgivar-ID.
-1. Med [!DNL AdobePolicyManager.jar] skapar du en ny DRM-princip (uppdatera din befintliga princip) som inkluderar det returnerade hash-värdet för utgivar-ID, ett valfritt app-ID samt min- och maxversionsattributen i den inkluderade [!DNL flashaccess-tools.properties]-filen.
+1. Använda [!DNL AdobePolicyManager.jar]skapar du en ny DRM-princip (uppdatera din befintliga princip) som inkluderar det returnerade värdet för utgivar-ID, ett valfritt program-ID och lägsta och högsta versionsattributen i det inkluderade [!DNL flashaccess-tools.properties] -fil.
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol

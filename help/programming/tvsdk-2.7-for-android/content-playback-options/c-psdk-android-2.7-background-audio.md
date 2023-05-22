@@ -2,18 +2,17 @@
 title: Aktivera bakgrundsljud
 description: Aktivera bakgrundsljud
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: db494969-ef63-46ad-9f08-a95f58c8b27b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
 
 ---
 
-
 # Aktivera bakgrundsljud {#enable-background-audio}
 
-Om du vill aktivera ljuduppspelning när programmet är i bakgrunden ska programmet anropa `enableAudioPlaybackInBackground` API för MediaPlayer med true som argument när spelaren är i läget PREPARED.
+Om du vill aktivera ljuduppspelning när appen är i bakgrunden bör appen anropa `enableAudioPlaybackInBackground` API för MediaPlayer med värdet true som argument när spelaren är i tillståndet PREPARED.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
@@ -46,4 +45,3 @@ Appen bör pausa uppspelningen när den tappar greppet om ljudfokus under hände
 AudioManager audioManager = (AudioManager) getActivity().getApplicationContext().getSystemService(Context.AUDIO_SERVICE); 
 audioManager.requestAudioFocus(onAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 ```
-

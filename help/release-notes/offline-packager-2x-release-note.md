@@ -4,22 +4,21 @@ description: Nyheter i Primetime Offline Packager 2.1 och 2.3.1
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 911549b4-45b3-400a-b903-fa1479ee862b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
 
 ---
 
-
-# Primetime Offline Packager släpper {#primetime-offline-packager-x-releases}
+# Primetime Offline Packager-versioner {#primetime-offline-packager-x-releases}
 
 Nyheter i Primetime Offline Packager 2.1 och 2.3.1
 
-## Nyheter i Primetime Offline Packager 2.3.1 (oktober 2016) {#what-s-new-in-primetime-offline-packager-oct}
+## Nyheter i Primetime Offline Packager 2.3.1 (oktober 2016)  {#what-s-new-in-primetime-offline-packager-oct}
 
-Versionen aktiverar On-demand-profil för MPEG-DASH, lägger till stöd för alternativet `validate` för PlaylistCreator och har få nyckelkorrigeringar för Multi-DRM-scenarier som listas nedan.
+Versionen aktiverar On-demand-profil för MPEG-DASH och ger stöd för `validate` för PlaylistCreator och har några viktiga korrigeringar för Multi-DRM-scenarier som listas nedan.
 
 | **Utfärdningsnummer** | **Beskrivning** |
 |---|---|
@@ -29,7 +28,7 @@ Versionen aktiverar On-demand-profil för MPEG-DASH, lägger till stöd för alt
 | PTPUB-954 | Sample-AES-kryptering åsidosätter AXS DRM som standard/Fel som inträffar när fjärrnyckelleverans är aktiverad. |
 | PTPUB-951 | Offlinepaketeraren genererar inget undantag när key_file_path inte har angetts med Widewin. Det orsakar NPE i stället. |
 
-Den senaste dokumentationen för Primetime Packagers finns på [https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html).
+Den senaste dokumentationen för Primetime Packers finns på [https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html).
 
 ### Känt fel i version 2.3.1 {#known-issue-in-version}
 
@@ -39,8 +38,8 @@ Följande problem finns i den här versionen.
 |---|---|
 | PTPUB-1005 | PlaylistCreator har inte rätt URL för .pssh-filen i den sista .mpd-filen som genererats för AAXS DRM. |
 | PTPUB-1001 | PlaylistCreator ska generera ett fel när en tom sökväg anges via parametern in_path |
-| PTPUB-990 | För DASH skriver inte Offline Packager genererad IV till disk när parametrarna `log_vi` &amp; `iv_out_path` har angetts. |
-| PTPUB-980 | När konfigurationsfilen används för paketering tar inte parametern `key_url` bort citattecknen från angivna indata. |
+| PTPUB-990 | För DASH skriver inte Offline Packager som genererats IV till disk när parametrarna `log_vi` &amp; `iv_out_path` anges. |
+| PTPUB-980 | När konfigurationsfilen används för paketering använder du parametern `key_url` tar inte bort citattecknen från angivna indata. |
 
 ## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
 
@@ -70,8 +69,8 @@ Programvarukrav
 
 ### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. Hämta Java SE-programmet från [Oraclet](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-1. Extrahera Adobe Primetime Offline Packager 2.3.1-arkivfilen `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` till disken.
+1. Ladda ned Java SE från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Extrahera Adobe Primetime Offline Packager 2.3.1-arkivfilen med namnet `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` till disken.
 
 ### Konfigurera Offline Packager 2.3.1 {#configuring-the-offline-packager}
 
@@ -79,7 +78,7 @@ Konfigurationsinstruktionerna finns i guiden Komma igång för Primetime Offline
 
 ## Nyheter i Primetime Offline Packager 2.1 (juli 2015) {#what-s-new-in-primetime-offline-packager-july}
 
-Stöd för PlayReady BuyDRM (för DASH). Mer information finns i hjälpdokumentationen [som är tillgänglig här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Stöd för PlayReady BuyDRM (för DASH). Mer information finns i hjälpdokumentationen [finns här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 Följande förbättringar har också gjorts i offlinepaketeraren.
 
@@ -87,7 +86,7 @@ PTPUB-780 Stöd för taggen EXT-X-START har lagts till
 
 ## Nyheter i Primetime Offline Packager 2.0 (juni 2015) {#what-s-new-in-primetime-offline-packager-june}
 
-Stöd för rensa DASH-utdata har lagts till. Mer information finns i produktdokumentationen [här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Stöd för rensa DASH-utdata har lagts till. Läs produktdokumentationen [här](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) för mer information.
 
 Följande problem har också åtgärdats i den här versionen.
 
@@ -122,13 +121,13 @@ Följande problem har också åtgärdats i den här versionen.
 
 ### Installerar offlinepaketeraren 2.1 {#installing-offline-packager}
 
-1. Hämta Java SE-programmet från [Oraclet](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
-1. Extrahera `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip` till disken.
+1. Ladda ned Java SE från [Oraclets webbplats](https://www.oracle.com/technetwork/java/javase/downloads/index.html) och följ installationsanvisningarna.
+1. Extrahera `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`till skivan.
 
 ### Konfigurera Offline Packager 2.1 {#configuring-the-offline-packager-1}
 
-Information om konfigurationen som är tillgänglig här: [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
+Information om konfigurationen som är tillgänglig här finns i dokumentet Primetime Offline Packager Getting Started [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
 
 ## Användbara resurser {#helpful-resources}
 
-* Läs den fullständiga hjälpdokumentationen på [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html)-sidan.
+* Se den fullständiga hjälpdokumentationen på [Adobe Primetime Läs mer &amp; Support](https://helpx.adobe.com/support/primetime.html) sida.

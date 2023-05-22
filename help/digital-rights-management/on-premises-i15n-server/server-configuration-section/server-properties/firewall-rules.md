@@ -2,14 +2,13 @@
 title: Brandväggsregler
 description: Brandväggsregler
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1a40822a-893d-43ec-9c3e-8e0b4ebe6d01
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
 
 ---
-
 
 # Brandväggsregler{#firewall-rules}
 
@@ -19,4 +18,4 @@ För att få säker åtkomst till Individualization-servern behöver endast viss
 * [!DNL /flashaccess/status]
 * [!DNL /crossdomain.xml]
 
-Tjänstsökvägar, t.ex. [!DNL /flashaccess/admin/*] (d.v.s. status- och administratörssidor), får endast vara tillgängliga inifrån brandväggen. Inga delar av Key Generation Server ska vara åtkomliga utanför brandväggen.
+Tjänstsökvägar, som [!DNL /flashaccess/admin/*] (dvs. status- och administratörssidor) får endast vara tillgängliga inifrån brandväggen. Inga delar av Key Generation Server ska vara åtkomliga utanför brandväggen.

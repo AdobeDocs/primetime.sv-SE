@@ -1,14 +1,13 @@
 ---
 description: Redundanshantering inträffar när en variantspellista har flera renderingar för samma bithastighet och en av renderingarna slutar att fungera. TVSDK växlar mellan renderingar.
 title: Redundans
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3da378ac-1665-4e51-a901-3d7772ede69a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
 
 ---
-
 
 # Redundans {#failover}
 
@@ -34,4 +33,4 @@ Redundans inträffar endast på M3U8-nivå, vilket betyder:
 
 >[!TIP]
 >
->TVSDK, i stället för Apple AV Foundation-spelaren, ger hantering av failover.
+>TVSDK, i stället för Apple AV Foundation-spelaren, hanterar failover.

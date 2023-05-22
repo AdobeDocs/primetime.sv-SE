@@ -1,14 +1,13 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: Meddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6cbc85d7-c197-448b-aa90-554c70af6557
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
 
 ---
-
 
 # TVSDK-meddelandesystem {#tvsdk-notification-system}
 
@@ -28,7 +27,7 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
    <td colname="1"><span class="codeph"> type</span></td> 
    <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräkningstyp med möjliga värden för 
     <pre>
-      INFORMATION, VARNING ELLER FEL. Det här är den översta grupperingen för meddelanden.
+      INFORMATION, VARNING eller FEL. Det här är den översta grupperingen för meddelanden.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -46,12 +45,11 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> skulle till exempel kombineras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
+   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> paras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
-   <td colname="2">En referens till ett annat <span class="codeph"> PTNotification</span>-objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
+   <td colname="2">En referens till en annan <span class="codeph"> PTNotification</span> objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
   </tr> 
  </tbody> 
 </table>
-

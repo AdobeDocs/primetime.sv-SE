@@ -1,13 +1,13 @@
 ---
 title: Migrera inloggningssidan för MVPD från iFrame till Popup
 description: Migrera inloggningssidan för MVPD från iFrame till Popup
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # Migrera inloggningssidan för MVPD från iFrame till Popup {#migr-mvpd-login-iframe-popup}
 

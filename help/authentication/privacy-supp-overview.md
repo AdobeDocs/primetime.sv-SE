@@ -1,13 +1,13 @@
 ---
 title: Översikt över sekretessupporten
 description: Översikt över sekretessupporten
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9868a7e7-30f6-420e-a660-7d2f7870374d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över sekretessupporten {#priv-supp-overview}
 

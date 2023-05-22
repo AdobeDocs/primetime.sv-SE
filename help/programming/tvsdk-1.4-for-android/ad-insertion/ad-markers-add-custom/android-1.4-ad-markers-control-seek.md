@@ -1,14 +1,13 @@
 ---
 description: Du kan åsidosätta standardbeteendet för hur TVSDK söker efter annonser när du använder anpassade annonsmarkörer.
 title: Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 83faa5a4-4416-499e-8cf2-d016cd9a379d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
 
 ---
-
 
 # Styra uppspelningsbeteendet för sökning efter anpassade annonsmarkörer{#control-playback-behavior-for-seeking-over-custom-ad-markers}
 
@@ -18,18 +17,17 @@ Som standard hoppas annonserna över av TVSDK när en användare söker i eller 
 
 Du kan ange att TVSDK ska flytta spelhuvudet till början av den senast hoppade anpassade annonsen när användaren söker efter en eller flera anpassade annonser.
 
-1. Konfigurera en metadatainstans med uppräkningen `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` inställd på strängvärdet &quot;true&quot; (inte som ett booleskt `true`).
+1. Konfigurera en metadatainstans med `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` uppräkning inställd på strängvärdet &quot;true&quot; (inte som Boolean `true`).
 
    ```java
    Metadata metadata = new MetadataNode(); 
    metadata.setValue(DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED.getValue(),"true");
    ```
 
-1. Skapa och konfigurera en `MediaResource`-instans och skicka de extra konfigurationsalternativen till `TimeRangeCollection.toMetadata`. Den här metoden tar emot ytterligare konfigurationsalternativ via en annan generisk metadatastruktur.
+1. Skapa och konfigurera en `MediaResource` -instans, skicka ytterligare konfigurationsalternativ till `TimeRangeCollection.toMetadata`. Den här metoden tar emot ytterligare konfigurationsalternativ via en annan generisk metadatastruktur.
 
    ```java
    MediaResource mediaResource =  
      MediaResource.createFromUrl("www.example.com/video/test_video.m3u8", 
                                  timeRanges.toMetadata(metadata));
    ```
-

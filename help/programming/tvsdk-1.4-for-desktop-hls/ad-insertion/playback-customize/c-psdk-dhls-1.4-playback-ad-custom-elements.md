@@ -1,14 +1,13 @@
 ---
 description: TVSDK innehåller klasser och metoder som du kan använda för att anpassa uppspelningsbeteendet för innehåll som innehåller reklam.
 title: API-element för annonsuppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 459995c2-1d6f-4414-94a6-2c0b24098c14
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
-
 
 # API-element för annonsuppspelning{#api-elements-for-ad-playback}
 
@@ -29,7 +28,7 @@ Följande API-element är användbara för att anpassa uppspelning:
    <td colname="col2">Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta bevakade profiler med 
     <pre>
      den 
-     <span class="codeph"> ochBreakAsWatched</span>-egenskap.
+     <span class="codeph"> adBreakAsWatched</span> -egenskap.
     </pre> </td> 
   </tr> 
   <tr> 
@@ -68,4 +67,3 @@ Följande API-element är användbara för att anpassa uppspelning:
   </tr> 
  </tbody> 
 </table>
-

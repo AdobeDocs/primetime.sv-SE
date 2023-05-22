@@ -1,14 +1,13 @@
 ---
 title: Cookies Updates - SameSite and Secure flags
 description: Cookies Updates - SameSite and Secure flags
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cc1f60fd-fa64-48cb-a185-dba562a54c33
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
 
 ---
-
-
 
 # Cookies Updates - SameSite and Secure flags {#cookies-updates---samesite-and-secure-flags}
 

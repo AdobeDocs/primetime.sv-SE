@@ -1,14 +1,13 @@
 ---
 description: Händelser från TVSDK indikerar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, till exempel att en video börjar spelas upp eller åtgärder som utförs implicit, till exempel att en annons slutförs.
 title: Lyssna efter händelser för Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f5289340-f49f-40e9-887e-34b42e1205cf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#listen-for-primetime-player-events-overview}
 
@@ -25,4 +24,3 @@ Här finns ytterligare information om händelser:
 * Programmet initierar vanligtvis icke-blockerande åtgärder, som att begära att en video börjar spelas upp.
 
    TVSDK kommunicerar asynkront med programmet genom att skicka händelser, som när videon börjar spelas upp och en händelse när videon är klar. Andra händelser kan indikera statusändringar i spelaren och feltillstånd. Dina händelsehanterare vidtar lämpliga åtgärder.
-

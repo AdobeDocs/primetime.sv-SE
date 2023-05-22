@@ -1,24 +1,23 @@
 ---
 description: TVSDK meddelar spelarklienten om att det finns interna AVAsset-objekt tillgängligaMediaCharacpropertiesWithMediaSelectionOptions med hjälp av PTMediaPlayerMediaSelectionOptionsAvailableNotification-meddelandet.
 title: Visa undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dc726a5b-2eab-4ebd-8773-7396bf818205
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
-
-# Visa underrubriker {#expose-subtitles}
+# Visa undertexter {#expose-subtitles}
 
 TVSDK meddelar spelarklienten om att det finns interna AVAsset-objekt tillgängligaMediaCharacpropertiesWithMediaSelectionOptions med hjälp av PTMediaPlayerMediaSelectionOptionsAvailableNotification-meddelandet.
 
-Du kommer åt tillgängliga undertexter via `PTMediaPlayerItem`-egenskapens `subtitlesOptions`.
+Du kommer åt tillgängliga undertexter via `PTMediaPlayerItem` egenskapens `subtitlesOptions`.
 
 Visa undertexter:
 
-1. Registrera klienten som avlyssnare för `PTMediaPlayerMediaSelectionOptionsAvailableNotification`-meddelandet.
+1. Registrera klienten som avlyssnare för `PTMediaPlayerMediaSelectionOptionsAvailableNotification` meddelande.
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -26,8 +25,8 @@ Visa undertexter:
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   När klienten får det här meddelandet är undertexterna klara i `PTMediaPlayerItem`.
-1. Implementera metoden `onMediaPlayerItemMediaSelectionOptionsAvailable` som i följande exempel:
+   När din kund får det här meddelandet är undertexterna klara i `PTMediaPlayerItem`.
+1. Implementera `onMediaPlayerItemMediaSelectionOptionsAvailable` metod som liknar följande exempel:
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +35,4 @@ Visa undertexter:
    }
    ```
 
-   Mer information om alternativa ljudspår finns i [Alternativt ljud](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).
+   Mer information om alternativa ljudspår finns i  [Alternativt ljud](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).

@@ -1,7 +1,8 @@
 ---
 title: Visa kontodelningsrapporter för en viss programmerare
 description: Visa kontodelningsrapporter för en viss programmerare
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%

@@ -1,20 +1,19 @@
 ---
 description: Om du vill få meddelanden om taggar i manifestet måste du implementera lämpliga händelseavlyssnare.
 title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e4be34b6-0f29-45b8-a089-b79b41daeada
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
 # Lägg till avlyssnare för tidsbestämda metadataaviseringar {#add-listeners-for-timed-metadata-notifications}
 
 Om du vill få meddelanden om taggar i manifestet måste du implementera lämpliga händelseavlyssnare.
 
-Du kan övervaka tidsbestämda metadata genom att avlyssna `onTimedMetadata`, som meddelar programmet om relaterad aktivitet. Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK ett nytt `TimedMetadata`-objekt och skickar den här händelsen. Objektet innehåller namnet på taggen som du prenumererar på, lokal tid i uppspelningen där taggen ska visas samt andra data.
+Du kan övervaka tidsbestämda metadata genom att lyssna efter `onTimedMetadata`, som meddelar din tillämpning om relaterade aktiviteter. Varje gång en unik prenumerationstagg identifieras under tolkningen av innehållet förbereder TVSDK en ny `TimedMetadata` och skickar den här händelsen. Objektet innehåller namnet på taggen som du prenumererar på, lokal tid i uppspelningen där taggen ska visas samt andra data.
 
 Lyssna efter händelser.
 
@@ -38,4 +37,4 @@ private final TimedMetadataEventListener timedMetadataEventListener = new TimedM
 }; 
 ```
 
-ID3-metadata använder samma `onTimedMetadata`-avlyssnare för att ange om det finns en ID3-tagg. Detta bör dock inte skapa någon förvirring eftersom du kan använda egenskapen `TimedMetadata` `type` för att skilja mellan TAGG och ID3. Mer information om ID3-taggar finns i [ID3-taggar](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md).
+ID3-metadata använder samma `onTimedMetadata` avlyssnare som anger om det finns en ID3-tagg. Detta bör dock inte förorsaka någon förvirring eftersom du kan använda `TimedMetadata` `type` för att skilja mellan TAGG och ID3. Mer information om ID3-taggar finns i [ID3-taggar](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md).

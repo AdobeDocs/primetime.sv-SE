@@ -2,16 +2,15 @@
 title: Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla
 description: Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
-
-# Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat går ut {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
+# Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
 
 Det kan finnas tillfällen när du måste skaffa ett nytt certifikat från Adobe. När ett produktionscertifikat upphör att gälla upphör till exempel ett utvärderingscertifikat att gälla eller när du växlar från en utvärdering till ett produktionscertifikat. När ett certifikat upphör att gälla och du inte vill paketera om innehållet som använde det gamla certifikatet. Du kan göra licensservern uppmärksam på både gamla och nya certifikat.
 
@@ -37,31 +36,30 @@ Använd följande procedur för att uppdatera servern med de nya certifikaten:
     HandlerConfiguration.setPolicyUpdateList()
    ```
 
-   I referensimplementeringen är de egenskaper som du använder `HandlerConfiguration.RevocationList` och `HandlerConfiguration.PolicyUpdateList`. Uppdatera även certifikatet som används för att verifiera signaturerna: `RevocationList.verifySignature.X509Certificate`.
+   I referensimplementeringen är de egenskaper du använder `HandlerConfiguration.RevocationList` och `HandlerConfiguration.PolicyUpdateList`. Uppdatera även certifikatet som används för att verifiera signaturerna: `RevocationList.verifySignature.X509Certificate`.
 
 1. För att kunna förbruka innehåll som paketerats med de gamla certifikaten måste licensservern ha den gamla och nya inloggningsuppgifterna för licensservern och transportuppgifterna. Uppdatera licensservern med nya och gamla certifikat.
 
    För autentiseringsuppgifter för licensservern:
 
-   * Kontrollera att den aktuella autentiseringsuppgiften skickas till konstruktorn `LicenseHandler`:
+   * Se till att aktuella autentiseringsuppgifter skickas till `LicenseHandler` konstruktor:
 
-      * I referensimplementeringen anger du den via egenskapen `LicenseHandler.ServerCredential`.
-      * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `LicenseServerCredential`-elementet i filen flashaccess-tenant.xml.
+      * I referensimplementeringen anger du den via `LicenseHandler.ServerCredential` -egenskap.
+      * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `LicenseServerCredential` i filen flashaccess-tenant.xml.
    * Kontrollera att aktuella och gamla autentiseringsuppgifter anges till `AsymmetricKeyRetrieval`
 
-      * I referensimplementeringen anger du den via egenskaperna `LicenseHandler.ServerCredential` och `AsymmetricKeyRetrieval.ServerCredential. n`.
-      * I Adobe Access Server för skyddad direktuppspelning anges de gamla autentiseringsuppgifterna efter den första autentiseringsuppgiften i `LicenseServerCredential`-elementet i filen flashaccess-tenant.xml.
-
+      * I referensimplementeringen anger du den via `LicenseHandler.ServerCredential` och `AsymmetricKeyRetrieval.ServerCredential. n` egenskaper.
+      * I Adobe Access Server för skyddad direktuppspelning anges de gamla autentiseringsuppgifterna efter den första autentiseringsuppgifterna i `LicenseServerCredential` i filen flashaccess-tenant.xml.
    För transportinloggningsuppgifterna:
 
-   * Kontrollera att de aktuella autentiseringsuppgifterna skickas till metoden `HandlerConfiguration.setServerTransportCredential()`:
+   * Se till att aktuella autentiseringsuppgifter skickas till `HandlerConfiguration.setServerTransportCredential()` metod:
 
-      * I referensimplementeringen anger du den via egenskapen `HandlerConfiguration.ServerTransportCredential`.
-      * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `TransportCredential`-elementet i filen flashaccess-tenant.xml.
-   * Kontrollera att de gamla autentiseringsuppgifterna har angetts för `HandlerConfiguration.setAdditionalServerTransportCredentials`():
+      * I referensimplementeringen anger du den via `HandlerConfiguration.ServerTransportCredential` -egenskap.
+      * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `TransportCredential` i filen flashaccess-tenant.xml.
+   * Se till att de gamla autentiseringsuppgifterna anges för `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
-      * I referensimplementeringen anger du den via egenskaperna `HandlerConfiguration.AdditionalServerTransportCredential. n`.
-      * I Adobe Access Server för skyddad direktuppspelning anges detta efter den första autentiseringen i `TransportCredential`-elementet i filen flashaccess-tenant.xml.
+      * I referensimplementeringen anger du den via `HandlerConfiguration.AdditionalServerTransportCredential. n` egenskaper.
+      * I Adobe Access Server för skyddad direktuppspelning anges detta efter de första autentiseringsuppgifterna i `TransportCredential` i filen flashaccess-tenant.xml.
 
 
 
@@ -70,8 +68,7 @@ Använd följande procedur för att uppdatera servern med de nya certifikaten:
 1. Så här uppdaterar du nyckelserverns licensservercertifikat:
 
    * Uppdatera autentiseringsuppgifterna i klientserverns konfigurationsfil för Adobe Access Key Server. Inkludera både den gamla och nya Key Server-inloggningsuppgifterna i flashaccess-keyserver-tenant.xml.
-   * Kontrollera att det aktuella certifikatet skickas till metoden `HandlerConfiguration.setKeyServerCertificate()`.
+   * Kontrollera att det aktuella certifikatet skickas till `HandlerConfiguration.setKeyServerCertificate()` -metod.
 
-      * I referensimplementeringen anger du den via egenskapen `HandlerConfiguration.KeyServerCertificate`.
+      * I referensimplementeringen anger du den via `HandlerConfiguration.KeyServerCertificate` -egenskap.
       * I Adobe Access Server för skyddad direktuppspelning anger du nyckelserverns certifikat i genom elementet Configuration/Tenant/Certificates/KeyServer.
-

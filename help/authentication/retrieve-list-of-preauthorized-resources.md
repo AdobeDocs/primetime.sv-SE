@@ -1,13 +1,13 @@
 ---
 title: Hämta lista över förauktoriserade resurser
 description: Hämta lista över förauktoriserade resurser
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
-
 
 # Hämta lista över förauktoriserade resurser {#retrieve-list-of-preauthorized-resources}
 

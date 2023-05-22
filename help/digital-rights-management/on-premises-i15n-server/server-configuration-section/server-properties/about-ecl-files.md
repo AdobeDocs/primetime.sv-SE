@@ -2,14 +2,13 @@
 title: Om ECI-filer
 description: Om ECI-filer
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ac452897-3c64-4481-a3b7-4b69ef6edb61
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # Om ECI-filer{#about-eci-files}
 
@@ -21,7 +20,7 @@ Eftersom det inte är särskilt vanligt att nya Primetime DRM-klienter släpps k
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 ```
 
-Filen [!DNL Latest.txt] innehåller URL:en till den senaste CRL-distributionsfilen.
+The [!DNL Latest.txt] filen innehåller URL:en till den senaste CRL-distributionsfilen.
 
 Adobe kommer att skapa ECI zip-filen på det sätt som beskrivs nedan:
 
@@ -49,7 +48,7 @@ ZIP-filen kommer att byta namn så att den innehåller arkivdatumet samt SHA-256
 Rename ECI.zip to <DATE_SHA-256>.zip
 ```
 
-Exempel:
+Till exempel:
 
 ```
 20150310_aea45bf06241f04fba2b310ff9a8066c6aba73c8d22387b60509481e9cefc43e.zip
@@ -62,7 +61,6 @@ Utför följande process för installation efter hämtning:
 1. Anteckna SHA-256-sammanfattningen och beräkna om den med OpenSSL eller ett motsvarande verktyg.
 1. Jämför den med den som anges i filnamnet.
 1. Byt namn på filen till [!DNL ECI.zip].
-1. Zippa upp katalogen [!DNL ECI].
+1. Zippa upp [!DNL ECI] katalog.
 1. Ersätt den gamla ECI-katalogen med den nya.
 1. Starta om Individualization-servern.
-

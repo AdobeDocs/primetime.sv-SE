@@ -1,14 +1,13 @@
 ---
 description: Du kan tillhandahålla anpassade metadata för innehåll, annonser och kapitelspårningsanrop med hjälp av callback-funktioner.
 title: Implementera stöd för anpassade metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ae479ed6-382b-41a0-8e83-9ee816c35fe5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
-
 
 # Implementera stöd för anpassade metadata {#implement-custom-metadata-support}
 

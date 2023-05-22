@@ -1,14 +1,13 @@
 ---
 description: I vissa fall kanske du vill hindra slutanvändare från att spela upp innehåll på flera enheter när innehållet köpts eller hyrts. Om kunden använder Expressplay kan detta göras genom att använda Expressplay-API:erna för att binda användarens Expressplay-token till användarens dator.
 title: Enhetsbindning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 96ead794-e3eb-4059-91d3-a2c351a17ea3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
-
 
 # Enhetsbindning{#device-binding}
 
@@ -17,13 +16,13 @@ I vissa fall kanske du vill hindra slutanvändare från att spela upp innehåll 
 Du kan använda API:erna på följande sätt.
 
 1. Generera en cookie.
-1. Skicka en begäran om att skapa en overksam token med den genererade cookien kopplad som antingen en frågesträng (cookie=`<cookie>`) eller som rubriker.
+1. Skicka en begäran om att skapa en dummy-token med den genererade cookien som antingen är bifogad som en frågesträng (cookie=`<cookie>`) eller som rubriker.
 1. Låt användarens dator skicka en licensbegäran till Expresshow-licensservern med hjälp av ovanstående token, till exempel genom att spela upp ett dummy-innehåll.
 
    När den här dummy-licensbegäran lyckas associerar den användarens device_id (beräknad eller genererad av DRM-implementeringen på användarens enhet) med cookien i Expressplay back-end. Denna cookie används sedan på följande sätt:
 
    * Vid köp/hyra av innehåll skickar koden en fråga till uttryckets back-end för användarens device_id genom att skicka den associerade cookien ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))
-   * Skicka en begäran om tokengenerering med det köpta innehållets nyckel (CEK), keyID (CEKSID), principer och annan information och bifoga cookien och device_id ovan som `cookie`-korrelationsparametern respektive `deviceid`-tokenbegränsningsparametern.
+   * Skicka en begäran om generering av token med det köpta innehållets nyckel (CEK), keyID (CEKSID), principer och annan information, och bifoga cookien och device_id ovan som `cookie` korrelationsparameter och `deviceid` parameter för tokenbegränsning.
 
    * Ange denna token för användaren.
 

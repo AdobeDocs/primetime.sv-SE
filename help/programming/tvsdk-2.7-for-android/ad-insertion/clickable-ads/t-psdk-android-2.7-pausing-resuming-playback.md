@@ -1,20 +1,19 @@
 ---
 description: När en användare klickar på en annons bör programmet pausa uppspelningen av huvudvideoinnehållet.
 title: Pausa och återuppta uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 99db31ff-37f1-41f9-84a4-73dfaac8a93a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
-
 # Pausa och återuppta uppspelning {#pause-and-resume-playback}
 
 När en användare klickar på en annons bör programmet pausa uppspelningen av huvudvideoinnehållet.
 
-1. Åsidosätt `onPause` och `onResume` från Android-aktivitet.
+1. Åsidosätt `onPause` och `onResume` från Android Activity.
 
    ```java
    @Override 
@@ -44,4 +43,3 @@ När en användare klickar på en annons bör programmet pausa uppspelningen av 
    } 
    abandonAudioFocus(); 
    ```
-

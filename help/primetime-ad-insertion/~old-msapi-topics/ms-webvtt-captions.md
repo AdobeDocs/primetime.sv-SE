@@ -1,7 +1,6 @@
 ---
 description: Manifestservern stöder publiceringsaktiverade WebVTT-bildtexter för alla HLS-videoformat. När den tar emot förfrågningar om att infoga annonser i WebVTT-innehåll med bildtexter, är det korrekt.
 title: Stöd för WebVTT-bildtexter
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '325'

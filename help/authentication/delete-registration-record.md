@@ -1,13 +1,13 @@
 ---
 title: Ta bort registreringspost
 description: Ta bort registreringspost
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
-
 
 # Ta bort registreringspost {#delete-registration-record}
 

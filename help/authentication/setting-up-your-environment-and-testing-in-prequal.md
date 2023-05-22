@@ -1,13 +1,13 @@
 ---
 title: Konfigurera din miljö och testning i Pre-Qual
 description: Konfigurera din miljö och testning i Pre-Qual
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera din miljö och testning i Pre-Qual{#setting-up-your-environment-and-testing-in-prequal}
 
@@ -96,4 +96,3 @@ Steg 1 och 2 konfigurerar testmiljön på en av testdatorerna, steg 3 är en ver
 * Om du vill gå djupare i testningen av Adobe Primetime-autentisering rekommenderar vi att du använder [API-testwebbplats](http://entitlement-prequal.auth.adobe.com/apitest/api.html).
 
 Mer information om API-testwebbplatsen finns på [Testa autentiserings- och auktoriseringsflöden med Adobe API test site](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
-

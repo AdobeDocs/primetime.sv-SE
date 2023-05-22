@@ -1,16 +1,15 @@
 ---
 description: För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
 title: VOD-annonsmatchning och infogning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6f02c7fc-028d-442f-92d4-9efa671b7f02
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-# VOD-annonser som löser och infogar{#vod-ad-resolving-and-insertion}
+# VOD-annonsmatchning och infogning{#vod-ad-resolving-and-insertion}
 
 För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
 
@@ -18,13 +17,13 @@ Före uppspelning löser TVSDK kända annonser, infogar annonsbrytningar i huvud
 
 TVSDK infogar annonser på följande sätt:
 
-* **Pre-roll**, vilket är före innehållet.
+* **Före rullning**, som är före innehållet.
 * **Mid-roll**, som finns i innehållet.
-* **Efterrullning**, som är efter innehållet.
+* **Efterrullning**, som kommer efter innehållet.
 
 >[!IMPORTANT]
 >
->När du implementerar en anpassad `AdPolicySelector` kan olika profiler ges till varje typ av `AdBreakTimelineItem` (pre-roll, mid-roll eller post-roll) i `AdPolicyInfo`, baserat på typen för `AdBreakTimelineItem`. Du kan t.ex. behålla innehåll i mitten av rullen efter att det har spelats upp, men ta bort innehåll före uppspelning.
+>Vid implementering av en anpassad `AdPolicySelector`kan olika principer ges för varje typ av `AdBreakTimelineItem` (förrullning, mittrullning eller efterrullning) in `AdPolicyInfo`, baserat på typen av `AdBreakTimelineItem`. Du kan t.ex. behålla innehåll i mitten av rullen efter att det har spelats upp, men ta bort innehåll före uppspelning.
 
 När uppspelningen har startats kan inga ytterligare ändringar göras i innehållet. Ads cannot be:
 
@@ -35,4 +34,3 @@ När uppspelningen har startats kan inga ytterligare ändringar göras i innehå
 * Ersatt
 
    Du kan till exempel inte ersätta inbyggda annonser med riktade annonser.
-

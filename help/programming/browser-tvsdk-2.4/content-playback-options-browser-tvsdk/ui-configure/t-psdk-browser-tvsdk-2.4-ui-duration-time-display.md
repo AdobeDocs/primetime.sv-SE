@@ -1,21 +1,20 @@
 ---
 description: Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
 title: Visa videons varaktighet, aktuella tid och återstående tid
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
-
 # Visa videons varaktighet, aktuella tid och återstående tid{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
 
 1. Vänta tills spelaren är i åtminstone tillståndet PREPARED.
-1. Hämta den aktuella spelhuvudstiden med attributet `MediaPlayer.currentTime`.
+1. Hämta den aktuella spelhuvudstiden med `MediaPlayer.currentTime` -attribut.
 
    Det här attributet returnerar spelhuvudets aktuella position på den virtuella tidslinjen i millisekunder. Tiden beräknas i förhållande till den matchade strömmen som kan innehålla flera instanser av alternativt innehåll, till exempel flera annonser eller annonsbrytningar som delas upp i huvudströmmen. För live-/linjära strömmar är den returnerade tiden alltid i uppspelningsfönsterintervallet.
 
@@ -24,7 +23,7 @@ Du kan använda Browser TVSDK för att hämta information om media som du kan vi
    ```
 
 1. Hämta uppspelningsintervallet för strömmen och fastställ varaktigheten.
-   1. Använd egenskapen `mediaPlayer.playbackRange` för att hämta tidsintervallet för den virtuella tidslinjen.
+   1. Använd  `mediaPlayer.playbackRange` för att hämta tidsintervallet för den virtuella tidslinjen.
 
    1. Ta bort början från intervallets slut om du vill bestämma varaktigheten.
 
@@ -36,7 +35,7 @@ Du kan använda Browser TVSDK för att hämta information om media som du kan vi
 
 1. Använd de metoder som är tillgängliga i MediaPlayer- och Browser TVSDK-elementen för att ställa in sökfältsparametrarna.
 
-   Här finns t.ex. en möjlig layout för att visa sökfältet i HTML.
+   Här är t.ex. en möjlig layout för att visa sökfältet i HTML.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -343,4 +342,3 @@ Du kan använda Browser TVSDK för att hämta information om media som du kan vi
    
            })(); 
    ```
-

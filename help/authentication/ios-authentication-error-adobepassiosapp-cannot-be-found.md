@@ -1,13 +1,13 @@
 ---
 title: iOS-autentiseringsfel - adobepass.ios.app kan inte hittas
 description: iOS-autentiseringsfel - adobepass.ios.app kan inte hittas
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
-
 
 # iOS-autentiseringsfel - adobepass.ios.app kan inte hittas {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
 
@@ -63,4 +63,3 @@ Några saker att notera:
 - ANVÄND ALDRIG `adobepass.ios.app` direkt var som helst i koden. Använd i stället konstanten `ADOBEPASS_REDIRECT_URL`
 - The `return NO;` programsatsen förhindrar att sidan läses in
 - Se till att `getAuthenticationToken` anropet anropas endast en gång i koden. Flera samtal till `getAuthenticationToken` resulterar i odefinierade resultat.
-

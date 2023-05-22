@@ -2,20 +2,19 @@
 title: Hantera begäranden om hämtning av serverversion
 description: Hantera begäranden om hämtning av serverversion
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 86a1bbe3-2ae4-4d4e-be51-fbbeb32147c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
-
 # Hantera begäranden om hämtning av serverversion {#handle-get-server-version-requests}
 
 Adobe Primetime DRM client 3.0 eller senare skickar en Get Server Version-förfrågan för att fastställa serverns funktioner. Alla servrar som använder Primetime DRM SDK 3.0 eller senare måste implementera stöd för begäranden om Get Server-version.
 
-* Klassen för begärandehanteraren är `com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionHandler`
+* Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionHandler`
 * Begärandemeddelandeklassen är `com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionRequestMessage`
 * Begärans URL måste vara &quot;License Server URL in metadata&quot; + &quot; [!DNL /flashaccess/getServerVersion/v3]&quot;
 

@@ -1,13 +1,13 @@
 ---
 title: Stöd för enkel inloggning
 description: Stöd för enkel inloggning
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: edc3719e-c627-464c-9b10-367a425698c6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för enkel inloggning
 

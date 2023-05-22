@@ -2,14 +2,13 @@
 title: Konfigurationsfiler för licensserver
 description: Konfigurationsfiler för licensserver
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d48e88a4-caae-4f4e-b870-38da4f3a715e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurationsfiler för licensserver{#license-server-configuration-files}
 
@@ -24,4 +23,4 @@ Se *Konfigurationsvaliderare*.
 
 Om du inte vill att lösenord ska vara tillgängliga i klartext i konfigurationsfilerna måste du kryptera alla lösenord som du har angett i de globala konfigurationsfilerna och klientkonfigurationsfilerna med hjälp av verktyget Scrambler som Adobe har tillhandahållit.
 
-Mer information om hur du krypterar lösenord finns i *Lösenordssparare*.
+Se *Lösenordsfasare* om du vill ha mer information om hur du krypterar lösenord.

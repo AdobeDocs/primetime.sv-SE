@@ -2,24 +2,23 @@
 title: Om konfigurationsfiler för kommandoradsverktyg
 description: Om konfigurationsfiler för kommandoradsverktyg
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0ec4917e-7c70-4b84-86ac-c34c8a522018
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
 
-
 # Om konfigurationsfiler för kommandoradsverktyg{#about-command-line-tools-configuration-files}
 
-Kommandoradsverktygen söker efter [!DNL flashaccesstools.properties] i den katalog där du kör verktygen. Du kan dock använda alternativet `-c` när du kör ett kommandoradsverktyg för att ange en annan plats för standardvärdet [!DNL flashaccesstools.properties]. Du kan också använda `-c` för att ange en annan konfigurationsfil.
+Kommandoradsverktygen letar efter [!DNL flashaccesstools.properties] i den katalog där du kör verktygen. Du kan dock använda `-c` när du kör ett kommandoradsverktyg för att ange en annan plats för standardinställningen [!DNL flashaccesstools.properties]. Du kan också använda `-c` för att ange en annan konfigurationsfil.
 
-Konfigurationsfilerna för kommandoradsverktygen använder formatet *Java-egenskapsfilen*, som följande regler gäller för:
+Konfigurationsfilerna för kommandoradsverktygen använder *Java-egenskapsfil* format, för vilket följande regler gäller:
 
 * Escape-omvända snedstreck med ytterligare ett omvänt snedstreck.
 
-   Om du till exempel vill ange filen [!DNL C:\credentials.pfx] på en Windows-dator måste du ange den som [!DNL C:\\credentials.pfx] eller `C:/credentials.pfx`. Om du vill ange en fil på en Windows-nätverksserver måste du ange `\\\\server\\folder\\filename.pfx`
-* Ta endast med *Latin-1* tecken.
+   På en Windows-dator kan du till exempel ange [!DNL C:\credentials.pfx] måste du ange den som [!DNL C:\\credentials.pfx] eller `C:/credentials.pfx`. Om du vill ange en fil på en Windows-nätverksserver måste du ange `\\\\server\\folder\\filename.pfx`
+* Inkludera endast *Latin-1* tecken.
 
-   Om du vill använda tecken som inte är-*Latin-1* måste du använda rätt Unicode-escape-sekvens. Du kan också använda verktyget [!DNL native2ascii] (ingår i Java) på dina konfigurationsfilsposter.
+   Använd ej *Latin-1* måste du använda rätt Unicode-escape-sekvens. Du kan också använda [!DNL native2ascii] -verktyget (ingår i Java) till dina konfigurationsfilsposter.

@@ -1,14 +1,13 @@
 ---
 description: Du kan bestämma om du bara vill matcha annonser som inträffar efter användarens aktuella Live Point eller om du även vill matcha annonser som inträffar före den aktuella Live-punkten.
 title: Läs in annons för ett DVR-fönster
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f0799002-5cba-41c2-86bb-9ccf6b906357
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # Läs in annons för ett DVR-fönster {#load-ad-for-a-dvr-window}
 
@@ -20,17 +19,17 @@ När en användare börjar visa innehåll i början av en DVR-ström, löser TVS
 >
 >Reparera annonser efter att den aktuella direktpunkten är snabbare, men om användaren söker bakåt förhindrar det här alternativet spelaren från att spela upp annonser som visades tidigare.
 
-## Kontrollera och läsa in ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Styra och läsa in för ett DVR-fönster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Så här styr du inläsning av DVR-fönster:
 
-Om du vill läsa in alla annonser för hela flödet anger du `PTAdMetadata.enableDVRAds`-egenskapen till `YES`.
+Om du vill läsa in alla annonser för hela flödet anger du `PTAdMetadata.enableDVRAds` egenskap till `YES`.
 
 >[!NOTE]
 >
->Standardvärdet är `NO`, och det här alternativet läser bara in annonser från den aktuella direktpunkten.
+>Standardvärdet är `NO`och det här alternativet läser bara in annonser från den aktuella direktpunkten.
 
-Exempel:
+Till exempel:
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 

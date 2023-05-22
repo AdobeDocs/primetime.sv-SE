@@ -1,33 +1,32 @@
 ---
 description: Programmet måste använda rätt PTTimedMetadata-objekt vid rätt tidpunkt.
 title: Lagra tidsbestämda metadataobjekt när de skickas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 43bc2b47-b947-4af1-bba8-6f2063c7b60c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
-
 # Lagra tidsbestämda metadataobjekt när de skickas {#store-timed-metadata-objects-as-they-are-dispatched}
 
 Programmet måste använda rätt PTTimedMetadata-objekt vid rätt tidpunkt.
 
-Under innehållsparsning, som inträffar före uppspelning, identifierar TVSDK prenumerationstaggar och meddelar programmet om dessa taggar. Tiden som associeras med varje `PTTimedMetadata` är den absoluta tiden på uppspelningstidslinjen.
+Under innehållsparsning, som inträffar före uppspelning, identifierar TVSDK prenumerationstaggar och meddelar programmet om dessa taggar. Den tid som associeras med varje `PTTimedMetadata` är den absoluta tiden på uppspelningstidslinjen.
 
 Programmet måste utföra följande uppgifter:
 
 1. Håll reda på aktuell uppspelningstid.
-1. Matcha aktuell uppspelningstid med skickade `PTTimedMetadata`-objekt.
+1. Matcha den aktuella uppspelningstiden med den skickade `PTTimedMetadata` objekt.
 
 1. Använd `PTTimedMetadata` där starttiden är lika med den aktuella uppspelningstiden.
 
    >[!NOTE]
    >
-   >Koden nedan förutsätter att det bara finns en `PTTimedMetadata`-instans åt gången. Om det finns flera instanser måste de sparas korrekt i en ordlista. En metod är att skapa en array vid en viss tidpunkt och lagra alla instanser i den arrayen.
+   >Koden nedan förutsätter att det bara finns en `PTTimedMetadata` -instans i taget. Om det finns flera instanser måste de sparas korrekt i en ordlista. En metod är att skapa en array vid en viss tidpunkt och lagra alla instanser i den arrayen.
 
-   I följande exempel visas hur du sparar `PTTimedMetadata`-objekt i en `NSMutableDictionary (timedMetadataCollection)` som anges av starttiden för varje `timedMetadata`.
+   I följande exempel visas hur du sparar `PTTimedMetadata` objekt i en `NSMutableDictionary (timedMetadataCollection)` som anges av starttiden för varje `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -54,7 +53,7 @@ Programmet måste utföra följande uppgifter:
 
 ## Tolkar Nielsen ID3-taggar {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Använd följande på metoden `onMediaPlayerSubscribedTagIdentified` för att extrahera ID3-taggen för tolkning:
+Extrahera ID3-taggen för tolkning med följande på `onMediaPlayerSubscribedTagIdentified` metod:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -93,4 +92,3 @@ if([keyValuePairString rangeOfString:@"nielsen.com"].location != NSNotFound)
 return nielsenStr; 
 }
 ```
-

@@ -1,20 +1,19 @@
 ---
 description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 title: Spara videopositionen och återuppta den senare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6b1eeeeb-ae13-437f-80cc-1ceb7bf8ac19
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
 # Spara videopositionen och återuppta den senare {#save-the-video-position-and-resume-later}
 
 Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 
-Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du sparar positionen **med** delade annonser refererar till en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
+Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att positionen sparas **med** delade annonser avser en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
 
 1. När användaren avslutar en video hämtas och sparas positionen i videon.
 
@@ -24,11 +23,11 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
 
    Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet lokal tid, som du kan spara på enheten eller i en databas på servern.
 
-   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, kommer `getCurrentTime` att returnera 1 200 sekunder, medan `getLocalTime` vid den här positionen kommer att returnera 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `getCurrentTime` kommer att returnera 1 200 sekunder, medan `getLocalTime` vid den här positionen kommer att returnera 900 sekunder.
 
    >[!IMPORTANT]
    >
-   >Lokal tid och aktuell tid är samma för live/linjära strömmar. I det här fallet har `convertToLocalTime` ingen effekt. För VOD ändras inte lokal tid medan annonser spelas upp.
+   >Lokal tid och aktuell tid är samma för live/linjära strömmar. I detta fall `convertToLocalTime` har ingen effekt. För VOD ändras inte lokal tid medan annonser spelas upp.
 
    ```java
    // Save the user session when player activity stops 
@@ -78,9 +77,9 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
       >
       >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
 
-   * Använd `seek` om du vill söka till aktuell tid.
+   * Om du vill söka till aktuell tid använder du `seek`.
 
-1. När ditt program tar emot händelsen `onStatusChanged` för statusändring söker du efter den sparade lokala tiden.
+1. När ditt program får `onStatusChanged` statusändringshändelse, söka till den sparade lokala tiden.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  

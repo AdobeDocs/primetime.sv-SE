@@ -2,14 +2,13 @@
 title: Distribuera certifikatöversikt
 description: Distribuera certifikatöversikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 45a4bc7e-f987-4b9a-885d-d989d09566c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#deploy-certificates-overview}
 

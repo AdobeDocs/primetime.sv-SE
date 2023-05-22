@@ -2,16 +2,15 @@
 title: Kryptera spår
 description: Kryptera spår
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f9d1a589-7545-4fd4-aeaf-d2ee3642882a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
-
-# Krypterar spår {#encrypting-tracks}
+# Kryptera spår {#encrypting-tracks}
 
 Det här paketeringsalternativet anger vilka delar av innehållet som du vill kryptera: ljud, video eller båda.
 

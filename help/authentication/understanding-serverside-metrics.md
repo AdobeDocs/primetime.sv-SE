@@ -1,7 +1,8 @@
 ---
 title: Förstå mått på serversidan
 description: Förstå mått på serversidan
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 0%

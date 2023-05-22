@@ -1,28 +1,27 @@
 ---
 description: Du kan återställa, återanvända eller frigöra en MediaPlayer-instans som du inte längre behöver.
 title: Återanvända eller ta bort en MediaPlayer-instans
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8b84c7f1-713a-46b4-8eb7-d699a79e74b7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-
 # Återanvända eller ta bort en MediaPlayer-instans {#reuse-or-remove-a-mediaplayer-instance}
 
 Du kan återställa, återanvända eller frigöra en MediaPlayer-instans som du inte längre behöver.
 
-## Återställ eller återanvänd en MediaPlayer-instans {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
+## Återställa eller återanvända en MediaPlayer-instans {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
 
-När du återställer en `MediaPlayer`-instans återgår den till sin oinitierade IDLE-status enligt definitionen i `MediaPlayerStatus`.
+När du återställer en `MediaPlayer` -instansen returneras till sin oinitierade IDLE-status enligt definitionen i `MediaPlayerStatus`.
 
 Den här åtgärden är användbar i följande fall:
 
-* Du vill återanvända en `MediaPlayer`-instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta den tidigare instansen.
+* Du vill återanvända en `MediaPlayer` -instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta föregående instans.
 
-   Om du återställer kan du återanvända `MediaPlayer`-instansen utan att behöva frigöra resurser, återskapa `MediaPlayer` och omallokera resurser.
+   Om du återställer kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser.
 
 * När `MediaPlayer` har statusen FEL och måste rensas.
 
@@ -30,7 +29,7 @@ Den här åtgärden är användbar i följande fall:
    >
    >Det här är det enda sättet att återställa efter FELstatus.
 
-   1. Anropa `reset` för att returnera `MediaPlayer`-instansen till dess oinitierade status:
+   1. Utlysning `reset` för att returnera `MediaPlayer` till oinitierad status:
 
       ```java
       void reset() throws MediaPlayerException; 
@@ -40,22 +39,21 @@ Den här åtgärden är användbar i följande fall:
 
       >[!NOTE]
       >
-      >Läs in samma `MediaResource` om du vill ta bort ett fel.
+      >Läs in samma `MediaResource`.
 
-   1. Starta uppspelningen när du tar emot `STATUS_CHANGED`-händelseåteranropet med `PREPARED`-status.
+   1. När du får `STATUS_CHANGED` händelseåteranrop med `PREPARED` status, starta uppspelningen.
 
 ## Släpp en MediaPlayer-instans och resurser {#section_13A0914AFF784943ABC343F7EB249C4E}
 
-Du bör frisläppa en `MediaPlayer`-instans och resurser när du inte längre behöver `MediaResource`.
+Du bör släppa en `MediaPlayer` -instans och -resurser när du inte längre behöver `MediaResource`.
 
-När du frisläpper ett `MediaPlayer`-objekt frigörs de underliggande maskinvaruresurserna som är kopplade till det här `MediaPlayer`-objektet.
+När du släpper en `MediaPlayer` objekt, de underliggande maskinvaruresurserna som är kopplade till detta `MediaPlayer` -objektet har frigjorts.
 
-Här följer några skäl till att släppa en `MediaPlayer`:
+Här är några skäl att släppa en `MediaPlayer`:
 
 * Om du har onödiga resurser kan det påverka prestandan.
-* Om du lämnar ett onödigt `MediaPlayer`-objekt instansierat kan det leda till kontinuerlig batteriförbrukning för mobila enheter.
-* Om flera instanser
-Vissa delar av samma videokodek stöds inte på en enhet, uppspelningsfel kan uppstå för andra program.
+* Leder en onödig `MediaPlayer` objekt som instansierats kan leda till kontinuerlig batteriförbrukning för mobila enheter.
+* Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
 
 * Släpp `MediaPlayer`.
 
@@ -65,4 +63,4 @@ Vissa delar av samma videokodek stöds inte på en enhet, uppspelningsfel kan up
 
    >[!NOTE]
    >
-   >När `MediaPlayer`-instansen har släppts kan du inte längre använda den. Om någon metod i `MediaPlayer`-gränssnittet anropas efter att det har släppts genereras ett `MediaPlayerException`.
+   >Efter `MediaPlayer` -instansen släpps, du kan inte längre använda den. Om någon metod i `MediaPlayer` -gränssnittet anropas när det har släppts, `MediaPlayerException` kastas.

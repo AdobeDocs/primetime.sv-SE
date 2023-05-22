@@ -1,14 +1,13 @@
 ---
 description: Du konfigurerar Adobe® Access™ genom att kopiera filer från dvd-skivan. Dessa filer innehåller JAR-filer som innehåller kod, certifikat och klasser från tredje part. Begär dessutom ett certifikat från Adobe Systems Incorporated. Du får flera autentiseringsuppgifter som används för att skydda integriteten för paketerat innehåll, licenser och kommunikation mellan klienten och servern.
 title: Konfigurera utvecklingsmiljön
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 66310fc8-7513-4aab-81d6-1370ce216cbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera SDK {#setting-up-the-sdk}
 

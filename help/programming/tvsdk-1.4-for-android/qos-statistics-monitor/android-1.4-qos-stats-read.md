@@ -1,27 +1,26 @@
 ---
 description: Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 title: Läs QOS-uppspelning, buffring och enhetsstatistik
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1b79c254-4135-4d77-8b24-473f214021a1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Läs QOS-uppspelning, buffring och enhetsstatistik{#read-qos-playback-buffering-and-device-statistics}
 
 Du kan läsa uppspelning, buffring och enhetsstatistik från klassen QOSProvider.
 
-Klassen `QOSProvider` innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutefrekvenser och tidsdata.
+The `QOSProvider` -klassen innehåller olika statistik, bland annat information om buffring, bithastigheter, bildrutehastigheter och tidsdata.
 
 Den innehåller även information om enheten, t.ex. tillverkare, modell, operativsystem, SDK-version, tillverkarens enhets-ID och skärmstorlek/skärmtäthet.
 
 1. Skapa en mediespelare.
-1. Skapa ett `QOSProvider`-objekt och koppla det till mediespelaren.
+1. Skapa en `QOSProvider` och bifoga det till mediespelaren.
 
-   Konstruktorn `QOSProvider` har en spelarkontext så att den kan hämta enhetsspecifik information.
+   The `QOSProvider` konstruktorn använder en spelarkontext så att den kan hämta enhetsspecifik information.
 
    ```java
    // Create Media Player. 
@@ -31,7 +30,7 @@ Den innehåller även information om enheten, t.ex. tillverkare, modell, operati
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer som regelbundet hämtar de nya QoS-värdena från `QOSProvider`. Till exempel:
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
@@ -82,4 +81,3 @@ Den innehåller även information om enheten, t.ex. tillverkare, modell, operati
      deviceInfo.getWidthPixels() + "x" + deviceInfo.getHeightPixels() +  
      " (" + orientation + ")"); 
    ```
-

@@ -2,20 +2,19 @@
 title: Översikt
 description: Översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9aebdbd0-a6f0-4c9d-be2f-a8789cadf287
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
 
 ---
 
-
 # DRM-licensinbäddning {#license-embedder}
 
-Använd [!DNL AdobeLicenseEmbedder.jar] för att bädda in förgenererade licenser i innehåll som skyddas av Media Packager.
+Använd [!DNL AdobeLicenseEmbedder.jar] om du vill bädda in förgenererade licenser i innehåll som Media Packager skyddar.
 
-## Kommandoradsanvändning för License Embedder {#license-embedder-command-line-usage}
+## License Embedder-kommandoradsanvändning {#license-embedder-command-line-usage}
 
 ```
 java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
@@ -39,19 +38,19 @@ I följande tabell beskrivs de kommandoradsalternativ som du kan ange:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
-   <td colname="2" class="- topic/entry "> Namnet på filen som innehåller licensen som du vill bädda in. Du kan ange flera <span class="codeph"> -l </span>-alternativ för att bädda in flera licenser. </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
+   <td colname="2" class="- topic/entry "> Namnet på filen som innehåller licensen som du vill bädda in. Du kan ange flera <span class="codeph"> -l </span> alternativ för att bädda in flera licenser. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filnamn  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filnamn </span> </td> 
    <td colname="2" class="- topic/entry "> Anger de innehållsmetadata som du kan generera en licens för. Det här alternativet krävs för att generera en licens. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> inte har tillämpats inträffar ett fel. </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
+   <td colname="2" class="- topic/entry "> Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> har inte tillämpats, ett fel inträffar. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
    <td colname="2" class="- topic/entry "> Om målfilen redan finns kan du skriva över den utan att tillfrågas. </td> 
   </tr> 
  </tbody> 

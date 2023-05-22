@@ -1,14 +1,13 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 title: Omdirigeringsoptimering för HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 80d5d38d-c998-4fc0-b527-b38e578d76e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Omdirigeringsoptimering för HTTP 302 {#http-redirect-optimization}
 
@@ -18,7 +17,7 @@ Om en huvudmanifestbegäran omdirigeras och 302-optimering aktiveras i spelaren 
 
 >[!IMPORTANT]
 >
->Den här funktionen stöds bara i de certifierade webbläsare som stöder egenskapen `responseURL` i `XMLHttpRequest`-objektet.
+>Den här funktionen stöds endast i certifierade webbläsare som stöder `responseURL` -egenskapen i `XMLHttpRequest` -objekt.
 
 Kom ihåg följande information för Flash fallback:
 
@@ -29,7 +28,7 @@ Kom ihåg följande information för Flash fallback:
 
 Du kan använda egenskapen useRedirectedUrl för att aktivera 302-omdirigering (true) eller inaktivering (false).
 
-Exempel:
+Till exempel:
 
 ```js
 var networkConfiguration = new AdobePSDK.NetworkConfiguration(); 

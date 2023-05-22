@@ -1,14 +1,13 @@
 ---
 description: Med Adobe Primetime DRM Server for Protected Streaming kan du ange alla användningsregler på servern med konfigurationsfiler.
 title: Om användningsregler
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 55af3a18-8fdb-4285-bd9f-ca479475e34f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
 
 ---
-
 
 # Om användningsregler{#about-usage-rules}
 
@@ -27,5 +26,4 @@ DRM-servern Primetime för skyddad direktuppspelning stöder följande användni
 
 >[!NOTE]
 >
->Om du vill ha stöd för fjärrnyckelleverans till iOS-enheter måste fjärrnyckelleveransen vara aktiverad för den DRM-princip som tillämpas vid paketeringen. Den här inställningen kan inte ändras via klientkonfigurationen på servern.
-
+>Om du vill ha stöd för fjärrnyckelleverans till iOS-enheter måste fjärrnyckelleveransen vara aktiverad för DRM-principen som tillämpas vid paketeringstiden. Den här inställningen kan inte ändras via klientkonfigurationen på servern.

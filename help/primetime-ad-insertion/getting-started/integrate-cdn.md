@@ -1,20 +1,19 @@
 ---
 title: Integrera ditt CDN
 description: Integrera ditt CDN
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: b93031a2-6e66-4de1-9cf2-b0260f88fe13
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
 # Integrera ditt CDN {#integrating-cdn}
 
-Primetime Ad Insertion fungerar som en proxy mellan klientprogrammet och -manifestationerna, inte själva videosegmenten. Distribuera ditt innehåll till valfritt CDN och skicka URL:en till Primetime Ad Insertion med Bootstrap API:t. Mer integreringsinformation finns i [CDN:er](/help/primetime-ad-insertion/technical-reference/supported-cdns.md) som stöds.
+Primetime Ad Insertion fungerar som en proxy mellan klientprogrammet och -manifestationerna, inte själva videosegmenten. Distribuera ditt innehåll till valfritt CDN och skicka URL:en till Primetime Ad Insertion med Bootstrap API:t. Mer information om integrering finns i [CDN:er som stöds](/help/primetime-ad-insertion/technical-reference/supported-cdns.md).
 
-## CDN-tokeniseringsscheman {#cdn-tokenization-schemes} som stöds
+## CDN-tokeniseringsscheman som stöds {#cdn-tokenization-schemes}
 
 CDN:er har ofta olika tokeniseringsscheman för fragmentauktorisering. Primetime Ad Insertion stöder aktivt större CDN-nätverk, bland annat:
 
@@ -23,7 +22,7 @@ CDN:er har ofta olika tokeniseringsscheman för fragmentauktorisering. Primetime
 * Centurylink / Level3
 * Kontakta din supportrepresentant på Primetime om du vill ha en fullständig lista över CDN:er som stöds
 
-Mer information om parametern `pttoken` finns i [Bootstrap API-parameterbeskrivning](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description).
+Mer information om `pttoken` parameter, se [Beskrivning av Bootstrap API-parameter](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description).
 
 ## Konfigurera annonser att leverera från innehållets CDN {#configure-ad-deliver-from-cdn}
 
@@ -31,8 +30,8 @@ Ni kanske vill leverera annonser och innehåll från samma CDN för att behålla
 
 ## Öka startprestanda med ditt CDN {#increase-startup-performance}
 
-Mer information finns i [Optimera start-up](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md).
+Mer information finns i [Optimera starten](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md).
 
-## Multi-CDN-funktioner {#enable-multi-cdn-fetures}
+## Funktioner för flera CDN {#enable-multi-cdn-fetures}
 
 Kontakta din supportrepresentant på Primetime om du vill aktivera multiCDN-funktioner.

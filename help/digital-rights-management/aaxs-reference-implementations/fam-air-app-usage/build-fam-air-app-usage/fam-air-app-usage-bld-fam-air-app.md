@@ -1,32 +1,31 @@
 ---
-title: Skapa AIR-programmet för Flash Access Manager
-description: Skapa AIR-programmet för Flash Access Manager
+title: Bygga AIR-programmet för Flash Access Manager
+description: Bygga AIR-programmet för Flash Access Manager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f15fe9d2-d5e8-43ef-a1d5-1211752d54da
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# Bygga AIR-programmet för Flash Access Manager {#building-the-flash-access-manager-air-application}
 
-# Skapar AIR-programmet för Flash Access Manager {#building-the-flash-access-manager-air-application}
-
-Om du vill skapa AIR-filen för Flash Access Manager från källkoden måste du ha Flex och AIR SDK installerade på datorn. Innan du kan paketera och köra programmet måste du kompilera MXML till en SWF-fil med kompilatorn [!DNL amxmlc]. Kompilatorn [!DNL amxmlc] finns i katalogen [!DNL bin] i Flex 4 eller senare SDK. Om du vill kan du ställa in systemvariabeln path så att den innehåller bin-katalogen för Flex SDK så att det blir enklare att köra verktygen på kommandoraden.
+Om du vill skapa AIR-filen för Flash Access Manager från källkoden måste du ha Flex och AIR SDK installerade på datorn. Innan du kan paketera och köra programmet måste du kompilera MXML till en SWF-fil med [!DNL amxmlc] kompilator. The [!DNL amxmlc] kompilatorn finns i [!DNL bin] katalogen för Flex 4 eller senare SDK. Om du vill kan du ställa in systemvariabeln path så att den innehåller bin-katalogen för Flex SDK så att det blir enklare att köra verktygen på kommandoraden.
 
 Gör så här för att skapa AIR-filen för Flash Access Manager:
 
-1. Öppna ett kommandoskal eller en terminal och navigera till projektmappen för Flash Access Manager AIR-programmet ( [!DNL UI Tools\Flash Access Manager] i referensimplementeringskatalogen).
+1. Öppna ett kommandoskal eller en terminal och navigera till projektmappen för Flash Access Manager AIR-programmet ( [!DNL UI Tools\Flash Access Manager] i katalogen Reference Implementation).
 1. Ange följande kommando:
 
    ```
    amxmlc src\FlashAccessmanager.mxml
    ```
 
-   Om du kör [!DNL amxmlc] skapas [!DNL FlashAccessManager.swf], som innehåller den kompilerade koden för programmet.
+   Körs [!DNL amxmlc] skapar [!DNL FlashAccessManager.swf], som innehåller den kompilerade koden för programmet.
 
-Adobe AIR SDK innehåller ADT-verktyget (AIR Developer Tool) för att paketera AIR-program och generera certifikat. AIR-applikationer bör signeras digitalt. får användarna en varning när de installerar program som inte är korrekt signerade eller som inte är signerade alls. Om du vill generera ett certifikat med kommandoraden öppnar du ett konsolfönster i samma mapp som AIR-programmet och skriver följande:
+Adobe AIR SDK innehåller verktyget AIR Developer Tool (ADT) för att paketera AIR-program och generera certifikat. AIR-program bör signeras digitalt. visas ett varningsmeddelande när du installerar program som inte har signerats på rätt sätt eller som inte signerats alls. Om du vill generera ett certifikat med kommandoraden öppnar du ett konsolfönster i samma mapp som ditt AIR-program och skriver följande:
 
 ```
 adt -certificate -cn SelfSigned 1024-RSA testCert.pfx  
@@ -35,14 +34,14 @@ adt -certificate -cn SelfSigned 1024-RSA testCert.pfx
 </i class="+ topic>
 ```
 
-Ersätt *some_password* med ett lösenord som du väljer. Efter några sekunder bör ADT slutföra certifikatgenereringsprocessen och du bör ha en ny [!DNL testCert.pfx]-fil i programkatalogen.
+Ersätt *some_password* med ett valfritt lösenord. Efter några sekunder bör ADT slutföra certifikatgenereringsprocessen och du bör ha en ny [!DNL testCert.pfx] i programkatalogen.
 
-Använd sedan ADT för att paketera programmet i en [!DNL .air]-fil med kommandot:
+Använd sedan ADT för att paketera programmet i en [!DNL .air] genom att använda kommandot:
 
 ```
 adt -package -storetype pkcs12 -keystore testCert.pfx FlashAccessManager.air src\FlashAccessManager-app.xml . -C src assets
 ```
 
-Det här kommandot anger för ADT att paketera programmet med hjälp av nyckelfilen i [!DNL testCert.pfx]. På raden ovan konfigurerar du ADT så att hela programmet paketeras i en fil med namnet [!DNL FlashAccessManager.air] och så att filerna [!DNL FlashAccessManager-app.xml] och [!DNL FlashAccessManager.swf] och bilderna från resurskatalogen inkluderas.
+Detta kommando anger för ADT att paketera programmet med hjälp av nyckelfilen i [!DNL testCert.pfx]. På raden ovan konfigurerar du ADT så att hela programmet paketeras i en fil med namnet [!DNL FlashAccessManager.air]och inkludera filerna [!DNL FlashAccessManager-app.xml] och [!DNL FlashAccessManager.swf] och bilderna från resurskatalogen.
 
-Som en del av den här processen uppmanas du att ange lösenordet som du anger för den nya certifikatfilen. Ange det, vänta en stund och en [!DNL FlashAccessManager.air]-fil ska visas i samma katalog som dina projektfiler.
+Som en del av den här processen uppmanas du att ange lösenordet som du anger för den nya certifikatfilen. Ange det, vänta ett ögonblick och [!DNL FlashAccessManager.air] -filen ska finnas i samma katalog som dina projektfiler.

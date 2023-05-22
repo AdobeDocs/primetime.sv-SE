@@ -2,14 +2,13 @@
 title: Ange en anpassad starttid i referensimplementeringen
 description: Ange en anpassad starttid i referensimplementeringen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: efa2560e-d6f5-44e9-9422-a72947616f61
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
-
 
 # Ange en anpassad starttid i referensimplementeringen {#set-a-custom-start-time-in-the-reference-implementation}
 
@@ -22,5 +21,5 @@ Du kan använda DVR-kontrollpanelen i inställningsgränssnittet för att aktive
 
    ![](assets/dvr-configuration.jpg)
 
-1. **Den anpassade** starttidskontrollen måste vara  **[!UICONTROL ON]** om du vill välja en anpassad position i DVR-fönstret när du öppnar flödet.
-1. Ange den anpassade starttiden i **Välj anpassad starttid**.
+1. **Anpassad starttidskontroll** måste vara **[!UICONTROL ON]** om du vill välja en anpassad position i DVR-fönstret när du anger flödet.
+1. Ange anpassad starttid i **Välj anpassad starttid**.

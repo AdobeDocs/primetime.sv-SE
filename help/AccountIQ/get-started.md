@@ -1,13 +1,13 @@
 ---
 title: Anlita och komma igång med konto-IQ
-description: 'Anlita, uppfylla krav och komma igång med konto-IQ. '
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+description: Anlita, uppfylla krav och komma igång med konto-IQ.
+exl-id: 840ab081-0073-492f-86b2-ba174ae93256
+source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # Anlita och komma igång med konto-IQ {#onboard}
 
@@ -53,5 +53,3 @@ Konto-IQ är kompatibelt med de senaste versionerna av följande webbläsare:
 >[!IMPORTANT]
 >
 >Om dina användare inte kan komma åt konto-IQ-instrumentpanelen kontaktar du Adobe support för att se till att din organisations ID vitlistas i konto-IQ.
-
-

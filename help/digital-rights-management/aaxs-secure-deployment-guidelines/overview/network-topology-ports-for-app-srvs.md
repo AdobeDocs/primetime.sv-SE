@@ -2,14 +2,13 @@
 title: Portar för programservrar
 description: Portar för programservrar
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 589d598f-aa3e-4567-9e41-0fd2177a4742
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
-
 
 # Portar för programservrar{#ports-for-application-servers}
 

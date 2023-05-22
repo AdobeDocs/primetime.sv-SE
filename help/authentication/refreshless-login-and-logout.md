@@ -1,13 +1,13 @@
 ---
 title: Inloggning och utloggning utan uppdatering
 description: Inloggning och utloggning utan uppdatering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 3ce8dfec-279a-4d10-93b4-1fbb18276543
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 0%
 
 ---
-
 
 # Inloggning och utloggning utan uppdatering {#tefresh-less-login-and-logout}
 
@@ -192,4 +192,3 @@ I följande kodexempel visas hur du hanterar ett MVPD-fönster på en programmer
         }
     }
 ```
-

@@ -1,14 +1,13 @@
 ---
 description: Med följande nya API:er kan du definiera DRM-återanrop.
 title: Implementera DRM-återanrop
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3aaa502d-9273-4320-a022-642fee75dafd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
-
 
 # Implementera DRM-återanrop{#implementing-drm-callbacks}
 
@@ -16,7 +15,7 @@ Med följande nya API:er kan du definiera DRM-återanrop.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Du kan definiera en återanropsfunktion (till exempel `parseContentIdCallback`) för att tolka innehålls-ID:t och ställa in det på `drmManager` med hjälp av API:t `setParseContentIdCallback`.
+Du kan definiera en återanropsfunktion (till exempel `parseContentIdCallback`) för att tolka innehålls-ID:t och ställa in det på `drmManager` genom att använda `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +38,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Du kan definiera en återanropsfunktion (till exempel `onCertificateResponseCallback`) för att bearbeta ett textcertifikatsvar och ställa in funktionen på `drmManager` med hjälp av API:t `setCertificateResponseCallback`. Du kan ställa in `setCertificateResponseCallback` så att standardbeteendet åsidosätts. Om du till exempel har `certificateResponseType` som inte är `ArrayBuffer` kan du använda det här återanropet för att konvertera certifikatsvaret till typen `ArrayBuffer`.
+Du kan definiera en återanropsfunktion (till exempel `onCertificateResponseCallback`) för att bearbeta ett textcertifikatsvar och ställa in funktionen på `drmManager` genom att använda `setCertificateResponseCallback` API. Du kan ange `setCertificateResponseCallback` för att åsidosätta standardbeteendet. Om du till exempel har en `certificateResponseType` som inte är `ArrayBuffer`kan du använda det här återanropet för att konvertera certifikatsvaret till `ArrayBuffer` typ.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +65,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Du kan definiera återanropsfunktioner för att tolka licensmeddelandet och licenssvaret och skicka dem i ett anrop till `drmManager.acquireLicense`. `onLicenseResponseCallback` är en ny parameter i  `acquireLicense` API:t.
+Du kan definiera callback-funktioner för att analysera licensmeddelandet och licenssvaret och skicka dem i ett anrop till `drmManager.acquireLicense`. `onLicenseResponseCallback` är en ny parameter i `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +120,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-I skyddsdata används det nya **[!UICONTROL certificateResponseType]**-fältet för att ange certifikatsvarstypen. Här är ett exempel på skyddsdata:
+I skyddsdata är den nya **[!UICONTROL certificateResponseType]** fältet används för att ange certifikatets svarstyp. Här är ett exempel på skyddsdata:
 
 ```js
 { 
@@ -137,4 +136,4 @@ I skyddsdata används det nya **[!UICONTROL certificateResponseType]**-fältet f
 }
 ```
 
-Det är valfritt att använda fältet `certificateResponseType`. Om det inte används antas värdet vara `ArrayBuffer`.
+Använda `certificateResponseType` fältet är valfritt. Om det inte används antas värdet vara `ArrayBuffer`.

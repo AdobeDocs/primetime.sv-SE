@@ -1,14 +1,13 @@
 ---
 description: ID3-taggar ger information om en ljud- eller videofil, till exempel filens titel eller namnet på artisten. identifierar ID3-taggar på segmentnivå för transportström (TS) i HLS-strömmar och skickar en händelse. Programmet kan extrahera data från taggen.
 title: ID3-taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1934516e-729b-476a-a19d-677bf2eb922a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # ID3-taggar{#id-tags}
 
@@ -25,13 +24,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * NAME = finns inte
 * ID = 0
 
-1. Implementera en händelseavlyssnare för `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` och registrera den med objektet `MediaPlayer`.
+1. Implementera en händelseavlyssnare för `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` och registrera det med `MediaPlayer` -objekt.
 
    TVSDK anropar den här avlyssnaren när ID3-metadata identifieras.
 
    >[!NOTE]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
+   >Anpassade annonser använder samma `onTimedMetadata` -händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
 
 1. Hämta metadata.
 
@@ -51,4 +50,3 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
        } 
    } 
    ```
-

@@ -2,14 +2,13 @@
 title: Grundläggande principalternativ
 description: Grundläggande principalternativ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d5ddd54d-9301-42da-b7fd-0b838eb6cf9d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
-
 
 # Grundläggande principalternativ {#basic-policy-options}
 
@@ -30,4 +29,3 @@ I följande tabell beskrivs de grundläggande principinställningarna:
 |  | Anonym | Ingen autentisering krävs för att visa innehållet. |
 |  | Autentiserad | Autentisering av användarnamn/lösenord krävs. |
 | Aktivera kedja av licenser | Tillåter att en licens uppdateras med en överordnad rotlicens för batchuppdatering av licenser. När lövlicensen upphör att gälla kan servern ge klienten en rotlicens som förnyar allt innehåll som skyddas med den här principen. |
-

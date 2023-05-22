@@ -2,7 +2,6 @@
 title: Skapa profiler och paketera innehåll
 description: Skapa profiler och paketera innehåll
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '170'
@@ -22,4 +21,4 @@ Profilerna i Adobe Primetime DRM har stöd för en mängd olika användningsregl
 * Ange klientkörningsmiljöer och versioner som kan komma åt innehåll (användare måste till exempel ha ett visst Adobe AIR-program eller en viss version av Flash Player).
 * Kräver att konsumenterna autentiserar sig med ett användarnamn och lösenord innan de kan visa skyddat innehåll eller tillåta anonym åtkomst.
 
-Mer information om att paketera innehåll finns i *Skydda innehåll*. Mer information om användningsregler och vilka affärsmodeller de stöder finns i *Användningsregler*.
+Mer information om paketering av innehåll finns i *Skydda innehåll*. Mer information om användningsregler och vilka affärsmodeller de stöder finns i *Användningsregler*.

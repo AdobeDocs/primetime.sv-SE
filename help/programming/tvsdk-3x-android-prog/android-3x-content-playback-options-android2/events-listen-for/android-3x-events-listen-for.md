@@ -1,14 +1,13 @@
 ---
 description: Händelser från TVSDK visar spelarens status, fel som inträffar, slutförandet av åtgärder som du har begärt, till exempel att en video börjar spelas upp eller åtgärder som utförs implicit, till exempel att en annons slutförs.
 title: Lyssna efter händelser för Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3d626890-0384-46b0-b4b7-cfc462e1da07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#listen-for-primetime-player-events-overview}
 

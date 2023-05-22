@@ -35,7 +35,7 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
    1. Lägg till en övertäckning i kontrollfältet som representerar uppspelningsintervallet.
    1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med hjälp av `MediaPlayer.getSeekableRange`.
 
-      Exempel:
+      Till exempel:
 
       ```java
       TimeRange seekableRange = _mediaPlayer.getSeekableRange(); 

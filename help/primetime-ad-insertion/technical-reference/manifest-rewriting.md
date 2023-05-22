@@ -1,14 +1,13 @@
 ---
 title: Regler för omskrivning av manifest och annonshämtning
-description: 'Regler för omskrivning av manifest och annonshämtning '
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+description: Regler för omskrivning av manifest och annonshämtning
+exl-id: 3750abc1-da60-4faf-ba85-37914f33641f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
-
 
 # Regler för omskrivning av manifest och annonshämtning {#manifest-rewriting}
 
@@ -30,7 +29,7 @@ find: "https?://primetime-a.akamaihd.net/(.*)"
 replace: "http://mycdn.com/ad-mapping-pathname/$1"
 ```
 
-Regler kan namnges och aktiveras/inaktiveras genom att ändra parametern `ptprotoswitch` i Bootstrap-API:t, som är en kommaseparerad lista över regler som ska köras.  Dessa två regler kan till exempel båda köras genom att ställa in `ptprotoswitch=adfetch_rule1,adfetch_rule2`:
+Regler kan namnges och aktiveras/inaktiveras genom att ändra `ptprotoswitch` i API:t för Bootstrap, som är en kommaavgränsad lista över regler som ska köras.  Dessa två regler kan till exempel båda köras genom att ställa in `ptprotoswitch=adfetch_rule1,adfetch_rule2`:
 
 ```
 <ruleSet>

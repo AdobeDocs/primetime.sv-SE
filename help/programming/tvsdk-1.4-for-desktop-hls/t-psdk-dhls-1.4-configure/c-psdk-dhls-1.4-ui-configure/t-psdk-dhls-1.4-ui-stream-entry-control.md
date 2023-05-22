@@ -1,14 +1,13 @@
 ---
 description: Som standard startar VOD-media vid uppspelning vid 0 och direktmedia vid klientens direktpunkt (DefaultMediaPlayer.LIVE_POINT).
 title: Ange en ström vid en viss tidpunkt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b97dbabf-e2ab-4669-a9f3-9129af938a40
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Ange en ström vid en viss tidpunkt{#enter-a-stream-at-a-specific-time}
 
@@ -18,7 +17,7 @@ Skicka en position till `MediaPlayer.prepareToPlay`.
 
 TVSDK anser att den angivna positionen är utgångspunkten för tillgången. Ingen sökåtgärd krävs. Om positionen inte ligger inom det sökbara intervallet använder standardpositionen.
 
-Exempel:
+Till exempel:
 
 ```
 var seekableRange:TimeRange=_mediaPlayer.seekableRange; 

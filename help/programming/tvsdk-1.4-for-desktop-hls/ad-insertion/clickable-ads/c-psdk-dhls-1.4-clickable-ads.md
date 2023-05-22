@@ -1,14 +1,13 @@
 ---
 description: TVSDK ger dig information så att du kan agera på klickbara annonser. När du skapar användargränssnittet måste du bestämma hur du ska svara när en användare klickar på en klickbar annons.
 title: Klickbara annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 50c74c82-c5d8-43f6-accf-8330a426a7bd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
-
 
 # Klickbara annonser {#clickable-ads}
 
@@ -16,7 +15,7 @@ TVSDK ger dig information så att du kan agera på klickbara annonser. När du s
 
 För TVSDK för Flash Runtime går det bara att klicka på linjära annonser.
 
-## Svara på klick på annonser {#respond-to-clicks-on-ads}
+## Svara på klickningar på annonser {#respond-to-clicks-on-ads}
 
 När en användare klickar på en annons eller en relaterad knapp ansvarar ditt program för att svara. TVSDK ger dig information om mål-URL:en.
 
@@ -35,7 +34,7 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
    </s:VGroup>
    ```
 
-1. Inkludera den här övertäckningen i vårt mediespelarexempel, [!DNL psdkdemo.xml].
+1. Inkludera den här övertäckningen i vårt mediaspelarexempel, [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +44,7 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Om du vill göra vyn synlig endast när en annons spelas upp lyssnar du efter händelserna `onAdStart` och `onAdComplete` som skickas av .
+1. Om du vill att vyn ska vara synlig endast när en annons spelas upp avlyssnar du `onAdStart` och `onAdComplete` händelser som skickas av .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +63,7 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
    }
    ```
 
-1. Övervaka användarinteraktioner i klickbara annonser. Meddela TVSDK med `notifyClick` när användaren vidrör eller klickar på annonsen eller knappen.
+1. Övervaka användarinteraktioner i klickbara annonser. Meddela TVSDK med `notifyClick`.
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,9 +71,9 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
    }
    ```
 
-1. Lyssna efter händelsen `AdclickEvent.AD_CLICK`.
+1. Lyssna på `AdclickEvent.AD_CLICK` -händelse.
 
-   Om en annons spelas upp skickar TVSDK händelsen `AdClickEvent.AD_CLICK` som du kan hämta klicknings-URL:en och relaterad information från.
+   Om en annons spelas skickar TVSDK `AdClickEvent.AD_CLICK` -händelse, från vilken du kan hämta klicknings-URL:en och relaterad information.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);

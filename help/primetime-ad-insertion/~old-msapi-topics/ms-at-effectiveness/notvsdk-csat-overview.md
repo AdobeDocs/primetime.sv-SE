@@ -1,16 +1,15 @@
 ---
 description: Utgivare kan bygga HLS-kompatibla videospelare som fungerar med arbetsflödena för annonsuppföljning på klientsidan i Primetimes manifestfil. Gränssnitten till manifestservern för direktuppspelningen och VOD-fall (video on demand) skiljer sig något åt.
 title: Översikt över spårning på klientsidan som inte är TVSDK
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# Översikt över icke-TVSDK-klientspårning {#overview-of-non-tvsdk-client-side-tracking}
+# Översikt över spårning på klientsidan som inte är TVSDK {#overview-of-non-tvsdk-client-side-tracking}
 
 Utgivare kan bygga HLS-kompatibla videospelare som fungerar med arbetsflödena för annonsuppföljning på klientsidan i Primetimes manifestfil. Gränssnitten till manifestservern för direktuppspelningen och VOD-fall (video on demand) skiljer sig något åt.
 
@@ -21,7 +20,7 @@ Manifestservern tillhandahåller ett API som gör det möjligt för anpassade sp
 * Annonsstatus
 * Content pod progress
 
-Manifestserverns API förutsätter att alla videospelare som använder det uppfyller minimikraven. Mer information finns i [Krav för videospelare](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md).
+Manifestserverns API förutsätter att alla videospelare som använder det uppfyller minimikraven. Se [Krav för videospelare](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md) för mer information.
 
 ## Arbetsflöde för spårning på klientsidan {#section_cst_flow}
 
@@ -34,7 +33,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
    ```
 
-   Exempel:
+   Till exempel:
 
    ```URL
    https://manifest.auditude.com/auditude/variant/
@@ -54,7 +53,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
    }
    ```
 
-   Exempel:
+   Till exempel:
 
    ```JSON
    https://pcor3.manifest.auditude.com/auditude/variant/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3B0ZGVtb3MuY29tL3ZpZGVvcy90b3NoZHVuZW5jcnlwdGVkL2hscy90ZXN0Mi5tM3U4.3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
@@ -69,7 +68,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
      {rendition}/{groupID}/{urlSafeBase64(bit rate stream URL)}.m3u8?u={Ad Request Id}&z={Ad Zone Id}&{Any other query parameters}
    ```
 
-   Exempel:
+   Till exempel:
 
    ```URL
    #EXTM3U
@@ -93,13 +92,13 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Spelaren väljer lämplig URL för single bit rate, manifest på direktuppspelningsnivå för uppspelning av det sammanfogade innehållet. Exempel:
+1. Spelaren väljer lämplig URL för single bit rate, manifest på direktuppspelningsnivå för uppspelning av det sammanfogade innehållet. Till exempel:
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Manifestservern returnerar ett manifest på strömnivå som innehåller länkar till innehållet och TS-segmentlänkar. Exempel:
+1. Manifestservern returnerar ett manifest på strömnivå som innehåller länkar till innehållet och TS-segmentlänkar. Till exempel:
 
    ```
       #EXTM3U
@@ -124,23 +123,23 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
 
    >[!NOTE]
    >
-   >Spelaren väljer URL:en till spellistan på direktuppspelningsnivå för att hämta innehållsströmmen. Manifestservern hämtar den ursprungliga spelningslistan från CDN. Vissa kodare kan mata in ytterligare information i rubrikattributet `#EXTINF`, till exempel:
+   >Spelaren väljer URL:en till spellistan på direktuppspelningsnivå för att hämta innehållsströmmen. Manifestservern hämtar den ursprungliga spelningslistan från CDN. Vissa kodare kan ge ytterligare information i `#EXTINF` title-attribut, till exempel:
    >
    >
    ```
    >#EXTINF:6.006,LTC=2017-08-23T13:25:47+00:00
    >```
 
-   Eftersom manifestservern inte kan tolka innebörden av icke-standardattribut för att ändra dem för en sammansatt spellista, tar manifestservern bort alla ytterligare attribut utöver varaktighetsinformationen i den här taggen. Mer information finns i [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1)-posten i HLS-specifikationen.
+   Eftersom manifestservern inte kan tolka innebörden av icke-standardattribut för att ändra dem för en sammansatt spellista, tar manifestservern bort alla ytterligare attribut utöver varaktighetsinformationen i den här taggen. Se [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) i HLS-specifikationen för mer information.
 
-1. Om du vill begära spårningsinformation lägger spelaren till frågeparametern `pttrackingposition` med ett alfanumeriskt värde i spellistans URL på direktuppspelningsnivå för den valda bithastigheten. Exempel:
+1. För att begära spårningsinformation lägger spelaren till frågeparametern `pttrackingposition` med ett alfanumeriskt värde till spellistans URL på direktuppspelningsnivå för den valda bithastigheten. Till exempel:
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. Manifestservern returnerar spellistfilen som är ifylld med antingen ett [JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)- eller [VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)-objekt som innehåller annonsspårningsdata för den m3u8-fil på strömnivå som för närvarande begärs.
+1. Manifestservern returnerar spellistfilen ifylld med antingen en  [JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) eller [VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) -objektet som innehåller annonsspårningsdata för den m3u8-fil på strömnivå som för närvarande begärs.
 
    >[!NOTE]
    >
@@ -148,7 +147,7 @@ Manifestserverns API förutsätter att alla videospelare som använder det uppfy
 
    >[!NOTE]
    >
-   >Manifestservern genererar annonsspårningsobjektet baserat på `pttrackingversion`-värdet i URL:en för Bootstrap. Om `pttrackingversion` utelämnas eller har ett ogiltigt värde fylls annonsspårningsinformationen automatiskt i i `#EXT-X-MARKER`-taggarna i varje begärd spellista på strömnivå. Se [för mer information](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >Manifestservern genererar annonsspårningsobjektet baserat på `pttrackingversion` i Bootstrap-URL:en. Om `pttrackingversion` utelämnas eller har ett ogiltigt värde, kommer manifestservern automatiskt att fylla i annonsspårningsinformationen i `#EXT-X-MARKER` -taggar i varje begärd spellista på strömnivå. Se [för mer information](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. Spelaren begär varje annonsspårnings-URL för varje annonsspårningshändelse vid rätt tidpunkt.
 

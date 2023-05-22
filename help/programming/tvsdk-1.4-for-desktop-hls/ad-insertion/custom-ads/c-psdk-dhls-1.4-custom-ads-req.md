@@ -1,14 +1,13 @@
 ---
 description: Video Player Ad-Serving Interface Definition (VPAID) är ett gemensamt gränssnitt för att spela upp videoannonser. VPAID ger en multimedieupplevelse för användarna och ger utgivaren möjlighet att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Anpassade annonskrav
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c13748d6-23f1-4f34-95b4-7b532db6e536
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade annonskrav {#custom-ad-requirements}
 
@@ -43,7 +42,7 @@ TVSDK skickar följande händelser:
 * `AdPlaying`
 * `AdStopped`
 
-Efter händelsen `AdStopped` återupptar TVSDK videoinnehållet.
+Efter `AdStopped` kommer TVSDK att återuppta videoinnehållet.
 
 >[!TIP]
 >
@@ -53,4 +52,4 @@ Efter händelsen `AdStopped` återupptar TVSDK videoinnehållet.
 
 Om annonsen tar för lång tid att läsa in eller om det finns fel i annonsen, kan TVSDK ignorera annonsen och nästa annons i annonsuppsättningen spelas upp automatiskt.
 
-Om inställningen `AuditudeSettings.customAdLoadTimeout` anger ett antal sekunder som är större än noll försöker TVSDK läsa in annonsen till den angivna varaktigheten. Om annonsen inte kan läsas in hoppas annonsen över. Om du till exempel konfigurerar `AuditudeSettings.customAdLoadTimeout:5` försöker TVSDK läsa in annonsen i högst 5 sekunder. Om annonsen fortfarande inte läses in ignoreras den.
+Om `AuditudeSettings.customAdLoadTimeout` -inställningen anger ett antal sekunder som är större än noll, kommer TVSDK att försöka läsa in annonsen till den angivna varaktigheten. Om annonsen inte kan läsas in hoppas annonsen över. Om du till exempel konfigurerar `AuditudeSettings.customAdLoadTimeout:5`, försöker TVSDK att läsa in annonsen i högst fem sekunder. Om annonsen fortfarande inte läses in ignoreras den.

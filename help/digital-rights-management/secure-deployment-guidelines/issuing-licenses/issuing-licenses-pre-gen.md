@@ -1,14 +1,13 @@
 ---
 description: Om du genererar licenser i förväg som innehåller tidsbaserade användningsregler, bör licensen innehålla synkroniseringskrav för att på ett säkert sätt tillämpa licensens förfallodatum.
 title: Förgenererande licenser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f3b6927d-66cf-4aa2-802d-d4b3a5652c63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
-
 
 # Förgenererande licenser{#pre-generating-licenses}
 

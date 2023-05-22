@@ -1,26 +1,25 @@
 ---
 description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 title: Lägg in metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 83c0fd25-dbc3-4529-b81a-16ff78012c80
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
 
 ---
 
-
-# Lägg till metadata {#ad-insertion-metadata}
+# Lägg in metadata {#ad-insertion-metadata}
 
 För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 
-TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska innehålla annonser från Primetimes annonsserver måste ditt program tillhandahålla följande obligatoriska `AuditudeSettings`-information:
+TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska innehålla annonser från Primetimes annonsserver måste ditt program tillhandahålla följande `AuditudeSettings` information:
 
 * `mediaID`, som är en unik identifierare för den video som ska spelas upp.
 
    Utgivaren tilldelar medie-ID när han skickar in videoinnehåll och annonsinformation till Adobe Primetime annonsbeslutsserver. Detta ID används av Primetimes annonsbeslut för att hämta relaterad annonsinformation för videon från servern.
 
-* Ditt `zoneID`-konto, som tilldelas av Adobe, identifierar ditt företag eller din webbplats.
+* Dina `zoneID`, som utses av Adobe, identifierar ditt företag eller din webbplats.
 * Domänen för den tilldelade annonsservern.
 * Andra parametrar för målinriktning.
 
@@ -34,9 +33,9 @@ Använd hjälpklassen AuditudeSettings, som utökar klassen MetadataNode, för a
 >
 >Adobe Primetime annonsbeslut kallades tidigare Auditude.
 
-Advertising metadata finns i egenskapen `MediaResource.metadata`. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
+Advertising metadata is in the `MediaResource.metadata` -egenskap. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
 
-1. Bygg `AuditudeSettings`-instansen.
+1. Bygg `AuditudeSettings` -instans.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings();
@@ -55,12 +54,12 @@ Advertising metadata finns i egenskapen `MediaResource.metadata`. När du starta
 
    >[!TIP]
    >
-   >Medie-ID används av TVSDK som en sträng, som konverteras till ett md5-värde, och används för `u`-värdet i Primetimes URL-begäran om annonsbeslut. Exempel:
+   >Medie-ID används av TVSDK som en sträng, som konverteras till ett md5-värde och används för `u` i Primetimes URL-begäran för annonsbeslut. Till exempel:
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. Skapa en `MediaResource`-instans med hjälp av medieströmmens URL och de annonseringsmetadata som skapats tidigare.
+1. Skapa en `MediaResource` -instans genom att använda medieströmmens URL och de annonseringsmetadata som skapats tidigare.
 
    ```
    var mediaResourceMetadata:MetadataNode = new MetadataNode(); 
@@ -71,17 +70,17 @@ Advertising metadata finns i egenskapen `MediaResource.metadata`. När du starta
          mediaResourceMetadata);
    ```
 
-1. Läs in `MediaResource`-objektet via metoden `MediaPlayer.replaceCurrentResource`.
+1. Läs in `MediaResource` genom `MediaPlayer.replaceCurrentResource` -metod.
 
-   `MediaPlayer` börjar läsa in och bearbeta medieströmmens manifest.
+   The `MediaPlayer` börjar läsa in och bearbeta medieströmmens manifest.
 
-1. (Valfritt) Fråga `MediaPlayerItem`-instansen för att se om strömmen är aktiv, oavsett om den har alternativa ljudspår eller om strömmen är skyddad.
+1. (Valfritt) Fråga `MediaPlayerItem` -instans för att se om strömmen är aktiv, oavsett om den har alternativa ljudspår eller om den är skyddad.
 
    Den här informationen kan hjälpa dig att förbereda användargränssnittet för uppspelningen. Om du till exempel vet att det finns två ljudspår kan du inkludera en gränssnittskontroll som växlar mellan dessa spår.
 
-1. Ring `MediaPlayer.prepareToPlay` för att starta annonsarbetsflödet.
+1. Utlysning `MediaPlayer.prepareToPlay` för att starta annonsarbetsflödet.
 
-   När annonserna har lösts och placerats på tidslinjen övergår `MediaPlayer` till tillståndet PREPARED.
-1. Starta uppspelningen genom att anropa `MediaPlayer.play`.
+   När annonserna har lösts och placerats på tidslinjen är `MediaPlayer` övergångar till tillståndet PREPARED.
+1. Utlysning `MediaPlayer.play` för att starta uppspelningen.
 
 TVSDK inkluderar nu annonser när era medier spelas upp.

@@ -1,16 +1,15 @@
 ---
 description: TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 title: Companion banner ads
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e7b0ce38-e4b0-4e10-8d76-2d43d8eff665
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
-# Banderollannonser {#companion-banner-ads}
+# Companion banner ads {#companion-banner-ads}
 
 TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
@@ -35,8 +34,8 @@ Innehållet i en PTAdAsset beskriver en tilläggsbanderoll.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-`PTMediaPlayerAdStartedNotification`-meddelandet returnerar en `PTAd`-instans som innehåller en `companionAssets`-egenskap (matrisen `PtAdAsset`).
-Var `PtAdAsset` innehåller information om hur resursen visas.
+The `PTMediaPlayerAdStartedNotification` ett meddelande returnerar `PTAd` instans som innehåller en `companionAssets` egenskap (array med `PtAdAsset`).
+Varje `PtAdAsset` innehåller information om hur resursen visas.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -65,7 +64,7 @@ Var `PtAdAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1"> data </td> 
-   <td colname="col2"> Data av den typ som anges av <span class="codeph"> resourceType</span> för den här tilläggsbanderollen. </td> 
+   <td colname="col2"> Data av den typ som anges av <span class="codeph"> resourceType</span> för den här följeslagaren. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -74,17 +73,17 @@ Var `PtAdAsset` innehåller information om hur resursen visas.
 
 Om du vill visa bannerannonser måste du skapa bannerinstanser och tillåta TVSDK att lyssna efter annonsrelaterade händelser.
 
-TVSDK tillhandahåller en lista med annonser för följeslagare som är kopplade till en linjär annons via meddelandehändelsen `PTMediaPlayerAdPlayStartedNotification`.
+TVSDK tillhandahåller en lista över bannerannonser som är kopplade till en linjär annons via `PTMediaPlayerAdPlayStartedNotification` meddelandehändelse.
 
 Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
+* URL-adressen till en statisk bild eller en Adobe Flash SWF-fil
 
 För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga för ditt program.
 
-1. Skapa en `PTAdBannerView`-instans för varje kompletterande annonsplatta på sidan.
+1. Skapa en `PTAdBannerView`  -instans för varje annan reklamkortplats på sidan.
 
        Kontrollera att följande information har lämnats:
    
@@ -93,16 +92,16 @@ För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga f
 
 1. Lägg till en observatör för `PTMediaPlayerAdStartedNotification` som gör följande:
    1. Rensar befintliga annonser i banderollinstansen.
-   1. Hämtar listan över följeslagarannonser från `Ad.getCompanionAssets` `PTAd.companionAssets`.
+   1. Hämtar listan över annonser från `Ad.getCompanionAssets` `PTAd.companionAssets`.
    1. Om listan med följesedlar inte är tom kan du iterera över listan för banderollinstanser.
 
-      Varje banderollinstans ( a `PTAdAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
+      Varje banner-instans ( a `PTAdAsset`) innehåller information som bredd, höjd, resurstyp (html, iframe eller static) och data som krävs för att visa den tillhörande banderollen.
    1. Om en videoannons inte har några följeslagare bokade med sig innehåller listan med följesedlar inga data för den videoannonsen.
 
       Om du vill visa en fristående visningsannons lägger du till logiken i skriptet för att köra en vanlig DFP-visningstagg (DoubleClick for Publishers) i rätt banderollinstans.
    1. Skickar banderollinformationen till en funktion på sidan som visar banderollerna på lämplig plats.
 
-      Det här är vanligtvis en `div` och funktionen använder `div ID` för att visa banderollen. Exempel:
+      Detta är vanligtvis en `div`och funktionen använder `div ID` för att visa banderollen. Till exempel:
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 

@@ -1,13 +1,13 @@
 ---
 title: Förhandsauktorisera
 description: JavaScript-förauktorisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%
 
 ---
-
 
 # Förhandsauktorisera {#js-preauthorize}
 
@@ -575,4 +575,3 @@ accessEnablerApi.preauthorize(request, callback);
   </tr>
 </tbody>
 </table>
-

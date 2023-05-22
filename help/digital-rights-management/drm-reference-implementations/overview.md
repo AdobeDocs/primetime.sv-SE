@@ -2,14 +2,13 @@
 title: Referensimplementeringar
 description: Referensimplementeringar
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fe387330-9449-4977-be15-069c814354bf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
 
 ---
-
 
 # Referensimplementeringar{#about-the-reference-implementations}
 
@@ -21,12 +20,12 @@ I den här guiden beskrivs installation, konfiguration och drift av referensimpl
 
 Primetimes DRM-referensimplementeringar innehåller följande komponenter:
 
-* **Kommandoradsverktyg**  - Dessa verktyg är baserade på samma DRM SDK-kod för Primetime som används i DRM-licensservern för Primetime. Du kan paketera, licensiera och utföra andra DRM-åtgärder från kommandoraden och växla smidigt mellan kommandoradsverktygen och licensservern.
-* **Licensserver**  - En fullt fungerande, anpassningsbar licensserver (beskrivs nedan som ett av licensserveralternativen).
+* **Kommandoradsverktyg** - Dessa verktyg är baserade på samma DRM SDK-kod för Primetime som används i DRM-licensservern för Primetime. Du kan paketera, licensiera och utföra andra DRM-åtgärder från kommandoraden och växla smidigt mellan kommandoradsverktygen och licensservern.
+* **Licensserver** - En fullt fungerande, anpassningsbar licensserver (beskrivs nedan som ett av licensserveralternativen).
 
 **Licensserveralternativ:**
 
-* **Primetimes DRM-referensimplementeringar**  - Den här referensimplementeringen innehåller en robust DRM-licensserver som visar alla funktioner som tillhandahålls av Primetime DRM SDK. Implementeringen levereras med källkod och instruktioner för hur du skapar koden. Den här implementeringen är inte avsedd att användas som den är (även om en [!DNL .war]-fil ingår som du kan distribuera snabbt). Den är främst avsedd som referens som du kan använda för att skapa en egen anpassad licensserver.
+* **Primetimes implementeringar av DRM-referenser** - Den här referensimplementeringen innehåller en robust DRM-licensserver som visar alla funktioner som finns i Primetimes DRM SDK. Implementeringen levereras med källkod och instruktioner för hur du skapar koden. Den här implementeringen är inte avsedd att användas som den är (men en [!DNL .war] ingår som du kan distribuera snabbt). Den är främst avsedd som referens som du kan använda för att skapa en egen anpassad licensserver.
 
    Licensserverfunktioner:
 
@@ -58,7 +57,6 @@ Primetimes DRM-referensimplementeringar innehåller följande komponenter:
    * Synkroniseringsbegäranden
    * Licensretur
 
-* **Primetimes DRM-server för skyddad strömning**  - Detta är en färdig binärfil som du kan implementera snabbt med minimal insats. Det är ett bra alternativ för kunder som snabbt vill visa konceptbevis eller *kan* vara ett produktionsalternativ om dina anpassade DRM-behov är minimala. Mer information finns i Relaterad information nedan.
+* **Primetime DRM-servern för skyddad strömning** - Det här är en färdig binärfil som du kan implementera snabbt med minimal insats. Det är ett bra alternativ för kunder som snabbt vill visa konceptbevis eller det *kunde* vara ett produktionsalternativ om dina anpassade DRM-behov är minimala. Mer information finns i Relaterad information nedan.
 
-* **DRM-tjänsten**  i Primetime Cloud - Det här är en licensserver som du kan använda i Adobe för att leverera licenser. (Du måste vara en Primetime-licensinnehavare för att kunna använda den här tjänsten.) Denna molntjänst från Adobe befriar dig från de kostnader, det underhåll och den teknik som krävs för att bygga din egen tjänst. Mer information finns i Relaterad information nedan.
-
+* **DRM-tjänsten i Primetime Cloud** - Det här är en licensserver på Adobe som du kan använda som licensserver. (Du måste vara en Primetime-licensinnehavare för att kunna använda den här tjänsten.) Denna molntjänst från Adobe befriar dig från de kostnader, det underhåll och den teknik som krävs för att bygga din egen tjänst. Mer information finns i Relaterad information nedan.

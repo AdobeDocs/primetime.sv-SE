@@ -1,14 +1,13 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Spåra på fragmentnivå med hjälp av inläsningsinformation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 29e82a93-783f-4e32-ab5e-12713a60cfec
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
-
 
 # Spåra på fragmentnivå med hjälp av inläsningsinformation{#track-at-the-fragment-level-using-load-information}
 
@@ -20,11 +19,11 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
 1. Filfragment
 1. Spåra information om filer
 
-   Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från klassen `LoadInfo`.
+   Du kan läsa QoS-information (Quality of Service) om hämtade resurser, som fragment och spår, från `LoadInfo` klassen.
 
-1. Implementera händelseavlyssnaren `onLoadInfo` för återanrop.
+1. Implementera `onLoadInfo` händelseavlyssnare för återanrop.
 1. Registrera händelseavlyssnaren, som TVSDK anropar varje gång ett fragment har hämtats.
-1. Läs intressanta data från parametern `LoadInfo` som skickas till återanropet.
+1. Läs intressanta data från `LoadInfo` parameter som skickas till återanropet.
 
    <table id="table_06BD536A23AB4A73B510998426BAE143"> 
     <thead> 
@@ -36,43 +35,43 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
     </thead>
     <tbody> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
-      <td colname="col1"> <span class="codeph"> long  </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
+      <td colname="col1"> <span class="codeph"> long </span> </td> 
       <td colname="col2"> <p>Hämtningens varaktighet i millisekunder. </p> <p>TVSDK skiljer inte mellan den tid det tog för klienten att ansluta till servern och den tid det tog att hämta det fullständiga fragmentet. Om till exempel ett 10 MB-segment tar 8 sekunder att ladda ned, tillhandahåller TVSDK den informationen, men talar inte om för dig att det tog 4 sekunder innan den första byten och ytterligare 4 sekunder att ladda ned hela fragmentet. </p> </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
-      <td colname="col1"> <span class="codeph"> long  </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
+      <td colname="col1"> <span class="codeph"> long </span> </td> 
       <td colname="col2"> Medielängden för de hämtade fragmenten i millisekunder. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> periodIndex  </span> </td> 
-      <td colname="col1"> <span class="codeph"> int  </span> </td> 
+      <td colname="col01"> <span class="codeph"> periodIndex </span> </td> 
+      <td colname="col1"> <span class="codeph"> int </span> </td> 
       <td colname="col2"> Tidslinjens periodindex som är associerat med den hämtade resursen. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> size  </span> </td> 
-      <td colname="col1"> <span class="codeph"> long  </span> </td> 
+      <td colname="col01"> <span class="codeph"> size </span> </td> 
+      <td colname="col1"> <span class="codeph"> long </span> </td> 
       <td colname="col2"> Storleken på den hämtade resursen i byte. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
-      <td colname="col1"> <span class="codeph"> int  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
+      <td colname="col1"> <span class="codeph"> int </span> </td> 
       <td colname="col2"> Index för motsvarande spår, om det är känt. annars 0. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
-      <td colname="col1"> <span class="codeph"> Sträng  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
+      <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
       <td colname="col2"> Namnet på motsvarande spår, om det är känt. annars null. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
-      <td colname="col1"> <span class="codeph"> Sträng  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
+      <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
       <td colname="col2"> Typ av motsvarande spår, om den är känd. annars null. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> type  </span> </td> 
-      <td colname="col1"> <span class="codeph"> Sträng  </span> </td> 
+      <td colname="col01"> <span class="codeph"> type </span> </td> 
+      <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
       <td colname="col2"> Vad TVSDK laddade ned. Något av följande: 
       <ul id="ul_9C3BDEBD878544DA95C7FF81114F9B5C"> 
       <li id="li_A093552B492A44FD8B30785E465F6886">MANIFEST - En spellista/ett manifest </li> 
@@ -81,8 +80,8 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
       </ul> Ibland är det inte möjligt att identifiera resurstypen. Om detta inträffar returneras FILE. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> url  </span> </td> 
-      <td colname="col1"> <span class="codeph"> Sträng  </span> </td> 
+      <td colname="col01"> <span class="codeph"> url </span> </td> 
+      <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
       <td colname="col2"> Den URL som pekar på den hämtade resursen. </td> 
       </tr> 
     </tbody> 

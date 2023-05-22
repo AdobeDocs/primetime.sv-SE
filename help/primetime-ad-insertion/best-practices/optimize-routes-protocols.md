@@ -1,14 +1,13 @@
 ---
 title: Optimera vägar och protokoll
 description: Optimera vägar och protokoll
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: 837e4582-5813-48fd-a1a6-3143a06edacb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
-
 
 # Optimera vägar och protokoll {#optimize-routes-and-protocols}
 

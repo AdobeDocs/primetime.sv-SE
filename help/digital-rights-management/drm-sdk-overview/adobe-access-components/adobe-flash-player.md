@@ -2,14 +2,13 @@
 title: Adobe Flash Player
 description: Adobe Flash Player
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ce7ff883-1a38-47ec-9bc0-e1358dd561bb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Flash Player {#adobe-flash-player}
 

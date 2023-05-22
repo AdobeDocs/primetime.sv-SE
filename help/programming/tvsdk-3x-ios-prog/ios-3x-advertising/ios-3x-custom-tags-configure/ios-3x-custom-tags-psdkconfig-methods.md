@@ -1,16 +1,15 @@
 ---
 description: Du kan konfigurera anpassade taggnamn i TVSDK globalt med klassen PTSDKConfig.
 title: Konfig-klassmetoder för taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 017b766e-a6aa-4c14-af9a-2c88746e22c0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurationsklassmetoder för taggar {#config-class-methods-for-tags}
+# Konfig-klassmetoder för taggar {#config-class-methods-for-tags}
 
 Du kan konfigurera anpassade taggnamn i TVSDK globalt med klassen PTSDKConfig.
 
@@ -21,7 +20,7 @@ TVSDK tillämpar den globala konfigurationen automatiskt på alla medieströmmar
 | **Prenumerera på specifika anpassade taggar** |  |
 |---|---|
 | `subscribedTags` | Hämtar den aktuella listan med prenumerationstaggar. |
-| `setSubscribedTags` | Anger listan med prenumerationstaggar som kommer att visas för programmet. |
+| `setSubscribedTags` | Anger en lista över prenumerationstaggar som kommer att visas för programmet. |
 | **Anpassa de annonstaggar som används av standardannonsdetektorn** |
 | `adTags` | Hämtar den aktuella listan med annonstaggar. |
 | `setAdTags` | Anger listan med annonstaggar som ska användas som standardgenerator för affärsmöjlighet. |

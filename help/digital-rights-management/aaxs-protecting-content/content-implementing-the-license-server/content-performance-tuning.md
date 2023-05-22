@@ -2,14 +2,13 @@
 title: Prestandajustering
 description: Prestandajustering
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f6b2338e-a209-4881-a599-ded5f1498daf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
-
 
 # Prestandajustering{#performance-tuning}
 
@@ -20,7 +19,6 @@ Använd följande tips för att förbättra prestandan:
 
    >[!NOTE]
    >
-   >Om du kör flera webbprogram i samma Tomcat-instans och har `jsafe.dll` på sökvägen kan bara det första webbprogrammet som läser in `jsafe.dll`-biblioteket läsas in. Därför är det bara det första webbprogrammet som får det inbyggda stödet. Om du i så fall vill förbättra prestandan för alla webbprogram placerar du `cryptoj.jar`utanför WAR-filen. I katalogen `<tomcat_installation_folder>/lib`.
+   >Om du kör flera webbprogram i samma Tomcat-instans och har `jsafe.dll` på sökvägen är det bara det första webbprogrammet som läser in som kan läsa in `jsafe.dll` bibliotek. Därför är det bara det första webbprogrammet som får det inbyggda stödet. Om du i så fall vill förbättra prestandan för alla webbprogram ska du montera `cryptoj.jar`utanför WAR-filen. I `<tomcat_installation_folder>/lib` katalog.
 
 * Ett 64-bitars operativsystem, som 64-bitarsversionen av Red Hat® eller Windows, ger mycket bättre prestanda jämfört med ett 32-bitars operativsystem.
-

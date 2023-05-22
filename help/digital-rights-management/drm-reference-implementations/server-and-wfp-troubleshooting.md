@@ -2,14 +2,13 @@
 title: Felsökning
 description: Felsökning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6c4f15b6-507e-496e-ad1c-702ce77dd069
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Felsökning{#troubleshooting}
 
@@ -22,7 +21,7 @@ Nedan följer några problem och lösningar som du kan stöta på under distribu
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Kontrollera att lösenordet har krypterats med klassen `ScrambleUtil`.
+   Kontrollera att lösenordet har krypterats med `ScrambleUtil` klassen.
 
 * Om följande felmeddelande visas:
 
@@ -38,5 +37,4 @@ Nedan följer några problem och lösningar som du kan stöta på under distribu
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Kontrollera att du använder lösenordsspårarklassen *som ingår i referensimplementeringen*. Det här kraschverktyget skiljer sig från det som ingår i Adobe Primetime DRM Server for Protected Streaming.
-
+   Se till att du använder klassen för lösenordsspårning *som ingår i referensimplementeringen*. Det här kraschverktyget skiljer sig från det som ingår i Adobe Primetime DRM Server for Protected Streaming.

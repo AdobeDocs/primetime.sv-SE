@@ -1,16 +1,15 @@
 ---
 title: Optimera starttiden för video
 description: Optimera starttider för video
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: 5a89c774-0fed-4378-9cf8-98c4c843ae0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
-
-# Optimera tidsöversikt för videostart {#optimize-video-start-up-times}
+# Optimera tidsåtgången för videostart - översikt {#optimize-video-start-up-times}
 
 Primetime Ad Insertion har flera funktioner för att optimera starttiden för videofilmer, som cachelagring och regler för optimering av vägar/protokoll. Här följer några andra rekommendationer för att få snabbare videostart när du använder Primetime Ad Insertion:
 

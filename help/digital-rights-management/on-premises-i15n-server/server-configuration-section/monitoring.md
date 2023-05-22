@@ -2,14 +2,13 @@
 title: Övervakning
 description: Övervakning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: edf62298-4082-4ac1-b2b7-8d0e0959ed04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
-
 
 # Övervakning{#monitoring}
 
@@ -34,4 +33,3 @@ Individualiseringsservern och nyckelgenereringsservern har båda en statussida, 
 
    * Inkluderar statistik om nyckelgenereringsservern, t.ex. antalet begäranden som hanteras och antalet nyckelfiler som finns tillgängliga på disken
    * Alla nyckelgenererings-URL:er får bara vara tillgängliga internt
-

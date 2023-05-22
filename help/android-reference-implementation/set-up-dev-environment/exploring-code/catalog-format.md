@@ -1,14 +1,13 @@
 ---
 description: Referensimplementeringen för Primetime använder ett JSON-baserat feedformat för svar. Det här formatet tolkas med en implementering av IFeedItemAdapter-gränssnittet.
 title: Katalogformat
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: faaeb647-9c01-4290-be1e-2b8461c8ad27
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
 
 ---
-
 
 # Katalogformat {#catalog-format}
 
@@ -94,7 +93,7 @@ Följande kodblock definierar de JSON-objekt som utgör arrayen för **innehåll
 | format | Måste vara m3u8-format för Android. |
 | url | URL:en till videoströmmen för det angivna formatet. |
 
-Följande kodblock definierar de JSON-objekt som utgör arrayen med **miniatyrbildobjekt**:
+Följande kodblock definierar de JSON-objekt som utgör arrayen för **miniatyrbildobjekt**:
 
 ```
 "thumbnails": [
@@ -120,7 +119,7 @@ Följande kodblock definierar de JSON-objekt som utgör arrayen med **miniatyrbi
 | width | Bredden på miniatyrbilden. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
 | url | URL:en till miniatyrfilen. |
 
-Följande kodblock definierar **metadataobjektet**:
+Följande kodblock definierar **metadataobjekt**:
 
 ```
 "metadata" : {
@@ -142,4 +141,3 @@ Följande kodblock definierar **metadataobjektet**:
 | information | Innehåller attribut för annonsmetadata. Båda typerna av annonsmetadata har en egen uppsättning attribut som definieras nedan. För de inbyggda typerna definierar attributen de data som förväntas av PSDK för den typen. |
 | berättigande | Tillståndsrelaterade metadata |
 | id | Medieresurs-ID som används för auktoriseringsbegäranden mot Adobe Primetime betal-TV-pass-tjänst. ID:t kan vara antingen en textsträng eller en HTML-kodad mRSS-sträng. Allt mediainnehåll som kräver auktorisering måste innehålla ett giltigt resurs-ID. |
-

@@ -1,16 +1,15 @@
 ---
 description: För direktsänt/linjärt innehåll ersätter Browser TVSDK ett segment av huvudströmsinnehållet med en annonsbrytning med samma varaktighet, så att tidslinjens varaktighet förblir densamma.
 title: Lösning och infogning av annonser live/linjärt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5d5954c6-9d1c-4900-9813-d3248fd61911
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
-# Lösning och infogning av annonser - live/linjär{#live-linear-ad-resolving-and-insertion}
+# Lösning och infogning av annonser live/linjärt{#live-linear-ad-resolving-and-insertion}
 
 För direktsänt/linjärt innehåll ersätter Browser TVSDK ett segment av huvudströmsinnehållet med en annonsbrytning med samma varaktighet, så att tidslinjens varaktighet förblir densamma.
 
@@ -18,9 +17,9 @@ Före och under uppspelning löser Browser TVSDK kända annonser, ersätter dela
 
 Webbläsarens TVSDK infogar annonser på följande sätt:
 
-* **Pre-roll**, som är i början av innehållet.
+* **Före rullning**, som är i början av innehållet.
 
-Webbläsaren TVSDK accepterar annonsbrytningen även om längden är längre eller kortare än referenspunktens ersättningslängd. Som standard stöder Browser TVSDK `#EXT-X-CUE`-referensen som en giltig annonsmarkör när annonser löses och placeras. Den här markören kräver metadatafältet `DURATION` i sekunder och referensens unika ID. Exempel:
+Webbläsaren TVSDK accepterar annonsbrytningen även om längden är längre eller kortare än referenspunktens ersättningslängd. Som standard har Browser TVSDK stöd för `#EXT-X-CUE` som en giltig annonsmarkör när annonser löses och placeras. Den här markören kräver metadatafältet `DURATION` på några sekunder och referensens unika ID. Till exempel:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -28,9 +27,8 @@ Webbläsaren TVSDK accepterar annonsbrytningen även om längden är längre ell
 
 Du kan definiera och abonnera på ytterligare kommandon (taggar).
 
-När uppspelningen har startats uppdaterar videomotorn regelbundet manifestfilen. Webbläsarens TVSDK löser eventuella nya annonser och infogar annonserna när en referenspunkt påträffas i den live- eller linjära ström som definierats i manifestet. När annonserna har lösts och infogats beräknar webbläsaren TVSDK den virtuella tidslinjen igen och skickar en `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`-händelse.
+När uppspelningen har startats uppdaterar videomotorn regelbundet manifestfilen. Webbläsarens TVSDK löser eventuella nya annonser och infogar annonserna när en referenspunkt påträffas i den live- eller linjära ström som definierats i manifestet. När annonserna har lösts och infogats beräknar webbläsaren TVSDK den virtuella tidslinjen igen och skickar en `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` -händelse.
 
 >[!TIP]
 >
 >För liveströmmar stöder Browser TVSDK endast MP4- och HLS-reklam för pre-roll och middle-roll.
-

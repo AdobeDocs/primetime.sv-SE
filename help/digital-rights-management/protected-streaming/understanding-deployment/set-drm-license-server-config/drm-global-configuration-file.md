@@ -1,29 +1,28 @@
 ---
 description: Konfigurationsfilen flashaccess-global.xml innehåller inställningar som gäller för alla innehavare av licensservern.
 title: Global konfigurationsfil
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e74bce6-1634-469f-9d02-1121e9d50687
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # Global konfigurationsfil{#global-configuration-file}
 
 Konfigurationsfilen flashaccess-global.xml innehåller inställningar som gäller för alla innehavare av licensservern.
 
-Du måste placera konfigurationsfilen i katalogen [!DNL LicenseServer.ConfigRoot].
+Du måste placera konfigurationsfilen i [!DNL LicenseServer.ConfigRoot] katalog.
 
-I katalogen [!DNL configs] finns ett exempel på en global konfigurationsfil.
+Se [!DNL configs] katalog för ett exempel på en global konfigurationsfil.
 
 Den globala konfigurationsfilen innehåller:
 
 * Cachelagring - Styr cachelagring av konfigurationsfiler i minnet.
 
-   Mer information om cachelagringsinställningarna finns i *Uppdatera konfigurationsfiler*.
+   Se *Konfigurationsfiler uppdateras* om du vill ha information om cachelagringsinställningarna.
 * Loggning - Anger loggningsnivån och hur ofta loggfiler rullas.
 * HSM-lösenord - Krävs endast om en HSM används för att lagra serverautentiseringsuppgifter.
 
-Mer information finns i kommentarerna i den globala konfigurationsfilen som finns i Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs.
+Se kommentarerna i den globala konfigurationsfilen som finns i Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs för mer information.

@@ -2,14 +2,13 @@
 title: Begär ett certifikat (begärande)
 description: Begär ett certifikat (begärande)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 290231ec-1146-4bfb-a449-b8ff85704197
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
-
 
 # Begär ett certifikat (begärande){#request-a-certificate-requester}
 
@@ -30,9 +29,8 @@ ht-degree: 0%
 
       >[!NOTE]
       >
-      >Om du vill kopiera CSR-informationen markerar du texten mellan, och inte inkluderar, starttaggen `(-----BEGIN CERTIFICATE REQUEST-----)` och sluttaggen `(-----END CERTIFICATE REQUEST-----)`.
+      >Om du vill kopiera CSR-informationen markerar du texten mellan, inte inklusive, den inledande taggen `(-----BEGIN CERTIFICATE REQUEST-----)` och sluttagg `(-----END CERTIFICATE REQUEST-----)`.
 
-1. Klicka på knappen **[!UICONTROL Submit Request]**.
+1. Klicka på **[!UICONTROL Submit Request]** -knappen.
 
    Ett e-postmeddelande skickas till kontoadministratören och de sekundära administratörerna för granskning. Begäraren är cc&#39;d.
-

@@ -1,13 +1,13 @@
 ---
 title: Kostnadsfri förhandsgranskning för tillfälligt pass och tillfälligt kampanjpass
 description: Kostnadsfri förhandsgranskning för tillfälligt pass och tillfälligt kampanjpass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: c584bf0c-15c4-4a4d-b6a2-8d15ee786fe3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
-
 
 # Kostnadsfri förhandsgranskning för tillfälligt pass och tillfälligt kampanjpass {#free-preview-for-temp-pass-and-promotional-temp-pass}
 

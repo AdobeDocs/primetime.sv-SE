@@ -2,14 +2,13 @@
 title: Inledande del av innehållet i rensningen
 description: Inledande del av innehållet i rensningen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef296d64-e0e1-4126-8258-f95d5da3adbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
-
 
 # Inledande del av innehållet i rensningen{#initial-portion-of-content-in-the-clear}
 

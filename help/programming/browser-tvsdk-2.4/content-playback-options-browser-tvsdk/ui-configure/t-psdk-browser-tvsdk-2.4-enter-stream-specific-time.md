@@ -1,14 +1,13 @@
 ---
 description: När uppspelningen startar startar VOD-media som standard vid 0, och direktmedia startar vid klientens direktpunkt (MediaPlayer.LIVE_POINT). Du kan åsidosätta standardbeteendet.
 title: Ange en ström vid en viss tidpunkt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2fb361c1-7133-4e17-a12b-e11f6f7c5479
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Ange en ström vid en viss tidpunkt{#enter-a-stream-at-a-specific-time}
 
@@ -23,7 +22,7 @@ När uppspelningen startar startar VOD-media som standard vid 0, och direktmedia
 
 1. Om positionen inte ligger inom sökbart intervall används standardpositionerna.
 
-   Exempel:
+   Till exempel:
 
    ```js
    var desiredPostion = //choose a value; 
@@ -34,4 +33,3 @@ När uppspelningen startar startar VOD-media som standard vid 0, och direktmedia
            break; 
    } 
    ```
-

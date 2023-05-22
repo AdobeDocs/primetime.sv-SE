@@ -2,7 +2,6 @@
 title: Ange XSTS-token i spelaren
 description: Ange XSTS-token i spelaren
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '64'
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 # Ange XSTS-token i spelaren{#set-the-xsts-token-in-your-player}
 
-I Xbox360 anger du token asynkront som svar på händelsen `MediaPlayer.RequestKeyAttribute`.
+I Xbox360 anger du token asynkront som svar på `MediaPlayer.RequestKeyAttribute` -händelse.
 
 Ange XSTS-token.
 

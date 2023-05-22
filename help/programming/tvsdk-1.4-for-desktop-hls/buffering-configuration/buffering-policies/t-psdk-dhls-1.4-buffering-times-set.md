@@ -1,14 +1,13 @@
 ---
 description: MediaPlayer innehåller metoder för att ställa in och hämta den inledande buffringstiden och uppspelningsbuffringstiden.
 title: Ange buffringstider
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d2fbae05-2190-4acc-ae63-561db030608a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
-
 
 # Ange buffringstider{#set-buffering-times}
 
@@ -18,7 +17,7 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
 >
 >Om du inte anger parametrar för buffertkontroll innan uppspelningen startar, blir mediaspelaren som standard 2 sekunder för den inledande bufferten och 30 sekunder för den pågående uppspelningsbufferttiden.
 
-1. Ställ in objektet `BufferControlParameters`, som kapslar in den inledande bufferttiden och kontrollparametrarna för uppspelningsbuffertens tid:
+1. Konfigurera `BufferControlParameters` object, som kapslar in den inledande bufferttiden och kontrollparametrarna för uppspelningsbuffertens tid:
 
        Den här klassen innehåller följande fabriksmetoder:
    
@@ -34,18 +33,18 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
       ```
 
-      Dessa metoder genererar ett `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
+      Dessa metoder genererar en `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
 
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
 
-1. Använd den här `MediaPlayer`-metoden om du vill ange värden för buffertparametern:
+1. Om du vill ange värden för buffertparametrar använder du följande `MediaPlayer` metod:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Använd den här `MediaPlayer`-metoden för att hämta de aktuella buffertparametervärdena:
+1. Använd det här alternativet om du vill hämta de aktuella buffertparametervärdena `MediaPlayer` metod:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +58,4 @@ Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och up
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-`psdkdemo` demonstrerar den här funktionen; Använd programmets inställningar för att ange buffertvärden.
+The `psdkdemo` visar den här funktionen, Använd programmets inställningar för att ange buffertvärden.

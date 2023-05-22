@@ -2,14 +2,13 @@
 title: Brandväggsregler
 description: Brandväggsregler
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5f560782-7b09-411a-8791-8d227bc4049b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # Brandväggsregler {#firewall-rules}
 
@@ -37,7 +36,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder Adobe Access-klient-API:er för att utföra användarautentisering. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder klientAPI:er för Adobe Access för att utföra användarautentisering. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 

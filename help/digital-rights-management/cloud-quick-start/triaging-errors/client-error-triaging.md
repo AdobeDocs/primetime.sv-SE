@@ -1,16 +1,15 @@
 ---
 description: Ibland kan det hända att innehållet inte kan spelas upp. Ett obegränsat antal situationer kan orsaka detta, bland annat fel i webbläsarens nätverksstack, transportlager, operativsystem, Flash Player-runtime eller Primetime DRM-system.
 title: Översikt över testfel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
-
-# Utvärderingsfel {#triaging-errors}
+# Fel vid testning {#triaging-errors}
 
 Ibland kan det hända att innehållet inte kan spelas upp. Ett obegränsat antal situationer kan orsaka detta, bland annat fel i webbläsarens nätverksstack, transportlager, operativsystem, Flash Player-runtime eller Primetime DRM-system.
 
@@ -18,10 +17,9 @@ Det första diagnostiska steget är att avgöra om problemet visar sig utan DRM-
 
 Primetime DRM (utanför Primetime Cloud DRM) har funnits på marknaden i flera år. Därför finns det gott om information från användarna om felsökning och konfigurering av Primetime DRM. Adobe har skapat ett forum där Primetimes DRM-användare (tidigare kallat Adobe Access) kan samla in och dela problem och lösningar. Kontrollera om ditt problem har diskuterats tidigare: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
 
-## Klientfel vid testning av {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
+## Klientfelsökning {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
 
-Om innehållet inte spelas upp bör du gå igenom panelen till höger i provvideouppspelaren, som loggar `DRMErrorEvent` som inträffar. Om det finns en felhändelse korrelerar den med ett av Flash Player-körningsfelen:
+Om innehållet inte spelas upp bör du gå igenom panelen till höger i Exempelvideouppspelarna där alla `DRMErrorEvent` som inträffar. Om det finns en felhändelse korrelerar den med ett av Flash Player-körningsfelen:
 
-* [Felmeddelandereferens](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages) för DRM-klient; eller
-* [Körningsfel](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html)  för AS3 Flash (DRM-problem börjar med 3300)
-
+* [Felmeddelandereferens för DRM-klient](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages); eller
+* [Körningsfel för AS3 Flash](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html) (DRM-problem börjar vid 3 300)

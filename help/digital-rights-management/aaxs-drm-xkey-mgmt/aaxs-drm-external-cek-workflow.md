@@ -1,16 +1,15 @@
 ---
 title: Externt CEK-arbetsflöde för AXS DRM
 description: Det här arbetsflödet skiljer sig från de flesta befintliga DRM-system eftersom det inte kräver att något centralt arkiv eller CMS (Content Key Management System) används
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f084aa57-8bef-40a0-b52d-4d23dfdf36c4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
-
-# AXS DRM externt CEK-arbetsflöde{#aaxs-drm-external-cek-workflow}
+# Externt CEK-arbetsflöde för AXS DRM{#aaxs-drm-external-cek-workflow}
 
 Det här arbetsflödet skiljer sig från de flesta befintliga DRM-system eftersom det inte kräver att något centralt arkiv eller CMS (Content Key Management System) används. För kunder som vill att AAXS ska fungera med sina befintliga CKMS-system har AXS dock en funktion som kallas &quot;External CEK&quot;, där CEK levereras externt vid paketerings- och licensutfärdandetid.
 

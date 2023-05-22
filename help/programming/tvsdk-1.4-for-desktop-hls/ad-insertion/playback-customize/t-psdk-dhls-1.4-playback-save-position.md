@@ -1,20 +1,19 @@
 ---
 description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 title: Spara videopositionen och återuppta den senare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
-
 # Spara videopositionen och återuppta den senare{#save-the-video-position-and-resume-later}
 
 Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 
-Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du sparar positionen **med** delade annonser refererar till en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
+Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att positionen sparas **med** delade annonser avser en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
 
 1. När användaren avslutar en video hämtas och sparas positionen i videon.
 
@@ -22,14 +21,14 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
    >
    >Annonslängder ingår inte.
 
-   Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet den lokala tiden. Använd egenskapen `localTime` för att läsa den här positionen, som du kan spara på enheten eller i en databas på servern.
+   Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet den lokala tiden. Använd `localTime` för att läsa den här positionen, som du kan spara på enheten eller i en databas på servern.
 
    ```
    var resumeTime:Number = player.localTime; 
    // save the resumeTime to a persistent location
    ```
 
-   Om användaren till exempel är på den 20:e minuten av videon, och den här positionen innehåller fem minuters annonser, kommer `currentTime` att `be` 1200 sekunder, medan `localTime` vid den här positionen kommer att vara `be` 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` kommer `be` 1 200 sekunder, medan `localTime` på den här positionen `be` 900 sekunder.
 
 1. Återställ användarsessionen när spelaraktiviteten återupptas.
 
@@ -48,11 +47,11 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
       >
       >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
 
-   * Använd `seek` om du vill söka till aktuell tid.
+   * Om du vill söka till aktuell tid använder du `seek`.
 
-1. När ditt program tar emot händelsen `onStatusChanged` för statusändring söker du efter den sparade lokala tiden.
+1. När ditt program får `onStatusChanged` statusändringshändelse, söka till den sparade lokala tiden.
 1. Ange annonsbrytningarna som de anges i annonsprincipgränssnittet.
 1. Implementera en anpassad annonsprincipväljare genom att utöka standardväljaren för annonsprinciper.
 1. Ange de annonsbrytningar som måste presenteras för användaren genom att implementera `selectAdBreaksToPlay`.
 
-   När spelaren anger statusen PREPARED är alla annonser redan lösta, så egenskapen `AdPolicyInfo.adBreakTimelineItem` innehåller alla annonsbrytningar före den lokala tidspositionen. Ditt program kan bestämma sig för att spela upp en annonsbrytning i förväg och återuppta den angivna lokala tiden, spela upp en annonsbrytning i mellanrummet och återuppta den angivna lokala tiden eller spela upp inga annonsbrytningar.
+   När spelaren förbereds är alla annonser redan lösta, så `AdPolicyInfo.adBreakTimelineItem` -egenskapen innehåller alla annonsbrytningar före den lokala tidspositionen. Ditt program kan bestämma sig för att spela upp en annonsbrytning i förväg och återuppta den angivna lokala tiden, spela upp en annonsbrytning i mellanrummet och återuppta den angivna lokala tiden eller spela upp inga annonsbrytningar.

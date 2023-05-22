@@ -1,16 +1,15 @@
 ---
 description: TVSDK hämtar information från FreeWheel och andra adminstratörer som tillhandahåller VAST-svar. FreeWheel ger, inom VAST-svar, information från tjänsten Moat. Tjänsten Moat räknar med en noggrannhet som bättre visar att kreatörerna fångar upp eller försummar en viss målgrupps intressen.
 title: Annonsmätningar från Moat
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f8f68e0b-985c-43bb-878e-e24fed54e0c3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
-
-# Lägg till mått från Moat{#ad-measurements-from-moat}
+# Annonsmätningar från Moat{#ad-measurements-from-moat}
 
 TVSDK hämtar information från FreeWheel och andra adminstratörer som tillhandahåller VAST-svar. FreeWheel ger, inom VAST-svar, information från tjänsten Moat. Tjänsten Moat räknar med en noggrannhet som bättre visar att kreatörerna fångar upp eller försummar en viss målgrupps intressen.
 
@@ -47,4 +46,4 @@ Freewheel kan också ange egenskapen id i Ad-elementet, vilket visas i exemplet 
 <Ad id="118566" sequence="1">
 ```
 
-Läs API-dokumentationen för klassen `PTNetworkAdInfo` i `PTAdAsset`.
+Läs API-dokumentationen för klassen `PTNetworkAdInfo` in `PTAdAsset`.

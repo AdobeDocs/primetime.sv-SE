@@ -2,14 +2,13 @@
 title: Om certifikat
 description: Om certifikat
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 24ca19bb-a71e-461a-9c3c-558d650e2d99
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Om certifikat {#about-certificates}
 
@@ -39,4 +38,3 @@ För att ge maximal flexibilitet och utökad säkerhet i dina distributionsalter
 >[!NOTE]
 >
 >För SDK för utvärdering och SDK för testversion kombineras licensservern, Packager och transportcertifikaten till ett enda certifikat.
-

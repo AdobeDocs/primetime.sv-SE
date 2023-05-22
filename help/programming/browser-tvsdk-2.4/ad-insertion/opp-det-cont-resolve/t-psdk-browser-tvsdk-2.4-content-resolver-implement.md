@@ -1,20 +1,19 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
 title: Implementera en anpassad innehållshanterare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f594840b-ff56-49c5-baf5-ac2800411215
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Implementera en anpassad innehållslösare{#implement-a-custom-content-resolver}
+# Implementera en anpassad innehållshanterare{#implement-a-custom-content-resolver}
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När Browser TVSDK identifierar en ny affärsmöjlighet itereras den igenom det registrerade innehållet matchare som söker efter en som kan matcha den affärsmöjligheten med hjälp av metoden `canResolve`. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela webbläsarens TVSDK när processen har slutförts.
+När Browser TVSDK identifierar en ny affärsmöjlighet itereras den igenom det registrerade innehållet för att hitta en som kan lösa den affärsmöjligheten genom att använda `canResolve` -metod. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela webbläsarens TVSDK när processen har slutförts.
 
 Kom ihåg följande information:
 
@@ -83,7 +82,7 @@ Kom ihåg följande information:
 
 1. Skapa den anpassade innehållsfabriken som använder den anpassade innehållslösaren.
 
-   Exempel:
+   Till exempel:
 
    ```js
    /** 
@@ -132,4 +131,3 @@ Kom ihåg följande information:
    
    }); 
    ```
-

@@ -2,14 +2,13 @@
 title: En översikt över Adobe Access SDK
 description: En översikt över Adobe Access SDK
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2d39ab29-d499-4632-894c-03b07d3ffdc3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
-
 
 # En översikt över Adobe Access SDK {#an-overview-of-adobe-access-sdk}
 

@@ -1,20 +1,19 @@
 ---
 title: Använd Ad Insertion i Live-/Linear-ström
 description: Använda Ad Insertion i Live-/Linear-ström
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-
-# Använd Ad Insertion i Live/Linear-ström {#ad-insertion-live-linear-stream}
+# Använd Ad Insertion i Live-/Linear-ström {#ad-insertion-live-linear-stream}
 
 Primetime Ad Insertion ger utgivaren möjlighet att hantera vanliga och komplexa annonsinfogningssituationer som inträffar under live/linjära strömmar.
 
-## Cue-format {#cue-formats-supported} som stöds
+## Cue-format som stöds {#cue-formats-supported}
 
 Primetime Ad Insertion har stöd för ett stort antal standardformat och icke-standardformat för cue, bland annat:
 

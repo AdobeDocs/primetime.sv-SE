@@ -1,14 +1,13 @@
 ---
 description: Tabellen visar detaljerad information om WARN. typmeddelanden.
 title: Varningsmeddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3d76aba4-ace8-4a49-b930-96bbcad41f25
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 2%
 
 ---
-
 
 # Varningsmeddelandekoder{#warning-notification-codes}
 
@@ -37,23 +36,23 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 200000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 200000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL </span> </td> 
+   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR </span><span class="codeph"> SEEK_ERROR </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p>En uppspelningsrelaterad åtgärd misslyckades, men uppspelningen kan fortsätta. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Annonslösningar  </b> </td> 
+   <td colname="1"><b>Annonslösningar </b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201000  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES  </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
+   <td colname="1"><span class="codeph"> 201000 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Annonslösaren kunde inte matcha/infoga annonsinnehållet. Uppspelningen kan fortsätta. </p> </td> 
   </tr> 
@@ -65,14 +64,14 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000  </span> </td> 
+   <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_VARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> <p> Fel vid hämtning av bakgrundsmanifest. Alla problem med att uppdatera bakgrundsmanifestet skickas som en TVSDK-varning och orsakar inte att uppspelningen avbryts. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001  </span> </td> 
+   <td colname="1"><span class="codeph"> 204001 </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
@@ -86,16 +85,16 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"><span class="codeph"> 209100  </span> </td> 
-   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
+   <td colname="1" morerows="1"><span class="codeph"> 209100 </span> </td> 
+   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING </span> </td> 
    <td colname="3" morerows="1"> <p>Ingen </p> </td> 
-   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME  </span><span class="codeph"> DESCRIPTION  </span> </p> </td> 
-   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Information om NATIVE_ERROR-meddelanden</a> finns i <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Information om värdena för dessa metadatafält. </a></p> </td> 
+   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE </span><span class="codeph"> NATIVE_ERROR_NAME </span><span class="codeph"> BESKRIVNING </span> </p> </td> 
+   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Se <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> för detaljerad information om värdena för dessa metadatafält. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5">DRM-felkod och DRM-serverfelsträng. Information om NATIVE_ERROR-meddelanden</a> finns i <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Information om värdena för dessa metadatafält.
-   </a></td> 
+   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_CODE</span> <span class="codeph"> DRM_ERROR_STRING</span> </p> </td> 
+   <td colname="5">DRM-felkod och DRM-serverfelsträng. Se <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> för detaljerad information om värdena för dessa metadatafält.
+   </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Allmän</b> </td> 
@@ -105,12 +104,11 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 299999  </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_VARNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 299999 </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_VARNING </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Markerar en allmän varningshändelse. Inte utfärdat av TVSDK. Det är bara en markör för slutet av det numeriska kodsintervall som motsvarar varningshändelser. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

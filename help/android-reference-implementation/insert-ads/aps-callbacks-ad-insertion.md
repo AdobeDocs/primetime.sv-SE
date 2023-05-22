@@ -1,14 +1,13 @@
 ---
 title: Relaterad API-dokumentation
 description: Relaterad API-dokumentation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8c8bf189-98b1-4bcf-b7aa-049cc2a76108
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
-
 
 # Relaterad API-dokumentation {#related-api-documentation}
 

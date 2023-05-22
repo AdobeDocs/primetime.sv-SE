@@ -1,14 +1,13 @@
 ---
 description: När ett segment saknas, till exempel om ett visst segment inte kan hämtas, försöker återskapa det med hjälp av en mängd olika redundansförsök. Om det inte går att återställa genereras ett fel.
 title: segmentredundans saknas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e941008a-99a5-4fff-ac88-133abcf9380d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
-
 
 # segmentredundans saknas{#missing-segment-failover}
 
@@ -21,13 +20,12 @@ Om ett segment saknas på servern, till exempel på grund av att manifestfilen i
 1. Bläddra igenom alla tillgängliga bithastigheter i alla tillgängliga varianter.
 1. Hoppa över segmentet och skicka en varning.
 
-När TVSDK inte kan hämta ett alternativt segment utlöses ett `CONTENT_ERROR`-felmeddelande. Det här meddelandet innehåller ett internt meddelande med koden `DOWNLOAD_ERROR`. Om strömmen med problemet är ett alternativt ljudspår genererar felmeddelandet `AUDIO_TRACK_ERROR`.
+När TVSDK inte kan hämta ett alternativt segment utlöses en `CONTENT_ERROR` felmeddelande. Det här meddelandet innehåller ett internt meddelande med koden `DOWNLOAD_ERROR` kod. Om direktuppspelningen med problemet är ett alternativt ljudspår genereras `AUDIO_TRACK_ERROR` felmeddelande.
 
-Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinuerliga segmenthopp till 5, varefter uppspelningen stoppas och en `NATIVE_ERROR` utfärdas med koden 5.
+Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinuerliga segmenthopp till 5, varefter uppspelningen stoppas och en `NATIVE_ERROR` med koden 5.
 
 >[!NOTE]
 >
 >ABR-styrparametrarna (Adaptive bit rate) beaktas inte när en växling vid fel inträffar. Detta beror på att failover-mekanismen är utformad för att använda någon av de spelningslistor som är tillgängliga, oavsett deras bithastighetsprofil, som säkerhetskopieringsströmmar.
 >
 >Under en redundansåtgärd kan det finnas en profilväxling. Om ett fel inträffar under hämtningen av ett av spellistsegmenten ignoreras ABR-kontrollparametrar som min/max tillåtna bithastighet.
-

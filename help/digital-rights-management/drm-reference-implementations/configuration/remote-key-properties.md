@@ -2,18 +2,17 @@
 title: Leveransegenskaper för fjärrnyckel (iOS)
 description: Leveransegenskaper för fjärrnyckel (iOS)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0fe3ed9b-a8ee-43b4-ab3c-8ea2e696503b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Leveransegenskaper för fjärrnyckel (iOS){#remote-key-delivery-properties-ios}
 
-# Egenskaper för leverans av fjärrnyckel (iOS){#remote-key-delivery-properties-ios}
-
-Om du vill ha stöd för generering av licenser för fjärrnyckelleverans till en iOS-klient i Adobe Primetime DRM måste du ange nyckelservercertifikatet i filen `flashaccess-refimpl.properties`.
+Om du vill ha stöd för generering av licenser för fjärrnyckelleverans till en iOS-klient i Adobe Primetime DRM måste du ange nyckelservercertifikatet i `flashaccess-refimpl.properties` -fil.
 
 Följande egenskaper har lagts till i Primetime DRM:
 
@@ -31,8 +30,7 @@ Följande egenskaper har lagts till i Primetime DRM:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Aliaset för ett certifikat för en Adobe-utfärdad licensserver som lagras på HSM. </p> <p>När du aktiverar HSM kan du använda den här egenskapen i stället för egenskapen <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Aliaset för ett certifikat för en Adobe-utfärdad licensserver som lagras på HSM. </p> <p>När du aktiverar HSM kan du använda den här egenskapen i stället för <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> -egenskap. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

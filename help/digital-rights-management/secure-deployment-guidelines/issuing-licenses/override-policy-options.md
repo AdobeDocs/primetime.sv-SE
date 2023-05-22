@@ -1,7 +1,6 @@
 ---
 description: När du utfärdar en licens kan licensservern åsidosätta de användningsregler som anges i profilen.
 title: Åsidosätta principalternativ
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'

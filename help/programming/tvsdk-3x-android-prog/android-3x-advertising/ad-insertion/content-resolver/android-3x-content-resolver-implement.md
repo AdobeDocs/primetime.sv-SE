@@ -1,24 +1,23 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
 title: Implementera en anpassad innehållshanterare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1f442e2b-65fc-4040-ada2-7a49e488bdef
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Implementera en anpassad innehållshanterare {#implement-a-custom-content-resolver}
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de registrerade innehållsmatcharna och letar efter en som kan lösa den affärsmöjligheten. Den första som returnerar `true` markeras för att lösa affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
+När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de registrerade innehållsmatcharna och letar efter en som kan lösa den affärsmöjligheten. Den första som returnerar `true` väljs för att lösa affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
 
-1. Implementera din egen anpassade `ContentFactory` genom att utöka gränssnittet `ContentFactory` och åsidosätta `retrieveResolvers`.
+1. Implementera din egen `ContentFactory`genom att utöka `ContentFactory` gränssnitt och åsidosättning `retrieveResolvers`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    class MyContentFactory extends ContentFactory { 
@@ -53,7 +52,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
 
 1. Registrera `ContentFactory` till `MediaPlayer`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    //Register the custom content factory with the media player 
@@ -68,9 +67,9 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
    itemLoader.load(resource, id, config);
    ```
 
-1. Skicka ett `AdvertisingMetadata`-objekt till TVSDK enligt följande:
-   1. Skapa ett `AdvertisingMetadata`-objekt.
-   1. Spara `AdvertisingMetadata`-objektet till `MediaPlayerItemConfig`.
+1. Godkänn `AdvertisingMetadata` till TVSDK enligt följande:
+   1. Skapa en `AdvertisingMetadata` -objekt.
+   1. Spara `AdvertisingMetadata` objekt till `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +80,8 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Skapa en anpassad annonsupplösarklass som utökar klassen `ContentResolver`.
-   1. I den anpassade annonslösaren åsidosätter du `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
+1. Skapa en anpassad klass för annonslösare som utökar `ContentResolver` klassen.
+   1. Åsidosätt i den anpassade annonslösaren `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +90,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
       void doCleanup();
       ```
 
-      Du kan hämta din `advertisingMetadata` från objektet som skickades i `doConfigure`:
+      Du får `advertisingMetadata` från objektet som skickades `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +99,9 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Skapa en `List<TimelineOperation>` för varje placeringsmöjlighet.
+   1. Skapa en `List<TimelineOperation>`.
 
-      Det här exemplet `TimelineOperation` innehåller en struktur för `AdBreakPlacement`:
+      Detta exempel `TimelineOperation` innehåller en struktur för `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement( 
@@ -122,13 +121,13 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Om annonsupplösningen misslyckas ringer du `notifyResolveError` på `ContentResolverClient`
+      * Om annonsen inte lyckas ringer du `notifyResolveError` på `ContentResolverClient`
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
          ```
 
-         Exempel:
+         Till exempel:
 
          ```java
          _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
@@ -169,4 +168,3 @@ public class CustomContentResolver extends ContentResolver {
     protected void doCleanup() {} 
 } 
 ```
-

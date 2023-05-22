@@ -1,33 +1,32 @@
 ---
-description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen"PREPARED" och"för- och efterrullningar" efter statusen"PREPARED". Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
+description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen"PREPARED" samt för medelrullar och efterrullningar efter statusen"PREPARED". Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
 keywords: Lazy;Annonslösningar;Annonsinläsning
 title: Just-in-time Ad Resolving
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7ce0dcac-859b-4570-a31b-4ea1e10ccf95
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
 
 ---
 
-
 # Översikt {#just-in-time-ad-resolving-overview}
 
-Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen&quot;PREPARED&quot; och&quot;för- och efterrullningar&quot; efter statusen&quot;PREPARED&quot;. Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
+Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionerna Lazy Ad Loading och Lazy Ad Resolving kan minska startfördröjningen. Lazy Ad Resolving har ändrats avsevärt i version 3.0. I Lazy Ad som lästes in före 3.0 delades annonsupplösningen upp i två steg, vilket löste endast för- och efterrullningar innan statusen&quot;PREPARED&quot; samt för medelrullar och efterrullningar efter statusen&quot;PREPARED&quot;. Detta har ändrats och annonsbrytningar har nu lösts vid ett angivet intervall före positionen för annonsbrytningen.
 
 * Grundläggande annonslösning och inläsningsprocess:
 
-   1. TVSDK hämtar ett manifest (playlist) och *löser* alla annonser.
-   1. TVSDK *läser in* alla annonser och placerar dem på tidslinjen.
+   1. TVSDK hämtar ett manifest (playlist) och *lösningar* alla annonser.
+   1. TVSDK *laddar* alla annonser och placerar dem på tidslinjen.
    1. TVSDK flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
 
    Spelaren använder URL:erna i manifestet för att hämta annonsinnehållet (kreatörerna), ser till att annonsinnehållet är i ett format som TVSDK kan spela upp, och TVSDK placerar annonserna på tidslinjen. Denna grundläggande process för att lösa och läsa in annonser kan orsaka en orimligt lång fördröjning för en användare som väntar på att spela upp sitt innehåll, särskilt om manifestet innehåller flera annons-URL:er.
 
 * *Lazy Ad Loading*:
 
-   1. TVSDK hämtar en spellista och *löser* alla annonser.
-   1. TVSDK *läser in* pre-roll-ads, flyttar spelaren till PREPARED-status och innehållsuppspelningen startar.
-   1. TVSDK *läser in* återstående annonser och placerar dem på tidslinjen när uppspelningen sker.
+   1. TVSDK hämtar en spellista och *lösningar* alla annonser.
+   1. TVSDK *laddar* pre-roll-ads, flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
+   1. TVSDK *laddar* de återstående annonserna och placerar dem på tidslinjen när uppspelningen sker.
 
    Den här funktionen förbättrar den grundläggande processen genom att ge spelaren statusen FÖRBEREDD innan alla annonser har lästs in.
 
@@ -54,8 +53,6 @@ Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning f
 >* Om det finns flera annonsbrytningar samtidigt i Lazy Ad-lösningen (VMAP) kommer de att lösas samtidigt.
 >* Vi rekommenderar inte att du minskar värdet för *setDelayAdLoadingTolerance() *under standardvärdet (5 sekunder). Om du gör det kan spelaren buffras i onödan.
 >* Lazy Ad Resolving påverkar inte pre-roll-ads.
->* Lazy Ad Resolving stöds för närvarande av Auditude-Plugin. Du bör inte ställa in *setDelayAdLoading* på true om du använder en anpassad lösare.
-
+>* Lazy Ad Resolving stöds för närvarande av Auditude-Plugin. Vi rekommenderar att du inte anger *setDelayAdLoading* till true om du använder en anpassad lösare.
 >
-
 

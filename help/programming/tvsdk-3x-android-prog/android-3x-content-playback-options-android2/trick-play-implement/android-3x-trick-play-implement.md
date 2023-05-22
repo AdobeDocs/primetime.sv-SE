@@ -1,14 +1,13 @@
 ---
 description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill aktivera trickuppspelningsläget anger du ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 title: Implementera snabbt framåt och bakåt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9e2dd250-a86d-4d75-8eba-385624af17af
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#implement-fast-forward-and-rewind}
 
@@ -16,11 +15,11 @@ När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickl
 
 Om du vill växla hastighet måste du ange ett värde.
 
-1. Gå från normalt uppspelningsläge (1x) till trimningsläge genom att ställa in hastigheten på `MediaPlayer` till ett tillåtet värde.
+1. Gå från normalt uppspelningsläge (1x) till uppspelningsläge genom att ställa in hastigheten på `MediaPlayer` till ett tillåtet värde.
 
        Kom ihåg följande information:
    
-   * Klassen `MediaPlayerItem` definierar tillåtna uppspelningshastigheter.
+   * The `MediaPlayerItem` -klassen definierar de tillåtna uppspelningshastigheterna.
    * TVSDK väljer den närmaste tillåtna hastigheten om den angivna hastigheten inte tillåts.
 
       I följande exempel ställs spelarens interna uppspelningshastighet in på den begärda hastigheten:
@@ -53,7 +52,7 @@ Om du vill växla hastighet måste du ange ett värde.
 
 TVSDK skickar följande händelser som är relaterade till trick play:
 
-* `MediaPlayerEvent.RATE_SELECTED`, när  `rate` värdet ändras till ett annat värde.
+* `MediaPlayerEvent.RATE_SELECTED`, när `rate` värdet ändras till ett annat värde.
 
 * `MediaPlayerEvent.RATE_PLAYING`när uppspelningen återupptas med vald hastighet.
 

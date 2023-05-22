@@ -1,22 +1,21 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
 title: Implementera en anpassad innehållshanterare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: abe967a5-ced3-4e23-8671-065e256974d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# Implementera en anpassad innehållslösare{#implement-a-custom-content-resolver}
+# Implementera en anpassad innehållshanterare{#implement-a-custom-content-resolver}
 
 Du kan implementera egna innehållslösningar baserat på standardlösare.
 
-När TVSDK identifierar en ny affärsmöjlighet itererar programmet igenom den registrerade innehållslösaren och söker efter en som kan matcha affärsmöjligheten med hjälp av metoden `canResolve`. Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
+När TVSDK identifierar en ny möjlighet itererar företaget genom de registrerade innehållslösningarna och söker efter en som kan lösa den möjligheten med hjälp av `canResolve` metod . Den första som returnerar true väljs för att matcha affärsmöjligheten. Om ingen innehållslösare kan användas hoppas den möjligheten över. Eftersom innehållsmatchningsprocessen vanligtvis är asynkron ansvarar innehållslösaren för att meddela TVSDK när processen har slutförts.
 
-* Innehållslösaren anropar `client.place` för att ange vilken tidslinjeåtgärd TVSDK behöver för att köra (vanligtvis en annonsbrytningsplacering).
+* Innehållslösaren anropar `client.place` för att ange vilken tidslinjeåtgärd TVSDK behöver utföra (vanligtvis en placering av annonsbrytning).
 * Innehållslösaren anropar `client.notifyCompleted` om lösningsprocessen lyckas, eller `client.notifyFailed` om processen misslyckas.
 
 1. Skapa en anpassad lösare för affärsmöjligheter.
@@ -92,7 +91,7 @@ När TVSDK identifierar en ny affärsmöjlighet itererar programmet igenom den r
 
 1. Skapa den anpassade innehållsfabriken som använder den anpassade innehållslösaren.
 
-   Exempel:
+   Till exempel:
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -121,7 +120,7 @@ När TVSDK identifierar en ny affärsmöjlighet itererar programmet igenom den r
 
 1. Registrera den anpassade innehållsfabriken för den medieström som ska spelas upp.
 
-   Exempel:
+   Till exempel:
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -138,4 +137,3 @@ När TVSDK identifierar en ny affärsmöjlighet itererar programmet igenom den r
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

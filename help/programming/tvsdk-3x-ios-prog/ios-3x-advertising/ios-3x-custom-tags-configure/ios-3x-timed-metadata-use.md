@@ -1,26 +1,25 @@
 ---
 description: Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 title: Använd tidsbestämda metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e41718e0-2b6c-4353-a365-2d84ad4ac815
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Använd tidsbestämda metadata {#use-timed-metadata}
 
 Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 
-Om du vill använda dessa sparade `PTTimedMetadata`-objekt under uppspelning använder du den sparade ordlistan från [Lagra tidsbestämda metadataobjekt när de skickas](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
+Använda dessa sparade `PTTimedMetadata` objekt under uppspelning använder du den sparade ordlistan från [Lagra tidsbestämda metadataobjekt när de skickas](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
 
-1. Extrahera och uppdatera den aktuella uppspelningstiden från det här meddelandet och hitta alla `PTTimedMetadata`-objekt med starttider som matchar den aktuella uppspelningstiden.
+1. Extrahera och uppdatera den aktuella uppspelningstiden från det här meddelandet och hitta alla `PTTimedMetadata` objekt med starttider som matchar den aktuella uppspelningstiden.
 
    Du kan använda dessa objekt för att slutföra olika åtgärder.
 
-   Exempel:
+   Till exempel:
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -57,4 +56,4 @@ Om du vill använda dessa sparade `PTTimedMetadata`-objekt under uppspelning anv
    }
    ```
 
-1. Justera regelbundet inaktuella `PTTimedMetadata`-instanser från listan för att förhindra att minnet växer kontinuerligt.
+1. Justera streck regelbundet `PTTimedMetadata` -instanser i listan för att förhindra att minnet växer kontinuerligt.

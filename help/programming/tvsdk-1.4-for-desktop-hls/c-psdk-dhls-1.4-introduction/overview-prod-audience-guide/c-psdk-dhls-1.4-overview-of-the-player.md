@@ -1,16 +1,15 @@
 ---
-description: 'TVSDK for Desktop HLS innehåller en mängd olika funktioner och har följande huvudfunktioner '
+description: TVSDK for Desktop HLS innehåller en mängd olika funktioner och har följande huvudfunktioner
 title: Funktioner i Primetime TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d78ca77e-b29c-4fae-8ab9-edc55ab12847
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
-
-# Primetime TVSDK-funktioner{#primetime-tvsdk-features}
+# Funktioner i Primetime TVSDK{#primetime-tvsdk-features}
 
 TVSDK for Desktop HLS innehåller en mängd olika funktioner och har följande huvudfunktioner:
 

@@ -1,13 +1,13 @@
 ---
 title: Undvik att använda '&'reg_code i /authenticate Request
 description: Undvik att använda '&'reg_code i /authenticate Request
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
-
 
 # Undvik att använda &#39;&amp;&#39;reg_code i /authenticate Request {#clientless-avoid-using-reg_code-in-authenticate-request}
 
@@ -62,4 +62,3 @@ Ett av följande alternativ bör lösa problemet:
 1. Normalisera `&reg_code` som använder `&amp;reg_code`.
 
 1. Adobe kan introducera en ny funktion för att skicka tillbaka en felkod till den andra skärmen som svar på ett autentiseringsanrop, om det inte gick att skapa AuthN-token.
-

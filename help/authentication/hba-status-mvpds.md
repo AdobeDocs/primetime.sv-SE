@@ -1,13 +1,13 @@
 ---
 title: HBA-status för MVPD
 description: HBA-status för MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9e506417-0886-4306-9b9f-5fde24a792d3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
-
 
 # HBA-status för MVPD
 
@@ -45,4 +45,3 @@ ht-degree: 0%
 | MVPD | Tillgängliga grundläggande funktioner? | Skickar flagga för autentiseringssvar | SSO? | Kommentarer |
 |---|---|---|---|---|
 | Comcast | Ja | Ja |  |  |
-

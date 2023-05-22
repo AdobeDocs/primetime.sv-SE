@@ -1,26 +1,25 @@
 ---
 description: Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 title: Styra videovyns placering och storlek
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5e7ae557-7f2b-4697-85eb-e72d1f43a7fc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-
-# Styra position och storlek för videovyn{#control-the-position-and-size-of-the-video-view}
+# Styra videovyns placering och storlek{#control-the-position-and-size-of-the-video-view}
 
 Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 
 TVSDK försöker som standard att behålla videovyns proportioner när videons storlek eller position ändras (på grund av en ändring som gjorts av programmet, en profilväxel eller en innehållsväxel etc.).
 
-Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan *skalprincip*. Ange skalningsprincipen med `MediaPlayerView`-objektets `scalePolicy`-egenskap. Standardskalningsprincipen för `MediaPlayerView` anges med en instans av klassen `MaintainAspectRatioScalePolicy`. Om du vill återställa skalprincipen ersätter du standardinstansen av `MaintainAspectRatioScalePolicy` på `MediaPlayerView.scalePolicy` med din egen princip. (Du kan inte ange egenskapen `scalePolicy` till ett null-värde.)
+Du kan åsidosätta standardbeteendet för proportioner genom att ange ett annat *skalningsprofil*. Ange skalningsprincipen med `MediaPlayerView` objektets `scalePolicy` -egenskap. The `MediaPlayerView`Standardskalningsprincipen anges med en instans av `MaintainAspectRatioScalePolicy` klassen. Om du vill återställa skalprincipen ersätter du standardinstansen av `MaintainAspectRatioScalePolicy` på `MediaPlayerView.scalePolicy` med er egen policy. (Du kan inte ange `scalePolicy` till ett null-värde.)
 
-1. Implementera gränssnittet `MediaPlayerViewScalePolicy` för att skapa en egen skalpolicy.
+1. Implementera `MediaPlayerViewScalePolicy` för att skapa en egen skalpolicy.
 
-   `MediaPlayerViewScalePolicy` har en metod:
+   The `MediaPlayerViewScalePolicy` har en metod:
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -29,10 +28,10 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan 
 
    >[!NOTE]
    >
-   >TVSDK använder ett `StageVideo`-objekt för att visa videon, och eftersom `StageVideo`-objekt inte finns med i visningslistan innehåller parametern `viewPort` videons absoluta koordinater.
+   >TVSDK använder en `StageVideo` -objekt för att visa videon, och därför `StageVideo` objekten inte finns med i visningslistan, `viewPort` -parametern innehåller videons absoluta koordinater.
    >
    >
-   >Exempel:
+   >Till exempel:
    >
    >
    ```
@@ -58,14 +57,14 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange en annan 
    >}
    >```
 
-1. Tilldela din implementering till egenskapen `MediaPlayerView`.
+1. Tilldela implementeringen till `MediaPlayerView` -egenskap.
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Lägg till vyn i mediespelarens `view`-egenskap.
+1. Lägg till din vy i Mediespelarens `view` -egenskap.
 
    ```
    addChild(view); 
@@ -107,4 +106,3 @@ view.scalePolicy = new CustomScalePolicy();
 addChild(view); 
 mediaPlayer.view = view;
 ```
-

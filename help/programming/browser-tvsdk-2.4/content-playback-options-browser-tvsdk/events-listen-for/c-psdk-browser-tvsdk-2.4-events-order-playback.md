@@ -1,14 +1,13 @@
 ---
 description: Webbläsarens TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 title: Ordning för uppspelningshändelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Ordning för uppspelningshändelser{#order-of-playback-events}
 
@@ -18,16 +17,16 @@ Webbläsarens TVSDK skickar händelser/meddelanden i vanligtvis förväntade sek
 
 I följande exempel visas ordningen för vissa händelser som innehåller uppspelningshändelser.
 
-* När en medieresurs har lästs in via `replaceCurrentResource` är händelseordningen:
+* När en medieresurs läses in `replaceCurrentResource`, är händelseordningen:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` med  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
+* När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`, är händelseordningen:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` med  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
@@ -100,4 +99,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

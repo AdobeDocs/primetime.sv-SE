@@ -1,14 +1,13 @@
 ---
 title: Åtkomstaktivera Android SDK enkel inloggning (SSO) i Android 10-program
 description: Åtkomstaktivera Android SDK enkel inloggning (SSO) i Android 10-program
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: dedade15-c451-4757-b684-d3728e11dd87
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
 
 ---
-
-
 
 # Åtkomstaktivera Android SDK enkel inloggning (SSO) i Android 10-program {#access-enabler-android-sdk-single-sign-on-sso-on-android-10-apps}
 
@@ -38,4 +37,3 @@ Beroende på appens **mål-SDK-nivå** eller användningen av **android:requestL
 >[!TIP]
 >
 > Innan aktivering av Android SDK för autentisering med Adobe Primetime Access är helt kompatibelt med omfångslagring kan du tillfälligt avanmäla dig baserat på programmets mål-SDK-nivå eller attributet requestLegacyExternalStorage-manifestet enligt beskrivningen i public [Android-dokumentation](https://developer.android.com/training/data-storage/files/external-scoped#opt-out-of-scoped-storage).
-

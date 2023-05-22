@@ -3,7 +3,6 @@ title: Viktiga mått och datamått
 description: Viktiga mått och datamått
 copied-description: true
 exl-id: 71da0c5e-646e-4238-88ee-b6e0b068f6e3
-translation-type: tm+mt
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
 source-wordcount: '89'

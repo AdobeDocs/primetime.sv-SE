@@ -1496,7 +1496,7 @@ Begränsningarna och kända fel i Browser TVSDK anges nedan.
    <td>VOD + Live</td> 
    <td>QoS- och Player-meddelanden</td> 
    <td>21129: Bildrutefrekvensen är inte tillgänglig vid återfall i Flash.</td> 
-   <td><p>・ 1170:</p> <p>Timed_Event är inte tillgängligt för webbläsarens TVSDK med MSE, till skillnad från webbläsarens TVSDK med Flash Fallback.</p> <p>21129: Bildrutefrekvensen har inte beräknats för liveströmmar.</p> </td> 
+   <td><p>• 11170:</p> <p>Timed_Event är inte tillgängligt för webbläsarens TVSDK med MSE, till skillnad från webbläsarens TVSDK med Flash Fallback.</p> <p>21129: Bildrutefrekvensen har inte beräknats för liveströmmar.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 

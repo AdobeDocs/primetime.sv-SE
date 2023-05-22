@@ -1,29 +1,28 @@
 ---
 description: TVSDK förbereder PTTimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 title: Prenumerera på egna taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5074e622-8824-4253-a668-485e2f68f156
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# Prenumerera på anpassade taggar {#subscribe-to-custom-tags}
+# Prenumerera på egna taggar {#subscribe-to-custom-tags}
 
 TVSDK förbereder PTTimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 
 Innan uppspelningen startar måste du prenumerera på taggarna.
 För att få meddelanden om anpassade taggar i HLS-manifestationer:
 
-1. Ange de anpassade annonstaggnamnen globalt genom att skicka en array som innehåller de anpassade taggarna till `setSubscribedTags` i `PTSDKConfig`.
+1. Ange egna annonstaggnamn globalt genom att skicka en array som innehåller de anpassade taggarna till `setSubscribedTags` in `PTSDKConfig`.
 
    >[!IMPORTANT]
    >
-   >Du måste inkludera `#`-prefixet när du arbetar med HLS-strömmar.
+   >Du måste inkludera `#` prefix när du arbetar med HLS-strömmar.
 
-   Exempel:
+   Till exempel:
 
    ```
    NSArray *customHLSTags = [NSArray arrayWithObjects:@"#EXT-OATCLS-SCTE35",@"#EXT_CUSTOM_TAG2",nil]; 

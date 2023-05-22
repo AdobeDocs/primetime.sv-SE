@@ -1,13 +1,13 @@
 ---
 title: Tjänstleverantörsomfång
 description: Tjänstleverantörsomfång
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 730c43e1-46c0-4eec-b562-b1ad93cce6d3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
-
 
 # Tjänstleverantörsomfång {#service-provoider-scoping}
 

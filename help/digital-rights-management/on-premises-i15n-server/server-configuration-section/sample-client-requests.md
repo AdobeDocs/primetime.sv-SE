@@ -2,18 +2,17 @@
 title: Exempelklientbegäranden
 description: Exempelklientbegäranden
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2b6a1349-aafc-4222-9081-525662f62961
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Exempelklientbegäranden{#sample-client-requests}
 
-# Exempel på klientförfrågningar{#sample-client-requests}
-
-Du kan samla in ett bibliotek med exempelklientförfrågningar med verktyg som Charles Proxy eller Wireshark. Du bör samla in klientbegäranden efter att Individualization-servern har konfigurerats med hjälp av autentiseringsuppgifterna för Individualization Transport. Du kan sedan skicka dessa klientförfrågningar (via *curl* eller något annat verktyg) till slutpunkten för Individualization Server för att verifiera att servern fungerar som den ska. Exempel:
+Du kan samla in ett bibliotek med exempelklientförfrågningar med verktyg som Charles Proxy eller Wireshark. Du bör samla in klientbegäranden efter att Individualization-servern har konfigurerats med hjälp av autentiseringsuppgifterna för Individualization Transport. Du kan sedan skicka dessa klientförfrågningar (via *kurva* eller något annat verktyg) till slutpunkten för Individualization Server för att verifiera att servern är igång och körs som den ska. Till exempel:
 
 ```
 curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary  

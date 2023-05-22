@@ -2,14 +2,13 @@
 title: Åsidosätta principalternativ
 description: Åsidosätta principalternativ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 61cf8736-9a64-440c-8b5c-a411191ccccc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
-
 
 # Åsidosätta principalternativ{#overriding-policy-options}
 

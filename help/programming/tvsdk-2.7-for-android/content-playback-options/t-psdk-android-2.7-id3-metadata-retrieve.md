@@ -1,14 +1,13 @@
 ---
 description: ID3-taggar ger information om en ljud- eller videofil, till exempel filens titel eller namnet på artisten. TVSDK identifierar ID3-taggar på segmentnivån för transportströmmen (TS) i HLS-strömmar och skickar en händelse. Programmet kan extrahera data från taggen.
 title: ID3-taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 316bc704-e71a-4fd7-b970-706b8c08a42e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
-
 
 # ID3-taggar {#id-tags}
 
@@ -23,13 +22,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * TYPE = ID3
 * NAME = ID3
 
-1. Implementera en händelseavlyssnare för `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med objektet `MediaPlayer`.
+1. Implementera en händelseavlyssnare för `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera det med `MediaPlayer` -objekt.
 
-   TVSDK anropar den här avlyssnaren när den identifierar `ID3`-metadata.
+   TVSDK anropar den här avlyssnaren när den upptäcker `ID3` metadata.
 
    >[!TIP]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i [Egna taggar](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
+   >Anpassade annonser använder samma `onTimedMetadata` -händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i [Egna taggar](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Hämta metadata.
@@ -48,4 +47,3 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
        } 
    }
    ```
-

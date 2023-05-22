@@ -1,14 +1,13 @@
 ---
 description: Dessa klasser innehåller metadata för annonsering, namnutrymmen och spårning.
 title: Metadataklasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3d98c5e1-6792-419b-9638-f156f1eafd1b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
-
 
 # Metadataklasser{#metadata-classes}
 

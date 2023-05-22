@@ -1,13 +1,13 @@
 ---
 title: Amazon FireOS Integration Cookbook
 description: Amazon FireOS Integration Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
 
 ---
-
 
 # Amazon FireOS Integration Cookbook {#amazon-fireos-integration-cookbook}
 
@@ -121,7 +121,7 @@ The `event` parametern anger vilken berättigandehändelse som har inträffat;
 
       - **Utlösare:** setRequestorComplete(), återanrop
 
-   Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har upprättats. Detta innebär att när setRequestor() fortfarande körs, kommer alla efterföljande berättigandebegäranden (till exempel`checkAuthentication()`) är blockerade.
+   Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har etablerats fullständigt. Detta innebär att när setRequestor() fortfarande körs, kommer alla efterföljande berättigandebegäranden (till exempel`checkAuthentication()`) är blockerade.
 
    Det finns två implementeringsalternativ: När identifieringsinformationen för den som gjorde begäran skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder:</p>
 
@@ -203,4 +203,3 @@ The `event` parametern anger vilken berättigandehändelse som har inträffat;
    AccessEnabler rensar bort alla cachelagrade värden och token som användaren fått för det aktuella MVPD-värdet på alla beställare som delar inloggningen via enkel inloggning. När cacheminnet har rensats gör AccessEnabler ett serveranrop för att rensa sessionerna på serversidan.  Observera, att eftersom serveranropet kan resultera i en SAML-omdirigering till IdP (detta tillåter sessionsrensning på IdP-sidan), måste det här anropet följa alla omdirigeringar. Därför hanteras det här anropet inuti en WebView-kontroll, som inte är synlig för användaren.
 
    **Obs!** Utloggningsflödet skiljer sig från autentiseringsflödet på så sätt att användaren inte behöver interagera med WebView på något sätt. Det är alltså möjligt (och rekommenderas) att göra WebView-kontrollen osynlig (d.v.s.: dold) under utloggningsprocessen.
-

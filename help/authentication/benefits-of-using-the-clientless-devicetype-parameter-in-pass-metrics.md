@@ -1,13 +1,13 @@
 ---
 title: Fördelar med att använda parametern deviceType utan klient i autentiseringsmåtten Primetime
 description: Fördelar med att använda parametern deviceType utan klient i autentiseringsmåtten Primetime
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a5004887-d5fa-468e-971b-10806519175b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
 
 ---
-
 
 # Fördelar med att använda parametern deviceType utan klient i autentiseringsmåtten Primetime {#benefits-of-using-the-clientless-devicetype-parameter-in-primetime-authentication-metrics}
 
@@ -61,5 +61,3 @@ Det finns två typer av [Klientlösa API:er](#web_srvs_summary) som används oc
    - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/utloggning](#init_logout)
 
 Vi rekommenderar att du använder `deviceType` och skicka korrekt klientlös enhetstyp för alla API:er.
-
-

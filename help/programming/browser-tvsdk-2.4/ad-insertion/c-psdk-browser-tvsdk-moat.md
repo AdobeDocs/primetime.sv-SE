@@ -2,14 +2,13 @@
 title: Annonsmätning från Moat
 description: Annonsmätning från Moat
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3d54ca34-0b75-4a8e-ab2d-bbe59683c2cf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # Annonsmätning från Moat {#ad-measurement-from-moat}
 

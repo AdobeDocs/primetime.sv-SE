@@ -1,16 +1,15 @@
 ---
 description: Du kan implementera dina lösningar baserat på standardlösare.
 title: Implementera en anpassad lösning för affärsmöjlighet/innehåll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a73f62e1-7e6e-4b16-9bf8-118ec0381c41
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
-
-# Implementera en anpassad matchare för affärsmöjlighet/innehåll {#implement-a-custom-opportunity-content-resolver}
+# Implementera en anpassad lösning för affärsmöjlighet/innehåll {#implement-a-custom-opportunity-content-resolver}
 
 Du kan implementera dina lösningar baserat på standardlösare.
 
@@ -18,13 +17,13 @@ Du kan implementera dina lösningar baserat på standardlösare.
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Utveckla en anpassad annonslösare genom att utöka den abstrakta klassen `PTContentResolver`.
+1. Utveckla en anpassad annonslösare genom att utöka `PTContentResolver` abstrakt klass.
 
    `PTContentResolver` är ett gränssnitt som måste implementeras av en innehållslösningsklass. En abstrakt klass med samma namn är också tillgänglig och hanterar konfigurationen automatiskt (hämtar delegaten).
 
    >[!TIP]
    >
-   >`PTContentResolver` exponeras genom  `PTDefaultMediaPlayerClientFactory` klassen. Klienter kan registrera en ny innehållslösare genom att utöka den abstrakta klassen `PTContentResolver`. Som standard, och om den inte tas bort specifikt, registreras en `PTDefaultAdContentResolver` i `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` exponeras genom `PTDefaultMediaPlayerClientFactory` klassen. Klienter kan registrera en ny innehållslösare genom att utöka `PTContentResolver` abstrakt klass. Som standard, och om den inte tas bort specifikt, är en `PTDefaultAdContentResolver` är registrerad i `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,29 +51,29 @@ Du kan implementera dina lösningar baserat på standardlösare.
    @end
    ```
 
-1. Implementera `shouldResolveOpportunity` och returnera `YES` om det ska hantera mottaget `PTPlacementOpportunity`.
+1. Implementera `shouldResolveOpportunity` och returnera `YES` om den ska hantera mottagna `PTPlacementOpportunity`.
 1. Implementera `resolvePlacementOpportunity`, som börjar läsa in alternativt innehåll eller annonser.
 1. När annonserna har lästs in förbereder du en `PTTimeline` med information om innehållet som ska infogas.
 
        Nedan finns användbar information om tidslinjer:
    
-   * Det kan finnas flera `PTAdBreak`s för-, mitt- och post-roll-typer.
+   * Det kan finnas flera `PTAdBreak`för pre-roll, mid-roll och post-roll.
 
-      * En `PTAdBreak` har följande:
+      * A `PTAdBreak` har följande:
 
          * A `CMTimeRange` med brytningens starttid och varaktighet.
 
             Detta anges som intervallegenskapen för `PTAdBreak`.
 
-         * `NSArray` av  `PTAd`s.
+         * `NSArray` av `PTAd`s.
 
             Detta anges som egenskapen ads för `PTAdBreak`.
-   * En `PTAd` representerar annonsen och varje `PTAd` har följande:
+   * A `PTAd` representerar annonsen, och `PTAd` har följande:
 
-      * En `PTAdHLSAsset`-uppsättning som primär resursegenskap för annonsen.
-      * Det kan finnas flera `PTAdAsset`-instanser som klickbara annonser eller bannerannonser.
+      * A `PTAdHLSAsset` anges som primär tillgångsegenskap för annonsen.
+      * Möjligen flera `PTAdAsset` instanser som klickbara annonser eller banners.
 
-   Exempel:
+   Till exempel:
 
    ```
    NSMutableArray *ptBreaks = [[[NSMutableArray alloc] init] autorelease]; 
@@ -103,7 +102,7 @@ Du kan implementera dina lösningar baserat på standardlösare.
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Anropa `didFinishResolvingPlacementOpportunity`, som tillhandahåller `PTTimeline`.
+1. Utlysning `didFinishResolvingPlacementOpportunity`, som innehåller `PTTimeline`.
 1. Registrera din anpassade content/ad resolver till standardmediespelarfabriken genom att ringa `registerContentResolver`.
 
    ```

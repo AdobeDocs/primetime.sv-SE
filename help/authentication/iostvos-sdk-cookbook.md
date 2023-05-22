@@ -1,13 +1,13 @@
 ---
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2414'
 ht-degree: 0%
 
 ---
-
 
 # iOS/tvOS SDK Cookbook {#iostvos-sdk-cookbook}
 
@@ -132,7 +132,7 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
       [setRequestorComplete()](#$setReqComplete) återanrop.
    >[!NOTE]
    >
-   >Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har upprättats. Detta innebär att [`setRequestor()`](#$setReq)  körs fortfarande, alla efterföljande berättigandebegäranden. Till exempel: [`checkAuthentication()`](#checkAuthN) är blockerade.
+   >Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har etablerats fullständigt. Detta innebär att [`setRequestor()`](#$setReq)  körs fortfarande, alla efterföljande berättigandebegäranden. Till exempel: [`checkAuthentication()`](#checkAuthN) är blockerade.
 
    Det finns två implementeringsalternativ: När identifieringsinformationen för den som gjorde begäran skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder: </br>
 

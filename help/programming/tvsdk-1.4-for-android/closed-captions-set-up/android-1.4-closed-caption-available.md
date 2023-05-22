@@ -1,14 +1,13 @@
 ---
 description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
 title: Välj ett aktuellt bildtextspår bland tillgängliga spår
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 75970604-c318-4621-bad3-caab292c8a04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Välj ett aktuellt bildtextspår bland tillgängliga spår{#select-a-current-caption-track-from-among-available-tracks}
 
@@ -16,16 +15,16 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
 >[!TIP]
 >
->Undertexter är alltid aktiverade. Alla standardspår för undertextning anses finnas. Standardspår (som CC1-CC4, CS1-CS6) räknas upp i `ClosedCaptionsTrack.DefaultCCTypes`. När uppspelningen börjar letar TVSDK efter aktivitet i någon av dessa kanaler. Om den hittar aktivitet anges metoden `isActive` för det spåret och händelsen `MediaPlayer.PlaybackEventListener.onUpdated` skickas.
+>Undertexter är alltid aktiverade. Alla standardspår för undertextning anses finnas. Standardspår (som CC1-CC4, CS1-CS6) räknas upp i `ClosedCaptionsTrack.DefaultCCTypes`. När uppspelningen börjar letar TVSDK efter aktivitet i någon av dessa kanaler. Om den hittar aktivitet anges `isActive` -metoden för det spåret och skickar `MediaPlayer.PlaybackEventListener.onUpdated` -händelse.
 
 1. Vänta tills mediespelaren är i åtminstone tillståndet PREPARED.
 1. Lyssna efter dessa händelser:
 
    * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: Den första listan med spår för undertextning är tillgänglig
 
-1. Hämta en lista över alla tillgängliga undertextningsspår.
+1. Hämta en lista med alla tillgängliga undertextningsspår.
 
-   Exempel:
+   Till exempel:
 
    ```java
    List<ClosedCaptionsTrack> ccTracks = 
@@ -34,7 +33,7 @@ Du kan välja ett spår i en lista med tillgängliga textningsspår. Detta blir 
 
 1. Välj ett tillgängligt spår som aktuellt spår.
 
-   Exempel:
+   Till exempel:
 
    ```java
    // Select the initial CC track. 

@@ -1,20 +1,19 @@
 ---
 title: JSON-objekt för direkta annonsbrytningar
 description: Detaljerar JSON-objektet när typvärdet är direkt och brytningar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d5e3ddd5-b963-4e7d-b04b-087d4fe96faf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
-
 # JSON-objekt för direkta annonsbrytningar{#json-object-for-direct-ad-breaks}
 
 Följande kodblock definierar JSON-objektet details när typvärdet är direkt annonsbrytning.
 
-`MetadataNode` som returneras av `IFeedItemAdapter:getStreamMetadata()` innehåller en post med nyckeln av typen `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` och värdet för en strängbeteckning för JSON-objektvärdet med information nedan.
+The `MetadataNode` returneras av `IFeedItemAdapter:getStreamMetadata()` innehåller en post med en typnyckel `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` och värdet för en strängbeteckning för JSON-objektvärdet med information nedan.
 
 ```
 “metadata”: { 
@@ -52,8 +51,8 @@ Följande kodblock definierar JSON-objektet details när typvärdet är direkt a
 |---|---|
 | `tag` | En sträng som mappar till taggfältet i `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 | `time` | Anger starttiden för annonsbrytningen, mappar till tidsfältet i `com.adobe.mediacore.timeline.advertising.AdBreak`. Värdet 0 anger en annons före rullning. |
-| `replace` | Anger varaktigheten för annonsbrytningen, mappar till fältet `replaceDuration` i `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | En lista över annonser som ska spelas upp under den angivna annonsuppdelningen mappas till fältet `List<Ad>` i `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `replace` | Anger varaktigheten för annonsbrytningen, mappar till `replaceDuration` fält i `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | En lista över annonser som ska spelas upp under den angivna annonsuppdelningen, mappar till `List<Ad>` fält i `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
 Följande kodblock definierar JSON-objektet för arrayen med annonslista.
 
@@ -77,4 +76,3 @@ Följande kodblock definierar JSON-objektet för arrayen med annonslista.
 | `url` | URL:en till annonsinnehållet mappas till URL-fältet i `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `duration` | Annonsens varaktighet, mappar till varaktighetsfältet i `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | En beskrivningssträng. |
-

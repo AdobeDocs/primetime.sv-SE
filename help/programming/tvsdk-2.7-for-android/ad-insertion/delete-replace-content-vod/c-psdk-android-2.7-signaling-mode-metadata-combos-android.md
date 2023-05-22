@@ -1,14 +1,13 @@
 ---
 description: Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att använda olika kombinationer av annonssignaleringsläge och metadata. Olika kombinationer av signaleringsläge och metadata ger olika beteenden.
 title: Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 949ca84f-4aa9-4668-b91b-99fdf13f625c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
 
 ---
-
 
 # Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
@@ -26,7 +25,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
    <th class="entry"> Läge för annonssignalering </th> 
    <th class="entry"> Lägg till metadata </th> 
    <th class="entry"> Skapade lösare </th> 
-   <th class="entry"><span class="codeph"> </span> PlacementInformationskapad </th> 
+   <th class="entry"><span class="codeph"> PlacementInformation</span> skapad </th> 
    <th class="entry"> Resulterande beteende </th> 
   </tr> 
  </thead>
@@ -51,7 +50,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
    <td> Ta bort, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Intervall borttagna, annonser infogade </td> 
@@ -237,4 +236,3 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
   </tr> 
  </tbody> 
 </table>
-

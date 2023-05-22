@@ -1,14 +1,13 @@
 ---
 description: Kunder kan använda Adobe Access (AAXS) DRM med sina egna CMS-system (Content Key Management System) med funktionen External CEK.
 title: Extern CEK-översikt för Adobe Access DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4131863b-5773-4222-aae9-d984267cdb86
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
-
 
 # Extern CEK-översikt för Adobe Access DRM {#adobe-access-drm-external-cek-overview}
 

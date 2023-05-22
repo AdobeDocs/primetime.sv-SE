@@ -1,13 +1,13 @@
 ---
 title: Apple SSO Cookbook (REST API)
 description: Apple SSO Cookbook (REST API)
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cb27c4b7-bdb4-44a3-8f84-c522a953426f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 0%
 
 ---
-
 
 # Apple SSO Cookbook (REST API) {#apple-sso-cookbook-rest-api}
 
@@ -460,4 +460,3 @@ The [Video Subscriber Account](https://developer.apple.com/documentation/videos
 - [REST API Reference](/help/authentication/rest-api-reference.md)
 - [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
 -->
-

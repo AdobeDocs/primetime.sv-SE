@@ -2,14 +2,13 @@
 title: Förutsättningar
 description: Förutsättningar
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1550bade-5ee5-4af3-8529-31332c6d993b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
-
 
 # Förutsättningar {#prerequisites}
 

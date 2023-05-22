@@ -1,14 +1,13 @@
 ---
 description: När Primetimes annonsbeslut påträffar en VAST-annons (creative) som är tom eller som har en medietyp som är ogiltig för HLS, utvärderas reservannonserna för att avgöra vad som ska returneras.
 title: Annonsbeteende för VAST och VMAP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8145d928-5d38-40f1-8dc3-fee9b815465c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
 
 ---
-
 
 # Annonsbeteende för VAST och VMAP {#ad-fallback-behavior-for-vast-and-vmap}
 
@@ -30,4 +29,3 @@ När det finns fristående annonser i reserv undersöker Primetime-annonsen dess
 >[!IMPORTANT]
 >
 >Det här beteendet är alltid aktiverat för annonser i VAST-omslutningar. För VAST-annonser som är infogade i en VMAP är beteendet inaktiverat som standard, men programmet kan aktivera det.
-

@@ -1,20 +1,19 @@
 ---
 description: TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga.
 title: DRM-händelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 65a02744-8973-418d-9a9c-53a2a313f631
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 0%
 
 ---
 
-
 # DRM-händelser{#drm-events}
 
 TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga.
 
-Om du vill få meddelanden om alla DRM-relaterade händelser lyssnar du efter `DRMMetadataInfoEvent` efter DRM-händelser med objektet `MediaPlayer`.
+Om du vill få meddelanden om alla DRM-relaterade händelser avlyssnar du `DRMMetadataInfoEvent` för DRM-händelser med `MediaPlayer` -objekt.
 
 | Händelse | Betydelse |
 |---|---|

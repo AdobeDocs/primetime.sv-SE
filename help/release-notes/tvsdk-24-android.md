@@ -133,24 +133,24 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allmän uppspelning (Play, Pause, Seek) | VOD + Live | Ð | ² (endast VOD) |
-| FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | Ð | Stöds inte |
+| Allmän uppspelning (Play, Pause, Seek) | VOD + Live | √ | ² (endast VOD) |
+| FER - Allmän uppspelning (Play, Pause, Seek) | FER VOD | √ | Stöds inte |
 | MP3 | VOD | Stöds inte | Stöds inte |
-| Uppspelning av MP4-innehåll | VOD | Ð | Ð |
-| Adaptiv logik för växling av bithastighet | VOD + Live | Ð | Stöds inte |
-| Uppspelning endast av ljud | VOD + Live | Ð | Stöds inte |
-| Undertexter - 608/708 | VOD + Live | Ð | ² (endast VOD) |
-| Undertexter - WebVTT | VOD + Live | Ð | ² (endast VOD) |
-| Manifestväxling vid fel | VOD + Live | Ð | ² (endast VOD) |
-| Avancerad redundans | VOD + Live | Ð | ² (endast VOD) |
-| QoS och spelarmeddelanden | VOD + Live | Ð | ² (endast VOD) |
-| Stöd för cookie-rubriker | VOD + Live | Ð | ² (endast VOD) |
+| Uppspelning av MP4-innehåll | VOD | √ | √ |
+| Adaptiv logik för växling av bithastighet | VOD + Live | √ | Stöds inte |
+| Uppspelning endast av ljud | VOD + Live | √ | Stöds inte |
+| Undertexter - 608/708 | VOD + Live | √ | ² (endast VOD) |
+| Undertexter - WebVTT | VOD + Live | √ | ² (endast VOD) |
+| Manifestväxling vid fel | VOD + Live | √ | ² (endast VOD) |
+| Avancerad redundans | VOD + Live | √ | ² (endast VOD) |
+| QoS och spelarmeddelanden | VOD + Live | √ | ² (endast VOD) |
+| Stöd för cookie-rubriker | VOD + Live | √ | ² (endast VOD) |
 | Stöd för anpassade rubriker | VOD + Live | Stöds inte | Stöds inte |
-| Ange parametrar för buffertkontroll | VOD + Live | Ð | ² (endast VOD) |
-| Ange adaptiva bithastighetskontroller | VOD + Live | Ð | ² (endast VOD) |
-| Anpassade Manifest-taggar (HLS)/händelseströmmar (DASH) | VOD + Live | Ð | ² (endast VOD) |
-| Sena bundna ljud | VOD + Live | Ð | ² (endast VOD) |
-| 302 Omdirigering | VOD + Live | Ð | ² (endast VOD) |
+| Ange parametrar för buffertkontroll | VOD + Live | √ | ² (endast VOD) |
+| Ange adaptiva bithastighetskontroller | VOD + Live | √ | ² (endast VOD) |
+| Anpassade Manifest-taggar (HLS)/händelseströmmar (DASH) | VOD + Live | √ | ² (endast VOD) |
+| Sena bundna ljud | VOD + Live | √ | ² (endast VOD) |
+| 302 Omdirigering | VOD + Live | √ | ² (endast VOD) |
 
 ### Avancerade uppspelningsfunktioner {#advanced-playback-features}
 
@@ -165,31 +165,31 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Uppspelning med förskjutning</td> 
    <td>Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Uppspelning endast av ljud</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Trick Play </td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Smooth Trick Play (med ABR)</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>ID3-parsning (HLS) / Timed Metadata (DASH)</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -201,7 +201,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Direkt på</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -211,13 +211,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
      <li>Flera punkter (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>302 Omdirigera Stickyness</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>² (endast VOD)</td> 
   </tr>
   <tr>
@@ -229,7 +229,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Strömintegritet </td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
  </tbody>
@@ -239,11 +239,11 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allmän uppspelning, annonser aktiverade | VOD + Live | Ð | ² (endast VOD-förrullningar) |
-| FER-innehåll med annonser aktiverade | VOD | Ð | Stöds inte |
-| Standardbeteenden för annonser | VOD + Live | Ð | ² (endast VOD-förrullningar) |
-| VAST 2.0/3.0 | VOD + Live | Ð | ² (endast VOD-förrullningar) |
-| VMAP 1.0 | VOD + Live | Ð | ² (endast VOD-förrullningar) |
+| Allmän uppspelning, annonser aktiverade | VOD + Live | √ | ² (endast VOD-förrullningar) |
+| FER-innehåll med annonser aktiverade | VOD | √ | Stöds inte |
+| Standardbeteenden för annonser | VOD + Live | √ | ² (endast VOD-förrullningar) |
+| VAST 2.0/3.0 | VOD + Live | √ | ² (endast VOD-förrullningar) |
+| VMAP 1.0 | VOD + Live | √ | ² (endast VOD-förrullningar) |
 | MP4-annonser | VOD + Live | ² (från CRS) | ■ (från CRS, endast för rullning) |
 
 ### Advanced Ad Insertion Features (CSAI) {#advanced-ad-insertion-features-csai}
@@ -259,7 +259,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Trick Play med annonser aktiverade</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -271,31 +271,31 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Målparametrar</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Egna parametrar</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Anpassade annonsbeteenden</td> 
    <td>VOD + Live</td> 
-   <td>Ð</td> 
+   <td>√</td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
    <td>Anpassade annonstaggar</td> 
    <td>Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Anpassade annonslösare</td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -307,13 +307,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>C3 Ad Replacement </td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Lazy Ad Loading</td> 
    <td>VOD</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
@@ -323,13 +323,13 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
      <li>Flera punkter (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Companion Ads, Banner Ads och Clickable Ads</td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>² (endast VOD-förrullningar)</td> 
   </tr>
   <tr>
@@ -341,19 +341,19 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
   <tr>
    <td>Tidigt annonsutträde</td> 
    <td>Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>Regelbaserad Creative VOD + Live Prioritization</td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
   <tr>
    <td>CRS-regler </td> 
    <td>VOD + Live</td> 
-   <td>Ð </td> 
+   <td>√ </td> 
    <td>Stöds inte</td> 
   </tr>
  </tbody>
@@ -363,9 +363,9 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| AES-kryptering | VOD + Live | Ð | ² (endast VOD) |
-| AES-kryptering - exempel | VOD + Live | Ð |  |
-| Tokeniserade strömmar | VOD + Live | Ð |  |
+| AES-kryptering | VOD + Live | √ | ² (endast VOD) |
+| AES-kryptering - exempel | VOD + Live | √ |  |
+| Tokeniserade strömmar | VOD + Live | √ |  |
 | DRM | VOD + Live | Primetime DRM only (Future: WideVM) | Endast bredbara |
 | Extern uppspelning (RBOP) | VOD + Live | Endast Primetime DRM | Stöds inte |
 | Licensrotation | VOD + Live | Endast Primetime DRM | Stöds inte |
@@ -375,8 +375,8 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 
 | **Funktion** | **Innehållstyp** | **HLS** | **DASH** |
 |---|---|---|---|
-| Integrering med Adobe Analytics VHL | VOD + Live | Ð | Ð |
-| Fakturering | VOD + Live | Ð | Stöds inte |
+| Integrering med Adobe Analytics VHL | VOD + Live | √ | √ |
+| Fakturering | VOD + Live | √ | Stöds inte |
 
 ## Funktioner som inte stöds {#features-not-supported}
 

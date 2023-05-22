@@ -1,26 +1,25 @@
 ---
 description: Du kan ställa in spelaren så att den läser uppspelnings- och enhetsstatistik från QoSProvider så ofta som behövs.
 title: Visa QoS-uppspelning och enhetsstatistik
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 369b6e9a-70a2-4f62-a1bf-f69030c5d6c3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # Visa QoS-uppspelning och enhetsstatistik {#display-qos-playback-and-device-statistics}
 
 Du kan ställa in spelaren så att den läser uppspelnings- och enhetsstatistik från QoSProvider så ofta som behövs.
 
-Klassen `QoSProvider` innehåller olika statistik, bland annat bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videofragmentet, den tid det tog att återge den första bildrutan, den för närvarande buffrade längden och bufferttiden.
+The `QoSProvider` -klassen innehåller olika statistik, bland annat bildrutehastighet, profilens bithastighet, den totala buffringstiden, antalet buffringsförsök, den tid det tog att hämta den första byten från det första videofragmentet, den tid det tog att återge den första bildrutan, den för närvarande buffrade längden och bufferttiden.
 
-Referensimplementeringen innehåller en `QoSManager`-klass där du kan aktivera visning av QoS-övertäckningen. Du kan även aktivera QoS-synligheten i användargränssnittet för inställningar:
+Referensimplementeringen innehåller en `QoSManager` där du kan aktivera visning av QoS-övertäckningen. Du kan även aktivera QoS-synligheten i användargränssnittet för inställningar:
 
 ![](assets/qos-configuration.jpg)
 
-`QoSManager` spårar QoS-statistik genom att hämta enhetsinformation, ansluta till mediespelaren och uppdatera med den senaste QoS-informationen.
+The `QoSManager` spårar QoS-statistik genom att hämta enhetsinformation, ansluta till mediespelaren och uppdatera med den senaste QoS-informationen.
 
 **Aktivera eller inaktivera rapportering av QoS-statistik**
 
@@ -38,7 +37,7 @@ Referensimplementeringen innehåller en `QoSManager`-klass där du kan aktivera 
 
    >[!NOTE]
    >
-   >Om du ändrar booleskt till `false` inaktiveras QoS-rapportering.
+   >Ändra booleskt till `false` inaktiverar QoS-rapportering.
 
 2. Lägg till händelseavlyssnare:
 
@@ -50,7 +49,7 @@ Referensimplementeringen innehåller en `QoSManager`-klass där du kan aktivera 
 
    >[!NOTE]
    >
-   >När spelaraktiviteten ska tas bort måste du anropa [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) för att rensa upp QOS-providern genom att koppla loss den från mediespelaren.
+   >När spelaraktiviteten ska tas bort ska du se till att ringa [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) för att rensa upp QOS-providern genom att koppla loss den från mediespelaren.
 
 **Relaterad API-dokumentation**
 

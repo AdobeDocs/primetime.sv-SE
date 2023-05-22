@@ -1,20 +1,19 @@
 ---
 description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 title: Lägg in metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fb78da4c-129e-4ecd-b598-3ab8af40d713
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
 # Översikt {#ad-insertion-metadata-overview}
 
 För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 
-TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska innehålla annonser från Primetimes annonsserver måste ditt program tillhandahålla följande obligatoriska `AuditudeSettings`-information:
+TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska innehålla annonser från Primetimes annonsserver måste ditt program tillhandahålla följande `AuditudeSettings` information:
 
 * `mediaID`, som är en unik identifierare för den video som ska spelas upp.
 
@@ -30,7 +29,7 @@ TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska
    >
    >Adobe rekommenderar att du använder `defaultMediaId`.
 
-* Ditt `zoneID`-konto, som tilldelas av Adobe, identifierar ditt företag eller din webbplats.
+* Dina `zoneID`, som utses av Adobe, identifierar ditt företag eller din webbplats.
 * Domänen för den tilldelade annonsservern.
 * Andra parametrar för målinriktning.
 

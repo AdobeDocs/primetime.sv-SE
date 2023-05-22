@@ -1,14 +1,13 @@
 ---
 description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas i innehållsströmmen för HTTP-direktuppspelning (HLS) eftersom deras videoformat inte är kompatibelt med HLS. Primetimes annonsinfogning och TVSDK kan som tillval försöka paketera om inkompatibla annonser i kompatibla M3U8-videor.
 title: Paketera inkompatibla annonser med Adobe Creative Repackaging Service
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 86a8bd94-4de0-4aba-b6ee-4e0e1ee864c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
 
 ---
-
 
 # Paketera inkompatibla annonser med Adobe Creative Repackaging Service {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
 
@@ -20,7 +19,7 @@ När TVSDK först stöter på en inkompatibel annons ignorerar spelaren annonsen
 
 Om du vill aktivera den här valfria funktionen kontaktar du Adobe.
 
-## Flera CDN-stöd för CRS och leverans {#section_900FDDA5454143718F1EB4C9732C8E1C}
+## Flera CDN-funktioner för CRS och leverans {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
 Standardscenariot för Creative Repackaging Service (CRS) är att använda ett CDN (Content Data Network), men du kan distribuera CRS-resurser på mer än ett CDN.
 
@@ -35,13 +34,13 @@ Här är API-tilläggen i TVSDK:
 
 * `PTURLTransformer` Ett protokoll som beskriver de metoder som krävs för att omforma CRS- och URL:er som begärs av TVSDK. Applikationerna kan implementera det här protokollet och tillhandahålla implementeringar för de metoder som krävs.
 
-* `PTDefaultURLTransformer` Den standardinstans av URL-transformatorn som skapas i TVSDK och som implementerar  `PTURLTransformer` protokollet. Program kan åsidosätta den här klassen eller lägga till en post-URL-omformningshanterare. Den här hanteraren är användbar när programmet vill göra ändringar i URL-begäran efter att standardomformningen har tillämpats.
+* `PTDefaultURLTransformer` Den standardinstans av URL-transformatorn som skapas i TVSDK och som implementerar `PTURLTransformer` -protokoll. Program kan åsidosätta den här klassen eller lägga till en post-URL-omformningshanterare. Den här hanteraren är användbar när programmet vill göra ändringar i URL-begäran efter att standardomformningen har tillämpats.
 
-* `PTNetworkConfiguration setURLTransformer:defaultTransformer` En set-metod som anges i  `PTNetworkConfiguration` metadatainstansen för att ställa in  `PTURLTransformer` implementeringen.
+* `PTNetworkConfiguration setURLTransformer:defaultTransformer` En set-metod som anges på `PTNetworkConfiguration` metadatainstans för att ange `PTURLTransformer` implementering.
 
 >[!IMPORTANT]
 >
->Appimplementeringarna måste kontrollera `PTURLTransformerInputType`-uppräkningen och endast transformera URL:er av typen `PTURLTransformerInputTypeCRSCreative` för CRS.
+>Appimplementeringarna måste kontrollera om `PTURLTransformerInputType` uppräkning och endast transformera URL:er av typen `PTURLTransformerInputTypeCRSCreative` för CRS.
 
 I följande kodexempel visas hur ditt program kan ändra standardvärdkomponenten till en annan sträng (till exempel `cdn.mycrsdomain.com`):
 

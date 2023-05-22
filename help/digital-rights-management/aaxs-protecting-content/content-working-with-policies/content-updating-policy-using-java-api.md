@@ -2,27 +2,26 @@
 title: Uppdatera en princip med Java API
 description: Uppdatera en princip med Java API
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Uppdatera en princip med Java API {#updating-a-policy-using-the-java-api}
 
 Så här uppdaterar du en princip med Java API:
 
-1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i projektet.
-1. Skapa en `Policy`-instans och läs in principen från en fil eller databas.
+1. Konfigurera utvecklingsmiljön och inkludera alla JAR-filer som nämns i [Konfigurera utvecklingsmiljön](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) i ditt projekt.
+1. Skapa en `Policy` -instans och läsa från en fil eller databas i principen.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Uppdatera `Policy`-objektet genom att ange dess egenskaper, till exempel dess namn och användningsregler.
+1. Uppdatera `Policy` genom att ange dess egenskaper, till exempel dess namn och användningsregler.
 
    ```java
      // Change the policy name.  
@@ -47,7 +46,7 @@ Så här uppdaterar du en princip med Java API:
      }
    ```
 
-1. Serialisera det uppdaterade `Policy`-objektet och lagra det i en fil eller databas.
+1. Serialisera den uppdaterade `Policy` och lagra det i en fil eller databas.
 
    ```java
       // Serialize the policy.  
@@ -61,4 +60,4 @@ Så här uppdaterar du en princip med Java API:
       out.close(); 
    ```
 
-Den fullständiga källan till den här exempelkoden finns i `com.adobe.flashaccess.samples.policy.UpdatePolicy` i katalogen &quot;samples&quot; i Command Line Reference Implementation.
+Om du vill se den fullständiga källan för den här exempelkoden går du till `com.adobe.flashaccess.samples.policy.UpdatePolicy` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.

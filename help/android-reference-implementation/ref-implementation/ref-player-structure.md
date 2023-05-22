@@ -1,20 +1,19 @@
 ---
 description: Funktionshanterarna fungerar som wrappers runt TVSDK-biblioteket.
 title: Referensimplementationsstruktur
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cf102ccc-2e31-4197-a321-e485f77ba754
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-
-# Referensimplementeringsstruktur {#reference-implementation-structure}
+# Referensimplementationsstruktur {#reference-implementation-structure}
 
 Funktionshanterarna fungerar som wrappers runt TVSDK-biblioteket.
 
-I Java är klasser strukturerade i en hierarki. Till exempel finns all gränssnittsrelaterad kod under `com.adobe.primetime.reference.ui` och alla funktionshanterare under `com.adobe.primetime.reference.manager`.
+I Java är klasser strukturerade i en hierarki. Till exempel all gränssnittsrelaterad kod under `com.adobe.primetime.reference.ui` och alla funktionshanterare är under `com.adobe.primetime.reference.manager`.
 
 Referensimplementeringen för Primetime innehåller följande paket:
 
@@ -32,4 +31,4 @@ Referensimplementeringen för Primetime innehåller följande paket:
 | [com.adobe.primetime.reference.ui.player](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/package-summary.html) | Innehåller gränssnittskod för spelaren. |
 | [com.adobe.primetime.reference.ui.settings](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/settings/package-summary.html) | Innehåller gränssnittskod för inställningar. |
 | [com.adobe.primetime.reference.utils](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/package-summary.html) | Innehåller allmänna verktygsklasser. |
-| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | Innehåller verktygsklasser `HTTP-specific`. |
+| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | Innehåller `HTTP-specific` verktygsklasser. |

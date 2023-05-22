@@ -1,14 +1,13 @@
 ---
 description: TVSDK stöder programmatisk borttagning och ersättning av annonsinnehåll i VOD-strömmar.
 title: Anpassade åtgärder för tidsintervall
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 10aa3609-d5d0-49e2-959f-d72d8dbd6ef4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade åtgärder för tidsintervall {#custom-time-range-operations}
 
@@ -16,28 +15,28 @@ TVSDK stöder programmatisk borttagning och ersättning av annonsinnehåll i VOD
 
 Funktionen för att ta bort och ersätta utökar funktionen för anpassade annonsmarkörer. Anpassade annonsmärken markerar delar av huvudinnehållet som annonsrelaterade innehållsperioder. Förutom att markera dessa tidsintervall kan du även ta bort och ersätta tidsintervall.
 
-Borttagning och ersättning av annonser implementeras med `TimeRange`-element som identifierar olika typer av tidsintervall i en VOD-ström: markera, ta bort och ersätta. För var och en av dessa anpassade tidintervalltyper kan du utföra motsvarande åtgärder, inklusive att ta bort och ersätta annonsinnehåll.
+Borttagning och ersättning av annonser implementeras med `TimeRange` element som identifierar olika typer av tidsintervall i en VOD-ström: markera, ta bort och ersätta. För var och en av dessa anpassade tidintervalltyper kan du utföra motsvarande åtgärder, inklusive att ta bort och ersätta annonsinnehåll.
 
-TVSDK använder följande *anpassade tidsintervallåtgärder*-lägen för att ta bort och ersätta annonser:
+TVSDK använder följande för att ta bort och ersätta annonser *anpassad åtgärd för tidsintervall* lägen:
 
 * **MARK**
-(Dessa kallades anpassade annonsmärken i tidigare versioner av TVSDK). De anger start- och sluttider för annonser som redan har placerats i VOD-strömmen. När det finns tidsintervallmarkörer av typen MARK i strömmen, är den inledande placeringen av 
-`Mode.MARK` genereras och löses av  `CustomAdMarkersContentResolver`. Inga annonser infogas.
+(Dessa kallades anpassade annonsmarkörer i tidigare versioner av TVSDK). De anger start- och sluttider för annonser som redan har placerats i VOD-strömmen. När det finns tidsintervallmarkörer av typen MARK i strömmen, är den inledande placeringen av 
+`Mode.MARK` genereras och löses av `CustomAdMarkersContentResolver`. Inga annonser infogas.
 
-* **Tidsintervall**
-för DELETEF eller DELETE, en inledande 
-`placementInformation` av typen  `Mode.DELETE` skapas och löses av motsvarande  `DeleteContentResolver`. `ContentRemoval` är en ny  `timelineOperation` som definierar de intervall som ska tas bort från tidslinjen. TVSDK använder `removeByLocalTime` från AVE-API:t (Adobe Video Engine) för att underlätta den åtgärden. Om det finns DELETE-intervall och Adobe Primetime-annonsbeslutsmetadata (som tidigare kallades Auditude) tas intervallen bort först, och `AuditudeResolver` löser annonserna med det normala arbetsflödet för Adobe Primetime annonsbeslut.
+* **DELETE**
+För tidsintervall i DELETE, en inledande 
+`placementInformation` av typen `Mode.DELETE` skapas och löses av motsvarande `DeleteContentResolver`. `ContentRemoval` är nytt `timelineOperation` som definierar de intervall som ska tas bort från tidslinjen. TVSDK använder `removeByLocalTime` från Adobe Video Engine (AVE) API för att underlätta denna operation. Om det finns DELETE-intervall och Adobe Primetime-annonsbeslutsmetadata (tidigare Auditude), tas intervallen bort först och sedan tas `AuditudeResolver` löser annonser med hjälp av det normala arbetsflödet för annonsbeslut i Adobe Primetime.
 
-* **Tidsintervall**
-FÖR REPLACEF eller REPLACE, två inledande 
-`placementInformations` skapas, en  `Mode.DELETE` och en  `Mode.REPLACE`. `DeleteContentResolver` tar bort tidsintervallen först och sedan infogar `AuditudeResolver` annonser av den angivna `replaceDuration` på tidslinjen. Om ingen `replaceDuration` har angetts avgör servern vad som ska infogas.
+* **ERSÄTT**
+För REPLACE-tidsintervall gäller två initiala 
+`placementInformations` skapas, en `Mode.DELETE` och en `Mode.REPLACE`. The `DeleteContentResolver` tar bort tidsintervallen först och sedan `AuditudeResolver` infogar annonser av den angivna `replaceDuration` till tidslinjen. Om nej `replaceDuration` anges avgör servern vad som ska infogas.
 
 TVSDK ger stöd för dessa anpassade åtgärder för tidsintervall genom att tillhandahålla följande:
 
 * Flera innehållslösningar
 
    En ström kan ha flera innehållslösningar som baseras på annonssignaleringsläget och annonsmetadata. Beteendet ändras med olika kombinationer av annonseringssignaleringslägen och annonsmetadata.
-* Flera initiala `PlacementInformations` `DefaultMediaPlayer` skapar en lista med initiala `PlacementInformations` baserat på annonseringssigneringsläget och lägger till metadata som ska matchas av `MediaPlayerClient`.
+* Flera initialer `PlacementInformations` The `DefaultMediaPlayer` skapar en lista med inledande `PlacementInformations` baserat på annonssignaleringsläget och annonseringsmetadata som ska lösas av `MediaPlayerClient`.
 
 * Nytt läge för annonssignalering: Anpassade tidsintervall
 

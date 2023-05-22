@@ -1,14 +1,13 @@
 ---
 description: I vissa analysimplementeringar kanske klientprogrammet vill ange en annan spelhuvudposition än den position som rapporteras av Browser TVSDK localTime-värdet.
 title: Implementera anpassade tidsuppdateringar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4d045c4d-298a-42ae-af61-0463a76bc872
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
-
 
 # Implementera anpassade tidsuppdateringar{#implement-custom-time-updates}
 
@@ -31,4 +30,3 @@ vaMetadata.currentTimeUpdateBlock = function() {
 >[!IMPORTANT]
 >
 >Värdena i det här kodfragmentet är bara exempel. Du måste använda olika värden för den anpassade spelhuvudspositionen.
-

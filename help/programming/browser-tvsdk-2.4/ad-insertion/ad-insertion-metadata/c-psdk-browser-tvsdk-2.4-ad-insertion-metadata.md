@@ -1,14 +1,13 @@
 ---
 description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 title: Lägg in metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8d6cb371-8666-4b55-b828-0f1d495e7fb7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#ad-insertion-metadata-overview}
 
@@ -30,7 +29,7 @@ Browser TVSDK innehåller Adobe Primetime annonsbeslutsbibliotek. För att ditt 
    >
    >Adobe rekommenderar att du använder `defaultMediaId`.
 
-* Ditt `zoneID`-konto, som tilldelas av Adobe, identifierar ditt företag eller din webbplats.
+* Dina `zoneID`, som utses av Adobe, identifierar ditt företag eller din webbplats.
 * Domänen för den tilldelade annonsservern.
 * Andra parametrar för målinriktning.
 

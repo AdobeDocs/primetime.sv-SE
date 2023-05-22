@@ -1,13 +1,13 @@
 ---
 title: Kampanjtillfälligt pass
 description: Kampanjtillfälligt pass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 705c1ba9-0430-4e3b-add1-d9e4da3f82d1
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 0%
 
 ---
-
 
 # Kampanjtillfälligt pass {#promotional-temp-pass}
 

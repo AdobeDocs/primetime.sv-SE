@@ -1,13 +1,13 @@
 ---
 title: Autentisering med OAuth 2.0-protokollet
 description: Autentisering med OAuth 2.0-protokollet
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
 
 ---
-
 
 # Autentisering med OAuth 2.0-protokollet
 
@@ -111,4 +111,3 @@ Ur ett tekniskt perspektiv:
 1. Användare som redan är autentiserade och som redan har en lokal AuthN-token som innehåller SAML subject-id, dirigeras automatiskt av Adobe via SAML-integreringen.
 1. För användare i steg 3, när deras SAML-genererade AuthN-token upphör att gälla, behandlar Adobe dem som nya användare och uppför sig som användare i steg 2.
 1. Adobe kommer att granska användningsmönstren för att avgöra när SAML-integreringen kan inaktiveras på ett säkert sätt.
-

@@ -1,16 +1,15 @@
 ---
 description: Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
 title: Klasser för tidslinje
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3241d99d-1716-4778-9203-6f6e66440360
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
-# Tidslinjeklasser {#timeline-classes}
+# Klasser för tidslinje {#timeline-classes}
 
 Dessa klasser innehåller information om tidslinjen för ett visst medium, inklusive placering av annonser.
 

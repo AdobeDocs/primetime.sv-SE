@@ -2,16 +2,15 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4c772010-b7b6-4655-98ee-b52e8022d4af
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-
-# Kommandoradsanvändning {#command-line-usage}
+# Användning av kommandorad {#command-line-usage}
 
 Listhanteraren för principuppdatering finns i katalogen \Reference Implementation\Command Line Tools på dvd:n. Använd följande syntax för att skapa en principuppdateringslista:
 
@@ -47,41 +46,40 @@ Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger platsen för konfigurationsfilen. Om det här alternativet inte används söker principuppdateringslisthanteraren efter <span class="filepath"> flashaccesstools.properties </span> i arbetskatalogen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d filnamn  </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d filnamn </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Visar information om principuppdateringslistan. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e datum  </span> </td> 
-   <td colname="2" class="- topic/entry "> (Valfritt) Giltighetsdatumet för principuppdateringslistan. Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> ååå-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> ååå-mm-dd-h24:min:sek </span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30 PM). </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e datum </span> </td> 
+   <td colname="2" class="- topic/entry "> (Valfritt) Giltighetsdatumet för principuppdateringslistan. Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f filnamn [certfile]  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f filnamn [certfile] </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lägger till alla poster från den befintliga principuppdateringslistan. Endast en befintlig fil kan anges. </p> <p class="- topic/p ">Om den befintliga listan signerades med en annan autentiseringsuppgift än den som används för att signera den nya listan anger du dess certifikatfil så att signaturen kan verifieras. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> inte har angetts returneras ett fel. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o </span> är inte inställt returneras ett fel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Om målfilen redan finns skriver du över den utan att fråga. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r policyID  </span> <span class="+ topic/ph pr-d/codeph codeph"> date  </span> "  <span class="+ topic/ph pr-d/codeph codeph"> reasonCode  </span>" "  <span class="+ topic/ph pr-d/codeph codeph"> reasonText  </span>" "  <span class="+ topic/ph pr-d/codeph codeph"> reasonURL  </span>" </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Valfritt) Återkallar princip-ID på det angivna datumet. En valfri orsakskod, orsakstext och orsak-URL kan också anges. Ange en tom sträng "" för att ange att det inte finns något värde för de valfria parametrarna. Ange datumet som <span class="+ topic/ph pr-d/codeph codeph"> åååå-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> ååå-mm-dd-h24:min:sek </span> (till exempel 2008-12-1 eller 2008-12-1-00:00:00 för midnatt den 1, 2008). Om inget datum anges används aktuellt datum. Orsakskoden måste vara större än eller lika med 0. Flera -r-alternativ kan anges. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r policyID </span> <span class="+ topic/ph pr-d/codeph codeph"> datum </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Valfritt) Återkallar princip-ID på det angivna datumet. En valfri orsakskod, orsakstext och orsak-URL kan också anges. Ange en tom sträng "" för att ange att det inte finns något värde för de valfria parametrarna. Ange datumet som <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (till exempel 2008-12-1 eller 2008-12-1-00):00:00 för midnatt den 1 december 2008). Om inget datum anges används aktuellt datum. Orsakskoden måste vara större än eller lika med 0. Flera -r-alternativ kan anges. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> date </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> datum </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utför samma åtgärd som flaggan -r, men extraherar principidentifieraren från den angivna filen. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -u policyFilnamn " reasonCode" " reasonText" " reasonURL"  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Ersätter alla matchande principer i en licensbegäran med den här principen med den angivna orsakskoden (valfritt), orsakstexten (valfritt) och orsak-URL:en (valfritt). </p> <p>Ange en tom sträng "" för att ange att det inte finns något värde för de valfria parametrarna. </p> <p>Orsakskoden måste vara större än eller lika med <span class="codeph"> 0 </span>. Flera <span class="codeph"> -u </span>-alternativ kan anges. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -u policyFilnamn " reasonCode" " reasonText" " reasonURL" </span> </td> 
+   <td colname="2" class="- topic/entry "> <p>Ersätter alla matchande principer i en licensbegäran med den här principen med den angivna orsakskoden (valfritt), orsakstexten (valfritt) och orsak-URL:en (valfritt). </p> <p>Ange en tom sträng "" för att ange att det inte finns något värde för de valfria parametrarna. </p> <p>Orsakskoden måste vara större än eller lika med <span class="codeph"> 0 </span>. Flera <span class="codeph"> -u </span> kan anges. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

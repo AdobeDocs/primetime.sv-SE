@@ -1,13 +1,13 @@
 ---
 title: Exchange a Platform SSO token for an Adobe token
 description: Exchange a Platform SSO token for an Adobe token
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5ab60268-8f97-4755-8281-be45e812ed7f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 2%
 
 ---
-
 
 # Exchange a Platform SSO token for an Adobe token {#exchange-a-platform-sso-token-for-an-adobe-token}
 
@@ -47,5 +47,3 @@ Tillåter att en plattforms-SSO-profil&quot;utbyts&quot; för en Adobe-token.
 | SAMLResponse | Den faktiska profilen som returneras av enkel inloggning för plattformen. |
 | _deviceUser_ | Enhetens användaridentifierare. |
 | _appId_ | Program-ID/namn. |
-
-

@@ -1,38 +1,37 @@
 ---
 description: I det här exemplet visas det rekommenderade sättet att inkludera anpassade annonsmarkörer på tidslinjen för uppspelningen.
 title: Placera anpassade annonsmarkörer på tidslinjen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 32a4b342-1f26-42c5-9682-789c541f0fa6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
-
 # Placera anpassade annonsmarkörer på tidslinjen {#place-custom-ad-markers-on-the-timeline}
 
 I det här exemplet visas det rekommenderade sättet att inkludera anpassade annonsmarkörer på tidslinjen för uppspelningen.
 
-1. Översätt annonsinformationen utanför band till en list/array med klassen `RepaceTimeRange`.
-1. Skapa en instans av klassen `CustomRangeMetadata` och använd dess `setTimeRangeList`-metod med list/array som argument för att ange dess tidsintervalllista.
-1. Använd dess `setType`-metod för att ange typen till `MARK_RANGE`.
-1. Använd metoden `MediaPlayerItemConfig.setCustomRangeMetadata` med instansen `CustomRangeMetadata` som argument för att ange metadata för det anpassade intervallet.
-1. Använd metoden `MediaPlayer.replaceCurrentResource` med instansen `MediaPlayerItemConfig` som argument för att ange att den nya resursen ska vara den aktuella.
-1. Vänta på en `STATE_CHANGED`-händelse som rapporterar att spelaren är i läget `PREPARED`.
-1. Starta videouppspelningen genom att anropa `MediaPlayer.play`.
+1. Översätt informationen om annonsplacering utanför band till en lista/array med `RepaceTimeRange` klassen.
+1. Skapa en instans av `CustomRangeMetadata` och använda dess `setTimeRangeList` metoden med list/array som argument för att ange sin lista över tidsintervall.
+1. Använd `setType` metod för att ange typen till `MARK_RANGE`.
+1. Använd `MediaPlayerItemConfig.setCustomRangeMetadata` metoden med `CustomRangeMetadata` -instans som argument för att ange metadata för det anpassade intervallet.
+1. Använd `MediaPlayer.replaceCurrentResource` metoden med `MediaPlayerItemConfig` -instans som argument för att ange att den nya resursen ska vara den aktuella.
+1. Vänta på en `STATE_CHANGED` -händelse, som rapporterar att spelaren finns i `PREPARED` tillstånd.
+1. Starta videouppspelning genom att anropa `MediaPlayer.play`.
 
 Här är resultatet av att du har slutfört uppgifterna i det här exemplet:
 
-* Om en `ReplaceTimeRange` överlappar en annan på uppspelningstidslinjen, till exempel, är startpositionen för en `ReplaceTimeRange` tidigare än en redan placerad slutposition, justerar TVSDK i tysthet början på den felaktiga `ReplaceTimeRange` för att undvika konflikten.
+* Om en `ReplaceTimeRange` överlappar varandra på uppspelningstidslinjen, t.ex. startpositionen för en `ReplaceTimeRange` är tidigare än en redan placerad slutposition, justerar TVSDK i tysthet början på den felaktiga `ReplaceTimeRange` för att undvika konflikten.
 
-   Detta gör att det justerade `ReplaceTimeRange` blir kortare än det ursprungligen angivna. Om justeringen leder till en varaktighet på noll, släpper TVSDK tyst det felaktiga `ReplaceTimeRange`.
+   Detta gör att de justerade `ReplaceTimeRange` kortare än ursprungligen angivet. Om justeringen leder till en varaktighet på noll, släpper TVSDK tyst det felaktiga `ReplaceTimeRange`.
 
 * TVSDK söker efter närliggande tidsintervall för anpassade annonsbrytningar och grupperar dem i separata annonsbrytningar.
 
 Tidsintervall som inte ligger intill något annat tidsintervall översätts till annonsbrytningar som innehåller en enda annons.
 
-* Om programmet försöker läsa in en medieresurs vars konfiguration innehåller `CustomRangeMetadata` som bara kan användas i kontextens anpassade annonsmarkörer, genererar TVSDK ett undantag om den underliggande resursen inte är av typen VOD.
+* Om programmet försöker läsa in en medieresurs vars konfiguration innehåller `CustomRangeMetadata` som bara kan användas i anpassade annonseringsmarkörer, genererar TVSDK ett undantag om den underliggande tillgången inte är av typen VOD.
 
 * När TVSDK hanterar anpassade annonsmarkörer inaktiveras andra annonslösningsmekanismer (till exempel Adobe Primetime annonsbeslut).
 

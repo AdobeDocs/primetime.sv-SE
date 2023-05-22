@@ -2,14 +2,13 @@
 title: Ins채ttning av delvis annonsradbrytning
 description: Ins채ttning av delvis annonsradbrytning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bcd4b108-9b91-479e-8147-ec4d24862e37
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
 
 ---
-
 
 # Ins채ttning av delvis annonsradbrytning {#partial-ad-break-insertion}
 
@@ -35,4 +34,3 @@ Det h채r beteendet 채r inte aktiverat som standard. S책 h채r aktiverar du den h�
    MediaPlayer mediaPlayer = new MediaPlayer(getActivity().getApplicationContext()); 
     mediaPlayer.setPartialAdBreakPref(true);
    ```
-

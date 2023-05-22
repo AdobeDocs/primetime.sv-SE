@@ -1,14 +1,13 @@
 ---
 description: Den här handboken innehåller information om hur du utvecklar videospelarprogram med Browser TVSDK.
 title: Produktöversikt och målgrupp
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e2bbec5e-d1ce-430c-986c-ba3152190b1c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
-
 
 # Produktöversikt och målgrupp{#product-overview-and-audience}
 
@@ -34,7 +33,7 @@ För att snabba upp gränssnittsutvecklingen för JavaScript-baserade videospela
 * Skapa anpassade gränssnittskontroller
 * Användargränssnittet för spelaren skalas baserat på krav
 
-Mer information om API:erna för gränssnittsramverket finns i [UI Framework for Browser TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+Mer information om API:erna för UI-ramverket finns i [UI Framework for Browser TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
 
 ## Målgrupp {#section_DFC9DECC2E30426DBBDDEA4E288E666C}
 

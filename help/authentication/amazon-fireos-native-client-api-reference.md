@@ -1,13 +1,13 @@
 ---
 title: API-referens för inbyggda Amazon FireOS-klienter
 description: API-referens för inbyggda Amazon FireOS-klienter
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
 
 ---
-
 
 # API-referens för inbyggda Amazon FireOS-klienter {#amazon-fireos-native-client-api-reference}
 

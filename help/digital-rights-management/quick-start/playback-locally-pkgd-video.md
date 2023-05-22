@@ -2,14 +2,13 @@
 title: Spela upp en lokalt paketerad video
 description: Spela upp en lokalt paketerad video
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 25909e1e-6236-4388-a4f8-fd22326496c2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
-
 
 # Spela upp en lokalt paketerad video {#play-back-a-locally-packaged-video}
 
@@ -20,4 +19,4 @@ ht-degree: 0%
    ```
 
 1. Ange din lokalt paketerade innehålls-URL i medie-URL-fältet för spelaren och spela upp den.
-Om ditt lokalt paketerade innehåll inte kan nås från Internet kan du hämta en videospelare (AccessPlayer) från Adobe från <span></span>tp://drmtest2.adobe.com:8080/AccessPlayer.zip och placera den på din lokala webbserver för att använda den.
+Om ditt lokalt paketerade innehåll inte kan nås från Internet kan du hämta en videospelare (AccessPlayer) från Adobe från den<span></span>tp://drmtest2.adobe.com:8080/AccessPlayer.zip och placera den på din lokala webbserver för att använda den.

@@ -2,14 +2,13 @@
 title: Hantera FMRMS-kompatibilitet
 description: Hantera FMRMS-kompatibilitet
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 17029cf8-6be7-4bcb-a615-95dff9a7d723
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#handling-fmrms-compatibility-overview}
 

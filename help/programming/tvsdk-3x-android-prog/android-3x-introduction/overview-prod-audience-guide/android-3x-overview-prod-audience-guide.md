@@ -1,14 +1,13 @@
 ---
 description: Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK för Android, som implementeras i Java.
 title: Produktöversikt, målgrupp och den här guiden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85d7ff0f-a024-4cde-84e6-35f5b7adae86
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#audience}
 
@@ -16,9 +15,9 @@ Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* En lista med funktioner som stöds av TVSDK finns i [Primetime TVSDK-funktioner](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
-* Specifika maskin- och programvarukrav för TVSDK finns i [Krav](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
-* En lista över tillgängliga API:er finns i [TVSDK Android API:er](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
+* En lista med funktioner som stöds av TVSDK finns på [Funktioner i Primetime TVSDK](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
+* Specifika maskin- och programvarukrav för TVSDK finns på [Krav](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
+* En lista över tillgängliga API:er finns på [TVSDK Android-API:er](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
 
 ## Produktöversikt {#section_9664959F25C948878F2F7EF3D360CA95}
 
@@ -32,10 +31,10 @@ Den här guiden förutsätter att du förstår hur du utvecklar program och vide
 
 Den här guiden innehåller information som gör att du kan införliva TVSDK-funktioner i en videospelare med Java på Android-enheter.
 
-## Namnområdesnotering i den här guiden {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namnområdesnotering i den här handboken {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->API-namnområdesprefixet [!DNL com.adobe.mediacore] för TVSDK utelämnas ofta av utrymmesskäl.
+>API-namnområdesprefixet för TVSDK [!DNL com.adobe.mediacore] utelämnas ofta av utrymmesskäl.
 >
 >Många API-element refereras utan sin överordnade klassbeteckning om kontexten är klar.

@@ -3,7 +3,6 @@ title: Omkodning och normalisering
 description: Omkodning och normalisering
 copied-description: true
 exl-id: 48d9d971-4b15-4f1b-8740-c21983a3e835
-translation-type: tm+mt
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
 source-wordcount: '92'
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 Primetime Ad Insertion kommer att försöka säkerställa en enhetlig tittarupplevelse över innehåll och annonser genom att försöka matcha:
 
-1. Källströmskodekar och bithastigheter, men välj alltid den högsta kvaliteten/bithastigheten när du omkodar
+1. Källströmskodekar och bithastigheter, men välj alltid den högsta kvaliteten/bithastigheten när du kodar om
 
 1. Fragmentstorlekar för källström (HLS/#EXT-X-TARGETDURATION)
 

@@ -1,31 +1,30 @@
 ---
 description: TVSDK förbereder TimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 title: Prenumerera på egna taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7a3021cc-d2ba-4a70-9c1f-59766b848a62
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
-# Prenumerera på anpassade taggar{#subscribe-to-custom-tags}
+# Prenumerera på egna taggar{#subscribe-to-custom-tags}
 
 TVSDK förbereder TimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 
 Innan uppspelningen startar måste du prenumerera på taggarna.
-Om du vill prenumerera på taggar tilldelar du en vektor som innehåller de anpassade taggnamnen till egenskapen `subscribedTags`. Om du även behöver ändra de annonstaggar som används av standardgeneratorn för affärsmöjlighet tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till egenskapen `adTags`.
+Om du vill prenumerera på taggar tilldelar du en vektor som innehåller de anpassade taggnamnen till `subscribedTags` -egenskap. Om du även behöver ändra de annonstaggar som används av standardgeneratorn för affärsmöjlighet tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till `adTags` -egenskap.
 
 För att få meddelanden om anpassade taggar i HLS-manifestationer:
 
-1. Ange egna annonstaggnamn globalt genom att tilldela en vektor som innehåller de anpassade taggarna till `subscribeTags` i `MediaPlayerItemConfig`.
+1. Ange egna annonstaggnamn globalt genom att tilldela en vektor som innehåller de anpassade taggarna till `subscribeTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Du måste inkludera `#`-prefixet när du arbetar med HLS-strömmar.
+   >Du måste inkludera `#` prefix när du arbetar med HLS-strömmar.
 
-   Exempel:
+   Till exempel:
 
    ```
    var subscribedTags:Vector.<String> = new Vector.<String>(); 
@@ -34,7 +33,7 @@ För att få meddelanden om anpassade taggar i HLS-manifestationer:
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Om du vill ändra de annonstaggar som används av standardgeneratorn för affärsmöjlighet globalt tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till egenskapen `adTags` i `PSDKConfig`.
+1. Om du vill ändra annonstaggarna som används av standardgeneratorn för affärsmöjlighet globalt tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till `adTags` egenskap i `PSDKConfig`.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -55,7 +54,7 @@ För att få meddelanden om anpassade taggar i HLS-manifestationer:
       >
       >Det enklaste sättet är att skapa en standardkonfiguration för mediaspelarobjekt.
 
-   1. Tilldela en vektor som innehåller de anpassade taggarna till `subscribeTags` i `MediaPlayerItemConfig`.
+   1. Tilldela en vektor som innehåller de anpassade taggarna till `subscribeTags` in `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +66,7 @@ För att få meddelanden om anpassade taggar i HLS-manifestationer:
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Om du vill ändra de annonstaggar som används av standardgeneratorn för affärsmöjlighet i den angivna strömmen tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till egenskapen `adTags` i `mediaPlayerItemConfig`
+1. Om du vill ändra de annonstaggar som används av standardgeneratorn för affärsmöjlighet i den angivna strömmen tilldelar du en vektor som innehåller de anpassade annonstaggnamnen till `adTags` egenskap i `mediaPlayerItemConfig`
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -80,4 +79,3 @@ För att få meddelanden om anpassade taggar i HLS-manifestationer:
    ```
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

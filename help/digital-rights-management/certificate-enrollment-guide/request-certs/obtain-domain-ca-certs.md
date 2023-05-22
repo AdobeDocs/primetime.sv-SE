@@ -2,27 +2,26 @@
 title: Hämta certifikat för domän-certifikatutfärdare
 description: Hämta certifikat för domän-certifikatutfärdare
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cad233e0-41f7-4897-ab5f-d5a098c37306
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
-
-# Hämta domäncertifikatutfärdarcertifikat{#obtain-domain-ca-certificates}
+# Hämta certifikat för domän-certifikatutfärdare{#obtain-domain-ca-certificates}
 
 Till skillnad från licensservern, paketeraren eller transportcertifikatet utfärdas inte domänkontrollantcertifikatet av Adobe. Du kan hämta det här certifikatet från en certifikatutfärdare, eller så kan du generera ett självsignerat certifikat som kan användas för detta ändamål.
 
-Domäncertifikatutfärdarcertifikatet bör använda en 1024-bitarsnyckel och innehålla de standardattribut som krävs i ett certifikatutfärdarcertifikat:
+Domäncertifikatutfärdarcertifikatet bör använda en 1024-bitars nyckel och innehålla de standardattribut som krävs i ett certifikatutfärdarcertifikat:
 
 * Tillägget Grundläggande begränsningar med CA-flaggan inställd på true
 * Tillägget för nyckelanvändning som anger certifikatsignering är tillåtet
 
 Med OpenSSL kan till exempel ett självsignerat certifikatutfärdarcertifikat genereras på följande sätt:
 
-1. Skapa en fil med namnet [!DNL ca-extensions.txt] som innehåller:
+1. Skapa en fil med namnet [!DNL ca-extensions.txt] som innehåller
 
    ```
    keyUsage=critical,keyCertSign  
@@ -61,4 +60,3 @@ Med OpenSSL kan till exempel ett självsignerat certifikatutfärdarcertifikat ge
    openssl pkcs12 -export -inkey domain-ca.key \ 
    -in domain-ca.cer -out domain-ca.pfx
    ```
-

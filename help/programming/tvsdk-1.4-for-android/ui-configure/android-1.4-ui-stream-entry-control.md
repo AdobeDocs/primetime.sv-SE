@@ -1,14 +1,13 @@
 ---
 description: Som standard startar VOD-media vid uppspelning vid 0 (MediaPlayer.LIVE_POINT). Du kan åsidosätta standardbeteendet.
 title: Ange en ström vid en viss tidpunkt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a16b6281-37d5-491c-a2d0-2090894c8a70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Ange en ström vid en viss tidpunkt {#enter-a-stream-at-a-specific-time}
 
@@ -18,7 +17,7 @@ Som standard startar VOD-media vid uppspelning vid 0 (MediaPlayer.LIVE_POINT). D
 
    TVSDK anser att den angivna positionen är utgångspunkten för tillgången. Ingen sökåtgärd krävs. Om positionen inte ligger inom det sökbara intervallet använder TVSDK standardpositionen.
 
-   Exempel:
+   Till exempel:
 
    ```java
    long desiredPostion = //TODO : choose a value; 
@@ -35,4 +34,3 @@ Som standard startar VOD-media vid uppspelning vid 0 (MediaPlayer.LIVE_POINT). D
        } 
    } 
    ```
-

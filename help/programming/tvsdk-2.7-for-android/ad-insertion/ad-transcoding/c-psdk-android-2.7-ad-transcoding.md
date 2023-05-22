@@ -1,14 +1,13 @@
 ---
 description: Vissa tredjepartsannonser (eller andra kreatörer) kan inte sammanfogas i innehållsströmmen för HTTP-direktuppspelning (HLS) eftersom deras videoformat inte är kompatibelt med HLS. Primetimes annonsinfogning och TVSDK kan som tillval försöka paketera om inkompatibla annonser i kompatibla M3U8-videor.
 title: Paketera inkompatibla annonser med hjälp av Adobe Creative Repackaging Service (CRS)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b6fb2846-64b6-4db7-a6a9-f85365780775
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Paketera inkompatibla annonser med hjälp av Adobe Creative Repackaging Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
@@ -25,12 +24,9 @@ Om du vill aktivera den här valfria CRS-funktionen kontaktar du Adobe.
 >För kunder med CRS version 3.0 (och tidigare) har följande ändringar förbättrats både vad gäller säkerhet och prestanda:
 >
 >* CRS 3.1 fortsätter med `https:` om innehållet som packas om använder `https:`. Detta minskar vissa spelares potential att presentera osäkert innehåll.
-   >
-   >
-* CRS 3.1 minimerar nätverksanrop avsevärt, vilket förbättrar videons starttid.
-
 >
-
+>* CRS 3.1 minimerar nätverksanrop avsevärt, vilket förbättrar videons starttid.
+>
 
 
 Mer information om CRS finns i [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).

@@ -1,7 +1,8 @@
 ---
 title: Visa kontodelningsrapporter för flera programmerare och kanaler
 description: Visa kontodelningsrapporter för flera programmerare och kanaler
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%

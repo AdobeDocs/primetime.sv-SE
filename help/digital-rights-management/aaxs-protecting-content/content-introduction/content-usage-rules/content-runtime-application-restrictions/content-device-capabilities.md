@@ -2,14 +2,13 @@
 title: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 description: Enhetsfunktioner som krävs för att spela upp skyddat innehåll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5f2089e9-3176-46a7-9998-2dad0e77e453
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
 
 ---
-
 
 # Enhetsfunktioner som krävs för att spela upp skyddat innehåll {#device-capabilities-required-to-play-protected-content}
 
@@ -42,5 +41,4 @@ Enhetens funktioner kan identifieras med de attribut som anges i följande tabel
 
 >[!NOTE]
 >
->Den här användningsregeln stöds av Adobe Access-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se [Minsta klientversion](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
-
+>Den här användningsregeln stöds av Adobe Access-klienter version 2.0.2 och senare. Beteendet för äldre klienter beror på den lägsta klientversion som stöds av licensservern. Se, [Minsta klientversion](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).

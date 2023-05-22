@@ -1,33 +1,32 @@
 ---
 description: Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 title: Använd tidsbestämda metadata
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7f87cd14-121a-4543-ab0a-a03d829d040b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Använd tidsbestämda metadata {#use-timed-metadata}
 
 Du kan använda TimedMetadata när den aktuella uppspelningstiden matchar starttiden.
 
-Om du vill använda de här sparade `TimedMetadata`-objekten under uppspelningen använder du de sparade `ArrayList` från [Lagra tidsbestämda metadataobjekt när de skickas](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Använda dessa sparade `TimedMetadata` under uppspelning använder du de sparade `ArrayList` från [Lagra tidsbestämda metadataobjekt när de skickas](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Kör en timer och fråga den aktuella uppspelningstiden upprepade gånger.
-1. Hitta alla `TimedMetadata`-objekt med starttider som matchar den aktuella uppspelningstiden.
+1. Hitta alla `TimedMetadata` objekt med starttider som matchar den aktuella uppspelningstiden.
 
    Du kan använda dessa objekt för att slutföra olika åtgärder.
 
    >[!IMPORTANT]
    >
-   >När du kontrollerar om den aktuella uppspelningstiden matchar några `TimedMetadata`-objekt ska du ta med `shouldTriggerSubscribedTagEvent` som villkor.
+   >Kontrollera om den aktuella uppspelningstiden matchar någon `TimedMetadata` objekt, inkludera `shouldTriggerSubscribedTagEvent` som ett villkor.
 
-   Tidslinjen kan ändras på grund av olika annonsbeteenden. En eller flera annonsbrytningar kan till exempel flyttas från sina ursprungliga positioner på tidslinjen, men med `shouldTriggerSubscribedTagEvent` säkerställer du att starttiden för `TimeMetadata`-objektet matchar den aktuella uppspelningstiden.
+   Tidslinjen kan ändras på grund av olika annonsbeteenden. En eller flera annonsbrytningar kan till exempel flyttas från sina ursprungliga positioner på tidslinjen, men `shouldTriggerSubscribedTagEvent` säkerställer att `TimeMetadata` objektets starttid matchar den aktuella uppspelningstiden.
 
-   Exempel:
+   Till exempel:
 
    ```java
     _playbackClockEventListener = new Clock.ClockEventListener() {
@@ -59,4 +58,4 @@ Om du vill använda de här sparade `TimedMetadata`-objekten under uppspelningen
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Justera regelbundet inaktuella `TimedMetadata`-instanser från listan för att förhindra att minnet växer kontinuerligt.
+1. Justera streck regelbundet `TimedMetadata` -instanser i listan för att förhindra att minnet växer kontinuerligt.

@@ -1,14 +1,13 @@
 ---
 description: Det finns några sätt att avgöra annonsinfogning och annonsplacering.
 title: Infogning och placering av annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 73f24a65-4be2-47d3-8cb9-5cb2c81e6d93
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
 
 ---
-
 
 # Infogning och placering av annonser{#ad-insertion-and-placement}
 
@@ -18,7 +17,7 @@ Det finns några sätt att avgöra annonsinfogning och annonsplacering.
 
 Här är en översikt över processen som används för att bestämma annonsinfogning:
 
-1. **Affärsmöjlighet**: TVSDK använder ströminformation för att identifiera möjliga och önskade platser för annonser.
+1. **Möjligheter att identifiera**: TVSDK använder ströminformation för att identifiera möjliga och önskade platser för annonser.
 1. **Annonsupplösning**: TVSDK kommunicerar med en annonsserver för att hämta annonser som ska delas in i innehållet.
 1. **Annonsplacering**: TVSDK läser in de angivna annonserna och placerar dem i annonsbrytningar på innehållets tidslinje på de angivna platserna och beräknar om den virtuella tidslinjen, om det behövs.
 
@@ -41,4 +40,3 @@ TVSDK kan hämta platser för annonsplacering från följande källor:
 >[!NOTE]
 >
 >Som standard använder TVSDK manifesttecken för live/linjära strömmar och annonsserverkartor för VOD-strömmar. Om du vill ha stöd för reprisering av live-event måste programmet dock vidta extra åtgärder.
-

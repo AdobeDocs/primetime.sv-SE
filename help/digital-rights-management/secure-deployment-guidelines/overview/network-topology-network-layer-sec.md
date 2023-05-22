@@ -1,14 +1,13 @@
 ---
 description: Säkerhetsluckor för nätverk är bland de första hoten mot alla Internetanslutna eller intranätriktade programservrar, och du måste värdar i nätverket mot dessa sårbarheter.
 title: Säkerhet för nätverkslager
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0a45d18a-66aa-4ecc-8eaf-e2af599eb3b8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhet för nätverkslager{#network-layer-security}
 
@@ -43,4 +42,3 @@ Här är några vanliga tekniker som minskar sårbarheten när det gäller nätv
   </tr> 
  </tbody> 
 </table>
-

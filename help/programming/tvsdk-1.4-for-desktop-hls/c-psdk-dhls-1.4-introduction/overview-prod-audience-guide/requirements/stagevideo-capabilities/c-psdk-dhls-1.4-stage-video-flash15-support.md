@@ -1,14 +1,13 @@
 ---
 description: Från Flash 15 och senare, när maskinvaruåtergivning med StageVideo inte är tillgängligt, återgår StageVideo sömlöst till ett StageVideo-programvaruobjekt.
 title: Flash 15-stöd för StageVideo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 23ef0806-3aa5-4c48-a4f7-4ad9b72bdcc9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
-
 
 # Flash 15-stöd för StageVideo{#flash-support-for-stagevideo}
 
@@ -27,6 +26,6 @@ Titta på följande information om StageVideo-återgång till programmet Flash 1
 
 ## HTML-övertäckningar {#html-overlays}
 
-I Flash 15 och senare kan du hantera en sömlös visning av HTML-övertäckningar när maskinvaruversionen av StageVideo blir otillgänglig och återgår till programvaran StageVideo. Om du vill aktivera den här funktionen anger du `wmode=opaque`.
+I Flash 15 och senare kan du hantera en sömlös visning av HTML-övertäckningar när maskinvaruversionen av StageVideo blir otillgänglig och återgår till programvaran StageVideo. Aktivera den här funktionen genom att ange `wmode=opaque`.
 
-Vissa äldre webbläsare stöder inte maskinvaruacceleration. Mer information om dessa krav finns i [Lägsta krav för StageVideo](../../../../../tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md). När du anger `wmode=opaque` återges videon med programvaran StageVideo, som kan påverka prestanda. Om du ställer in `wmode=direct` återges videon direkt till GPU, vilket ger mycket bättre prestanda. Men det här alternativet åsidosätter även HTML-övertäckningar.
+Vissa äldre webbläsare stöder inte maskinvaruacceleration. Mer information om dessa krav finns i [Lägsta krav för StageVideo](../../../../../tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md). När du anger `wmode=opaque`, återges videon med StageVideo-programvaran som kan påverka prestanda. Vanligtvis, ange `wmode=direct` återger video direkt till GPU, vilket ger mycket bättre prestanda. Det här alternativet åsidosätter även övertäckningar för HTML.

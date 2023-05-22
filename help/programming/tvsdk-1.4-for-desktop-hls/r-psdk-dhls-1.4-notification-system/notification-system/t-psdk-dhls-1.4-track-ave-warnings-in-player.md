@@ -1,14 +1,13 @@
 ---
 description: Med NotificationEvent kan du spåra varningar som skickas från Adobe Video Engine (AVE).
 title: Spåra AVE-varningar i spelaren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 49118d7f-ed79-4d22-ba91-8929f97c7256
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Spåra AVE-varningar i spelaren{#track-ave-warnings-in-your-player}
 
@@ -78,7 +77,7 @@ public class NotificationEvent extends Event {
 
 Lägg till en händelseavlyssnare i spelaren för att fånga upp AVE-varningar.
 
-Exempel:
+Till exempel:
 
 ```
 var _player:DefaultMediaPlayer = new DefaultMediaPlayer(context); 
@@ -99,7 +98,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Här är ett exempel på AVE-varningar som spårades med `NotificationEvent`:
+Här är ett exempel på AVE-varningar som spårats med `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 

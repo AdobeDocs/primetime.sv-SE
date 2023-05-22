@@ -1,13 +1,13 @@
 ---
 title: Registreringssida
 description: Registreringssida
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # Registreringssida {#registration-page}
 
@@ -199,4 +199,3 @@ Returnerar slumpmässigt genererad registreringskod och inloggningssidans URI.
         }
     }
 ```
-

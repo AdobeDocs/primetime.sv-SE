@@ -1,14 +1,13 @@
 ---
 description: Mediespelarens status avgör vilka åtgärder som är giltiga.
 title: Livscykel och status för MediaPlayer-objektet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6b43f334-bd21-4d0e-a123-fd99403a6082
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
 
 ---
-
 
 # Livscykel och status för MediaPlayer-objektet {#lifecycle-and-statuses-of-the-mediaplayer-object}
 
@@ -16,11 +15,11 @@ Mediespelarens status avgör vilka åtgärder som är giltiga.
 
 För att arbeta med status för mediespelare:
 
-* Du kan hämta aktuell status för `MediaPlayer`-objektet med `MediaPlayer.getStatus()`.
+* Du kan hämta aktuell status för `MediaPlayer` objekt med `MediaPlayer.getStatus()`.
 
-* Statuslistan definieras i uppräkningen [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html).
+* Statuslistan definieras i [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) enum.
 
-Statusövergångsdiagram för livscykeln för en `MediaPlayer`-instans:
+Statusövergångsdiagram för livscykeln för en `MediaPlayer` instans:
 <!--<a id="fig_A6425F24C7734DC681D992859D2A6743"></a>-->
 
 ![](assets/media_player_statuses.png)
@@ -41,7 +40,7 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
   </tr> 
   <tr> 
    <td colname="col1"> INITIERAR </td> 
-   <td colname="col2"> <p>Ditt program anropar <span class="codeph"> MediaPlayer.replaceCurrentItem() </span>. </p> <p>Mediespelarobjektet läses in. </p> </td> 
+   <td colname="col2"> <p>Dina programsamtal <span class="codeph"> MediaPlayer.replaceCurrentItem() </span>. </p> <p>Mediespelarobjektet läses in. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> INITIERAD </td> 
@@ -49,7 +48,7 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
   </tr> 
   <tr> 
    <td colname="col1"> FÖRBEREDER </td> 
-   <td colname="col2"> <p>Ditt program anropar <span class="codeph"> MediaPlayer.prepareToPlay() </span>. Mediespelaren läser in mediespelarobjektet och associerade resurser. </p> </td> 
+   <td colname="col2"> <p>Dina programsamtal <span class="codeph"> MediaPlayer.prepareToPlay() </span>. Mediespelaren läser in mediespelarobjektet och associerade resurser. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> FÖRBEREDD </td> 
@@ -61,11 +60,11 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
   </tr> 
   <tr> 
    <td colname="col1"> UPPHÄVD </td> 
-   <td colname="col2"> <p>Om programmet navigerar bort från uppspelningen, stänger av enheten eller växlar program medan spelaren spelas upp eller pausas, pausas mediespelaren och resurser frigörs. </p> <p>Om du anropar <span class="codeph"> MediaPlayer.restore() </span> återställs spelaren till den status som spelaren hade innan den SUSPENDED användes. Undantaget är om spelaren SEEKING anropas när den pausas, PAUSED och sedan SUSPENDED. </p> <p>Viktigt:  <p>Kom ihåg följande information: 
+   <td colname="col2"> <p>Om programmet navigerar bort från uppspelningen, stänger av enheten eller växlar program medan spelaren spelas upp eller pausas, pausas mediespelaren och resurser frigörs. </p> <p>Anropar <span class="codeph"> MediaPlayer.restore() </span> återställer spelaren till den status som spelaren hade innan den SUSPENDED. Undantaget är om spelaren SEEKING anropas när den pausas, PAUSED och sedan SUSPENDED. </p> <p>Viktigt:  <p>Kom ihåg följande information: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">Med <span class="codeph"> MediaPlayer </span> anropas automatiskt <span class="codeph"> paus </span> bara när det ytobjekt som används av MediaPlayerView </span> förstörs.<span class="codeph"> </span></li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1"><span class="codeph"> MediaPlayer </span> anropar automatiskt <span class="codeph"> restore() </span> bara när ett nytt ytobjekt som används av MediaPlayerView </span> skapas.<span class="codeph"> </span></li> 
-      </ul> </p> </p> <p>Om du alltid vill att uppspelningen ska pausas när MediaPlayer återställs ska du låta programmet anropa <span class="codeph"> MediaPlayer.pause() </span> i Android-aktivitetens <span class="codeph"> onPause() </span>-metod. </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">The <span class="codeph"> MediaPlayer </span> anrop automatiskt <span class="codeph"> pausa </span> bara när det ytobjekt som används av <span class="codeph"> MediaPlayerView </span> förstörs. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">The <span class="codeph"> MediaPlayer </span> anrop automatiskt <span class="codeph"> restore() </span> bara när ett nytt ytobjekt som används av <span class="codeph"> MediaPlayerView </span> skapas. </li> 
+      </ul> </p> </p> <p>Om du alltid vill att uppspelningen ska pausas när MediaPlayer återställs ska du låta programmet ringa <span class="codeph"> MediaPlayer.pause() </span> i Android Activity's <span class="codeph"> onPause() </span> -metod. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> SLUTFÖRD </td> 
@@ -86,7 +85,7 @@ Följande tabell innehåller information om mediespelarens livscykel och status:
 >
 >Du kan använda statusen för att ge feedback om processen, till exempel en snurra som väntar på nästa statusändring, eller utföra nästa steg när du spelar upp media, till exempel vänta på rätt status innan du anropar nästa metod.
 
-Exempel:
+Till exempel:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayerEvent STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -109,4 +108,3 @@ mediaPlayer.addEventListener(MediaPlayerEvent STATUS_CHANGED, new StatusChangeEv
     } 
 }); 
 ```
-

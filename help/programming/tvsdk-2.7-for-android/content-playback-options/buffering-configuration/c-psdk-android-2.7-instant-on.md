@@ -1,32 +1,31 @@
 ---
 description: Om du aktiverar direkt innebär det att en eller flera kanaler är förinlästa. När användare väljer en kanal eller byter kanal spelas innehållet upp omedelbart. Bufferten är klar när användaren börjar titta.
 title: Direkt på
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a9c0b9d0-ef2b-4113-bd08-e2b2792b04fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
-
 # Direkt på {#instant-on}
 
 Om du aktiverar direkt innebär det att en eller flera kanaler är förinlästa. När användare väljer en kanal eller byter kanal spelas innehållet upp omedelbart. Bufferten är klar när användaren börjar titta.
 
-Utan Instant On initierar TVSDK mediet som ska spelas upp, men börjar inte buffra strömmen förrän programmet anropar `play`. Användaren ser inget innehåll förrän bufferten är klar. Med Instant On kan du starta flera mediespelarinstanser (eller inläsare för mediespelare) och TVSDK börjar buffra strömmarna direkt. När en användare ändrar kanalen och strömmen har buffrats korrekt startar ett anrop till `play` på den nya kanalen uppspelningen omedelbart.
+Utan Instant On initierar TVSDK mediet som ska spelas upp, men börjar inte buffra strömmen förrän programmet anropar `play`. Användaren ser inget innehåll förrän bufferten är klar. Med Instant On kan du starta flera mediespelarinstanser (eller inläsare för mediespelare) och TVSDK börjar buffra strömmarna direkt. När en användare ändrar kanalen och strömmen har buffrats korrekt anropas `play` i den nya kanalen startar uppspelningen omedelbart.
 
-Även om det inte finns några gränser för hur många instanser av `MediaPlayer` och `MediaPlayerItemLoader` som TVSDK kan köra, kräver körningen av fler instanser mer resurser. Programmets prestanda kan påverkas av antalet instanser som körs. Mer information om `MediaPlayerItemLoader` finns i [Läs in en medieresurs i mediespelaren](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
+Även om det inte finns några begränsningar för antalet `MediaPlayer` och `MediaPlayerItemLoader` instanser som TVSDK kan köra och fler instanser kräver mer resurser. Programmets prestanda kan påverkas av antalet instanser som körs. Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs i mediespelaren](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->TVSDK stöder inte en enskild `QoSProvider`-instans för att arbeta med både `itemLoader` och `MediaPlayer`. Om kunden använder Instant On måste programmet underhålla två QoS-instanser och hantera båda instanserna för informationen.
+>TVSDK stöder inte en enda `QoSProvider` att arbeta med båda `itemLoader` och `MediaPlayer`. Om kunden använder Instant On måste programmet underhålla två QoS-instanser och hantera båda instanserna för informationen.
 
-Mer information om `MediaPlayerItemLoader` finns i [Läs in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
+Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
-## Lägg till en QoS-providerinstans i mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
+## Lägga till en QoS-providerinstans i mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* Skapa och koppla en QoS-provider till en `mediaPlayerItemLoader`-instans
+* Skapa och bifoga en QoS-provider till en `mediaPlayerItemLoader` instance
 
    ```
    // Create an instance of QoSProvider  
@@ -37,28 +36,28 @@ Mer information om `MediaPlayerItemLoader` finns i [Läs in en medieresurs med M
    _qosProvider.attachMediaPlayerItemLoader(this._loader); 
    ```
 
-   När uppspelningen startar använder du `_qosProvider` för att hämta `timeToLoad` och `timeToPrepare` QoSdata. Återstående QoS-mått kan hämtas med `QoSProvider` som är kopplad till `mediaPlayer`.
+   När uppspelningen har startat använder du `_qosProvider` för att `timeToLoad` och `timeToPrepare` QoSdata. Återstående QoS-mått kan hämtas med `QoSProvider` som är kopplad till `mediaPlayer`.
 
-   Mer information om `MediaPlayerItemLoader` finns i [Läs in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
+   Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
-## Konfigurera buffring för Instant On {#section_4FE346B7BE434BA8A2203896D6E52146}
+## Konfigurera buffring för Direkt på {#section_4FE346B7BE434BA8A2203896D6E52146}
 
 TVSDK innehåller metoder och statusar som gör att du kan använda Direktaktivering med en medieresurs.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder `MediaPlayerItemLoader` för InstantOn. Mer information om hur du använder `MediaPlayerItemLoader` i stället för `MediaPlayer` finns i media-resource-load-using-mediaplayeritemloader.
+>Adobe rekommenderar att du använder `MediaPlayerItemLoader` för InstantOn. Används `MediaPlayerItemLoader`i stället för `MediaPlayer`, se media-resource-load-using-mediaplayeritemloader .
 
 1. Bekräfta att resursen har lästs in och att spelaren är redo att spela upp resursen.
-1. Innan du anropar `play` ska du ringa `prepareBuffer` för varje `MediaPlayer`-instans.
+1. Före anrop `play`, ring `prepareBuffer` för varje `MediaPlayer` -instans.
 
    >[!NOTE]
    >
-   >`prepareBuffer` aktiverar Instant On och TVSDK börjar buffra omedelbart och skickar  `BUFFERING_COMPLETED` händelsen när bufferten är full.
+   >`prepareBuffer` aktiverar Instant On, och TVSDK börjar buffra omedelbart och skickar `BUFFERING_COMPLETED` -händelsen när bufferten är full.
 
    >[!TIP]
    >
-   >Som standard konfigurerar `prepareBuffer` och `prepareToPlay` medieströmmen så att den börjar spelas upp från början. Om du vill börja på en annan position skickar du positionen (i millisekunder) till `prepareToPlay`.
+   >Som standard `prepareBuffer` och `prepareToPlay` konfigurera medieströmmen så att den börjar spelas upp från början. Om du vill börja vid en annan position skickar du positionen (i millisekunder) till `prepareToPlay`.
 
    ```
    @Override 
@@ -78,9 +77,8 @@ TVSDK innehåller metoder och statusar som gör att du kan använda Direktaktive
    }
    ```
 
-1. När du tar emot händelsen `BUFFERING_COMPLETE` börjar du spela upp objektet eller visar visuell feedback som anger att innehållet är helt buffrat.
+1. När du får `BUFFERING_COMPLETE` börjar du spela upp objektet eller visar visuell feedback som anger att innehållet är helt buffrat.
 
    >[!NOTE]
    >
-   >Om du anropar `play` ska uppspelningen börja omedelbart.
-
+   >Om du ringer `play`ska uppspelningen börja omedelbart.

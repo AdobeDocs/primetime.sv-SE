@@ -1,26 +1,25 @@
 ---
 description: Du kan konfigurera egna taggnamn i en ström med klassen MediaPlayerItemConfig.
 title: Konfig-klassmetoder för taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 864d5c35-2b26-447b-8134-414e82096f18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
-
 # Konfig-klassmetoder för taggar{#config-class-methods-for-tags}
 
 Du kan konfigurera egna taggnamn i en ström med klassen MediaPlayerItemConfig.
 
-Så här skapar du en ny `MediaPlayerItemConfig`:
+Skapa en ny `MediaPlayerItemConfig`:
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-Här är lite information om hur `MediaPlayerItemConfig`-metoderna används för att hantera anpassade taggar:
+Här finns information om hur `MediaPlayerItemConfig` -metoder används för att hantera egna taggar:
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -43,7 +42,7 @@ Här är lite information om hur `MediaPlayerItemConfig`-metoderna används för
    <td colname="col2"> <p>Anger en lista över prenumerationstaggar som visas för programmet. </p> <p>Ditt program prenumererar automatiskt på alla taggar som överförs via <span class="codeph"> adTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Anpassa de annonstaggar som används av standardannonsdetektorn  </b> </td> 
+   <td colname="col1"> <b>Anpassa de annonstaggar som används av standardannonsdetektorn </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -65,9 +64,8 @@ Här är lite information om hur `MediaPlayerItemConfig`-metoderna används för
 
 Kom ihåg följande:
 
-* Det anpassade taggnamnet måste innehålla prefixet `#`.
+* Det anpassade taggnamnet måste innehålla `#` prefix.
 
-   Till exempel är `#EXT-X-ASSET` ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
+   Till exempel: `#EXT-X-ASSET` är ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
 
 * Du kan inte ändra konfigurationen efter att medieströmmen har lästs in.
-

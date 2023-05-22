@@ -1,13 +1,13 @@
 ---
 title: API-referens för JavaScript SDK
 description: API-referens för JavaScript SDK
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2835'
 ht-degree: 0%
 
 ---
-
 
 # API-referens för JavaScript SDK {#javascript-sdk-api-reference}
 
@@ -652,4 +652,3 @@ Till exempel:
 -->
 
 [Till början](#top)
-

@@ -2,16 +2,15 @@
 title: Lösenordsfasare
 description: Lösenordsfasare
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ceedd61e-918b-453f-8d21-628b2d8713ff
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
 
 ---
 
-
-# Lösenordsschemat {#password-scrambler}
+# Lösenordsfasare {#password-scrambler}
 
 Verktyget Lösenordsspåraren krypterar ett lösenord så att det kan användas i konfigurationsfilerna för skyddad strömning i Adobe Access Server. Kör kommandot för att köra kramaren:
 
@@ -36,4 +35,3 @@ Alla lösenord som anges i flashaccess-global.xml och flashaccess-tenant.xml må
 >[!NOTE]
 >
 >Verktyget Password Scrambler i Adobe Access Server för skyddad direktuppspelning är inte utbytbart med den skramlare som ingår i Reference Implementation License Server.
-

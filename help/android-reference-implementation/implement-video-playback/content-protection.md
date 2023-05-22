@@ -1,14 +1,13 @@
 ---
 description: Primetime-spelaren stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Detta innebär att ditt program måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp.
 title: Skydd av DRM-innehåll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c1904d15-023f-49fb-95f9-d157d17b3516
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
-
 
 # Skydd av DRM-innehåll {#drm-content-protection}
 
@@ -22,7 +21,7 @@ Om du vill aktivera detta tillhandahåller TVSDK DRM-hanteraren för autentiseri
 
 Allt DRM-skyddat innehåll hanteras automatiskt av de DRM-bibliotek som är inbyggda i TVSDK. Du kan dock visa felhantering, optimering av enhetspersonalisering och licensköp med hjälp av API-återanrop för TVSDK.
 
-## Lägg till innehållsskydd i spelaren {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
+## Lägg till materialskydd till spelaren {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
 Du kan lägga till innehållsskydd till spelaren genom att skapa en uppspelningshanterare eller genom att använda hanterarfabriken.
 
@@ -30,7 +29,7 @@ Så här skapar du en innehållshanterare:
 
 * Initiera DRM-systemet.
 
-   I följande kodexempel visas anropet `loadDRMServices` i funktionen `onCreate()` för att säkerställa att initieringen som krävs för DRM-systemet initieras innan uppspelningen startar.
+   I följande kodexempel visas anropet `loadDRMServices` i programmet `onCreate()` för att se till att alla initieringar som krävs för DRM-systemet initieras innan uppspelningen startar.
 
    ```java
    @Override 
@@ -66,7 +65,7 @@ Så här skapar du en innehållshanterare:
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* Om du vill använda `ManagerFactory` för att implementera DRM-felhantering måste följande kodrad finnas i filen [!DNL PlayerFragment.java]:
+* Används `ManagerFactory` för att implementera DRM-felhantering, se till att följande kodrad finns i [!DNL PlayerFragment.java] fil:
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);

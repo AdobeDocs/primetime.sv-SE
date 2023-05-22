@@ -1,14 +1,13 @@
 ---
 description: Med lösenordsmodulen krypteras ett lösenord för Adobe Primetime DRM-servern för konfigurationsfiler för skyddad direktuppspelning.
 title: Lösenordsskrubbare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9cedd3e5-01db-4ea9-bf23-8767987fc26c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
-
 
 # Lösenordsskrubbare {#password-scrambler}
 
@@ -41,7 +40,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Alla lösenord som du har angett i filerna [!DNL flashaccess-global.xml] och [!DNL flashaccess-tenant.xml] måste krypteras.
+Alla lösenord som du har angett i [!DNL flashaccess-global.xml] och [!DNL flashaccess-tenant.xml] filer måste krypteras.
 
 >[!NOTE]
 >

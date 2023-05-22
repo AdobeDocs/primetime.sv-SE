@@ -2,26 +2,25 @@
 title: DRM Revocation List Manager
 description: DRM Revocation List Manager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5b17d195-30ca-4005-b710-83a6f77779a2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
 
-
 # DRM Revocation List Manager {#policy-revocation-list-manager}
 
-Använd kommandoradsverktyget Primetime DRM Revocation List Manager ( [!DNL AdobeRevocationListManager.jar]) för att skapa och hantera återkallningslistor och för att kontrollera om profiler har återkallats.
+Använda kommandoradsverktyget Primetime DRM Revocation List Manager ( [!DNL AdobeRevocationListManager.jar]) för att skapa och hantera återkallningslistor och för att kontrollera om policyer har återkallats.
 
-Innan du kör [!DNL AdobeRevocationListManager.jar] måste du ange egenskaper i *listhanteraren för principuppdatering och egenskaper för spärrlistehanteraren* i konfigurationsfilen.
+Innan du kör [!DNL AdobeRevocationListManager.jar]måste du ange egenskaper i *Egenskaper för listhanteraren för principuppdatering och återkallningslisthanteraren* i konfigurationsfilen.
 
 >[!NOTE]
 >
 >Du kan också ange alla egenskaper för Hanteraren för spärrlista från kommandoraden.
 
-## Kommandoradsanvändning {#revocation-list-manager-command-line-usage} för Hanteraren för återkallningslista
+## Kommandoradsanvändning för Revocation List Manager {#revocation-list-manager-command-line-usage}
 
 ```
 java -jar AdobeRevocationListManager.jar 
@@ -55,7 +54,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p><p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Revocation List Manager efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p><p>Obs!  De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p>Anger platsen för konfigurationsfilen. Om du inte använder det här alternativet söker Revocation List Manager efter <span class="filepath"> flashaccesstools.properties</span> i arbetskatalogen. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p><p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Revocation List Manager efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p><p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p>Anger platsen för konfigurationsfilen. Om du inte använder det här alternativet söker återkallningslisthanteraren efter <span class="filepath"> flashaccesstools.properties</span> i arbetskatalogen. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d filnamn</span> </td> 
@@ -75,7 +74,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte har angetts inträffar ett fel. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> är inte inställt, inträffar ett fel. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -83,11 +82,11 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issurName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar certifikatet som har identifierats av <span class="codeph"> utfärdarnamn</span> och <span class="codeph"> serienummer</span> på det angivna datumet. <span class="codeph"> utfärdarnamn</span> måste använda 509-namnformatet. Till exempel <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Du måste ange serienumren i ett hexadecimalt format. Du måste även ange återkallningsdatumet i något av följande format: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Återkallar det certifikat som har identifierats av <span class="codeph"> publisherName</span> och <span class="codeph"> serialNumber</span> på angivet datum. The <span class="codeph"> publisherName</span> måste använda namnformatet 509. Till exempel: <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Du måste ange serienumren i ett hexadecimalt format. Du måste även ange återkallningsdatumet i något av följande format: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> </li> 
-     </ul>Exempel: 2008-12-1 eller 2008-12-1-00:00:00 för midnatt den 1 december 2008. Om du inte anger återkallelsedatumet används det aktuella datumet automatiskt. </p> </td> 
+     </ul>Exempel: 2008-12-1 eller 2008-12-1-00:00:00 i midnatt den 1 december 2008. Om du inte anger återkallelsedatumet används det aktuella datumet automatiskt. </p> </td> 
   </tr> 
  </tbody> 
 </table>

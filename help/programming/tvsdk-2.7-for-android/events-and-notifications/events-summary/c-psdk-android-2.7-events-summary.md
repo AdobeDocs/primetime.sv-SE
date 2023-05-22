@@ -1,16 +1,15 @@
 ---
 description: Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga status genom att avlyssna händelser som skickas av TVSDK.
 title: Sammanfattning av händelser för Primetime Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 42489abe-ccaf-4b40-bb4b-de8547b5585a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
 
-
-# Sammanfattning av händelser i Primetime-spelaren {#primetime-player-events-summary-overview}
+# Sammanfattning av händelser för Primetime Player {#primetime-player-events-summary-overview}
 
 Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga status genom att avlyssna händelser som skickas av TVSDK.
 
@@ -20,13 +19,13 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 >[!TIP]
 >
->Händelsekoderna är konstanterna för `MediaPlayerEvent`-uppräkningen.
+>Händelsekoderna är konstanterna för `MediaPlayerEvent` enum.
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
 * ** Betydelse ** Uppspelningen av annonsbrytningen är klar.
 
-* ** Återanrop som ska implementeras ** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_BREAK_COMPLETE`
 
@@ -34,7 +33,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En annonsbrytning hoppades över under uppspelning.
 
-* ** Återanrop som ska implementeras ** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_BREAK_SKIPPED`
 
@@ -42,7 +41,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningen av annonsbrytning har startat.
 
-* ** Återanrop som ska implementeras ** `onAdBreakStarted(AdBreakPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_BREAK_START`
 
@@ -50,7 +49,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En annons klickades under uppspelningen.
 
-* ** Återanrop som ska implementeras ** `onAdClicked(AdClickEvent event)`
+* ** Återanrop för implementering ** `onAdClicked(AdClickEvent event)`
 
 * ** Händelsekod ** `AD_CLICK`
 
@@ -58,7 +57,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningen av annonsen är klar.
 
-* ** Återanrop som ska implementeras ** `onAdCompleted(AdPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdCompleted(AdPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_COMPLETE`
 
@@ -66,7 +65,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Rapporterar förlopp under uppspelning.
 
-* ** Återanrop som ska implementeras ** `onAdProgress(AdPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdProgress(AdPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_PROGRESS`
 
@@ -74,7 +73,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelsen ** Primetimes annonsbeslutsupplösning är klar. Den här händelsen gäller endast VOD-innehåll.
 
-* ** Återanrop som ska implementeras ** `onAdResolutionComplete()`
+* ** Återanrop för implementering ** `onAdResolutionComplete()`
 
 * ** Händelsekod ** `AD_RESOLUTION_COMPLETE`
 
@@ -82,7 +81,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningen av annonsen har startat.
 
-* ** Återanrop som ska implementeras ** `onAdStarted(AdPlaybackEvent event)`
+* ** Återanrop för implementering ** `onAdStarted(AdPlaybackEvent event)`
 
 * ** Händelsekod ** `AD_START`
 
@@ -90,7 +89,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Ett nytt ljudspår har identifierats.
 
-* ** Återanrop som ska implementeras ** `onAudioUpdated(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onAudioUpdated(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `AUDIO_TRACK_UPDATED`
 
@@ -98,7 +97,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Spelaren har börjat buffra.
 
-* ** Återanrop som ska implementeras ** `onBufferingBegin(BufferEvent event)`
+* ** Återanrop för implementering ** `onBufferingBegin(BufferEvent event)`
 
 * ** Händelsekod ** `BUFFERING_BEGIN`
 
@@ -106,7 +105,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Spelaren har slutat buffra.
 
-* ** Återanrop som ska implementeras ** `onBufferingEnd(BufferEvent event)`
+* ** Återanrop för implementering ** `onBufferingEnd(BufferEvent event)`
 
 * ** Händelsekod ** `BUFFERING_END`
 
@@ -114,7 +113,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Bufferten förbereds.
 
-* ** Återanrop som ska implementeras ** `onBufferPrepared()`
+* ** Återanrop för implementering ** `onBufferPrepared()`
 
 * ** Händelsekod ** `BUFFER_PREPARED`
 
@@ -122,7 +121,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Ett nytt bildtextspår har identifierats.
 
-* ** Återanrop som ska implementeras ** `onCaptionsUpdated(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `CAPTIONS_UPDATED`
 
@@ -130,7 +129,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En ny DRM-metadata har identifierats i medieströmmen.
 
-* ** Återanrop som ska implementeras ** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
+* ** Återanrop för implementering ** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
 * ** Händelsekod ** `DRM_METADATA`
 
@@ -138,7 +137,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Ett nytt mediespelarobjekt har skapats.
 
-* ** Återanrop som ska implementeras ** `onItemCreated(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onItemCreated(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `ITEM_CREATED`
 
@@ -146,7 +145,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Ny inläsningsinformation har skapats för det aktuella objektet.
 
-* ** Återanrop som ska implementeras ** `onLoadComplete(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onLoadComplete(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `ITEM_UPDATED`
 
@@ -154,7 +153,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Ett nytt segment har lästs in.
 
-* ** Återanrop som ska implementeras ** `onLoadInformation(LoadInformationEvent event)`
+* ** Återanrop för implementering ** `onLoadInformation(LoadInformationEvent event)`
 
 * ** Händelsekod ** `LOAD_INFORMATION_AVAILABLE`
 
@@ -162,7 +161,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Huvudmanifestet eller spellistan har uppdaterats.
 
-* ** Återanrop som ska implementeras ** `onMainManifestUpdated(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `MANIFEST_UPDATED`
 
@@ -170,7 +169,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Åtgärden misslyckades.
 
-* ** Återanrop som ska implementeras ** `onNotification(NotificationEvent event)`
+* ** Återanrop för implementering ** `onNotification(NotificationEvent event)`
 
 * ** Händelsekod ** `OPERATION_FAILED`
 
@@ -178,7 +177,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningsintervallet har uppdaterats.
 
-* ** Återanrop som ska implementeras ** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
+* ** Återanrop för implementering ** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
 * ** Händelsekod ** `PLAYBACK_RANGE_UPDATED`
 
@@ -186,7 +185,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En ny uppspelningshastighet visas på skärmen.
 
-* ** Återanrop som ska implementeras ** `onRatePlaying(PlaybackRateEvent event)`
+* ** Återanrop för implementering ** `onRatePlaying(PlaybackRateEvent event)`
 
 * ** Händelsekod ** `RATE_PLAYING`
 
@@ -194,7 +193,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Attributet rate för MediaPlayer har angetts.
 
-* ** Återanrop som ska implementeras ** `onRateSelected(PlaybackRateEvent event)`
+* ** Återanrop för implementering ** `onRateSelected(PlaybackRateEvent event)`
 
 * ** Händelsekod ** `RATE_SELECTED`
 
@@ -202,7 +201,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningen har startat.
 
-* ** Återanrop som ska implementeras ** `onPlayStart()`
+* ** Återanrop för implementering ** `onPlayStart()`
 
 * ** Händelsekod ** `PLAY_START`
 
@@ -210,7 +209,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** MediaPlayers aktuella profil har ändrats.
 
-* ** Återanrop som ska implementeras ** `onProfileChanged(ProfileEvent event)`
+* ** Återanrop för implementering ** `onProfileChanged(ProfileEvent event)`
 
 * ** Händelsekod ** `PROFILE_CHANGED`
 
@@ -218,7 +217,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Uppspelningen har nått en tidsgräns.
 
-* ** Återanrop som ska implementeras ** `onReservationReached(ReservationEvent event)`
+* ** Återanrop för implementering ** `onReservationReached(ReservationEvent event)`
 
 * ** Händelsekod ** `RESERVATION_REACHED`
 
@@ -226,7 +225,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Sökåtgärden har startats.
 
-* ** Återanrop som ska implementeras ** `onSeekBegin(SeekEvent event)`
+* ** Återanrop för implementering ** `onSeekBegin(SeekEvent event)`
 
 * ** Händelsekod ** `SEEK_BEGIN`
 
@@ -234,7 +233,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Sökningen är klar.
 
-* ** Återanrop som ska implementeras ** `onSeekEnd(SeekEvent event)`
+* ** Återanrop för implementering ** `onSeekEnd(SeekEvent event)`
 
 * ** Händelsekod ** `SEEK_END`
 
@@ -242,7 +241,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Sökpositionen har justerats på grund av interna uppspelningsregler eller externa affärsregler.
 
-* ** Återanrop som ska implementeras ** `onPositionAdjusted(SeekEvent event)`
+* ** Återanrop för implementering ** `onPositionAdjusted(SeekEvent event)`
 
 * ** Händelsekod ** `SEEK_POSITION_ADJUSTED`
 
@@ -250,7 +249,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Mediets storlek är tillgänglig.
 
-* ** Återanrop som ska implementeras ** `onSizeAvailable(SizeAvailableEvent event)`
+* ** Återanrop för implementering ** `onSizeAvailable(SizeAvailableEvent event)`
 
 * ** Händelsekod ** `SIZE_AVAILABLE`
 
@@ -258,7 +257,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** MediaPlayer-läget har ändrats.
 
-* ** Återanrop som ska implementeras ** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
+* ** Återanrop för implementering ** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
 * ** Händelsekod ** `STATUS_CHANGED`
 
@@ -266,15 +265,15 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** Spelhuvudet har ändrats.
 
-* ** Återanrop som ska implementeras ** `onTimeChanged(TimeChangeEvent event)`
+* ** Återanrop för implementering ** `onTimeChanged(TimeChangeEvent event)`
 
 * ** Händelsekod ** `TIME_CHANGED`
 
-## TimedEventListener {#section_5E62C2C81C3B4F93B46E7518578456EA}
+## TimedEventEventListener {#section_5E62C2C81C3B4F93B46E7518578456EA}
 
 * ** Betydelse ** Åtgärden har slutförts med den tid som har tagits för åtgärden.
 
-* ** Återanrop som ska implementeras ** `onTimedEvent(TimedEventEvent event)`
+* ** Återanrop för implementering ** `onTimedEvent(TimedEventEvent event)`
 
 * ** Händelsekod ** `TIMED_EVENT`
 
@@ -282,7 +281,7 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En ny tidsbestämd metadata har lagts till i ett objekt i bakgrunden.
 
-* ** Återanrop som ska implementeras ** `onTimedMetadata(TimedMetadataEvent event)`
+* ** Återanrop för implementering ** `onTimedMetadata(TimedMetadataEvent event)`
 
 * ** Händelsekod ** `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
@@ -290,14 +289,14 @@ TVSDK meddelar dig när händelser inträffar som programmet måste svara på. V
 
 * ** Betydelse ** En ny tidsbestämd metadata upptäcktes i medieströmmen.
 
-* ** Återanrop som ska implementeras ** `onTimedMetadata(TimedMetadataEvent event)`
+* ** Återanrop för implementering ** `onTimedMetadata(TimedMetadataEvent event)`
 
 * ** Händelsekod ** `TIMED_METADATA_AVAILABLE`
 
-## TimelineUpdatedEventListener {#section_D0755BD2AF3347C7861395706E31B861}
+## TidslinjeUppdateradHändelseavlyssnare {#section_D0755BD2AF3347C7861395706E31B861}
 
 * ** Betydelse ** Tidslinjen har ändrats. Annonser kan ha lagts till eller tagits bort från tidslinjen.
 
-* ** Återanrop som ska implementeras ** `onTimelineUpdated(TimelineEvent event)`
+* ** Återanrop för implementering ** `onTimelineUpdated(TimelineEvent event)`
 
 * ** Händelsekod ** `TIMELINE_UPDATED`

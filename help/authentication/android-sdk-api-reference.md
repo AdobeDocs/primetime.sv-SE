@@ -1,14 +1,13 @@
 ---
 title: Android SDK API-referens
 description: Android SDK API-referens
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 0%
 
 ---
-
-
 
 # Android SDK API-referens {#android-sdk-api-reference}
 

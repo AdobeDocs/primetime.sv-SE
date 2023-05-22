@@ -2,14 +2,13 @@
 title: Kryptera lösenord
 description: Kryptera lösenord
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 97b78e00-e5e3-4a9d-8eab-fcf96d3b1219
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%
 
 ---
-
 
 # Kryptera lösenord{#encrypt-passwords}
 
@@ -21,4 +20,3 @@ Med det här kommandot skapas ett krypterat lösenord som du sedan använder i e
 
 >[!NOTE]
 >Detta är inte det verktyg som används för att kryptera licensserverlösenord.
-

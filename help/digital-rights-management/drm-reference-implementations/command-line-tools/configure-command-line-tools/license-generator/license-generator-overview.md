@@ -2,18 +2,17 @@
 title: Översikt
 description: Översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ba6e8fab-b199-4969-b372-06fa6d7a1e4a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
 
 ---
 
-
 # DRM-licensgenerator {#license-generator}
 
-Använd [!DNL AdobeLicenseGenerator.jar] för att generera licenser utan att klienten behöver skicka en licensbegäran till en server. Du kan sedan bädda in en förgenererad licens i innehållet eller leverera licensen till klienten via andra mekanismer, till exempel en enkel HTTP-webbserver.
+Använd [!DNL AdobeLicenseGenerator.jar] att generera licenser utan att klienten behöver skicka en licensbegäran till en server. Du kan sedan bädda in en förgenererad licens i innehållet eller leverera licensen till klienten via andra mekanismer, till exempel en enkel HTTP-webbserver.
 
 ## Licensgeneratorns kommandoradsanvändning {#license-generator-command-line-usage}
 
@@ -31,7 +30,7 @@ java -jar AdobeLicenseGenerator.jar -m
 
 * `metadata` - Innehåller Adobe Primetime DRM-metadata.
 
-   Du kan hämta den här filen från skyddat innehåll med `-d -m`-alternativen i Media Packager.
+   Du kan hämta den här filen från skyddat innehåll med `-d -m` i Media Packager.
 
 **Visa en tidigare genererad licens:**
 
@@ -56,7 +55,7 @@ java -jar AdobeLicenseGenerator.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM-licensgeneratorn efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p> <p>Obs!  De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM-licensgeneratorn efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licensfil</span></i> </p> </td> 
@@ -72,7 +71,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> inte har angetts inträffar ett fel. </td> 
+   <td colname="2" class="- topic/entry ">Fråga inte om målfilen ska skrivas över. Om målfilen redan finns och <span class="codeph"> -o</span> har inte angetts, inträffar ett fel. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -84,7 +83,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Skapar en licens för en angiven mottagare. Du kan använda ett enhets- eller domäncertifikat och du kan ange flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>alternativ för att skapa en licens för flera mottagare. </td> 
+   <td colname="2" class="- topic/entry ">Skapar en licens för en angiven mottagare. Du kan använda ett enhets- eller domäncertifikat och du kan ange flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>för att skapa en licens för flera mottagare. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 
@@ -99,7 +98,7 @@ Innan du kör licensgeneratorn måste du ange värden för licensgeneratoregensk
 
 >[!NOTE]
 >
->För egenskapsnamn som innehåller *n* representerar *n* ett heltal som börjar med 1 och ökar för varje instans av egenskapen.
+>För egenskapsnamn som innehåller *n*, *n* representerar ett heltal som börjar med 1 och ökar för varje instans av egenskapen.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_qk1_rry_n4"> 
  <thead class="- topic/thead "> 
@@ -123,23 +122,23 @@ Innan du kör licensgeneratorn måste du ange värden för licensgeneratoregensk
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">Lösenordet som skyddar filen som du har angett med alternativet <span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span>. </td> 
+   <td colname="2" class="- topic/entry ">Lösenordet som skyddar filen som du har angett med <span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> alternativ. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.domainca.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Om du genererar domänbundna licenser måste du ange ett eller flera certifikat för domän-certifikatutfärdare för att ange vilka domänmyndigheter som licensutfärdaren kan lita på. </p> <p>Om licensmottagaren är ett domäncertifikat som inte har utfärdats av någon av de angivna domänkontrollanterna går det inte att generera någon licens. This property specifies a <span class="filepath"> .cer</span> file that includes the certificate in the PEM or the DER format. <span class="codeph"></span> måste öka monotont, med början från 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Om du genererar domänbundna licenser måste du ange ett eller flera certifikat för domän-certifikatutfärdare för att ange vilka domänmyndigheter som licensutfärdaren kan lita på. </p> <p>Om licensmottagaren är ett domäncertifikat som inte har utfärdats av någon av de angivna domänkontrollanterna går det inte att generera någon licens. This property specifies a <span class="filepath"> .cer</span> som innehåller certifikatet i PEM- eller DER-format. <span class="codeph">n</span> måste öka monotont, med början från 1. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-fil (tillval) som innehåller ytterligare autentiseringsuppgifter för licensservern för dekryptering av CEK i metadata och DRM-principen. Du kan konfigurera ytterligare autentiseringsuppgifter om innehåll tidigare har paketerats med ett annat licensservercertifikat än de autentiseringsuppgifter som har angetts med <span class="codeph"> licensgen.sign.certfile</span>. Den här egenskapen måste referera till en <span class="filepath"> .pfx</span>-fil som innehåller ett certifikat och en privat nyckel. <span class="codeph"></span> måste öka monotont, med början från 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">PKCS12-fil (tillval) som innehåller ytterligare autentiseringsuppgifter för licensservern för dekryptering av CEK i metadata och DRM-principen. Du kan konfigurera ytterligare autentiseringsuppgifter om innehåll tidigare har paketerats med ett annat licensservercertifikat än de autentiseringsuppgifter som har angetts med <span class="codeph"> licensegen.sign.certfile</span>. Den här egenskapen måste referera till en <span class="filepath"> .pfx</span> som innehåller ett certifikat och en privat nyckel. <span class="codeph">n</span> måste öka monotont, med början från 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p>Lösenordet används för att skydda filen som du har angett med egenskapen<span class="+ topic/ph pr-d/codeph codeph"> licensegen.keys.asymmetric.licenseServerCredential.n</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Lösenordet används för att skydda filen som du har angett med<span class="+ topic/ph pr-d/codeph codeph"> licensegen.keys.asymmetric.licenseServerCredential.n</span> -egenskap. </p> </td> 
   </tr> 
  </tbody> 
 </table>

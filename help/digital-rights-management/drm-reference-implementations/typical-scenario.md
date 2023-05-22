@@ -2,14 +2,13 @@
 title: Vanligt arbetsflöde
 description: Vanligt arbetsflöde
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c2020b48-7e97-4df5-a453-7b76e2e1d458
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Vanligt arbetsflöde{#typical-workflow}
 

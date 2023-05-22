@@ -1,16 +1,15 @@
 ---
 description: TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 title: Ad-uppspelningsfas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c12dcf84-0daa-4bc2-8e17-fdf47a760296
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
-# Ad-playback phase{#ad-playback-phase}
+# Ad-uppspelningsfas{#ad-playback-phase}
 
 TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 
@@ -30,4 +29,4 @@ För alla tre felklasserna vidarebefordrar TVSDK utlösta händelser till ditt p
 
    Programmet måste vidta rätt åtgärd.
 
-Oavsett om fel inträffar eller inte anropar TVSDK onAdBreakComplete för var `onAdBreakStart` och `onAdComplete` för var `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.
+Oavsett om fel inträffar eller inte anropar TVSDK onAdBreakComplete för varje `onAdBreakStart` och `onAdComplete` för varje `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.

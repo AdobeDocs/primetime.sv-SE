@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om Adobe Primetime-autentisering 2.63
 description: Versionsinformation om Adobe Primetime-autentisering 2.63
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 40987328-6d41-4948-aa4a-bab31f98a18a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation om Adobe Primetime Authentication 2.63 {#pt-authn-263-rn}
 
@@ -56,6 +56,3 @@ I den här versionen har ett problem korrigerats där authN eller authZ TTL inst
 
 * Borttagen användning av `eval` så att SDK blir kompatibelt med Content Security Policy.
 * Korrigerade ett problem som förhindrade autentiseringsflödet från att slutföras när webbläsarens lokala lagring rensades explicit av ett partnerprogram.
-
-
-

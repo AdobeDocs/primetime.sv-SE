@@ -1,14 +1,13 @@
 ---
 description: Adobe Primetime DRM Server for Protected Streaming är en licensserverimplementering som baseras på Primetimes DRM SDK. Den här servern utfärdar licenser för skyddat innehåll till Primetime DRM-klienter.
 title: Om Adobe Primetime DRM Server for Protected Streaming
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 911acd61-8b27-4ac7-a420-2faeb46e8087
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
 
 ---
-
 
 # Om Adobe Primetime DRM Server for Protected Streaming{#about-adobe-primetime-drm-server-for-protected-streaming}
 
@@ -21,4 +20,3 @@ Den här servern är avsedd att användas med HTTP-direktuppspelning. Därför s
 >[!NOTE]
 >
 >Adobe Primetime DRM kallades tidigare Adobe Access och tidigare Flash Access.
-

@@ -1,13 +1,13 @@
 ---
 title: API för registrering av dynamisk klient
 description: API för registrering av dynamisk klient
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
-
 
 # API för registrering av dynamisk klient {#dynamic-client-registration-api}
 

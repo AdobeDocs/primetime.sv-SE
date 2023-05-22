@@ -2,22 +2,21 @@
 title: Skapa en grundläggande spelare med UI Framework
 description: Skapa en grundläggande spelare med UI Framework
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 78629042-fd87-406b-af42-229e34d48162
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Skapa en grundläggande spelare med UI Framework{#create-a-basic-player-using-the-ui-framework}
 
 Så här skapar du en grundläggande spelare med hjälp av UI-ramverket:
 
-1. Skapa en `<div>` för spelarinstansen.
+1. Skapa en `<div>` för din spelarinstans.
 
-   Exempel:
+   Till exempel:
 
    ```
    <div id="video1" > 
@@ -34,7 +33,7 @@ Så här skapar du en grundläggande spelare med hjälp av UI-ramverket:
    </script>
    ```
 
-   När spelaren skapas får det angivna `<div>`-elementet CSS-klassen `ptp-main-video-div-style`. Den resulterande DOM ser ut ungefär så här:
+   När spelaren skapas, anges `<div>` -elementet ges en CSS-klass för `ptp-main-video-div-style`. Den resulterande DOM ser ut ungefär så här:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -71,7 +70,7 @@ Så här skapar du en grundläggande spelare med hjälp av UI-ramverket:
    </div>
    ```
 
-Objektet som returneras från anrop av `ptp.videoPlayer()` ger ett beteende som omsluter TVSDK-mediespelarens API och möjliggör programmatisk styrning av uppspelningen. När du anropar mediespelarinstansen uppdateras användargränssnittet automatiskt baserat på händelser som utlöses av mediespelaren:
+Objektet som returnerades från anropet `ptp.videoPlayer()` har ett beteende som omsluter TVSDK-mediespelarens API och ger möjlighet att styra uppspelningen programmatiskt. När du anropar mediespelarinstansen uppdateras användargränssnittet automatiskt baserat på händelser som utlöses av mediespelaren:
 
 ```js
 <script> 

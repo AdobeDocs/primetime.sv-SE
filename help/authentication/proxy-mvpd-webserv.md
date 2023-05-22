@@ -1,13 +1,13 @@
 ---
 title: Proxy MVPD-webbtjänst
 description: Proxy MVPD-webbtjänst
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
 
 ---
-
 
 # Proxy MVPD-webbtjänst {#proxy-mvpd-wbservice}
 

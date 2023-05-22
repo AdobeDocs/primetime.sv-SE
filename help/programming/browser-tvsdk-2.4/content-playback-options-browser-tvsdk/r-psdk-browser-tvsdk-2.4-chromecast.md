@@ -1,14 +1,13 @@
 ---
 description: Du kan omvandla alla strömmar från en TVSDK-baserad avsändarapp och låta strömmen spelas upp på Chromecast med Browser TVSDK.
 title: Google Cast-app för webbläsare TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 71077467-8040-4f04-a43b-cc963701c426
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
-
 
 # Google Cast-app för webbläsare TVSDK{#google-cast-app-for-browser-tvsdk}
 
@@ -57,7 +56,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Upprättar en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Skapa en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -65,8 +64,8 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 För att upprätta en anslutning måste avsändaren och mottagaren utföra följande uppgifter:
 
-* Avsändaren måste läsa dokumentationen för plattformen på [Sender App Development](https://developers.google.com/cast/docs/sender_apps).
-* Mottagaren använder Cast-mottagarens API:er för att upprätta en anslutning till avsändarappen. Exempel:
+* Avsändaren måste läsa dokumentationen för plattformen på [Utveckling av avsändarprogram](https://developers.google.com/cast/docs/sender_apps).
+* Mottagaren använder Cast-mottagarens API:er för att upprätta en anslutning till avsändarappen. Till exempel:
 
    ```js
    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
@@ -87,7 +86,7 @@ Information om hur du skickar meddelanden till mottagaren finns i dokumentatione
 
 >[!IMPORTANT]
 >
->Du måste inkludera det anpassade meddelandets namnutrymme, `MSG_NAMESPACE` i alla meddelanden.
+>Du måste inkludera namnutrymmet för det anpassade meddelandet, `MSG_NAMESPACE` i alla meddelanden.
 
 För mottagarappen följer du dokumentationen för gipsmottagarens API:er.
 
@@ -127,4 +126,3 @@ customMessageBus.onMessage = function (event) {
     } 
 }; 
 ```
-

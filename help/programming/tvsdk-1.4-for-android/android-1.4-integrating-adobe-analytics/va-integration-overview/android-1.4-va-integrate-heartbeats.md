@@ -4,7 +4,7 @@ title: Initiera och konfigurera videoanalys
 exl-id: 82013882-e314-44fd-82f2-0640575d3c68
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Viktigt:  Det här JSON-konfigurationsfilnamnet måste vara <span class="codeph"> ADBMobleConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="codeph"> &lt;källrot&gt;/resurser </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>Viktigt: Det här JSON-konfigurationsfilnamnet måste finnas kvar <span class="codeph"> ADBMobileConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="codeph"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td> 
@@ -30,7 +30,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips: URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
@@ -42,14 +42,14 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr> 
   <tr> 
    <td colname="col1"> Utgivare </td> 
-   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips:  Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td> 
+   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips: Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Så här konfigurerar du videospårning i spelaren:
 
-1. Kontrollera att alternativen för inläsning i resursfilen `ADBMobileConfig.json` är korrekta.
+1. Bekräfta alternativen för inläsning i dialogrutan `ADBMobileConfig.json` resursfilen är korrekt.
 
    ```
    { 
@@ -82,8 +82,8 @@ Så här konfigurerar du videospårning i spelaren:
 
    Så här konfigurerar du inläsningsalternativ:
 
-   1. Bekräfta att filen `ADBMobileConfig.json` innehåller rätt värden från Adobe.
-   1. Kontrollera att filen finns i mappen `assets`.
+   1. Bekräfta att `ADBMobileConfig.json` filen innehåller de värden som Adobe anger.
+   1. Bekräfta att filen finns i `assets` mapp.
 
       Mappen måste finnas i roten för programkällträdet.
    1. Kompilera och skapa programmet.
@@ -98,7 +98,7 @@ Så här konfigurerar du videospårning i spelaren:
 
    1. Skapa en instans av metadata för videoanalys.
 
-      Den här instansen innehåller all konfigurationsinformation som behövs för att aktivera spårning av pulsslag för video. Exempel:
+      Den här instansen innehåller all konfigurationsinformation som behövs för att aktivera spårning av pulsslag för video. Till exempel:
 
       ```java
       private VideoAnalyticsMetadata getVideoAnalyticsTrackingMetadata() { 

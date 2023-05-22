@@ -2,16 +2,15 @@
 title: Så här använder du implementeringen av Primetimes referens
 description: Så här använder du implementeringen av Primetimes referens
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 45145f0d-c0e4-4d36-94fd-72f07619dc91
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
 
 ---
 
-
-# Så här använder du referensimplementeringen {#how-to-use-the-primetime-reference-implementation} för Primetime
+# Så här använder du implementeringen av Primetimes referens {#how-to-use-the-primetime-reference-implementation}
 
 Primetimes referensimplementering är en modulär spelare som har delats upp i enskilda funktioner som du enkelt kan ändra med specialiserade funktionshanterare. De här funktionshanterarna används som en brygga för att ansluta programmet och TVSDK-biblioteket.
 
@@ -22,6 +21,6 @@ Du kan använda referensimplementeringen på följande sätt:
 * Välj och välj vilka funktioner som gäller för programmet genom att stänga av de funktioner som du inte använder.
 * Anpassa gränssnittskomponenterna utan att göra några ändringar i funktionerna.
 
-Vi tillhandahåller referensimplementeringen Primetime för att hjälpa dig förstå TVSDK och enkelt ändra funktionshanterarna för att anpassa din spelare. Mer information om TVSDK-biblioteket finns i [TVSDK 1.4 for Android Programmer&#39;s Guide](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf).
+Vi tillhandahåller referensimplementeringen Primetime för att hjälpa dig förstå TVSDK och enkelt ändra funktionshanterarna för att anpassa din spelare. Se dock [TVSDK 1.4 for Android Programmer&#39;s Guide](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) för detaljerad information om TVSDK-biblioteket.
 
-Klicka [här](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html) för att enkelt få åtkomst till API-dokumentationen för referensimplementering i Javadoc-format.
+Om du vill ha enkel åtkomst till API-dokumentationen för referensimplementering i Javadoc-format klickar du på [här](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).

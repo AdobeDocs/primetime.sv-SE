@@ -2,14 +2,13 @@
 title: Adobe Primetime DRM SDK - en översikt
 description: Adobe Primetime DRM SDK - en översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6760dfcc-b8f9-4379-bc01-70af4bf24baf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Primetime DRM SDK - en översikt {#adobe-primetime-drm-sdk-an-overview}
 
@@ -26,4 +25,3 @@ Primetime DRM har stöd för en mängd olika affärsmodeller, inklusive on deman
 * Direktuppspelning via Adobe Flash Media Server
 * Progressiv nedladdning via HTTP med Adobe HTTP Dynamic Streaming-teknik
 * Tillåta nedladdningar till ett innehållsbibliotek för lokal uppspelning när det passar konsumenten
-

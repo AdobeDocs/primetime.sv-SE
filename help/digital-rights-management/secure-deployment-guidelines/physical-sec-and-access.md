@@ -1,14 +1,13 @@
 ---
 description: Fysiskt skydd av Adobe Primetime DRM-miljön är avgörande för att förhindra obehörig åtkomst.
 title: Fysisk säkerhet och åtkomst
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ecfe6036-8068-4936-892b-174cf7d4f480
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
 
 ---
-
 
 # Fysisk säkerhet och åtkomst{#physical-security-and-access}
 

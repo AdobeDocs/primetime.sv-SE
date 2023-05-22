@@ -1,14 +1,13 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5e1e09e1-f22e-4797-807a-14dbf50bb835
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
 
 ---
-
 
 # Överväganden och bästa praxis{#considerations-and-best-practices}
 
@@ -43,5 +42,4 @@ Här är de rekommenderade metoderna för TVSDK:
 * Använd HLS version 3.0 eller senare för programinnehåll.
 * För TVSDK 1.4 för DHLS är lat och inläsning aktiverat som standard.
 
-   För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ytterligare.
-
+   För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ännu mer.

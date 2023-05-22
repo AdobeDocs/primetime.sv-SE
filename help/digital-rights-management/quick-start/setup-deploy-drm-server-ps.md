@@ -2,29 +2,28 @@
 title: Konfigurera och distribuera servern för skyddad direktuppspelning
 description: Konfigurera och distribuera servern för skyddad direktuppspelning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: de1488e6-ccee-49e6-999e-6c6762dd55be
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera och distribuera servern för skyddad direktuppspelning {#set-up-and-deploy-the-server-for-protected-streaming}
 
 1. Konfigurera konfigurationsmappen på Primetime DRM DVD:
 
    `\Adobe Access Server for Protected Streaming\configs\`
-1. Kopiera exempelmappen `configs` till din `<Tomcat_installation_dir>` och byt namn på den kopierade mappen till `licenseserver`.
+1. Kopiera exemplet `configs` mapp till `<Tomcat_installation_dir>` och ändra namn på den kopierade mappen till `licenseserver`.
 
    Sökvägen till konfigurationsmappen bör nu vara `<Tomcat_install_dir>\licenseserver\`.
-1. Kör `Scrambler.bat` för att erhålla krypterade lösenord för transport- och licensserverns PFX-filer i katalogen Primetime DRM `<DVD>` `\Adobe Access Server for Protected Streaming\`:
+1. Kör `Scrambler.bat` för att få krypterade lösenord för transport- och licensserverns PFX-filer i Primetimes DRM `<DVD>` `\Adobe Access Server for Protected Streaming\` katalog:
 
    * `Scrambler.bat <Adobe-provided transport credential password>`
    * `Scrambler.bat <Adobe-provided license server credential password>`
 
-1. Kopiera PFX-filerna till katalogen `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\`.
+1. Kopiera PFX-filerna till `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\` katalog.
 1. Redigera motsvarande klientkonfiguration i `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\sampletenant\flashaccess-tenant.xml`, med följande inställningar:
 
    ```
@@ -34,14 +33,14 @@ ht-degree: 0%
    Configuration|Tenant|Credentials|LicenseServerCredential|File|password=<scrambled-license-servercredential-password>
    ```
 
-1. Kör verktyget `Validator.bat` för att verifiera att konfigurationen är giltig:
+1. Kör `Validator.bat` verktyg för att verifiera konfigurationen är giltigt:
 
    ```
    Validator.bat -g -r <absolute-path-to TomcatInstallDir\licenseserver>
    ```
 
-1. Kopiera filen `flashaccessserver.war` från cd:n till katalogen `<TomcatInstallDir>\webapps\`.
-1. Om Tomcat körs stoppar du den Tomcat-instans som körs genom att trycka på `<CTRL-C>` i kommandofönstret (om den startades från kommandofönstret). Du kan också stoppa servern från Windows Services-programmet om Tomcat installerades som en Windows-tjänst.
+1. Kopiera `flashaccessserver.war` från CD:n till `<TomcatInstallDir>\webapps\` katalog.
+1. Om Tomcat körs stoppar du den Tomcat-instans som körs genom att trycka på `<CTRL-C>` i kommandofönstret (om det startades från kommandofönstret). Du kan också stoppa servern från Windows Services-programmet om Tomcat installerades som en Windows-tjänst.
 1. Starta Tomcat genom att ange följande kommando:
 
    ```

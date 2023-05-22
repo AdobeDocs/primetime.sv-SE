@@ -1,16 +1,15 @@
 ---
 description: Det viktigaste klientelementet i Primetime DRM-lösningen är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller också en DRMHelper-klass som kan användas för att göra vissa DRM-åtgärder enklare att implementera.
 title: Översikt över Primetime DRM-gränssnittet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 37037419-fe3d-4e9e-a35d-e0accfba4e80
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
-
-# Översikt över gränssnittet för Primetime DRM {#primetime-drm-interface-overview}
+# Översikt över Primetime DRM-gränssnittet {#primetime-drm-interface-overview}
 
 Det viktigaste klientelementet i Primetime DRM-lösningen är DRM Manager. Exempelprogrammet som ingår i Android SDK innehåller också en DRMHelper-klass som kan användas för att göra vissa DRM-åtgärder enklare att implementera.
 
@@ -30,10 +29,10 @@ Här är de viktigaste API-elementen för att arbeta med DRM:
 
    >[!TIP]
    >
-   >Detta API returnerar ett giltigt `DRMManager`-objekt först efter att `MediaPlayerEvent.DRM_METADATA` har utlösts. Om du anropar `getDRMManager()` innan den här händelsen utlöses kan det returnera NULL.
+   >Detta API returnerar en giltig `DRMManager` endast efter `MediaPlayerEvent.DRM_METADATA` har fått sparken. Om du ringer `getDRMManager()` innan den här händelsen utlöses kan den returnera NULL.
 
-* Hjälpklassen `DRMHelper`, som är användbar när du implementerar DRM-arbetsflöden.
-* En `DRMHelper`-metadatainläsarmetod som läser in DRM-metadata när den finns i en separat URL från mediet.
+* The `DRMHelper` hjälpklass, vilket är användbart när du implementerar DRM-arbetsflöden.
+* A `DRMHelper` Metoden för inläsning av metadata, som läser in DRM-metadata när den finns i en separat URL från mediet.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +40,7 @@ Här är de viktigaste API-elementen för att arbeta med DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* En `DRMHelper`-metod för att kontrollera DRM-metadata och avgöra om autentisering krävs.
+* A `DRMHelper` metod för att kontrollera DRM-metadata och avgöra om autentisering krävs.
 
    ```java
    /** 
@@ -84,4 +83,4 @@ Här är de viktigaste API-elementen för att arbeta med DRM:
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Mer information om DRM finns i [DRM-dokumentationen](https://helpx.adobe.com/primetime/user-guide.html).
+Mer information om DRM finns i [DRM-dokumentation](https://helpx.adobe.com/primetime/user-guide.html).

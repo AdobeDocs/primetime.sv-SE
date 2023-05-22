@@ -1,13 +1,13 @@
 ---
 title: Initiera utloggning
 description: Initiera utloggning
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9625b5a2-31d9-4e20-8703-4a9e4eeb1618
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
 
 ---
-
 
 # Initiera utloggning {#initiate-logout}
 
@@ -50,6 +50,4 @@ Ta bort AuthN- och AuthZ-tokens från lagring.
 
 >[!IMPORTANT]
 > 
->Inloggningsanropet har för närvarande följande begränsning: den rensar AuthN- och AuthZ-tokens från lagring (dvs. på autentiseringssidan Programmer/Primetime), men **inte** anropa MVPD-slutpunkten för utloggning. 
-
-
+>Inloggningsanropet har för närvarande följande begränsning: den rensar AuthN- och AuthZ-tokens från lagring (dvs. på autentiseringssidan Programmer/Primetime), men **inte** anropa MVPD-slutpunkten för utloggning.

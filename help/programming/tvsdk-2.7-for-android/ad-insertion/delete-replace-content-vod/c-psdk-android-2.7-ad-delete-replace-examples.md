@@ -1,14 +1,13 @@
 ---
 description: Här är några exempel på processen att ta bort och ersätta annonser.
 title: Exempel på att ta bort och ersätta annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a6fdb86e-507e-4a65-bb32-928e216c6e9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på att ta bort och ersätta annonser {#examples-to-delete-and-replace-ads}
 
@@ -76,4 +75,3 @@ config.setCustomRangeMetadata(customRangeMetadata);
 // prepare the content for playback by calling replaceCurrentResource 
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
-

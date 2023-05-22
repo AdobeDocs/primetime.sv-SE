@@ -1,20 +1,19 @@
 ---
 description: TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp.
 title: Uppspelningshändelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 675dd444-d58c-4316-9d62-b64e6433b650
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-
 # Uppspelningshändelser{#playback-events}
 
 TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp.
 
-Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar du en implementering av `MediaPlayer.PlaybackEventListener`, inklusive följande händelseåterkopplingar.
+Registrera en implementering av `MediaPlayer.PlaybackEventListener`, inklusive följande återanrop för händelser.
 
 <table frame="all" colsep="1" rowsep="1"> 
  <thead> 
@@ -37,11 +36,11 @@ Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar
    <td colname="2"> Uppspelningen av en mediekälla har startat. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (flyttal) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (rörlig ränta) </td> 
    <td colname="2"> Användaren eller TVSDK har valt en ny uppspelningshastighet, till exempel snabb framåt, bakåt eller återuppta uppspelning med normal hastighet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlay</a> (flyttal) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (rörlig ränta) </td> 
    <td colname="2"> En ny uppspelningshastighet visas på skärmen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -53,7 +52,7 @@ Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar
    <td colname="2"> Mediespelaren har förberett mediet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a>  (lång höjd, lång bredd) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a> (lång höjd, lång bredd) </td> 
    <td colname="2"> Mediets storlek är tillgänglig. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -61,12 +60,12 @@ Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerStatus,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationnotification) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.PlayerState</a> tillstånd, <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> MediaPlayerNotification</a> meddelande) </td> 
    <td colname="2"> Mediespelarens tillstånd har ändrats. Programmet bör hantera fel i det här återanropet. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a> (lång profil, lång tid) </td> 
-   <td colname="2"> Mediespelarens aktuella profil har ändrats. Använd egenskapen <span class="codeph"> Profile</span> för att hämta den nya profilen som spelas upp. Använd egenskapen <span class="codeph"> time</span> för att hämta tidpunkten då händelsen inträffade. </td> 
+   <td colname="2"> Mediespelarens aktuella profil har ändrats. Använd <span class="codeph"> Profil</span> för att hämta den nya profilen som spelas upp. Använd <span class="codeph"> tid</span> för att hämta tiden när den här händelsen inträffade. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="col1"><b>MediaplayerItem</b> </td> 
@@ -85,12 +84,12 @@ Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatatimedMetadata) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> TimedMetadata</a> timedMetadata) </td> 
    <td colname="2"> En ny tidsbestämd metadata upptäcks i manifestet. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimelineUpdated%28%29" format="html" scope="external"> onTimelineUpdated</a> </td> 
-   <td colname="2">Mediespelaren har lagt till eller tagit bort annonser, så den har en uppdaterad tidslinje. <p>Det manifest som uppdaterats för en livedatabas och gamla annonsbrytningar togs bort från tidslinjen eller så upptäcktes nya annonsmöjligheter (referenspunkter). Mediespelaren försöker lösa och placera nya annonser på tidslinjen. </p><p> Använd den här händelsen för att kontrollera om tidslinjen har några uppdateringar (VOD ändras inte under uppspelning). Du kan sedan hämta tidslinjen med <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a>. </p> </td> 
+   <td colname="2">Mediespelaren har lagt till eller tagit bort annonser, så den har en uppdaterad tidslinje. <p>Det manifest som uppdaterats för en livedatabas och gamla annonsbrytningar togs bort från tidslinjen eller så upptäcktes nya annonsmöjligheter (referenspunkter). Mediespelaren försöker lösa och placera nya annonser på tidslinjen. </p><p> Använd den här händelsen för att kontrollera om tidslinjen har några uppdateringar (VOD ändras inte under uppspelning). Sedan kan du hämta tidslinjen med <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,20 +1,19 @@
 ---
 description: Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga tillstånd genom att avlyssna händelser som skickas av TVSDK.
 title: Uppspelningshändelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9fb77b57-be6c-4dab-b779-d8c606938e46
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
 
 ---
 
-
 # Uppspelningshändelser {#playback-events}
 
 Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga tillstånd genom att avlyssna händelser som skickas av TVSDK.
 
-TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp. Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar du avlyssnare med `MediaPlayer`-objektet för följande händelser.
+TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp. Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar du avlyssnare med `MediaPlayer` -objekt för följande händelser.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -50,7 +49,7 @@ TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, t
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFILE_CHANGED</a> </td> 
-   <td colname="2">Mediespelarens aktuella profil har ändrats. Använd egenskapen <span class="codeph"> ProfileEvent.profile</span> för att hämta den nya profilen som spelas upp. Använd egenskapen <span class="codeph"> time</span> för att hämta tidpunkten då händelsen inträffade. </td> 
+   <td colname="2">Mediespelarens aktuella profil har ändrats. Använd <span class="codeph"> ProfileEvent.profile</span> för att hämta den nya profilen som spelas upp. Använd <span class="codeph"> tid</span> för att hämta tiden när den här händelsen inträffade. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>MediaplayerItem</b> </td> 
@@ -58,7 +57,7 @@ TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, t
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">MediaPlayerItem-händelse.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_CREATED" format="html" scope="external"> ITEM_CREATED</a> </td> 
-   <td colname="2">Ett <span class="codeph"> MediaPlayerItem</span> har skapats. </td> 
+   <td colname="2">A <span class="codeph"> MediaPlayerItem</span> har skapats. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">MediaPlayerItem-händelse.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_UPDATED" format="html" scope="external"> ITEM_UPDATED</a> </td> 
@@ -74,7 +73,7 @@ TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, t
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> MediaPlayerItem-händelse.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Ett nytt undertextningsspår har identifierats i medieströmmen och samlingen <span class="codeph"> closedCaptionsTracks</span> har uppdaterats. </td> 
+   <td colname="2">Ett nytt textningsspår har identifierats i medieströmmen och <span class="codeph"> closedCaptionsTracks</span> samlingen har uppdaterats. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Manifest och Timeline</b> </td> 
@@ -82,8 +81,7 @@ TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, t
   </tr> 
   <tr rowsep="0"> 
    <td colname="1">TimelineEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimelineEvent.html#TIMELINE_UPDATED" format="html" scope="external"> TIMELINE_UPDATED</a> </td> 
-   <td colname="2">Mediespelaren har lagt till eller tagit bort annonser, så den har en uppdaterad tidslinje. <p>Det manifest som uppdaterats för en livedatabas och gamla annonsbrytningar togs bort från tidslinjen eller så upptäcktes nya annonsmöjligheter (referenspunkter). Mediespelaren försöker lösa och placera nya annonser på tidslinjen. </p> <p> Använd den här händelsen för att kontrollera om tidslinjen har några uppdateringar (VOD ändras inte under uppspelning). Du kan sedan hämta tidslinjen med <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a>. </p> </td> 
+   <td colname="2">Mediespelaren har lagt till eller tagit bort annonser, så den har en uppdaterad tidslinje. <p>Det manifest som uppdaterats för en livedatabas och gamla annonsbrytningar togs bort från tidslinjen eller så upptäcktes nya annonsmöjligheter (referenspunkter). Mediespelaren försöker lösa och placera nya annonser på tidslinjen. </p> <p> Använd den här händelsen för att kontrollera om tidslinjen har några uppdateringar (VOD ändras inte under uppspelning). Sedan kan du hämta tidslinjen med <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

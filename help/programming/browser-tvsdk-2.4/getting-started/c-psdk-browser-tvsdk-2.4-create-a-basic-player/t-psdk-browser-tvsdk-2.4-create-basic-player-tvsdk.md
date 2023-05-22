@@ -1,23 +1,22 @@
 ---
 description: Följ de här stegen för att skapa en grundläggande spelare med webbläsarens TVSDK.
 title: Skapa en basspelare med TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
-# Skapa en grundläggande spelare med TVSDK{#create-a-basic-player-using-tvsdk}
+# Skapa en basspelare med TVSDK{#create-a-basic-player-using-tvsdk}
 
 Följ de här stegen för att skapa en grundläggande spelare med webbläsarens TVSDK.
 
 1. Skapa en ny katalog där du kan hämta komprimerade filer för Browser TVSDK.
 1. Ladda ned Browser TVSDK från Zendesk, expandera filerna och placera ramverksmappen i den nya katalogen.
-1. Skapa en enkel HTML-mall för koden med en `div` i.
-1. Placera den här mallen i en HTML-fil i den katalog som du skapade i steg 1.
+1. Skapa en enkel HTML-mallsida för koden med en `div` i den.
+1. Placera den här mallsidan i en HTML-fil i den katalog du skapade i steg 1.
 
    ```
    <!DOCTYPE html> 
@@ -42,14 +41,14 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. För body-taggen lägger du till avsnittet `onLoad`.
+1. För body-taggen lägger du till `onLoad` -avsnitt.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Börja implementera funktionen `startVideo`.
-1. Lägg till en script-tagg och skapa funktionen `startVideo` i taggen.
+1. Börja implementera `startVideo` funktion.
+1. Lägga till en script-tagg och skapa `startVideo` -funktionen i -taggen.
 
    Det här ska finnas i sidans head-avsnitt.
 
@@ -70,7 +69,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
 
    >[!TIP]
    >
-   >Det är här som `div` som du skapade tidigare används.
+   >Det är här `div` som du skapade tidigare används.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -141,7 +140,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    }; 
    ```
 
-1. Skapa `MediaResource` som skickar M3U8-länken (eller mpd).
+1. Skapa `MediaResource`, som skickar M3U8-länken (eller mpd).
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +156,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Ring `prepareToPlay` när spelaren är i INITIALIZED-läge.
+1. När spelaren är i INITIALIZED-läge ska du ringa `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,11 +164,10 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
     break;
    ```
 
-1. Ring `play` när spelaren är i tillståndet PREPARED.
+1. När spelaren är i tillståndet PREPARED ringer du `play`.
 
    ```js
    case PREPARED: 
     player.play(); 
     break;
    ```
-

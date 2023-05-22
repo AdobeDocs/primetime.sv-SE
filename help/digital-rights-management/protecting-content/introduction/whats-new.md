@@ -1,14 +1,13 @@
 ---
 description: Adobe Primetime DRM är en avancerad Digital Rights Management-lösning (DRM) och en lösning för innehållsskydd för högvärdigt audiovisuellt innehåll. I program som har stöd för att skapa Java API:er kan du använda Primetimes DRM SDK för att ange DRM-principer, tillämpa dessa principer på innehåll och kryptera innehållet.
 title: Nyheter i Adobe Primetime DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 998dae80-b3d3-419e-8fd3-d925a83d8b53
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
 
 ---
-
 
 # Nyheter i Adobe Primetime DRM{#what-is-new-in-adobe-primetime-drm}
 
@@ -39,5 +38,4 @@ De funktioner som beskrivs nedan är nya i den här versionen.
 
 * **Hårt stopp -** Du kan ange om uppspelningen ska stoppas eller fortsätta i slutet av uppspelningsfönstret.
 * **Upplösningsberoende utdatakontroller -** Du kan ange utdatabegränsningar baserat på pixelupplösningar.
-* **Anonymisering av licensserversvar -** För att öka integriteten med Primetimes DRM-licensserverprotokoll nollställs transportcertifikatets serienummer för licensserversvar till klienter som stöds.
-
+* **Anonymisering av licensserversvar -** För att förbättra integriteten med Primetimes DRM-licensserverprotokoll nollställs transportcertifikatets serienummer för licensserversvar till klienter som stöds.

@@ -1,13 +1,13 @@
 ---
 title: Klientlöst API-flöde i frånvaro av enhets-ID
 description: Klientlöst API-flöde i frånvaro av enhets-ID
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6549a6d6-03a9-4d95-99fb-d3ada832323d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # Klientlöst API-flöde i frånvaro av enhets-ID {#clientless-api-flow-in-the-absence-of-device-id}
 

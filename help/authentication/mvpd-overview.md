@@ -1,13 +1,13 @@
 ---
 title: Översikt över PDF-filer
 description: Översikt över PDF-filer
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
 
 ---
-
 
 # En översikt över flerkanalsprogrammeringsprogram {#mvpd-overview}
 

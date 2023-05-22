@@ -1,14 +1,13 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i VOD (video on demand) och liveströmmar.
-title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
+exl-id: d5bc3a54-7dfd-435e-abb4-323639732e0a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
-
 
 # Visa ett söknavigeringsfält med den aktuella uppspelningspositionen {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
@@ -29,8 +28,8 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
 1. Vänta tills spelaren har en giltig status för sökning.
 
    Giltiga statusvärden är PREPARED, COMPLETE, PAUSED och PLAYING.
-1. Använd det inbyggda `SeekBar` för att ställa in `OnSeekBarChangeListener`, som avgör när användaren rensar.
-1. Skicka den begärda sökpositionen (millisekunder) till metoden `MediaPlayer.seek`.
+1. Använd det inbyggda `SeekBar` att ange `OnSeekBarChangeListener`, som avgör när användaren stegar igenom.
+1. Skicka den begärda sökpositionen (millisekunder) till `MediaPlayer.seek` -metod.
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -46,7 +45,7 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
 
    Den här händelsen skickar lämplig varning. Programmet avgör hur du ska gå vidare, och alternativen omfattar att försöka söka igen eller fortsätta uppspelningen från den föregående positionen.
 
-1. Vänta på att TVSDK ska anropa `MediaPlayerEvent.SEEK_END`-återanropet.
+1. Vänta på att TVSDK ska ringa `MediaPlayerEvent.SEEK_END` återanrop.
 1. Hämta den slutliga justerade uppspelningspositionen med återanropets positionsparameter.
 
    Detta är viktigt eftersom den faktiska startpositionen efter sökningen kan skilja sig från den begärda positionen. Regler, inklusive uppspelningsbeteendet påverkas om en sökning eller annan omplacering avslutas mitt i en annonsbrytning eller hoppar över och brytningar kan tillämpas.

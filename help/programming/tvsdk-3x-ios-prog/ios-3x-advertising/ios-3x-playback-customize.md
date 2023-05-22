@@ -1,22 +1,21 @@
 ---
 description: När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller slutar i en annonsbrytning definierar TVSDK ett standardbeteende för positionen av det aktuella spelhuvudet.
 title: Anpassa uppspelning med annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 522f0b55-dcc4-4175-91ab-757b72bbad23
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
 
 ---
 
-
-# Anpassa uppspelningen med annonser {#customize-playback-with-ads}
+# Anpassa uppspelning med annonser {#customize-playback-with-ads}
 
 När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller slutar i en annonsbrytning definierar TVSDK ett standardbeteende för positionen av det aktuella spelhuvudet.
 
 >[!TIP]
 >
->Du kan åsidosätta standardbeteendet genom att använda klassen `PTAdPolicySelector`.
+>Du kan åsidosätta standardbeteendet med `PTAdPolicySelector` klassen.
 
 Standardbeteendet varierar beroende på om användaren skickar annonsbrytningen under den normala uppspelningen eller söker i en video.
 
@@ -26,7 +25,7 @@ Du kan anpassa beteendet för annonsuppspelning på följande sätt:
 * Om en annonsbrytning visas för användaren visar du inga ytterligare annonser under ett antal minuter, även om användaren söker efter en ny position.
 * Om innehållet inte kan spelas upp efter några minuter startar du om strömmen eller växlar om till en annan källa för samma innehåll.
 
-   För att användaren ska kunna hoppa över annonser och återuppta den tidigare misslyckade positionen kan du inaktivera pre-roll- och/eller middle-roll-annonser under redundansuppspelningssessionen. TVSDK tillhandahåller metoder för att aktivera hoppning av annonser före och efter rullning.
+   För att användaren ska kunna hoppa över annonser och återuppta den tidigare misslyckade positionen kan du inaktivera annonser före och/eller meddelanden i mellanrullning under redundansuppspelningssessionen. TVSDK tillhandahåller metoder för att aktivera hoppning av annonser före och efter rullning.
 
 ## API-element för annonsuppspelning {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
@@ -42,29 +41,29 @@ Följande API-element är användbara för att anpassa uppspelning:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
-   <td colname="col2"> Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta den bevakade profilen med egenskapen <span class="codeph"> ochBreakAsWatched </span>. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdMetadata </span> </td> 
+   <td colname="col2"> Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta bevakade profiler med <span class="codeph"> adBreakAsWatched </span> -egenskap. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTAdPolicySelector </span> </td> 
    <td colname="col2"> Protokoll som tillåter anpassning av TVSDK:s annonsbeteende. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector </span> </td> 
    <td colname="col2"> En klass som implementerar TVSDK-standardbeteendet. Programmet kan åsidosätta den här klassen för att anpassa standardbeteendena utan att implementera hela gränssnittet. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTMediaPlayer </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Detta är den lokala tidpunkten för uppspelningen, exklusive de monterade annonsbrytningarna. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> seekToLocalTime  </span> . <p>Här sker sökningen i förhållande till en lokal tid i strömmen. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>Den virtuella positionen på tidslinjen konverteras till den lokala positionen. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Detta är den lokala tidpunkten för uppspelningen, exklusive de monterade annonsbrytningarna. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> seekToLocalTime </span> . <p>Här sker sökningen i förhållande till en lokal tid i strömmen. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>Den virtuella positionen på tidslinjen konverteras till den lokala positionen. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdBreak  </span> </td> 
-   <td colname="col2"> <span class="codeph"> isWatched,  </span> egenskap. Anger om tittaren har tittat på annonsen. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdBreak </span> </td> 
+   <td colname="col2"> <span class="codeph"> isWatched </span> -egenskap. Anger om tittaren har tittat på annonsen. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -75,13 +74,13 @@ Innan du kan anpassa eller åsidosätta annonsbeteenden måste du registrera ann
 
 Gör något av följande om du vill anpassa annonsbeteenden:
 
-* Följ protokollet `PTAdPolicySelector` och implementera alla nödvändiga metoder för principval.
+* Följ `PTAdPolicySelector` och implementera alla nödvändiga principvalsmetoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteendena för annonser.
+   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
-* Åsidosätt klassen `PTDefaultAdPolicySelector` och tillhandahåll implementeringar för endast de beteenden som kräver anpassning.
+* Åsidosätt `PTDefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **vissa** av standardbeteendena.
+   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
 
 Utför följande uppgifter för båda alternativen:
 
@@ -89,9 +88,9 @@ Utför följande uppgifter för båda alternativen:
 
    >[!NOTE]
    >
-   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `PTMediaPlayer`-instansen avallokeras. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
+   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `PTMediaPlayer` instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
 
-   Exempel:
+   Till exempel:
 
    ```
    // Create an instance of the custom policy selector 
@@ -251,7 +250,7 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 
 Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 
-Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du sparar positionen **med** delade annonser refererar till en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
+Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att positionen sparas **med** delade annonser avser en annan position i en framtida session. TVSDK innehåller metoder för att hämta uppspelningspositionen samtidigt som delade annonser ignoreras.
 
 1. När användaren avslutar en video hämtas och sparas positionen i videon.
 
@@ -259,13 +258,13 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
    >
    >Annonslängder ingår inte.
 
-   Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet den lokala tiden. Använd egenskapen `localTime` för att läsa den här positionen, som du kan spara på enheten eller i en databas på servern.
+   Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet den lokala tiden. Använd  `localTime` för att läsa den här positionen, som du kan spara på enheten eller i en databas på servern.
 
-   Om användaren till exempel är på den 20:e minuten av videon, och den här positionen innehåller fem minuters annonser, är `currentTime` 1200 sekunder, medan `localTime` vid den här positionen är 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` är 1 200 sekunder, medan `localTime` vid den här positionen är 900 sekunder.
 
    >[!IMPORTANT]
    >
-   >Lokal tid och aktuell tid är samma för live/linjära strömmar. I det här fallet har `convertToLocalTime` ingen effekt. För VOD ändras inte lokal tid medan annonser spelas upp.
+   >Lokal tid och aktuell tid är samma för live/linjära strömmar. I detta fall `convertToLocalTime` har ingen effekt. För VOD ändras inte lokal tid medan annonser spelas upp.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -280,15 +279,15 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så om du
    }
    ```
 
-1. Använd `seekToLocalTime` om du vill återuppta videon på samma plats som den som sparades från föregående session.
+1. Om du vill återuppta videon på samma plats som den som sparades från föregående session använder du `seekToLocalTime`.
 
    >[!TIP]
    >
    >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
 
-   Använd `seekToTime` om du vill söka till aktuell tid.
+   Om du vill söka till aktuell tid använder du `seekToTime`.
 
-1. När ditt program tar emot händelsen `PTMediaPlayerStatusReady` för statusändring söker du efter den sparade lokala tiden.
+1. När ditt program får `PTMediaPlayerStatusReady` statusändringshändelse, söka till den sparade lokala tiden.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 

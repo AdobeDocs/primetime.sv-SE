@@ -1,13 +1,13 @@
 ---
 title: Hämta auktoriseringstoken
 description: Hämta auktoriseringstoken
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
 
 ---
-
 
 # Hämta auktoriseringstoken {#retrieve-authorization-token}
 

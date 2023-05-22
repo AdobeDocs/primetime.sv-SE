@@ -1,14 +1,13 @@
 ---
 description: Med händelsehanterare kan du svara på TVSDK-händelser.
 title: Implementera händelseavlyssnare och återanrop
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c8825a6c-3d48-412f-81f5-542c7731a122
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
 
 ---
-
 
 # Implementera händelseavlyssnare och återanrop {#implement-event-listeners-and-callbacks}
 
@@ -16,7 +15,7 @@ Med händelsehanterare kan du svara på TVSDK-händelser.
 
 När en händelse inträffar anropar TVSDK:s händelsemekanism din registrerade händelsehanterare och skickar händelseinformationen.
 
-TVSDK definierar avlyssnare som offentliga interna gränssnitt inuti `MediaPlayer`-gränssnittet.
+TVSDK definierar avlyssnare som offentliga interna gränssnitt inuti `MediaPlayer` gränssnitt.
 
 Programmet måste implementera händelseavlyssnare för alla TVSDK-händelser som påverkar programmet.
 
@@ -34,9 +33,9 @@ Programmet måste implementera händelseavlyssnare för alla TVSDK-händelser so
 
    >[!NOTE]
    >
-   >För de flesta händelser skickar TVSDK argument till händelseavlyssnarna. Sådana värden ger information om händelsen som kan hjälpa dig att bestämma vad du ska göra sedan. Uppräkningen `MediaPlayerEvent` visar alla händelser som `MediaPlayer` skickar. Mer information finns i Sammanfattning av händelser.
+   >För de flesta händelser skickar TVSDK argument till händelseavlyssnarna. Sådana värden ger information om händelsen som kan hjälpa dig att bestämma vad du ska göra sedan. The `MediaPlayerEvent` uppräkningen listar alla händelser som `MediaPlayer` skickar. Mer information finns i Sammanfattning av händelser.
 
-   Om `mPlayer` till exempel är en instans av `MediaPlayer` är det så här du kan lägga till och strukturera en händelseavlyssnare:
+   Om `mPlayer` är en instans av `MediaPlayer`, så här kan du lägga till och strukturera en händelseavlyssnare:
 
    ```java
    mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -57,29 +56,29 @@ TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelar
 
 I följande exempel visas ordningen för vissa händelser som inträffar under uppspelningen.
 
-När en medieresurs har lästs in via `MediaPlayer.replaceCurrentResource` är händelseordningen:
+När en medieresurs läses in `MediaPlayer.replaceCurrentResource`, är händelseordningen:
 
-1. `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZING`
+1. `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZING`
 
-1. `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`
+1. `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZED`
 
 >[!TIP]
 >
->Läs in din medieresurs på huvudtråden. Om du läser in en medieresurs i en bakgrundstråd kan den här åtgärden eller efterföljande åtgärder utlösa ett fel, till exempel `MediaPlayerException`, och avsluta.
+>Läs in din medieresurs på huvudtråden. Om du läser in en medieresurs i en bakgrundstråd kan den här åtgärden eller efterföljande åtgärder utlösa ett fel, t.ex. `MediaPlayerException`och avsluta.
 
-När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
+När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`, är händelseordningen:
 
-1. `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARING`
+1. `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayerEvent.TIMELINE_UPDATED` om annonser infogades.
-1. `MediaPlayerEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARED`
+1. `MediaPlayerEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARED`
 
 För live-/linjära strömmar, under uppspelningen när uppspelningsfönstret går framåt och ytterligare möjligheter är lösta, är händelseordningen:
 
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` om annonser har infogats
 
-## Ordning för annonshändelser {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Ordning på annonsevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 
@@ -141,8 +140,8 @@ mediaPlayer.addEventListener(MediaPlayerEvent.AD_CLICK, new AdClickedEventListen
 
 TVSDK skickar DRM-händelser (Digital Rights Management) som svar på DRM-relaterade åtgärder som när nya DRM-metadata blir tillgängliga. Spelaren kan implementera åtgärder som svar på dessa händelser.
 
-Om du vill få meddelanden om alla DRM-relaterade händelser lyssnar du efter `MediaPlayerEvent.DRM_METADATA`. TVSDK skickar ytterligare DRM-händelser via klassen `DRMManager`.
+Om du vill få meddelanden om alla DRM-relaterade händelser avlyssnar du `MediaPlayerEvent.DRM_METADATA`. TVSDK skickar ytterligare DRM-händelser via `DRMManager` klassen.
 
 ## Ordning för inläsarhändelser {#section_5638F8EDACCE422A9425187484D39DCC}
 
-TVSDK skickar `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` när inläsarhändelser inträffar.
+TVSDK-utskick `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` när inläsarhändelser inträffar.

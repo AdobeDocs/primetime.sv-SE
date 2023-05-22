@@ -1,13 +1,13 @@
 ---
 title: Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless
 description: Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ff7254de-9ea4-4c27-a186-d1c2eea12222
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless {#enabling-primetime-entitlement-services-for-a-programer-on-xbox-360-and-xboxone-clientless}
 
@@ -47,6 +47,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->På grund av den stora längden på XSTS-token har XBox-konsolen en teknisk begränsning: det inte kan skicka token som HTTP GET-parameter till Primetimes API:er för betal-TV-autentisering. För att hantera detta tillåter Primetimes betal-TV-autentisering att XSTS-token skickas som en del av HTTP-huvudet &quot;Authorization&quot; när API:erna anropas. XSTS-token måste krypteras med den offentliga nyckeln från X.509-certifikatet som utfärdas till programmeraren från Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering lagrar den associerade privata nyckeln och använder den för att dekryptera XSTS-token och extrahera deviceId från den.  
-
-
+>På grund av den stora längden på XSTS-token har XBox-konsolen en teknisk begränsning: det inte kan skicka token som HTTP GET-parameter till Primetimes API:er för betal-TV-autentisering. För att hantera detta tillåter Primetimes betal-TV-autentisering att XSTS-token skickas som en del av HTTP-huvudet &quot;Authorization&quot; när API:erna anropas. XSTS-token måste krypteras med den offentliga nyckeln från X.509-certifikatet som utfärdas till programmeraren från Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering lagrar den associerade privata nyckeln och använder den för att dekryptera XSTS-token och extrahera deviceId från den.

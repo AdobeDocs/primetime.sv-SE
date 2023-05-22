@@ -1,13 +1,13 @@
 ---
 title: REST API Cookbook (Server-to-Server)
 description: Återställ API-cookbook-servern till servern.
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1825'
 ht-degree: 0%
 
 ---
-
 
 # REST API Cookbook (Server-to-Server) {#rest-api-cookbook-server-to-server}
 

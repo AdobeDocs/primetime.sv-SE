@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om autentisering av iOS/tvOS 3.7.0
 description: Versionsinformation om autentisering av iOS/tvOS 3.7.0
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation om autentisering av iOS/tvOS 3.7.0 {#ios-tvos-sdk-370-release-notes}
 

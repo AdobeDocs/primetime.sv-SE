@@ -1,14 +1,13 @@
 ---
 description: TVSDK har specifika krav för mediematerial, manifestinnehåll, DRM och programversioner.
 title: Krav
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8c252761-eee3-4fec-a85f-a38c1d9be9cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
 
 ---
-
 
 # Krav {#requirements}
 
@@ -22,8 +21,8 @@ Om du vill använda TVSDK måste du se till att maskinvaru-, operativsystem- och
 |---|---|
 | CPU | 1 GHz, en kärna eller motsvarande |
 | RAM | 256 MB |
-| GPU | GPU för maskinvara krävs för uppspelning |
-| Arkitektur | x86 via Houeda, ARM64, ARMv7 och ARMv8 |
+| GPU | Hardware GPU required for playback |
+| Architecture | x86 via Houeda, ARM64, ARMv7 och ARMv8 |
 
 ## Krav för innehåll och manifest {#section_72DD0E4DA9774DCCADB42887497F1386}
 
@@ -31,15 +30,15 @@ Kontrollera begränsningar och krav för strömmar och spellistor (manifest), in
 
 | DRM för Adobe Access | Om den DRM-skyddade strömmen har flera bithastigheter (MBR) bör DRM-krypteringsnyckeln som används för MBR vara densamma som nyckeln som används i alla bithastighetsströmmar. |
 |---|---|
-| Annonsvariantmanifest | Måste ha samma bithastighetsåtergivningar som återgivningarna av huvudinnehållet. |
+| Annonsvariantmanifest | Must have the same bit-rate renditions as the renditions of the main content. |
 
 ## #EXT-X-VERSION requirements {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-Versionen av `#EXT-X-VERSION` i manifestfilen [!DNL .m3u8] påverkar vilka funktioner som är tillgängliga för programmet och vilka `EXT`-taggar som är giltiga.
+Versionen av `#EXT-X-VERSION` i [!DNL .m3u8] manifestfilen påverkar vilka funktioner som är tillgängliga för ditt program och vilka `EXT` -taggar som är giltiga.
 
 Här är lite information om taggen `#EXT-X-VERSION` som anger HLS-protokollversionen:
 
-* Versionen måste matcha funktionerna och attributen i HLS-spellistan. Annars kan uppspelningsfel uppstå. Mer information finns i [Specifikation för HTTP-direktuppspelning](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* Versionen måste matcha funktionerna och attributen i HLS-spellistan. Annars kan uppspelningsfel uppstå. Mer information finns i [HTTP Live Streaming-specifikation](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Adobe rekommenderar att minst version 2 av HLS används för uppspelning i TVSDK-baserade klienter.
 
    Klienter och servrar måste implementera versionerna på följande sätt:
@@ -53,25 +52,25 @@ Här är lite information om taggen `#EXT-X-VERSION` som anger HLS-protokollvers
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2  </span> </td> 
-   <td colname="2"> Attributet IV för taggen <span class="codeph"> EXT-X-KEY </span>. </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2 </span> </td> 
+   <td colname="2"> Attributet IV för <span class="codeph"> EXT-X-KEY </span> -tagg. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Flyttalsvärden <span class="codeph"> EXTINF </span> <p>Varaktighetstaggarna ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) i version 2 avrundades till heltalsvärden. Version 3 och senare kräver att varaktighet anges exakt, i flyttal. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Längdvärden för flyttal <span class="codeph"> EXTINF </span> <p>Varaktighetstaggar ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) i version 2 avrundades till heltalsvärden. Version 3 och senare kräver att varaktighet anges exakt, i flyttal. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4  </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4 </span> </td> 
    <td colname="2"> 
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
      <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">Taggen <span class="codeph"> EXT-X-BYTERANGE </span> </li> 
      <li id="li_BF5141F516F749E5890860D487EB5287">Taggen <span class="codeph"> EXT-X-I-FRAME-STREAM-INF </span> </li> 
      <li id="li_E0D399A13812499B94107CDE62998EE9">Taggen <span class="codeph"> EXT-X-I-FRAMES-ONLY </span> </li> 
      <li id="li_A7783AFF99854EFBBAECD2967E4CBF2B">Taggen <span class="codeph"> EXT-X-MEDIA </span> </li> 
-     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD"><span class="codeph">-LJUDET </span> och <span class="codeph"> VIDEO </span>-attributen för <span class="codeph"> EXT-X-STREAM-INF </span>-taggen </li> 
+     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD">The <span class="codeph"> LJUD </span> och <span class="codeph"> VIDEO </span> attribut för <span class="codeph"> EXT-X-STREAM-INF </span> tag </li> 
      <li id="li_DB2A7847D5884F6E91FD9E78101FBCA5">alternativt ljud för TVSDK </li> 
     </ul> </td> 
   </tr> 

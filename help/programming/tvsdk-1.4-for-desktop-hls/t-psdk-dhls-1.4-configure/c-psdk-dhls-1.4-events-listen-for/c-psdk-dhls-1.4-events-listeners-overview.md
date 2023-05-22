@@ -4,7 +4,7 @@ title: Lyssna efter händelser för Primetime Player
 exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -21,19 +21,19 @@ Flash Runtime har en generisk händelsemekanism som TVSDK också använder och d
 
       >[!IMPORTANT]
       >
-      >Uppspelningshändelsen `MediaPlayerStatusChangeEvent.STATUS_CHANGE` ger spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
+      >Uppspelningshändelsen `MediaPlayerStatusChangeEvent.STATUS_CHANGE` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
 
    * **Andra händelser**: Valfritt, beroende på ditt program.
 
-      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent`- och `AdPlaybackEvent`-händelser.
+      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
 
 1. Implementera händelseavlyssnare för varje händelse.
 
    TVSDK returnerar parametervärden till återanrop till händelseavlyssnaren. Dessa värden ger relevant information om händelsen som du kan använda i dina avlyssnare för att utföra lämpliga åtgärder.
 
-   Klassen `Event` visar alla callback-gränssnitt. Varje gränssnitt visar de parametrar som returneras för det gränssnittet.
+   The `Event` -klassen visar alla callback-gränssnitt. Varje gränssnitt visar de parametrar som returneras för det gränssnittet.
 
-   Exempel:
+   Till exempel:
 
    ```
    public function MediaPlayerStatusChangeEvent(type:String,  
@@ -43,9 +43,9 @@ Flash Runtime har en generisk händelsemekanism som TVSDK också använder och d
                    error:MediaError = null) 
    ```
 
-1. Registrera dina callback-avlyssnare med `MediaPlayer`-objektet med `MediaPlayer.addEventListener`.
+1. Registrera dina callback-avlyssnare med `MediaPlayer` objekt genom att använda `MediaPlayer.addEventListener`.
 
-   `MediaPlayer` extends  `flash.events.IEventDispatcher`, som ingår i Flash-spelarens kärnfiler och innehåller funktioner  `addEventListener` och  `removeEventListener`.
+   `MediaPlayer` extends `flash.events.IEventDispatcher`, som är en del av Flash spelarens kärnfiler och innehåller funktionerna `addEventListener` och `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 

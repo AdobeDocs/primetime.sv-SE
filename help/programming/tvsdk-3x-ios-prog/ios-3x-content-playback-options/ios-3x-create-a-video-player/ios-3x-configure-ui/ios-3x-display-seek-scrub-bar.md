@@ -1,16 +1,15 @@
 ---
 description: Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
 title: Visa ett söknavigeringsfält med aktuell position för uppspelningstid
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2093ee96-84fe-4011-ba18-275f2bf960ca
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
-
-# Visa ett sökningsnavigeringsfält med den aktuella uppspelningstiden {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Visa ett söknavigeringsfält med aktuell position för uppspelningstid {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
 

@@ -1,14 +1,13 @@
 ---
 description: PTMediaPlayer-gränssnittet kapslar in funktionaliteten och beteendet i ett mediespelarobjekt.
 title: Konfigurera PTMediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cf8f46c8-c52a-4f44-b493-965ce1b50c68
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera PTMediaPlayer {#set-up-the-ptmediaplayer}
 
@@ -18,7 +17,7 @@ Använd plattformens verktyg för att skapa en spelare och ansluta den till medi
 
 PTMediaPlayer-gränssnittet kapslar in funktionaliteten och beteendet i ett mediespelarobjekt.
 
-Så här konfigurerar du din `PTMediaPlayer`:
+Så här konfigurerar du `PTMediaPlayer`:
 
 1. Hämta mediets URL från användargränssnittet, till exempel, i ett textfält.
 
@@ -28,13 +27,13 @@ Så här konfigurerar du din `PTMediaPlayer`:
 
 1. Skapa `PTMetadata`.
 
-   Anta att din metod `createMetada` förbereder metadata (se [Advertising](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Anta att din metod `createMetada` förbereder metadata (se [Reklam](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Skapa `PTMediaPlayerItem` genom att använda din `PTMetadata`-instans.
+1. Skapa `PTMediaPlayerItem` genom att använda `PTMetadata` -instans.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -47,7 +46,7 @@ Så här konfigurerar du din `PTMediaPlayer`:
    [self addObservers]
    ```
 
-1. Skapa `PTMediaPlayer` med din nya `PTMediaPlayerItem`.
+1. Skapa `PTMediaPlayer` med dina nya `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +54,7 @@ Så här konfigurerar du din `PTMediaPlayer`:
 
 1. Ange egenskaper för spelaren.
 
-   Här är några av de tillgängliga `PTMediaPlayer`-egenskaperna:
+   Här är några av de tillgängliga `PTMediaPlayer` egenskaper:
 
    ```
    player.autoPlay                    = YES;  
@@ -84,9 +83,8 @@ Så här konfigurerar du din `PTMediaPlayer`:
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Ring `play` för att starta medieuppspelningen.
+1. Utlysning `play` för att starta medieuppspelning.
 
    ```
    [player play];
    ```
-

@@ -1,29 +1,28 @@
 ---
 description: Ni kan implementera egna affärsmöjlighetsdetektorer.
 title: Implementera en anpassad affärsmöjlighetsdetektor
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a3f6d6b3-4d5e-49bc-b8de-a1196305bbb4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-
 # Implementera en anpassad affärsmöjlighetsdetektor{#implement-a-custom-opportunity-detector}
 
 Ni kan implementera egna affärsmöjlighetsdetektorer.
 
-* Om din affärsmöjlighetsgenerator baseras på `TimedMetadata`-objekt som är associerade med den aktuella medieströmmen bör den utöka `SpliceOutOpportunityGenerator` eller `TimedMetadataOpportunityGenerator`.
+* Om affärsmöjlighetsgeneratorn är baserad på `TimedMetadata` objekt som är associerade med den aktuella medieströmmen, bör den utöka `SpliceOutOpportunityGenerator` eller `TimedMetadataOpportunityGenerator`.
 
-* Om affärsmöjlighetsgeneratorn är baserad på out-of-band-data som tillhandahålls av en extern tjänst (till exempel en CIS), bör den utöka `OpportunityGenerator`.
+* Om din affärsmöjlighetsgenerator baseras på out-of-band-data som tillhandahålls av en extern tjänst (t.ex. en CIS) bör den utöka `OpportunityGenerator`.
 
 1. Skapa den anpassade affärsmöjlighetsgeneratorn.
 
        Om den anpassade generatorn för affärsmöjlighet är baserad på TimedMetadata-objekt, utökar du TimedMetadataOpportunityGenerator och åsidosätter dessa metoder:
    
    * `doConfigure` - Den här metoden anropas efter att mediespelarobjektet har skapats och ger möjlighet att skapa en första uppsättning möjligheter vid behov
-   * `doProcess` - Den här metoden anropas varje gång nya  `TimedMetadata` upptäcks (t.ex. för live/linear-strömmar varje gång spellistan/manifestet uppdateras)
+   * `doProcess` - Den här metoden anropas varje gång ny `TimedMetadata` identifieras (till exempel för live/linjärt-strömmar varje gång spellistan/manifestet uppdateras)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -74,4 +73,3 @@ Ni kan implementera egna affärsmöjlighetsdetektorer.
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

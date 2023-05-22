@@ -1,13 +1,13 @@
 ---
 title: Hämta kort medietoken
 description: hämta kort medietoken
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 667eaaba-423e-4d54-9dbe-084b3c049e1f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Hämta kort medietoken {#obtain-short-media-token}
 

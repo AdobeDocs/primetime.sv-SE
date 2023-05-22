@@ -1,26 +1,25 @@
 ---
 description: Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licensiering och uppspelning av DASH-innehåll som krypterats med WideVM och PlayReady.
 title: Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
-
-# Multi-DRM Workflow för WideVM och PlayReady {#multi-drm-workflow-for-widevine-and-playready}
+# Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady {#multi-drm-workflow-for-widevine-and-playready}
 
 Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licensiering och uppspelning av DASH-innehåll som krypterats med WideVM och PlayReady.
 
-Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-encrypted DASH-innehåll i HTML5 och Android i TVSDK version 2.X. DASH-innehållskryptering definieras av Common Encryption-specifikationen, vars fullständiga information ligger utanför det här dokumentets omfång. I det här avsnittet finns viktig information om DASH-formatet, krypteringsspecifikationen och information om några verktyg som du kan använda för att generera det innehåll som stöds.
+Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-encrypted DASH-innehåll på HTML5 och Android i TVSDK version 2.X. DASH-innehållskryptering definieras av Common Encryption-specifikationen, vars fullständiga information ligger utanför det här dokumentets omfång. I det här avsnittet finns viktig information om DASH-formatet, krypteringsspecifikationen och information om några verktyg som du kan använda för att generera det innehåll som stöds.
 
 >[!NOTE]
 >
 >Inga planer har gjorts på att bakportera VSDK 1.X till Android för uppspelning av Widewin-krypterat DASH-innehåll.
 
-## DASH-innehåll och gemensam kryptering i korthet {#section_33A881158F724835B4B89AAE97302B17}
+## Översikt över DASH-innehåll och gemensam kryptering {#section_33A881158F724835B4B89AAE97302B17}
 
 Dash-innehåll består av ett huvudmanifest, skrivet i xml, som pekar på video- och ljudfiler som ska spelas upp. I exemplet nedan pekar DASH-manifestet på en video-URL, video/1080_30.mp4, och en ljud-URL, audio/1080_30.mp4, i förhållande till manifestets URL.
 
@@ -44,7 +43,7 @@ Dash-innehåll består av ett huvudmanifest, skrivet i xml, som pekar på video-
 </MPD>
 ```
 
-Nedan visas ett exempelmanifest med gemensam kryptering. XML-elementen för skydd av vitt innehåll (`<ContentProtection>`-blocken) i manifestet innehåller en base64-kodad pssh-ruta (skyddssystemspecifik rubrik). Rutan pssh innehåller de data som behövs för att initiera innehållsavkryptering. Dessa data är också inbäddade i video-/ljudinnehållet som manifestet refererar till. DASH-innehåll kan ha flera element för innehållsskydd, till exempel 1 för PlayReady och 1 för Widewin.
+Nedan visas ett exempelmanifest med gemensam kryptering. XML-elementen för skydd av vitt innehåll ( `<ContentProtection>` -block) i manifestet innehåller en base64-kodad pssh-ruta (Protection System Specific Header). Rutan pssh innehåller de data som behövs för att initiera innehållsavkryptering. Dessa data är också inbäddade i video-/ljudinnehållet som manifestet refererar till. DASH-innehåll kan ha flera element för innehållsskydd, till exempel 1 för PlayReady och 1 för Widewin.
 
 ```
 <?xml version="1.0" ?>

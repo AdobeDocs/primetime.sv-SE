@@ -2,18 +2,17 @@
 title: Generera On Premises DRM-metadata
 description: Generera On Premises DRM-metadata
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b42e3491-081b-45bf-bd00-8fb769a97446
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Generera On Premises DRM-metadata{#generate-the-on-premises-drm-metadata}
 
-Ett [!DNL CreateMetadata.jar]-verktyg finns i mappen [!DNL create_metadata]. Poängen med det här verktyget är att skapa en On Premises DRM-metadata som startar klienten att utföra personaliseringsprocessen mot den angivna On Premises Individualization Server.
+A [!DNL CreateMetadata.jar] ingår i [!DNL create_metadata] mapp. Poängen med det här verktyget är att skapa en On Premises DRM-metadata som startar klienten att utföra personaliseringsprocessen mot den angivna On Premises Individualization Server.
 
 1. Uppdatera implementeringen av DRM-referensen för Primetime - kommandoradsverktyg med följande filer:
 
@@ -21,11 +20,11 @@ Ett [!DNL CreateMetadata.jar]-verktyg finns i mappen [!DNL create_metadata]. Po�
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      De två JAR-filerna kan finnas i mappen [!DNL Command Line Tools/libs]. Filen [!DNL createMetadata.properties] kan finnas bredvid filen [!DNL flashaccesstools.properties].
+      De två JAR-filerna kan finnas i [!DNL Command Line Tools/libs] mapp. The [!DNL createMetadata.properties] filen kan finnas bredvid [!DNL flashaccesstools.properties] -fil.
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-Inkluderat är ett [!DNL examplecreate.sh]-skript som demonstrerar hur metadata skapas. Konfigurera licensserverns URL och URL:en till servern för personalisering i både skript- och egenskapsfilerna innan du försöker generera metadata.
+Inkluderad är en [!DNL examplecreate.sh] skript som demonstrerar hur metadata skapas. Konfigurera licensserverns URL och URL:en till servern för personalisering i både skript- och egenskapsfilerna innan du försöker generera metadata.
 
 Indata för verktyget är följande:
 
@@ -33,7 +32,7 @@ Indata för verktyget är följande:
 * `indivCert` - PKCS12-fil som innehåller individuellt transportcertifikat
 * `indivURL` - URL för On Premises Individualization Server
 
-Utdatafilen är en lokal DRM-metadatafil som ska användas av DRM-klienten. Exempel:
+Utdatafilen är en lokal DRM-metadatafil som ska användas av DRM-klienten. Till exempel:
 
 ```
 java -jar libs/CreateMetadata.jar -c createMetadata.properties -indivCert i15n_transport.cer

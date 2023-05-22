@@ -1,14 +1,13 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: Meddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 615de4e4-fb42-4159-b572-da7866df4ce3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
 
 ---
-
 
 # Meddelandekoder{#notification-codes}
 
@@ -26,7 +25,7 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span> </td> 
-   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräknad typ med möjliga värden <span class="codeph"> INFO</span>, <span class="codeph"> WARN</span> eller <span class="codeph"> ERROR</span>. Det här är den översta grupperingen för meddelanden. </td> 
+   <td colname="2">Meddelandetypen. Beroende på plattformen refererar den här egenskapen till en uppräkningstyp med möjliga värden för <span class="codeph"> INFORMATION</span>, <span class="codeph"> VARNING</span>, eller <span class="codeph"> FEL</span>. Det här är den översta grupperingen för meddelanden. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> kod</span> </td> 
@@ -43,12 +42,11 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> skulle till exempel kombineras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
+   <td colname="2">Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. En nyckel med namnet <span class="codeph"> URL</span> paras med ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2">En referens till ett annat <span class="codeph"> MediaPlayerNotification</span>-objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
+   <td colname="2">En referens till en annan <span class="codeph"> MediaPlayerNotification</span> objekt som direkt påverkade det här meddelandet. Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </td> 
   </tr> 
  </tbody> 
 </table>
-

@@ -1,14 +1,13 @@
 ---
 description: Adobe rekommenderar att du kör verktyget Configuration Validator innan du startar servern om du gör ändringar i konfigurationsfilen. Detta verktyg kan upptäcka de flesta konfigurationsfel tidigt, innan de orsakar fel under bearbetningen av begäran.
 title: Konfigurationsvaliderare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 41d0a926-4e12-442c-886e-5f12cf10eed8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurationsvaliderare{#configuration-validator}
 
@@ -50,7 +49,7 @@ Valideraren kan även utföra distributionsbaserad validering. Förutom att kont
 
 Distributionsbaserad validering kan utföras på följande nivåer:
 
-* `Tenant` — Validerar konfigurationsfilen och autentiseringsuppgifterna för en viss klientorganisation. Om du vill validera konfigurationen för `<tenant1>` skriver du:
+* `Tenant` — Validerar konfigurationsfilen och autentiseringsuppgifterna för en viss klientorganisation. Om du vill validera konfigurationen för `<tenant1>`, typ:
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
@@ -61,4 +60,3 @@ Distributionsbaserad validering kan utföras på följande nivåer:
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -g
    ```
-

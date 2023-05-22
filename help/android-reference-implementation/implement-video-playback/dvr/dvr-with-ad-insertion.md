@@ -1,14 +1,13 @@
 ---
 description: Som standard visar en liveström med DVR-stöd ett sökbart intervall där användaren kan pausa och söka.
 title: DVR med annonsinfogning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3471741d-1ae3-4cbe-aa35-4e333aeb83c6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
-
 
 # DVR med annonsinfogning {#dvr-with-ad-insertion}
 

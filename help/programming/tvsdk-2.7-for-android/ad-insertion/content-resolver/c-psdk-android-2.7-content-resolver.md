@@ -1,14 +1,13 @@
 ---
 description: En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade taggar i en ström, anpassade markörer för annonseringsläge och så vidare. Affärsmöjlighetsgeneratorn skickar dessa placeringsmöjligheter till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa generatorer och innehållslösare för affärsmöjligheter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2ce859c4-6bf6-4ec5-82b1-2bc6a2316fd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#customize-opportunity-generators-and-content-resolvers-overview}
 
@@ -16,7 +15,7 @@ En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade
 
 TVSDK innehåller följande standardgeneratorer för affärsmöjligheter:
 
-* `ManifestCuesOpportunityGenerator` genererar affärsmöjligheter från standardannonsen (  `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` genererar affärsmöjligheter från standardannonsen ( `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` genererar en inledande möjlighet för det angivna annonseringssigneringsläget. Detta ignorerar eventuell information om metadata eller tidsåtgång.
 * `CustomMarkerOpportunityGenerator` skapar möjligheter att ersätta inbyggda C3-annonser.

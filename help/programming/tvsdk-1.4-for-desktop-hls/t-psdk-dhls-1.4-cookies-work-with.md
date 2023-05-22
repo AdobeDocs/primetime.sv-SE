@@ -1,14 +1,13 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
 title: Arbeta med cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f7a64c77-7db6-4bae-b299-69267fedc673
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med cookies{#work-with-cookies}
 
@@ -23,9 +22,9 @@ Här följer ett exempel med någon typ av autentisering när begäranden görs 
 
 Så här arbetar du med cookies:
 
-1. Använd egenskapen `cookieHeaders` i `NetworkConfiguration` för att ange en cookie. Egenskapen `cookieHeaders` är ett Metadata-objekt, och du kan lägga till nyckelvärdepar till det här objektet som ska inkluderas i cookie-huvudet.
+1. Använd `cookieHeaders` egenskap i `NetworkConfiguration` för att sätta en kaka. The `cookieHeaders` -egenskapen är ett Metadata-objekt, och du kan lägga till nyckelvärdepar till det här objektet som ska inkluderas i cookie-huvudet.
 
-   Exempel:
+   Till exempel:
 
    ```
    var metadata:Metadata = new Metadata(); 
@@ -35,9 +34,9 @@ Så här arbetar du med cookies:
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   Som standard skickas endast cookie-huvuden med nyckelförfrågningar. Om du vill skicka cookie-huvuden med alla begäranden anger du egenskapen `NetworkConfiguration` `useCookieHeadersForAllRequests` till true.
+   Som standard skickas endast cookie-huvuden med nyckelförfrågningar. Om du vill skicka cookie-huvuden med alla förfrågningar anger du `NetworkConfiguration` property `useCookieHeadersForAllRequests` till true.
 
-1. Om du vill vara säker på att `NetworkConfiguration` fungerar anger du det som metadata:
+1. Se till att `NetworkConfiguration` fungerar, anger det som metadata:
 
    ```
    var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
@@ -49,9 +48,8 @@ Så här arbetar du med cookies:
 
 1. Ange metadata från föregående steg när du skapar en `MediaResource`.
 
-   Om du till exempel använder metoden `createFromURL` anger du följande information:
+   Om du till exempel använder `createFromURL` anger du följande information:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
    ```
-

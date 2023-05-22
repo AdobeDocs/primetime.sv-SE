@@ -1,14 +1,13 @@
 ---
 description: När du konfigurerar en säker nätverksarkitektur krävs nätverksprotokoll för interaktion mellan Adobe Primetime DRM och andra system i företagsnätverket.
 title: Adobe Primetime DRM-nätverksprotokoll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d5720ef4-6845-4a62-940a-9d8ba9b43b13
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Primetime DRM-nätverksprotokoll {#adobe-primetime-drm-network-protocols}
 
@@ -30,7 +29,7 @@ När du konfigurerar en säker nätverksarkitektur krävs följande nätverkspro
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS (valfritt) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player-, Adobe AIR- och Adobe Primetime-klienter kan använda HTTPS för att kommunicera med Primetime DRM. HTTPS (SSL) krävs inte såvida du inte har stöd för FMRMS 1.x-klienter. Mer information finns i <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> Inkommande URL:er </a> och Konfigurera SSL. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player-, Adobe AIR- och Adobe Primetime-klienter kan använda HTTPS för att kommunicera med Primetime DRM. HTTPS (SSL) krävs inte såvida du inte har stöd för FMRMS 1.x-klienter. Mer information finns i <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> Inkommande URL:er </a> och konfigurerar SSL. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,14 +1,13 @@
 ---
 description: Entitlement Manager visar dessa klasser för att integrera Adobe Primetime-autentisering i spelaren.
 title: Relaterad API-dokumentation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 29a6b88b-1152-4a27-badb-85b06de0dcbc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
-
 
 # Relaterad API-dokumentation {#related-api-documentation}
 

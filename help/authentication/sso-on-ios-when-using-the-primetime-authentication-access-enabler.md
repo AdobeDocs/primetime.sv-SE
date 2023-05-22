@@ -1,13 +1,13 @@
 ---
 title: enkel inloggning (SSO) på iOS när du använder åtkomstaktivering för autentisering via Primetime
 description: enkel inloggning (SSO) på iOS när du använder åtkomstaktivering för autentisering via Primetime
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 882f0abb-2e6e-461d-a375-3ab410991935
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%
 
 ---
-
 
 # enkel inloggning (SSO) på iOS när du använder åtkomstaktivering för autentisering via Primetime {#sso-on-ios-when-using-the-primetime-authentication-access-enabler}
 
@@ -88,4 +88,3 @@ Apparna delar samma monteringsbord men har olika enhets-ID:n (IDFV). En använd
 1. Användaren öppnar app B (med paket-ID *com.z.AppB*) och de berättigandedata som skapades av program A raderas automatiskt av Access Enabler (säkerhetsmekanism som upptäcker en konflikt mellan det aktuella beräknade enhets-ID:t i program B och det som lagras i berättigandetokenerna - skapade av program A)
 1. Användaren utför autentisering i app B
 1. Användare öppnar app A och berättigandedata som skapades av app B raderas automatiskt av åtkomstaktiveraren (säkerhetsmekanism som upptäcker en konflikt mellan det för närvarande beräknade enhets-ID:t i program A och det som lagras i berättigandetokenerna - skapade av app B)
-

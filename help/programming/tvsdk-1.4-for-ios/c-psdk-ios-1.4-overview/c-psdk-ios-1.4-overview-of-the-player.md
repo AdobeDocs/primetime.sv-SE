@@ -1,16 +1,15 @@
 ---
 description: TVSDK för iOS innehåller en mängd olika funktioner.
 title: Funktioner i Primetime TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1968c072-2651-442d-9e4c-412f7959bcab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-# Primetime TVSDK-funktioner {#primetime-tvsdk-features}
+# Funktioner i Primetime TVSDK {#primetime-tvsdk-features}
 
 TVSDK för iOS innehåller en mängd olika funktioner och har följande huvudfunktioner:
 
@@ -49,4 +48,3 @@ TVSDK för iOS innehåller en mängd olika funktioner och har följande huvudfun
 * Loggning
 
    * Felsökningsloggning
-

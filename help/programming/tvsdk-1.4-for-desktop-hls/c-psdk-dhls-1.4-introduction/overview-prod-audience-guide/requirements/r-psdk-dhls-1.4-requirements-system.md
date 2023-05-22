@@ -1,14 +1,13 @@
 ---
 description: Om du vill använda TVSDK måste du se till att maskinvaru-, operativsystem- och programversionerna uppfyller de minimikrav som listas nedan.
 title: System- och programvarukrav
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fb1bccb9-1791-48e5-8e07-91bf776ca14b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # System- och programvarukrav{#system-and-software-requirements}
 

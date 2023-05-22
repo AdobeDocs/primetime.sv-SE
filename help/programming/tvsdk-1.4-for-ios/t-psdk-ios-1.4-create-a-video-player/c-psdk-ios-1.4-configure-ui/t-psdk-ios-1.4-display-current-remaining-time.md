@@ -1,14 +1,13 @@
 ---
 description: Du kan visa den aktuella och återstående tiden för det innehåll som spelas upp.
 title: Visa aktuell tid och återstående tid
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 61043b2c-949e-494a-9b93-9cf5104d5bde
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
-
 
 # Visa aktuell tid och återstående tid {#display-the-current-time-and-remaining-time}
 
@@ -102,4 +101,3 @@ Du kan visa den aktuella och återstående tiden för det innehåll som spelas u
    ```
 
 <!--<a id="example_D2FC658F27FC42A0B3E1AEC99B36788B"></a>-->
-

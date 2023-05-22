@@ -1,14 +1,13 @@
 ---
 description: Browser TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din Primetime-spelare) som du kan integrera med andra Primetime-komponenter.
 title: Redundans för Flash
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 76bd9214-767a-4f26-977d-81fbac3e0c42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
 
 ---
-
 
 # Redundans för Flash {#flash-failover}
 
@@ -18,11 +17,11 @@ Använd plattformens verktyg för att skapa en spelare och ansluta den till medi
 
 ## Flash fallback {#section_92D3884A13A6431F9A9CC5C79715D888}
 
-I Browser TVSDK interagerar ditt program bara med API:t `Primetime.js`. Den underliggande implementeringen av Browser TVSDK avgör vilken spelarteknologi som ska användas baserat på den aktuella plattformen och resurstypen för de media som ska spelas upp.
+I Browser TVSDK interagerar ditt program bara med `Primetime.js` API. Den underliggande implementeringen av Browser TVSDK avgör vilken spelarteknologi som ska användas baserat på den aktuella plattformen och resurstypen för de media som ska spelas upp.
 
-Spelartekniken används inte förrän du ringer `MediaPlayer.replaceCurrentResource` för att spela upp en viss resurs.
+Beslutet om spelartekniken fattas inte förrän du ringer `MediaPlayer.replaceCurrentResource` för att spela upp en specifik resurs.
 
-Exempel:
+Till exempel:
 
 ```js
 var player = new AdobePSDK.MediaPlayer(), 
@@ -32,7 +31,7 @@ var player = new AdobePSDK.MediaPlayer(),
               player.replaceCurrentResource(mediaResource);
 ```
 
-## Fastställ vilken mediespelare som ska använda {#section_D844E386AF5848688D204DEE258ECEE6}
+## Ange vilken mediespelare som ska användas {#section_D844E386AF5848688D204DEE258ECEE6}
 
 Detta exempel visar processen att fastställa spelartekniken:
 
@@ -41,13 +40,12 @@ Detta exempel visar processen att fastställa spelartekniken:
 >Processen kan variera beroende på webbadressen och miljön.
 
 1. Om Media Source Extensions stöds kan du använda det utan några kända begränsningar.
-1. Om det stöds kan du använda taggen `<video>` direkt utan MSE.
+1. Om det stöds använder du `<video>` utan MSE.
 1. Kontrollera att du använder minst Adobe Flash Player version 23.0.
-1. Om ingen lämplig uppspelningsteknik hittas returnerar `replaceCurrentResource` ett fel.
+1. Om ingen lämplig uppspelningsteknik hittas `replaceCurrentResource` returnerar ett fel.
 
-Ett efterföljande `replaceCurrentResource`-anrop på samma `MediaPlayer`-instans följer samma process. Detta gör att du kan spela upp olika resurstyper genom att använda samma `MediaPlayer`-instans i samma överordnade `<DIV>`-tagg som du angav när `MediaPlayerView`-instansen skapades.
+En efterföljande `replaceCurrentResource` ring på samma `MediaPlayer` -instansen följer samma process. På så sätt kan du spela upp olika resurstyper med samma `MediaPlayer` instans i samma överordnade `<DIV>` -taggen som du angav när `MediaPlayerView` -instansen skapades.
 
 >[!TIP]
 >
->SWF-objektet och `<video>`-taggen är kapslade i den överordnade `<DIV>`-taggen.
-
+>Objektet SWF och `<video>` -taggen är kapslad i den överordnade `<DIV>` -tagg.

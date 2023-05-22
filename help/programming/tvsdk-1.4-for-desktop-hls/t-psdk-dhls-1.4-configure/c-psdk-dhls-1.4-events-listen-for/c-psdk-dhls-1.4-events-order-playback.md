@@ -1,14 +1,13 @@
 ---
 description: TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 title: Ordning för uppspelningshändelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d03692f6-04b9-4962-92d1-fad671d06665
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # Ordning för uppspelningshändelser{#order-of-playback-events}
 
@@ -18,19 +17,19 @@ TVSDK skickar händelser/meddelanden i vanligtvis förväntade sekvenser. Spelar
 
 I följande exempel visas ordningen för vissa händelser som innehåller uppspelningshändelser.
 
-* När en medieresurs har lästs in via `MediaPlayer.replaceCurrentResource` är händelseordningen:
+* När en medieresurs läses in `MediaPlayer.replaceCurrentResource`, är händelseordningen:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.INITIALIZED`
 
-* När du förbereder för uppspelning via `MediaPlayer.prepareToPlay` är händelseordningen:
+* När du förbereder för uppspelning genom `MediaPlayer.prepareToPlay`, är händelseordningen:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` om annonser har infogats
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status  `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` med status `MediaPlayerStatus.PREPARED`
 
 * För live-/linjära strömmar, under uppspelningen när uppspelningsfönstret går framåt och ytterligare möjligheter är lösta, är händelseordningen:
 
@@ -68,4 +67,3 @@ public function onTimeChanged(event:TimeChangeEvent):void {
     ... 
 }
 ```
-

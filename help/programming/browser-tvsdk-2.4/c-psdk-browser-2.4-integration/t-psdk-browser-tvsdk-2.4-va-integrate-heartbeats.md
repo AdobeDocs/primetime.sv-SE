@@ -4,7 +4,7 @@ title: Initiera och konfigurera videoanalys
 exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr>
   <tr>
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td>
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips:  URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Mer information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementerings-ID Service </a>. </p> </td>
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips: URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Kontonamn </td>
@@ -41,7 +41,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr>
   <tr>
    <td colname="col1"> Utgivare </td>
-   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips:  Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td>
+   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips: Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -58,7 +58,7 @@ Så här konfigurerar du videospårning i spelaren:
    * Det enda konfigurationsalternativet för VisitorAPI-biblioteket är URL:en för serverslutpunkten som innehåller den unika identifieraren för den aktuella användaren.
    * URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern.
 
-      Information om hur du implementerar Visitor ID-tjänsten finns i [Implementering av Visitor ID-tjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
+      Information om hur du implementerar tjänsten för besöks-ID finns i [Implementering av besökar-ID-tjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -67,7 +67,7 @@ Så här konfigurerar du videospårning i spelaren:
 
 2. Instansiera och konfigurera komponenten AppMeasurement.
 
-   AppMeasurement-instansen har många konfigurationsalternativ. Mer information finns i [dokumentationen för Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Alternativen i följande exempelkod ( `account`, `visitorNamespace` och `trackingServer`) krävs, och värdena tillhandahålls av Adobe.
+   AppMeasurement-instansen har många konfigurationsalternativ. Mer information finns på [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) dokumentation. Alternativen i följande exempelkod ( `account`, `visitorNamespace`och `trackingServer`) krävs och värdena anges av Adobe.
 
    >[!IMPORTANT]
    >
@@ -85,7 +85,7 @@ Så här konfigurerar du videospårning i spelaren:
 
    >[!IMPORTANT]
    >
-   >Kontrollera att `appMeasurementObject.visitor` är ifyllt i programmet innan du startar videoanalysflödet, annars kanske du inte får några spårningsresultat. Dessa resultat indikeras av meddelandena i loggen. Du kan lägga till ett tomt spåranrop ( `appMeasurementObject.track`), avfråga egenskapen `visitor` tills den har fyllts i och starta videoanalys.
+   >I programmet ska du se till att `appMeasurementObject.visitor` fylls i innan videoanalysflödet initieras, eller så kanske du inte får några spårningsresultat. Dessa resultat indikeras av meddelandena i loggen. Du kan lägga till ett tomt spåranrop ( `appMeasurementObject.track`), avfråga `visitor` egenskapen tills den fylls i och initiera videoanalys.
 
 3. Initiera och konfigurera metadata för spårning av pulsslag.
 
@@ -94,7 +94,7 @@ Så här konfigurerar du videospårning i spelaren:
    >Du kan stoppa videoanalysmodulen mitt i strömmen och återinitiera den om det behövs. Innan modulen initieras om måste du se till att metadata för videoanalys även uppdateras till rätt metadata för innehållet. Om du vill återskapa metadata upprepar du delstegen 1 och 2.
 
    1. Skapa en instans av metadata för videoanalys.
-Den här instansen innehåller all konfigurationsinformation som behövs för att aktivera spårning av pulsslag för video. Exempel:
+Den här instansen innehåller all konfigurationsinformation som behövs för att aktivera spårning av pulsslag för video. Till exempel:
 
       ```js
       function getVideoAnalyticsMetadata() {

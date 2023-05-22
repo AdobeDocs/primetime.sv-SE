@@ -1,14 +1,13 @@
 ---
 description: MediaPlayerNotification-objekt innehåller information om ändringar i spelartillstånd, varningar och fel. Fel som stoppar videouppspelningen orsakar också en ändring av spelarens tillstånd.
 title: Meddelandeinnehåll
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b8298865-0389-4610-b495-b8735ef9cd56
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 0%
 
 ---
-
 
 # Meddelandeinnehåll {#notification-content}
 
@@ -16,21 +15,21 @@ MediaPlayerNotification-objekt innehåller information om ändringar i spelartil
 
 Programmet kan hämta information om meddelanden och tillstånd. Du kan också skapa ett loggningssystem för diagnostik och validering genom att använda meddelandeinformationen.
 
-Du implementerar händelseavlyssnare för att hämta och svara på händelser. Många händelser ger `MediaPlayerNotification` statusmeddelanden.
+Du implementerar händelseavlyssnare för att hämta och svara på händelser. Många evenemang `MediaPlayerNotification` statusmeddelanden.
 
 `MediaPlayerNotification` innehåller information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification`-meddelanden. Varje anmälan innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification` meddelanden. Varje anmälan innehåller följande information:
 
 * Tidsstämpel
 * Diagnostiska metadata som består av följande element:
 
-   * `type`: INFORMATION, VARNING ELLER FEL.
+   * `type`: INFORMATION, VARNING eller FEL.
    * `code`: En numerisk representation av anmälan.
    * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
-   * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` ger till exempel ett värde som är en URL som är relaterad till meddelandet.
+   * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` tillhandahåller ett värde som är en URL som är relaterad till meddelandet.
 
-   * `innerNotification`: En referens till ett annat  `MediaPlayerNotification` objekt som direkt påverkar det här meddelandet.
+   * `innerNotification`: En referens till en annan `MediaPlayerNotification` objekt som direkt påverkar detta meddelande.
 
 Du kan lagra informationen lokalt för senare analys eller skicka den till en fjärrserver för loggning och grafisk representation.
 
@@ -38,9 +37,9 @@ Du kan lagra informationen lokalt för senare analys eller skicka den till en fj
 
 Du kan lyssna efter meddelanden och lägga till egna meddelanden i meddelandehistoriken.
 
-Kärnan i Primetime Players meddelandesystem är klassen `Notification`, som representerar ett fristående meddelande.
+Kärnan i Primetimes meddelandesystem är `Notification` -klass, som representerar ett fristående meddelande.
 
-Klassen `NotificationHistory` innehåller en mekanism för att samla in meddelanden. Den lagrar en logg med meddelandeobjekt (NotificationHistoryItem) som representerar en samling meddelanden.
+The `NotificationHistory` -klassen erbjuder en mekanism för att samla in meddelanden. Den lagrar en logg med meddelandeobjekt (NotificationHistoryItem) som representerar en samling meddelanden.
 
 Så här tar du emot meddelanden:
 
@@ -48,11 +47,11 @@ Så här tar du emot meddelanden:
 * Lägg till meddelanden i meddelandehistoriken
 
 1. Lyssna efter tillståndsändringar.
-1. Implementera `MediaPlayer.PlaybackEventListener.onStateChanged`-återanropet.
+1. Implementera `MediaPlayer.PlaybackEventListener.onStateChanged` återanrop.
 1. TVSDK skickar två parametrar till återanropet:
 
    * Det nya läget ( `MediaPlayer.PlayerState`)
-   * Ett `MediaPlayerNotification`-objekt
+   * A `MediaPlayerNotification` object
 
 ## Lägg till loggning och felsökning i realtid {#add-real-time-logging-and-debugging}
 
@@ -78,7 +77,7 @@ Här är ett exempel på hur du hämtar meddelanden.
    Fjärrservern kan sedan grafiskt visa de data som tillhandahålls i realtid.
 1. Om du vill identifiera förlust av meddelandehändelser ska du leta efter luckor i sekvensen med händelseindexvärden.
 
-   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av klassen `session.NotificationHistory`.
+   Varje meddelandehändelse har ett indexvärde som automatiskt ökas av `session.NotificationHistory` klassen.
 
 ## ID3-taggar {#id-tags}
 
@@ -95,13 +94,13 @@ När TVSDK identifierar ID3-metadata skickas ett meddelande med följande data:
 * NAME = finns inte
 * ID = 0
 
-1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera den med objektet `MediaPlayer`.
+1. Implementera en händelseavlyssnare för `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` och registrera det med `MediaPlayer` -objekt.
 
    TVSDK anropar den här avlyssnaren när ID3-metadata identifieras.
 
    >[!NOTE]
    >
-   >Anpassade annonsinställningar använder samma `onTimedMetadata`-händelse för att ange identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
+   >Anpassade annonser använder samma `onTimedMetadata` -händelse för att indikera identifiering av en ny tagg. Detta bör inte skapa någon förvirring eftersom anpassade annonser identifieras på manifestnivå och ID3-taggar bäddas in i strömmen. Mer information finns i custom-tags-configure.
 
 1. Hämta metadata.
 

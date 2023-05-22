@@ -1,7 +1,8 @@
 ---
 title: Felrapportering
 description: Felrapportering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%

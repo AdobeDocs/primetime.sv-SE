@@ -2,14 +2,13 @@
 title: Paketera mediefiler - översikt
 description: Paketera mediefiler - översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 88c593a7-33b5-4773-b283-2ab16f9e8c3a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#packaging-media-files-overview}
 
@@ -29,14 +28,14 @@ Ett visst innehåll kan ha flera DRM-principer. Du kan till exempel licensiera i
 >
 >Med arkitekturen kan DRM-principer för användning anges och bindas till innehåll när innehållet paketeras. Innan en klient kan spela upp innehåll måste klienten hämta en licens för en angiven dator. Licensen anger vilka användningsregler som används och ger den nyckel som måste användas för att dekryptera innehållet. DRM-principen representerar en mall för att generera en licens. Licensservern kan dock åsidosätta användningsreglerna när den utfärdar en licens. Licensen kan vara ogiltig på grund av sådana begränsningar, t.ex. förfallotider eller uppspelningsfönster.
 
-Primetime DRM tillhandahåller ett API för att skicka CEK. Om inget CEK anges genereras det slumpmässigt av SDK. Vanligtvis behöver du olika CEK-värden för varje innehållsavsnitt. I Dynamic Streaming är det emellertid troligt att du använder samma CEK för alla filer som innehåller det innehållet. Därför behöver en användare bara en licens för att smidigt kunna gå över från en bithastighet till en annan. Om du vill använda samma nyckel och licens för flera innehållsdelar måste du skicka samma `DRMParameters`-objekt till `MediaEncrypter.encryptContent()` eller skicka CEK med `V2KeyParameters.setContentEncryptionKey()`. Om du vill använda en annan nyckel och licens för varje innehållsavsnitt måste du skapa en ny `DRMParameters`-instans för varje fil.
+Primetime DRM tillhandahåller ett API för att skicka CEK. Om inget CEK anges genereras det slumpmässigt av SDK. Vanligtvis behöver du olika CEK-värden för varje innehållsavsnitt. I Dynamic Streaming är det emellertid troligt att du använder samma CEK för alla filer som innehåller det innehållet. Därför behöver en användare bara en licens för att smidigt kunna gå över från en bithastighet till en annan. Om du vill använda samma nyckel och licens för flera innehållsdelar måste du skicka samma `DRMParameters` objekt till `MediaEncrypter.encryptContent()`eller skicka in CEK med `V2KeyParameters.setContentEncryptionKey()`. Om du vill använda en annan nyckel och licens för varje innehållsavsnitt måste du skapa ett nytt `DRMParameters` -instans för varje fil.
 
-När du paketerar innehåll med tangentrotation kan du styra de rotationstangenter som används och med vilken frekvens tangenterna ska ändras. `F4VDRMParameters` och  `FLVDRMParameters` implementera  `KeyRotationParameters` gränssnittet. I det här gränssnittet kan du aktivera tangentrotation. Du måste också ange en `RotatingContentEncryptionKeyProvider`. För varje krypterat exempel avgör den här klassen vilken rotationsnyckel som ska användas. Du kan implementera din egen leverantör eller använda `TimeBasedKeyProvider` som ingår i SDK:n. Implementeringen genererar slumpmässigt en ny nyckel efter ett angivet antal sekunder.
+När du paketerar innehåll med tangentrotation kan du styra de rotationstangenter som används och med vilken frekvens tangenterna ska ändras. `F4VDRMParameters` och `FLVDRMParameters` implementera `KeyRotationParameters` gränssnitt. I det här gränssnittet kan du aktivera tangentrotation. Du måste också ange en `RotatingContentEncryptionKeyProvider`. För varje krypterat exempel avgör den här klassen vilken rotationsnyckel som ska användas. Du kan implementera din egen leverantör eller använda `TimeBasedKeyProvider` ingår i SDK. Implementeringen genererar slumpmässigt en ny nyckel efter ett angivet antal sekunder.
 
-I vissa fall kan du behöva lagra innehållets metadata som en separat fil och göra den tillgänglig för klienten separat från innehållet. I så fall måste du anropa `MediaEncrypter.encryptContent()`, som returnerar ett `MediaEncrypterResult`-objekt. Anropa `MediaEncrypterResult.getKeyInfo()` och omvandla resultatet till `V2KeyStatus`. Hämta sedan innehållets metadata och lagra dem i en fil.
+I vissa fall kan du behöva lagra innehållets metadata som en separat fil och göra den tillgänglig för klienten separat från innehållet. I så fall måste du anropa `MediaEncrypter.encryptContent()`, som returnerar `MediaEncrypterResult` -objekt. Utlysning `MediaEncrypterResult.getKeyInfo()` och omvandla resultatet till `V2KeyStatus`. Hämta sedan innehållets metadata och lagra dem i en fil.
 
 Alla dessa åtgärder kan utföras med Java API.
 
-Mer information om Java API finns i *API-referens för Adobe Primetime DRM*.
+Se *API-referens för Adobe Primetime DRM* om du vill ha mer information om Java API.
 
-Mer information om referensimplementeringen av Media Packager finns i *Använda referensimplementeringar av Adobe Primetime DRM*.
+Se *Använda Adobe Primetime DRM Reference Implementations* om du vill ha information om referensimplementeringen av Media Packager.

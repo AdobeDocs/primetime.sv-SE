@@ -1,14 +1,13 @@
 ---
 description: Du kan ta bort TimeRanges mellan början och slutet i localTime från tidslinjen.
 title: Ta bort intervall
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a91cd7ac-d60f-43bb-a783-ccc1b9b9e7fd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
-
 
 # Ta bort intervall{#delete-ranges}
 
@@ -16,7 +15,7 @@ Du kan ta bort TimeRanges mellan början och slutet i localTime från tidslinjen
 
 >[!TIP]
 >
->Om du bara vill ta bort vissa intervall från innehållet skapar du en `CustomRangeMetadata`-instans och anger typen som en `DELETE`-åtgärd med de definierade anpassade intervallen.
+>Skapa en `CustomRangeMetadata` -instans och ange typen som `DELETE` med definierade anpassade intervall.
 
 Annonskartan måste användas enligt annonsserverns definition.
 
@@ -76,4 +75,3 @@ Annonskartan måste användas enligt annonsserverns definition.
        "id": "vod_003"
    },
    ```
-

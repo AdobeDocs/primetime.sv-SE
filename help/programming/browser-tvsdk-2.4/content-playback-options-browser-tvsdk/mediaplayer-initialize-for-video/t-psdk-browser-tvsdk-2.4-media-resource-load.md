@@ -1,24 +1,23 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp.
 title: Läsa in en medieresurs i MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b775c33e-399c-4a03-a132-407944f07706
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
-
-# Läs in en medieresurs i MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+# Läsa in en medieresurs i MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
 Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp.
 
-1. Ange det uppspelningsbara objektet `MediaPlayer` med den nya resurs som ska spelas upp.
+1. Ange `MediaPlayer` objektets uppspelningsbara objekt med den nya resurs som ska spelas upp.
 
-   Ersätt det befintliga `MediaPlayer`-objektets uppspelningsbara objekt genom att anropa `replaceCurrentResource` och skicka en befintlig `MediaResource`-instans.
+   Ersätt din befintliga `MediaPlayer` objektets uppspelningsbara objekt genom att anropa `replaceCurrentResource` och skicka en befintlig `MediaResource` -instans.
 
-1. Vänta tills Browser TVSDK skickar `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status` som är lika med något av följande:
+1. Vänta på att webbläsarens TVSDK ska skicka `AdobePSDK.MediaPlayerStatusChangeEvent` med `event.status` som är lika med något av följande:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
@@ -26,17 +25,16 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
 
       Genom dessa händelser meddelar MediaPlayer-objektet programmet om medieresursen har lästs in.
 
-1. När mediespelarens tillstånd ändras till `MediaPlayerStatus.INITIALIZED` kan du anropa `MediaPlayer.prepareToPlay`.
+1. När mediespelarens tillstånd ändras till `MediaPlayerStatus.INITIALIZED`kan du ringa `MediaPlayer.prepareToPlay`.
 
-   Initieringstillståndet anger att mediet har lästs in. Om du anropar `prepareToPlay` startar du annonsupplösningen och placeringsprocessen, om det finns någon.
-1. När Browser TVSDK skickar händelsen `MediaPlayerStatus.PREPARED` har medieströmmen lästs in (ett MediaPlayerItem skapas) och förbereds för uppspelning.
+   Initieringstillståndet anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
+1. När webbläsarens TVSDK skickar `MediaPlayerStatus.PREPARED` händelsen när medieströmmen har lästs in (ett MediaPlayerItem skapas) och förbereds för uppspelning.
 
-Om ett fel uppstår växlar `MediaPlayer` till `MediaPlayerStatus.ERROR`.
+Om ett fel uppstår visas `MediaPlayer` växlar till `MediaPlayerStatus.ERROR`.
 
-Programmet meddelas också genom att händelsen `MediaPlayerStatus.ERROR` skickas.
+Programmet meddelas också genom att `MediaPlayerStatus.ERROR` -händelse.
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
-
 
 Följande förenklade exempelkod visar processen för inläsning av en medieresurs:
 

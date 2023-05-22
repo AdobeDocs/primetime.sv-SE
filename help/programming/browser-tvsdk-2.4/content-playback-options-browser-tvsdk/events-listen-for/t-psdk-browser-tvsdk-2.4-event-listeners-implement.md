@@ -1,14 +1,13 @@
 ---
 description: Händelsehanterare gör att Browser TVSDK kan svara på händelser.
 title: Implementera händelseavlyssnare och återanrop
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2ab33c03-4df6-48e5-825c-95aeef8855d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Implementera händelseavlyssnare och återanrop{#implement-event-listeners-and-callbacks}
 
@@ -24,17 +23,17 @@ Ditt program måste implementera händelseavlyssnare för Browser TVSDK-händels
 
       >[!IMPORTANT]
       >
-      >Uppspelningshändelsen `STATUS_CHANGED` anger spelarläget, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
+      >Uppspelningshändelsen `STATUS_CHANGED` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
 
    * **Andra händelser**: Valfritt, beroende på ditt program.
 
-      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent`- och `AdPlaybackEvent`-händelser.
+      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
 
 1. Implementera händelseavlyssnare för varje händelse.
 
    Webbläsarens TVSDK returnerar parametervärden till händelseavlyssnarens återanrop. Dessa värden ger relevant information om händelsen som du kan använda i dina avlyssnare för att utföra lämpliga åtgärder.
 
-   Exempel:
+   Till exempel:
 
    * Händelsetyp: `AdobePSDK.PSDKEventType.STATUS_CHANGED`
    * Händelseegenskap: `MediaPlayerStatus.<event>` används så här:
@@ -52,7 +51,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registrera dina callback-avlyssnare med `MediaPlayer`-objektet med `MediaPlayer.addEventListener`.
+1. Registrera dina callback-avlyssnare med `MediaPlayer` objekt genom att använda `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

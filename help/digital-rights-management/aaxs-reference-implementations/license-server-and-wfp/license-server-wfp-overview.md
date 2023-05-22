@@ -2,14 +2,13 @@
 title: Licensserver och bevakad mapppaketerare - översikt
 description: Licensserver och bevakad mapppaketerare - översikt
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1a355068-7ad6-4cc2-8447-49251dae3ff8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
 
 ---
-
 
 # Licensserver och bevakad mapppaketerare - översikt {#license-server-and-watched-folder-packager-overview}
 
@@ -17,7 +16,7 @@ Referensimplementeringsservern kan hjälpa dig att skapa en licensserver med hj�
 
 Referensimplementeringsservern innehåller även en bevakad mappimplementering av paketeraren. Komponenten kan distribueras tillsammans med licensservern eller på en separat dator. Med den här paketeringsimplementeringen kan du skapa flera bevakade mappar. När innehåll släpps i den bevakade mappen paketeras innehållet automatiskt.
 
-Licensservern och paketeraren distribueras som separata WAR-filer, så du kan välja om du vill köra dem på separata servrar eller i en enda Apache Tomcat®-instans. Licensservern finns i [!DNL flashaccess.war] och paketeraren är i [!DNL flashaccess-packager.war]. Det valfria [!DNL edcws.war] innehåller stöd för licensbegäranden från FMRMS 1.x-klienter.
+Licensservern och paketeraren distribueras som separata WAR-filer, så du kan välja om du vill köra dem på separata servrar eller i en enda Apache Tomcat®-instans. Licensservern finns i [!DNL flashaccess.war] och paketeraren är [!DNL flashaccess-packager.war]. Valfritt [!DNL edcws.war] innehåller stöd för licensbegäranden från FMRMS 1.x-klienter.
 
 Exemplskoden för referensimplementering visar följande funktioner:
 
@@ -53,4 +52,3 @@ Exemplskoden för referensimplementering visar följande funktioner:
    * Lagra autentiseringsuppgifter med en HSM- eller PKCS12-fil
    * Kryptera lösenord som anges i egenskapsfilen
    * Konfigurera paketeraren, skapa principer och skapa principuppdateringslistor med ett AIR-program
-

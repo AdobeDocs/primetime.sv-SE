@@ -1,16 +1,15 @@
 ---
 title: Standardarbetsflöde för AXS DRM
 description: Standardarbetsflöde för AXS DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3bc6aa6a-cda6-4c83-af08-f27eb103a47a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
-
-# Standard AXS DRM-arbetsflöde{#standard-aaxs-drm-workflow}
+# Standardarbetsflöde för AXS DRM{#standard-aaxs-drm-workflow}
 
 1. (Paket) AAXS Java SDK genererar en slumpmässig CEK.
 1. (Paket) CEK används för att kryptera innehåll.

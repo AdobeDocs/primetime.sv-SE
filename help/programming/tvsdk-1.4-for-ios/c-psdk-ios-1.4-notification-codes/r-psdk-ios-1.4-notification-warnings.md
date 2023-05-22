@@ -1,14 +1,13 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
 title: Varningsmeddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 15f99d89-6f68-476e-a5d3-09c579486920
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 4%
 
 ---
-
 
 # Varningsmeddelandekoder{#warning-notification-codes}
 
@@ -58,14 +57,14 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000  </span> </td> 
+   <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_VARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> <p> Fel vid hämtning av bakgrundsmanifest. Alla problem med att uppdatera bakgrundsmanifestet skickas som en TVSDK-varning och orsakar inte att uppspelningen avbryts. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001  </span> </td> 
+   <td colname="1"><span class="codeph"> 204001 </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
@@ -79,73 +78,73 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000  </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
+   <td colname="1"><span class="codeph"> 210000 </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> Ingen </td> 
    <td colname="5"> Annonssignaleringsläget definieras som anpassade intervall, men det finns inga definierade intervall. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001  </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
+   <td colname="1"><span class="codeph"> 210001 </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p> Ett eller flera tidsintervall är ogiltiga och kommer att ignoreras eller ändras. </p> <p> BESKRIVNING är en sträng som innehåller en beskrivning av de ogiltiga intervallen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Specifikt för iOS</b> </td> 
+   <td colname="1"><b>iOS-specifik</b> </td> 
    <td colname="2"> </td>
    <td colname="3"> </td>
    <td colname="4"> </td>
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
+   <td colname="1"><span class="codeph"> 270000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270001 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>AD infogades inte i dataströmmen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270002 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Annonsen innehåller inte ström med endast ljud </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
+   <td colname="1"><span class="codeph"> 270003 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Ingen matchande annonsström hittades för innehållets aktuella bithastighet. </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005  </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 270005 </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Fel vid skapande av AVAsset. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006  </span> </td> 
-   <td colname="2"><span class="codeph"> SiteCatalyst_VARNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 270006 </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_VARNING </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p>Varning: Se beskrivning av sitecatalyst-varning. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007  </span> </td> 
-   <td colname="2"><span class="codeph"> NETWORK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 270007 </span> </td> 
+   <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> URL  </span> </td> 
+   <td colname="4"><span class="codeph"> URL </span> </td> 
    <td colname="5"> <p>Det gick inte att hämta data från nätverket. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -168,4 +167,4 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
 
 >[!NOTE]
 >
->adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET`-nyckeln.
+>adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` nyckel.

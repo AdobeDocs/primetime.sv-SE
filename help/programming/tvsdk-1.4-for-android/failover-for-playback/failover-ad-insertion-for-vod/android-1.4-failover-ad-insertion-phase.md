@@ -1,16 +1,15 @@
 ---
 description: TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 title: Fas för annonsinfogning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bad246e9-ff2b-4584-a320-826385bb0e6d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
-# Ad-insert phase{#ad-insertion-phase}
+# Fas för annonsinfogning{#ad-insertion-phase}
 
 TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 

@@ -1,14 +1,13 @@
 ---
 description: Det här är ett exempel på hur du skapar en knapp som gör att en användare kan välja ett spår för undertextning.
 title: 'Exempel: Tillåt användare att ändra bildtextspåret'
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
-
 
 # Exempel: Tillåt användare att ändra bildtextspåret{#example-allow-users-to-change-the-caption-track}
 
@@ -82,4 +81,3 @@ Det här är ett exempel på hur du skapar en knapp som gör att en användare k
        ab.show(); 
    } 
    ```
-

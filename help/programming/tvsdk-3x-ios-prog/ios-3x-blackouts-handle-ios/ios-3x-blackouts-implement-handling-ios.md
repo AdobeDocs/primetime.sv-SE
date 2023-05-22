@@ -1,14 +1,13 @@
 ---
 description: TVSDK tillhandahåller API:er och exempelkod för hantering av utbrottsperioder.
 title: Implementera hantering av strömavbrott
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 57823364-fdb3-41c3-8441-008e991f19a7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Implementera hantering av strömavbrott {#implement-blackout-handling}
 
@@ -37,9 +36,9 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Implementera en avlyssnarmetod för `PTTimedMetadata`-objekt i förgrunden.
+1. Implementera en avlyssnarmetod för `PTTimedMetadata` objekt i förgrunden.
 
-   Exempel:
+   Till exempel:
 
    ```
    - (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -61,7 +60,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Hantera `TimedMetadata`-objekt med konstanta uppdateringar under uppspelning.
+1. Handtag `TimedMetadata` objekt med konstanta uppdateringar under uppspelningen.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +81,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Lägg till `PTTimedMetadata`-hanteraren för att växla till alternativt innehåll och återgå till huvudinnehållet enligt `PTTimedMetadata`-objektet och dess uppspelningstid.
+1. Lägg till `PTTimedMetadata` -hanterare för att växla till alternativt innehåll och återgå till huvudinnehållet som anges av `PTTimedMetadata` objekt och dess uppspelningstid.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +196,7 @@ Så här implementerar du hantering av strömavbrott och tillhandahåller altern
    }
    ```
 
-1. Implementera en avlyssnarmetod för `PTTimedMetadata`-objekt i bakgrunden.
+1. Implementera en avlyssnarmetod för `PTTimedMetadata` objekt i bakgrunden.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 

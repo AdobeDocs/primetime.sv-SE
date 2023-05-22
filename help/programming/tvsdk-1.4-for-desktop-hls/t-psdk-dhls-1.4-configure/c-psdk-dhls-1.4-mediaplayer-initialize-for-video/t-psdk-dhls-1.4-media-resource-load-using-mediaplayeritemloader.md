@@ -1,31 +1,30 @@
 ---
 description: Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 08379bd8-1602-4013-a6fb-b1aa6ba539aa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Läsa in en medieresurs med MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
 
 Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 
-Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer`-instans, vilket skulle leda till allokering av maskinvaruresurser för videoavkodning. Processen att hämta `MediaPlayerItem`-instansen är asynkron.
+Via `MediaPlayerItemLoader` -klassen kan du byta ut en medieresurs för motsvarande `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer` som skulle leda till att maskinvaruresurserna för videoavkodning allokeras. Processen för att få `MediaPlayerItem` -instansen är asynkron.
 
-1. Implementera händelseavlyssnare för dessa `MediaPlayerItemLoader`-händelser:
+1. Implementera händelseavlyssnare för dessa `MediaPlayerItemLoader` händelser:
 
    * `MediaPlayerItemLoaderEvent.ERROR` event
 
       TVSDK använder detta för att informera programmet om att ett fel har inträffat. TVSDK tillhandahåller en felegenskap som innehåller diagnostikinformation.
 
-1. Registrera den här instansen hos `MediaPlayerItemLoader`.
-1. Anropa `DefaultMediaPlayerItemLoader.load` och skicka en instans av ett `MediaResource`-objekt.
+1. Registrera den här instansen för `MediaPlayerItemLoader`.
+1. Utlysning `DefaultMediaPlayerItemLoader.load`, skicka en instans av en `MediaResource` -objekt.
 
-   URL:en för `MediaResource`-objektet måste peka på den ström som du vill få information om. Exempel:
+   URL:en för `MediaResource` -objektet måste peka på den ström som du vill få information om. Till exempel:
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 
@@ -45,4 +44,3 @@ Genom klassen `MediaPlayerItemLoader` kan du byta ut en medieresurs för motsvar
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

@@ -1,14 +1,13 @@
 ---
 title: Preflight-auktorisering
 description: Preflight-auktorisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 036b1a8e-f2dc-4e9a-9eeb-0787e40c00d9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
-
-
 
 # Preflight-auktorisering {#preflight-authorization}
 

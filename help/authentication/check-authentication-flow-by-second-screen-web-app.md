@@ -1,13 +1,13 @@
 ---
 title: Kontrollera autentiseringsflöde med andra skärmens webbapp
 description: Kontrollera autentiseringsflöde med andra skärmens webbapp
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollera autentiseringsflöde med andra skärmens webbapp {#check-authentication-flow-by-second-screen-web-app}
 

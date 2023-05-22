@@ -1,13 +1,13 @@
 ---
 title: Övervaka Adobe Primetime-autentisering
 description: Övervaka Adobe Primetime-autentisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: fb000e9d-b5aa-45b1-a914-9e419ec8a4d9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
-
 
 # Övervaka Adobe Primetime-autentisering {#monitoring-adobe-primetime-authentication}
 

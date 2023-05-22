@@ -1,16 +1,15 @@
 ---
 description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
 title: DRM, Widewin
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 44ab032e-e665-4b63-a08b-54e862894987
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-
-# DRM för Widewin {#widevine-drm}
+# DRM, Widewin {#widevine-drm}
 
 Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
 
@@ -28,7 +27,7 @@ Du kan använda Androids inbyggda Widewin DRM med HLS CMAF-strömmar.
 
 ## Ange licensserverinformation {#license-server-details}
 
-Anropa följande `com.adobe.mediacore.drm.DRMManager` API innan du läser in MediaPlayer-resursen:
+Ring följande `com.adobe.mediacore.drm.DRMManager` API innan MediaPlayer-resursen läses in:
 
 ```java
 public static void setProtectionData(
@@ -39,7 +38,7 @@ Map<String, String> requestProperties)
 
 ### Argument {#arguments-license-server}
 
-* `drm` -  `"com.widevine.alpha"` för WideVM.
+* `drm` - `"com.widevine.alpha"` för WideVM.
 
 * `licenseServerURL` - URL:en för den Wideglobal licensserver som tar emot licensbegäranden.
 
@@ -57,7 +56,7 @@ DRMManager.setProtectionData(
 
 ## Ange anpassad återanrop {#custom-callback}
 
-Anropa följande `com.adobe.mediacore.drm.DRMManager`-API innan du läser in MediaPlayer-resursen.
+Ring följande `com.adobe.mediacore.drm.DRMManager` API innan MediaPlayer-resursen läses in.
 
 ```java
 public static void setMediaDrmCallback(
@@ -66,13 +65,13 @@ MediaDrmCallback callback)
 
 ### Argument {#arguments-custom-callback}
 
-* `callback` - anpassad implementering av MediaDrmCallback som ska användas i stället för standardinställningen  `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+* `callback` - anpassad implementering av MediaDrmCallback som ska användas i stället för standardversionen `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
 Mer information finns i [Android TVSDK 3.11 API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
 ## Hämta PSSH-ruta för den aktuella inlästa MediaPlayer-resursen {#pssh-box-mediaplayer-resoource}
 
-Anropa följande `com.adobe.mediacore.drm.DRMManager` API, helst i anpassad återanropsimplementering.
+Ring följande `com.adobe.mediacore.drm.DRMManager` API, helst i anpassad återanropsimplementering.
 
 ```java
 public static byte[] getPSSH()

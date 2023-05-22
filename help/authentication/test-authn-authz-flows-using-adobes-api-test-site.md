@@ -1,13 +1,13 @@
 ---
 title: Testa autentiserings- och auktoriseringsflöden med Adobe API test site
 description: Testa autentiserings- och auktoriseringsflöden med Adobe API test site
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 04af4aed-35e4-44cb-98ce-7643165a8869
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
 
 ---
-
 
 # Testa autentiserings- och auktoriseringsflöden med Adobe API Test site {#How-to-test-auth-flows}
 
@@ -42,4 +42,3 @@ Utför följande steg efter att ha slutfört del I:
 1. Om du vill testa auktoriseringen anger du &quot;**requestID**&quot; och klicka på knappen &quot;getAuthorization&quot;.
 1. Därför visas resursen i textrutan&quot;setToken&quot;-\>&quot;resource id&quot; och i textrutan&quot;setToken&quot;-\>&quot;token&quot; visas shortAuthorizationToken, vilket innebär att authZ lyckades.
 1. Nu kan du klicka på &quot;utloggningsknappen&quot; för att ta bort token.
-

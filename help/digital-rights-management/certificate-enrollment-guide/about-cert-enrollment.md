@@ -2,14 +2,13 @@
 title: Om certifikatregistreringsroller
 description: Om certifikatregistreringsroller
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fe3eb499-8636-46d0-8e5b-7baca08813bb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
-
 
 # Om certifikatregistreringsroller {#about-certificate-enrollment-roles}
 
@@ -42,4 +41,3 @@ Följande är funktionerna för varje roll:
 
    * Upp till fem beställare per licens
    * Begär certifikat
-

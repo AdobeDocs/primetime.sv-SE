@@ -1,24 +1,23 @@
 ---
 description: Med MediaPlayerItemLoader kan du få information om en medieström utan att initiera en MediaPlayer-instans. Detta är särskilt användbart i pre-buffring av strömmar så att uppspelningen kan börja utan fördröjning.
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6bd081bb-b92b-4c0a-a3bc-ef2128d0d8bf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
-
 # Läsa in en medieresurs med MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
 Med MediaPlayerItemLoader kan du få information om en medieström utan att initiera en MediaPlayer-instans. Detta är särskilt användbart i pre-buffring av strömmar så att uppspelningen kan börja utan fördröjning.
 
-Med klassen `MediaPlayerItemLoader` kan du utbyta en medieresurs för den aktuella `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer`-instans, vilket allokerar maskinvaruresurser för videoavkodning. Ytterligare steg krävs för DRM-skyddat innehåll, men de beskrivs inte i den här handboken.
+The `MediaPlayerItemLoader` klassen hjälper dig att byta ut en medieresurs för den aktuella `MediaPlayerItem` utan att bifoga en vy till en `MediaPlayer` -instans, som allokerar maskinvaruresurser för videoavkodning. Ytterligare steg krävs för DRM-skyddat innehåll, men de beskrivs inte i den här handboken.
 
 >[!IMPORTANT]
 >
->TVSDK stöder inte en enskild `QoSProvider`-instans för att arbeta med både `itemLoader` och `MediaPlayer`. Om programmet använder Instant On måste programmet underhålla två `QoS`-instanser och hantera båda instanserna för informationen. Mer information finns i [instant-on](../../content-playback-options/buffering-configuration/c-psdk-android-2.7-instant-on.md).
+>TVSDK stöder inte en enda `QoSProvider` att arbeta med båda `itemLoader` och `MediaPlayer`. Om programmet använder Instant On måste programmet underhålla två `QoS` -instanser och hantera båda instanserna för informationen. Se  [direkt](../../content-playback-options/buffering-configuration/c-psdk-android-2.7-instant-on.md) för mer information.
 
 1. Skapa en instans av `MediaPlayerItemLoader`.
 
@@ -50,9 +49,9 @@ Med klassen `MediaPlayerItemLoader` kan du utbyta en medieresurs för den aktuel
 
    >[!TIP]
    >
-   >Skapa en separat instans av `MediaPlayerItemLoader` för varje resurs. Använd inte en `MediaPlayerItemLoader`-instans för att läsa in flera resurser.
+   >Skapa en separat instans av `MediaPlayerItemLoader` för varje resurs. Använd inte en `MediaPlayerItemLoader` -instans för att läsa in flera resurser.
 
-1. Implementera klassen `ItemLoaderListener` för att ta emot meddelanden från instansen `MediaPlayerItemLoader`.
+1. Implementera `ItemLoaderListener` klassen som ska ta emot meddelanden från `MediaPlayerItemLoader` -instans.
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -77,14 +76,13 @@ Med klassen `MediaPlayerItemLoader` kan du utbyta en medieresurs för den aktuel
    }
    ```
 
-   Gör något av följande i `onLoadComplete()`-återanropet:
+   I `onLoadComplete()` callback, gör något av följande:
 
-   * Kontrollera att allt som kan påverka buffringen, t.ex. när du väljer WebVTT eller ljudspår, är klart och anropa `prepareBuffer()` för att dra nytta av direktuppspelningen.
-   * Koppla objektet till `MediaPlayer`-instansen med `replaceCurrentItem()`.
+   * Kontrollera att allt som kan påverka buffringen, till exempel när du väljer WebVTT eller ljudspår, är fullständigt och att anropa `prepareBuffer()` för att utnyttja möjligheterna direkt.
+   * Bifoga objektet till `MediaPlayer` instans genom att använda `replaceCurrentItem()`.
+   Om du ringer `prepareBuffer()`får du händelsen BUFFER_PREPARED i `onBufferPrepared` hanterare när preparatet är klart.
 
-   Om du anropar `prepareBuffer()` får du händelsen BUFFER_PREPARED i `onBufferPrepared`-hanteraren när färdigställandet är klart.
-
-1. Anropa `load` på `MediaPlayerItemLoader`-instansen och skicka resursen som ska läsas in, och eventuellt innehålls-ID:t och en `MediaPlayerItemConfig`-instans.
+1. Utlysning `load` på `MediaPlayerItemLoader` instansen och skicka resursen som ska läsas in, och eventuellt innehålls-ID:t, och `MediaPlayerItemConfig` -instans.
 
    ```java
    loader = createLoader(); 
@@ -92,18 +90,18 @@ Med klassen `MediaPlayerItemLoader` kan du utbyta en medieresurs för den aktuel
    loader.load(res, 233, getConfig());
    ```
 
-1. Om du vill buffra från en annan punkt än direktuppspelningens början anropar du `prepareBuffer()` med den position (i millisekunder) där buffringen ska börja.
-1. Använd metoderna `replaceCurrentItem()` och `play()` i `MediaPlayer` för att börja spela upp från den punkten.
-1. Vänta på inaktivitetsstatus och ring `replaceCurrentItem`.
+1. Om du vill buffra från en annan punkt än strömmens början anropar du `prepareBuffer()` med den position (i millisekunder) där buffringen ska börja.
+1. Använd `replaceCurrentItem()` och `play()` metoder `MediaPlayer` för att börja spela från den punkten.
+1. Vänta på inaktiv status och samtal `replaceCurrentItem`.
 1. Spela upp objektet.
 
    * Om objektet har lästs in men inte buffrats:
 
       1. Vänta på initierad status.
-      1. Ring `prepareToPlay()`.
+      1. Utlysning `prepareToPlay()`.
       1. Vänta på statusen FÖRBEREDD.
-      1. Ring `play()`.
+      1. Utlysning `play()`.
    * Om objektet är buffrat:
 
       1. Vänta på den buffertförberedda händelsen.
-      1. Ring `play()`.
+      1. Utlysning `play()`.

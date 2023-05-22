@@ -1,14 +1,13 @@
 ---
 description: Krypteringsmodulen för videomotorn i Adobe returnerar dessa meddelanden i metadataobjektet NATIVE_ERROR.
 title: NATIVE_ERROR Kryptovärden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9f34d893-d5b1-4bfe-a590-27deccb6d08d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 8%
 
 ---
-
 
 # NATIVE_ERROR: Kryptovärden{#native-error-crypto-values}
 
@@ -23,4 +22,3 @@ Krypteringsmodulen för videomotorn i Adobe returnerar dessa meddelanden i metad
 | 304 | `CRYPTO_ERROR_DIGEST_UPDATE` | Sammandragsuppdatering. |
 | 305 | `CRYPTO_ERROR_DIGEST_FINISH` | Sammanfattning. |
 | 306 | `CRYPTO_ERROR_BAD_PARAMETER` | Felaktig parameter. |
-

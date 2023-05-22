@@ -1,14 +1,13 @@
 ---
 description: Du kan ställa in referensimplementeringen så att den använder Adobe Analytics-rapportering.
 title: Konfigurera Adobe Analytics Reporting
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3607f9d4-1069-4722-af0b-121223125112
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Adobe Analytics Reporting {#configure-adobe-analytics-reporting}
 
@@ -44,7 +43,7 @@ Tabellen nedan visar de data som skickats till Adobe Analytics:
 
 1. Konfigurera programmet för användning med Adobe Marketing Cloud.
 
-   Om du vill aktivera sändning av Primetime Primetime-autentiseringsdata till Adobe Analytics måste en [!DNL `ADBMobileConfig.json`]-konfigurationsfil läggas till i referensimplementeringen vid kompileringen. Observera att detta är exakt samma konfigurationsfil som används av Primetime SDK för att skicka videoanalysdata till Marketing Cloud. Mer information om hur du konfigurerar ett program med ditt Adobe Analytics-konto finns i [Adobe Marketing Cloud-dokumentationen](https://microsite.omniture.com/t2/help/en_US/reference/).
+   Om du vill att Primetime Primetime-autentiseringsdata ska kunna skickas till Adobe Analytics kan du [!DNL `ADBMobileConfig.json`] konfigurationsfilen måste läggas till i referensimplementeringen vid kompileringen. Observera att detta är exakt samma konfigurationsfil som används av Primetime SDK för att skicka videoanalysdata till Marketing Cloud. Läs [Adobe Marketing Cloud-dokumentation](https://microsite.omniture.com/t2/help/en_US/reference/) om du vill ha mer information om hur du konfigurerar ett program med ditt Adobe Analytics-konto.
 1. Skapa bearbetningsregler.
 
-   De händelsedata för autentisering av Primetime som skickas av referensimplementeringen visas inte automatiskt i dina analysrapporter. Du måste först använda data genom att skapa bearbetningsregler. Läs [Adobe Analytics-dokumentationen om hur du skapar bearbetningsregler](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html).
+   De händelsedata för autentisering av Primetime som skickas av referensimplementeringen visas inte automatiskt i dina analysrapporter. Du måste först använda data genom att skapa bearbetningsregler. Läs [Adobe Analytics-dokumentation om hur du skapar bearbetningsregler](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html).

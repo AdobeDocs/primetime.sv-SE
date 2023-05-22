@@ -1,14 +1,13 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: Meddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7bf016c6-8651-413b-a478-ac2d24f9453c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#notification-codes-overview}
 
@@ -43,12 +42,11 @@ Meddelandeobjekt tillhandahåller information som är relaterad till spelarens s
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2"> <p>Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. </p> <p>En nyckel med namnet <span class="codeph"> URL</span> ger till exempel ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </p> </td> 
+   <td colname="2"> <p>Nyckel-/värdepar som innehåller ytterligare relevant information om meddelandet. </p> <p>En nyckel med namnet <span class="codeph"> URL</span> skulle ge ett värde som är en URL som är relaterad till meddelandet, till exempel en ogiltig URL som orsakade ett fel. </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2"> <p>En referens till ett annat <span class="codeph"> MediaPlayerNotification</span>-objekt som direkt påverkade det här meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
+   <td colname="2"> <p>En referens till en annan <span class="codeph"> MediaPlayerNotification</span> objekt som direkt påverkade meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

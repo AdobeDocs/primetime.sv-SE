@@ -1,14 +1,13 @@
 ---
 description: Dessa klasser innehåller information som hjälper dig att avgöra hur bra spelaren fungerar.
 title: QoS-klasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ba0cddd0-3af9-4e35-9079-97c260cbd3e9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
 
 ---
-
 
 # QoS-klasser{#qos-classes}
 
@@ -50,4 +49,3 @@ Dessa klasser innehåller information som hjälper dig att avgöra hur bra spela
   </tr> 
  </tbody> 
 </table>
-

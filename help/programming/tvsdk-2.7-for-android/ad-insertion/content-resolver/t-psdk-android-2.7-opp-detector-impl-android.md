@@ -1,22 +1,21 @@
 ---
 description: Du kan implementera egna generatorer för affärsmöjligheter genom att implementera klassen OpportunityGenerator.
 title: Implementera en generator för anpassade affärsmöjligheter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8fa97515-692c-4e34-9afb-17a5409228db
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-
-# Implementera en anpassad affärsmöjlighetsgenerator {#implement-a-custom-opportunity-generator}
+# Implementera en generator för anpassade affärsmöjligheter {#implement-a-custom-opportunity-generator}
 
 Du kan implementera egna generatorer för affärsmöjligheter genom att implementera klassen OpportunityGenerator.
 
-1. Implementera din anpassade `ContentFactory` genom att implementera gränssnittet `ContentFactory` och åsidosätta `retrieveGenerators`.
+1. Implementera din egen `ContentFactory` genom att implementera `ContentFactory` gränssnitt och åsidosättning `retrieveGenerators`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    class MyContentFactory extends ContentFactory { 
@@ -32,7 +31,7 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
 
 1. Registrera `ContentFactory` till `MediaPlayer`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    // register the custom content factory with media player 
@@ -47,14 +46,14 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
    itemLoader.load(resource, id, config);
    ```
 
-1. Skapa en anpassad generatorklass för affärsmöjlighet som implementerar klassen `OpportunityGenerator`.
+1. Skapa en anpassad klass för generering av affärsmöjlighet som implementerar `OpportunityGenerator` klassen.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Åsidosätt `doConfigure`, `doUpdate` och `doCleanup` i den anpassade affärsmöjlighetsgeneratorn:
+   1. Åsidosätt i den anpassade affärsmöjlighetsgeneratorn `doConfigure`, `doUpdate` och `doCleanup`:
 
       ```java
       @Override 
@@ -75,7 +74,7 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Skapa en affärsmöjlighet med följande attribut för varje `TimedMetadata` eller grupp av `TimedMetadata`:
+   1. För varje `TimedMetadata` eller grupp av `TimedMetadata`skapar du en affärsmöjlighet med följande attribut:
 
       ```java
       Opportunity( 
@@ -86,7 +85,7 @@ Du kan implementera egna generatorer för affärsmöjligheter genom att implemen
       ); 
       ```
 
-   1. Ring `resolve` på `OpportunityGeneratorClient:getClient().resolve(opportunity);` för varje affärsmöjlighet som skapas.
+   1. Ring för varje affärsmöjlighet som skapas `resolve` på `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
@@ -150,4 +149,3 @@ public class MyOpportunityGenerator implements OpportunityGenerator {
     protected void cleanup() {} 
 }
 ```
-

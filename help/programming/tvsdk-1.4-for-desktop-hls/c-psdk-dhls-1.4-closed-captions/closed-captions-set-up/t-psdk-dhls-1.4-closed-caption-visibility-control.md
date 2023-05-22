@@ -1,14 +1,13 @@
 ---
 description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 title: Kontrollera synlighet för undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollera synlighet för undertexter{#control-closed-caption-visibility}
 
@@ -28,8 +27,8 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 >public static const VISIBLE:String = visible;
 >```
 
-1. Vänta tills `MediaPlayer` har minst statusen PREPARED (se [Vänta på ett giltigt tillstånd](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du get-metoden i `MediaPlayer`, som returnerar ett synlighetsvärde.
+1. Vänta på `MediaPlayer` att ha åtminstone statusen PREPARED (se [Vänta på ett giltigt tillstånd](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Använd metoden get i för att hämta den aktuella synlighetsinställningen för undertexter `MediaPlayer`, som returnerar ett synlighetsvärde.
 
    ```
    public function get ccVisibility():String
@@ -37,7 +36,7 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 
 1. Om du vill ändra synligheten för undertexter använder du metoden set och skickar ett synlighetsvärde från `ClosedCaptionsVisibility`.
 
-   Exempel:
+   Till exempel:
 
    ```
    public function set ccVisibility(value:String):void
@@ -146,4 +145,3 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
        ccTracksList.selectedIndex = selectedIndex; 
    } 
    ```
-

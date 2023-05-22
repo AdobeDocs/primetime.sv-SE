@@ -1,14 +1,13 @@
 ---
 description: SSL (Secure Sockets Layer) är bara nödvändigt om du behöver stöd för Flash Media Rights Management Server 1.x-klienter.
 title: Konfigurerar SSL
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f22520dd-65df-4bcb-b966-ff605f25bfbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar SSL {#configuring-ssl}
 

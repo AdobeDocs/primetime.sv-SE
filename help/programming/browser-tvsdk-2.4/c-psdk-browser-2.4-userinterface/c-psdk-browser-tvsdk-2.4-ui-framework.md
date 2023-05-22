@@ -1,16 +1,15 @@
 ---
 description: Gränssnittsramverket är ett UI-lager ovanpå webbläsarens TVSDK, som tillhandahåller olika videospelarrelaterade gränssnittskonstruktioner direkt. Du kan skapa en mycket anpassningsbar spelare genom att göra de punktändringar som passar just din miljö.
 title: UI-ramverket
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3175c74b-c08d-4a83-97e4-fe0a8dcf9d86
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
-
-# Gränssnittsramverket {#the-ui-framework}
+# UI-ramverket {#the-ui-framework}
 
 Gränssnittsramverket är ett UI-lager ovanpå webbläsarens TVSDK, som tillhandahåller olika videospelarrelaterade gränssnittskonstruktioner direkt. Du kan skapa en mycket anpassningsbar spelare genom att göra de punktändringar som passar just din miljö.
 
@@ -20,9 +19,9 @@ Gränssnittsramverket är ett UI-lager ovanpå webbläsarens TVSDK, som tillhand
 
 Du kan skriva om dina egna beteenden eller åsidosätta vissa standardbeteenden. Du kan också återanvända beteenden som ingår i SDK genom att skriva beteenden från början.
 
-## Skapa en grundspelare {#section_30E4812C4DDA4B519C9C837930B6AE45}
+## Skapa en basspelare {#section_30E4812C4DDA4B519C9C837930B6AE45}
 
-`primetimevisualapi.min.js` är UI-ramverksbiblioteket och alla dess funktioner visas via det globala objektet ptp. I följande exempel skapar `videoPlayer`-metoder den underliggande spelaren:
+`primetimevisualapi.min.js` är UI-ramverksbiblioteket och alla dess funktioner visas via det globala objektet ptp. I följande exempel `videoPlayer` metoder skapar den underliggande spelaren:
 
 ```js
 <script src="scripts/primetimevisualapi.min.js"></script> 
@@ -40,11 +39,11 @@ Du kan konfigurera spelaren på något av följande sätt:
 * Använda JSON-objektet
 * Använda API:er
 
-För att generera JSON-objektet innehåller Browser TVSDK ett verktyg för gränssnittskonfigurering. I verktyget kan du välja olika inställningar, klicka på **[!UICONTROL Test Configuration]** för att verifiera inställningarna och klicka på **[!UICONTROL Download Configuration]** för att hämta inställningarna. Innehållet i den hämtade filen används som JSON-objekt som ska skickas till API:t `ptp.videoPlayer`.
+För att generera JSON-objektet innehåller Browser TVSDK ett verktyg för gränssnittskonfigurering. I verktyget kan du välja olika inställningar, klicka på **[!UICONTROL Test Configuration]** för att verifiera inställningarna och klicka på **[!UICONTROL Download Configuration]** för att hämta inställningarna. Innehållet i den hämtade filen används som JSON-objekt som ska skickas till `ptp.videoPlayer` API.
 
-**Så här kör du verktyget** UI Configurator:
+**Köra verktyget UI Configurator**:
 
-1. Lägg mappen `frameworks` som finns i Browser TVSDK på en lokal webbserver.
+1. Värd för `frameworks` -mappen, som finns i Browser TVSDK, på en lokal webbserver.
 1. Öppna verktyget genom att öppna en webbläsare och navigera till `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
 
 **Konfigurera spelarens beteende**
@@ -55,13 +54,13 @@ Du kan konfigurera spelarbeteendet på något av följande sätt:
 >
 >För vissa av inställningarna är båda alternativen tillgängliga.
 
-* **Om du använder videoBehavior** `ptp.videoPlayer` API:n returneras  `ptp.videoBehavior`den så att du kan konfigurera den underliggande videospelaren. Om vissa uppspelningsrelaterade inställningar behöver konfigureras kan du använda det här alternativet.
+* **Använda API:erna för videoBehavior** `ptp.videoPlayer` returnerar `ptp.videoBehavior`, som gör att du kan konfigurera den underliggande videospelaren. Om vissa uppspelningsrelaterade inställningar behöver konfigureras kan du använda det här alternativet.
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **Skicka ett konfigurationsobjekt till** funktionen videoPlayer. När du använder det här objektet kan gränssnittets beteende konfigureras utöver de uppspelningsinställningar som beskrivs ovan. Anroparen måste ange de parametrar som måste ändras, och spelaren fortsätter att använda standardvärden för de ospecificerade parametrarna.
+* **Skicka ett konfigurationsobjekt till funktionen videoPlayer** När du använder det här objektet kan gränssnittets beteende konfigureras utöver de uppspelningsinställningar som beskrivs ovan. Anroparen måste ange de parametrar som måste ändras, och spelaren fortsätter att använda standardvärden för de ospecificerade parametrarna.
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -76,9 +75,9 @@ Du kan konfigurera spelarbeteendet på något av följande sätt:
 
    Se strukturavsnittet Visa konfigurationsobjekt nedan för strukturen för konfigurationsobjektet.
 
-* **Åtkomst till AdobePSDK.** MediaPlayerDu kan använda  `videoPlayer.getMediaPlayer` i vissa avancerade fall när du behöver åtkomst till Browser TVSDK:s MediaPlayer.
+* **Åtkomst till AdobePSDK.MediaPlayer** Du kan använda `videoPlayer.getMediaPlayer` i vissa avancerade fall där du behöver tillgång till Browser TVSDK&#39;s MediaPlayer.
 
-* **Konfigurera skalning av** spelarenMer information om skalning av spelaren finns i  [Skala spelaren](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
+* **Konfigurera skalning av spelaren** Mer information om skalning av spelaren finns i [Skalförändra spelaren](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
 
 ## Ändra ett standardbeteende {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
@@ -111,15 +110,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->Beroende på vilken anpassning du vill ha kan du åsidosätta vissa funktioner i beteendet eller skriva ditt eget beteende. Mer information om vilka funktioner som kan åsidosättas finns i dokumentationen för [API-gränssnittet](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+>Beroende på vilken anpassning du vill ha kan du åsidosätta vissa funktioner i beteendet eller skriva ditt eget beteende. Mer information om vilka funktioner som kan åsidosättas finns i [Gränssnittsramverk](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API-dokumentation.
 
 ## Referenser {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
 
 Här finns ytterligare referensinformation:
 
-* **Visa Configuration-objektets** strukturDet här är den fullständiga objektstrukturen som omger alla standardbeteenden på ett hierarkiskt sätt med standardelementen för beteendena. I exempelkonfigurationen användes gränssnittsfabriker för att skapa elementet. Du kan använda samma eller något annat sätt att skapa elementen.
+* **Visa strukturen för konfigurationsobjekt** Detta är den fullständiga objektstrukturen som omger alla standardbeteenden på ett hierarkiskt sätt med standardelementen för beteendena. I exempelkonfigurationen användes gränssnittsfabriker för att skapa elementet. Du kan använda samma eller något annat sätt att skapa elementen.
 
-   Du behöver bara ange de delar som du vill ändra, och resten av funktionen väljs som standard. Om du vill starta måste du ange strukturen `SingleViewConfigurationObject` eller `MultiViewConfigurationObject`, beroende på användningsfallet.
+   Du behöver bara ange de delar som du vill ändra, och resten av funktionen väljs som standard. För att kunna börja, beroende på användningsfallet, måste du ange `SingleViewConfigurationObject` eller `MultiViewConfigurationObject` struktur.
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -766,13 +765,13 @@ Här finns ytterligare referensinformation:
    };
    ```
 
-* **Hjälpkonstruktion** Denna konstruktion består av följande:
+* **Hjälpkonstruktioner** Konstruktionen består av följande:
 
-   * **** FactoriesOm du vill skapa de visuella elementen kan du använda  `ptp.factories.simpleButtonFactory`,  `ptp.factories.simpleDivFactory`,  `ptp.factories.simpleHRFactory` och  `ptp.factories.simpleSliderFactory`. Mer information finns i [API-dokumentationen för användargränssnittet](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
+   * **Fabriker** Om du vill skapa visuella element kan du använda `ptp.factories.simpleButtonFactory`, `ptp.factories.simpleDivFactory`, `ptp.factories.simpleHRFactory`och `ptp.factories.simpleSliderFactory`. Mer information finns i [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API-dokumentation.
 
-   * **** MixinsMixins är sammansättningsbara moduler som kan disponeras i beteenden för att använda vanliga konstruktioner. Många av komponenterna vill till exempel vara medvetna om ändringar som kan påverka deras beteende när till exempel en annons spelas upp. Alla dessa element lägger till en `adBreak`-klass.
+   * **Blandningar** Mixer är sammansatta moduler som kan disponeras i beteenden för att använda vanliga konstruktioner. Många av komponenterna vill till exempel vara medvetna om ändringar som kan påverka deras beteende när till exempel en annons spelas upp. Alla dessa element lägger till en `adBreak` klassen.
 
-      Här följer ett exempel på hur du implementerar den inbyggda blandningen `adBreakStyling`:
+      Här är ett exempel på hur du implementerar den inbyggda mixinen `adBreakStyling`:
 
       ```js
       adBreakStyling = function (element, player) { 
@@ -798,7 +797,6 @@ Här finns ytterligare referensinformation:
       }
       ```
 
-      Nu kan `customBehavior` använda alla metoder som exponeras av `adBreakStyling`, som i det här exemplet är `manageAdBreakStyle`. Ett annat användningsfall är när en mixin kan lägga till händelseavlyssnare, och i hanteraren kan mixinen ändra elementet på något sätt. Komponenterna som använder den här mixinen får automatiskt den här funktionen.
+      Nu `customBehavior` kan använda alla metoder som exponeras av `adBreakStyling`, som i det här exemplet är `manageAdBreakStyle`. Ett annat användningsfall är när en mixin kan lägga till händelseavlyssnare, och i hanteraren kan mixinen ändra elementet på något sätt. Komponenterna som använder den här mixinen får automatiskt den här funktionen.
 
-   * **Verktyg** Vissa verktyg, till exempel  `ptp.elementGetter`, som används i konfigurationsavsnitt och  `ptp.deepmerge`kan hjälpa dig att skriva eller utöka beteenden. Mer information finns i [API-dokumentationen för användargränssnittet](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
-
+   * **Utils** Vissa verktyg, som `ptp.elementGetter`som används i konfigurationsavsnittet och `ptp.deepmerge`kan du skriva eller utöka beteenden. Mer information finns i [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API-dokumentation.

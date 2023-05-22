@@ -2,22 +2,21 @@
 title: Översikt över inställningar
 description: Översikt över inställningar
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9618a038-c5b0-4b49-8936-ef8fcacf2105
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
 # Översikt över inställningar {#setting-preferences-overview}
 
-Med undantag för Packager Server-URL:en sparas alla inställningar som anges nedan i [!DNL flashaccess-refimpl-packager.properties]-filen på servern. Alla inställningar kan ändras antingen direkt i egenskapsfilen eller via AIR-programmet. Lösenord krypteras när de lagras i egenskapsfilen på servern. Skriv det okrypterade lösenordet i användargränssnittet, så krypteras det innan det lagras i filen.
+Med undantag för Packager Server-URL:en lagras alla inställningar som anges nedan i [!DNL flashaccess-refimpl-packager.properties] på servern. Alla inställningar kan ändras antingen direkt i egenskapsfilen eller via AIR-programmet. Lösenord krypteras när de lagras i egenskapsfilen på servern. Skriv det okrypterade lösenordet i användargränssnittet, så krypteras det innan det lagras i filen.
 
 >[!NOTE]
 >
->Alla kataloger och sökvägar refererar till kataloger på paketerarservern, inte på klienten som kör AIR-programmet.
+>Alla kataloger och sökvägar refererar till kataloger på paketerarservern, inte till klienten som kör AIR.
 
 Alla ändringar som görs här börjar gälla omedelbart när inställningarna har sparats. Servern behöver inte startas om om inte Packager-tråden avslutas på grund av konfigurationsproblem.
 
@@ -33,7 +32,7 @@ Inställningsbeskrivningarna använder följande termer:
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> URL för Packager Server </td> 
-   <td colname="2" class="- topic/entry "> Plats för servern som kör <span class="filepath"> flashaccess-packager.war </span>. till exempel <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="2" class="- topic/entry "> Plats för servern som körs <span class="filepath"> flashaccess-packager.war </span>; till exempel <span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Resurskatalog </td> 
@@ -45,4 +44,3 @@ Inställningsbeskrivningarna använder följande termer:
   </tr> 
  </tbody> 
 </table>
-

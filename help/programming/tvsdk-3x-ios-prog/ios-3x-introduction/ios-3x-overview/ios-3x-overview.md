@@ -2,21 +2,20 @@
 title: Introduktion
 description: Introduktion
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 881ad531-b914-42f6-a06e-119da13965e0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-
 # Översikt {#overview}
 
 Adobe Primetime Software Development Kit (TVSDK) är en verktygslåda som gör att du kan lägga till avancerade videouppspelningsfunktioner i dina program.
 
-* En lista med funktioner som stöds av TVSDK finns i [Primetime Player TVSDK-funktioner](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md).
-* Specifika maskin- och programvarukrav för TVSDK finns i [Krav](../../ios-3x-introduction/ios-3x-requirements.md).
+* En lista med funktioner som stöds av TVSDK finns på [Funktioner i Primetime Player TVSDK](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md).
+* Specifika maskin- och programvarukrav för TVSDK finns på [Krav](../../ios-3x-introduction/ios-3x-requirements.md).
 
 Den här guiden innehåller information om hur du utvecklar videospelarprogram med TVSDK för iOS, som implementeras i mål-C.
 

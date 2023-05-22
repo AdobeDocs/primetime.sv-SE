@@ -1,14 +1,13 @@
 ---
 description: Textning för hörselskadade visar ljudet i en video som text på skärmen när ljudet inte kan höras eller när tittaren inte hörs.
 title: Arbeta med undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a89a1c54-f9c2-4868-ac56-a520f6d9192e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#work-with-closed-captions-overview}
 
@@ -26,8 +25,7 @@ TVSDK har stöd för återgivning av följande format:
 Du kan göra följande:
 
 * Välj ett tillgängligt bildtextspår som aktuellt spår och lyssna efter händelser som indikerar ytterligare tillgängliga spår.
-* Aktivera (synlig) eller inaktivera (inte synlig) undertextning med hjälp av gränssnittet `MediaPlayer`.
+* Aktivera (synlig) eller inaktivera (inte synlig) undertextning med `MediaPlayer` gränssnitt.
 * Välj formatalternativ som anger hur undertexter återges av den underliggande videomotorn.
 
-   Använd gränssnittet `MediaPlayerItem` för att välja format som teckensnitt eller teckenfärg.
-
+   Använd `MediaPlayerItem` för att välja format som teckensnitt eller teckenfärg.

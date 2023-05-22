@@ -1,14 +1,13 @@
 ---
 description: Skapa en instans av en MediaPlayer och placera en vy av den i en bildrutelayout.
 title: Konfigurera MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e8fb6527-154b-4f7e-a128-525b5a3b3474
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera MediaPlayer {#set-up-the-mediaplayer}
 
@@ -16,13 +15,13 @@ TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din P
 
 Skapa en instans av en MediaPlayer och placera en vy av den i en bildrutelayout.
 
-1. Instansiera `MediaPlayer` och skicka ett `android.content.Context`-objekt till konstruktorn:
+1. Instansiera `MediaPlayer`, skicka ett `android.content.Context` objekt till konstruktorn:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Ange en bildrutelayout ( `android.widget.FrameLayout`) för en `ViewGroup` av `mediaPlayer`:
+1. Ange en ramlayout ( `android.widget.FrameLayout`) för att hålla `ViewGroup` av `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -40,10 +39,10 @@ Skapa en instans av en MediaPlayer och placera en vy av den i en bildrutelayout.
     }
    ```
 
-1. Placera en vy med `mediaPlayer` inuti bildrutelayouten:
+1. Placera en vy över `mediaPlayer` inuti ramlayouten:
 
    ```java
    playerFrame.addView(mediaPlayer.getView());
    ```
 
->`MediaPlayer`-instansen ( `mediaPlayer`) är nu tillgänglig och korrekt konfigurerad för att visa videoinnehåll på enhetsskärmen.
+>The `MediaPlayer` instans ( `mediaPlayer`) är nu tillgängligt och korrekt konfigurerat för att visa videoinnehåll på enhetsskärmen.

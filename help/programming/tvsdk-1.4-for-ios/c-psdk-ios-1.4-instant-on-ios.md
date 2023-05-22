@@ -1,33 +1,32 @@
 ---
 description: Direktinstallation förladdar delar av mediet på en eller flera kanaler. När en användare har valt eller bytt kanal börjar innehållet tidigare eftersom en del av bufferten redan har slutförts.
 title: Direkt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3a1b2172-8036-40f1-86b6-8304ef771aa9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
 # Direkt{#instant-on}
 
 Direktinstallation förladdar delar av mediet på en eller flera kanaler. När en användare har valt eller bytt kanal börjar innehållet tidigare eftersom en del av bufferten redan har slutförts.
 
-När spelaren har statusen `PTMediaPlayerStatusReady` anropar du `prepareToPlay` för att ladda ned och bearbeta en del av innehållet för senare uppspelning.
+När spelaren finns i `PTMediaPlayerStatusReady` status, ring `prepareToPlay` om du vill läsa in och bearbeta en del av innehållet för senare uppspelning i förväg.
 
 >[!TIP]
 >
->Om du inte anropar `prepareToPlay` anropar du `play` automatiskt `prepareToPlay` först. Förinläsningen och bearbetningen är klar.
+>Om du inte ringer `prepareToPlay`, ringa `play` anrop automatiskt `prepareToPlay` först. Förinläsningen och bearbetningen är klar.
 
 TVSDK slutför några eller alla följande uppgifter för `prepareToPlay`:
 
-* Om metadatanyckeln `kSyncCookiesWithAVAsset` är inställd gör TVSDK en begäran till den ursprungliga M3U8-filen om att synkronisera cookies.
+* Om metadatanyckeln `kSyncCookiesWithAVAsset` är inställt gör TVSDK en begäran till den ursprungliga M3U8-filen om att synkronisera cookies.
 * Läser in DRM-metadatanycklar.
 * Skapar och förbereder vissa strukturer, element eller resurser som behövs för att spela upp innehåll.
 
 >[!TIP]
 >
->Metoderna `PTMediaPlayer` och `PTMediaPlayerItem` `prepareToPlay` är lika. Om du vill undvika att skapa en separat `PTMediaPlayer`-instans för varje resurs använder du metoden `PTMediaPlayerItem`.
+>The `PTMediaPlayer` och `PTMediaPlayerItem` `prepareToPlay` är lika. Så här undviker du att skapa en separat `PTMediaPlayer` -instans för varje resurs använder du `PTMediaPlayerItem` -metod.
 
-Med Direktstart kan du starta flera mediespelarinstanser, eller inläsarinstanser av mediespelarobjekt, samtidigt i bakgrunden och buffra videoströmmar i alla dessa instanser. När en användare ändrar kanalen, och strömmen har buffrats korrekt, startar ett anrop till `play` på den nya kanalen uppspelningen tidigare.
+Med Direktstart kan du starta flera mediespelarinstanser, eller inläsarinstanser av mediespelarobjekt, samtidigt i bakgrunden och buffra videoströmmar i alla dessa instanser. När en användare ändrar kanalen och strömmen har buffrats korrekt, anropar `play` på den nya kanalen startar uppspelningen tidigare.

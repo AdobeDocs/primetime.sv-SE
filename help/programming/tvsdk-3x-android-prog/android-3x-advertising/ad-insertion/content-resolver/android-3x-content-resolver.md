@@ -1,14 +1,13 @@
 ---
 description: En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade taggar i en ström, anpassade markörer för annonseringsläge och så vidare. Affärsmöjlighetsgeneratorn skickar dessa placeringsmöjligheter till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa generatorer och innehållslösare för affärsmöjligheter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5d0ebaa6-4708-4602-b9d7-882c389fb030
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#customize-opportunity-generators-and-content-resolvers-overview}
 
@@ -16,7 +15,7 @@ En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade
 
 TVSDK innehåller följande standardgeneratorer för affärsmöjligheter:
 
-* `ManifestCuesOpportunityGenerator` genererar affärsmöjligheter från standardannonsen (  `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` genererar affärsmöjligheter från standardannonsen ( `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` genererar en inledande möjlighet för det angivna annonseringssigneringsläget. Detta ignorerar eventuell information om metadata eller tidsåtgång.
 * `CustomMarkerOpportunityGenerator` skapar möjligheter att ersätta inbyggda C3-annonser.
@@ -30,6 +29,6 @@ TVSDK innehåller även standardlösningar för innehåll:
 
 Du kan åsidosätta standardgeneratorer för affärsmöjlighet och lösningar för innehåll för att anpassa arbetsflödet för annonsering på följande sätt:
 
-* Identifiera anpassade taggar för annonsinfogning. Mer information finns i [Anpassa generatorer för affärsmöjligheter och innehållslösningar](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
+* Identifiera anpassade taggar för annonsinfogning. Mer information finns i [Anpassa generatorer och innehållslösare för affärsmöjligheter](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
 * Skapa en anpassad annonsleverantör.
 * Svart ut innehåll.

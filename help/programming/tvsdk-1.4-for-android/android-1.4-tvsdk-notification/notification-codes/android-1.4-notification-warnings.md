@@ -1,14 +1,13 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
 title: Varningsmeddelandekoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e787fad5-fbdc-416d-b03d-8c84f4884c5a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 2%
 
 ---
-
 
 # Varningsmeddelandekoder {#warning-notification-codes}
 
@@ -37,10 +36,10 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 200000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 200000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL </span> </td> 
+   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR </span><span class="codeph"> SEEK_ERROR </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p>En uppspelningsrelaterad åtgärd misslyckades, men uppspelningen kan fortsätta. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -51,9 +50,9 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201000  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES  </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
+   <td colname="1"><span class="codeph"> 201000 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Annonslösaren kunde inte matcha/infoga annonsinnehållet. Uppspelningen kan fortsätta. </p> </td> 
   </tr> 
@@ -79,14 +78,14 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000  </span> </td> 
+   <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_VARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> <p> Fel vid hämtning av bakgrundsmanifest. Alla problem med att uppdatera bakgrundsmanifestet skickas som en TVSDK-varning och orsakar inte att uppspelningen avbryts. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001  </span> </td> 
+   <td colname="1"><span class="codeph"> 204001 </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
@@ -100,15 +99,15 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"><span class="codeph"> 209100  </span> </td> 
-   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
+   <td colname="1" morerows="1"><span class="codeph"> 209100 </span> </td> 
+   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING </span> </td> 
    <td colname="3" morerows="1"> <p>Ingen </p> </td> 
-   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME  </span><span class="codeph"> DESCRIPTION  </span> </p> </td> 
-   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Information om NATIVE_ERROR-meddelanden</a> finns i <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om värdena för dessa metadatafält. </a></p> </td> 
+   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE </span><span class="codeph"> NATIVE_ERROR_NAME </span><span class="codeph"> BESKRIVNING </span> </p> </td> 
+   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Se <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> för detaljerad information om värdena för dessa metadatafält. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5"> DRM-felkod och DRM-serverfelsträng. Information om NATIVE_ERROR-meddelanden</a> finns i <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om värdena för dessa metadatafält.</a></td> 
+   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_CODE</span> <span class="codeph"> DRM_ERROR_STRING</span> </p> </td> 
+   <td colname="5"> DRM-felkod och DRM-serverfelsträng. Se <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> för detaljerad information om värdena för dessa metadatafält.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>TimeRangeCollection</b> </td> 
@@ -118,17 +117,17 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000  </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
+   <td colname="1"><span class="codeph"> 210000 </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> Ingen </td> 
    <td colname="5"> Annonssignaleringsläget definieras som anpassade intervall, men det finns inga definierade intervall. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001  </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
+   <td colname="1"><span class="codeph"> 210001 </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p> Ett eller flera tidsintervall är ogiltiga och kommer att ignoreras eller ändras. </p> <p> BESKRIVNING är en sträng som innehåller en beskrivning av de ogiltiga intervallen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -139,7 +138,7 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 280000  </span> </td> 
+   <td colname="1"><span class="codeph"> 280000 </span> </td> 
    <td colname="2"><span class="codeph"> TRICKPLAY_RATE_CHANGE_FAIL</span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
@@ -153,8 +152,8 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 299999  </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_VARNING  </span> </td> 
+   <td colname="1"><span class="codeph"> 299999 </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_VARNING </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Markerar en allmän varningshändelse. Inte utfärdat av TVSDK. Det är bara en markör för slutet av det numeriska kodsintervall som motsvarar varningshändelser. </p> </td> 
@@ -162,4 +161,4 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
  </tbody> 
 </table>
 
->[OBS!] adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med  `AD_ASSET` nyckeln.
+>[OBS!] adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` nyckel.

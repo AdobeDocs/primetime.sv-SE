@@ -1,14 +1,13 @@
 ---
 description: TVSDK tillhandahåller API:er och exempelkod för hantering av utbrottsperioder.
 title: Implementera hantering av strömavbrott
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
-
 
 # Implementera hantering av strömavbrott{#implement-blackout-handling}
 
@@ -195,4 +194,3 @@ Så här implementerar du hantering av strömavbrott, inklusive att tillhandahå
        } 
    }
    ```
-

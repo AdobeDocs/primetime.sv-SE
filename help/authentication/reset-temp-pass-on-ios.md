@@ -1,13 +1,13 @@
 ---
 title: Återställ tillfälligt pass i iOS
 description: Återställ tillfälligt pass i iOS
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 53a22fae-192c-4b4c-9d63-fd9a2d960923
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
 
 ---
-
 
 # Återställ tillfälligt pass i iOS {#reset-temp-pass-on-ios}
 
@@ -64,5 +64,4 @@ Det senaste användningsexemplet (iOS 7 och senare) är det vanligaste så vi sk
 
 1. Utför helt enkelt återställningen från demoappen genom att ange den streckade IDFV:en för programmerarens app som *Allmän nyckel*. Detta leder till två nätverksanrop: en för att återställa ett tillfälligt pass för demoappen (som inte är relevant för programmeraren) och en för att återställa ett tillfälligt pass för programmeringsappen.
 
-Alla ovanstående alternativ liknar varandra, det är upp till programmeraren att välja ett beroende på hur lätt implementeringen är. 
-
+Alla ovanstående alternativ liknar varandra, det är upp till programmeraren att välja ett beroende på hur lätt implementeringen är.

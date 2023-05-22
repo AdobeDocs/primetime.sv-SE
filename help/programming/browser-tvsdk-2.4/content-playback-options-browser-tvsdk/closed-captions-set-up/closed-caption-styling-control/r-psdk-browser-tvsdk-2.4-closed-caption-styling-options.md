@@ -1,14 +1,13 @@
 ---
 description: Du kan ange flera alternativ för bildtextformat och de här alternativen åsidosätter formatalternativen i de ursprungliga bildtexterna.
 title: Alternativ för textningsformat
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: df5377c2-741b-4239-b345-145753896c6b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
-
 
 # Alternativ för textningsformat{#closed-caption-styling-options}
 
@@ -32,7 +31,7 @@ new TextFormat(
 
 >[!TIP]
 >
->I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen som var när bildtexten ursprungligen angavs.
+>I alternativ som definierar standardvärden (till exempel `DEFAULT`) refererar det värdet till inställningen när bildtexten ursprungligen angavs.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -44,21 +43,21 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Font </span> och representerar till exempel fast teckenbredd med eller utan serifer. </p> <p>Tips:  De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips: De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
-   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Size </span>: 
+   <td colname="2"> <p>Bildtextens storlek. </p> <p> Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Size </span> uppräkning: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardstorlek </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR  </span> - Cirka 30 % större än mediet </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span> - Cirka 30 % mindre än medel </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Bildtextens standardstorlek; samma som medium </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDEL </span> - Standardstorleken </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - Cirka 30 % större än mediet </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än mediet </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - bildtextens standardstorlek, samma som medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckenfärg </td> 
-   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av uppräkningen <span class="codeph"> TextFormat.Color </span>. </p> </td> 
+   <td colname="2"> <p>Teckenfärgen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Color </span> uppräkning. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bakgrundsfärg </td> 
@@ -66,7 +65,7 @@ new TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ogenomskinlighet för teckensnitt </td> 
-   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY  </span> för teckensnittet är 100. </p> </td> 
+   <td colname="2"> <p>Textens opacitet. </p> <p>Uttryckt som en procentandel från 0 (helt genomskinlig) till 100 (helt ogenomskinlig). <span class="codeph"> DEFAULT_OPACITY </span> för teckensnittet är 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Nedre indrag </td> 
@@ -78,4 +77,3 @@ new TextFormat(
   </tr> 
  </tbody> 
 </table>
-

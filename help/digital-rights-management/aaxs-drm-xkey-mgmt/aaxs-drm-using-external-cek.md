@@ -1,22 +1,21 @@
 ---
 description: Använd funktionen Extern CEK för att leverera och paketera licenser med din befintliga CKMS.
 title: Använda externt CEK för att sälja och paketera licenser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3944624a-099e-4fc0-b829-6ab154a53758
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
-
-# Använda externt CEK till Vend och paketera licenser{#using-external-cek-to-vend-and-package-licenses}
+# Använda externt CEK för att sälja och paketera licenser{#using-external-cek-to-vend-and-package-licenses}
 
 Använd funktionen Extern CEK för att leverera och paketera licenser med din befintliga CKMS.
 
 ## EncryptContentWithExternalKey.java
 
-Detta är ett kommandoradsverktyg som AAXS-krypterar en video och skapar metadata som *inte* innehåller CEK (skyddat med en AXS-licensservers publika certifikat). Verktyget bäddar i stället in ett CEK-ID i videons metadata.
+Detta är ett kommandoradsverktyg som AAXS-krypterar en video och skapar metadata som *not* innehåller CEK (skyddat med en AXS-licensservers offentliga certifikat). Verktyget bäddar i stället in ett CEK-ID i videons metadata.
 
 Vid licensköp observerar AXS-licensservern en flagga i metadata som identifierar att innehållet har skyddats med en extern CEK. Licensservern extraherar CEK-ID från metadata och frågar sedan en säker databas/CKMS för att hämta rätt CEK.
 
@@ -34,11 +33,9 @@ Vid licensköp observerar AXS-licensservern en flagga i metadata som identifiera
 
 >[!NOTE]
 >
->* Java-källkoden kan byggas med den medföljande ANT `build-samples.xml`
+>* Java-källkoden kan byggas med den medföljande ANT-koden `build-samples.xml`
 >* Flash Access SDK ( `adobe-flashaccess-sdk.jar`) måste finnas i klassökvägen
-
 >
-
 
 
 ## Serverarbetsflöde
@@ -50,7 +47,7 @@ Vid licensköp observerar AXS-licensservern en flagga i metadata som identifiera
    1. `delete <tomcat>\conf\Catalina\*.*`
    1. `delete <tomcat>\logs\*.*`
 
-1. Verifiera att det finns en [!DNL CEKDepot.properties]-fil bredvid din [!DNL flashaccess-refimpl.properties]
+1. Verifiera att det finns en [!DNL CEKDepot.properties] -filen tillsammans med [!DNL flashaccess-refimpl.properties]
 
 1. Initiera en licensbegäran från en Adobe Primetime Player
 1. Observera Ref Impl-loggar för något liknande:
@@ -60,7 +57,7 @@ Vid licensköp observerar AXS-licensservern en flagga i metadata som identifiera
      Used CEK ID:{abc} to retrieve CEK: {abcdef0123456789} from depot
    ```
 
-   1. Du kan behöva ändra dina [!DNL log4j.xml]-inställningar för att kunna logga på en `DEBUG`-nivå ( `INFO` är inställt som standard)
+   1. Du kan behöva ändra din [!DNL log4j.xml] inställningar för att logga in på `DEBUG` level ( `INFO` är inställd som standard)
 
 ## Kända fel
 

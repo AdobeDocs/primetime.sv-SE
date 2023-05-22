@@ -1,14 +1,13 @@
 ---
 description: För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
 title: Lös och infoga VOD-annons
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 10ae101d-f07b-485a-aa59-361761b4b65d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
-
 
 # Lös och infoga VOD-annonser {#resolve-and-insert-vod-ad}
 
@@ -18,7 +17,7 @@ Före uppspelning löser TVSDK kända annonser, infogar annonsbrytningar i huvud
 
 TVSDK infogar annonser på följande sätt:
 
-* **Pre-roll**, som placeras före innehållet.
+* **Före rullning**, som placeras före innehållet.
 * **Mid-roll**, som är mitt i innehållet.
 * **Efterrullning**, som placeras efter innehållet.
 
@@ -35,4 +34,3 @@ Ads cannot be:
 * Ersatt
 
    Du kan till exempel inte ersätta inbyggda annonser med riktade annonser.
-

@@ -1,14 +1,13 @@
 ---
 description: Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här instansen från ett läge till nästa.
 title: Livscykel och lägen för MediaPlayer-objektet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
-
 
 # Livscykel och lägen för MediaPlayer-objektet{#life-cycle-and-states-of-the-mediaplayer-object}
 
@@ -16,38 +15,38 @@ Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här
 
 Här är möjliga lägen:
 
-* **IDLE**:  `MediaPlayerStatus.IDLE`
+* **IDLE**: `MediaPlayerStatus.IDLE`
 
-* **INITIERAR**:  `MediaPlayerStatus.INITIALIZING`
+* **INITIERAR**: `MediaPlayerStatus.INITIALIZING`
 
-* **INITIERAT**:  `MediaPlayerStatus.INITIALIZED`
+* **INITIERAD**: `MediaPlayerStatus.INITIALIZED`
 
-* **FÖRBEREDER**:  `MediaPlayerStatus.PREPARING`
+* **FÖRBEREDER**: `MediaPlayerStatus.PREPARING`
 
-* **FÖRBEREDD**:  `MediaPlayerStatus.PREPARED`
+* **FÖRBEREDD**: `MediaPlayerStatus.PREPARED`
 
-* **SPELA UPP**:  `MediaPlayerStatus.PLAYING`
+* **SPELA UPP**: `MediaPlayerStatus.PLAYING`
 
-* **PAUSAT**:  `MediaPlayerStatus.PAUSED`
+* **PAUSAT**: `MediaPlayerStatus.PAUSED`
 
-* **SÖKER**:  `MediaPlayerStatus.SEEKING`
+* **SÖKER**: `MediaPlayerStatus.SEEKING`
 
-* **FULLSTÄNDIGT**:  `MediaPlayerStatus.COMPLETE`
+* **SLUTFÖRD**: `MediaPlayerStatus.COMPLETE`
 
-* **FEL**:  `MediaPlayerStatus.ERROR`
+* **FEL**: `MediaPlayerStatus.ERROR`
 
-* **SLÄPPT**:  `MediaPlayerStatus.RELEASED`
+* **SLÄPPT**: `MediaPlayerStatus.RELEASED`
 
 Den fullständiga listan med lägen definieras i `MediaPlayerStatus`.
 
-Att känna till spelarens tillstånd är användbart eftersom vissa åtgärder bara är tillåtna när spelaren är i ett visst läge. Det går till exempel inte att anropa `play` i IDLE-läge. Den måste anropas efter att ha nått PREPARED-tillståndet. FELläget ändrar också vad som kan hända härnäst.
+Att känna till spelarens tillstånd är användbart eftersom vissa åtgärder bara är tillåtna när spelaren är i ett visst läge. Till exempel: `play` kan inte anropas i IDLE-läge. Den måste anropas efter att ha nått PREPARED-tillståndet. FELläget ändrar också vad som kan hända härnäst.
 
 När en medieresurs läses in och spelas upp, övergår spelaren på följande sätt:
 
 1. Det inledande tillståndet är IDLE.
-1. Programmet anropar `MediaPlayer.replaceCurrentResource`, vilket flyttar spelaren till INITIALIZING-läget.
+1. Dina programsamtal `MediaPlayer.replaceCurrentResource`, som flyttar spelaren till INITIALIZING-läget.
 1. Om webbläsar-TVSDK läser in resursen ändras läget till INITIALIZED.
-1. Programmet anropar `MediaPlayer.prepareToPlay` och läget ändras till PREPARING.
+1. Dina programsamtal `MediaPlayer.prepareToPlay`och läget ändras till PREPARING.
 1. Webbläsare-TVSDK förbereder medieströmmen och startar annonslösningen och annonsinfogningen (om den är aktiverad).
 
    När det här steget är klart infogas annonser i tidslinjen eller så har annonsproceduren misslyckats och spelarläget ändras till PREPARED.
@@ -69,7 +68,7 @@ Här följer en illustration av livscykeln för en MediaPlayer-instans:
 
 Du kan använda läget för att ge användaren feedback om processen (till exempel en snurra som väntar på nästa lägesändring) eller för att utföra nästa steg i uppspelningen av media, till exempel vänta på rätt läge innan du anropar nästa metod.
 
-Exempel:
+Till exempel:
 
 ```js
 function onStateChanged(state) { 
@@ -82,4 +81,3 @@ function onStateChanged(state) {
     } 
 } 
 ```
-

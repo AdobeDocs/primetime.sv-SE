@@ -1,14 +1,13 @@
 ---
 description: Du kan anpassa eller åsidosätta annonsbeteenden.
 title: Konfigurera anpassad uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aaa4d1c2-c425-4a2e-8377-0a3072f3fb18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera anpassad uppspelning {#cset-up-customized-playback}
 
@@ -16,11 +15,10 @@ Du kan anpassa eller åsidosätta annonsbeteendet genom att registrera annonspri
 
 Gör något av följande om du vill anpassa annonsbeteenden:
 
-* Implementera gränssnittet `AdPolicySelector` och alla dess metoder.
+* Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 Det här alternativet rekommenderas om du behöver åsidosätta alla standardbeteenden för annonser.
 
-* Utöka klassen `DefaultAdPolicySelector` och endast tillhandahålla implementeringar för de beteenden som kräver
-anpassning.
+* Utöka `DefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 Det här alternativet rekommenderas om du bara behöver åsidosätta några av standardbeteendena.
 
 Utför följande uppgifter för båda alternativen:
@@ -35,7 +33,7 @@ Så här anpassar du annonsbeteenden:
 >
 >Anpassade annonsprinciper som registreras i början av >uppspelning rensas när MediaPlayer-instansen >avallokeras. Programmet måste registrera en princip >väljarinstansen varje gång en ny uppspelningssession skapas.
 
-Exempel:
+Till exempel:
 
 ```
     class CustomContentFactory extends ContentFactory {

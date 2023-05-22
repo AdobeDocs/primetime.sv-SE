@@ -1,13 +1,13 @@
 ---
 title: MVPD-autentisering
 description: MVPD-autentisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 9ff4a46e-a37b-414c-a163-9e586252a9c3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 0%
 
 ---
-
 
 # MVPD-autentisering {#mvpd-authn}
 

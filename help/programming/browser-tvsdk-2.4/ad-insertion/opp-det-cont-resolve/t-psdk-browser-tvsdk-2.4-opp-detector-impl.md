@@ -1,22 +1,21 @@
 ---
 description: Du kan implementera en egen generator för affärsmöjligheter genom att utöka gränssnittet för OpportunityGenerator.
 title: Implementera en generator för anpassade affärsmöjligheter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
-
-# Implementera en generator för anpassad affärsmöjlighet{#implement-a-custom-opportunity-generator}
+# Implementera en generator för anpassade affärsmöjligheter{#implement-a-custom-opportunity-generator}
 
 Du kan implementera en egen generator för affärsmöjligheter genom att utöka gränssnittet för OpportunityGenerator.
 
 1. Skapa den anpassade affärsmöjlighetsgeneratorn.
 
-   Exempel:
+   Till exempel:
 
    ```js
    /** 
@@ -46,7 +45,7 @@ Du kan implementera en egen generator för affärsmöjligheter genom att utöka 
 
 1. Skapa den anpassade innehållsfabriken som använder den anpassade affärsmöjlighetsgeneratorn.
 
-   Exempel:
+   Till exempel:
 
    ```js
    /** 
@@ -83,4 +82,3 @@ Du kan implementera en egen generator för affärsmöjligheter genom att utöka 
      } 
    }); 
    ```
-

@@ -1,14 +1,13 @@
 ---
 description: Hantera FMRMS-kompatibilitet
 title: Uppgraderar klienter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7774b408-c2cb-400b-be41-74cc9739e0e9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
 
 ---
-
 
 # Hantera FMRMS-kompatibilitet {#handling-fmrms-compatibility}
 
@@ -18,25 +17,25 @@ Det finns två typer av förfrågningar relaterade till kompatibiliteten Flash M
 
 Om en FMRMS 1.x-klient kontaktar en Adobe Primetime DRM-server måste servern uppmana klienten att uppgradera.
 
-* Begäranhanterarklassen är `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1RequestHandler`.
-* Begärans URL är &quot;*Bas-URL från 1.x content*&quot; + &quot; [!DNL /edcws/services/urn:EDCLicenseService]&quot;
+* Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1RequestHandler`.
+* Begärans URL är &quot;*Bas-URL från 1.x-innehåll*&quot; + &quot; [!DNL /edcws/services/urn:EDCLicenseService]&quot;
 
-   Till skillnad från andra begärandehanterare för Adobe Primetime ger hanteraren inte åtkomst till någon begärandeinformation och kräver att några svarsdata ställs in. Skapa en instans av `FMRMSv1RequestHandler` och anropa sedan `close()`
+   Till skillnad från andra begärandehanterare för Adobe Primetime ger hanteraren inte åtkomst till någon begärandeinformation och kräver att några svarsdata ställs in. Skapa en instans av `FMRMSv1RequestHandler`och sedan ringa `close()`
 
 ## Uppgraderar metadata {#upgrading-metadata}
 
 Om en Adobe Access-klient stöter på innehåll som paketerats med Flash Media Rights Management Server 1.x extraheras krypteringsmetadata från innehållet och skickas till servern. Servern konverterar FMRMS 1.x-metadata till Adobe Access-format och skickar tillbaka dem till klienten. Klienten skickar sedan de uppdaterade metadata som en standardbegäran om Adobe Access-licens.
 
-* Begäranhanterarklassen är `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1MetadataHandler`.
+* Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1MetadataHandler`.
 * Begärans URL är &quot;*Bas-URL från 1.x-innehåll*&quot; +&quot;/flashaccess/headerconversion/v1&quot;.
 
 Metadatakonverteringen kan göras direkt när servern tar emot gamla metadata från klienten. Servern kan också förbearbeta det gamla innehållet och lagra de konverterade metadata. När klienten begär nya metadata behöver servern i det här fallet bara hämta nya metadata som matchar licensidentifieraren för de gamla metadata.
 
 Servern måste utföra följande steg för att konvertera metadata:
 
-* Hämta `LiveCycleKeyMetaData`. Om du vill förkonvertera metadata kan du hämta `LiveCycleKeyMetaData` från en 1.x-paketerad fil med `MediaEncrypter.examineEncryptedContent()`. Metadata ingår också i begäran om metadatakonvertering ( `FMRMSv1MetadataHandler.getOriginalMetadata()`).
+* Hämta `LiveCycleKeyMetaData`. Om du vill konvertera metadata i förväg `LiveCycleKeyMetaData` kan hämtas från en 1.x-paketerad fil med `MediaEncrypter.examineEncryptedContent()`. Metadata ingår också i begäran om metadatakonvertering ( `FMRMSv1MetadataHandler.getOriginalMetadata()`).
 * Hämta licensidentifieraren från gamla metadata och hitta krypteringsnyckeln och krypteringsprofilerna (den här informationen fanns ursprungligen i Adobe LiveCycle ES-databasen. LiveCycle ES-profilerna måste konverteras till Adobe Access 2.0-profilerna.) Referensimplementeringen innehåller skript och exempelkod för konvertering av policyer och export av licensinformation från LiveCycle ES.
-* Fyll i `V2KeyParameters`-objektet (som du hämtar genom att anropa `MediaEncrypter.getKeyParameters()`).
-* Läs in `SigningCredential`, som är den paketeringsautentisering som utfärdas av Adobe och som används för att signera krypteringsmetadata. Hämta `SignatureParameters`-objektet genom att anropa `MediaEncrypter.getSignatureParameters()` och fyll i signeringsreferensen.
-* Ring `MetaDataConverter.convertMetadata()` för att hämta `V2ContentMetaData`.
-* Ring `V2ContentMetaData.getBytes()` och lagra för framtida bruk eller ring `FMRMSv1MetadataHandler.setUpdatedMetadata()`.
+* Fyll i `V2KeyParameters` objekt (som du hämtar genom att anropa `MediaEncrypter.getKeyParameters()`).
+* Läs in `SigningCredential`, som är den paketeringsautentisering som utfärdas av Adobe och som används för att signera krypteringsmetadata. Skaffa `SignatureParameters` objekt genom anrop `MediaEncrypter.getSignatureParameters()` och fyll i signeringsuppgifter.
+* Utlysning `MetaDataConverter.convertMetadata()` för att få `V2ContentMetaData`.
+* Utlysning `V2ContentMetaData.getBytes()` och lagra för framtida bruk eller ringa `FMRMSv1MetadataHandler.setUpdatedMetadata()`.

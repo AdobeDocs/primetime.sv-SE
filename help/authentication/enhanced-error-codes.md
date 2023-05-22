@@ -1,7 +1,8 @@
 ---
 title: Förbättrade felkoder
 description: Förbättrade felkoder
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2356'
 ht-degree: 2%
@@ -142,4 +143,3 @@ I tabellen nedan visas möjliga felkoder, associerade meddelanden och möjliga �
 |  | *maximum_execution_time_överstigen* | 403 | Begäran slutfördes inte inom den tillåtna maxtiden. Ett nytt försök att utföra begäran kanske löser problemet. |
 | försök igen | *för_många_begäranden* | 429 | För många begäranden har skickats inom ett givet intervall. Programmet kan försöka utföra begäran igen efter den föreslagna tidsperioden. |
 |  | *user_rate_limit_pped* | 429 | För många begäranden har utfärdats av en viss användare inom ett givet intervall. Programmet kan försöka utföra begäran igen efter den föreslagna tidsperioden. |
-

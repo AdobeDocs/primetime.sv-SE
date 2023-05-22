@@ -1,13 +1,13 @@
 ---
 title: Proxy MVPD SAML-integrering
 description: Proxy MVPD SAML-integrering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
 
 ---
-
 
 # Proxy MVPD SAML-integrering
 

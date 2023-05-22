@@ -1,14 +1,13 @@
 ---
 description: Direktuppspelning över Internet kräver en konstant och stabil anslutning för att spela upp en ström från en fjärrserver. Skillnaden mellan en tittares internetanslutning eller direktuppspelning innebär dock att fjärruppspelningen kanske inte har samma kvalitet som lokalt uppspelade medier.
 title: AC-3 5.1-format
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dcc43c1b-b9ce-44a1-a4c9-50ccfc5d572d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
 
 ---
-
 
 # AC-3 5.1-format{#ac-format}
 
@@ -56,7 +55,7 @@ Här är det typiska arbetsflödet som inträffar när TVSDK hittar ett manifest
 >
 >Programmet kan inte få information om ignorerade profiler.
 
-## Bestämma utdataläget {#section_64145D9824594C36AADBF0482C528767}
+## Bestämma utdataläge {#section_64145D9824594C36AADBF0482C528767}
 
 Om en Android-enhet är ansluten till högtalarsystemet beror beslutet att spela upp innehåll i surroundläge eller stereoläge på hur enheten är konfigurerad när du bearbetar AC-3-media.
 
@@ -64,4 +63,3 @@ Om en Android-enhet är ansluten till högtalarsystemet beror beslutet att spela
 |---|---|---|
 | Enhetskonfiguration Dolby är aktiverat (eller automatiskt) | Enhetskonfiguration Dolby är aktiverat (eller automatiskt) | Stereoläge |
 | Enhetskonfiguration Dolby av | Stereoläge | Stereoläge |
-

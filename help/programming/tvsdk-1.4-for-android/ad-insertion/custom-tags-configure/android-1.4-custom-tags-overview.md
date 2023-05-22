@@ -2,14 +2,13 @@
 title: Exempel på en anpassad VOD-resurs
 description: Exempel på en anpassad VOD-resurs
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 62b3ddf2-4c00-4402-8178-85143736b15f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på en anpassad VOD-resurs{#example-of-a-customized-vod-asset}
 
@@ -43,6 +42,5 @@ seg5.ts
 
 Programmet kan konfigurera följande scenarier:
 
-* Det finns ett meddelande när `#EXT-X-ASSET`-taggar eller andra uppsättningar anpassade taggnamn som du har prenumererat på finns i filen.
-* Infoga annonser när en `#EXT-X-AD`-tagg eller något annat anpassat taggnamn hittas i strömmen.
-
+* Ett meddelande när `#EXT-X-ASSET` -taggar, eller andra uppsättningar egna taggnamn som du har prenumererat på, finns i filen.
+* Infoga annonser när en `#EXT-X-AD` -taggen, eller något annat anpassat taggnamn, finns i strömmen.

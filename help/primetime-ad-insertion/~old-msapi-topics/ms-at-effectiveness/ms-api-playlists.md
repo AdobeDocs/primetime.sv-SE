@@ -1,7 +1,6 @@
 ---
 description: Manifestservern returnerar överordnad spellistor i M3U8-format, enligt den föreslagna standarden för HTTP-direktuppspelning. Den består av en uppsättning olika TS-strömmar (Variant Transport Streams), som var och en innehåller renderingar av samma innehåll för olika bithastigheter och format. Adobe Primetime-annonsinfogning lägger till direktivet EXT-X-MARKER, som ska tolkas av klientvideospelare.
 title: EXT-X-MARKER-direktivet
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '748'
@@ -18,49 +17,49 @@ Mer information om taggen EXT-X-MARKER finns i [Adobe Primetime HTTP Live Stream
 
 >[!NOTE]
 >
->Den här funktionen är bara tillgänglig om URL:en för bootstrap-manifestservern inte innehåller parametern `pttrackingmode`.
+>Den här funktionen är bara tillgänglig om URL:en för bootstrap-manifestservern inte innehåller `pttrackingmode` parameter.
 
 >[!NOTE]
 >
 >Taggen EXT-X-MARKER läggs till i annonssegment och inte i innehållssegment.
 
-Utkaststandarden på [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) beskriver innehållet i och formatet för variantspellistor. EXT-X-MARKER-taggen instruerar klienten att anropa ett återanrop. Den innehåller följande komponenter:
+Utkaststandarden på [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) beskriver innehållet i och formatet för olika spellistor. EXT-X-MARKER-taggen instruerar klienten att anropa ett återanrop. Den innehåller följande komponenter:
 
-* **IDUnique-** identifierare (sträng) för den här callback-händelsen i programströmmens kontext.
+* **ID** Unik identifierare (sträng) för den här callback-händelsen i programströmmens kontext.
 
-* **** TYPEType (sträng) för callback-händelsen: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd eller AdBegin
+* **TYP** Typ (sträng) av callback-händelsen: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd eller AdBegin
 
-* **** LÄNGD (i sekunder) från början av det segment som innehåller taggen som direktivet gäller för.
+* **VARAKTIGHET** Tidslängd (i sekunder) från början av det segment som innehåller taggen som direktivet gäller för.
 
-* **** OFFSETOvalfritt. Förskjutningen (i sekunder) i förhållande till början av segmentuppspelningen när återanropet måste anropas.
+* **FÖRSKJUTNING** Valfritt. Förskjutningen (i sekunder) i förhållande till början av segmentuppspelningen när återanropet måste anropas.
 
-   * `PodBegin` och  `PrerollPodBegin` innehåller beacon-information i DATA-attributet och aktiveras i början av segmentet. Taggen `OFFSET` är därför inte tillgänglig här.
+   * `PodBegin` och `PrerollPodBegin` innehåller beacon-information i DATA-attributet och aktiveras i början av segmentet. Så `OFFSET` -taggen är inte tillgänglig här.
 
-   * `AdBegin` innehåller beacon-information i DATA-attributet och de taggar som används i början av det segmentet. Taggen `OFFSET` är inte heller tillgänglig här.
+   * `AdBegin` innehåller beacon-information i DATA-attributet och de taggar som används i början av det segmentet. Så `OFFSET` -taggen är inte heller tillgänglig här.
 
-   * `PodEnd` och  `PrerollPodEnd` innehåller beacon-information i DATA-attributet men utlöses i slutet av det aktuella segmentet eftersom dessa taggar förväntas utlösas i slutet av sista segmentet i den sista annonsen i rutan. I det här fallet är `OFFSET` inställt på `<duration of segment>` för att ange att beacon ska utlösas i slutet av det aktuella segmentet.
+   * `PodEnd` och `PrerollPodEnd` innehåller beacon-information i DATA-attributet men utlöses i slutet av det aktuella segmentet eftersom dessa taggar förväntas utlösas i slutet av sista segmentet i den sista annonsen i rutan. I detta fall `OFFSET` är inställd på `<duration of segment>` för att ange att beacon ska utlösas i slutet av det aktuella segmentet.
 
-* **** DATABase64-kodad sträng omsluten av dubbla citattecken som innehåller de data som ska skickas till programmet när återanropet anropas. Den innehåller annonsspårningsinformation som överensstämmer med specifikationerna för VMAP1.0 och VAST3.0.
+* **DATA** Base64-kodad sträng omsluten av dubbla citattecken som innehåller de data som ska skickas till programmet när återanropet anropas. Den innehåller annonsspårningsinformation som överensstämmer med specifikationerna för VMAP1.0 och VAST3.0.
 
-* **COUNTN** Antal annonser som kommer att sammanfogas i reklambrytningen.
+* **COUNT** Antal annonser som kommer att sammanfogas i annonsbrytningen.
 
    Endast tillämpligt om TYPE-komponenten är inställd på PodBegin eller PrerollPodBegin.
 
-* **Den** totala längden (i sekunder) för den fyllda annonsbrytningen.
+* **BREAKDUR** Total varaktighet (i sekunder) för den fyllda annonsbrytningen.
 
    Endast tillämpligt om TYPE-komponenten är inställd på PodBegin eller PrerollPodBegin.
 
 När du skapar callback-funktionen tolkar du EXT-X-MARKER-komponenterna enligt följande:
 
-* När taggen innehåller `OFFSET` utlöser du återanropet vid den angivna förskjutningen i förhållande till början av innehållsuppspelningen i det segmentet. Annars startar du återanropet så snart innehållet i segmentet börjar spelas upp.
-* Använd `DURATION` för att spåra annonsinnehållets förlopp och för att begära URL:er för att spåra händelser.
-* Skicka `ID`, `TYPE` och `DATA` till återanropet.
+* När taggen innehåller `OFFSET`avfyrar återanropet vid den angivna förskjutningen i förhållande till början av innehållsuppspelningen i det segmentet. Annars startar du återanropet så snart innehållet i segmentet börjar spelas upp.
+* Använd `DURATION` för att spåra annonsinnehållets förlopp och begära URL:er för att spåra händelser.
+* Pass `ID`, `TYPE`och `DATA` till motringningen.
 
-Använd värdena `PrerollPodBegin` och `PrerollPodEnd` för `TYPE` för att bestämma vilket TS-segment som ska spelas upp först i live/linjära strömmar.
+Använd `PrerollPodBegin`och `PrerollPodEnd` värden för `TYPE` bestämma vilket TS-segment som ska spelas upp först i live/linjärt-strömmar.
 
 >[!NOTE]
 >
->Värdena `PrerollPodBegin` och `PrerollPodEnd` är bara tillgängliga när en förrollsannons infogas i en direktström.
+>The `PrerollPodBegin`och `PrerollPodEnd` värden är bara tillgängliga när en annons för pre-roll infogas i en liveström.
 
 Manifestservern innehåller EXT-X-MARKER-taggar i följande segment:
 
@@ -68,7 +67,7 @@ Manifestservern innehåller EXT-X-MARKER-taggar i följande segment:
 * Det första segmentet i annonsen, för att spåra start/slutförande/förlopp för en enskild annons i en reklamruta.
 * Det sista segmentet i annonsbrytningen för att spåra slutet av en annonspunkt.
 
-Manifestservern skickar ett `VMAP1.0-conformant` XML-dokument för att spåra början och slutet av varje annonsbrytning. Det är en filtrerad version av det VMAP1.0-svar som returneras av annonsservern, och innehåller främst spårningshändelserna som visas här:
+Manifestservern skickar en `VMAP1.0-conformant` XML-dokument för att spåra början och slutet av varje annonsbrytning. Det är en filtrerad version av det VMAP1.0-svar som returneras av annonsservern, och innehåller främst spårningshändelserna som visas här:
 
 ```xml
 <?xml version="1.0"?> 
@@ -93,7 +92,7 @@ Manifestservern skickar ett `VMAP1.0-conformant` XML-dokument för att spåra b�
 </AdTrackingFragments>
 ```
 
-För varje annonsskapare som manifestservern infogar i programinnehållet skickas ett VAST3.0-anpassat XML-dokument för att spåra annonsen. Varje XML-dokument innehåller ett `<InLine>`-element som beskriver den infogade linjära annonsen, eller ett `<Wrapper>`-element för radbrytningsannonser (d.v.s. länkade eller omdirigerade annonser) och eventuella tillhörande annonser och tillägg. Om VAST-svaret innehåller ett sekvensattribut, t.ex. när annonsen är en del av en ad pod, innehåller dokumentet det attributet. Nedan följer ett exempel på ett VAST3.0-kompatibelt XML-dokument för att spåra en enskild annons:
+För varje annonsskapare som manifestservern infogar i programinnehållet skickas ett VAST3.0-anpassat XML-dokument för att spåra annonsen. Varje XML-dokument innehåller en `<InLine>` element som beskriver den linjära annonseringen infogat, eller `<Wrapper>` -element för radbrytningsannonser (d.v.s. länkade eller omdirigerade annonser) och tillhörande annonser och tillägg. Om VAST-svaret innehåller ett sekvensattribut, t.ex. när annonsen är en del av en ad pod, innehåller dokumentet det attributet. Nedan följer ett exempel på ett VAST3.0-kompatibelt XML-dokument för att spåra en enskild annons:
 
 ```xml
 <?xml version="1.0"?> 

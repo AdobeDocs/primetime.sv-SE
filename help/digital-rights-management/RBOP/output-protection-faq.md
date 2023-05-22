@@ -1,20 +1,19 @@
 ---
 description: Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
 title: Vanliga frågor om RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 16b95db4-43a9-4458-b7f4-94033a36542e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-
-# RBOP FAQ {#rbop-faq}
+# Vanliga frågor om RBOP {#rbop-faq}
 
 Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
 
-* **F.** *När jag definierar ett krav på digitala utdata för en pixelbegränsning får jag tolknings-/formateringsfel när jag utelämnar HDCP-versionen, men jag har inga HDCP-krav. Hur ska jag konfigurera mitt krav på digitala utdata i det här fallet?* **S.** Eftersom HDCP-versionskontroll inte stöds i klienten rekommenderar Adobe att HDCP-versionen ställs in på  `1.0`. Detta säkerställer att konfigurationen är korrekt formaterad och semantiskt konsekvent i framtiden när HDCP-versionskontroll stöds. Följande kodutdrag visar en konfiguration med det här HDCP-värdet.
+* **Fråga.** *När jag definierar ett krav på digitala utdata för en pixelbegränsning får jag parsnings-/formateringsfel när jag utelämnar HDCP-versionen, men jag har inga HDCP-krav. Hur ska jag konfigurera mitt krav på digitala utdata i det här fallet?* **S.** Eftersom HDCP-versionskontroll inte stöds i klienten rekommenderar Adobe att du anger HDCP-versionen till `1.0`. Detta säkerställer att konfigurationen är korrekt formaterad och semantiskt konsekvent i framtiden när HDCP-versionskontroll stöds. Följande kodutdrag visar en konfiguration med det här HDCP-värdet.
 
    ```
    { "pixelConstraints":  
@@ -30,7 +29,7 @@ Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
    }
    ```
 
-* **F.** *Är RBOP-pixelbegränsningarna diskreta eller intervallbaserade?* **A.** RBOP-pixelbegränsningar är intervallbaserade. Varje pixelantal definierar kraven för alla pixelantal som är mindre än eller lika med det angivna antalet eller upp till det största antalet som är mindre än det värdet om det finns mer än en pixelbegränsning. Med andra ord används värdena som högsta tröskelvärden för varje lodrätt pixelantal.
+* **Fråga.** *Är RBOP-pixelbegränsningarna diskreta eller intervallbaserade?* **S.** RBOP-pixelbegränsningar är intervallbaserade. Varje pixelantal definierar kraven för alla pixelantal som är mindre än eller lika med det angivna antalet eller upp till det största antalet som är mindre än det värdet om det finns mer än en pixelbegränsning. Med andra ord används värdena som högsta tröskelvärden för varje lodrätt pixelantal.
 
    Låt oss anta att en MBR-ström med lodräta upplösningar på 240, 480, 600, 720 och 1080 skickas till spelaren med följande RBOP-inställningar.
 
@@ -48,9 +47,9 @@ Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
    * 1080: > 720; strömmen är ett block som listas (fel returneras) eftersom den inte hittas i reglerna ovan.
 
 
-* **F.** På vissa Android-enheter används inte de begränsningar för antal pixlar som jag har definierat exakt som de har definierats. Vad händer?
+* **Fråga.** På vissa Android-enheter används inte de begränsningar för antal pixlar som jag har definierat exakt som de har definierats. Vad händer?
 
-   **S.** Vissa Android-enheter rapporterar bildrutestorlekar som är något större än den normala storleken. Du kan åtgärda detta genom att justera bildrutestorleken ( `maxPixel` och `pixelCount`-inställningarna) uppåt med 20 pixlar. Du kan till exempel justera inställningarna för bildrutestorlek uppåt från:
+   **S.** Vissa Android-enheter rapporterar bildrutestorlekar som är något större än den normala storleken. Du kan åtgärda detta genom att justera bildrutestorleken ( `maxPixel` och `pixelCount` inställningar) uppåt 20 pixlar. Du kan till exempel justera inställningarna för bildrutestorlek uppåt från:
 
    ```
    { 
@@ -76,5 +75,4 @@ Vanliga frågor och svar om hur du använder upplösningsbaserat utdataskydd.
    ... 
    ```
 
-   genomgående för alla instanser av `maxPixel` och `pixelCount`.
-
+   genomgående, för alla förekomster av `maxPixel` och `pixelCount`.

@@ -1,16 +1,15 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 title: Tidslinjeannonsklasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 004c706a-55cc-446a-93b1-c5c7c011ba42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
-# Annonsklasser för tidslinje{#timeline-advertising-classes}
+# Tidslinjeannonsklasser{#timeline-advertising-classes}
 
 Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 
@@ -75,14 +74,14 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> klass, 
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> protocol
     </pre> </td> 
    <td colname="2"> En klass som hanterar annonsupplösningsdelen i Adobe Primetime annonsbeslutsprocess. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
-   <td colname="2"> Protokoll som beskriver de metoder som den anpassade innehållslösaren ( <span class="codeph"> PTContentResolver</span>) ska använda för att kommunicera status för innehållets matchning till delegaten. </td> 
+   <td colname="2"> Protokoll som beskriver de metoder som den anpassade innehållslösaren ( <span class="codeph"> PTContentResolver</span> ) ska användas för att meddela delegaten status för att lösa innehåll. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 
@@ -95,4 +94,3 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   </tr> 
  </tbody> 
 </table>
-

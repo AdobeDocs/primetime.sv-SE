@@ -3,10 +3,9 @@ title: Utförlig loggning
 description: Utförlig loggning
 copied-description: true
 exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
-translation-type: tm+mt
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '2157'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 ## beskrivningar av ptdebug-/loggningshändelser {#ptdebug-logging-events}
 
-När du initierar felsökningsloggning för en manifestserversession kan du lägga till parametern `ptdebug` i begärande-URL:en för att ange följande alternativ för den information som manifestservern returnerar i HTTP-rubriker:
+När du startar felsökningsloggning för en manifestserversession kan du lägga till `ptdebug` parametern till begärande-URL för att ange följande alternativ för den information som manifestservern returnerar i HTTP-rubriker:
 
 * `ptdebug=true`
 Alla poster utom TRACE_HTTP_HEADER och de flesta anrop-/svarsdata från posterna TRACE_AD_CALL.
@@ -43,7 +42,7 @@ Strukturen för en loggpost är följande:
 | record_type | string | Typ av händelse som loggas |
 | andra fält | varierar | Beroende på typ av händelse |
 
-Poster av den här typen loggar resultaten av HTTP-begäranden. Fält efter `TRACE_REQUEST_INFO` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar resultaten av HTTP-begäranden. Fält utanför `TRACE_REQUEST_INFO` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -58,7 +57,7 @@ Poster av den här typen loggar resultaten av HTTP-begäranden. Fält efter `TRA
 | remote_address_x_fwd_for_hdr_key | string | **‡** |
 | remote_host_port | string | **‡** |
 
-**‡** De tre sista fälten är valfria.
+**‡** De sista tre fälten är valfria.
 
 **Ett exempel**
 
@@ -79,7 +78,7 @@ Poster av den här typen loggar HTTP-huvuden som utbyts under HTTP-anrop mellan 
 
 >[!NOTE]
 >
->Fälten `request_type` och `header_value` är valfria.
+>The `request_type` och `header_value` -fält är valfria.
 
 **Ett exempel**
 
@@ -101,7 +100,7 @@ Poster av den här typen loggar HTTP-huvuden som utbyts under HTTP-anrop mellan 
 
 ### TRACE_AD_CALL-poster {#tracing-ad-call-records}
 
-Poster av den här typen loggar resultaten av manifestserverannonsbegäranden. Fält efter `TRACE_AD_CALL` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar resultaten av manifestserverannonsbegäranden. Fält utanför `TRACE_AD_CALL` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -138,11 +137,11 @@ Poster av den här typen loggar resultaten av annonsförfrågningarna som anges 
 | delta | heltal | Tid (millisekunder) som den här händelsen tar. |
 | **†** misc | string | Orsak till varför annonsen hoppades över. |
 
-**†** `ad_content_url_actual`,  `ad_call_id`och  `misc` fält är valfria.
+**†** `ad_content_url_actual`, `ad_call_id`och `misc` -fält är valfria.
 
 >[!NOTE]
 >
->För `TRACE_AD_RESOLVE` och `TRACE_AD_INSERT` är URL:en i fältet `ad_content_url_actual` för den omkodade annonsen om en sådan finns tillgänglig. Annars är fältet tomt för `TRACE_AD_RESOLVE` eller samma som `ad_content_url` för `TRACE_AD_INSERT`.
+>För `TRACE_AD_RESOLVE` och `TRACE_AD_INSERT`, webbadressen i `ad_content_url_actual` fältet är för den omkodade annonsen om en sådan är tillgänglig. Annars är fältet tomt för `TRACE_AD_RESOLVE` eller samma som `ad_content_url` for `TRACE_AD_INSERT`.
 
 Ett exempel:
 
@@ -172,13 +171,13 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 
 ### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE-poster {#trace-transcoding-no-media-to-transcode}
 
-Poster av den här typen loggar en annonsbyrå som saknas. Det enda fältet efter `TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE` visas i tabellen.
+Poster av den här typen loggar en annonsbyrå som saknas. Det enda fältet bortom `TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE` visas i tabellen.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
 | ad_id | string | Fullständigt kvalificerat annons-ID (FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\] \] Q_AD_ID: PROTOKOLL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\] \] PROTOKOLL: AUDITUDE,VAST) |
 
-Poster av den här typen loggar resultaten av omkodningsbegäranden som manifestservern skickar till CRS. Fält efter `TRACE_TRANSCODING_REQUESTED` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar resultaten av omkodningsbegäranden som manifestservern skickar till CRS. Fält utanför `TRACE_TRANSCODING_REQUESTED` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -188,7 +187,7 @@ Poster av den här typen loggar resultaten av omkodningsbegäranden som manifest
 | flaggor | string | ID3 anger om omkodningsbegäran innehåller en begäran om att lägga till en ID3-tagg |
 | target_duration | string | Måltid (sekunder) för den omkodade kreativa |
 
-Poster av den här typen indikerar en begäran om att utföra spårning på serversidan. Fält efter `TRACE_TRACKING_REQUEST` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen indikerar en begäran om att utföra spårning på serversidan. Fält utanför `TRACE_TRACKING_REQUEST` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -196,7 +195,7 @@ Poster av den här typen indikerar en begäran om att utföra spårning på serv
 | start | float | Starttid för PTS-fragment (sekunder med millisekundprecision) |
 | end | float | Sluttid för PTS-fragment (sekunder med millisekundprecision) |
 
-Poster av den här typen har en spårnings-URL för spårning på serversidan. Fält efter `TRACE_TRACKING_REQUEST_URL` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen har en spårnings-URL för spårning på serversidan. Fält utanför `TRACE_TRACKING_REQUEST_URL` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -204,7 +203,7 @@ Poster av den här typen har en spårnings-URL för spårning på serversidan. F
 | ad_system | string | Annonssystem (t.ex. audiude) |
 | url | string | URL till ping |
 
-Poster av den här typen loggar begär `WEBVTT`-beskrivningar från manifestservern. Fält efter `TRACE_WEBVTT_REQUEST` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar begär att manifestservern ska `WEBVTT` bildtexter. Fält utanför `TRACE_WEBVTT_REQUEST` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -213,21 +212,21 @@ Poster av den här typen loggar begär `WEBVTT`-beskrivningar från manifestserv
 | start | float | Delad starttid (sekunder med millisekundprecision) |
 | end | float | Delad sluttid (sekunder med millisekundprecision) |
 
-Poster av den här typen loggsvar som manifestservern skickar till klienter i `answer` till begäranden om `WEBVTT` bildtexter. Fält efter `TRACE_WEBVTT_RESPONSE` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggsvar som manifestservern skickar till klienter i `answer` till förfrågningar `WEBVTT` bildtexter. Fält utanför `TRACE_WEBVTT_RESPONSE` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
 | status | string | Returnerad HTTP-statuskod |
 | svar | string | Base64-kodat svar skickat till klienten |
 
-Poster av den här typen loggar svar på begäranden som manifestservern gör för `WEBVTT`-beskrivningar. Fält efter `TRACE_WEBVTT_SOURCE` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Poster av den här typen loggar svar på begäranden som manifestservern gör för `WEBVTT` bildtexter. Fält utanför `TRACE_WEBVTT_SOURCE` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
 | status | string | Returnerad HTTP-statuskod |
 | källa | string | Base64-kodat ursprungligt VTT-innehåll |
 
-Poster av den här typen gör att manifestservern kan logga händelser och information som annars inte planerats när den importerar annonser. Fältet efter `TRACE_MISC` består av en meddelandesträng. Följande meddelanden kan visas:
+Poster av den här typen gör att manifestservern kan logga händelser och information som annars inte planerats när den importerar annonser. Fältet bortom `TRACE_MISC` består av en meddelandesträng. Följande meddelanden kan visas:
 
 * Annonsen ignorerades: AdPlacement \[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1\]
 * AdPlacement adManifestURL= adManifestURL, durationSeconds= seconds, ignore= ignore, redirectAd= redirectAd, priority= priority
@@ -254,7 +253,7 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Hämtar raw-manifest: innehålls-URL. (Live)
 * Efter VAST-omdirigering: omdirigerings-URL.
 * Tomma tillgängliga. (VOD)
-* *antal* annonser hittades. (VOD)
+* Hittade *tal* annonser. (VOD)
 * HTTP-begäran har tagits emot. (Mycket första meddelande)
 * Annonsen ignoreras eftersom skillnaden mellan annonssvarets varaktighet (*annonsens svarstid *sek) och den faktiska annonstiden (*faktisk varaktighet *sek) är större än gränsen. (HLSManifestResolver)
 * Ignorerar tillgänglighet som inte gav något ID-värde. (GroupAdResolver.java)
@@ -301,7 +300,7 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 
 ### TRACE_PLAYBACK_PROGRESS-poster {#trace-playback-progress-records}
 
-Manifestservern genererar poster av den här typen när den tar emot en signal om uppspelningsförloppet under arbetsflödet för spårning på serversidan. Fält efter `TRACE_PLAYBACK_PROGRESS` visas i den ordning som visas i tabellen, avgränsade med tabbar.
+Manifestservern genererar poster av den här typen när den tar emot en signal om uppspelningsförloppet under arbetsflödet för spårning på serversidan. Fält utanför `TRACE_PLAYBACK_PROGRESS` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
@@ -310,12 +309,12 @@ Manifestservern genererar poster av den här typen när den tar emot en signal o
 | punkter | heltal | PTS-tid i ström |
 | ms_time | heltal | Tid när spårnings-URL genererades av manifestservern |
 | url | string | Omdirigerings-URL |
-| **u_** header_user_agent | string | HTTP User-Agent header |
-| **u_** header_dnt | heltal | HTTP do-not-track header |
-| **u_** effective_remote_address | string | IPv4-giltig fjärradress |
-| **e** remote_address | string | IPv4-fjärradress |
+| **as** header_user_agent | string | HTTP User-Agent header |
+| **as** header_dnt | heltal | HTTP do-not-track header |
+| **as** effective_remote_address | string | IPv4-giltig fjärradress |
+| **as** remote_address | string | IPv4-fjärradress |
 
-**De sista** fyra fälten är valfria.
+**as** De sista fyra fälten är valfria.
 
 ## Flera bithastighetsströmmar {#multiple-bitrate-streams}
 
@@ -328,22 +327,22 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 {groupID}/{base64-encoded url of the bit rate stream}.[m3u8]?{Query parameters}
 ```
 
-* **live/**
-vodManifestservern anger det här värdet baserat på innehållets spellisttyp: Live/linear (
+* **live/vod**
+Manifestservern anger det här värdet baserat på innehållets spellisttyp: Live/linear (
 `#EXT-X-PLAYLIST-TYPE:EVENT`) eller VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
 
-* ****
-publisherAssetIDPublisher har ett unikt ID för det specifika innehåll som anges i Bootstrap URL-begäran.
+* **publisherAssetID**
+Utgivarens unika ID för det specifika innehåll som anges i Bootstrap URL-begäran.
 
-* ****
-renderingManifestservern anger detta baserat på 
+* **rendering**
+Manifestservern anger detta baserat på 
 `BANDWIDTH` innehållsströmmens värde och använder det för att matcha bithastigheten för annonsen med bithastigheten för innehållet. Annonsbithastigheten får inte överskrida bithastigheten för innehållet om inte annonsåtergivningen med den lägsta bithastigheten gör det.
 
-* **groupIDT**
-Manifestservern genererar det här värdet och använder det för att se till att annonserna placeras på ett enhetligt sätt, oavsett för vilken bithastighet kunden begär annonser.
+* **groupID**
+Manifestservern genererar det här värdet och använder det för att se till att annonserna placeras på ett konsekvent sätt, oavsett för vilken bithastighet som klienten begär annonser.
 
-* **base64-encoded url of the bit rate**
-streamManifestserverns URL-safe base64 kodar innehållsströmmens absoluta URL. Varje ström har en egen URL.
+* **base64-kodad url för bithastighetsströmmen**
+Manifestserverns URL-säkra base64 kodar innehållsströmmens absoluta URL. Varje ström har en egen URL.
 
 * **Frågeparametrar**
-för Query-parametrar finns i Bootstrap URL-begäran.
+Frågeparametrar finns i Bootstrap URL-begäran.

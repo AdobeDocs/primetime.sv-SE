@@ -1,7 +1,6 @@
 ---
 description: Manifestservern koordinerar de system som tillhandahåller innehåll, tillhandahåller annonser, spelar upp video och spårar annonser. Den får M3U8-kodade spellistor (manifest) som klientvideospelare tar emot från innehållsleverantörer, knyter ihop annonser från annonsleverantörer i manifesten och skickar de sammanslagna manifesten till videospelare. Det har stöd för både annonsspårning på klientsidan och serversidan. Den utför sina interaktioner med ett HTTP-baserat webbtjänstgränssnitt.
 title: Översikt över Manifest Server-interaktioner
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '584'
@@ -24,9 +23,9 @@ En typisk konfiguration innehåller:
 * En annonsserver
 * En mottagare för annonsspårningsrapporter
 
-Arbetsflödet varierar beroende på ett antal faktorer, till exempel om CDN är Akamai eller om klienten utför annonsspårning. Ett diagram över arbetsflödet för annonsspårning på klientsidan finns i [Arbetsflöde för spårning på klientsidan](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
+Arbetsflödet varierar beroende på ett antal faktorer, till exempel om CDN är Akamai eller om klienten utför annonsspårning. En bild av arbetsflödet för annonsspårning på klienten finns på [Arbetsflöde för spårning på klientsidan](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
 
-Manifestservern interagerar med videoutsändningsklienter genom att ta emot och besvara HTTP GET-begäranden. Svaren är M3U8-kodade manifest som beskriver reklamsyrat innehåll, eventuellt inklusive en JSON- eller VMAP-struktur (sidecar) som innehåller detaljerade anvisningar för annonsspårning (se [Filformat](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
+Manifestservern interagerar med videoutsändningsklienter genom att ta emot och besvara HTTP GET-begäranden. Svaren är M3U8-kodade manifest som beskriver reklamstygn, eventuellt inklusive en JSON- eller VMAP-struktur (sidecar) som innehåller detaljerade anvisningar för annonsspårning (se [Filformat](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
 
 Ett typiskt arbetsflöde ser ut så här:
 
@@ -38,7 +37,7 @@ Ett typiskt arbetsflöde ser ut så här:
 
    >[!NOTE]
    >
-   >Om Bootstrap URL-frågeparametrarna innehåller inställningen `pttrackingmode=simple` eller `ptplayer=ios-mobileweb`, returnerar manifestservern den överordnad URL:en för variantmanifestet i ett JSON-objekt och klienten skickar en GET-begäran till variantmanifest-URL:en.
+   >Om Bootstrap URL-frågeparametrarna innehåller `pttrackingmode=simple` eller `ptplayer=ios-mobileweb` anges returnerar manifestservern den överordnad URL:en för variantmanifestet i ett JSON-objekt och klienten skickar en GET-begäran till variantens manifest-URL.
 
 1. Klienten väljer en ström i det genererade variantmanifestet som ska spelas upp och skickar annonsinformation till manifestservern.
 1. Manifestservern skickar informationen som klienten skickar till annonsservern och tar emot annonser och URL:er för annonsspårning från annonsservern. Om en angiven annons inte är i HLS-format skickar manifestservern den till CRS för konvertering till HLS.
@@ -53,7 +52,7 @@ Primetime-annonsinfogning har stöd för klienter på många videoleveransplattf
 
 ## CORS {#section_BEA7F298660944BE92801E4C82FCD038}
 
-Manifestservern använder CORS (Cross-Origin Resource Sharing Standard). Det söker efter ett `Origin`-huvud i de begäranden det tar emot. Om rubriken finns, svarar den med
+Manifestservern använder CORS (Cross-Origin Resource Sharing Standard). Den söker efter en `Origin` huvud i de förfrågningar den får. Om rubriken finns, svarar den med
 
 * `Access-Control-Allow-Origin: *`sträng från rubriken Ursprung`*`
 * `Access-Control-Allow-Credentials: true`

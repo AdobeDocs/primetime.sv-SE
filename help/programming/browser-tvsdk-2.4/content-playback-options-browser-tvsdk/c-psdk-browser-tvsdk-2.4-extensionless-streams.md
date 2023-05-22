@@ -1,14 +1,13 @@
 ---
 description: Webbläsarens TVSDK stöder för närvarande uppspelning av strömmar där manifest och fragment inte innehåller tillägg.
 title: Extensionslösa strömmar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ef81bfd2-2bfa-4ff7-b826-fd80802b3c07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
 
 ---
-
 
 # Extensionslösa strömmar{#extensionless-streams}
 
@@ -20,7 +19,7 @@ Browser TVSDK tolkar de första byten i svaret för att identifiera innehållsty
 
 ## Manifestnivå {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-Browser TVSDK använder parametern `mediaResource.resourceType` som skickas i metoden `replaceCurrentResource` för att identifiera innehållstypen för manifest-URL:en. Mer information finns i klassen `AdobePSDK.MediaPlayer`.
+Webbläsaren TVSDK använder `mediaResource.resourceType` parameter som skickas i `replaceCurrentResource` metod för att identifiera innehållstypen för manifest-URL. Mer information finns i `AdobePSDK.MediaPlayer` klassen.
 
 I UI Framework Player kan du ange resurstypen i medieresursen enligt följande:
 
@@ -35,9 +34,8 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Om `resourceType` inte anges avgör gränssnittsramverket resurstypen från resurs-URL-tillägget, som sedan skickas till metoden `replaceCurrentResource`.
+If `resourceType` anges inte, avgör gränssnittsramverket resurstypen från resurs-URL-tillägget, som sedan skickas till `replaceCurrentResource` -metod.
 
 >[!TIP]
 >
->Om det inte finns något tillägg kontrollerar du att `resourceType` alltid skickas när en resurs läses in i gränssnittsramverket.
-
+>Kontrollera att det inte finns något tilläggsmanifest för `resourceType` skickas alltid när en resurs läses in i gränssnittsramverket.

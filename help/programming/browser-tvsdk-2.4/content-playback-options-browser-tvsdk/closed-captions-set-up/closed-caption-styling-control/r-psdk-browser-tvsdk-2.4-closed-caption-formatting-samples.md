@@ -1,14 +1,13 @@
 ---
 description: Du kan ange textningsformat.
 title: Exempel på bildtextformatering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 946530a1-c7d7-4582-81b8-71b2980561cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%
 
 ---
-
 
 # Exempel: Bildtextformatering{#examples-caption-formatting}
 
@@ -35,4 +34,3 @@ var tf = new AdobePSDK.TextFormat(
 >[!IMPORTANT]
 >
 >Webbläsarens TVSDK stöder inte teckensnittskant, fyllningsfärg eller fyllningsopacitet.
-

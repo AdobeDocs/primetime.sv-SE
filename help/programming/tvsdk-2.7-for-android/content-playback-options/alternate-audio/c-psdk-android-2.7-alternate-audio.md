@@ -1,14 +1,13 @@
 ---
 description: Med alternativt ljud kan du växla mellan tillgängliga ljudspår för ett videospår. Användarna kan välja vilket språkspår de vill när videon spelas upp.
 title: Alternativt ljud
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c2eb10dc-3fe0-472b-8450-2fbfc6b09487
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#alternate-audio-overview}
 
@@ -16,11 +15,11 @@ Med alternativt ljud kan du växla mellan tillgängliga ljudspår för ett video
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-När TVSDK skapar instansen `MediaPlayerItem` för den aktuella videon skapas ett `AudioTrack`-objekt för varje tillgängligt ljudspår. Objektet innehåller en `name`-egenskap, som är en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket för det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard. När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill tillåta användaren att välja ett spår och ställa in videon som ska spelas upp med det valda spåret.
+När TVSDK skapar `MediaPlayerItem` -instans för den aktuella videon, skapar den `AudioTrack` objekt för varje tillgängligt ljudspår. Objektet innehåller en `name` -egenskap, som är en sträng som vanligtvis innehåller en användaridentifierbar beskrivning av språket i det spåret. Objektet innehåller även information om huruvida det spåret ska användas som standard. När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill tillåta användaren att välja ett spår och ställa in videon som ska spelas upp med det valda spåret.
 
 >[!TIP]
 >
->Om ett ytterligare ljudspår blir tillgängligt efter att TVSDK har skapat `MediaPlayerItem`, kommer TVSDK att utlösa en `MediaPlayerItem.AUDIO_TRACK_UPDATED`-händelse.
+>Om ett ytterligare ljudspår blir tillgängligt efter att TVSDK har skapat `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_TRACK_UPDATED` -händelse.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -58,7 +57,7 @@ Den här funktionen väljer ett alternativt ljudspår som ska spelas upp.
 void selectAudioTrack(AudioTrack audioTrack);
 ```
 
-Exempel:
+Till exempel:
 
 ```java
 private void onPrepared() { 
@@ -77,4 +76,3 @@ private void onPrepared() {
     _mediaPlayer.getCurrentItem().selectAudioTrack(selectedAudioTrack); 
 } 
 ```
-

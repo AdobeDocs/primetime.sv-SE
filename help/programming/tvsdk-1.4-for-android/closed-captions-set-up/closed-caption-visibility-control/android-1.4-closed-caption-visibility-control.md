@@ -1,14 +1,13 @@
 ---
 description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 title: Kontrollera synlighet för undertexter
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d9428744-1700-4917-b334-d6e0446eaf37
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Översikt {#control-closed-caption-visibility}
 
@@ -39,9 +38,8 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 
 1. Om du vill ändra synligheten för undertexter använder du metoden set och skickar ett synlighetsvärde från `MediaPlayer.Visibility`.
 
-   Exempel:
+   Till exempel:
 
    ```java
    mediaPlayer.setCCVisibility(Visibility.VISIBLE);
    ```
-

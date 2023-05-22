@@ -1,14 +1,13 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
 title: Arbeta med cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7482777a-c338-4e0d-b123-ce2712657b8d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med cookies{#work-with-cookies}
 
@@ -23,9 +22,9 @@ Här följer ett exempel med någon typ av autentisering när begäranden görs 
 
 Så här arbetar du med cookies:
 
-1. Skapa en `cookieManager` och lägg till dina cookies för URI:erna i din `cookieStore`.
+1. Skapa en `cookieManager` och lägg till dina cookies för URI:er i `cookieStore`.
 
-   Exempel:
+   Till exempel:
 
    >[!IMPORTANT]
    >
@@ -43,7 +42,7 @@ Så här arbetar du med cookies:
 
    TVSDK skickar frågor till denna cookieManager vid körning, kontrollerar om det finns några cookies som är associerade med URL:en och använder dem automatiskt.
 
-   Ett annat alternativ är att använda `cookieHeaders` i `NetworkConfiguration` för att ange en godtycklig cookie-huvudsträng som ska användas för begäranden. Denna cookie-rubrik skickas som standard endast med nyckelbegäranden. Om du vill skicka cookie-huvudet med alla begäranden använder du metoden `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
+   Ett annat alternativ är att använda `cookieHeaders` in `NetworkConfiguration` för att ange en godtycklig cookie-huvudsträng som ska användas för begäranden. Denna cookie-rubrik skickas som standard endast med nyckelbegäranden. Om du vill skicka cookie-huvudet med alla förfrågningar använder du `NetworkConfiguration` method `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

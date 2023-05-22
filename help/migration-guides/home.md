@@ -2,18 +2,17 @@
 title: Hjälp om migrering av Primetime
 description: Hjälp om migrering av Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1f3f1a5b-95c7-4d47-a36f-7ad934a7d49d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-
 # Hjälp om migrering och konvertering av Primetime
 
-Välkommen till migrerings- och konverteringshjälpen för Adobe Primetime. Dokumenten i den vänstra navigeringen förklarar konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generation av programsviter.
+Välkommen till migrerings- och konverteringshjälpen för Adobe Primetime. Dokumenten som visas i den vänstra navigeringen förklarar konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generation av programpaket.
 
 ## Se även
 
@@ -25,7 +24,7 @@ Välkommen till migrerings- och konverteringshjälpen för Adobe Primetime. Doku
 | [Hjälp om Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM) |
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
-| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Ladda ned PDF:er av den arkiverade dokumentationen. |
+| [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Hämta PDF av den arkiverade dokumentationen. |
 
 ## Användbara resurser
 

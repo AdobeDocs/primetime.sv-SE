@@ -1,5 +1,5 @@
 ---
-description: 'Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du kan göra detta med något av följande '
+description: Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du kan göra detta med något av följande
 title: Tillämpa egenskaper på servermiljöer
 exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
 source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf

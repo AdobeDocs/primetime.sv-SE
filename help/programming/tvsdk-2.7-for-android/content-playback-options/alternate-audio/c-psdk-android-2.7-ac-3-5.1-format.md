@@ -1,14 +1,13 @@
 ---
 description: Med ljudkodek 3 (AC-3, även kallat Dolby Digital®) 5.1-format, kan innehållsleverantörer komprimera storleken på flerkanalsljudfiler utan att försämra ljudkvaliteten. AC-3 är ett 5.1-format, vilket innebär att det ger fem kanaler med full bandbredd för en bättre användarupplevelse.
 title: AC-3 5.1-format
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 16647d69-9cb4-4bb8-8ad9-cac8811ea66d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
 
 ---
-
 
 # AC-3 5.1-format {#ac-format}
 
@@ -62,4 +61,3 @@ Om en Android-enhet är ansluten till högtalarsystemet beror beslutet att spela
 |---|---|---|
 | Enhetskonfiguration Dolby är aktiverat (eller automatiskt) | Enhetskonfiguration Dolby är aktiverat (eller automatiskt) | Stereoläge |
 | Enhetskonfiguration Dolby av | Stereoläge | Stereoläge |
-

@@ -1,14 +1,13 @@
 ---
 description: Med dessa klasser kan du anpassa loggning.
 title: Loggningsklasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85cf33dc-54c0-43f0-8386-2805853226ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
-
 
 # Loggningsklasser{#logging-classes}
 
@@ -50,4 +49,3 @@ Paket: [com.adobe.mediacore.log](https://help.adobe.com/en_US/primetime/api/psdk
   </tr> 
  </tbody> 
 </table>
-

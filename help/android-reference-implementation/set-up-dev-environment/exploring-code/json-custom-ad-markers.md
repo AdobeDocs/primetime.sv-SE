@@ -2,22 +2,21 @@
 title: JSON-objekt för anpassade annonsmarkörer
 description: JSON-objekt för anpassade annonsmarkörer
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85bcf306-703c-4a0d-b125-df9316fadf69
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
-
 # JSON-objekt för anpassade annonsmarkörer {#json-object-for-custom-ad-markers}
 
 Kodblocket nedan definierar JSON-objektet &quot;details&quot; när typen är anpassade annonsmarkörer.
 
 MetadataNode som returneras av IFeedItemAdapter:getStreamMetadata() innehåller 2 poster:
-1. en post med en nyckel av typen `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` och värdet för en instans av MetadataNode som returneras av `TimeRangeCollection.toMetadata()`.
-1. Den andra posten har en nyckel av typen `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` med värdet för *adjust-seek-position*-attributet nedan.
+1. en post med en typnyckel `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` och värdet för en instans av MetadataNode som returneras av `TimeRangeCollection.toMetadata()`.
+1. Den andra posten har en typnyckel `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` med värdet för *adjust-seek-position* attribut nedan.
 
 ```
 “metadata”: {

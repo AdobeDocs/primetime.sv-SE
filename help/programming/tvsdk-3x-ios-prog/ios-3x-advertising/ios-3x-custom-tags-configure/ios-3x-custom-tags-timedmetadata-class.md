@@ -1,16 +1,15 @@
 ---
 description: När TVSDK identifierar en prenumerationstagg i spellistan/manifestet försöker spelaren automatiskt att bearbeta taggen och visa den i form av ett PTTimedMetadata-objekt.
 title: Timed metadata, klass
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 969a3cd8-f8db-4b41-8826-c2d7aa8e5df1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
-
-# Timed metadata-klass {#timed-metadata-class}
+# Timed metadata, klass {#timed-metadata-class}
 
 När TVSDK identifierar en prenumerationstagg i spellistan/manifestet försöker spelaren automatiskt att bearbeta taggen och visa den i form av ett PTTimedMetadata-objekt.
 
@@ -33,7 +32,7 @@ Klassen innehåller följande element:
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> Namnet på tidsbestämda metadata. Om typen är <span class="codeph"> TAG</span> representerar värdet cue/tag-namnet. Om typen är <span class="codeph"> ID3</span> är den null. </td> 
+   <td colname="col2"> Namnet på tidsbestämda metadata. Om typen är <span class="codeph"> TAGG</span>, representerar värdet cue/tag-namnet. Om typen är <span class="codeph"> ID3</span>, är det null. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> tid</span> </td> 
@@ -60,7 +59,7 @@ Kom ihåg följande:
 
    >[!TIP]
    >
-   >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Exempel:
+   >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Till exempel:
    >
    >
    ```

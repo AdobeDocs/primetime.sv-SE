@@ -1,16 +1,15 @@
 ---
-description: 'TVSDK för Android innehåller en mängd olika funktioner och har följande huvudfunktioner '
+description: TVSDK för Android innehåller en mängd olika funktioner och har följande huvudfunktioner
 title: Funktioner i Primetime TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7df03752-98aa-4317-8e41-a284472cabbb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
-
-# Primetime TVSDK-funktioner{#primetime-tvsdk-features}
+# Funktioner i Primetime TVSDK{#primetime-tvsdk-features}
 
 TVSDK för Android innehåller en mängd olika funktioner och har följande huvudfunktioner:
 
@@ -52,4 +51,3 @@ TVSDK för Android innehåller en mängd olika funktioner och har följande huvu
 
    * Felsökningsloggning
    * Spårningsstöd för fragmentets varaktighet, storlek och tid för hämtning
-

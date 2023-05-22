@@ -1,14 +1,13 @@
 ---
 description: MediaPlayer har en notifyClick()-funktion som skickar annonsrelaterade händelser när en klickbar annons spelas upp. Dessa händelser tillhandahåller annons- och annonsinformation som appen kan använda för att tillhandahålla klickfunktioner.
 title: Hantera klickbara annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 25738592-f3fe-4f13-b2bb-26a5f942cd18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
-
 
 # Hantera klickbara annonser {#handle-clickable-ads}
 
@@ -20,14 +19,14 @@ MediaPlayer utlöser följande händelser när en klickbar annons spelas upp:
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-`AdClickedEvent` innehåller den information som krävs för att bearbeta genomklickningsfunktionen.
+The `AdClickedEvent` innehåller den information som behövs för att bearbeta genomklickningsfunktionen.
 
 1. Ge användarna en kontroll i spelaren så att de kan klicka på klickbara annonser.
 
    Detta kan vara en knapp eller något annat element som kan fånga användarens klickning.
 1. Lägg till en händelseavlyssnare för användarens händelse för att markera och klicka.
 
-   Exempel:
+   Till exempel:
 
    ```
    document.getElementById([ 
@@ -36,7 +35,7 @@ MediaPlayer utlöser följande händelser när en klickbar annons spelas upp:
 
 1. Lägg till en hanterare för användarens click-händelse.
 
-   Hanteraren måste uppmana MediaPlayer att utlösa händelsen `AdClicked`.
+   Hanteraren måste uppmana MediaPlayer att starta `AdClicked` -händelse.
 
    ```
    onAdClick = function (event) { 

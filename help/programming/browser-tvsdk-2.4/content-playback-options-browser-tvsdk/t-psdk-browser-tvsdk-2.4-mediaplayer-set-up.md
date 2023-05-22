@@ -1,32 +1,31 @@
 ---
 description: Ett MediaPlayer-objekt kapslar in en mediespelares beteende och funktioner.
 title: Konfigurera MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f492b2bb-3280-4306-ac4b-8b8d0fd68409
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera MediaPlayer{#set-up-the-mediaplayer}
 
 Ett MediaPlayer-objekt kapslar in en mediespelares beteende och funktioner.
 
-1. Skapa en `MediaPlayer`-instans med följande:
+1. Instansiera en `MediaPlayer` med följande:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Skapa en `MediaPlayerView`-instans:
+1. Skapa en `MediaPlayerView` instans:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   där `container` är målelementet `div` som innehåller din `HTMLMediaElement`.
+   där `container` är målet `div` element som innehåller `HTMLMediaElement`.
 
    På en HTML-sida:
 
@@ -50,13 +49,13 @@ Ett MediaPlayer-objekt kapslar in en mediespelares beteende och funktioner.
          document.getElementById("videoDiv"));  
    ```
 
-1. Koppla din `MediaPlayerView`-instans till din `MediaPlayer`-instans:
+1. Bifoga dina `MediaPlayerView` instansen till `MediaPlayer` instans:
 
    ```js
    player.view = view;
    ```
 
-1. Koppla det anpassade kontrollelementet `div` till din MediaPlayer-instans.
+1. Koppla de anpassade kontrollerna `div` -element till din MediaPlayer-instans.
 
    I HTML:
 
@@ -77,4 +76,4 @@ Ett MediaPlayer-objekt kapslar in en mediespelares beteende och funktioner.
    }
    ```
 
-Instansen `MediaPlayer` är nu tillgänglig och korrekt konfigurerad för att visa videoinnehåll på enhetsskärmen.
+The `MediaPlayer` -instansen är nu tillgänglig och korrekt konfigurerad för att visa videoinnehåll på enhetsskärmen.

@@ -2,16 +2,15 @@
 title: Vanliga frågor
 description: Vanliga frågor
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9058604e-dbab-4df5-89fd-1219c85c7643
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-
-# Vanliga frågor och svar {#faq}
+# Vanliga frågor {#faq}
 
 * Hur ofta sker ECI-förändringar?
    * När en ny Adobe DRM-klient släpps läggs en ECI-enhetspost till.

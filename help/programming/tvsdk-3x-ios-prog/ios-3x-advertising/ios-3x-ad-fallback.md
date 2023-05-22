@@ -1,26 +1,25 @@
 ---
 description: För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 title: Annonsersättning för VAST- och VMAP-annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8e33793c-d278-4c82-ad9b-7c6c7ee69cd2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
-
-# Lägg till reserv för VAST- och VMAP-annonser {#ad-fallback-for-vast-and-vmap-ads}
+# Annonsersättning för VAST- och VMAP-annonser {#ad-fallback-for-vast-and-vmap-ads}
 
 För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 
-I specifikationen VAST/Digital Video Multiple Ad Playlist (VMAP) anges att för annonser där VAST-återgång är aktiverad, utlöser tomma annonser automatiskt användningen av reservannonser. När en VAST-annons är tom söker TVSDK efter en giltig ersättning för HLS-medietyp bland reservannonserna. När en VAST-annons i en wrapper har en ogiltig medietyp hanterar TVSDK den här annonsen som tom. Du kan konfigurera om TVSDK ska göra samma sak för annonser som är infogade i en VMAP. Mer information om funktionen VAST `fallbackOnNoAd` finns i [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+I specifikationen VAST/Digital Video Multiple Ad Playlist (VMAP) anges att för annonser där VAST-återgång är aktiverad, utlöser tomma annonser automatiskt användningen av reservannonser. När en VAST-annons är tom söker TVSDK efter en giltig ersättning för HLS-medietyp bland reservannonserna. När en VAST-annons i en wrapper har en ogiltig medietyp hanterar TVSDK den här annonsen som tom. Du kan konfigurera om TVSDK ska göra samma sak för annonser som är infogade i en VMAP. Mer information om VAST `fallbackOnNoAd` funktion, se [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
 ## Definiera reservannonsbeteenden för VMAP-textbundna annonser {#section_D90BB3C6E539472EABF000C0F616DBE2}
 
 Du kan aktivera reservfunktionen när en intern VMAP-fil innehåller en ogiltig medietyp.
 
-1. Ange `FallbackOnInvalidCreativeEnabled` som `YES` om du vill att VMAP ska återställas när medietypen för en linjär/intern annons är ogiltig för HLS.
+1. Ange `FallbackOnInvalidCreativeEnabled` till `YES` för att få VMAP tillbaka när medietypen för en linjär/intern annons är ogiltig för HLS.
 
    >[!NOTE]
    >

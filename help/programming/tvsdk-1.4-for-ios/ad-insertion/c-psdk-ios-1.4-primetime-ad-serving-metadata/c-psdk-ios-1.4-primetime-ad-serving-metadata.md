@@ -1,14 +1,13 @@
 ---
 description: TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 title: Metadata för Primetime och server
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3723dd2f-292c-4ce5-9670-fda1b1f2b5df
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#primetime-ad-server-metadata-overview}
 
@@ -18,18 +17,16 @@ TVSDK stöder lösning och infogning av annonser för VOD och live/linear stream
 >
 >Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 >
->* A `mediaID`, which identify the specific content to play.
->* Din `zoneID`, som identifierar ditt företag eller din webbplats.
+>* A `mediaID`, som identifierar det specifika innehåll som ska spelas upp.
+>* Dina `zoneID`, som identifierar ditt företag eller din webbplats.
 >* Din annonsserverdomän, som anger domänen för den tilldelade annonsservern.
 >* Andra parametrar för målinriktning.
-
 >
-
 
 
 ## Konfigurera metadata för Primetime och server {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Ditt program måste förse TVSDK med den nödvändiga `PTAuditudeMetadata`-informationen för att kunna ansluta till annonsservern.
+Ditt program måste tillhandahålla TVSDK med den information som krävs `PTAuditudeMetadata` information för att ansluta till annonsservern.
 
 Så här ställer du in annonsserverns metadata:
 
@@ -43,7 +40,7 @@ Så här ställer du in annonsserverns metadata:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Ange `PTAuditudeMetadata`-instansen som metadata för aktuella `PTMediaPlayerItem`-metadata med `PTAdResolvingMetadataKey`.
+1. Ange `PTAuditudeMetadata` instans som metadata för aktuell `PTMediaPlayerItem` metadata genom att använda `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -71,13 +68,13 @@ Så här ställer du in annonsserverns metadata:
    }
    ```
 
-## Aktivera annonser i repriser för helhändelser {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## Aktivera annonser i repriser vid helhändelse {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
 Full-event replay (FER) är en VOD-resurs som fungerar som en live/DVR-resurs, så programmet måste vidta åtgärder för att se till att annonserna placeras på rätt sätt.
 
-För direktsänt innehåll använder TVSDK metadata/cues i manifestet för att avgöra var annonserna ska placeras. Ibland liknar dock direktsänt eller linjärt innehåll VOD-innehåll. När det aktiva innehållet är klart läggs till exempel en `EXT-X-ENDLIST`-tagg till i det aktiva manifestet. För HLS betyder taggen `EXT-X-ENDLIST` att strömmen är en VOD-ström. TVSDK kan inte automatiskt skilja den här strömmen från en vanlig VOD-ström för att korrekt infoga annonser.
+För direktsänt innehåll använder TVSDK metadata/cues i manifestet för att avgöra var annonserna ska placeras. Ibland liknar dock direktsänt eller linjärt innehåll VOD-innehåll. När live-innehåll är klart, till exempel, en `EXT-X-ENDLIST` -taggen läggs till i det aktiva manifestet. För HLS är `EXT-X-ENDLIST` -taggen betyder att strömmen är en VOD-ström. TVSDK kan inte automatiskt skilja den här strömmen från en vanlig VOD-ström för att korrekt infoga annonser.
 
-Programmet måste tala om för TVSDK om innehållet är live eller VOD genom att ange `PTAdSignalingMode`.
+Programmet måste informera TVSDK om innehållet är live eller VOD genom att ange `PTAdSignalingMode`.
 
 För en FER-ström bör Adobe Primetime annonsbeslutsserver inte innehålla en lista över annonsbrytningar som måste infogas på tidslinjen innan uppspelningen startar. Detta är den typiska processen för VOD-innehåll. Om du anger ett annat signeringsläge läser TVSDK i stället alla referenspunkter från FER-manifestet och går till annonsservern för varje referenspunkt för att begära en annonsbrytning. Den här processen liknar live-/DVR-innehåll.
 
@@ -85,9 +82,9 @@ Förutom varje begäran som är associerad med en referenspunkt gör TVSDK en ex
 
 1. Hämta det signeringsläge som ska användas från en extern källa, till exempel vCMS.
 1. Skapa reklamrelaterade metadata.
-1. Om standardbeteendet måste skrivas över anger du `PTAdSignalingMode` med `PTAdMetadata.signalingMode`.
+1. Om standardbeteendet måste skrivas över anger du `PTAdSignalingMode` genom att använda `PTAdMetadata.signalingMode`.
 
-   Giltiga värden är `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` och `PTAdSignalingModeServerMap`.
+   Giltiga värden är `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`och `PTAdSignalingModeServerMap`.
 
    Du måste ange annonssignaleringsläget innan du anropar `prepareToPlay`. När TVSDK börjar matcha och placera annonser på tidslinjen ignoreras ändringar av annonseringssigneringsläget. Ange läge när du skapar annonsmetadata för resursen.
 
@@ -111,4 +108,3 @@ Förutom varje begäran som är associerad med en referenspunkt gör TVSDK en ex
    adMetadata.customParameters = customParameters; 
    [metadata setMetadata:adMetadata forKey:PTAdResolvingMetadataKey]; 
    ```
-

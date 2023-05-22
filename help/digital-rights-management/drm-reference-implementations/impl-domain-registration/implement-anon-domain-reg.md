@@ -2,14 +2,13 @@
 title: Implementera anonym domänregistrering
 description: Implementera anonym domänregistrering
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 304cfe6f-0917-42ef-a49a-e6c4bc9c10d0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
-
 
 # Implementera anonym domänregistrering{#implement-anonymous-domain-registration}
 
@@ -22,7 +21,7 @@ ht-degree: 0%
 
 1. Gör anonym autentisering obligatorisk.
 
-   Ange följande i din [!DNL .properties]-fil:
+   I [!DNL .properties] fil, ange:
 
    ```
    policy.domain.anonymous=true 

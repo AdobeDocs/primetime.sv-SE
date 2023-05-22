@@ -2,14 +2,13 @@
 title: Generera en CSR-fil (Certificate Signing Request)
 description: Generera en CSR-fil (Certificate Signing Request)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4f8dae3d-da56-453d-b3c4-e67fe4f37064
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
-
 
 # Generera en CSR-fil (Certificate Signing Request) {#generate-a-certificate-signing-request-requester}
 
@@ -47,4 +46,3 @@ ht-degree: 0%
    >[!NOTE]
    >
    >Adobe rekommenderar att du använder en HSM för att skydda din privata nyckel och ditt lösenord.
-

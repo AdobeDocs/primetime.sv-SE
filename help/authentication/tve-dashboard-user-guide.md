@@ -1,13 +1,13 @@
 ---
 title: Användarhandbok för Primetime TVE Dashboard
 description: Användarhandbok för Primetime TVE Dashboard
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
 
 ---
-
 
 # Användarhandbok för Primetime TVE Dashboard {#tve-db-user-guide}
 

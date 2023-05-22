@@ -1,24 +1,23 @@
 ---
 description: Du kan välja att använda standardbeteenden för annonser.
 title: Använd standardbeteendet för uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: eb4ce0b4-9dfd-4de8-8cbf-8aba093a5ddd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-
-# Använd standardbeteendet för uppspelning {#use-the-default-playback-behavior}
+# Använd standardbeteendet för uppspelning  {#use-the-default-playback-behavior}
 
 Du kan välja att använda standardbeteenden för annonser.
 
 1. Gör något av följande om du vill använda standardbeteenden:
 
-   * Om du implementerar en egen `AdvertisingFactory`-klass returnerar du null för `createAdPolicySelector`.
+   * Om du implementerar en egen `AdvertisingFactory` klass, returnera null för `createAdPolicySelector`.
 
-   * Om du inte har någon anpassad implementering för klassen `AdvertisingFactory` använder TVSDK en standardväljare för annonspolicy.
+   * Om du inte har någon anpassad implementering för `AdvertisingFactory` klassen TVSDK använder en standardväljare för annonsprinciper.
 
 ## Konfigurera anpassad uppspelning {#set-up-customized-playback}
 
@@ -26,24 +25,24 @@ Du kan anpassa eller åsidosätta annonsbeteenden.
 
 Innan du anpassar eller åsidosätter annonsbeteenden ska du registrera annonspolicyinstansen med TVSDK.
 
-* Implementera gränssnittet `AdPolicySelector` och alla dess metoder.
+* Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteendena för annonser.
+   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
-* Utöka klassen `DefaultAdPolicySelector` och tillhandahåll implementeringar för endast de beteenden som kräver anpassning.
+* Utöka `DefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **vissa** av standardbeteendena.
+   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
 
 Så här anpassar du annonsbeteenden:
 
-1. Implementera gränssnittet `AdPolicySelector` och alla dess metoder.
+1. Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 1. Tilldela principinstansen som ska användas av TVSDK via reklamfabriken.
 
    >[!NOTE]
    >
-   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `MediaPlayer`-instansen avallokeras. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
+   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `MediaPlayer` instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
 
-   Exempel:
+   Till exempel:
 
    ```java
    class CustomContentFactory extends ContentFactory { 

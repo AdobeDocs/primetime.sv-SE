@@ -1,13 +1,13 @@
 ---
 title: Tillfälligt pass
 description: Tillfälligt pass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
 
 ---
-
 
 # Tillfälligt pass {#temp-pass}
 

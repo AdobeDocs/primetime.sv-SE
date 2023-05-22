@@ -1,14 +1,13 @@
 ---
 description: Med anpassade annonsmarkörer kan du skicka en uppsättning TimeRange-specifikationer som representerar tidslinjesegment till TVSDK.
 title: Klassen TimeRange
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9dc2abe1-189a-4ef4-9918-37835014bf1b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
-
 
 # Klassen TimeRange{#timerange-class}
 
@@ -16,9 +15,9 @@ Med anpassade annonsmarkörer kan du skicka en uppsättning TimeRange-specifikat
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Varje `TimeRange`-specifikation i uppsättningen representerar ett segment på tidslinjen för uppspelning som underhålls internt av TVSDK och som måste markeras som en annonsrelaterad period.
+Varje `TimeRange` specifikationen i uppsättningen representerar ett segment på uppspelningstidslinjen som underhålls internt av TVSDK och som måste markeras som en annonsrelaterad period.
 
-Klassen `TimeRange` är en enkel datastruktur som visar startpositionen och slutpositionen på tidslinjen. De här två skrivskyddade egenskaperna förkortar begreppet tidsintervall på tidslinjen för uppspelningen.
+The `TimeRange` -klassen är en enkel datastruktur som visar startpositionen och slutpositionen på tidslinjen. De här två skrivskyddade egenskaperna förkortar begreppet tidsintervall på tidslinjen för uppspelningen.
 
 >[!TIP]
 >
@@ -36,4 +35,3 @@ public final class TimeRange {
     public function get duration():Number {…}
 }
 ```
-

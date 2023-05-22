@@ -1,13 +1,13 @@
 ---
 title: Amazon FireOS SDK med dynamisk klientregistrering
 description: Amazon FireOS SDK med dynamisk klientregistrering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
 
 ---
-
 
 # Amazon FireOS SDK med dynamisk klientregistrering {#amazon-fireos-sdk-with-dynamic-client-registration}
 
@@ -167,4 +167,3 @@ Föråldrat:
 | invalid_request | 400 | Begäran har fel format. SDK:n bör sluta utföra anrop till servern. |
 | invalid_client | 403 | Klient-ID:t har inte längre behörighet att utföra begäranden. SDK MÅSTE utföra klientregistreringen igen. |
 | access_deny | 401 | access_token är inte giltig. SDK MÅSTE begära en ny access_token. |
-

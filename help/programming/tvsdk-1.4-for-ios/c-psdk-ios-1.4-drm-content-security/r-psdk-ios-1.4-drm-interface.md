@@ -1,16 +1,15 @@
 ---
 description: Det viktigaste klientelementet i Primetimes DRM-system (Digital Rights Management) är DRM Manager.
 title: Översikt över Primetime DRM-gränssnittet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dee420cf-8aad-42e8-965d-9fd9395f2c45
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
 
 ---
 
-
-# Översikt över gränssnittet för Primetime DRM {#primetime-drm-interface-overview}
+# Översikt över Primetime DRM-gränssnittet {#primetime-drm-interface-overview}
 
 Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad Primetime DRM-lösning.
 
@@ -36,7 +35,7 @@ Detta är de viktigaste API-elementen för att arbeta med DRM:
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-TVSDK utfärdar ett `PTMediaPlayerItemDRMMetadataChanged`-meddelande när DRM-metadata ändras. Dessa metadata används som indata för nästan alla funktioner i klassen `DRMManager`.
+TVSDK utfärdar en `PTMediaPlayerItemDRMMetadataChanged` när DRM-metadata ändras. Dessa metadata används som indata för nästan alla funktioner i `DRMManager` klassen.
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -44,18 +43,18 @@ Om den DRM-skyddade strömmen är kodad med flera bithastigheter (MBR), bör de 
 
 >[!TIP]
 >
->När du refererar till DRM-skyddade resurs-URL:er i din iOS-app måste frågesträngsparametern `?faxs=1` läggas till i (MBR) set-level M3U8-URL:en. Exempel:
+>När du refererar till DRM-skyddade resurs-URL:er i ditt iOS-program, frågesträngsparametern `?faxs=1` måste läggas till i (MBR) M3U8-URL:en på angiven nivå. Till exempel:
 >
 >
 ```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >
->Frågesträngsparametern `faxs=1` signalerar att innehållet är DRM-skyddat och utlöser DRM-dekrypteringsarbetsflödet i iOS TVSDK. Du kan också lägga till taggen `faxs=1` på webbadresser för DRM-skyddade HLS-resurser som är avsedda för andra plattformar. det observeras som nödvändigt på iOS eller behandlas som icke-aktiv i spelare på andra plattformar.
+>The `faxs=1` frågesträngsparametern signalerar att innehållet är DRM-skyddat och utlöser DRM-dekrypteringsarbetsflödet i enlighet med detta i iOS TVSDK. Du kan också lägga till `faxs=1` tagg på webbadresser för DRM-skyddade HLS-resurser som är avsedda för andra plattformar, det observeras som krävs på iOS eller behandlas som en spelare som inte är i bruk på andra plattformar.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Mer information om DRM finns i [Adobe Primetime DRM-dokumentationen](https://help.adobe.com/en_US/primetime/drm).
+Mer information om DRM finns i [Adobe Primetime DRM-dokumentation](https://help.adobe.com/en_US/primetime/drm).
 
 ## Implementera Primetime DRM i ett TSVDK-program {#implement-primetime-drm-in-a-tsvdk-application}
 
@@ -63,4 +62,4 @@ Primetime DRM är integrerat i TVSDK, vilket förenklar implementeringen av inne
 
 En översikt och information om hur du använder Primetime DRM för att implementera innehållsskydd i ett TVSDK-program finns i:
 
-* [Adobe Primetime TVSDK-DRM Workflow (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
+* [Adobe Primetime TVSDK-DRM-arbetsflöde (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)

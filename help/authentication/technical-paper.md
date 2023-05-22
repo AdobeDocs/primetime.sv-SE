@@ -1,13 +1,13 @@
 ---
 title: Om Adobe Primetime autentisering och TV Everywhere
 description: Om Adobe Primetime autentisering och TV Everywhere
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
 
 ---
-
 
 # Om Adobe Primetime autentisering och TV Everywhere {#about-auth-tve}
 

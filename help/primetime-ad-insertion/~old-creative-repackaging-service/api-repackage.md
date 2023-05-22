@@ -1,7 +1,6 @@
 ---
 description: Du kan använda API:t för CRS-ompaketering för att koda icke-HLS och andra kreatörer i förväg, så en HLS-version är tillgänglig när du behöver köra den, vilket eliminerar den 2-4 minuter långa fördröjning som är associerad med JIT-ompaketering.
 title: API för ompaketering
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '605'
@@ -18,7 +17,7 @@ Du kan använda API:t för CRS-ompaketering för att koda icke-HLS och andra kre
 
 Skicka ett HTTP-POST-kommando till den angivna URL:en för att tala om för CRS vilken annons du vill omkoda och vilka alternativ du vill att den ska använda. Svarskoden rapporterar om det går eller inte och annan information.
 
-Denna begäran kräver ett användarnamn och lösenord. Du kan få dessa från din kontoansvarige på Adobe. Kontakta din Adobe Primetime-representant om du behöver information om hur du autentiserar.
+Denna begäran kräver ett användarnamn och lösenord. Du kan få dessa från din kontoansvarige på Adobe. Om du vill ha information om autentisering kontaktar du Adobe Primetime Enablement.
 
 Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelande enligt följande:
 
@@ -30,7 +29,7 @@ Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelan
 
 * **Rubrik -** `Content-Type: text/xml`
 
-* **Body -** XML som i följande exempel:
+* **Brödtext -** XML som i följande exempel:
 
    ```xml
    <RepackageList>
@@ -52,7 +51,7 @@ Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelan
    </RepackageList>
    ```
 
-`RepackageList`-blocket i brödtexten kan innehålla 1 till 300 `Repackage`-block. Om antalet `Repackage`-block i brödtexten överstiger 300 kommer HTTP-begäran att misslyckas med följande fel:
+The `RepackageList` -block i brödtexten kan innehålla 1 till 300 `Repackage` -block. Om antalet `Repackage` -block i brödtexten överstiger 300, då misslyckas HTTP-begäran med följande fel:
 
 ```
 <codeph>
@@ -62,16 +61,16 @@ Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelan
 ```
 
 
-De obligatoriska och valfria parametrarna i ett `Repackage`-block är följande:
+De obligatoriska och valfria parametrarna i en `Repackage` -block är som följer:
 
-* **`AdSystem`** (Obligatoriskt) - Källannonsservern, till exempel  `Auditude`,  `FreeWheel`,  `Apad.tv`. Detta är ett strängvärde som motsvarar VAST-elementet `AdSystem`.
+* **`AdSystem`** (Obligatoriskt) - Källservern, till exempel `Auditude`, `FreeWheel`, `Apad.tv`. Detta är ett strängvärde som motsvarar VAST-elementet `AdSystem`.
 
-* **`AdId`** (Obligatoriskt) - Detta är en identifierare för den tredjepartsserver som anges i begäran. Det motsvarar attributet `id` för `Ad`-elementet i ett VAST-svar.
+* **`AdId`** (Obligatoriskt) - Detta är en identifierare för den tredjepartsserver som anges i begäran. Den motsvarar `id` attributet för `Ad` -element i ett VAST-svar.
 
-* **`CreativeURL`** (Obligatoriskt) - Platsen (URI) för annonsen som ska omkodas. Detta motsvarar VAST-elementet `MediaFile`.
+* **`CreativeURL`** (Obligatoriskt) - Platsen (URI) för annonsen som ska omkodas. Detta motsvarar VAST. `MediaFile` -element.
 
 * `CreativeID` (valfritt) - Identifieraren för annonsen som ska inkluderas som en del av annonsupplevelsen.
-* **`Zone`** (Obligatoriskt) - Zon-ID för ditt konto (hämtas från din tekniska kontohanterare). Detta är ett numeriskt värde som motsvarar Auditude-plattformen `publisher_site_id`-inställningen.
+* **`Zone`** (Obligatoriskt) - Zon-ID för ditt konto (hämtas från din tekniska kontohanterare). Detta är ett numeriskt värde som motsvarar Auditude-plattformen `publisher_site_id` inställning.
 
 * **`Format`** (valfritt) - Parametrar för att styra hur CRS omkodar annonsens kreativitet:
 
@@ -83,7 +82,7 @@ De obligatoriska och valfria parametrarna i ett `Repackage`-block är följande:
    * `hls` - Generera en HLS-kompatibel trancoded creative.
    * `dash` - Generera en DASH-kompatibel trancoded creative.
    * `id3` - Lägg in ID3-taggar med tidsmetadata i den omkodade annonsen.
-   * `targetdur` - Segmentets varaktighet (i sekunder) för den omkodade annonsen. Standardvärdet är `targetdur=4`. Det här värdet ska motsvara det värde som anges i manifestet för `<s>` i taggen för målvaraktighet: `#EXT-X-TARGETDURATION:<s>`.
+   * `targetdur` - Segmentets varaktighet (i sekunder) för den omkodade annonsen. Standard är `targetdur=4`. Detta värde ska motsvara värdet som anges i manifestet för `<s>` i målvaraktighetstaggen: `#EXT-X-TARGETDURATION:<s>`.
 
    >[!NOTE]
    >
@@ -91,15 +90,15 @@ De obligatoriska och valfria parametrarna i ett `Repackage`-block är följande:
 
 >[!IMPORTANT]
 >
->För att uppspelningen ska bli så jämn som möjligt ställer du in `targetdur` så att den matchar innehållets segmentlängd.
+>För att få en jämnare uppspelning anger du `targetdur` för att matcha innehållets segmentvaraktighet.
 
 ## HTTP-svar {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 
 CRS svarar på begäran med någon av följande statuskoder:
 
-* **HTTP 202**  - Accepterad (med tom brödtext). Detta visar att det lyckades. CRS överför den omkodade annonsen till CDN-servern.
-* **HTTP 400**  - Felaktig begäran. Den bokförda XML-filen är ogiltig.
-* **HTTP 500**  - Internt serverfel. Servern påträffade ett internt problem (servern kunde till exempel inte ansluta till en databas).
+* **HTTP 202** - Accepterad (med tom brödtext). Detta visar att det lyckades. CRS överför den omkodade annonsen till CDN-servern.
+* **HTTP 400** - Felaktig begäran. Den bokförda XML-filen är ogiltig.
+* **HTTP 500** - Internt serverfel. Servern påträffade ett internt problem (servern kunde till exempel inte ansluta till en databas).
 
 ## Förkoda resurser för SSAI eller CSAI {#section_098888BB74FD4DC1AD0BD507B2A48318}
 

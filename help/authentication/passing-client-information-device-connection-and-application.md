@@ -1,13 +1,13 @@
 ---
 title: Skicka klientinformation (enhet, anslutning och program)
 description: Skicka klientinformation (enhet, anslutning och program)
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0b21ef0e-c169-48ff-ac01-25411cfece1e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1681'
 ht-degree: 0%
 
 ---
-
 
 # Skicka klientinformation (enhet, anslutning och program) {#pass-client-info}
 
@@ -455,5 +455,3 @@ Information om enheten, anslutningen och programmet måste läggas till i samma 
 
 * [Klassen EasClientDeviceInformation](https://docs.microsoft.com/en-us/uwp/api/windows.security.exchangeactivesyncprovisioning.easclientdeviceinformation?view=winrt-22000)
 * [Klassen DisplayInformation](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.display.displayinformation?view=winrt-22000)
-
-

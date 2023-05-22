@@ -1,13 +1,13 @@
 ---
 title: Använda Charles Proxy
 description: Använda Charles Proxy
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
-
 
 # Använda Charles Proxy {#using-charles-proxy}
 

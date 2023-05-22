@@ -2,16 +2,15 @@
 title: Stöd för implementeringskapitel
 description: Stöd för implementeringskapitel
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4585505c-9511-4f10-b81a-922eaeb2764d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
-
-# Implementera stöd för kapitel{#implement-chapter-support}
+# Stöd för implementeringskapitel{#implement-chapter-support}
 
 Du kan definiera och spåra kapitel för videospårning i ett TVSDK-baserat program på följande sätt:
 
@@ -50,4 +49,3 @@ Du kan definiera och spåra kapitel för videospårning i ett TVSDK-baserat prog
    // For default chapters, the application must not set custom chapters on the tracking metadata  
    // and simply enable chapters to be tracked by setting the boolean value as defined above.
    ```
-

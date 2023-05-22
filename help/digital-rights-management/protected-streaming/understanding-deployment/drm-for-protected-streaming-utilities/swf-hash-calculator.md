@@ -1,16 +1,15 @@
 ---
 description: Verktyget SWF Hash Calculator beräknar sammanfattningen för ett SWF-program som finns i en fil.
-title: SWF-hash-räknare
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: SWF hash-räknare
+exl-id: 245254fe-2fcb-41e8-94bd-0cbc8b39b2b5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
-
-# SWF-hash-räknare{#swf-hash-calculator}
+# SWF hash-räknare{#swf-hash-calculator}
 
 Verktyget SWF Hash Calculator beräknar sammanfattningen för ett SWF-program som finns i en fil.
 
@@ -41,4 +40,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-Du kan använda det här värdet för att ange SWF-sammanfattningen i [!DNL flashaccess-tenant.xml].
+Du kan använda det här värdet för att ange sammandraget SWF i [!DNL flashaccess-tenant.xml].

@@ -1,14 +1,13 @@
 ---
 description: Verktygsklassen ReplaceTimeRange är ett tillägg till klassen TimeRange som ska användas med CustomRangeMetadata.
 title: Klassen ReplaceTimeRange
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8d4e9263-bcc0-4300-86ac-6aa7afe5914b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
-
 
 # Klassen ReplaceTimeRange {#replacetimerange-class}
 

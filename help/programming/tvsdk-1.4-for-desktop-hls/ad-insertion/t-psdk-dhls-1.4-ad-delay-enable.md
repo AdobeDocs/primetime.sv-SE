@@ -1,27 +1,26 @@
 ---
 description: Du kan ange om uppspelning ska tillåtas innan alla annonser har lästs in och placerats på tidslinjen. När du startar uppspelningen på det här sättet får tittaren snabbare åtkomst till huvudinnehållet. Den här funktionen gäller endast för live DVR och fungerar inte med, till exempel VOD-resurser.
 title: Aktivera lazy och loading
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6b70a7ae-28ce-4a19-9560-26e937c721cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-
-# Aktivera lat och läsa in{#enable-lazy-ad-loading}
+# Aktivera lazy och loading{#enable-lazy-ad-loading}
 
 Du kan ange om uppspelning ska tillåtas innan alla annonser har lästs in och placerats på tidslinjen. När du startar uppspelningen på det här sättet får tittaren snabbare åtkomst till huvudinnehållet. Den här funktionen gäller endast för live DVR och fungerar inte med, till exempel VOD-resurser.
 
-1. Använd den booleska egenskapen `delayAdLoading` i `AdvertisingMetadata`.
+1. Använda egenskapen Boolean `delayAdLoading` in `AdvertisingMetadata`.
 
    * När värdet är false väntar TVSDK tills alla annonser är lösta och placerade innan övergången till statusen PREPARED görs. Som standard är det false.
    * När värdet är true tolkar TVSDK bara de initiala annonserna och övergångarna till statusen PREPARED. De återstående annonserna löses och placeras under uppspelningen.
 
-1. Om du även vill aktivera fördröjd och inläsning med Adobe Primetime annonsbeslut anger du `true` när du skapar `AuditudeSettings`.
+1. Om du även vill aktivera fördröjd läsning och inläsning med Adobe Primetime annonsbeslut ställer du in det här på `true` när du skapar `AuditudeSettings`.
 
-   Klassen `AuditudeSettings` ärver den här egenskapen från `AdvertisingMetadata`, men ärver inte det aktuella värdet.
+   The `AuditudeSettings` klassen ärver den här egenskapen från `AdvertisingMetadata`, men ärver inte det aktuella värdet.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
@@ -30,7 +29,7 @@ Du kan ange om uppspelning ska tillåtas innan alla annonser har lästs in och p
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. Om du exakt vill spegla annonser som tips i ett navigeringsfält lyssnar du efter `TimelineEvent`. `TIMELINE_UPDATED` och rita om rensningsfältet varje gång du får den här händelsen.
+1. Lyssna efter `TimelineEvent`. `TIMELINE_UPDATED` och rita om rensningsfältet varje gång du får den här händelsen.
 
    När VoD-strömmar använder fördröjd och inläsning placeras inte alla annonser på tidslinjen när spelaren förbereds, så du måste rita om rensningsfältet explicit.
 
@@ -45,4 +44,3 @@ Du kan ange om uppspelning ska tillåtas innan alla annonser har lästs in och p
        drawMarkers(markers); 
    } 
    ```
-

@@ -1,13 +1,13 @@
 ---
 title: Ange MVPD-lista
 description: Ange MVPD-lista
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
-
 
 # Ange MVPD-lista {#provide-mvpd-list}
 

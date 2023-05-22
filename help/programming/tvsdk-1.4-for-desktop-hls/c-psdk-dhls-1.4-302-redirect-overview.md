@@ -1,16 +1,15 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 title: Omdirigeringsoptimering för HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9b9d98ae-a509-47dc-a5ac-6be9b0f214c1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# HTTP 302 - omdirigeringsoptimering{#http-redirect-optimization}
+# Omdirigeringsoptimering för HTTP 302{#http-redirect-optimization}
 
 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 
@@ -20,7 +19,7 @@ Den här funktionen är inaktiverad som standard och du kan ändra den här inst
 
 Om du aktiverar den här funktionen fungerar den bara korrekt om *alla* av följande villkor är uppfyllda: i annat fall sker ingen omdirigeringsoptimering och 302 svar fortsätter att inträffa:
 
-* Ditt program kompilerades för Adobe 11.8 med `-swf-version` 21 eller senare.
+* Ditt program kompilerades för Adobe Flash Player 11.8 med `-swf-version` 21 eller senare.
 * Dina slutanvändare har Adobe Flash Player 11.8 eller senare installerat.
 
 >[!IMPORTANT]
@@ -29,11 +28,11 @@ Om du aktiverar den här funktionen fungerar den bara korrekt om *alla* av följ
 
 ## Inaktivera eller aktivera 302 omdirigeringsoptimering {#section_D6687FC44C61446F878008B629A5FA19}
 
-Använd egenskapen `useRedirectedUrl` för att aktivera (true) eller inaktivera 302 omdirigering (false).
+Använd `useRedirectedUrl` egenskapen för att aktivera 302 omdirigering (true) eller av (false).
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
-Exempel:
+Till exempel:
 
 ```
 // Set useRedirectedUrl property to true 
@@ -50,4 +49,3 @@ var mediaResource = new MediaResource( url, MediaResourceType.HLS, result);
 // load the resource 
 mediaPlayer.replaceCurrentResource( mediaResource, mediaPlayerItemConfig );
 ```
-

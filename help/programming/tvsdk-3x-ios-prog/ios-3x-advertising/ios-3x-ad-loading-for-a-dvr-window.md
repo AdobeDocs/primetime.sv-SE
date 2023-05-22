@@ -29,7 +29,7 @@ Om du vill läsa in alla annonser för hela flödet anger du `PTAdMetadata.enabl
 >
 >Standardvärdet är `NO`och det här alternativet läser bara in annonser från den aktuella direktpunkten.
 
-Exempel:
+Till exempel:
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 

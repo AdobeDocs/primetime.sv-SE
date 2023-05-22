@@ -1,14 +1,13 @@
 ---
 description: Verktygsklassen TimeRangeCollection abstraherar begreppet om en ordnad samling med TimeRange-specifikationer och tillhandahåller tjänster som kan översättas till en Metadata-instans.
 title: Klassen TimeRangeCollection
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2e5160b0-2254-4a40-8c32-fe3e05b9fc30
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
-
 
 # Klassen TimeRangeCollection{#timerangecollection-class}
 
@@ -26,4 +25,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Det definierade värdet för samlingstypen är `MARK_RANGES`, `DELETE_RANGES` och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection`s med dessa tre typer.
+Det definierade värdet för samlingstypen är `MARK_RANGES`, `DELETE_RANGES`och `REPLACE_RANGES`. Du kan skapa `TimeRangeCollection`Dessa tre typer används.

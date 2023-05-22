@@ -1,7 +1,8 @@
 ---
 title: JS SDK-begränsningar för Safari-webbläsare
 description: JS SDK-begränsningar för Safari-webbläsare
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5e5c3b36-ee09-49e0-b5b7-83b24854d69d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 0%
@@ -167,4 +168,3 @@ När [N130](/help/authentication/error-reporting.md#advanced-error-codes-referen
 * För Mac OS X Sierra och tidigare: Kontrollerar</span>han &quot;**Tillåt alltid**&quot; för &quot;**Cookies och webbplatsdata**&quot; på fliken Sekretess i webbläsaren från Inställningar, enligt bilden nedan.
 
    ![](assets/always-allow-safari13.png)
-

@@ -1,7 +1,6 @@
 ---
 description: Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
 title: Ändringar i API:t för borttagning och ersättning av annonser
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '316'
@@ -27,21 +26,21 @@ Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
       >
       >Alla objekt i arrayen måste vara av samma typ.
 
-   * `PTTimeRangeCollectionType` är en uppräkning som definierar beteendet för de intervall som definieras i  `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` är en uppräkning som definierar beteendet för de intervall som definieras i `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`: Intervalltypen är  *Mark*. Intervallen används för att markera intervallen i innehållet som annonser.
+      * `PTTimeRangeCollectionTypeMarkRanges`: Intervalltypen är *Mark*. Intervallen används för att markera intervallen i innehållet som annonser.
 
       * `PTTimeRangeCollectionTypeDeleteRanges`: Intervalltypen är Delete. De definierade intervallen tas bort från huvudinnehållet innan annonsinfogningen.
-      * `PTTimeRangeCollectionTypeReplaceRanges`: Intervalltypen är Ersätt. De definierade intervallen ersätts från huvudområdet med annonser (annonseringsläget är `PTAdSignalingModeCustomTimeRanges`).
+      * `PTTimeRangeCollectionTypeReplaceRanges`: Intervalltypen är Ersätt. De definierade intervallen ersätts från huvudområdet med annonser (annonseringsläget är inställt på `PTAdSignalingModeCustomTimeRanges`).
 
-* `PTReplacementTimeRange` - Ny offentlig klass som definierar ett enskilt intervall av  `PTTimeRangeCollection`:
+* `PTReplacementTimeRange` - Ny offentlig klass som definierar ett enskilt intervall av `PTTimeRangeCollection`:
 
    * `property CMTimeRange range` - Definierar intervallets start och varaktighet.
-   * `property long replacementDuration` - Om typen av  `TimeRangeCollection` är  `PTTimeRangeCollectionTypeReplaceRanges`,  `replacementDuration` används den för att skapa en placeringsmöjlighet (annonsinfogning) med en varaktighet på  `replacementDuration`. Om `replacementDuration` inte är inställt avgör annonsservern hur länge och hur många annonser som gäller för placeringsmöjligheten.
+   * `property long replacementDuration` - Om typen av `TimeRangeCollection` är `PTTimeRangeCollectionTypeReplaceRanges`, `replacementDuration` används för att skapa en platsmöjlighet (annonsinfogning) med en varaktighet på `replacementDuration`. Om `replacementDuration` är inte inställt, kommer annonsservern att bestämma längden och antalet annonser för den placeringsmöjligheten.
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges` - En ny typ av  `PTAdSignalingMode`. Det här läget används tillsammans med `PTTimeRangeCollection` med typen `PTTimeRangeCollectionReplace` för annonsinfogning baserat på ersättningsintervallen.
+   * `PTAdSignalingModeCustomTimeRanges` - En ny typ av `PTAdSignalingMode`. Det här läget används tillsammans med `PTTimeRangeCollection` med text `PTTimeRangeCollectionReplace` för annonsinfogning baserat på ersättningsintervall.
 
 * `PTAdMetadata`:
 

@@ -1,16 +1,15 @@
 ---
 description: När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
 title: Svara på klickningar på annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dc1f1ad7-2f11-4a6c-8459-e02cf8a2e0aa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
-
-# Svara på klick på annonser{#respond-to-clicks-on-ads}
+# Svara på klickningar på annonser{#respond-to-clicks-on-ads}
 
 När en användare klickar på en annons eller en relaterad knapp måste programmet svara. TVSDK ger dig information om mål-URL:en för klickningen.
 
@@ -18,9 +17,9 @@ När en användare klickar på en annons eller en relaterad knapp måste program
 
    När en användare klickar på en annons eller en relaterad knapp skickar TVSDK det här meddelandet, inklusive information om klickningens mål.
 1. Övervaka användarinteraktioner i klickbara annonser.
-1. När användaren vidrör eller klickar på annonsen eller knappen ringer du `notifyClick` på `MediaPlayerView` för att meddela TVSDK.
-1. Lyssna efter händelsen `onAdClick(AdClickEvent event)` från TVSDK.
-1. Om du vill hämta klicknings-URL:en och relaterad information använder du get-metoderna för `AdClickEvent`-instansen.
+1. Ring när användaren pekar på eller klickar på annonsen eller knappen för att meddela TVSDK `notifyClick` på `MediaPlayerView`.
+1. Lyssna på `onAdClick(AdClickEvent event)` event från TVSDK.
+1. Om du vill hämta klicknings-URL:en och relaterad information använder du get-metoderna för `AdClickEvent` -instans.
 1. Pausa videon.
 
    Mer information om hur du pausar videon finns i [Pausa och återuppta uppspelningen.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
@@ -39,7 +38,7 @@ När en användare klickar på en annons eller en relaterad knapp måste program
 
 <!--<a id="example_2D93228E510D438C8AB5559897817A47"></a>-->
 
-Exempel:
+Till exempel:
 
 ```java
 private AdStartedEventListener adStartedEventListener = new AdStartedEventListener() { 
@@ -93,4 +92,3 @@ private AdClickedEventListener adClickedEventListener = new AdClickedEventListen
     } 
 }; 
 ```
-

@@ -1,14 +1,13 @@
 ---
 description: TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 title: Metadata för Primetime och server
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f27657ac-4037-45e5-a658-ad9a783dd990
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#primetime-ad-server-metadata-overview}
 
@@ -18,14 +17,14 @@ TVSDK stöder lösning och infogning av annonser för VOD och live/linear stream
 
 Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 
-* A `mediaID`, which identify the specific content to play.
-* Din `zoneID`, som identifierar ditt företag eller din webbplats.
+* A `mediaID`, som identifierar det specifika innehåll som ska spelas upp.
+* Dina `zoneID`, som identifierar ditt företag eller din webbplats.
 * Din annonsserverdomän, som anger domänen för den tilldelade annonsservern.
 * Andra parametrar för målinriktning.
 
 ## Konfigurera metadata för Primetime och server {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Ditt program måste förse TVSDK med den nödvändiga `PTAuditudeMetadata`-informationen för att kunna ansluta till annonsservern.
+Ditt program måste tillhandahålla TVSDK med den information som krävs `PTAuditudeMetadata` information för att ansluta till annonsservern.
 
 Så här ställer du in annonsserverns metadata:
 
@@ -39,7 +38,7 @@ Så här ställer du in annonsserverns metadata:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Ange `PTAuditudeMetadata`-instansen som metadata för aktuella `PTMediaPlayerItem`-metadata med `PTAdResolvingMetadataKey`.
+1. Ange `PTAuditudeMetadata` instans som metadata för aktuell `PTMediaPlayerItem` metadata genom att använda `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 

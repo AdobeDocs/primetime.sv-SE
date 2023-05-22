@@ -1,14 +1,13 @@
 ---
 description: Som standard tvingar TVSDK en annonsbrytning att spelas upp när användaren söker över en annonsbrytning. Du kan anpassa beteendet för att hoppa över en annonsbrytning om tiden som gått från en tidigare avbruten brytning är inom ett visst antal minuter.
 title: Hoppa över annonsbrytningar under en tidsperiod
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 13e34c05-2c43-4459-88ec-5c6cfa8c363d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # Hoppa över annonsbrytningar under en tidsperiod {#skip-ad-breaks-for-a-period-of-time}
 
@@ -32,7 +31,7 @@ Om du vill åsidosätta TVSDK-standardbeteendet för annonsradbrytningar kan du 
 
    >[!NOTE]
    >
-   >Annonsbrytningsprincipen `REMOVE` har en snedstreck för borttagning. Adobe rekommenderar att du använder principen `SKIP` i stället för `REMOVE`.
+   >The `REMOVE` principen för annonsbrytning är nedgraderad. Adobe rekommenderar att du använder `SKIP` och ersättningspolicy istället för `REMOVE`.
 
 Följande exempel på en anpassad annonsprincipväljare hoppar över annonser inom de kommande fem minuterna (väggklocka) efter att en användare har tittat på en annonsbrytning.
 
@@ -212,4 +211,3 @@ Följande exempel på en anpassad annonsprincipväljare hoppar över annonser in
        } 
    } 
    ```
-

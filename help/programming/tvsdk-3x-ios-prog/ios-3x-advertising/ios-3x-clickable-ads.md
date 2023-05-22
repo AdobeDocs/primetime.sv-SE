@@ -1,14 +1,13 @@
 ---
 description: TVSDK ger dig information så att du kan agera på klickbara annonser. När du skapar användargränssnittet måste du bestämma hur du ska svara när en användare klickar på en klickbar annons.
 title: Klickbara annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4c4d37ee-0353-4c0f-8a11-d9be9bd427ec
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
-
 
 # Klickbara annonser {#clickable-ads}
 
@@ -16,7 +15,7 @@ TVSDK ger dig information så att du kan agera på klickbara annonser. När du s
 
 I TVSDK för iOS går det bara att klicka på linjära annonser.
 
-## Svara på klick på annonser {#section_537AF2593FDB4257B81AAE2103B0C719}
+## Svara på klickningar på annonser {#section_537AF2593FDB4257B81AAE2103B0C719}
 
 När en användare klickar på en annons, en tilläggsbanderoll eller en relaterad knapp måste ditt program svara. TVSDK ger dig information om mål-URL:en för klickningen.
 
@@ -27,9 +26,9 @@ När en användare klickar på en annons, en tilläggsbanderoll eller en relater
    >När en användare klickar på en annons, en tilläggsbanderollannons eller en relaterad knapp skickar TVSDK det här meddelandet, inklusive information om klickningens mål.
 
 1. Övervaka användarinteraktioner i klickbara annonser.
-1. När användaren pekar på eller klickar på annonsen eller knappen ska du använda `[_player notifyClick:_currentAd.primaryAsset];` för att meddela TVSDK.
-1. Lyssna efter händelsen `PTMediaPlayerAdClickNotification` från TVSDK.
-1. Använd objektet `PTMediaPlayerAdClickURLKey` om du vill hämta klicknings-URL:en och relaterad information.
+1. När användaren vidrör eller klickar på annonsen eller knappen kan du använda `[_player notifyClick:_currentAd.primaryAsset];`.
+1. Lyssna på `PTMediaPlayerAdClickNotification` event från TVSDK.
+1. Om du vill hämta klicknings-URL:en och relaterad information använder du `PTMediaPlayerAdClickURLKey` -objekt.
 1. Pausa videon.
 1. Använd klickningsinformationen för att visa webbadressen för annonsklickningen och relaterad information.
 
@@ -46,7 +45,7 @@ När en användare klickar på en annons, en tilläggsbanderoll eller en relater
 
 1. Stäng webbläsarfönstret där genomklickningsinformationen visas och återuppta uppspelningen av videon.
 
-   Exempel:
+   Till exempel:
 
    ```
       // Listening for click notification  

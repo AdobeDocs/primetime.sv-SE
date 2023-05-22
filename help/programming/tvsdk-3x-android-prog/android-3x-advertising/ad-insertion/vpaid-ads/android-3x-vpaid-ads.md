@@ -1,14 +1,13 @@
 ---
 description: VPAID 2.0 (Video Player ad-sting interface definition) ger ett gemensamt gränssnitt för att spela upp videoannonser. Det ger en multimedieupplevelse för användarna och gör det möjligt för utgivare att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Stöd för VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8cc08999-6047-4bd0-a09f-8a2e28e09766
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # Översikt {#vpaid-ad-support-overview}
 
@@ -37,14 +36,14 @@ Följande funktioner stöds inte:
 
 Följande API-element stöder VPAID 2.0-annonser:
 
-* Metoden `getCustomAdView` i `MediaPlayer` returnerar ett `CustomAdView`-objekt, som representerar webbvyn som återger VPAID-annonsen (se [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
+* The `getCustomAdView` metod för `MediaPlayer` returnerar `CustomAdView` objekt, som representerar webbvyn som återger VPAID-annonsen (se [API-referenser](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` anger timeout för VPAID-inläsningsprocessen. Standardvärdet för timeout är 10 sekunder.
 
 Under uppspelningen av VPAID-annonsen:
 
 * VPAID-annonsen visas i en visningsbehållare ovanför spelarvyn, så kod som är beroende av att användarna trycker på spelarvyn fungerar inte.
-* Anrop till `pause` och `play` på spelarinstansen pausar och återupptar VPAID-annonsen.
+* Samtal till `pause` och `play` pausa och återuppta VPAID-annonsen på spelarinstansen.
 
 * VPAID-annonser har ingen fördefinierad varaktighet eftersom annonsen kan vara interaktiv.
 

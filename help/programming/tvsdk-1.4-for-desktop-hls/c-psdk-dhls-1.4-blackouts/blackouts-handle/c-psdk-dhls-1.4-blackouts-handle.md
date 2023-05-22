@@ -1,14 +1,13 @@
 ---
 description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
 title: Hantera strömavbrott i liveströmmar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2e63fb0c-44b1-46f1-a4b8-f8f67389d183
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
 
 ---
-
 
 # Hantera strömavbrott i liveströmmar{#handle-blackouts-in-live-streams}
 
@@ -16,7 +15,7 @@ Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under 
 
 När en strömbrytning inträffar i en liveström använder spelaren händelsehanterare för att upptäcka strömmen och ge alternativt innehåll till de användare som inte är berättigade att titta på huvudströmmen. Spelaren känner av start- och slutpunkten för den utblinda perioden, växlar uppspelningen från huvudströmmen till en alternativ ström och växlar tillbaka till huvudströmmen när den utsläckta perioden är slut.
 
-I din klientapp prenumererar du på taggar för utsvärtning i TVSDK. När du får ett meddelande om nya *tidsbestämda metadata*-objekt, tolkar du tidsbestämda metadata-objektets data för att identifiera om objektet indikerar en utströmningspost eller utträde. För identifierade strömavbrott anropar du de relevanta TVSDK-elementen för att växla till alternativt innehåll i början av strömavbrottet och återigen för att återgå till huvudinnehållet när strömavbrottet är över.
+I din klientapp prenumererar du på taggar för utsvärtning i TVSDK. När nya *tidsbestämda metadata* -objekt, tolkar du data för det tidsbestämda metadataobjektet för att identifiera om objektet indikerar en utströmning eller utträde. För identifierade strömavbrott anropar du de relevanta TVSDK-elementen för att växla till alternativt innehåll i början av strömavbrottet och återigen för att återgå till huvudinnehållet när strömavbrottet är över.
 
 >[!TIP]
 >
@@ -35,19 +34,18 @@ För att hantera strömavbrott i liveströmmar:
    TVSDK upptäcker inte ensam strömslutningstaggar. du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under tolkningen av manifestfilen.
 1. Skapa händelseavlyssnare för taggar som spelaren prenumererar på.
 
-   När en tagg inträffar som spelaren har prenumererat på (till exempel en out-tagg) i antingen förgrunden (huvudinnehåll) eller bakgrundsströmmanifest (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar en `TimedMetadataObject` för `TimedMetadataEvent`.
+   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar `TimedMetadataObject` för `TimedMetadataEvent`.
 1. Implementera hanterare för tidsbestämda metadatahändelser för både förgrunds- och bakgrundsströmmarna.
 
    I de här hanterarna hämtar du start- och sluttider för utmörningsperioden från tidsbestämda metadatahändelseobjekt.
-1. Förbered `MediaPlayer` för strömavbrott.
+1. Förbered `MediaPlayer` för utpressning.
 
-   När `MediaPlayer` försätts i tillståndet PREPARED beräknar och förbereder du de svarta områdena och ställer in dem på `MediaPlayer`-objektet.
+   När `MediaPlayer` går in i läget FÖRBEREDD, du beräknar och förbereder de svarta ut-intervallen och ställer in dem på `MediaPlayer` objtect.
 
-1. Kontrollera listan med `TimedMetadataObjects` för varje uppdatering av spelhuvudets position.
+1. Kontrollera listan med `TimedMetadataObjects`.
 
    Det är här spelaren upptäcker den svarta start och slut och spårar tidpunkten för den svarta punkten när den inträffar.
 
 1. Skapa metoder för att växla innehåll i början och slutet av den svarta punkten.
 
    När utströmningsperioden börjar växlar du huvudinnehållet till bakgrunden och växlar det alternativa innehållet till huvudströmmen. Fortsätt att hämta och tolka det ursprungliga manifestet i bakgrunden och fortsätt att söka efter sluttaggen för utmörkning, så att spelaren kan återansluta till den ursprungliga strömmen när utsläckningen är slut.
-

@@ -1,14 +1,13 @@
 ---
 description: Du kan använda Primetime Player-API:t för att anpassa spelarens beteende.
 title: Mediacore-klasser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fdbe9cd3-a5ca-4935-b9b3-8a6c04aed9ab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
 
 ---
-
 
 # Mediacore-klasser {#mediacore-classes}
 
@@ -28,7 +27,7 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/jav
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> </a>  ABRControlParametersABRControlParameters</span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a>  ABRControlParameters</span> </td> 
    <td colname="2"> En klass som kapslar in alla adaptiva parametrar för bithastighetskontroll. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +48,11 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/jav
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2">Standardklassimplementering av gränssnittet <span class="codeph"> MediaPlayer</span>. </td> 
+   <td colname="2">Standardklassimplementering av <span class="codeph"> MediaPlayer</span> gränssnitt. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a> </span> </td> 
-   <td colname="2">Offentligt gränssnitt för klassen <span class="codeph"> DefaultMediaPlayer</span>. Innehåller uppräkningar för Event, PlayerState och Visibility. </td> 
+   <td colname="2">Allmänt gränssnitt för <span class="codeph"> DefaultMediaPlayer</span> klassen. Innehåller uppräkningar för Event, PlayerState och Visibility. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.AdPlaybackEventListener.html" format="html" scope="external"> MediaPlayer.AdPlaybackEventListener</a></span> </td> 

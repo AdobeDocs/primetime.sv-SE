@@ -1,20 +1,19 @@
 ---
 description: Du kan använda det inbyggda Android-DRM för Widewin med DASH-strömmar.
 title: DRM, Widewin
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6a011cd7-446a-4f3a-ae36-110618001bf3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
-
-# DRM för Widewin {#widevine-drm}
+# DRM, Widewin {#widevine-drm}
 
 Du kan använda det inbyggda Android-DRM för Widewin med DASH-strömmar.
 
-Anropa följande `com.adobe.mediacore.drm.DRMManager` API innan uppspelningen startar:
+Ring följande `com.adobe.mediacore.drm.DRMManager` API innan uppspelningen börjar:
 
 ```java
 public static void setProtectionData( 
@@ -25,7 +24,7 @@ public static void setProtectionData(
 
 Argument:
 
-* `drm` -  `"com.widevine.alpha"` för WideVM.
+* `drm` - `"com.widevine.alpha"` för WideVM.
 
 * `licenseServerURL` - URL:en för den Wideglobal licensserver som tar emot licensbegäranden.
 * `requestProperties` - Innehåller extra rubriker som ska inkluderas i begäran om utgående licens.
@@ -39,4 +38,3 @@ DRMManager.setProtectionData(
 <i>token</i>",  
   null); 
 ```
-

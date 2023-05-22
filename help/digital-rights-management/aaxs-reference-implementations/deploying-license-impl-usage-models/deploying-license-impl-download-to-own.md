@@ -2,14 +2,13 @@
 title: Ladda ned
 description: Ladda ned
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5fb00d70-da06-4104-b513-ae1f2b9c1b65
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
-
 
 # Ladda ned {#download-to-own}
 

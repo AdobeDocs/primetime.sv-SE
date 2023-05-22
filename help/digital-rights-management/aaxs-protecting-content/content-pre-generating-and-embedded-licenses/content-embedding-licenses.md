@@ -2,22 +2,21 @@
 title: Bädda in licenser
 description: Bädda in licenser
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 63b1bf18-b93d-4305-885a-3a9eee783a03
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-
 # Bädda in licenser {#embedding-licenses}
 
 När innehållet har krypterats och en licens har förgenererats kan licensen bäddas in i det krypterade innehållet.
 
-Om du vill bädda in en licens hämtar du en instans av `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Om du vet vilken typ av krypterat innehåll det är använder du konstruktorn för `FLVKeyMetaDataUpdater` eller `F4VKeyMetaDataUpdater`; I annat fall använder du `MediaProcessorFactory.getMediaProcessor()` för att returnera en instans baserat på den upptäckta filtypen. Skapa en `KeyMetaDataCallback` och anropa `modifyKeyMetaData()`. Din återanropsimplementering anropas när DRM-metadata finns i det krypterade innehållet. Baserat på de metadata som hittats kan du välja en licens att bädda in och ange licensen med `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
+Hämta en instans av `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Om du vet vilken typ av krypterat innehåll det är använder du konstruktorn för `FLVKeyMetaDataUpdater` eller `F4VKeyMetaDataUpdater`; i annat fall, använda `MediaProcessorFactory.getMediaProcessor()` för att returnera en instans baserat på den upptäckta filtypen. Skapa en `KeyMetaDataCallback` och anropa `modifyKeyMetaData()`. Din återanropsimplementering anropas när DRM-metadata finns i det krypterade innehållet. Baserat på de metadata som hittats kan du välja vilken licens som ska bäddas in och ange licensen med `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
 
-Exempelkod som visar inbäddade licenser finns i `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` i katalogen Reference Implementation Command Line Tools &quot;Samples&quot;.
+Exempelkod som visar inbäddade licenser finns i `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` i katalogen &quot;Samples&quot; i kommandoraden för referensimplementering.
 
 >[!NOTE]
 >

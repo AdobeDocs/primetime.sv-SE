@@ -1,13 +1,13 @@
 ---
 title: iOS/tvOS - programregistrering
 description: iOS/tvOS - programregistrering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
 
 ---
-
 
 # iOS/tvOS - programregistrering {#iostvos-application-registration}
 

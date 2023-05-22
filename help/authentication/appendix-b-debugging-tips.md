@@ -1,13 +1,13 @@
 ---
 title: Bilaga B "Felsökningstips"
 description: Bilaga B "Felsökningstips"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
-
 
 # Tillägg B: Felsökningstips {#appendix-b-debugging-tips}
 

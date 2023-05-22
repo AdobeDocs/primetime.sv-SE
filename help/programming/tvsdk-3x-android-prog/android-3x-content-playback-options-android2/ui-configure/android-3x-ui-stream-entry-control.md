@@ -1,14 +1,13 @@
 ---
 description: Som standard startar VOD-media vid uppspelning vid 0 och direktmedia vid klientens direktpunkt (MediaPlayer.LIVE_POINT). Du kan åsidosätta standardbeteendet.
 title: Ange en ström vid en viss tidpunkt
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 98688357-8394-4b62-b117-3ae2c5b0fecb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Ange en ström vid en viss tidpunkt {#enter-a-stream-at-a-specific-time}
 
@@ -16,9 +15,9 @@ Som standard startar VOD-media vid uppspelning vid 0 och direktmedia vid kliente
 
 1. Skicka en position till `MediaPlayer.prepareToPlay`.
 
-   TVSDK anser att den angivna positionen är utgångspunkten för tillgången och ingen sökåtgärd krävs. Om positionen inte ligger inom det sökbara intervallet använder TVSDK standardpositionen. Mer information finns i [Läs in en medieresurs i mediespelaren](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md).
+   TVSDK anser att den angivna positionen är utgångspunkten för tillgången och ingen sökåtgärd krävs. Om positionen inte ligger inom det sökbara intervallet använder TVSDK standardpositionen. Mer information finns i [Läsa in en medieresurs i mediespelaren](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md).
 
-   Exempel:
+   Till exempel:
 
    ```java
    long desiredPostion = // TODO : choose a value; 

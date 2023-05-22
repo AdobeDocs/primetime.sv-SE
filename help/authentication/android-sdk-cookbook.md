@@ -1,14 +1,13 @@
 ---
 title: Android SDK Cookbook
 description: Android SDK Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
 
 ---
-
-
 
 # Android SDK Cookbook {#android-sdk-cookbook}
 
@@ -130,7 +129,7 @@ Nätverksaktiviteten för AccessEnabler sker i en annan tråd så att gränssnit
 
    | ANMÄRKNING |  |
    | --- | --- |  
-   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har upprättats. Detta innebär att när setRequestor() fortfarande körs, kommer alla efterföljande berättigandebegäranden (till exempel `checkAuthentication()`) är blockerade.<br><br>Det finns två implementeringsalternativ: När identifieringsinformationen för den som gjorde begäran skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder:<br><br>1.  Vänta på att utlösaren för `setRequestorComplete()` callback (ingår i AccessEnabler-delegaten).  Det här alternativet ger den största säkerheten för att `setRequestor()` slutförd, så det rekommenderas för de flesta implementeringar.<br>2.  Fortsätt utan att vänta på att utlösaren för `setRequestorComplete()` återanrop och börja utfärda tillståndsansökningar. Dessa anrop (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) köas av AccessEnabler-biblioteket, som gör att de faktiska nätverksanropen görs efter `setRequestor(). `Det här alternativet kan ibland avbrytas om nätverksanslutningen till exempel är instabil. |
+   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har etablerats fullständigt. Detta innebär att när setRequestor() fortfarande körs, kommer alla efterföljande berättigandebegäranden (till exempel `checkAuthentication()`) är blockerade.<br><br>Det finns två implementeringsalternativ: När identifieringsinformationen för den som gjorde begäran skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder:<br><br>1.  Vänta på att utlösaren för `setRequestorComplete()` callback (ingår i AccessEnabler-delegaten).  Det här alternativet ger den största säkerheten för att `setRequestor()` slutförd, så det rekommenderas för de flesta implementeringar.<br>2.  Fortsätt utan att vänta på att utlösaren för `setRequestorComplete()` återanrop och börja utfärda tillståndsansökningar. Dessa anrop (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) köas av AccessEnabler-biblioteket, som gör att de faktiska nätverksanropen görs efter `setRequestor(). `Det här alternativet kan ibland avbrytas om nätverksanslutningen till exempel är instabil. |
 
 1. Utlysning [checkAuthentication()](#$checkAuthN) för att kontrollera om det finns en befintlig autentisering utan att initiera det fullständiga autentiseringsflödet.   Om samtalet lyckas kan du gå direkt till auktoriseringsflödet.  Om inte, fortsätter du till autentiseringsflödet.
 

@@ -1,25 +1,24 @@
 ---
 description: När DRM-metadata för en video är åtskilda från medieströmmen ska du autentisera innan uppspelningen börjar.
 title: DRM-autentisering före uppspelning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # DRM-autentisering före uppspelning {#drm-authentication-before-playback}
 
 När DRM-metadata för en video är åtskilda från medieströmmen ska du autentisera innan uppspelningen börjar.
 
-En videoresurs kan ha en associerad DRM-metadatafil. Exempel:
+En videoresurs kan ha en associerad DRM-metadatafil. Till exempel:
 
 * &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
 * &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-I så fall använder du `DRMHelper`-metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering krävs.
+Om så är fallet, använd `DRMHelper` metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering krävs.
 
 1. Använd `loadDRMMetadata` för att läsa in URL-metadatainnehållet och tolka de hämtade byten till en `DRMMetadata`.
 
@@ -32,14 +31,14 @@ I så fall använder du `DRMHelper`-metoder för att hämta innehållet i DRM-me
        final DRMLoadMetadataListener loadMetadataListener); 
    ```
 
-   Exempel:
+   Till exempel:
 
    ```java
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
 1. Eftersom åtgärden är asynkron är det en bra idé att informera användaren om det. Annars kommer han att undra varför hans uppspelning inte börjar. Du kan till exempel visa ett rotationshjul medan DRM-metadata hämtas och tolkas.
-1. Implementera återanropen i `DRMLoadMetadataListener`. `loadDRMMetadata` anropar dessa händelsehanterare (skickar dessa händelser).
+1. Implementera återanrop i `DRMLoadMetadataListener`. The `loadDRMMetadata` anropar dessa händelsehanterare (skickar dessa händelser).
 
    ```java
    public interface  
@@ -62,13 +61,13 @@ I så fall använder du `DRMHelper`-metoder för att hämta innehållet i DRM-me
    * `onLoadMetadataUrlComplete` identifierar när metadata-URL:en har lästs in.
    * `onLoadMetadataUrlError` anger att det inte gick att läsa in metadata.
 
-1. När inläsningen är klar kontrollerar du `DRMMetadata`-objektet för att se om DRM-autentisering behövs.
+1. När inläsningen är klar ska du kontrollera `DRMMetadata` -objekt för att se om DRM-autentisering krävs.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
    ```
 
-   Exempel:
+   Till exempel:
 
    ```java
    @Override 
@@ -170,4 +169,3 @@ I så fall använder du `DRMHelper`-metoder för att hämta innehållet i DRM-me
 1. Om autentiseringen inte lyckas kontaktar du användaren och startar inte uppspelningen.
 
 Programmet måste hantera eventuella autentiseringsfel. Det gick inte att autentisera innan TVSDK spelas upp. Detta leder till ett feltillstånd. Det innebär att dess status ändras till FEL, att ett fel genereras som innehåller felkoden från DRM-biblioteket och att uppspelningen stoppas. Programmet måste lösa problemet, återställa spelaren och läsa in resursen igen.
-

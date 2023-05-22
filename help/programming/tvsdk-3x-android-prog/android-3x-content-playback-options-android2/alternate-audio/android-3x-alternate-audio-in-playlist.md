@@ -1,14 +1,13 @@
 ---
 description: Spelningslistan för en video kan ange ett obegränsat antal alternativa ljudspår för huvudvideoinnehållet. Du kanske vill lägga till olika språk i videoinnehållet eller tillåta användaren att växla mellan olika spår på sin enhet medan innehållet spelas upp.
 title: Alternativa ljudspår i spellistan
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3b892c8f-eb4f-4caf-b360-4781895a4022
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
 
 ---
-
 
 # Alternativa ljudspår i spellistan {#alternate-audio-tracks-in-the-playlist}
 
@@ -20,7 +19,7 @@ Med alternativa ljudspår kan användare växla mellan flera språkspår för HT
 >
 >För att det alternativa ljudet ska kunna blandas med huvudmediets videospår måste det alternativa spårets tidsstämplar matcha tidsstämplarna för ljudet i huvudspåret.
 
-Huvudljudspåret ingår i ljudspårsamlingen med etiketten `default`. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA`-taggarna med `TYPE=AUDIO`.
+Huvudljudspåret ingår i ljudspåren med `default` label. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA` taggar med `TYPE=AUDIO`.
 
 Ett M3U8-manifest som anger flera alternativa ljudströmmar kan till exempel se ut så här:
 

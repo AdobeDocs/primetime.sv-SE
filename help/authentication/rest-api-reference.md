@@ -1,13 +1,13 @@
 ---
 title: REST API-referens
 description: Rest api reference
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 4%
 
 ---
-
 
 # REST API-referens {#rest-api-reference}
 
@@ -74,4 +74,3 @@ Tabellen nedan visar de tillgängliga webbtjänsterna för kundlösa metoder. Kl
 ## REST API-säkerhet {#security}
 
 Alla klientlösa API:er för Primetime-autentisering måste anropas med HTTPS-protokollet för säker kommunikation. Dessutom bör de flesta API:er som anropas innehålla en åtkomsttoken som tillhandahålls av [Dynamisk klientregistrering](/help/authentication/dynamic-client-registration.md).
-

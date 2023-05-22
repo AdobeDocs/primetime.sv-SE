@@ -1,39 +1,38 @@
 ---
 description: Du kan konfigurera en plats i programmet för att utföra felhantering som svar på FELtillståndet.
 title: Konfigurera felhantering
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c0ce1d80-85d5-4344-9ab0-bd56906421cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
-
 
 # Konfigurera felhantering{#set-up-error-handling}
 
 Du kan konfigurera en plats i programmet för att utföra felhantering som svar på FELtillståndet.
 
-1. Lägg till en händelseavlyssnare för `AdobePSDK.MediaPlayerStatusChangeEvent`.
+1. Lägga till en händelseavlyssnare för `AdobePSDK.MediaPlayerStatusChangeEvent`.
 
-   Exempel:
+   Till exempel:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, 
                            onStatusChange);
    ```
 
-1. När `event.status` är `AdobePSDK.MediaPlayerStatus.ERROR` i händelseavlyssnaren anger du den logik som ska hantera alla fel.
-1. När felet har hanterats återställer du objektet `MediaPlayer` eller läser in en ny medieresurs.
+1. I händelseavlyssnaren, när `event.status` är `AdobePSDK.MediaPlayerStatus.ERROR`, innehåller den logik som behövs för att hantera alla fel.
+1. När felet har hanterats återställer du `MediaPlayer` eller läsa in en ny medieresurs.
 
        När MediaPlayer-objektet är i feltillstånd kan det inte avsluta det här läget förrän du utför någon av följande åtgärder:
    
-   * Återställ MediaPlayer-objektet med metoden `MediaPlayer.reset`.
-   * Läs in en ny medieresurs med metoden `MediaPlayer.replaceCurrentResource`.
+   * Återställ MediaPlayer-objektet med `MediaPlayer.reset` -metod.
+   * Läs in en ny medieresurs med `MediaPlayer.replaceCurrentResource` -metod.
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 
-Exempel:
+Till exempel:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange); 
@@ -45,4 +44,3 @@ onStatusChange = function (event) {
     } 
 } 
 ```
-

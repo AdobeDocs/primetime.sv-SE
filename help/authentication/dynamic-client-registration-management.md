@@ -1,13 +1,13 @@
 ---
 title: Registreringshantering för dynamisk klient
 description: Registreringshantering för dynamisk klient
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
 
 ---
-
 
 # Registreringshantering för dynamisk klient {#dynamic-client-registration-management}
 

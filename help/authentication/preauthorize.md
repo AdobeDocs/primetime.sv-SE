@@ -1,13 +1,13 @@
 ---
 title: iOS/tvOS API-förauktorisering
 description: iOS/tvOS API-förauktorisering
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
-
 
 # Förhandsauktorisera {#preauthorize}
 

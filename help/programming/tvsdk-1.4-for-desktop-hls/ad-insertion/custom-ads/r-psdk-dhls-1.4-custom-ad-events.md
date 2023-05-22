@@ -1,14 +1,13 @@
 ---
 description: TVSDK-spelaren skickar händelser för att visa anpassad annonsinläsningsstatus eller för att ignorera en annons som tar för lång tid att läsa in eller som innehåller fel. Dessa händelser definieras i events.CustomAdEvents.
 title: Anpassade annonshändelser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 44f32584-7f6c-4071-82b6-9cc9584418ee
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade annonshändelser{#custom-ad-events}
 
@@ -23,36 +22,36 @@ TVSDK-spelaren skickar händelser för att visa anpassad annonsinläsningsstatus
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdClickThru  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdClickThru </span> </td> 
    <td colname="col2"> Antalet gånger som användaren klickade på en anpassad annons. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdError  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdError </span> </td> 
    <td colname="col2"> Ett fel uppstod med den anpassade annonsen. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdLoaded  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdLoaded </span> </td> 
    <td colname="col2"> Den anpassade annonsen har lästs in.  </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdLoading  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdLoading </span> </td> 
    <td colname="col2"> Den anpassade annonsen läses in. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdPaused  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdPaused </span> </td> 
    <td colname="col2"> Den anpassade annonsen har pausats. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdResumed  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdResumed </span> </td> 
    <td colname="col2"> Den anpassade annonsen fortsätter att spelas upp efter en paus. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdPlaying  </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdPlaying </span> </td> 
    <td colname="col2"> Den anpassade annonsen spelas upp. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdProgress  </span> </td> 
-   <td colname="col2"> <p>Den anpassade annonsspelaren meddelar TVSDK-spelaren om förloppet för den anpassade annonsen. &amp;nbsp; </p> <p>Annonsens <span class="codeph"> currentTime </span> och <span class="codeph"> totalTime </span> skickas med den här händelsen. </p> </td> 
+   <td colname="col1"> <span class="codeph"> AdProgress </span> </td> 
+   <td colname="col2"> <p>Den anpassade annonsspelaren meddelar TVSDK-spelaren om förloppet för den anpassade annonsen. &amp;nbsp; </p> <p>The <span class="codeph"> currentTime </span> och <span class="codeph"> totalTime </span> av annonsen skickas med den här händelsen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AdStarted </td> 
@@ -66,4 +65,3 @@ TVSDK-spelaren skickar händelser för att visa anpassad annonsinläsningsstatus
 </table>
 
 <!--<a id="section_027774C2A47C453BA9DED61C6F8567C3"></a>-->
-

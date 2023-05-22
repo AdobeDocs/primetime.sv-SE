@@ -68,7 +68,7 @@ När mediespelaren byter sin aktuella profil till en ny profil kan du hämta inf
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 
-Exempel:
+Till exempel:
 
 ```
 _player.addEventListener(ProfileEvent.PROFILE_CHANGED, onProfileChange); 

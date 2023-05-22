@@ -2,14 +2,13 @@
 title: Användningsregler
 description: Användningsregler
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0f6df09f-47fd-4a05-bcb0-786beaba325a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
-
 
 # Användningsregler{#usage-rules}
 
@@ -27,4 +26,3 @@ Adobe Access Server för skyddad strömning stöder följande användningsregler
 >[!NOTE]
 >
 >För att ge stöd för fjärrnyckelleverans till iOS-enheter måste fjärrnyckelleveransen vara aktiverad för den princip som används vid paketeringen. Den här inställningen kan inte ändras via klientkonfigurationen på servern. ***Adobe Primetime krävs för att skapa iOS-program som kan spela upp Adobe Access-skyddat innehåll.***
-

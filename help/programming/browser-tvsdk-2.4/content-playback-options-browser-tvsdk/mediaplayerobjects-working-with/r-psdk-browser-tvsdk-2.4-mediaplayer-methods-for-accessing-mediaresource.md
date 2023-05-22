@@ -1,14 +1,13 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayer-attribut för åtkomst till MediaResource-information
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 183a2992-06f2-4b1d-84c3-a6c2a7223e32
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # MediaPlayer-attribut för åtkomst till MediaResource-information{#mediaplayer-attributes-to-access-mediaresource-information}
 
@@ -25,33 +24,33 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Liveström </td> 
-   <td colname="2"> <span class="codeph"> live  </span> </td> 
+   <td colname="2"> <span class="codeph"> live </span> </td> 
    <td colname="3"> True om strömmen är live; false om det är VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Undertexter </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
    <td colname="3"> True om det finns spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga spår för undertextning. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> Hämtar det textningsspår som valdes med <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
+   <td colname="3"> Hämtar det textningsspår som markerats med <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Alternativt ljud </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
    <td colname="3"> <p>True om strömmen har alternativa ljudspår. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
    <td colname="3"> Innehåller en lista med tillgängliga alternativa ljudspår. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
     <pre>
       Hämtar det markerade ljudspåret som markerades med 
@@ -60,26 +59,25 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Tidsbestämda metadata </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
    <td colname="3"> True if the stream has associated timed metadata. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
    <td colname="3"> Innehåller en lista över de tidsbestämda metadataobjekt som är associerade med strömmen. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Flera profiler (bithastighet) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profiler  </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profiler </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Tillhandahåller en lista med associerade bithastighetsprofiler som är associerade med den här strömmen. <p>Obs!  Du kan hämta bithastigheten för varje profil och höjden och bredden på profilen. </p> </td> 
+   <td colname="3"> Tillhandahåller en lista med associerade bithastighetsprofiler som är associerade med den här strömmen. <p>Obs! Du kan hämta bithastigheten för varje profil och höjden och bredden på profilen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Medieresurs </td> 
-   <td colname="2"> <span class="codeph"> resurs  </span> </td> 
+   <td colname="2"> <span class="codeph"> resurs </span> </td> 
    <td colname="3"> Returnerar den medieresurs som är associerad med det här objektet. </td> 
   </tr> 
  </tbody> 
 </table>
-

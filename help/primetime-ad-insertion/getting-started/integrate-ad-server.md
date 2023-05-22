@@ -1,16 +1,15 @@
 ---
 title: Integrera er annonsserver
 description: Integrera er annonsserver
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+exl-id: 4f2c75e0-db88-4c5d-8ddd-a5eab5d0b910
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
 
 ---
 
-
-# Integrera annonsservern {#integrate-ad-server}
+# Integrera er annonsserver {#integrate-ad-server}
 
 Till att börja med får du en inloggning för att komma åt Primetimes Ad Insertion-konsol, där du ställer in regler som Primetime Ad Insertion använder för att vidarebefordra annonsförfrågningar till valfri annonsserver. Primetime Ad Insertion stöder de flesta VAST- eller VMAP-kompatibla annonsservrar.
 

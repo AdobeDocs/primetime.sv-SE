@@ -1,14 +1,13 @@
 ---
 description: När webbläsarens TVSDK begär en annons som inte finns på din primära annonsserver, måste spelaren begära annonsen från den sekundära servern. VAST (Video Ad Serving Template) anger kommunikationsstandarden mellan annonsservrar och videospelare och är svaret som skickas av den sekundära annonsservern när annonsen begärs.
 title: VAST-annonser
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
-
 
 # VAST-annonser {#vast-ads}
 
@@ -38,13 +37,13 @@ Följande element stöds:
 
 ## Kreatörer {#section_0121F948CB074E49A8132D202786CAA4}
 
-Det här elementet är en fil som är en del av en VAST-annons och innehåller ett `creative`-element som kan hantera en linjär annons, en icke-linjär annons eller en kompletterande annons. I `creative`-elementet stöds elementen `id`, `sequence` och `adId`.
+Det här elementet är en fil som är en del av en VAST-annons och som innehåller en `creative` -element som har stöd för en linjär annons, en icke-linjär annons eller en kompletterande annons. I `creative` -element, `id`, `sequence`och `adId` -element stöds.
 
 Här finns mer information om annonstyperna:
 
-* **Linjära** annonserFöljande element stöds:
+* **Linjära annonser** Följande element stöds:
 
-   * `TrackingEvent`, som innehåller  `Tracking` elementet.
+   * `TrackingEvent`, som innehåller `Tracking` -element.
       * `Duration`
       * `AdParameters`
       * `VideoClicks`, inklusive följande:
@@ -59,15 +58,15 @@ Här finns mer information om annonstyperna:
 
          >[!TIP]
          >
-         >I det här elementet stöds attributen `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` och `type`.
+         >I det här elementet `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` attribut stöds.
 
-* **Icke-linjära** annonserFöljande element stöds:
+* **Icke-linjära annonser** Följande element stöds:
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` och `minSuggestedDuration`.
+      >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` attribut stöds.
 
       * `StaticResource`
       * `IFrameResource`
@@ -75,13 +74,13 @@ Här finns mer information om annonstyperna:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Tillhörande** annonserFöljande element stöds:
+* **Pressannonser** Följande element stöds:
 
    * `Companion`
 
       >[!TIP]
       >
-      >I det här elementet stöds attributen `id`, `width`, `height`, `apiFramework`, `expandedWidth` och `expandedHeight`.
+      >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` attribut stöds.
 
       * `StaticResource`
       * `IFrameResource`

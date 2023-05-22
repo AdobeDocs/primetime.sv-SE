@@ -1,28 +1,27 @@
 ---
 description: TVSDK förbereder TimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 title: Prenumerera på egna taggar
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c2b5b78c-5fe7-4564-ab6b-38b3c00fd3d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# Prenumerera på anpassade taggar {#subscribe-to-custom-tags}
+# Prenumerera på egna taggar {#subscribe-to-custom-tags}
 
 TVSDK förbereder TimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 
 Innan uppspelningen startar måste du prenumerera på taggarna. För att få meddelanden om anpassade taggar i HLS-manifestationer:
 
-1. Ange de anpassade annonstaggnamnen globalt genom att skicka en array som innehåller de anpassade taggarna till `setSubscribedTags` i `MediaPlayerItemConfig`.
+1. Ange egna annonstaggnamn globalt genom att skicka en array som innehåller de anpassade taggarna till `setSubscribedTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Du måste inkludera `#`-prefixet när du arbetar med HLS-strömmar.
+   >Du måste inkludera `#` prefix när du arbetar med HLS-strömmar.
 
-   Exempel:
+   Till exempel:
 
    ```java
    String[] array = new String[3]; 
@@ -31,4 +30,3 @@ Innan uppspelningen startar måste du prenumerera på taggarna. För att få med
    array[2] = "#EXT-OATCLS-SCTE35"; 
    MediaPlayerItemConfig.setSubscribedTags(array);
    ```
-

@@ -1,14 +1,13 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
 title: Annonsinfogning och failover för VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5af5bef6-e948-4215-a89f-ee46fd2d8a38
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
 
 ---
-
 
 # Annonsinfogning och failover för VOD{#advertising-insertion-and-failover-for-vod}
 
@@ -36,7 +35,7 @@ En av följande redundanssituationer kan uppstå under den här fasen:
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Ad-insertion phase {#section_1B18E8B5768B4873B3346294175B7340}
+## Fas för annonsinfogning {#section_1B18E8B5768B4873B3346294175B7340}
 
 TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 
@@ -46,7 +45,7 @@ Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidsli
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Annonsuppspelningsfas {#section_64777BD2CDA84EACB0A4EA6D68367CF5}
+## Ad-uppspelningsfas {#section_64777BD2CDA84EACB0A4EA6D68367CF5}
 
 TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 
@@ -66,4 +65,4 @@ För alla tre felklasserna vidarebefordrar TVSDK utlösta händelser till ditt p
 
    Programmet måste vidta rätt åtgärd.
 
-Oavsett om fel inträffar eller inte anropar TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` för var `AdBreakPlaybackEvent.AD_BREAK_STARTED` och `AdPlaybackEvent.AD_COMPLETED` för var `AdPLaybackEvent.AD_STARTED`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.
+Om fel inträffar eller inte, anropar TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` för varje `AdBreakPlaybackEvent.AD_BREAK_STARTED` och `AdPlaybackEvent.AD_COMPLETED` för varje `AdPLaybackEvent.AD_STARTED`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.

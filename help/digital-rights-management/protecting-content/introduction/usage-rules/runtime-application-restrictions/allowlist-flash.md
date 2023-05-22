@@ -1,20 +1,19 @@
 ---
-title: Tillåtelselista för SWF-filer för Adobe® Flash® Player
-description: Tillåtelselista för SWF-filer för Adobe® Flash® Player
+title: Tillåtelselista för Adobe® Flash® Player SWF
+description: Tillåtelselista för Adobe® Flash® Player SWF
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1bae06b6-dbac-4839-b1d3-b7f6379b521a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
+# Tillåtelselista för Adobe® Flash® Player SWF{#allowlist-for-adobe-flash-player-swfs}
 
-# Tillåtelselista för SWF-filer för Adobe® Flash® Player{#allowlist-for-adobe-flash-player-swfs}
+Tillåtelselista anger de SWF-filer som får spela upp innehåll.
 
-Tillåtelselista anger vilka SWF-filer som får spela upp innehåll.
+Ange SWF-filen med en SWF-URL eller en SHA-256-sammanfattning som beräknas med innehållet i SWF. Om du använder SHA-256-sammanfattningen anger den här användningsregeln också den maximala tid som klienten kan ladda ned och verifiera SWF.
 
-Ange SWF-filen med en SWF-URL eller en SHA-256-sammanfattning som beräknas med SWF-filens innehåll. Om du använder SHA-256-sammanfattningen anger den här användningsregeln också den maximala tid som klienten kan ladda ned och verifiera SWF-filen.
-
-Exempel: Konceptuellt motsvarar SWF-verifiering när det gäller Flash Media Server, men framtvingas på klientsidan för att begränsa vilka videospelare som kan spela upp innehållet. Observera att Primetime DRM-beteendet skiljer sig åt när det gäller tvång för den underordnade SWF-filen jämfört med den överordnade SWF-filen.
+Exempel: Konceptsmässigt motsvarar verifiering av SWF vid Flash Media Server, men framtvingad på klientsidan för att begränsa vilka videospelare som kan spela upp innehållet. Observera att Primetime DRM-beteendet skiljer sig åt när det gäller tvång för det underordnade SWF jämfört med det överordnade SWF.

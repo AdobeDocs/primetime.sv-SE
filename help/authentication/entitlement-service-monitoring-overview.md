@@ -1,13 +1,13 @@
 ---
 title: Tillståndsövervakningens översikt
 description: Tillståndsövervakningens översikt
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ebd5d650-0a32-4583-9045-5156356494e2
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
 
 ---
-
 
 # Tillståndsövervakningens översikt {#entitlement-service-monitoring-overview}
 

@@ -2,14 +2,13 @@
 title: Fysisk säkerhet och åtkomst
 description: Fysisk säkerhet och åtkomst
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: be4d278e-9e87-405c-8478-b3ad8515398f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
-
 
 # Fysisk säkerhet och åtkomst {#physical-security-and-access}
 

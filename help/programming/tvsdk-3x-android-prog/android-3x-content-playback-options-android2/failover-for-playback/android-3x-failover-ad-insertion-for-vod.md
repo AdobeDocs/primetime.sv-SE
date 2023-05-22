@@ -1,14 +1,13 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. När oväntade situationer uppstår vidtar TVSDK lämpliga åtgärder.
 title: Annonsinfogning och failover för VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0f5929eb-b6cf-4454-904a-2d4637177b68
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # Annonsinfogning och failover för VOD {#advertising-insertion-and-failover-for-vod}
 
@@ -28,7 +27,7 @@ TVSDK har stöd för följande typer av annonsleverantörer:
    TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till huvudservern för Primetime-annonsbeslut. Primetime-annonseringsbeslut svarar med ett synkroniserat SMIL-dokument (multimedia integration language) som innehåller den annonsinformation som krävs.
 * Anordnare av anpassade annonser
 
-   Hanterar situationen där annonser bränns in i strömmen från serversidan. TVSDK utför inte den faktiska annonsinfogningen, men det måste hålla reda på de annonser som infogades på serversidan. Den här providern ställer in annonsmarkörerna som TVSDK använder för att utföra annonsspårningen.
+   Hanterar situationen där annonser bränns in i strömmen från serversidan. TVSDK utför inte den faktiska annonsinfogningen, men det måste hålla reda på de annonser som infogades på serversidan. Den här providern anger de annonsmarkörer som TVSDK använder för att utföra annonsspårningen.
 
 En av följande redundanssituationer kan uppstå under den här fasen:
 
@@ -39,17 +38,17 @@ En av följande redundanssituationer kan uppstå under den här fasen:
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Ad-insertion phase {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
+## Fas för annonsinfogning {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
 
 TVSDK infogar det alternativa innehållet (annonserna) på tidslinjen som motsvarar huvudinnehållet.
 
 När annonslösningsfasen är klar har TVSDK en ordnad lista över annonsresurser som grupperas i annonsbrytningar. Varje annonsbrytning placeras på huvudinnehållets tidslinje med ett starttidsvärde som uttrycks i millisekunder (ms). Varje annons i en annonsbrytning har en duration-egenskap som också uttrycks i ms. Annonserna i en annonsbrytning är kedjade, och därför är längden på en annonsbrytning lika med summan av varaktigheten för de enskilda dispositionsannonserna.
 
-Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsbrytningar kan annonssegmenten överlappa varandra. Den här överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar TVSDK bort den efterföljande annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
+Redundans kan uppstå i den här fasen med konflikter som kan uppstå på tidslinjen när annonsinfogningen infogas. För specifika kombinationer av starttids-/varaktighetsvärden för annonsavbrott kan annonssegmenten överlappa varandra. Den här överlappningen inträffar när den sista delen av en annonsbrytning korsar början av den första annonsbrytningen i nästa annonsbrytning. I dessa situationer tar TVSDK bort den efterföljande annonsuppdelningen och fortsätter med annonsinfogningen med nästa objekt i listan tills alla annonsuppbrytningar infogas eller tas bort.
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
-## Annonsuppspelningsfas {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## Ad-uppspelningsfas {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 TVSDK hämtar annonssegmenten och återger dem på enhetens skärm.
 
@@ -69,4 +68,4 @@ TVSDK skickar de utlösta händelserna till ditt program, inklusive meddelandeh�
 
    Programmet måste vidta rätt åtgärd.
 
-Oavsett om fel inträffar anropar TVSDK `onAdBreakComplete` för var `onAdBreakStart` och `onAdComplete` för var `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.
+Oavsett om fel inträffar anropar TVSDK `onAdBreakComplete` för varje `onAdBreakStart` och `onAdComplete` för varje `onAdStart`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.

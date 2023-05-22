@@ -1,14 +1,13 @@
 ---
 description: Operativsystem och programservrar ingår i Adobe Primetime DRM-lösning.
 title: Leverantörsspecifik säkerhetsinformation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4cc39414-cab5-4282-825d-64651d9b03e1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
-
 
 # Leverantörsspecifik säkerhetsinformation{#vendor-specific-security-information}
 
@@ -60,7 +59,7 @@ Här följer information om strategier för att minimera säkerhetsluckor i oper
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Säkerhetsuppdateringar </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. </p> <p>Obs!  Kontrollera att du testar säkerhetsuppdateringar innan du använder dem på produktionsservrar. </p> <p class="- topic/p ">Du måste skapa principer och procedurer för att regelbundet söka efter och installera korrigeringsfiler. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. </p> <p>Obs! Kontrollera att du testar säkerhetsuppdateringar innan du använder dem på produktionsservrar. </p> <p class="- topic/p ">Du måste skapa principer och procedurer för att regelbundet söka efter och installera korrigeringsfiler. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Virusskydd </p> </td> 
@@ -86,4 +85,3 @@ Här är några av dessa åtgärder:
 * Stänger portar som inte behövs
 * Begränsa administrativa gränssnitt med IP-adresser eller domäner
 * Använda Java™ Security Manager
-

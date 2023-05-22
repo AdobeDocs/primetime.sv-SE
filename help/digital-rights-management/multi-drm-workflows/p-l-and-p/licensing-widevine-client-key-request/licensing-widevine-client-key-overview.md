@@ -1,14 +1,13 @@
 ---
 description: Om du vill spela upp DASH-innehåll som är ett resultat av innehållspaketering måste TVSDK-klienten hämta den innehållsdekrypteringsnyckel som skickades under paketeringsprocessen i arbetsflödet för hämtning av nycklar. Nyckeln för dekryptering av klientinnehåll levereras vanligtvis till klienten via en Widewin/PlayReady-licensserver som svar på ett eller flera HTTP/HTTPS-inlägg från klienten.
 title: Översikt över arbetsflödet Klientnyckelbegäran
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ae600cbd-415b-441a-bf01-f259993071f2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
 
 ---
-
 
 # Arbetsflöde för klientnyckelbegäran {#client-key-request-workflow-overview}
 

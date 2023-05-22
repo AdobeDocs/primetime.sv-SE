@@ -32,7 +32,7 @@ För att utforska [!DNL Primetime Ad Insertion] API:er finns [Ad Insertion API-s
 
 | Namn | Signifikans | Värdetyp | Obligatoriskt? | Standardvärde | Begränsningar | Exempel/giltiga exempelvärden |
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| endDate | Slutdatum för rapportdata | datum | Y | INGEN | inte nyare än igår i UTC-8 | ######### |
+| endDate | Slutdatum för rapportdata | datum | Y | INGEN | inte nyare än igår i UTC-8 | ######## |
 | filter | filtrera en eller flera kolumner | string | N | INGEN | ad_config_id, zone_id | ad_config_id=990,900;state=active |
 |  |  |  |  |  | När metaData är inställt på &#39;true&#39; i begäran kan du även filtrera efter namn. |  |
 |  |  |  |  |  |  | Flera filternycklar är semikolonavgränsade. |

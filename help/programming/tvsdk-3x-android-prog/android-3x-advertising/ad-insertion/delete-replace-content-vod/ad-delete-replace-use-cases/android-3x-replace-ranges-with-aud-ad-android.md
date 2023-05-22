@@ -1,24 +1,23 @@
 ---
 description: Ni kan infoga annonser i VOD-innehåll.
 title: Ersätt tidsintervall med en annons
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bee5308a-f867-4824-84a8-751746785971
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
 # Ersätt tidsintervall med en annons {#replace-time-ranges-with-an-ad}
 
 Ni kan infoga annonser i VOD-innehåll.
 
-`TimeRanges` mellan `begin` och `end` i `localTime` har tagits bort från tidslinjen. Intervallen ersätts med `AdBreak` av `begin` till `begin+replaceDuration`. Om `replacement-duration` inte finns som parameter gör servern bestämningen på den returnerade `Adbreak`.
+The `TimeRanges` mellan `begin` och `end` in `localTime` tas bort från tidslinjen. Intervallen ersätts med en `AdBreak` av `begin` till `begin+replaceDuration`. Om `replacement-duration` finns inte som parameter, servern gör bestämningen på den returnerade `Adbreak`.
 
 >[!TIP]
 >
->Du bör alltid ange `replacement-duration` för anpassade intervall. Om inga annonser är avsedda att ersätta det här anpassade intervallet anger du `replacement-duration` 0.
+>Du bör alltid ange en `replacement-duration` för anpassade intervall. Om inga annonser är avsedda att ersätta det här anpassade intervallet kan du skapa en `replacement-duration` av 0.
 
 1. Så här ersätter du intervall med Primetime-annonser:
 

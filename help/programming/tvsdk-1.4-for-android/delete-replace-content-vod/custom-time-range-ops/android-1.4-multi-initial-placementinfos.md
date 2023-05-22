@@ -1,14 +1,13 @@
 ---
 description: TVSDK kan ställa in flera initiala PlacementInformations.
 title: Multiple initial PlacementInformation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 104e981e-7246-4e4a-9c14-dac6ee2624f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%
 
 ---
-
 
 # Multiple initial PlacementInformation{#multiple-initial-placementinformations}
 
@@ -48,4 +47,3 @@ else if (customRangeHelper.hasRanges() == CustomRangeHelper.REPLACE_RANGE) {
 } 
 return  placementInformations;
 ```
-

@@ -1,14 +1,13 @@
 ---
 description: När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelsetyp att avlyssna och namnet på återanropet. När en händelse inträffar anropar webbläsaren TVSDK ditt återanrop och skickar ett händelseobjekt av lämplig typ till den.
 title: Händelsetyper och klasser för återanrop
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # Händelsetyper och klasser för återanrop{#event-types-and-classes-for-callbacks}
 
@@ -18,7 +17,7 @@ När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelset
  <thead> 
   <tr rowsep="1"> 
    <th colname="2" class="entry"> När du lyssnar efter det här händelsenamnet (AdobePSDK.EventType) </th> 
-   <th class="entry">fraser/browser-tvsdk-name skickar en händelse till återanropet av den här objekttypen (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th class="entry">fraser/browser-tvsdk-name skickar en händelse till återanropet för den här objekttypen (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -130,4 +129,3 @@ När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelset
   </tr> 
  </tbody> 
 </table>
-

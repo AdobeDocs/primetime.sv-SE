@@ -1,14 +1,13 @@
 ---
 description: Den här tabellen innehåller detaljerad information om meddelanden om ERROR-typer.
 title: FELMEDDELANDEkoder
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e60488e-b368-41f6-b32c-cda5688d67de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 4%
 
 ---
-
 
 # FELMEDDELANDEkoder{#error-notification-codes}
 
@@ -37,59 +36,59 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101000 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101004  </span> </td> 
+   <td colname="1"><span class="codeph"> 101004 </span> </td> 
    <td colname="2"><span class="codeph"> CONTENT_ERROR</span> </td> 
    <td colname="3"><span class="codeph"> DOWNLOAD_ERROR</span> </td> 
    <td colname="4"> </td> 
    <td colname="5"> Ett fel uppstod vid hämtning av ett fragment eller segment (både video och ljud). </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101008  </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101008 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> DESIRED_SEEK_POSITION  </span><span class="codeph"> DESIRED_SEEK_PERIOD  </span> </td> 
+   <td colname="4"><span class="codeph"> NATIVE_ERROR_CODE </span><span class="codeph"> DESIRED_SEEK_POSITION </span><span class="codeph"> DESIRED_SEEK_PERIOD </span> </td> 
    <td colname="5"> Ett fel uppstod när en sökåtgärd utfördes. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101009  </span> </td> 
-   <td colname="2"><span class="codeph"> PAUSE_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101009 </span> </td> 
+   <td colname="2"><span class="codeph"> PAUSE_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> Ett fel uppstod när en paus skulle utföras. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101102  </span> </td> 
-   <td colname="2"><span class="codeph"> PERIOD_INFO_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101102 </span> </td> 
+   <td colname="2"><span class="codeph"> PERIOD_INFO_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när information om en innehållsperiod hämtades. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101103  </span> </td> 
-   <td colname="2"><span class="codeph"> RETRIEVE_TIME_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101103 </span> </td> 
+   <td colname="2"><span class="codeph"> RETRIEVE_TIME_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när uppspelningspositionen skulle hämtas. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101104  </span> </td> 
-   <td colname="2"><span class="codeph"> GET_QOS_DATA_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101104 </span> </td> 
+   <td colname="2"><span class="codeph"> GET_QOS_DATA_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när QOS-informationen skulle hämtas. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 101200  </span> </td> 
-   <td colname="2"><span class="codeph"> DOWNLOAD_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 101200 </span> </td> 
+   <td colname="2"><span class="codeph"> DOWNLOAD_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> URL  </span> </td> 
+   <td colname="4"><span class="codeph"> URL </span> </td> 
    <td colname="5"> Det uppstod ett fel när data skulle hämtas. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -100,17 +99,17 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 102100  </span> </td> 
-   <td colname="2"><span class="codeph"> RESOURCE_LOAD_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 102100 </span> </td> 
+   <td colname="2"><span class="codeph"> RESOURCE_LOAD_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNINGSRESURS  </span><span class="codeph">   </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span><span class="codeph"> RESURS </span> </td> 
    <td colname="5"> Ett fel uppstod när ett resursobjekt lästes in. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 102101  </span> </td> 
-   <td colname="2"><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES  </span> </td> 
+   <td colname="1"><span class="codeph"> 102101 </span> </td> 
+   <td colname="2"><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> CONTENT_ID  </span> </td> 
+   <td colname="4"><span class="codeph"> CONTENT_ID </span> </td> 
    <td colname="5"> Ett fel uppstod när en resurs placerades på tidslinjen för uppspelningen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -121,29 +120,29 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 104000  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_METADATA_INVALID  </span><span class="codeph"> AD_RESOLVER_INITIALIZATION_FAIL  </span><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> AD_RESOLVER_SERVER_UNREACHABLE  </span> </td> 
+   <td colname="1"><span class="codeph"> 104000 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
+   <td colname="3"><span class="codeph"> AD_METADATA_INVALID </span><span class="codeph"> AD_RESOLVER_INITIALIZATION_FAIL </span><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> AD_RESOLVER_SERVER_UNREACHABLE </span> </td> 
    <td colname="4"> Ingen </td> 
    <td colname="5"> Ingen </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 104001  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
+   <td colname="1"><span class="codeph"> 104001 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> Det gick inte att matcha annonsen på grund av ett ogiltigt annonsmetadataformat. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 104003  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span> </td> 
+   <td colname="1"><span class="codeph"> 104003 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> NATIVE_ERROR_CODE  </span> </td> 
+   <td colname="4"><span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="5"> Det gick inte att matcha annonser med plugin-programmet för annonser. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 104005  </span> </td> 
-   <td colname="2"><span class="codeph"> AD_INSERTION_FAIL  </span> </td> 
+   <td colname="1"><span class="codeph"> 104005 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_INSERTION_FAIL </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> PROPOSED_AD_BREAK</span> </td> 
    <td colname="5"> Ad resolving phase has failed. </td> 
@@ -156,43 +155,43 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106000  </span> </td> 
-   <td colname="2"><span class="codeph"> NATIVE_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106000 </span> </td> 
+   <td colname="2"><span class="codeph"> NATIVE_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"> <span class="codeph"> NATIVE_ERROR_CODE  </span> <span class="codeph"> NATIVE_ERROR_NAME  </span> <span class="codeph"> DESCRIPTION  </span> <span class="codeph"> DESCRIPTION</span> <p><b>DRM-information:</b> </p> <span class="codeph"> DRM_ERROR_</span> <span class="codeph"> STRINGNATIVE_SUBERROR_CODE</span> </td> 
-   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Information om NATIVE_ERROR-meddelanden</a> finns i <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om värdena för dessa metadatanycklar. </a></p> </td> 
+   <td colname="4"> <span class="codeph"> NATIVE_ERROR_CODE </span> <span class="codeph"> NATIVE_ERROR_NAME </span> <span class="codeph"> BESKRIVNING </span> <span class="codeph"> BESKRIVNING</span> <p><b>DRM-information:</b> </p> <span class="codeph"> DRM_ERROR_STRING</span> <span class="codeph"> NATIVE_SUBERROR_CODE</span> </td> 
+   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Se <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> om du vill ha information om värdena för dessa metadatanycklar. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106001  </span> </td> 
-   <td colname="2"><span class="codeph"> ENGINE_CREATION_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106001 </span> </td> 
+   <td colname="2"><span class="codeph"> ENGINE_CREATION_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när lågnivåbiblioteket AVE instansierades. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106002  </span> </td> 
-   <td colname="2"><span class="codeph"> ENGINE_RELEASE_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106002 </span> </td> 
+   <td colname="2"><span class="codeph"> ENGINE_RELEASE_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när lågnivåbiblioteket AVE frigjordes. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106003  </span> </td> 
-   <td colname="2"><span class="codeph"> ENGINE_RESOURCES_RELEASE_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106003 </span> </td> 
+   <td colname="2"><span class="codeph"> ENGINE_RESOURCES_RELEASE_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när GPU-resurserna som används av AVE-biblioteket frigjordes. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106004  </span> </td> 
-   <td colname="2"><span class="codeph"> ENGINE_RESET_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106004 </span> </td> 
+   <td colname="2"><span class="codeph"> ENGINE_RESET_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod när AVE-biblioteket återställdes. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 106005  </span> </td> 
-   <td colname="2"><span class="codeph"> ENGINE_SET_VIEW_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 106005 </span> </td> 
+   <td colname="2"><span class="codeph"> ENGINE_SET_VIEW_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> Ett fel uppstod när en vy bifogades till AVE-biblioteket. </td> 
@@ -205,45 +204,45 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107000  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_VOLUME_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107000 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_VOLUME_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNINGSVOLYM  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNINGSVOLYM </span> </td> 
    <td colname="5"> Ett fel uppstod när volymnivån skulle anges. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107001  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_BUFFER_TIME_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107001 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_BUFFER_TIME_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span><span class="codeph"> PLAY_BUFFER_TIME  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span><span class="codeph"> PLAY_BUFFER_TIME </span> </td> 
    <td colname="5"> Ett fel uppstod vid försök att ändra buffringsparametrarna. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107002  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_CC_VISIBILITY_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107002 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_CC_VISIBILITY_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> Ett fel uppstod när CC-spåren skulle visas igen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107003  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_CC_STYLING_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107003 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_CC_STYLING_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING</span> </td> 
    <td colname="5"> Ett fel uppstod vid försök att ändra formateringsalternativen för CC-spåren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107004  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_ABR_PARAMETERS_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107004 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_ABR_PARAMETERS_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> Ett fel uppstod vid försök att ändra ABR-kontrollparametrar. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 107005  </span> </td> 
-   <td colname="2"><span class="codeph"> SET_BUFFER_PARAMETERS_ERROR  </span> </td> 
+   <td colname="1"><span class="codeph"> 107005 </span> </td> 
+   <td colname="2"><span class="codeph"> SET_BUFFER_PARAMETERS_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
-   <td colname="4"><span class="codeph"> BESKRIVNING  </span><span class="codeph"> INITIAL_BUFFER_TIME  </span><span class="codeph"> PLAY_BUFFER_TIME  </span> </td> 
+   <td colname="4"><span class="codeph"> BESKRIVNING </span><span class="codeph"> INITIAL_BUFFER_TIME </span><span class="codeph"> PLAY_BUFFER_TIME </span> </td> 
    <td colname="5"> Ett fel uppstod vid försök att ändra parametrarna för buffringskontrollen. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -254,10 +253,10 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 109000  </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_ERROR  </span> </td> 
-   <td colname="3"><span class="codeph"> DOWNLOAD_ERROR  </span> </td> 
-   <td colname="4"><span class="codeph"> AUDIO_TRACK_NAME  </span><span class="codeph"> AUDIO_TRACK_LANGUAGE  </span> </td> 
+   <td colname="1"><span class="codeph"> 109000 </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_ERROR </span> </td> 
+   <td colname="3"><span class="codeph"> DOWNLOAD_ERROR </span> </td> 
+   <td colname="4"><span class="codeph"> AUDIO_TRACK_NAME </span><span class="codeph"> AUDIO_TRACK_LANGUAGE </span> </td> 
    <td colname="5"> Ett fel relaterat till ett ljudspår uppstod. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -268,7 +267,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 199999  </span> </td> 
+   <td colname="1"><span class="codeph"> 199999 </span> </td> 
    <td colname="2"><span class="codeph"> GENERIC_ERROR</span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> Ingen </td> 
@@ -276,4 +275,3 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
   </tr> 
  </tbody> 
 </table>
-
