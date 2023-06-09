@@ -5,9 +5,9 @@ contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5195'
+source-wordcount: '5194'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Samplingsbaserad AES-kryptering stöds nu.
 
 * Zendesk #33777 - Localhost token SWF för DHLS-distribution har gått ut.
 
-   Uppdaterar localhost-token för PMP-demo på DHLS.
+  Uppdaterar localhost-token för PMP-demo på DHLS.
 
 ### Lösta problem i tidigare versioner {#resolved-issues-previous}
 
@@ -110,11 +110,11 @@ Samplingsbaserad AES-kryptering stöds nu.
 
 * Zendesk #30731 - TVSDK spelar inte upp flera VPAID-annonser i en AdBreak.
 
-   Korrigerad uppspelning av flera VPAID-annonser i en AdBreak.
+  Korrigerad uppspelning av flera VPAID-annonser i en AdBreak.
 
 * Zendesk #29968 - Double Billboard.
 
-   Videospelaren kan upprepa det sista segmentet i en punkt när en ABR-växling inträffar. På grund av detta upprepas ibland det sista segmentet i inledningen. Den här har åtgärdats.
+  Videospelaren kan upprepa det sista segmentet i en punkt när en ABR-växling inträffar. På grund av detta upprepas ibland det sista segmentet i inledningen. Den här har åtgärdats.
 
 **Version 1.4.35** (879)
 
@@ -124,31 +124,31 @@ Samplingsbaserad AES-kryptering stöds nu.
 
 * Zendesk #21701 - Skicka den ursprungliga kreativa URL:en för 1401 CRS-begäran i stället för den normaliserade URL:en.
 
-   Problemet där redan ompaketerade URL:er begärs för omkodning har korrigerats enligt kraven från CRS-serverdelen.
+  Problemet där redan ompaketerade URL:er begärs för omkodning har korrigerats enligt kraven från CRS-serverdelen.
 * Zendesk #26197 - Anamorfisk komprimering spelas inte upp i önskad skärmupplösning.
 
-   **Anteckning**: För det här problemet krävs Flash Player 24.0.0.194 eller senare.
+  **Anteckning**: För det här problemet krävs Flash Player 24.0.0.194 eller senare.
 
-   Problemet där saknade poster i proportionstabellerna användes för att beräkna utdatabredden har åtgärdats.
+  Problemet där saknade poster i proportionstabellerna användes för att beräkna utdatabredden har åtgärdats.
 
 * Zendesk #26840 - HDCP-identifiering misslyckas på IE11 + Windows7 efter andra försöket.
 
-   **Anteckning**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
+  **Anteckning**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
 
-   Problemet löstes genom att ändra AdobeCP:s huvudmeddelandeköhantering så att den itereras genom hela kön, i stället för att bara blockera det första meddelandet.
+  Problemet löstes genom att ändra AdobeCP:s huvudmeddelandeköhantering så att den itereras genom hela kön, i stället för att bara blockera det första meddelandet.
 
 * Zendesk #27460 - Det nya Akamai-kontot kan inte hantera en CDN-begäran för POST.
 
-   Det nya CDN-kontot kan inte hantera en CDN-begäran för POST. Problemet löstes genom att koden uppdaterades så att annonsbegäran cdn.audiude.com blev GET istället för POST.
+  Det nya CDN-kontot kan inte hantera en CDN-begäran för POST. Problemet löstes genom att koden uppdaterades så att annonsbegäran cdn.audiude.com blev GET istället för POST.
 * Zendesk #27619 - Flash kraschar i Windows 10
 
-   **Anteckning**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
+  **Anteckning**: För det här problemet krävs Flash Player 24.0.0.218 eller senare.
 
-   Problemet löstes genom att ett fel förhindrades på grund av långa URL:er.
+  Problemet löstes genom att ett fel förhindrades på grund av långa URL:er.
 
 * Zendesk #28218 - Spårningshändelsen utlöses inte vid återkoppling från återställningspunkten
 
-   Det här problemet är samma problem som i Zendesk #26592. Problemet där sökåtgärder tilläts när mediespelaren är i tillståndet PREPARED för VOD-strömmar har åtgärdats.
+  Det här problemet är samma problem som i Zendesk #26592. Problemet där sökåtgärder tilläts när mediespelaren är i tillståndet PREPARED för VOD-strömmar har åtgärdats.
 
 **Version 1.4.32** (867)
 
@@ -194,7 +194,7 @@ Problemet löstes genom att man spårade ändringar i bithastigheten i VideoAnal
 
 **Version 1.4.28** (848)
 
-* Zendesk #25027 - Auditude fungerar inte i skrivbordsversionen 1.4.27
+* Zendesk #25027 - Auditude fungerar inte i version 1.4.27 av skrivbordet
 
 Problemet löstes genom att koden lades till för att kontrollera AUDITUDE_METADATA_KEY och genom att AUDITUDE_METADATA_KEY och ADVERTISING_METADATA_KEY blev utbytbara.
 
@@ -380,7 +380,7 @@ Problemet löstes så att det betedde sig korrekt och inte skickar några hände
 
 **Anteckning**: För det här problemet krävs Flash Player 21.0.0.182 eller senare.
 
-Auditude-begäran tolkar AuditudeSettings för anpassade parametrar när en annonsenhet skapas för annonsförfrågningar.
+Begäran från Auditude tolkar AuditudeSettings för anpassade parametrar när en annonsenhet skapas för annonsbegäranden.
 
 Det här beteendet ändrades för att inkludera anpassade parametrar från objektet säljprojekt i begäran. Flera möjligheter med olika anpassade parametrar kan inte packas i en Auditude-begäran.
 
@@ -754,7 +754,7 @@ _playbackManager.pause();
 
    * PTPLAY-1634 - Samma prenumerationstagg har olika tidsstämplar i olika live-fönster. När aktiva fönster flyttas bör samma tagg i var och en av dem ha samma tidsstämplar. Men ibland har samma taggar olika tidsstämplar.
    * PTPLAY-28 - Tidslinjen i MediaPlayer innehåller inte tomma brytningar.
-   * En korsdomänprincipfil (crossdomain.xml) krävs för behörighet att strömma innehåll från en annan domän. [Ställa in filen crossdomain.xml för HTTP-strömning](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html).
+   * En korsdomänprincipfil (crossdomain.xml) krävs för behörighet att strömma innehåll från en annan domän. [Ställa in filen crossdomain.xml för HTTP-strömning](https://helpx.adobe.com/adobe-media-server/dev/configure-dynamic-streaming-live-streaming.html).
    * Fel 3694203 - I en DVR-ström kan sökning inifrån en uppspelning i en mellanroll till en annan mellanroll-annonsfunktion leda till att webbläsaren fryser
    * Fel 3753725 - selectPolicyForSeekIntoAd tar inte hänsyn till om annonsbrytningen har bevakats
    * Fel 3754529 - Annonser före rullning tas inte bort från strömmen vid återsökning i en live DVR-ström

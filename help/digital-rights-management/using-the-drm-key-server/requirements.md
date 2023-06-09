@@ -3,9 +3,9 @@ title: Krav för att använda Primetime DRM Key Server
 description: Krav för att använda Primetime DRM Key Server
 copied-description: true
 exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,9 @@ Minimikraven för att använda Primetime DRM Key Server är:
 
 * [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) eller senare. (För att kunna använda HSM i 64-bitars Windows krävs JRE 8)
 
-   >[!NOTE]
-   >
-   >64-bitars PKCS11 stöds nu i OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)och Oracle-JDK: [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
-
+  >[!NOTE]
+  >
+  >64-bitars PKCS11 stöds nu i OpenJDK 8: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)och Oracle
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * Autentiseringsuppgifter utfärdade av Adobe
 * Autentiseringsuppgifter utfärdade av Microsoft (för Xbox 360-klienter)

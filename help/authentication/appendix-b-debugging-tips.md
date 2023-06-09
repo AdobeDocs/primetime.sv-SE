@@ -2,9 +2,9 @@
 title: Bilaga B "Felsökningstips"
 description: Bilaga B "Felsökningstips"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Primetime-autentisering lagrar tillfälliga data som webbläsarcache, LSO-
 
 - [Rensa webbläsarens cache och cookies](#clearing-the-browser-cache-and-cookies)
 - [Rensar LSO-cache](#clearing-lsos-cache)\
-    
+   
 
 ## Rensa webbläsarens cache och cookies {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Välj ```entitlement.\*``` (beroende på vad som har testats) och klicka på Ta 
 Adobe Primetime autentiseringstekniker använder följande felsökningsverktyg:
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (fungerar med felsökningsversionen av Flash Player) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- Live http headers - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug (fungerar med felsökningsversionen av Flash Player)
 - Fiddler - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Tråka - <http://www.wireshark.org/>

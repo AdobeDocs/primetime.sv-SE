@@ -3,9 +3,9 @@ title: Information om NATIVE_ERROR-meddelandet
 description: Information om NATIVE_ERROR-meddelandet
 copied-description: true
 exl-id: 08121879-d5a6-4224-b08d-9e66fe4d185a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6868'
 ht-degree: 2%
 
 ---
@@ -140,8 +140,8 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
    <td colname="col2"></td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
-   <td colname="col2"> Auditude-felkod (nummer). </td> 
+   <td colname="col1"><span class="codeph"> Auditude_ERROR_CODE</span> </td> 
+   <td colname="col2"> Auditude felkod (tal). </td> 
   </tr> 
  </tbody> 
 </table>
@@ -349,7 +349,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col2"><span class="codeph"> AAXS_I15nMisslyckades </span> </td> 
    <td colname="col3"> <p>Det gick inte att etablera klienten med nycklar. subErrorId innehåller ett klientspecifikt, serverspecifikt eller radfel. </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">Distributörens programvara bör försöka utföra åtgärden igen minst en gång. <p>Om du använder Google Chrome i Windows kan du förklara hur du tillåter plugin-åtkomst som inte finns i en sandlåda. Mer information finns i <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Åtkomst nekad till Google Chrome-sandlådan</a>. </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">Distributörens programvara bör försöka utföra åtgärden igen minst en gång. <p>Om du använder Google Chrome i Windows kan du förklara hur du tillåter plugin-åtkomst som inte finns i en sandlåda. Åtkomst nekad till Google Chrome-sandlådan</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">Distributören ska utföra någon av följande uppgifter: 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Om felet är konsekvent mellan olika plattformar bör du eskalera problemet med Adobe. </li> 
@@ -682,7 +682,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3368 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>Användaren avbröt åtgärden eller har angett inställningar som inte tillåter åtkomst till systemet. </p> <p>Det här felet uppstår bara när SWF version är 19 eller senare. För bakåtkompatibilitet genereras 3321 när SWF är version 18 eller tidigare. </p> <p>Distributörens programvara bör vägleda användaren till en förklaring av hur den tillåter åtkomst till plugin-program som inte är i begränsat läge. Mer information finns i <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Åtkomst nekad till Google Chrome-sandlådan</a> och <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> DRM-fel 3322/3346/3368 i Chrome (Info-Bar-problem)</a>. </p> </td> 
+   <td colname="col3"> <p>Användaren avbröt åtgärden eller har angett inställningar som inte tillåter åtkomst till systemet. </p> <p>Det här felet uppstår bara när SWF version är 19 eller senare. För bakåtkompatibilitet genereras 3321 när SWF är version 18 eller tidigare. </p> <p>Distributörens programvara bör vägleda användaren till en förklaring av hur den tillåter åtkomst till plugin-program som inte är i begränsat läge. Åtkomst nekad till Google Chrome-sandlådan</a> och <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> DRM-fel 3322/3346/3368 i Chrome (Info-Bar-problem)</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3369 </td> 

@@ -2,9 +2,9 @@
 title: Använd Ad Insertion i Live-/Linear-ström
 description: Använda Ad Insertion i Live-/Linear-ström
 exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Primetime Ad Insertion har stöd för ett stort antal standardformat och icke-st
 
 * DPI SCTE-35 (SCTE-35 förbättrad annonsmarkör)
 
-* [Signalspecifikation för infogning av program i Adobe](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Signalspecifikation för infogning av program i Adobe](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
 * Binary SCTE-35 (både HLS och DASH)
 

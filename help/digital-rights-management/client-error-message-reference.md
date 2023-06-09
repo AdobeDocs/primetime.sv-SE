@@ -2,9 +2,9 @@
 description: DRM-klientfelen är en delmängd av TVSDK-klientfelen.
 title: Felmeddelandereferens för DRM-klient
 exl-id: 3d74cb92-c0a7-4eab-91b8-7e60a9c33df4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5185'
+source-wordcount: '5173'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ DRM-klientfelen är en delmängd av TVSDK-klientfelen, med DRM-relaterade felkod
 | 3365 | IncognitoModeNotAllowed | Den här kombinationen av webbläsare och plattform tillåter inte DRM-skyddad uppspelning i Incognito-läge.<br>Distributörens programvara bör råda användaren att avsluta Incognito-läget eller använda en annan webbläsare. Mer information finns i [DRM-fel 3365 - orsak och upplösning](https://forums.adobe.com/thread/1266622). |
 | 3366 | BadParameter | Värdmiljön anropade Primetime DRM-biblioteket med en felaktig parameter. |
 | 3367 | BadSignature | M3U8-manifestsigneringen misslyckades.<br>**Obs!** Den här felkoden returneras endast av iOS DRMNative Framework eller AVE. |
-| 3368 | UserSettingsNoAccess | Användaren avbröt åtgärden eller har angett inställningar som inte tillåter åtkomst till systemet.<br>Detta fel inträffar endast i SWF version 19 eller senare. För bakåtkompatibilitet genereras felkod 3321 för SWF version 18 eller tidigare.<br>Distributörens programvara bör vägleda användaren till en förklaring av hur den tillåter åtkomst till plugin-program som inte är i begränsat läge. Mer information finns i [Åtkomst nekad till Google Chrome-sandlådan](https://helpx.adobe.com/adobe-access/kb/error-3321.html) och [DRM-fel 3322/3346/3368 i Chrome (Info-Bar-problem)](https://forums.adobe.com/message/5520902). |
+| 3368 | UserSettingsNoAccess | Användaren avbröt åtgärden eller har angett inställningar som inte tillåter åtkomst till systemet.<br>Detta fel inträffar endast i SWF version 19 eller senare. För bakåtkompatibilitet genereras felkod 3321 för SWF version 18 eller tidigare.<br>Distributörens programvara bör vägleda användaren till en förklaring av hur den tillåter åtkomst till plugin-program som inte är i begränsat läge. Mer information finns i [DRM-fel 3322/3346/3368 i Chrome (Info-Bar-problem)](https://forums.adobe.com/message/5520902). |
 | 3369 | InterfaceNotAvailable | Ett nödvändigt webbläsargränssnitt är inte tillgängligt. Problemet inträffar bara på Pepper. Det kan finnas en felmatchning mellan plugin-programmet för Flash och webbläsarversionen.<br>Distributörens programvara bör hjälpa användaren att se till att den senaste versionen av webbläsaren är installerad.<br>Om det här felet ökar, och de motsvarar en webbläsaruppdatering som släpps, eskalerar du till Adobe. |
 | 3370 | ContentIdSettingsNoAccess | Användaren har inaktiverat **Tillåt identifierare för inställningen av skyddat innehåll.**<br>**Obs!** Det här felet uppstod med Pepper-versionerna 13.0.0.x eller senare.<br>Distributörens programvaru- och/eller driftteam bör vägleda användaren att aktivera **Tillåt identifierare för skyddat innehåll** inställning.<br>Mer information finns i [https://forums.adobe.com/message/6518323#6518323](https://forums.adobe.com/message/6518323#6518323). |
 | 3371 | NoOPConstraintInPixelConstraints | Felaktig upplösning baserad på begränsningar för utdataskydd i licensen.<br>Distributörens programvara ska visa ett felmeddelande. Be användaren rapportera problemet till distributören med en innehållstitel.<br>Distributören bör paketera om innehållet med en giltig profil. |
