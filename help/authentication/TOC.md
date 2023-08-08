@@ -23,14 +23,14 @@ ht-degree: 0%
    + [MVPD - startguide](mvpd-kickstart-guide.md)
 + Integreringsguide för programmerare {#programmer-integration-guide}
    + [Översikt över guiden Integrering av programmerare](programmer-integration-guide-overview.md)
-   + [Tillståndsflödet för programmeraren](entitlement-flow.md)
+   + [Programmerarens tillståndsflöde](entitlement-flow.md)
    + [Användningsexempel för programmerare](programmer-use-cases.md)
    + [Skicka klientinformation (enhet, anslutning och program)](passing-client-information-device-connection-and-application.md)
    + REST API {#restapi}
       + [REST API - översikt](rest-api-overview.md)
       + [REST API Cookbook (Server-to-Server)](rest-api-cookbook-servertoserver.md)
       + [REST API Cookbook (klient-till-server)](rest-api-cookbook-clienttoserver.md)
-      + Referens för återstående API {#rest-api-reference}
+      + Referens för resterande API {#rest-api-reference}
          + [REST API-referens](rest-api-reference.md)
          + [Registreringskodförfrågan](registration-code-request.md)
          + [Returregistreringspost](return-registration-record.md)
@@ -87,7 +87,7 @@ ht-degree: 0%
          + [Amazon FireOS - programregistrering](amazon-fireos-application-registration.md)
          + [FireOS SDK med dynamisk klientregistrering](fireos-sdk-with-dynamic-client-registration.md)
    + Plattforms-SSO {#platform-sso}
-      + Apple SSO {#apple-sso}
+      + APPLE SSO {#apple-sso}
          + [Apple SSO - översikt](apple-sso-overview.md)
          + [Apple SSO Cookbook (REST API)](apple-sso-cookbook-rest-api.md)
          + [Apple SSO Cookbook (iOS/tvOS SDK)](apple-sso-cookbook-iostvos-sdk.md)
@@ -104,7 +104,7 @@ ht-degree: 0%
    + [Autentisering](authn-usecase.md)
    + [Autentisering med OAuth 2.0-protokollet](authn-oauth2-protocol.md)
    + [Behörighet](authz-usecase.md)
-   + [Preflight-auktorisering](mvpd-preflight-authz.md)
+   + [Preflight-behörighet](mvpd-preflight-authz.md)
    + [MVPD-utloggning](usecase-mvpd-logout.md)
    + [Utbyte av metadata](mvpd-content-metadata-exchange.md)
    + [Utbyte av användarmetadata](mvpd-user-metadata-exchng.md)
@@ -131,7 +131,7 @@ ht-degree: 0%
       + [HBA-status för MVPD](hba-status-mvpds.md)
    + Användarmetadata {#user-metadat}
       + [Användarmetadata](user-metadata-feature.md)
-   + [Preflight-auktorisering](preflight-authz.md)
+   + [Preflight-behörighet](preflight-authz.md)
    + Felrapportering {#error-reportn}
       + [Felrapportering](error-reporting.md)
       + [Förbättrade felkoder](enhanced-error-codes.md)
@@ -140,7 +140,7 @@ ht-degree: 0%
       + [API för registrering av dynamisk klient](dynamic-client-registration-api.md)
       + [Registreringshantering för dynamisk klient](dynamic-client-registration-management.md)
    + Försämringstjänst {#degrn-service}
-      + [Översikt över försämringsAPI](degradation-api-overview.md)
+      + [Översikt över API-nedgradering](degradation-api-overview.md)
    + Integritetsberedskap {#privacy-readiness}
       + [Översikt över stöd för Privecy](privacy-supp-overview.md)
       + [Hur man gör en sekretessförfrågan](make-privacy-req.md)
@@ -149,7 +149,7 @@ ht-degree: 0%
    + [Förhindra att PDF-filer visas i urvalsdialogrutan](prevent-mvpd-selectn-dialog.md)
 + Support {#support}
    + [Eskaleringsprocedurer](escalation-procedures.md)
-   + [Övervaka Primetime Adobe PayTV Pass](monitoring-adobe-pay-tv-pass.md)
+   + [Övervaka Primetime Adobe PayTV-pass](monitoring-adobe-pay-tv-pass.md)
    + [Lägsta systemkrav](minimum-system-requirements.md)
 + Versionsinformation {#release-notes}
    + [Versionsinformation om Adobe Pass Authentication 2.66](auth-rn-266.md)
@@ -162,7 +162,7 @@ ht-degree: 0%
    + [Versionsinformation om Primetime-autentisering av iOS/tvOS 3.7.0](authn-rn-ios-tvos-370.md)
    + [Versionsinformation om Primetime-autentisering av iOS/tvOS 3.8.1](authn-rn-ios-tvos-381.md)
 + Tekniska anteckningar {#tech-notes}
-   + Primetime-autentiserings-SDK:er {#primetime-authentication-sdks}
+   + Primetime-autentiserings-SDK {#primetime-authentication-sdks}
       + [Frågor och svar om certifikat](certificates-qa.md)
       + JavaScript SDK {#javascript}
          + [JS SDK-begränsningar för Safari-webbläsare](js-sdk-limitations-for-safari-browser.md)
@@ -174,7 +174,7 @@ ht-degree: 0%
          + [Stöd för WKWebView i iOS SDK 3.1+](wkwebview-support-on-ios-sdk-31.md)
          + [Stöd för SFSafariViewController i iOS SDK 3.2+](sfsafariviewcontroller-support-on-ios-sdk-32.md)
          + [enkel inloggning (SSO) på iOS när du använder åtkomstaktivering för autentisering via Primetime](sso-on-ios-when-using-the-primetime-authentication-access-enabler.md)
-         + [iOS-autentiseringsfel - adobepass.ios.app kan inte hittas](ios-authentication-error-adobepassiosapp-cannot-be-found.md)
+         + [iOS-autentiseringsfel - adobepass.ios.app hittades inte](ios-authentication-error-adobepassiosapp-cannot-be-found.md)
          + [Återställ tillfälligt pass i iOS](reset-temp-pass-on-ios.md)
          + [Felsöka AccessEnabler iOS/tvOS SDK med hjälp av apploggarna i konsolen](debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
          + [AccessEnabler iOS/tvOS 3.7.0 - uppgraderingssökväg](accessenabler-iostvos-370-upgrade-path.md)
@@ -185,13 +185,13 @@ ht-degree: 0%
    + Klientlöst API {#clientless-api}
       + [Kundfri API-implementering - felkoder/meddelanden med trolig orsak/orsak](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
       + [Klientlöst API-flöde i frånvaro av enhets-ID](clientless-api-flow-in-the-absence-of-device-id.md)
-      + [Klientlösa: Undvik att använda &#39;&amp;&#39;reg_code i /authenticate Request](clientless-avoid-using-reg-code-in-authenticate-request.md)
+      + [Klientlös: Undvik att använda &#39;&amp;&#39;reg_code i /authenticate Request](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
       + [Typ och mått av klientlös enhet](benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
    + Användarupplevelse {#user-exp}
       + [Migrera inloggningssidan för MVPD från iFrame till popup-fönster](migr-mvpd-login-iframe-popup.md)
       + [Preflight-funktion: Så här aktiverar, felsöker eller fastställer du problemet](preflight-feature.md)
-   + Verktyg och verktyg {#tools-and-utilities}
+   + Verktyg {#tools-and-utilities}
       + [Använda Charles Proxy](using-charles-proxy.md)
    + Concepts {#concepts}
       + [Förstå användar-ID:n](understanding-user-ids.md)

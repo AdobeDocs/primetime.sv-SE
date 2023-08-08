@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om Adobe Pass Authentication 2.66
-description: Versionsinformation om Adobe Pass Authentication 2.66
+title: Versionsinformation om Adobe Pass Authentication 2.6
+description: Versionsinformation om Adobe Pass Authentication 2.6
 source-git-commit: 5e649f1c0937882c9a05809af8916229f6a95e73
 workflow-type: tm+mt
 source-wordcount: '148'
@@ -8,7 +8,7 @@ ht-degree: 0%
 
 ---
 
-# Versionsinformation om Adobe Pass Authentication 2.66 {#authn-266-rn}
+# Versionsinformation om Adobe Pass Authentication 2.6 {#authn-266-rn}
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Den här sidan beskriver nya funktioner, ändringar och kända fel i den här ve
 ### Byggnummer {#build-number-266}
 
 Adobe Pass-autentisering: adobe-pass-**2.66.0.1**
-Releasedatum: **07/11/2023 - 07/13/2023**
+Utgivningsdatum: **07/11/2023 - 07/13/2023**
 
 ### Versionsöversikt {#release-overview-266}
 
