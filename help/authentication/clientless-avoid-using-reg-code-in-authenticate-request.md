@@ -2,7 +2,7 @@
 title: Undvik att använda '&'reg_code i /authenticate Request
 description: Undvik att använda '&'reg_code i /authenticate Request
 exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -21,29 +21,27 @@ ht-degree: 0%
 
 ## Problem
 
-Webbläsaren IE 9 tolkar &#39;\®&#39; som ett specialkommando och konverterar det till ®. 
+Webbläsaren IE 9 tolkar &#39;\®&#39; som ett specialkommando och konverterar det till ®.
 
 ## Förklaring
 
 Om `/authenticate` Begäran har följande sammansättning...
 
- 
 
 ```
     <FQDN>authenticate? requestor_id=someRequestor&reg_code=EKAFMFI&domain_name=someRequestor.com&noflash=true&mso_id=someMvpd&redirect_url=someRequestor.redirect.url.html
 ```
- 
+
 
 ...den tolkas av IE:s webbläsare som nedan och skickas till Adobe i detta format:
 
- 
 
 ```
     <FQDN>authenticate?requestor_id=someRequestor&reg;_code=EKAFMFI&domain_name=someRequestor.com&noflash=true&mso_id=someMvpd&redirect_url=someRequestor.redirect.url.html
 ```
- 
 
-Den som gjorde begäran\_id tolkas som univision®\_code=EKAFMFI, eftersom det inte finns något &#39;&amp;&#39; och Adobe kommer inte att hitta någon `regCode` param som token ska associeras med.  Det finns en risk att AuthN-token inte skapas alls, i så fall `/checkauthn` anrop kommer inte att hitta några tokens.
+
+Den som gjorde begäran\_id tolkas som univision®\_code=EKAFMFI, eftersom det inte finns något &#39;&amp;&#39; och Adobe kommer inte att hitta någon `regCode` param som token ska associeras med.  Det finns en risk att AuthN-token inte skapas alls, i så fall `/checkauthn` anrop kommer inte att hitta några tokens.
 
 
 
@@ -51,14 +49,14 @@ Den som gjorde begäran\_id tolkas som univision®\_code=EKAFMFI, eftersom det i
 
 Ett av följande alternativ bör lösa problemet:
 
-1. Undvik att använda `&reg_code` param mellan de andra frågesträngsparametrarna.  Flytta den i stället till den första frågesträngsparametern i begärande-URL:en så här:\
-    
+1. Undvik att använda `&reg_code` param mellan de andra frågesträngsparametrarna.  Flytta den i stället till den första frågesträngsparametern i begärande-URL:en så här:
+
 
        &lt;fqdn>authenticate?reg_code =EKAFMFI&amp;requested_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
    
 
-   På det här sättet `&reg` param kommer inte att tolkas felaktigt.
+   På det här sättet är `&reg` param kommer inte att tolkas felaktigt.
 
-1. Normalisera `&reg_code` som använder `&amp;reg_code`.
+1. Normalisera `&reg_code` som använder `&amp;reg_code`.
 
 1. Adobe kan introducera en ny funktion för att skicka tillbaka en felkod till den andra skärmen som svar på ett autentiseringsanrop, om det inte gick att skapa AuthN-token.

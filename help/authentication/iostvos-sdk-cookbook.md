@@ -2,9 +2,9 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Nätverksaktiviteten för AccessEnabler äger rum i en egen tråd, så gränssni
 
 ## Konfigurera besökar-ID {#visitorIDSetup}
 
-Konfigurera en [Marketing Cloud visitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) värdet är mycket viktigt ur analyssynpunkt. När ett besökarID-värde har angetts skickar SDK informationen tillsammans med alla nätverksanrop och Adobe Primetime autentiseringsserver samlar in den här informationen. I framtiden kommer du att kunna korrelera analysen från Adobe Primetime Authentication Service med andra analysrapporter som du kan ha från andra program eller webbplatser. Information om hur du konfigurerar besökar-ID finns [här](#setOptions).
+Konfigurera en [Marketing Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) värdet är mycket viktigt ur analyssynpunkt. När ett besökarID-värde har angetts skickar SDK informationen tillsammans med alla nätverksanrop och Adobe Primetime autentiseringsserver samlar in den här informationen. I framtiden kommer du att kunna korrelera analysen från Adobe Primetime Authentication Service med andra analysrapporter som du kan ha från andra program eller webbplatser. Information om hur du konfigurerar besökar-ID finns [här](#setOptions).
 
 ## Tillståndsflöden {#entitlement}
 
@@ -59,7 +59,7 @@ H.  [Utloggningsflöde utan Apple SSO](#logout_flow_wo_AppleSSO) </br>
 Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
 
-### S. Förutsättningar {#prereqs}
+### A. Förutsättningar {#prereqs}
 
 1. Skapa callback-funktioner:
    * `setRequestorComplete()` </br>
@@ -69,51 +69,51 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
       * Utlöses av [`getAuthentication()`](#$getAuthN) endast om användaren inte har valt en leverantör (MVPD) och ännu inte är autentiserad. </br>
       * The `mvpds` är en array med providers som är tillgängliga för användaren.
+
    * `setAuthenticationStatus(status, errorcode)` </br>
       * Utlöses av `checkAuthentication()` varje gång. </br>
       * Utlöses av [`getAuthentication()`](#$getAuthN) endast om användaren redan är autentiserad och har valt en leverantör. </br>
       * Status som returneras är lyckad eller misslyckad. Felkoden beskriver typen av fel.
+
    * [`navigateToUrl(url)`](#$nav2url) </br>
       * Utlöses av [`getAuthentication()`](#$getAuthN) efter att användaren har valt ett MVPD. The `url` parameter anger platsen för MVPD:s inloggningssida.
+
    * `sendTrackingData(event, data)` </br>
       * Utlöses av `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`.
-      * The `event` parameter anger vilken tillståndshändelse som inträffat, den `data` parameter är en lista med värden som relaterar till händelsen. 
+      * The `event` parametern anger vilken berättigandehändelse som har inträffat, `data` parameter är en lista med värden som relaterar till händelsen.
+
    * `setToken(token, resource)`
 
       * Utlöses av [checkAuthorization()](#checkAuthZ) och [getAuthorization()](#$getAuthZ) efter en auktorisering för att visa en resurs.
-      * The `token` parametern är den kortlivade medietoken, den `resource` -parametern är det innehåll som användaren har behörighet att visa.
+      * The `token` parametern är den kortlivade medietoken, `resource` -parametern är det innehåll som användaren har behörighet att visa.
+
    * `tokenRequestFailed(resource, code, description)` </br>
       * Utlöses av [checkAuthorization()](#checkAuthZ) och [getAuthorization()](#$getAuthZ) efter en misslyckad auktorisering.
-      * The `resource` parameter är det innehåll som användaren försöker visa, den `code` parameter är felkoden som anger vilken typ av fel som inträffat, den `description` -parametern beskriver felet som är associerat med felkoden.
+      * The `resource` parametern är det innehåll som användaren försöker visa, `code` parametern är felkoden som anger vilken typ av fel som inträffat. `description` -parametern beskriver felet som är associerat med felkoden.
+
    * `selectedProvider(mvpd)` </br>
       * Utlöses av [`getSelectedProvider()`](#getSelProv).
       * The `mvpd` -parametern ger information om den leverantör som användaren har valt.
+
    * `setMetadataStatus(metadata, key, arguments)`
       * Utlöses av `getMetadata().`
-      * The `metadata` parametern innehåller de specifika data som du har begärt, den `key` parametern är nyckeln som används i [getMetadata()](#getMeta) Begäran. och `arguments` parametern är samma ordlista som skickas till [getMetadata()](#getMeta).
+      * The `metadata` parametern innehåller de specifika data som du har begärt; `key` parametern är nyckeln som används i [getMetadata()](#getMeta) begäran, och `arguments` parametern är samma ordlista som skickas till [getMetadata()](#getMeta).
+
    * [`preauthorizedResources(authorizedResources)`](#preauthResources)
 
       * Utlöses av [`checkPreauthorizedResources()`](#checkPreauth).
 
       * The `authorizedResources` -parametern visar de resurser som användaren har behörighet att visa.
+
    * [`presentTvProviderDialog(viewController)`](#presentTvDialog)
 
-      * Utlöses av [getAuthentication()](#getAuthN) när den aktuella begäraren stöder minst en MVPD som har SSO-stöd.
+      * Utlöses av [getAuthentication()](#getAuthN) när den aktuella begäraren har stöd för minst en MVPD som har stöd för enkel inloggning.
       * Parametern viewController är Apple SSO-dialogrutan och måste presenteras på huvudvykontrollanten.
+
    * [`dismissTvProviderDialog(viewController)`](#dismissTvDialog)
 
       * Utlöses av en användaråtgärd (genom att välja Avbryt eller Andra TV-leverantörer i Apple SSO-dialogruta).
       * Parametern viewController är Apple SSO-dialogrutan och måste stängas av från huvudvykontrollanten.
-
-
-
-
-
-
-
-
-
-
 
 ![](assets/iOS-flows.png)
 
@@ -124,23 +124,23 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    a. Utlysning [`init`](#$init) för att skapa en enda instans av Adobe Primetime authentication AccessEnabler.
    * **Beroende:** Adobe Primetime-autentisering Inbyggt iOS-/tvOS-bibliotek (AccessEnabler)
+
    b. Utlysning `setRequestor()` fastställa programmerarens identitet, skicka in programmerarens `requestorID` och (valfritt) en array med slutpunkter för Adobe Primetime-autentisering. För tvOS måste du även ange den offentliga nyckeln och hemligheten. Se [Klientlös dokumentation](#create_dev) för mer information.
 
    * **Beroende:** Giltig begärande-ID för Adobe Primetime-autentisering (använd kontohanteraren för Adobe Primetime-autentisering för att ordna detta).
 
    * **Utlösare:**
-      [setRequestorComplete()](#$setReqComplete) återanrop.
+     [setRequestorComplete()](#$setReqComplete) återanrop.
+
    >[!NOTE]
    >
    >Inga berättigandebegäranden kan slutföras förrän identiteten för den som gjorde begäran har etablerats fullständigt. Detta innebär att [`setRequestor()`](#$setReq)  körs fortfarande, alla efterföljande berättigandebegäranden. Till exempel: [`checkAuthentication()`](#checkAuthN) är blockerade.
 
-   Det finns två implementeringsalternativ: När identifieringsinformationen för den som gjorde begäran skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder: </br>
+   Du har två implementeringsalternativ: När begärarens identifieringsinformation skickas till backend-servern kan gränssnittets programlager välja en av följande två metoder: </br>
 
    1. Vänta på att utlösaren för [`setRequestorComplete()`](#setReqComplete) callback (ingår i AccessEnabler-delegaten). Det här alternativet ger den största säkerheten för att [`setRequestor()`](#$setReq) slutförd, så det rekommenderas för de flesta implementeringar.
 
    1. Fortsätt utan att vänta på att utlösaren för [`setRequestorComplete()`](#setReqComplete) återanrop och börja utfärda tillståndsansökningar. Dessa anrop (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) köas av AccessEnabler-biblioteket, som gör att de faktiska nätverksanropen görs efter [`setRequestor()`](#$setReq). Det här alternativet kan ibland avbrytas om nätverksanslutningen till exempel är instabil.
-
-
 
 1. Utlysning `checkAuthentication()` för att kontrollera om det finns en befintlig autentisering utan att initiera det fullständiga autentiseringsflödet.  Om samtalet lyckas kan du gå direkt till auktoriseringsflödet. Om inte, fortsätter du till autentiseringsflödet.
 
@@ -159,7 +159,7 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    * The [displayProviderDialog()](#$dispProvDialog) återanrop, om användaren inte har autentiserats ännu.
 
-1. Visa användaren listan med leverantörer som skickats till
+1. Presentera användaren med listan över leverantörer som skickats till
    [`displayProviderDialog()`](#dispProvDialog).
 
 1. När användaren har valt en leverantör hämtar du URL:en för användarens MVPD från `navigateToUrl:` eller `navigateToUrl:useSVC:` callback och öppna en `UIWebView/WKWebView` eller `SFSafariViewController` och dirigera kontrollenheten till webbadressen.
@@ -168,9 +168,9 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
 >[!NOTE]
 >
->Nu har användaren möjlighet att avbryta autentiseringsflödet. Om detta inträffar ansvarar ditt UI-lager för att informera AccessEnabler om den här händelsen genom att anropa [setSelectedProvider()](#setSelProv) med `null` som en parameter. Detta gör att AccessEnabler kan rensa upp dess interna tillstånd och återställa autentiseringsflödet.
+>Nu har användaren möjlighet att avbryta autentiseringsflödet. Om detta inträffar ansvarar ditt UI-lager för att informera AccessEnabler om händelsen genom att anropa [setSelectedProvider()](#setSelProv) med `null` som en parameter. Detta gör att AccessEnabler kan rensa upp dess interna tillstånd och återställa autentiseringsflödet.
 
-1. När användaren har loggat in identifierar programlagret inläsningen av en specifik anpassad URL. Observera att den här anpassade URL:en är ogiltig och inte avsedd för att styrenheten ska läsa in den. Det får endast tolkas av programmet som en signal om att autentiseringsflödet har slutförts och att det är säkert att stänga `UIWebView/WKWebView` eller `SFSafariViewController` styrenhet. Om `SFSafariViewController`kontrollenheten måste användas. Den anpassade URL:en definieras av **`application's custom scheme`** (t.ex.`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), annars definieras den här anpassade URL:en av **`ADOBEPASS_REDIRECT_URL`** konstant (d.v.s. `adobepass://ios.app`).
+1. När användaren har loggat in identifierar programlagret inläsningen av en specifik anpassad URL. Observera att den här anpassade URL:en är ogiltig och inte avsedd för att styrenheten ska läsa in den. Det får endast tolkas av programmet som en signal om att autentiseringsflödet har slutförts och att det är säkert att stänga `UIWebView/WKWebView` eller `SFSafariViewController` styrenhet. Om `SFSafariViewController`kontrollenheten måste användas. Den anpassade URL:en definieras av **`application's custom scheme`** (till exempel`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), annars definieras den här anpassade URL:en av **`ADOBEPASS_REDIRECT_URL`** konstant (det vill säga `adobepass://ios.app`).
 
 1. Stäng styrenheten UIWebView/WKWebView eller SFSafariViewController och anropa AccessEnablers `handleExternalURL:url` API-metod, som instruerar AccessEnabler att hämta autentiseringstoken från backend-servern.
 
@@ -226,7 +226,7 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    * Om [getAuthorization()](#$getAuthZ) anropet lyckades: Användaren har giltiga AuthN- och AuthZ-tokens (användaren är autentiserad och har behörighet att titta på det begärda mediet).
 
-   * If [getAuthorization()](#$getAuthZ) misslyckas: Undersök undantaget som utlöses för att avgöra dess typ (AuthN, AuthZ eller något annat):
+   * If [getAuthorization()](#$getAuthZ) misslyckas: Undersök undantaget som utlöses för att fastställa dess typ (AuthN, AuthZ eller något annat):
       * Om det var ett autentiseringsfel (AuthN) startar du om autentiseringsflödet.
       * Om det var ett auktoriseringsfel (AuthZ) har användaren inte behörighet att titta på det begärda mediet och någon typ av felmeddelande ska visas för användaren.
       * Om det finns någon annan typ av fel (anslutningsfel, nätverksfel osv.) visar sedan ett felmeddelande för användaren.
@@ -235,7 +235,7 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
    Använd Adobe Primetime Authentication Media Token Verifier-biblioteket för att verifiera den kortlivade medietoken som returneras från [getAuthorization()](#$getAuthZ) ring ovan:
 
    * Om valideringen lyckas: Spela upp det begärda mediet för användaren.
-   * Om valideringen misslyckas: AuthZ-token var ogiltig, mediebegäran ska avvisas och ett felmeddelande ska visas för användaren.
+   * Om valideringen misslyckas: AuthZ-token var ogiltig, ska mediebegäran avvisas och ett felmeddelande ska visas för användaren.
 
 
 1. Återgå till det normala programflödet.
@@ -253,16 +253,16 @@ Jag.  [Utloggningsflöde med Apple SSO](#logout_flow_with_AppleSSO) </br>
 
 1. Utlysning [`logout()`](#$logout) för att logga ut användaren. AccessEnabler rensar bort alla cachelagrade värden och token. När cacheminnet har rensats gör AccessEnabler ett serveranrop för att rensa sessionerna på serversidan. Observera, att eftersom serveranropet kan resultera i en SAML-omdirigering till IdP (detta tillåter sessionsrensning på IdP-sidan), måste det här anropet följa alla omdirigeringar. Därför måste anropet hanteras inuti en UIWebView/WKWebView- eller SFSafariViewController-styrenhet.
 
-   a. På samma sätt som för autentiseringsarbetsflödet skickar AccessEnabler-domänen en en begäran till gränssnittets programlager via `navigateToUrl:` eller `navigateToUrl:useSVC:` återanrop för att skapa en UIWebView/WKWebView- eller SFSafariViewController-styrenhet och instruera den att läsa in URL:en som finns i återanropets `url` parameter. Det här är URL:en för utloggningsslutpunkten på backend-servern.
+   a. I samma mönster som autentiseringsarbetsflödet skickar AccessEnabler-domänen en en begäran till gränssnittets programlager via `navigateToUrl:` eller `navigateToUrl:useSVC:` återanrop för att skapa en UIWebView/WKWebView- eller SFSafariViewController-styrenhet och instruera den att läsa in URL:en som finns i återanropets `url` parameter. Det här är URL:en för utloggningsslutpunkten på backend-servern.
 
-   b. Programmet måste övervaka aktiviteten i `UIWebView/WKWebView or SFSafariViewController` och identifiera tidpunkten då en viss anpassad URL läses in, allt eftersom den går igenom flera omdirigeringar. Observera att den här anpassade URL:en är ogiltig och inte avsedd för att styrenheten ska läsa in den. Det får endast tolkas av programmet som en signal om att utloggningsflödet har slutförts och att det är säkert att stänga `UIWebView/WKWebView` eller `SFSafariViewController` styrenhet. När kontrollenheten läser in den här anpassade URL:en måste programmet stänga `UIWebView/WKWebView or SFSafariViewController` och anropa AccessEnabler `handleExternalURL:url`API-metod. Om `SFSafariViewController`kontrollenheten måste användas. Den anpassade URL:en definieras av **`application's custom scheme`** (t.ex. `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), annars definieras den här anpassade URL:en av **`ADOBEPASS_REDIRECT_URL`**  konstant (d.v.s. `adobepass://ios.app`).
+   b. Programmet måste övervaka aktiviteten i `UIWebView/WKWebView or SFSafariViewController` och identifiera tidpunkten då en viss anpassad URL läses in, allt eftersom den går igenom flera omdirigeringar. Observera att den här anpassade URL:en är ogiltig och inte avsedd för att styrenheten ska läsa in den. Det får endast tolkas av programmet som en signal om att utloggningsflödet har slutförts och att det är säkert att stänga `UIWebView/WKWebView` eller `SFSafariViewController` styrenhet. När kontrollenheten läser in den här anpassade URL:en måste programmet stänga `UIWebView/WKWebView or SFSafariViewController` och anropa AccessEnabler `handleExternalURL:url`API-metod. Om `SFSafariViewController`kontrollenheten måste användas. Den anpassade URL:en definieras av **`application's custom scheme`** (till exempel `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`), annars definieras den här anpassade URL:en av **`ADOBEPASS_REDIRECT_URL`**  konstant (det vill säga `adobepass://ios.app`).
 
    >[!NOTE]
    >
    >Utloggningsflödet skiljer sig från autentiseringsflödet på så sätt att användaren inte behöver interagera med UIWebView/WKWebView eller SFSafariViewController på något sätt. Användargränssnittets programlager använder en UIWebView/WKWebView eller SFSafariViewController för att se till att alla omdirigeringar följs. Det är därför möjligt (och rekommenderas) att göra kontrollenheten osynlig (dvs. dold) under utloggningsprocessen.
 
 
-### Jag. Utloggningsflöde med Apple SSO {#logout_flow_with_AppleSSO}
+### I. Utloggningsflöde med Apple SSO {#logout_flow_with_AppleSSO}
 
 1. Utlysning [`logout()`](#$logout) för att logga ut användaren.
 1. The [status()](#status_callback_implementation) återanrop anropas med ID VSA203.

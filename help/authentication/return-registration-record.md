@@ -2,7 +2,7 @@
 title: Returregistreringspost
 description: Returregistreringspost
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,29 +20,29 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Beskrivning {#description}
 
-Returnerar registreringskodposten som innehåller registreringskoden UUID, registreringskoden och det hash-kodade enhets-ID:t. 
+Returnerar registreringskodposten som innehåller registreringskoden UUID, registreringskoden och hash-kodat enhets-ID.
 
- 
+
 
 <div>
 
 
-| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
+| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestId}/regcode/{registrationCode}</br></br>Till exempel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. begärande  </br>    (Bankomponent)</br>2.  registreringskod  </br>    (Bankomponent) | GET | XML eller JSON som innehåller en registreringskod och information. Se schema och exempel nedan. | 200 |
+| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Till exempel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. begärande  </br>    (Bankomponent)</br>2.  registreringskod  </br>    (Bankomponent) | GET | XML eller JSON som innehåller en registreringskod och information. Se schema och exempel nedan. | 200 |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 | Indataparameter | Beskrivning |
 | --- | --- |
 | begärande | Programmerarens requestId som den här åtgärden är giltig för. |
-| registreringskod | Registreringskodvärdet som skulle visas på direktuppspelningsenheten (anges i autentiseringsflödet). |
+| registreringskod | Registreringskodvärdet som skulle visas på strömningsenheten (anges i autentiseringsflödet). |
 
 </br>
 
@@ -98,7 +98,7 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 | begärande | Begärande-ID |
 | mvpd | MVPD-ID |
 | genererad | Tidsstämpel för att skapa registreringskod (i millisekunder sedan 1 januari 1970 GMT) |
-| förfaller | Tidsstämpel när registreringskoden upphör att gälla (i millisekunder sedan 1 januari 1970 GMT) |
+| förfaller | Tidsstämpel när registreringskoden upphör (i millisekunder sedan 1 januari 1970 GMT) |
 | deviceId | Unikt enhets-ID (eller XSTS-token) |
 | deviceType | Enhetstyp |
 | deviceUser | Användaren är inloggad på enheten |

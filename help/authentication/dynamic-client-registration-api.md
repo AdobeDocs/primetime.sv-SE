@@ -2,7 +2,7 @@
 title: API för registrering av dynamisk klient
 description: API för registrering av dynamisk klient
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För närvarande finns det två sätt på vilka Primetime Authentication identifierar och registrerar program:
 
@@ -52,17 +52,17 @@ När du har hämtat en programsats från TVE Dashboard måste du registrera prog
 
 **Begäran**
 
-| HTTP-anrop |  |
+| HTTP-samtal |                    |
 |-----------|--------------------|
 | bana | /o/client/register |
 | method | POST |
 
-| fält |  |  |
+| fält |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | Programsatsen som skapades i TVE Dashboard. | obligatoriskt |
 | redirect_uri | Den URI som programmet använder för att slutföra autentiseringsflödet. | valfri |
 
-| begäranrubriker |  |  |
+| begäranrubriker |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | obligatoriskt |
 | X-Device-Info | Enhetsinformationen enligt definitionen i Skicka information om enhet och anslutning | obligatoriskt |
@@ -70,11 +70,11 @@ När du har hämtat en programsats från TVE Dashboard måste du registrera prog
 
 **Svar**
 
-| svarshuvuden |  |  |
+| svarsrubriker |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | obligatoriskt |
 
-| svarsfält |  |  |
+| svarsfält |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | Sträng | obligatoriskt |
 | client_secrets | Sträng | obligatoriskt |
@@ -160,12 +160,12 @@ När du har hämtat den unika klientidentifieraren (klient-ID och klienthemlighe
 **Begäran**
 
 
-| **HTTP-anrop** |  |
+| **HTTP-samtal** | |
 | --- | --- |
 | bana | `/o/client/token` |
 | method | POST |
 
-| **frågeparametrar** |  |
+| **frågeparametrar** | |
 | --- | --- |
 | `grant_type` | Mottaget i klientregistreringsprocessen.<br/> **Godkänt värde**<br/>`client_credentials`: Används för osäkra klienter, som Android SDK. |
 | `client_id` | Klient-ID som hämtats i klientregistreringsprocessen. |
@@ -173,13 +173,13 @@ När du har hämtat den unika klientidentifieraren (klient-ID och klienthemlighe
 
 **Svar**
 
-| svarsfält |  |  |
+| svarsfält | | |
 | --- | --- | --- |
 | `access_token` | Det åtkomsttokenvärde som du bör använda för att anropa Primetimes API:er | obligatoriskt |
 | `expires_in` | Tiden i sekunder tills access_token upphör att gälla | obligatoriskt |
 | `token_type` | Typen av token **innehavare** | obligatoriskt |
 | `created_at` | Utgivningstiden för token | obligatoriskt |
-| **svarshuvuden** |  |  |
+| **svarsrubriker** | | |
 | `Content-Type` | application/json | obligatoriskt |
 
 **Felsvar**
@@ -192,7 +192,7 @@ Om ett fel inträffar svarar auktoriseringsservern med en HTTP 400-statuskod (fe
 | HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | Klientautentiseringen misslyckades eftersom klienten var okänd. SDK MÅSTE registreras på auktoriseringsservern igen. |
 | HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | Den autentiserade klienten har inte behörighet att använda den här behörighetstypen. |
 
-#### Hämta åtkomsttoken-exempel: {#obt-access-token}
+#### Hämtar ett exempel på åtkomsttoken: {#obt-access-token}
 
 **Begäran:**
 
@@ -232,15 +232,15 @@ Pragma: no-cache
 
 ## Utför autentiseringsbegäranden {#autheticationRequests}
 
-Använd åtkomsttoken för att utföra Adobe Primetime [Autentiserings-API-anrop](/help/authentication/initiate-authentication.md). Åtkomsttoken måste läggas till i API-begäran på något av följande sätt:
+Använd åtkomsttoken för att utföra Adobe Primetime [API-anrop för autentisering](/help/authentication/initiate-authentication.md). Åtkomsttoken måste läggas till i API-begäran på något av följande sätt:
 
 * genom att lägga till en ny frågeparameter i begäran. Den nya parametern anropas **access_token**.
 
-* genom att lägga till en ny HTTP-rubrik i begäran: Behörighet: Bearer. Vi rekommenderar att du använder HTTP-huvudet eftersom frågesträngar ofta visas i serverloggar.
+* genom att lägga till en ny HTTP-rubrik i begäran: Authorization: Bearer. Vi rekommenderar att du använder HTTP-huvudet eftersom frågesträngar ofta visas i serverloggar.
 
 Om ett fel uppstår kan följande felsvar returneras:
 
-| Felsvar |  |  |
+| Felsvar |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | Begäran har fel format. |
 | invalid_client | 403 | Klient-ID:t har inte längre behörighet att utföra begäranden. Nya klientautentiseringsuppgifter ska genereras. |

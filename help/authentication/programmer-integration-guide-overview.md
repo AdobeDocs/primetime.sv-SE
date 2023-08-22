@@ -2,7 +2,7 @@
 title: Översikt över guiden Integrering av programmerare
 description: beskrivning av Integreringsguide för programmerare
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -15,10 +15,11 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
+>
 
 ## Cookbooks {#cookbooks}
 
-* AccessEnabler JavaScript SDK Cookbook 
+* AccessEnabler JavaScript SDK Cookbook
 * AccessEnabler iOS/tvOS SDK Cookbook
 * AccessEnabler Android SDK Cookbook
 * REST API Cookbook (Server-to-Server)

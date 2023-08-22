@@ -2,7 +2,7 @@
 title: Tillståndsövervakningens översikt
 description: Tillståndsövervakningens översikt
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 TVE-sajter och -appar måste vara tillgängliga dygnet runt, så kunderna behöver realtidsinsikter i berättigandehändelser för att kunna upptäcka och korrigera problem så snabbt som möjligt. De måste också analysera månadsdata för att avgöra vilka plattformar som tillhandahåller större delen av trafiken, och vilka plattformar som kan ha dålig implementering och dålig konverteringsgrad.
 
-ESM (Entitlement Service Monitoring) ger programmerare och distributörer av videoprogrammeringstjänster en datafeed som ger realtidsinsyn i deras autentiserings- och auktoriseringshändelser. Data samlas in från Adobe Primetime autentiseringssystem och tillhandahålls via ett RESTful API.  Kunderna kan förbruka data direkt eller från sina egna skräddarsydda kontrollpaneler.
+ESM (Entitlement Service Monitoring) ger programmerare och distributörer av videoprogrammeringstjänster en datafeed som ger realtidsinsyn i deras autentiserings- och auktoriseringshändelser. Data samlas in från Adobe Primetime autentiseringssystem och tillhandahålls via ett RESTful API.  Kunderna kan förbruka data direkt eller från sina egna skräddarsydda kontrollpaneler.
 
-ESM-systemets kärnelement är dess mått och mått. ESM genererar rapporter som innehåller aggregerade mätvärden enligt dimensionsurvalet. När Adobe Pass-händelser är inloggade i PST-tidszonen är ESM-rapporterna också tillgängliga i PST-tidszonen. 
+ESM-systemets kärnelement är dess mått och mått. ESM genererar rapporter som innehåller aggregerade mätvärden enligt dimensionsurvalet. När Adobe Pass-händelser är inloggade i PST-tidszonen är ESM-rapporterna också tillgängliga i PST-tidszonen.
 
-ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du har frågor om tillgänglighet.
+ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du har frågor om tillgänglighet.
 
 ## ESM för programmerare {#esm-for-programmers}
 
@@ -34,18 +34,18 @@ ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du
 |-------------------------|--------------------------|
 | autentiseringsförsök | Antal initierade autentiseringsflöden |
 | lyckad | Antal autentiseringstoken som har hämtats av klienter |
-| författarväntande | Antal autentiseringstoken som genererats (oavsett om klienten verkligen fått den eller inte) |
+| författarväntande | Antal autentiseringstoken som har genererats (oavsett om klienten har fått den eller inte) |
 | authn-failed | Antal misslyckade autentiseringar som utförts via ett externt system. |
 | clientless-tokens | Antal klientlösa token som har skickats |
 | klientlösa fel | Antal misslyckade försök att ta emot tokens från klientlöst API |
 | authz-try | Antal försök till auktorisering |
 | authz-success | Antal godkända auktoriseringar |
-| authz-failed | Antal nekade auktoriseringar av sidoskyddsprogram på programnivå |
+| authz-failed | Antal nekade auktoriseringar av sidoskyddsprogram på applikationsnivå |
 | authz-jected | Antal försök till auktorisering som anses vara skadliga av Adobe Service Provider och som avvisats som ett resultat av DoS-attacker |
 | authz-latency | Totalt antal millisekunder som har ägnats åt MVPD-slutpunkten |
 | media-tokens | Antal genererade korta medietoken (som motsvarar antalet uppspelningsbegäranden) |
-| unika konton | Antal unika användare som har utfört berättigandeåtgärder (AuthN/AuthZ) i det valda tidsintervallet. (Det här måttet visas bara om dygnsvärden begärs.) </br> Detta beräknas för varje enskilt datacenter. När dc-dimensionen inte har begärts visas inte det här måttet. |
-| unika sessioner | Antal unika sessioner som har utfört autentiseringsflödesanrop till Adobe Primetime-autentiseringstjänsten inom det valda tidsintervallet. (Det här måttet visas bara om dygnsvärden begärs.) </br> Detta beräknas för varje enskilt datacenter. När dc-dimensionen inte har begärts visas inte det här måttet. |
+| unika konton | Antal unika användare som har utfört berättigandeåtgärder (AuthN/AuthZ) i det valda tidsintervallet. (Det här måttet visas bara om dygnsvärden begärs.) </br> Detta beräknas för varje enskilt datacenter. När dc-dimensionen inte begärs visas inte det här måttet. |
+| unika sessioner | Antal unika sessioner som har utfört autentiseringsflödesanrop till Adobe Primetime-autentiseringstjänsten inom det valda tidsintervallet. (Det här måttet visas bara om dygnsvärden begärs.) </br> Detta beräknas för varje enskilt datacenter. När dc-dimensionen inte begärs visas inte det här måttet. |
 | antal | En enkel räknare som används i händelseorienterade rapporter |
 
 </br>
@@ -68,14 +68,14 @@ ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du
 | kanal | Kanalwebbplatsen, som har extraherats från resursfältet (extraherats från MRSS-nyttolasten som kanal/titel om sådan finns, eller mappats till resursvärdet om det inte är i RSS-format). |
 | resource-id | Den faktiska resurstitel som ingår i auktoriseringsbegäran (extraherad från MRSS-nyttolasten som artikel/titel om sådan finns) |
 | enhet | Enhetsplattformen (dator, mobil, konsol osv.) |
-| ap | Den externa autentiseringsprovidern när autentiseringsflödet utförs via ett externt system. </br> Värdena kan vara: </br> - Ej tillämpligt - autentiseringen tillhandahölls av Primetime-autentisering </br> - Apple - det externa system som tillhandahöll autentiseringen är Apple |
+| EAP | Den externa autentiseringsprovidern när autentiseringsflödet utförs via ett externt system. </br> Värdena kan vara: </br> - Ej tillämpligt - autentiseringen tillhandahölls av Primetime-autentisering </br> - Apple - det externa system som tillhandahöll autentiseringen är Apple |
 | os-family | Operativsystem som körs på enheten |
 | webbläsarfamiljen | Användaragent som används för åtkomst till Adobe Primetime-autentisering |
 | cdt | Enhetsplattformen (alternativ) som för närvarande används för klientlösa. </br>  Värdena kan vara: </br> - Ej tillämpligt - händelsen kom inte från en klientlös SDK </br> - Okänd - Eftersom parametern deviceType från ett klientlöst API är valfri finns det anrop som inte innehåller något värde. </br> - alla andra värden som skickades via det klientlösa API:t, t.ex. xbox, appletv, roku osv. </br> |
 | platform-version | Versionen av SDK utan klient |
 | os-type | Operativsystem som körs på enheten, alternativ (används inte för närvarande) |
-| webbläsarversion | Användaragentversion |
-| sdk-typ | Klient-SDK som används (Flash, HTML5, Android-modernt, iOS, klientlöst osv.) |
+| webbläsarversion | Version av användaragent |
+| sdk-typ | Klient-SDK används (Flash, HTML5, Android-inbyggt, iOS, klientlöst osv.) |
 | sdk-version | Versionen av Adobe Primetime autentiseringsklient-SDK |
 | event | Adobe Primetime-autentiseringshändelsens namn |
 | orsak | Orsaken till fel, enligt Adobe Primetime-autentisering |
@@ -89,11 +89,11 @@ ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du
 |---|---|
 | autentiseringsförsök | Antal initierade autentiseringsflöden |
 | lyckad | Antal autentiseringstoken som har hämtats av klienter |
-| författarväntande | Antal autentiseringstoken som genererats (oavsett om klienten verkligen fått den eller inte) |
+| författarväntande | Antal autentiseringstoken som har genererats (oavsett om klienten har fått den eller inte) |
 | authn-failed | Antal misslyckade autentiseringar som utförts via ett externt system. |
 | authz-try | Antal försök till auktorisering |
 | authz-success | Antal godkända auktoriseringar |
-| authz-failed | Antal nekade auktoriseringar av sidoskyddsprogram på programnivå |
+| authz-failed | Antal nekade auktoriseringar av sidoskyddsprogram på applikationsnivå |
 | authz-jected | Antal försök till auktorisering som anses vara skadliga av Adobe Service Provider och som avvisats som ett resultat av DoS-attacker |
 | authz-latency | Totalt antal millisekunder som har ägnats åt MVPD-slutpunkten |
 
@@ -107,20 +107,20 @@ ESM API är inte allmänt tillgängligt.  Kontakta din Adobe-representant om du
 | timme | Timme på dagen |
 | minut | Minut av timmen |
 | beställar-id | ID för begärande som används för att utföra berättigandebegäran |
-| ap | Den externa autentiseringsprovidern när autentiseringsflödet utförs via ett externt system. </br> Värdena kan vara: </br> - Ej tillämpligt - autentiseringen tillhandahölls av Primetime-autentisering </br> - Apple - det externa system som tillhandahöll autentiseringen är Apple |
+| EAP | Den externa autentiseringsprovidern när autentiseringsflödet utförs via ett externt system. </br> Värdena kan vara: </br> - Ej tillämpligt - autentiseringen tillhandahölls av Primetime-autentisering </br> - Apple - det externa system som tillhandahöll autentiseringen är Apple |
 | cdt | Enhetsplattformen (alternativ) som för närvarande används för klientlösa. </br>  Värdena kan vara: </br> - Ej tillämpligt - händelsen kom inte från en klientlös SDK </br> - Okänd - Eftersom parametern deviceType från ett klientlöst API är valfri finns det anrop som inte innehåller något värde. </br> - alla andra värden som skickades via det klientlösa API:t, t.ex. xbox, appletv, roku osv. </br> |
-| sdk-typ | Klient-SDK som används (Flash, HTML5, Android-modernt, iOS, klientlöst osv.) |
+| sdk-typ | Klient-SDK används (Flash, HTML5, Android-inbyggt, iOS, klientlöst osv.) |
 
 
 ## Användningsexempel {#use-cases}
 
 Du kan använda ESM-data för följande användningsområden:
 
-- **Övervakning** - Ops- och övervakningsteam kan skapa en kontrollpanel eller diagram som anropar API:n varje minut. Med hjälp av den information som visas kan de upptäcka ett problem (med Primetime-autentisering eller med ett MVPD) så fort det visas.  
+- **Övervakning** - Ops- och övervakningsteam kan skapa en kontrollpanel eller diagram som anropar API:n varje minut. Med hjälp av den information som visas kan de upptäcka ett problem (med Primetime-autentisering eller med ett MVPD) så fort det visas.
 
-- **Felsökning/kvalitetstestning** - Eftersom data också delas upp efter plattform, enhet, webbläsare och operativsystem kan analysmönster identifiera problem med specifika kombinationer (t.ex. Safari på OSX).  
+- **Felsökning/kvalitetstestning** - Eftersom data också delas upp efter plattform, enhet, webbläsare och operativsystem kan analysmönster identifiera problem med specifika kombinationer (t.ex. Safari på OSX).
 
-- **Analyser** - De data som tillhandahålls kan användas för att komplettera/granska data på klientsidan som samlas in via Adobe Analytics eller något annat analysverktyg.
+- **Analyser** - De data som tillhandahålls kan användas för att komplettera/granska data på klientsidan som samlas in via Adobe Analytics eller något annat analysverktyg.
 
 <!--
 ## Related Information {#related-information}

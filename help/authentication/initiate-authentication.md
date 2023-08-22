@@ -2,7 +2,7 @@
 title: Initiera autentisering
 description: Initiera autentisering
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -19,26 +19,26 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Beskrivning {#description}
 
-Initierar autentiseringsprocessen genom att informera om en MVPD-markeringshändelse. Skapar en post i autentiseringsdatabasen Primetime, som synkroniseras när ett lyckat svar tas emot från PDF-filen. 
+Initierar autentiseringsprocessen genom att informera om en MVPD-markeringshändelse. Skapar en post i autentiseringsdatabasen Primetime, som synkroniseras när ett lyckat svar tas emot från PDF-filen.
 
 
 
-| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
+| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate | AuthN-modul | 1. request_id (obligatoriskt)</br>2.  mso_id (obligatoriskt)</br>3.  reg_kod (obligatoriskt)</br>4.  domain_name (obligatoriskt)</br>5.  noflash=true -  </br>    (Obligatoriskt, Resterande parameter)</br>6.  no_iframe=true (obligatorisk, rest-parameter)</br>7.  extra parametrar (valfritt)</br>8.  redirect_url (obligatoriskt) | GET | Inloggningswebbappen omdirigeras till inloggningssidan för MVPD. | 302 för fullständiga omdirigeringsimplementeringar |
+| &lt;sp_fqdn>/api/v1/authenticate | AuthN-modul | 1. beställare_id (obligatoriskt)</br>2.  mso_id (obligatoriskt)</br>3.  reg_kod (obligatoriskt)</br>4.  domain_name (obligatoriskt)</br>5.  noflash=true -  </br>    (Obligatoriskt, Resterande parameter)</br>6.  no_iframe=true (obligatorisk, rest-parameter)</br>7.  extra parametrar (valfritt)</br>8.  redirect_url (obligatoriskt) | GET | Inloggningswebbappen omdirigeras till inloggningssidan för MVPD. | 302 för fullständiga omdirigeringsimplementeringar |
 
 {style="table-layout:auto"}
 
@@ -60,10 +60,9 @@ Initierar autentiseringsprocessen genom att informera om en MVPD-markeringshänd
 >**Viktigt: Obligatoriska parametrar -** Oavsett implementering på klientsidan är alla parametrar ovan obligatoriska.
 >
 >
->Exempel:    
+>Exempel:
 >
->
-```
+>```
 >domain_name=loginwebapp.com
 >mso_id=sampleMvpdId
 >reg_code=RO0885W
@@ -88,10 +87,10 @@ Initierar autentiseringsprocessen genom att informera om en MVPD-markeringshänd
 
 ### **Anteckningar** {#notes}
 
-* Värdet för `domain_name` -parametern måste anges till ett av de domännamn som registrerats med Primetime-autentisering. Mer information finns i [Registrering och initiering](/help/authentication/programmer-overview.md).
+* Värdet för `domain_name` -parametern måste anges till ett av de domännamn som registrerats med Primetime-autentisering. Mer information finns i [Registrering och initiering](/help/authentication/programmer-overview.md).
 
 * [Undvik att använda &#39;&amp;&#39;reg\_code i /authenticate request (Tech Note)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* The `redirect_url` parametern måste vara den sista i ordningen
+* The `redirect_url` parametern måste vara den sista i ordningen
 
-* Värdet för `redirect_url` parametern måste vara URL-kodad
+* Värdet för `redirect_url` parametern måste vara URL-kodad

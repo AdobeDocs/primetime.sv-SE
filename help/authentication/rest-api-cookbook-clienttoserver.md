@@ -2,7 +2,7 @@
 title: REST API Cookbook (klient-till-server)
 description: Återställ API-cookbook-klienten till servern.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
 
-## Översikt {#overview}
+## Ökning {#overview}
 
-Det här dokumentet innehåller stegvisa instruktioner för programmerarens tekniker att integrera en&quot;smart enhet&quot; (spelkonsol, smart TV-app, digitalbox osv.) med Adobe Primetime-autentisering med REST API-tjänster. Denna klient-till-server-metod, som använder REST-API:er i stället för en klient-SDK, ger bredare stöd för olika plattformar där det inte skulle vara möjligt att utveckla ett stort antal unika SDK:er. En utförlig teknisk översikt över hur den klientlösa lösningen fungerar finns i [Kundfri teknisk översikt](/help/authentication/rest-api-overview.md).
+Det här dokumentet innehåller stegvisa instruktioner för programmerarens tekniker att integrera en&quot;smart enhet&quot; (spelkonsol, smart TV-app, digitalbox osv.) med Adobe Primetime-autentisering med REST API-tjänster. Denna klient-till-server-metod, som använder REST-API:er i stället för en klient-SDK, ger bredare stöd för olika plattformar där det inte skulle vara möjligt att utveckla ett stort antal unika SDK:er. En utförlig teknisk översikt över hur den klientlösa lösningen fungerar finns i [Kundfri teknisk översikt](/help/authentication/rest-api-overview.md).
 
 
 Strategin kräver två komponenter (direktuppspelningsapp och AuthN-app) för att slutföra de nödvändiga flödena: start-, registrerings-, auktoriserings- och vymedieflöden i direktuppspelningsappen och autentiseringsflödet i din AuthN-app.
@@ -27,18 +27,18 @@ Strategin kräver två komponenter (direktuppspelningsapp och AuthN-app) för at
 
 I en fungerande klient-till-server-lösning ingår följande komponenter:
 
- 
+
 
 | Typ | Komponent | Beskrivning |
 | --- | --- | --- |
 | Strömmande enhet | Strömmande app | Programmeringsprogrammet som finns på användarens direktuppspelningsenhet och spelar upp autentiserad video. |
-|  | \[Valfritt\] AuthN-modul | Om direktuppspelningsenheten har en användaragent (t.ex. en webbläsare) ansvarar AuthN-modulen för att autentisera användaren på MVPD IdP. |
-| \[Valfritt\] AuthN-enhet | AuthN-app | Om direktuppspelningsenheten inte har någon användaragent (t.ex. webbläsare) är AuthN-programmet ett webbprogram för programmerare som nås från en separat användares enhet via en webbläsare.  |
+| | \[Valfritt\] AuthN-modul | Om direktuppspelningsenheten har en användaragent (t.ex. en webbläsare) ansvarar AuthN-modulen för att autentisera användaren på MVPD IdP. |
+| \[Valfritt\] AuthN-enhet | AuthN-app | Om direktuppspelningsenheten inte har någon användaragent (t.ex. webbläsare) är AuthN-programmet ett webbprogram för programmerare som nås från en separat användares enhet via en webbläsare. |
 | Adobe infrastruktur | Adobe Pass Service | En tjänst som integreras med MVPD IdP- och AuthZ-tjänsten och som ger autentiserings- och auktoriseringsbeslut. |
 | MVPD-infrastruktur | MVPD IdP | En MVPD-slutpunkt som tillhandahåller autentiseringsbaserad autentisering för att validera användarens identitet. |
-|  | MVPD AuthZ-tjänst | En MVPD-slutpunkt som ger auktoriseringsbeslut baserat på användarens prenumerationer, föräldrakontroll osv. |
+| | MVPD AuthZ-tjänst | En MVPD-slutpunkt som ger auktoriseringsbeslut baserat på användarens prenumerationer, föräldrakontroll osv. |
 
- 
+
 
 Ytterligare termer som används i flödet definieras i [Ordlista](/help/authentication/glossary.md).
 
@@ -59,27 +59,27 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
 2. Hämta/generera ett enhets-ID.
 
-3. Utfärda ett Check-authentication-anrop för att se om enheten redan är autentiserad.  Till exempel: [`<SP_FQDN>/api/v1/checkauthn [device ID]`](/help/authentication/check-authentication-token.md)
+3. Utfärda ett Check-authentication-anrop för att se om enheten redan är autentiserad.  Till exempel: [`<SP_FQDN>/api/v1/checkauthn [device ID]`](/help/authentication/check-authentication-token.md)
 
-4. Om `checkauthn` samtalet lyckades, fortsätt till auktoriseringsflödet från och med steg 2.  Starta registreringsflödet om det inte fungerar.
+4. Om `checkauthn` samtalet lyckades, fortsätt till auktoriseringsflödet från och med steg 2.  Starta registreringsflödet om det inte fungerar.
 
- 
+
 
 #### Registreringsflöde
 
 1. Skaffa en registreringskod och URL som användaren kan använda för att få åtkomst till inloggningsappen för den andra skärmen och visa dessa för användaren:
 
-   a. Skicka en begäran om POST till Adobe Registration Code Service och skicka ett hash-kodat enhets-ID och en &quot;Registration URL&quot;.  Till exempel: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/registration-code-request.md)
+   a. Skicka en begäran om POST till Adobe Registration Code Service och skicka ett hash-kodat enhets-ID och en &quot;Registration URL&quot;.  Till exempel: [`<REGGIE_FQDN>/reggie/v1/[requestorId]/regcode [device ID]`](/help/authentication/registration-code-request.md)
 
    b. Ange den returnerade registreringskoden och URL-adressen till användaren.
 
    c. Instruera användaren att växla till en webbkompatibel enhet, navigera till URL:en och ange sedan registreringskoden.
 
- 
+
 
 #### Auktoriseringsflöde
 
-1. Användaren återgår från den andra skärmappen och trycker på knappen &quot;Fortsätt&quot; på enheten. Du kan också implementera en avsökningsmekanism för att kontrollera autentiseringsstatusen, men Adobe Primetime-autentiseringen rekommenderar att du använder knappmetoden Fortsätt framför avsökningen. <!--(For information on employing a "Continue" button versus polling the Adobe Primetime authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> Till exempel: [\&lt;sp _fqdn=&quot;&quot;>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md)
+1. Användaren återgår från den andra skärmappen och trycker på knappen &quot;Fortsätt&quot; på enheten. Du kan också implementera en avsökningsmekanism för att kontrollera autentiseringsstatusen, men Adobe Primetime-autentiseringen rekommenderar att du använder knappmetoden Fortsätt framför avsökningen. <!--(For information on employing a "Continue" button versus polling the Adobe Primetime authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> Till exempel: [\&lt;sp _fqdn=&quot;&quot;>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md)
 
 2. Skicka en GET-förfrågan till Adobe Primetime autentiseringsauktoriseringstjänst för att initiera auktorisering. Till exempel: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
 
@@ -87,7 +87,7 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
 * Om svaret anger att åtgärden lyckades: Användaren har en giltig AuthN-token OCH användaren har behörighet att titta på det begärda mediet (det finns en giltig AuthZ-token för den här användaren).
 
-* Om svaret indikerar fel: Undersök det undantag som genereras för att avgöra dess typ (AuthN, AuthZ eller något annat):
+* Om svaret indikerar ett fel: Undersök det undantag som genereras för att avgöra dess typ (AuthN, AuthZ eller något annat):
 
    * Om det var ett AuthN-fel startar du om registreringsflödet.
 
@@ -95,11 +95,11 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
    * Om det finns något annat fel (anslutningsfel, nätverksfel osv.) visar sedan ett felmeddelande för användaren.
 
- 
+
 
 #### Visa medieflöde
 
-1. Presentera mediealternativ. Användaren väljer de media som ska visas.
+1. Presentera mediealternativ. Användaren väljer de media som ska visas.
 
 2. Är mediet skyddat?
 
@@ -107,7 +107,7 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
    b. Om mediet är skyddat startar din app autentiseringsflödet (AuthZ) ovan.
 
-   c. Om mediet inte är skyddat kan du spela upp mediet för användaren.
+   c. Om mediet inte är skyddat spelas mediet upp för användaren.
 
 3. Spela upp mediet.
 
@@ -116,9 +116,9 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
 ![](assets/secnd-screen-authn-flow.png)
 
-1. Hämta en lista över MVPD för den här användaren. Till exempel: [`<SP_FQDN>/api/v1/config/[requestorID]`](/help/authentication/provide-mvpd-list.md)
+1. Hämta en lista över MVPD för den här användaren. Till exempel: [`<SP_FQDN>/api/v1/config/[requestorID]`](/help/authentication/provide-mvpd-list.md)
 
-1. Initiera autentiseringsflödet.  Till exempel: [`<SP_FQDN>/api/v1/authenticate [requestorID, MVPD ID, Redirect URL, Domain name, Registration Code, "noflash=true"]`](/help/authentication/initiate-authentication.md)
+1. Initiera autentiseringsflödet.  Till exempel: [`<SP_FQDN>/api/v1/authenticate [requestorID, MVPD ID, Redirect URL, Domain name, Registration Code, "noflash=true"]`](/help/authentication/initiate-authentication.md)
 
 1. Kontrollera om autentiseringen lyckades. Till exempel:[`<SP_FQDN>/api/v1/checkauthn/[registration code][requestor ID]`](/help/authentication/check-authentication-token.md)
 
@@ -128,8 +128,8 @@ Adobe Pass använder DCR för att säkra klientkommunikationen mellan ett progra
 
 Vissa plattformar har dedikerat stöd för enkel inloggning (SSO). Implementeringsinformation finns för varje plattform:
 
-* [Apple SSO](/help/authentication/apple-sso-cookbook-rest-api.md)
-* Amazon SSO
+* [APPLE SSO](/help/authentication/apple-sso-cookbook-rest-api.md)
+* AMAZON SSO
 
 ## TempPass och Promotional TempPass för REST API {#temppass}
 

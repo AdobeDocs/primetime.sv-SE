@@ -2,7 +2,7 @@
 title: Om Adobe Primetime autentisering och TV Everywhere
 description: Om Adobe Primetime autentisering och TV Everywhere
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
@@ -19,8 +19,8 @@ ht-degree: 0%
 
 Dagens tv-tittare kan vara online när som helst eller var som helst, och de förväntar sig att de har tillgång till Pay TV-innehåll direkt där. Dessutom visar publiken innehåll med hjälp av allt fler internetkompatibla enheter, bland annat:
 
-* Bärbara datorer
-* Tabletter
+* Bärbara
+* Surfplattor
 * Smartphones
 * Webbplatser
 * Federerade appar
@@ -53,7 +53,7 @@ Förutom berättigande finns en mängd relaterade tekniska utmaningar och integr
 * Samordna de otaliga relationerna mellan programmerare och leverantörer av betal-TV
 * Förhindra bedräglig åtkomst till eller missbruk av tjänstvillkor
 * En enhetlig och frustrerande autentiseringsprocess för användare på olika webbplatser och i olika appar
-* Bevara en snabb time to market för att hålla jämna steg med filialavtal
+* Bevara en snabb time-to-market för att hålla jämna steg med filialavtal
 * Hantera kostnader i samband med flera integreringar
 
 Dessa utmaningar gör att du kan utföra och underhålla komplexa, direkta integreringar mellan programmerare och autentiseringssystemen hos flera olika leverantörer av betal-TV mycket resurskrävande, vilket kräver både tid och teknisk finess.
@@ -73,7 +73,7 @@ Dessutom har Adobe Primetime autentisering ett ramverk som gör användarautenti
 
 ![](assets/programmers-connect-authn.png)
 
-*Bild 1: Bara några programmerare och betal-tv-leverantörer som ansluter via Adobe Primetime-autentisering...*
+*Bild 1: Bara några programmerare och leverantörer av betal-TV som ansluter via Adobe Primetime-autentisering...*
 
 Adobe Pass förmedlar på ett säkert sätt berättigandetransaktioner mellan programmerare och betal-TV-leverantörer, vilket underlättar läsarens åtkomst till prenumerationsmaterialet. Eller, med andra ord..
 
@@ -92,8 +92,8 @@ För **Programmerare**, ger Adobe Primetime-autentisering:
 * Enkel integrering och direktanslutning med de bästa Pay TV-leverantörerna, utan att behöva bekymra dig om flera, direkta integreringar
 * Optimering av både prenumeration (licensiering) och annonsintäkter genom stöd till en så bred publik som möjligt för innehåll
 * Säker autentisering, med tillgång till premiuminnehåll som endast beviljas behöriga användare/enheter
-* Ett öppet och flexibelt ramverk som är både spelare- och DRM-plattformsoberoende. kan spelas upp på en mängd olika plattformar, inklusive iOS, Android, Windows 8, spelkonsoler, digitalboxar med mera.
-* Kompatibilitet med alla typer av DRM-teknik, som Adobe Flash Access® eller Play Ready®.
+* Ett öppet och flexibelt ramverk som är både spelare- och DRM-plattformsoberoende. Uppspelningen kan ske på en rad olika plattformar, bland annat iOS, Android, Windows 8, spelkonsoler, digitalboxar med mera.
+* Kompatibilitet med alla DRM-tekniker, till exempel Adobe Flash Access® eller Play Ready®.
 * Stöd för autentisering och auktorisering med enkel inloggning (SSO), så att prenumeranter inte behöver logga in igen efter den första autentiseringen på sina egna system.
 
 
@@ -117,8 +117,8 @@ Adobe Primetime-autentisering består av följande grundläggande komponenter:
 
 * Klientkomponent (något av följande):
 
-   * Access Enabler - ett plattformsspecifikt bibliotek; innehåller lättanvända API:er och kodexempel för implementering av tillståndsflödena
-   * Klientlöst API - RESTful web services; ger slutpunkter för tillståndsflöden för plattformar utan återgivningsmöjligheter för webbsidor (t.ex. spelkonsoler, digitalboxar)
+   * Åtkomstaktivering - Ett plattformsspecifikt bibliotek som ger lättanvända API:er och kodexempel för implementering av tillståndsflödena
+   * Det klientlösa API:t - RESTful web services; ger slutpunkter för tillståndsflöden för plattformar utan återgivningsmöjligheter för webbsidor (t.ex. spelkonsoler, digitalboxar)
 
 * Serverlösningar som ligger i Adobe
 * Verifieraren för medietoken
@@ -154,7 +154,7 @@ Access Enabler tillhandahåller även följande tjänster:
 
 Beroende på din webbplats eller ditt spelarprogram kan Access Enabler ha följande former:
 
-* En SWF-fil som kan köras i Flash Player
+* En SWF-fil som Flashen Player kan köra
 * En JS-fil som körs direkt av webbläsaren
 * En inbyggd åtkomstfunktion för plattformar som stöds (iOS, Android och Windows 8)
 
@@ -189,7 +189,7 @@ Autentiseringen är klar när en kund använder Adobe Primetime-autentisering f�
 
 När auktoriseringen är klar skapar Adobe Primetime-autentiseringen en AuthZ-token (long-life authentication). Denna token är inte portabel eftersom den är kopplad till den begärande enheten och en specifik skyddad resurs (till exempel en kanal, serie eller avsnitt).
 
-* Adobe Primetime-autentisering lagrar AuthZ-token säkert tillsammans med andra autentiseringstoken för andra resurser.  Liksom med AuthN-tokens lagras token på plattformar som använder Access Enabler lokalt på klienten. På plattformar som använder klientlöst API lagras tokens på Adobe Primetime autentiseringsservrar.
+* Adobe Primetime-autentisering lagrar AuthZ-token säkert tillsammans med andra autentiseringstoken för andra resurser.  Liksom med AuthN-tokens lagras token på plattformar som använder Access Enabler lokalt på klienten. På plattformar som använder Clientless API lagras tokens på Adobe Primetime autentiseringsservrar.
 * TTL (time-to-live) för den långlivade AuthZ-token definieras vanligtvis i intervallet dagar till veckor, beroende på det specifika avtalet mellan Pay TV-leverantören och programmeraren.
 * Vid en given tidpunkt lagras endast en AuthZ-token per resurs. Det kan finnas flera auktoriseringstoken lagrade, förutsatt att de är kopplade till olika resurser. När en ny auktoriseringstoken utfärdas och en gammal redan finns för samma resurs, skriver den nya token över det befintliga cachelagrade värdet.
 * Adobe Primetime-autentisering använder den långvariga AuthZ-token för att skapa de kortlivade medietoken som används för visningsåtkomst.
@@ -198,7 +198,7 @@ När auktoriseringen är klar skapar Adobe Primetime-autentiseringen en AuthZ-to
 
 När Adobe Primetime-autentiseringen genererar AuthZ-token används denna token för att generera en kortlivad medietoken som signeras av Adobe och krypteras för att undvika manipulering under utbyte:
 
-* TTL för den kortlivade token (standard: 5 minuter) är inställt på att tillåta problem med klocksynkronisering mellan servern som genererar token och servern som validerar token.
+* TTL för den kortlivade token (standard: 5 min) är inställd på att tillåta klocksynkroniseringsproblem mellan servern som genererar token och servern som validerar token.
 * Den kortlivade variabeln exponeras för inbäddningsplatsen innan åtkomst ges till den skyddade resursen, så programmeraren måste validera variabeln, använda Media Token Verifier för integreringar med Access Enabler eller Token Verifier Service om API-integreringar utan klient används.
 
 #### Media Token Verifier {#media-token-verifier}
@@ -223,7 +223,7 @@ Betal-TV-leverantören har som huvudansvar att verifiera att en begärande anvä
 
 1. Leverantören signerar Adobe Primetime NDA (Authentication Non-Disclosure Agreement).
 1. Leverantören förser Adobe med specifikationer för sina autentiserings- och auktoriseringssystem. För den enklaste integrationen rekommenderar vi att Pay TV-operatörer har en SAML-baserad identitetsleverantör (IdP) för autentisering och möjlighet att kommunicera via SOAP-åtkomstprotokollet för auktorisering.
-1. Leverantören upprättar anslutningsmöjligheter mellan sina servrar och Adobe Primetime autentiseringsservrar. Detta inkluderar att ange slutpunkter och IP-listor.
+1. Leverantören upprättar anslutningsmöjligheter mellan sina servrar och Adobe Primetime autentiseringsservrar. Detta inkluderar att tillhandahålla slutpunkter och att ange IP-adresser.
 1. Utgåva före kvalificering och kvalitetsfrågor.
 1. Produktionsrelease och Frågor och svar.
 
@@ -239,7 +239,7 @@ Adobe erbjuder också bedrägeribegränsande tjänster. Kontakta din Adobe-repre
 
 ### Programmeringsprocessen {#programmer-process}
 
-För att Adobe Primetime-autentisering ska fungera måste programmerarna konfigurera sina mediespelarprogram eller webbsidor så att de kan arbeta med Adobe Primetime autentisering när de hanterar de viktigaste tillståndsprocesserna: autentisering, behörighet och utloggning.
+För att Adobe Primetime-autentisering ska fungera måste programmerarna konfigurera sina mediespelarprogram eller webbsidor så att de kan arbeta med Adobe Primetime-autentisering när de hanterar de viktigaste tillståndsprocesserna: autentisering, auktorisering och utloggning.
 
 
 Innan en integrering med Adobe Primetime-autentisering påbörjas bör programmerarna ha:
@@ -248,15 +248,15 @@ Innan en integrering med Adobe Primetime-autentisering påbörjas bör programme
 * Ett innehållshanteringssystem
 * En leveransmekanism som kan omfatta ett leveransnätverk från tredje part (CDN)
 
-Programmerarna kan förvänta sig att få utföra vissa integreringsuppgifter som en del av att tillhandahålla TV Everywhere-tjänster med Adobe Primetime-autentisering. Dessa uppgifter omfattar:
+Programmerarna kan förvänta sig att få utföra vissa integreringsuppgifter som en del av att tillhandahålla TV Everywhere-tjänster med Adobe Primetime-autentisering. Bland dessa uppgifter finns:
 
 * Integrera Adobe Primetime-autentiserings Access Enabler-bibliotek i din webbsida eller mediespelare, eller implementera integrering med hjälp av metoden Klientlös för&quot;smarta enheter&quot; som inte är webbkompatibla
 * Arbete på serversidan för att integrera verifieringskomponenten för Adobe Primetime-autentiseringstoken i arbetsflödet för videoströmning
 * Skapa ett användargränssnitt för arbetsflödet till din webbplats eller app (vissa element i det, till exempel den faktiska inloggningsprocessen, tillhandahålls av Pay TV-operatören och vissa element är eventuellt tillgängliga som en del av Adobe Primetime-autentiseringen)
 
-Rapporten ger en översikt över Programmeringsprocessen och Adobe ger ytterligare vägledning när integreringen formellt inleds.
+Rapporten ger en översikt över Programmeringsprocessen och Adobe ger ytterligare vägledning när integreringen formellt påbörjas.
 
-#### Inställningar för begärande (programmerare) {#requester-prog-setup}
+#### Installationsprogram för begärande (programmerare) {#requester-prog-setup}
 
 ##### Registrering hos Adobe {#registering}
 
@@ -266,8 +266,8 @@ Som ett första steg måste programmerare registrera sig hos Adobe eller en Adob
 
 Programmerarna måste integrera klientkomponenten för Adobe Primetime-autentisering, Access Enabler, i sina befintliga mediespelarappar eller webbsidor innan de kan begära åtkomst till innehåll. Det finns olika alternativ för att göra detta:
 
-* Du kan bädda in Flash-versionen, AccessEnabler.swf, i en Flash-baserad videospelare på en webbsida eller direkt i HTML. Du kan kommunicera med SWF i ActionScript eller JavaScript. Bas-API:t är ActionScript, men ett fullständigt JavaScript-bibliotek finns tillgängligt.
-* För enheter som inte är Flash kan du:
+* Du kan bädda in Flashen AccessEnabler.swf, i en videospelare som är baserad på Flashar på en webbsida eller direkt i HTML. Du kan kommunicera med SWF i ActionScriptet eller JavaScript. Bas-API:t är ActionScript, men ett fullständigt JavaScript-bibliotek finns tillgängligt.
+* För enheter som inte är Flashar kan du:
    * Använd HTML5-/JavaScript-versionen, AccessEnabler.js, och kommunicera med den via JavaScript-API:t, eller
    * Använd ett systemspecifikt Access Enabler-bibliotek, t.ex. för iOS, Android eller Windows 8
 
@@ -282,7 +282,7 @@ När en kund begär en skyddad resurs från en programmerare för första gånge
 ![](assets/providr-selection-ui.png)
 
 
-*Bild 3: Exempel på användargränssnitt för val av leverantör*
+*Figur 3: Exempel på användargränssnitt för val av leverantör*
 
 >[!NOTE]
 >
@@ -290,12 +290,11 @@ När en kund begär en skyddad resurs från en programmerare för första gånge
 >* Auktoriseringen använder ett serverbaserat webbtjänstutbyte (server-till-server) mellan Adobe Primetime-autentisering (SP) och en Pay TV-leverantör (IdP).
 
 
-
-##### Programmeringskommunikation med hjälp av Access Enabler
+##### Programmeringskommunikation med hjälp av åtkomstfunktionen
 
 Den tvåvägskommunikationskanal som finns mellan Access Enabler och programmerarens webbsida eller spelarapp följer ett fullständigt asynkront mönster. Programmeraren skickar meddelanden till Access Enabler via de metoder som finns i API:t för Access Enabler. Access Enabler svarar via återanrop som är registrerade i Access Enabler-biblioteket.
 
-* Alla auktoriseringsbegäranden begär automatiskt autentisering först om det inte finns någon autentiseringstoken på det lokala systemet. När autentiseringen lyckas lagras kundens token lokalt, så att de inte behöver logga in igen under en viss tidsperiod. Om de har autentiserats med Adobe Primetime autentiseringsberättigande i något annat sammanhang (t.ex. via Pay TV-leverantörens webbplats eller en annan programmerare) har Access Enabler åtkomst till den lokala token och kräver ingen ytterligare autentisering.
+* Alla auktoriseringsbegäranden begär automatiskt autentisering först, om det inte finns någon autentiseringstoken på det lokala systemet. När autentiseringen lyckas lagras kundens token lokalt, så att de inte behöver logga in igen under en viss tidsperiod. Om de har autentiserats med Adobe Primetime autentiseringsberättigande i något annat sammanhang (t.ex. via Pay TV-leverantörens webbplats eller en annan programmerare) har Access Enabler åtkomst till den lokala token och kräver ingen ytterligare autentisering.
 * När en kund begär en viss resurs begär programmeraren tillstånd från Pay TV-leverantören via Access Enabler. Efter verifiering (eller initiering) av autentiseringen kontaktar Access Enabler leverantören av betal-TV (via Adobe Primetime-autentisering) för att avgöra om kunden har rätt att se resursen. Adobe Primetime-autentisering hanterar kommunikation med Pay TV-leverantören för att få behörighet. Programmeraren behöver bara skicka begäran till Access Enabler och hantera svaret (om auktoriseringen lyckades eller misslyckades). Om auktoriseringen lyckas lagras en auktoriseringstoken på klientdatorn och återanropet tar emot en kort medietoken.
 
 ##### Programmeringskommunikation med API:t för klientlösa {#progr-comm-clientless-api}
@@ -305,7 +304,7 @@ Kommunikation mellan Programmerarens app och Adobe Primetime-autentisering sker 
 ##### Exempel på arbetsflöde med SAML Web Browser SSO-baserad autentisering {#sample-wf}
 
 1. Visningsprogrammet navigerar till en webbplats (dummy1.com) och försöker få åtkomst till det berättigade innehållet.
-1. Videosida/spelare läser in åtkomstfunktionen från adobe.com och frågar efter auktorisering för det begärda innehållet när användaren uppmanas att göra det.
+1. Videosida/spelare läser in åtkomstaktiveraren från adobe.com och frågar efter auktorisering för det begärda innehållet när användaren uppmanas att göra det.
 1. Access Enabler kör och validerar den som gjorde begäran och begäran.
 1. Åtkomstaktivering söker efter en giltig auktoriseringstoken i lokal butik. Om en giltig auktorisering hittas skapar Access Enabler en kort medietoken (se steg 14).
 1. Om ingen giltig auktorisering för den begärda resursen hittas men det finns en giltig autentiseringstoken, initierar Access Enabler en auktoriseringsbegäran med Pay TV-leverantören om att användaren autentiseras mot den. Adobe-servern tillhandahåller auktoriseringsförfrågan/svarsutbyte med Pay TV-leverantören.
@@ -314,8 +313,8 @@ Kommunikation mellan Programmerarens app och Adobe Primetime-autentisering sker 
 1. SAML SP anropar rätt SAML IdP (Identity Provider) hos användarens Pay TV-leverantör med hjälp av SAML-webbläsarprofilen som anges i IdP-metadata. På så sätt navigerar användaren till webbplatsen för IdP:er (Pay TV provider), där användaren autentiserar.
 1. När autentiseringen är klar omdirigeras användaren tillbaka till Adobe SAML SP och skickar ett autentiserings-GUID i SAML-svaret.
 1. Adobe SAML SP skapar en session på serversidan där autentiserings-GUID lagras och dirigerar om användaren tillbaka till den ursprungliga programmerarsidan. (Serversessionen tas bort när åtkomstaktiveraren hämtar authN-token.)
-1. Åtkomstaktivering hämtar autentiserings-GUID från Adobe-servern som ska ingå i token med ett enhets-ID som upprätthålls av Adobe Primetime-autentisering. När Flash DRM finns på enheten görs detta via Flash Access-API:er (Flash Player DRM-komponent) som gör att GUID kan bindas till enhets-ID:t och returnera en autentiseringstoken. I annat fall görs detta via JS-API:er via HTTPS med HTML5-baserad lagring eller via specifika systemkomponenter.
-1. Autentiseringstoken används av Access Enabler för att göra auktoriseringsbegäranden till Pay TV-leverantören. På enheter med stöd för Flash Access görs förfrågningarna alltid via Flash Access API:er så att den resulterande auktoriseringstoken binds till enheten. På andra enheter än Flash Access används HTTPS för säker kommunikation från klient till server.
+1. Åtkomstaktivering hämtar autentiserings-GUID från Adobe-servern som ska ingå i token med ett enhets-ID som upprätthålls av Adobe Primetime-autentisering. När Flash-DRM finns på enheten görs detta via Flash Access-API:er (Flashens Player DRM-komponent) som möjliggör bindning av GUID till enhets-ID och returnerar en autentiseringstoken. I annat fall görs detta via JS-API:er via HTTPS med HTML5-baserad lagring eller via specifika systemkomponenter.
+1. Autentiseringstoken används av Access Enabler för att göra auktoriseringsbegäranden till Pay TV-leverantören. På enheter som har stöd för Flash Access görs förfrågningarna alltid via Flash Access-API:er så att den auktoriseringstoken som skapas binds till enheten. På enheter som inte är Flashar Access används HTTPS för säker kommunikation från klient till server.
 1. När auktoriseringen är klar skapar Adobe Primetime-autentiseringen en token för långvarig auktorisering (&quot;authZ&quot;) och skickar den till Access Enabler, som lagrar den på det lokala systemet.
 1. Åtkomstaktiveraren använder authZ-token för att skapa kortlivade medietoken som används för visningsåtkomst. Av säkerhetsskäl måste dessa kortlivade token valideras av en annan Adobe Primetime-autentiseringskomponent, Media Token Verifier.
 
@@ -341,7 +340,7 @@ I de flesta fall ansvarar programmeraren för att hantera användarutloggningar 
 * Rensa all autentiserings- och auktoriseringsinformation för den användaren
 * Initierar ett arbetsflöde som är specifikt för en Pay TV-leverantör för att rensa bort användarens autentiseringssession med leverantören (om autentiseringen till exempel gjordes med protokollet SAML Authentication Request, kan utloggningen göras med protokollet SAML Single Logout.)
 
-Om användaren lämnar datorn inaktiv tillräckligt länge så att deras token går ut, kan de fortfarande återgå till sin session och initiera utloggningen. Adobe Primetime-autentisering säkerställer att alla tokens tas bort och meddelar Pay TV-leverantören att även ta bort deras session.
+Om användaren lämnar datorn inaktiv tillräckligt länge så att deras tokens går ut, kan de fortfarande återgå till sin session och initiera utloggningen. Adobe Primetime-autentisering säkerställer att alla tokens tas bort och meddelar Pay TV-leverantören att även ta bort deras session.
 
 
 När utloggningen initieras från en webbplats som inte är integrerad med Adobe Primetime-autentisering kan betal-TV-leverantören anropa Adobe Primetime-tjänsten för autentisering av enkel utloggning via en webbläsaromdirigering.
@@ -363,15 +362,15 @@ I det här avsnittet beskrivs säkerheten och integriteten för Adobe Primetime 
 Ett av de främsta målen med Adobe Primetime-autentisering är att se till att systemet klarar att angripa innehållsberättigandedata av en obehörig användare eller innehållsaggregator. Därför skyddas dataåtkomsten på olika nivåer i arbetsflödet, vilket skyddar genereringen och användningen av autentiseringstokendata som har störst betydelse. Adobe Primetime autentiseringsarkitektur är utformad för att säkerställa att tokeninnehållet upprätthålls på ett säkert sätt och att token finns kvar på den enhet som den utfärdades till.
 
 * **Långvarig AuthN- och AuthZ-tokensäkerhet** - Alla långvariga token signeras digitalt av Adobe Primetime autentiseringsserver. Den digitala signaturen skiljer sig dock från plattform till plattform eftersom den använder ett enhets-ID som skiljer sig åt när det gäller hur det genereras, skyddas och valideras. I samtliga fall säkerställer en validering på klientsidan att den digitala signaturen är intakt och att token-integriteten bevaras. Åtkomstaktiveraren lagrar de validerade tokenerna säkert på platser som är specifika för den miljö där den körs. Om validering av enhets-ID misslyckas ogiltigförklaras autentiseringssessionen, tokens återställs och användaren uppmanas att logga in igen.
-* **Kortlivad säkerhet för medietoken** - Kortlivade medietokens, som produceras i det sista steget före innehållsåtkomst, signeras av Adobe och krypteras för att undvika manipulering under utbyte. Kortlivade mediatoken kräver också ett extra valideringssteg av ytterligare en autentiseringskomponent från Adobe Primetime, Media Token Verifier. TTL för den kortlivade token är inställd på 5 minuter och kan göras kortare om så önskas. Den kortlivade medietoken cachelagras aldrig. en ny token hämtas från servern varje gång ett auktoriserings-API anropas.
+* **Kortlivad säkerhet för medietoken** - Kortlivade medietokens, som produceras i det sista steget före innehållsåtkomst, signeras av Adobe och krypteras för att undvika manipulering under utbyte. Kortlivade medietoken kräver också ett extra valideringssteg av ytterligare en autentiseringskomponent från Adobe Primetime, Media Token Verifier. TTL för den kortlivade token är inställd på 5 minuter och kan göras kortare om så önskas. Den kortlivade medietoken cachelagras aldrig. En ny token hämtas från servern varje gång ett auktoriserings-API anropas.
 
 ### Plattformsspecifik enhetssäkerhet {#platform-sp-security}
 
 Vilka säkerhetsåtgärder som används vid Adobe Primetime-autentisering varierar beroende på plattform, men alla är robusta och av allra högsta klass.
 
-* **Enheter med Flash** - När Flash Player 10.1+ eller AIR 2.5+ finns på enheten använder Adobe Primetime-autentiseringen Flash Player DRM-funktionen för skydd, som också kallas Flash Access. Flash erbjuder en extra skyddsnivå, den starka säkerheten för enhetsbindning för Flash-baserade tokens innebär i de flesta fall att time-to-live kan vara längre, att användaren inte behöver logga in lika ofta och att användarupplevelsen i allmänhet är smidigare.
-* **Webbläsarupplevelser på enheter med HTML5-funktioner**- På enheter som inte är Flash och som har webbläsarfunktioner i HTML5 har Adobe Primetime-autentisering ett alternativt sätt att begränsa skyddet för webbläsarbaserade integreringar. Men eftersom enhetsbindningen för HTML5 inte är lika stark är TTL (time-to-live) för token på HTML5-plattformar vanligtvis kortare.
-* **Inbyggt stöd för enheter hemma och utanför** - Adobe erbjuder systemspecifika SDK:er per operativsystem (iOS, Android, Windows 8 osv.) som ger ökad säkerhet över HTML 5-lösningen. Dessa SDK:er använder inbyggda API:er för att hämta ett enhets-ID och skicka det säkert till Adobe Primetime autentiseringsserver.
+* **Enheter med Flash** - När Flash Player 10.1+ eller AIR 2.5+ finns på enheten använder Adobe Primetime-autentiseringen Flashens Player DRM-funktion för skydd, som också kallas Flash Access. Flash ger en extra skyddsnivå. Den starka säkerheten för enhetsbindning för Flash-baserade tokens innebär i de flesta fall att time-to-live kan vara längre, att  inte behöver logga in lika ofta och att användarupplevelsen i allmänhet är smidigare.
+* **Webbläsarupplevelser på enheter med HTML5-funktioner**- På enheter som inte är Flashar och som har webbläsarfunktioner i HTML5 har Adobe Primetime-autentisering ett alternativt sätt att begränsa skyddet för webbläsarbaserade integreringar. Men eftersom enhetsbindningen för HTML5 inte är lika stark är TTL (time-to-live) för token på HTML5-plattformar vanligtvis kortare.
+* **Inbyggt stöd för enheter hemma och utanför** - Adobe erbjuder systemspecifika SDK per operativsystem (iOS, Android, Windows 8 osv.) som ger ökad säkerhet över HTML 5-lösningen. Dessa SDK:er använder inbyggda API:er för att hämta ett enhets-ID och skicka det säkert till Adobe Primetime autentiseringsserver.
 * **Klientlös** - Adobe Primetime-autentisering använder HTTPS-protokollet för säker kommunikation. Dessutom måste alla samtal från en smart enhet signeras digitalt.
 
 ## Vanliga frågor {#faqs}
@@ -389,18 +388,18 @@ Adobe Primetime autentisering erbjuds via SaaS-modellen (Software as a Service).
 
 
 **Hur skiljer sig Adobe Primetime autentisering från andra TV Everywhere-lösningar?**
-Adobe Primetime autentisering har tydliga fördelar jämfört med alternativa TV Everywhere-lösningar. Direkt integrering med enskilda leverantörer ger inte flexibilitet med en enda, beständig inloggning (SSO) när användare reser från webbplats till webbplats över Internet. Adobe Primetime autentisering har också en anmärkningsvärd marknadspenetration. När en programmerare väl har integrerats med Adobe Primetime-autentisering är de direkt anslutna till Pay TV-operatörer som betjänar över 90 procent av hushållen i USA. Dessutom utnyttjar Adobe Primetime-autentisering unika säkerhetsfunktioner som är inbyggda i Flash runtime (där de är tillgängliga) för att minska risken för bedrägeri, samtidigt som SDK:er tillhandahålls så att programmerare kan ha samma TV Everywhere-funktionalitet inbyggda i inbyggda appar för mobiler och hemenheter där Flash inte är tillgängligt. Slutligen, medan Adobe Primetime autentisering är tillgänglig som en fristående tjänst erbjuder vi också möjligheten att ha nära integrering med andra Adobe-produkter och -tjänster (inklusive Primetime och Adobe Analytics) som rör leverans, skydd och intäktsgenerering av TV Everywhere-innehåll.
+Adobe Primetime autentisering har tydliga fördelar jämfört med alternativa TV Everywhere-lösningar. Direkt integrering med enskilda leverantörer ger inte flexibilitet med en enda, beständig inloggning (SSO) när användare reser från webbplats till webbplats över Internet. Adobe Primetime autentisering har också en anmärkningsvärd genomslagskraft på marknaden. När en programmerare har integrerats med Adobe Primetime-autentisering är de omedelbart anslutna till Pay TV-operatörer som betjänar över 90 % av hushållen i USA. Dessutom utnyttjar Adobe Primetime-autentisering unika säkerhetsfunktioner som är inbyggda i Flash runtime (där de är tillgängliga) för att minska risken för bedrägeri, samtidigt som SDK:er tillhandahålls så att programmerare kan ha samma TV Everywhere-funktionalitet inbyggda i inbyggda appar för mobiler och hemenheter där Flash inte är tillgänglig. Slutligen, medan Adobe Primetime autentisering är tillgänglig som en fristående tjänst erbjuder vi också möjligheten att ha nära integrering med andra Adobe-produkter och -tjänster (inklusive Primetime och Adobe Analytics) som rör leverans, skydd och intäktsgenerering av TV Everywhere-innehåll.
 
 **Hur säker är Adobe Primetime autentisering?**
 Den främsta prioriteten med Adobe Primetime autentiseringsarkitektur är att säkerställa att endast behöriga tittare autentiseras och beviljas åtkomst till premiuminnehåll. Adobe Primetime autentisering binder åtkomsten till visningsenheten och kan bidra till att begränsa strömmar, sessioner och/eller enheter för ett visst hushåll.
 
 
 **Krävs Flash Player?**
-Adobe Flash Player 11.x eller senare krävs för den striktaste enhetsbindningssäkerheten. Adobe Primetime autentisering för TV Everywhere är dock en spelare- och plattformsoberoende som integreras med alla uppspelningsprogram, inklusive Silverlight och HTML5. Dessutom ger Adobe Primetime-autentisering inbyggt stöd för enheter som iOS, Android och Xbox där Flash Player inte är tillgängligt.  Adobe Primetime-autentisering är slutligen en klientlös metod för enheter som inte kan återge webbsidor (spelkonsoler, smarta TV-apparater, digitalboxar).
+Adobe Flash Player 11.x eller senare krävs för den striktaste enhetsbindningssäkerheten. Adobe Primetime autentisering för TV Everywhere är dock en spelare och plattformsoberoende som integreras med alla uppspelningsprogram, inklusive Silverlight och HTML5. Dessutom ger Adobe Primetime-autentisering inbyggt stöd för enheter som iOS, Android och Xbox där Flash Player inte är tillgänglig.  Adobe Primetime-autentisering är slutligen en klientlös metod för enheter som inte kan återge webbsidor (spelkonsoler, smarta TV-apparater, digitalboxar).
 
 
 **Vilka enheter stöder Adobe Primetime autentisering?**
-Adobe Primetime-autentisering stöds av praktiskt taget alla enheter med webbpaketet HTML 5 för visning i webbläsare. Dessutom fortsätter Adobe Primetime-autentisering att lansera SDK:er (native software development kit) för olika enhetsspecifika plattformar som iOS, Android™ och Windows 8. Adobe Primetime-autentisering stöder delvis vissa enheter som inte är webbkompatibla (smarta TV-apparater, digitalboxar, spelkonsoler osv.) genom sina RESTful web services API:er.
+Adobe Primetime-autentisering stöds av praktiskt taget alla enheter med webbpaketet HTML5 för visning i webbläsare. Dessutom fortsätter Adobe Primetime-autentisering att lansera SDK:er (native software development kit) för olika enhetsspecifika plattformar som iOS, Android™ och Windows 8. Adobe Primetime-autentisering stöder delvis vissa enheter som inte är webbkompatibla (smarta TV-apparater, digitalboxar, spelkonsoler osv.) genom sina RESTful web services API:er.
 
 **Har Adobe Primetime autentisering stöd för de nya standarderna för TV Everywhere?**
 Adobe Primetime-autentisering är kompatibel med **CableLabs OLCA (Online Content Access)** [specifikation](https://www.cablelabs.com/specifications), som innehåller tekniska krav och arkitektur för leverans av video till en Pay TV-kund från onlinekällor. Adobe deltog i det gemensamma CableLabs-projektet för interopt-testning i juni 2011 och klarade testprocessen för en implementering av en tjänsteleverantör. Adobe Primetime-autentisering verifieras (slutförd och testad) mot OLCA-specifikationerna för autentisering. Auktoriseringskomponenten är slutförd, men testverifieringen väntar på att testmiljön för CableLabs ska släppas (ETA Nov 2011).
@@ -420,3 +419,4 @@ Slutanvändarna behöver inte betala någon extra kostnad för att använda Adob
 >[!NOTE]
 >
 >**Nästa steg:** Kontakta Adobe eller fyll i formuläret för begäran om information om du vill ha mer information [här](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>

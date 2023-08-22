@@ -2,7 +2,7 @@
 title: Amazon FireOS SSO med Clientless API Cookbook
 description: Amazon FireOS SSO med Clientless API Cookbook
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Introduktion {#Introduction}
 
-Det här dokumentet innehåller anvisningar om hur du implementerar Amazon SSO-versionen av Adobe Primetime Authentication-flödet med klientlöst API. Den första delen av detta dokument fokuserar på detaljerna i Amazon-versionen av arkitekturen för de många partners som redan är bekanta med och har erfarenhet av att implementera den.
+Det här dokumentet innehåller anvisningar om hur du implementerar Amazon SSO-versionen av Adobe Primetime Authentication-flödet med klientlöst API. Den första delen av detta dokument fokuserar på detaljerna i Amazon-versionen av arkitekturen för de många partners som redan är bekanta med och har erfarenhet av att implementera den.
 
 Den andra delen av dokumentet går igenom huvudstegen för att implementera klientlöst API för Adobe Primetime Authentication.
 
@@ -37,37 +37,37 @@ Om nyttolasten känns igen och motsvarar en autentiserad session, kommer de klie
 
 ### Så här skapar du programmet som ska använda Amazon SDK {#Build-entries}
 
-* Ladda ned och kopiera den senaste [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) till en /SSOEnabler-mapp som är parallell med programkatalogen
+* Hämta och kopiera den senaste [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) till en /SSOEnabler-mapp som är parallell med programkatalogen
 * Uppdatera manifest-/gradle-filer så att biblioteket används:
 
-   **Lägg till följande rad i din Manifest-fil:**
+  **Lägg till följande rad i din Manifest-fil:**
 
-   ```Java
-   <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
-   ```
+  ```Java
+  <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
+  ```
 
-   **Poster i övertoningsfil:**
+  **Poster i övertoningsfil:**
 
-   Under databaser:
+  Under databaser:
 
-   ```java
-   flatDir {
-        dirs '../SSOEnabler'
-   }
-   ```
+  ```java
+  flatDir {
+       dirs '../SSOEnabler'
+  }
+  ```
 
-   Lägg till under beroenden:
+  Lägg till under beroenden:
 
-   ```Java
-   provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
-   ```
+  ```Java
+  provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
+  ```
 
 
 * Hantera frånvaron av Amazon app:
 
-   Även om det inte är troligt att följeslagaren inte finns på den Amazon-enhet som programmet körs på, bör du stöta på ett ClassNotFoundException vid körning för följande klass: `com.amazon.ottssotokenlib.SSOEnabler`.
+  Även om det inte är troligt att följeslagaren inte finns på den Amazon-enhet som programmet körs på, bör du stöta på ett ClassNotFoundException vid körning för följande klass: `com.amazon.ottssotokenlib.SSOEnabler`.
 
-   Om detta skulle inträffa behöver du bara hoppa över nyttolaststeget och återgå till det vanliga PrimeTime-flödet. SSO kommer inte att aktiveras, men ett vanligt autentiseringsflöde sker normalt.
+  Om detta skulle inträffa behöver du bara hoppa över nyttolaststeget och återgå till det vanliga PrimeTime-flödet. SSO kommer inte att aktiveras, men ett vanligt autentiseringsflöde sker normalt.
 
 </br>
 
@@ -81,67 +81,66 @@ Om API-anropen av någon anledning inte returnerar någon nyttolast använder du
 
 * Hämta SSO-aktiveringsinstans:
 
-   ```Java
-   ssoEnabler = SSOEnabler.getInstance(context);
-   SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
-   ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
-   ```
+  ```Java
+  ssoEnabler = SSOEnabler.getInstance(context);
+  SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
+  ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
+  ```
 
 
-* Ange återanrop 
+* Ange återanrop
 
-   ```java
-   public static abstract class SSOEnablerCallback
-   {
-           public abstract void getSSOTokenSuccess(Bundle result);
-           public abstract void getSSOTokenFailure(Bundle result);
-   }
-   ```
+  ```java
+  public static abstract class SSOEnablerCallback
+  {
+          public abstract void getSSOTokenSuccess(Bundle result);
+          public abstract void getSSOTokenFailure(Bundle result);
+  }
+  ```
 
    * Svarspaketet innehåller:
-      * SSO-token som en sträng med nyckeln &quot;SSOToken&quot;
+      * SSO-token som en sträng med nyckeln SSOToken
    * Svarspaket för fel kommer att innehålla:
-      * felkod som int med nyckeln &quot;ErrorCode&quot;
+      * felkod som int med nyckeln ErrorCode
       * felbeskrivning som en sträng med nyckeln &quot;ErrorDescription&quot;
 
 
 * Hämta SSO-token
 
-   ```JAVA
-   Bundle getSSOTokenAsync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenAsync(Void);
+  ```
 
 * Detta API ger svar via callback-funktionen som ställs in under initieringen.
 
-   **Ex**. anrop med singleton-instans som skapats under init:
+  **Ex**. anrop med singleton-instans som skapats under init:
 
-   ```JAVA
-   ssoEnabler.getSSOTokenAsync().
-   ```
+  ```JAVA
+  ssoEnabler.getSSOTokenAsync().
+  ```
 
 
 **Synkrona API:er**
 
 * Hämta instansen av SSO-aktivering och ange återanropet
 
-   ```JAVA
-   ssoEnabler = SSOEnabler.getInstance(context);</span>
-   ```
+  ```JAVA
+  ssoEnabler = SSOEnabler.getInstance(context);</span>
+  ```
 
 * Hämta SSO-token
 
-   ```JAVA
-   Bundle getSSOTokenSync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenSync(Void);
+  ```
 
    * Detta API blockerar anropartråden och svarar med resultatpaketet. Eftersom detta är ett synkront anrop bör du inte använda det i huvudtråden.
 
-   ```JAVA
-   void setSSOTokenTimeout(long);
-   ```
+  ```JAVA
+  void setSSOTokenTimeout(long);
+  ```
 
    * Värde i millisekunder. om detta anges åsidosätter du standardvärdet för timeout på 1 minut för synk-API.
-
 
 
 ### Adobe Primetime Client-less API-uppdatering för dynamisk klientregistrering {#clientlessdcr}
@@ -150,9 +149,9 @@ Om detta är din första implementering, se **Kundfri teknisk översikt** och ko
 
 Adobe klientlöst API kräver att program använder dynamisk klientregistrering för att anropa Adobe-servrar.
 
-* Följ instruktionerna i om du vill använda dynamisk klientregistrering i ditt program [ Registrering av programmet med dynamisk klientregistrering](/help/authentication/dynamic-client-registration-management.md).
+* Följ instruktionerna i om du vill använda dynamisk klientregistrering i ditt program [Registrering av programmet med dynamisk klientregistrering](/help/authentication/dynamic-client-registration-management.md).
 
-* Följ instruktionerna i om du vill implementera API:t för registrering av dynamiska klienter för att utföra autentiserings- och auktoriseringsbegäranden till Adobe Primetime-servrar [API för dynamisk klientregistrering](/help/authentication/dynamic-client-registration-api.md) .
+* Följ instruktionerna i om du vill implementera API för registrering av dynamiska klienter för att utföra autentiserings- och auktoriseringsbegäranden till Adobe Primetime-servrar [API för dynamisk klientregistrering](/help/authentication/dynamic-client-registration-api.md) .
 
 ### API-uppdatering utan Adobe Primetime Client som använder Amazon SSO {#clientlesssso}
 
@@ -167,7 +166,7 @@ Amazon SSO-nyttolast som hämtas från Amazon SDK måste finnas på begäranden 
 
 Alla Primetime Authentication-slutpunkter har stöd för följande metoder för att ta emot identifieraren för Device-scope eller Platform-scope (finns i Amazon SSO-nyttolast):
 
-* Som rubrik: &quot;Adobe-Subject-Token&quot;
+* Som rubrik :&quot;Adobe-Subject-Token&quot;
 * Som en frågeparameter: &quot;ast&quot;
 * Som en post-parameter: &quot;ast&quot;
 
@@ -200,7 +199,7 @@ Host: sp.auth.adobe.com
 ```
 
 
-**Skicka som efterparameter**
+**Skickar som postparameter**
 
 
 ```HTTPS

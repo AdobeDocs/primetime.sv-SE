@@ -2,7 +2,7 @@
 title: Amazon FireOS - programregistrering
 description: Amazon FireOS - programregistrering
 exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -37,7 +37,7 @@ En programsats är en JWT-token som innehåller information om programmet. Alla 
 - Navigera till `Channels` och välj kanal.
 - Navigera till `Registered Applications` Tabb.
 - Klicka på `Add new application`.
-- Ange ett namn och en version för programmet och välj de plattformar som det ska vara tillgängligt på (t.ex. Android, i vårt fall).
+- Ange ett namn och en version för programmet och välj de plattformar som det ska vara tillgängligt på (t.ex. Android).
 - Ange ett domännamn genom att välja i en lista över domäner som redan har konfigurerats för din programmerare.
 - Skicka ändringarna till servern och gå sedan tillbaka till fliken Registrerade program i Kanalen.
 - Du bör se en lista med alla registrerade program. Klicka på `Download` på programmet som du just har skapat. Obs! Du kan behöva vänta några minuter innan programsatsen är klar för nedladdning.
@@ -55,8 +55,8 @@ När du har fått programsatsen måste du skicka den som en parameter i konstruk
 
 ## Så här använder du programsatsen {#use-both}
 
-I programmets resursfil `strings.xml` lägg till följande kod:
+I programmets resursfil `strings.xml` lägg till följande kod:
 
 ```XML
-<string name="software_statement">softwarestatement value</string>
+<string name="software_statement">softwarestatement value</string>
 ```

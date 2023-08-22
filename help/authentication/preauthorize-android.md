@@ -2,14 +2,14 @@
 title: Förhandsauktorisera Android
 description: Förhandsauktorisera Android
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-# Förhandsauktorisera {#preuthorize-android}
+# Förhandsauktorisera {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -18,31 +18,30 @@ ht-degree: 0%
 </br>
 
 
-API-metoden för förhandsauktorisering måste användas av program för att ett beslut om förhandsauktorisering ska kunna tas för en eller flera resurser. Förauktoriserings-API-begäran ska användas för användargränssnittstips och/eller innehållsfiltrering. En faktisk begäran om auktoriserings-API måste göras innan användaren kan få åtkomst till de angivna resurserna.
+API-metoden för förhandsauktorisering måste användas av program för att ett beslut om förhandsauktorisering ska kunna tas för en eller flera resurser. Förauktoriserings-API-begäran ska användas för användargränssnittstips och/eller innehållsfiltrering. En faktisk begäran om auktoriserings-API måste göras innan användaren kan bevilja åtkomst till de angivna resurserna.
 
 
 
 Om ett oväntat fel inträffar (t.ex. nätverksproblem, slutpunkten för MVPD-auktorisering är inte tillgänglig osv.) när en förauktoriserings-API-begäran bearbetas av Adobe Primetime Authentication Services, kommer en eller flera separerade felinformation att inkluderas för de berörda resurserna som en del av förauktoriserings-API-svarsresultatet.
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Beskrivning:** 
+**Beskrivning:**
 
 **Tillgänglighet:** v3.6.0+
 
 **Parametrar:**
 
-- *FörhandsauktoriseraBegäran*: Builder-objekt som används för att definiera begäran
-- AccessEnablerCallback: återanrop som används för att returnera API-svar
-- PreAuthzeResponse: Objekt som används för att returnera API-svarsinnehållet
+- *FörhandsauktoriseraBegäran*: Det Builder-objekt som används för att definiera begäran
+- AccessEnablerCallback : återanrop som används för att returnera API-svar
+- PreAuthzeResponse : Objektet som används för att returnera API-svarsinnehållet
 
 
 ### public class PreAuthzeRequest {#androidpreauthorizerequest}
 
-**class PreAuthzeRequest.Builder**\
- 
+**class PreAuthzeRequest.Builder**
 
 ```java
     ///
@@ -129,18 +128,18 @@ funktioner)**
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### class PreAuthzeResponse {#preauthorizeresponse}
 
@@ -150,16 +149,16 @@ funktioner)**
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -172,7 +171,7 @@ funktioner)**
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -236,9 +235,9 @@ funktioner)**
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -246,9 +245,9 @@ funktioner)**
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -257,14 +256,14 @@ funktioner)**
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-Exempel: 
+Exempel:
 
 
 ```java

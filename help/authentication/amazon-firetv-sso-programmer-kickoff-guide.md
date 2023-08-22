@@ -2,7 +2,7 @@
 title: Amazon fireTV SSO - Programmerarens startguide
 description: Amazon fireTV SSO - Programmerarens startguide
 exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Introduktion {#intro}
 
-Det här dokumentet beskriver den information som behövs för att integrera det nya **Adobe Primetime authentication&#39;s fireTV SDK** i ditt FireTV-program. Denna nya SDK utnyttjar integreringen på operativsystemsnivå på Amazon FireTV-plattform och erbjuder därmed **Enkel inloggning** support. För att du ska kunna dra nytta av enkel inloggning krävs en liten insats från din sida för att migrera ditt program från klientlöst API till nya FireTV SDK. Det finns några förändringar i autentiseringsflödena som beskrivs nedan.
+I det här dokumentet beskrivs den information som behövs för att integrera det nya **Adobe Primetime authentication&#39;s fireTV SDK** i ditt FireTV-program. Denna nya SDK utnyttjar integreringen på operativsystemsnivå på Amazon FireTV-plattform och erbjuder därmed **Enkel inloggning** support. För att du ska kunna dra nytta av enkel inloggning krävs en liten insats från din sida för att migrera ditt program från klientlöst API till nya FireTV SDK. Det finns några förändringar i autentiseringsflödena som beskrivs nedan.
 
 ## Arkitektur på hög nivå och integration på operativsystemnivå {#high}
 
@@ -56,7 +56,7 @@ Jämfört med befintlig Android SDK kommer autentiseringsprocessen att vara enkl
 1. Hur kommer **SSO** arbete?
 
    * SSO fungerar för alla programmerarprogram som drivs av Adobe Primetime-autentisering och som använder den nya FireTV SDK på samma Amazon FireTV-enhet
-   * enkel inloggning mellan programmeringsappar som implementeras på klientlöst REST API och appar som implementeras på FireTV SDK **stöds INTE**
+   * enkel inloggning mellan programmeringsappar som implementeras på klientlöst REST API och appar som implementeras på FireTV SDK **stöds INTE**
 
 1. Vad är MVPD-täckningen för FireTV SSO?
 
@@ -75,7 +75,7 @@ Jämfört med befintlig Android SDK kommer autentiseringsprocessen att vara enkl
 
    * Inga ändringar behövs för API:t för nedgradering. Användarupplevelsen är densamma som på Android-enheter.
 
-1. Hur **TempPass** påverkas flödena?
+1. Hur **TempPass** Påverkas flödena?
 
    * TempPass-flöden är en enda skärm och fungerar som andra inbyggda enheter.
 

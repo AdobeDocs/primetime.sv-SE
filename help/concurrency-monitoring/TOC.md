@@ -1,9 +1,10 @@
 ---
 product: adobe primetime
+feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Övervakning av samtidig användning i Primetime
 user-guide-description: Lär dig att definiera och tillämpa begränsningar för samtidig användning i flera program.
-source-git-commit: d84723842e5c540ddf83c4007da09e44b4f08eff
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

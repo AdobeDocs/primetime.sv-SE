@@ -2,7 +2,7 @@
 title: Migreringshandbok för iOS/tvOS v3.x
 description: Migreringshandbok för iOS/tvOS v3.x
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -21,7 +21,6 @@ ht-degree: 0%
 >
 > - Från och med iOS SDK version 3.1 kan implementerare nu använda WKWebView eller UIWebView som båda är tillgängliga. Eftersom UIWebView är föråldrat bör program migreras till WKWebView för att undvika problem med framtida iOS-versioner.
 > - Observera att migrering innebär att du helt enkelt byter UIWebView-klass till WKWebView. Det finns inget specifikt arbete att göra med Adobe AccessEnabler.
-
 
 </br>
 
@@ -69,9 +68,9 @@ När du har fått det anpassade URL-schemat måste du lägga till det i programm
 
 ## Avlyssnande anrop till det anpassade URL-schemat {#intercept}
 
-Detta gäller endast om ditt program tidigare aktiverat manuell hantering av Safari View Controller (SVC) via [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) anropa och för specifika MVPD-filer som kräver Safari View Controller (SVC), vilket innebär att URL:er för autentisering och utloggning måste läsas in av en SFSafariViewController-styrenhet i stället för en UIWebView/WKWebView-styrenhet.
+Detta gäller endast om ditt program tidigare aktiverat manuell hantering av Safari View Controller (SVC) via [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) anropa och för specifika MVPD-filer som kräver Safari View Controller (SVC), vilket innebär att URL:er för autentisering och utloggning måste läsas in av en SFSafariViewController-styrenhet i stället för en UIWebView/WKWebView-styrenhet.
 
-Under autentiserings- och utloggningsflöden måste ditt program övervaka aktiviteten i `SFSafariViewController `styrenhet när den går igenom flera omdirigeringar. Programmet måste identifiera tidpunkten då det läser in en specifik anpassad URL som definieras av din `application's custom URL scheme` (t.ex.`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. När kontrollenheten läser in den här anpassade URL:en måste programmet stänga `SFSafariViewController` och anropa AccessEnablers `handleExternalURL:url `API-metod.
+Under autentiserings- och utloggningsflöden måste ditt program övervaka aktiviteten i `SFSafariViewController `när den går igenom flera omdirigeringar. Programmet måste identifiera tidpunkten då det läser in en specifik anpassad URL som definieras av din `application's custom URL scheme` (till exempel`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. När kontrollenheten läser in den här anpassade URL:en måste programmet stänga `SFSafariViewController` och anropa AccessEnablers `handleExternalURL:url `API-metod.
 
 I `AppDelegate` lägg till följande metod:
 
@@ -129,7 +128,7 @@ blir:
 
 ## Ersätt getAuthenticationToken-metod med handleExternalURL-metod {#replace}
 
-`getAuthentication` tidigare har en metod använts för att slutföra autentiseringsflödet. Eftersom namnet var vilseledande, döptes det om till `handleExternalURL` och tar URL:en som parameter.
+`getAuthentication` tidigare har en metod använts för att slutföra autentiseringsflödet. Eftersom namnet var vilseledande, döptes det om till `handleExternalURL` och tar URL:en som en parameter.
 
 Ändra alla förekomster av detta:
 

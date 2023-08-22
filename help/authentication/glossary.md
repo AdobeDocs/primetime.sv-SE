@@ -2,7 +2,7 @@
 title: Ordlista
 description: Ordlista
 exl-id: e64a94f6-7460-4aa8-8d6b-e0553ba1e4ec
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Se [Användar-ID](#user-id).
 
 ## IdP {#idp}
 
-Identifiera leverantör synonym med MVPD inom ramen för en MVPD-roll i en Adobe Primetime-autentiseringsintegrering. (Kunderna måste verifiera sin identitet via sin Pay TV-leverantörs inloggningssida.)
+Identifiera leverantör; synonym med MVPD i samband med en MVPD-roll i en Adobe Primetime-autentiseringsintegrering. (Kunderna måste verifiera sin identitet via sin Pay TV-leverantörs inloggningssida.)
 
 ## Media Token Verifier {#media-token-verifier}
 
@@ -68,11 +68,11 @@ Ett bibliotek som tillhandahålls av Adobe och som används av programmerare fö
 
 ## MVPD {#mvpd}
 
-Distributör av flerkanalsvideo-programmering. synonym med&quot;Pay TV Provider&quot;.
+Distributör av flerkanalsvideo-programmering; synonym med&quot;Betala-tv-leverantör&quot;.
 
 ## MVPD-ID {#mvpd-id}
 
-Se [Användar-ID](#user-id).
+Se [Användar-ID](#user-id).
 
 ## Partner-ID {#partner-id}
 
@@ -88,7 +88,7 @@ Synonym med&quot;innehållsleverantör&quot;,&quot;konto&quot;,&quot;kanal&quot;
 
 ## Proxy MVPD {#proxy-mvpd}
 
-ett sidoskydd som tillhandahåller identitetstjänster för andra sidoskydd, direkt integrerat med Adobe Primetime autentisering.
+Ett MVPD som tillhandahåller identitetstjänster för andra MVPD-program, direkt integrerat med Adobe Primetime-autentisering.
 
 ## Proxibel MVPD {#proxied-mvpd}
 
@@ -96,11 +96,11 @@ Ett MVPD som inte är direkt integrerat med Adobe SP, men som är integrerat gen
 
 ## Begärande-ID {#requestor-id}
 
-Identifierar unikt en [Programmer](#programmer) (ett konto, varumärke, kanal eller egendom) inom Adobe Primetime autentisering. Detta ID bestäms mellan Programmer och Adobe under den första konfigurationen av kontot. På webben är beställar-ID:t kopplat till en uppsättning godkända domäner. Alla samtal som använder ett ID från en extern domän nekas. Programmerare använder också begärande-ID:t för analys. Det finns vanligtvis bara ett begärande-ID per programmerare. Ytterligare en funktion som rör begärande-ID är att programmeraren måste förse Adobe med ett offentligt certifikat, eftersom setRequestor-API-anropet förväntar att krypterade data skickas, som används för att autentisera programmeraren i Adobe Primetime autentiseringssystem.
+Identifierar unikt en [Programmer](#programmer) (ett konto, varumärke, kanal eller egendom) inom Adobe Primetime autentisering. Detta ID bestäms mellan Programmer och Adobe under den första konfigurationen av kontot. På webben är det begärda ID:t associerat med en uppsättning godkända domäner. Alla anrop som använder ett ID från en extern domän nekas. Programmerare använder också begärande-ID:t för analys. Det finns vanligtvis bara ett begärande-ID per programmerare. Ytterligare en funktion som rör begärande-ID är att programmeraren måste förse Adobe med ett offentligt certifikat, eftersom setRequestor-API-anropet förväntar att krypterade data skickas, som används för att autentisera programmeraren i Adobe Primetime autentiseringssystem.
 
 ## Resurs-ID {#resource-id}
 
-En sträng eller mRSS-resurs som identifierar en [Programmer](#programmer) till MVPD. Programmeraren och de yrkesmässiga programmeringsdokumenten kommer överens om detta. Adobe Primetime-autentisering skickar resurs-ID:t utan att ändras, så det måste vara samma för alla MVPD-program. En programmerare kan använda flera resurs-ID:n så länge som programmeringsprofilerna är medvetna om vad varje ID representerar.
+En sträng eller mRSS-resurs som identifierar en [Programmer](#programmer) till MVPD. Programmeraren och distributörerna av videoprogrammeringstjänster kommer överens om detta. Adobe Primetime-autentiseringen överför resurs-ID:t utan att ändras, så det måste vara samma för alla videoprogrammeringsmärken. En programmerare kan använda flera resurs-ID:n så länge som programmeringsprofilerna är medvetna om vad varje ID representerar.
 
 ## SessionGUID {#sessionGUID}
 
@@ -116,11 +116,11 @@ En term som används i hela Adobe Primetime autentiseringsdokumentation för att
 
 ## SP{#sp}
 
-tjänsteleverantör, det här refererar vanligtvis till *roll* av SP, spelas upp av Adobe Primetime-autentisering, agerar för en programmerare i en integrering med en [MVPD](#mvpd).
+Tjänsteleverantör; detta avser vanligtvis *roll* av SP, spelas upp av Adobe Primetime-autentisering, agerar för en programmerare i en integrering med en [MVPD](#mvpd).
 
 ## Temporärt pass {#temp-pass}
 
-En funktion som ger programmerare tillfällig kostnadsfri åtkomst till betalinnehåll. Åtkomst är per beställare, för en programmerspecificerad tidsperiod.
+En funktion som ger programmerare tillfällig kostnadsfri åtkomst till betalinnehåll. Åtkomst är per beställare, för en programmerangiven tidsperiod.
 
 ## TTL {#ttl}
 

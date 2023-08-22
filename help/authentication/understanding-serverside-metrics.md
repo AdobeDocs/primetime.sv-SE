@@ -2,9 +2,9 @@
 title: Förstå mått på serversidan
 description: Förstå mått på serversidan
 exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Introduktion {#intro}
 
-I det här dokumentet beskrivs de mått för Adobe Primetime-autentisering på serversidan som genereras av ESM-tjänsten (Entitlement Service Monitoring). Det beskriver inte samma händelser som de ser ur kundsidans perspektiv (vad programmerare skulle se om de skulle implementera en mättjänst som Adobe Analytics på sin sida/i sin tillämpning).  
+I det här dokumentet beskrivs de mått för Adobe Primetime-autentisering på serversidan som genereras av ESM-tjänsten (Entitlement Service Monitoring). Det beskriver inte samma händelser som de ser ur kundsidans perspektiv (vad programmerare skulle se om de skulle implementera en mättjänst som Adobe Analytics på sin sida/i sin tillämpning).
 
 ## Sammanfattning av händelser {#events_summary}
 
@@ -28,14 +28,14 @@ Följande händelser genereras från Adobe Primetime autentiseringsserver:
 
    * Meddelande om AuthN-försök - Detta genereras när användaren skickas till MVPD-inloggningswebbplatsen.
    * Meddelande om väntande AuthN - Om användaren lyckas logga in med sitt MVPD genereras detta när användaren omdirigeras tillbaka till Primetime-autentisering.
-   * Meddelande om AuthN beviljad - Detta genereras när användaren är tillbaka på programmerarens webbplats och har hämtat autentiseringstoken från Primetime-autentisering. 
+   * Meddelande om AuthN beviljad - Detta genereras när användaren är tillbaka på programmerarens webbplats och har hämtat autentiseringstoken från Primetime-autentisering.
 * **Auktoriseringsflöde** (Det är bara att kontrollera om du har en MVPD-fil)\
-   *Krav:* En giltig AuthN-token
+  *Krav:* En giltig AuthN-token
    * Meddelande om AuthZ-försök
    * Meddelande om AuthZ beviljad
 * **Begäran om uppspelning har slutförts**\
-   *Krav:* Giltiga AuthN- och AuthZ-tokens
-   * Meddelande om en kontroll med Adobe Primetime-autentisering 
+  *Krav:* Giltiga AuthN- och AuthZ-tokens
+   * Meddelande om en kontroll med Adobe Primetime-autentisering
    * En uppspelningsbegäran kräver både en given autentisering och en given auktorisering
 
 
@@ -51,7 +51,14 @@ Antalet unika användare beskrivs i detalj i [Unika användare](#unique-users) n
 
 I följande exempel visas serversidesstatistik för en månad för ett varumärke:
 
-| Mått | MVPD 1 | MVPD 2 | ... | MVPD n | Totalt | | — | — | — | - | — | — | | Slutförda autentiseringar | 1125 | 2892 | | 2203 | SUM(MVP1+...MVPD n) | | Slutförda auktoriseringar | 2527 | 5603 | | 5904 | SUM(MVP1+...MVPD n) | | Slutförda uppspelningsbegäranden | 4201 | 10518 | | 10737 | SUM(MVP1+...MVPD n) | | Unika användare | 1375 | 2400 | | 2890 | SUM för alla användare för alla deduplicerade MVPD-filer\* | | Attempted Authentications | 2147 | 3887 | | 3108 | SUM(MVP1+...MVPD n) | | Attempted Authorizations | 2889 | 6139 | | 6039 | SUM(MVP1+...MVPD n) |
+| Mått | MVPD 1 | MVPD 2 | … | MVPD n | Totalt |
+| -------------------------- | ------ | ------ | - | ------ | ---------------------------------------------- |
+| Slutförda autentiseringar | 1125 | 2892 |   | 2203 | SUM(MVP1+...MVPD n) |
+| Slutförda auktoriseringar | 2527 | 5603 |   | 5904 | SUM(MVP1+...MVPD n) |
+| Slutförda uppspelningsbegäranden | 4201 | 10518 |   | 10737 | SUM(MVP1+...MVPD n) |
+| Unika användare | 1375 | 2400 |   | 2890 | SUM för alla användare för alla deduplicerade MVPD-filer\* |
+| Försök till autentisering | 2147 | 3887 |   | 3108 | SUM(MVP1+...MVPD n) |
+| Attempted Authorizations | 2889 | 6139 |   | 6039 | SUM(MVP1+...MVPD n) |
 
 </br>
 
@@ -73,9 +80,9 @@ I flödet ingår rundresor till distributörer av videoprogrammeringstjänster f
 
 
 
-När flödet är klart cachelagras autentiserings- och auktoriseringstoken på användarens enhet. TTL-värdena (Time-to-Live) för autentiseringstoken är mellan 6 timmar och 90 dagar. Ett AuthN-tokenförfallodatum tvingar automatiskt en AuthZ-token att upphöra. TTL-värdet för auktoriseringstoken är vanligtvis 24 timmar.
+När flödet är klart cachelagras autentiserings- och auktoriseringstoken på användarens enhet. TTL-värdena (Time-to-Live) för autentiseringstoken är mellan 6 timmar och 90 dagar. Ett AuthN-tokenförfallodatum tvingar automatiskt en AuthZ-token att upphöra. TTL-värdet för auktoriseringstoken är vanligtvis 24 timmar.
 
-| Händelser på serversidan utlösta | <ul><li>Autentiseringsförsök, väntande autentisering, beviljad autentisering</li><li>Auktoriseringsförsök, auktorisering beviljad</li><li>Begäran om slutförd uppspelning</li></ul> |
+| Händelser på serversidan som utlösts | <ul><li>Autentiseringsförsök, väntande autentisering, beviljad autentisering</li><li>Auktoriseringsförsök, auktorisering beviljad</li><li>Begäran om slutförd uppspelning</li></ul> |
 |---|---|
 
 
@@ -91,7 +98,7 @@ För användare som har giltiga AuthZ- och AuthN-tokens cachelagrade utförs fö
 Detta aktiveras automatiskt vid anrop `getAuthorization()`och endast omfattar kontroller med Adobe Primetime-autentisering. MVPD är inte involverat i det här flödet.
 
 
-| Händelser på serversidan utlösta | * Uppspelningsbegäran lyckades |
+| Händelser på serversidan som utlösts | * Uppspelningsbegäran lyckades |
 |---|---|
 
 
@@ -105,16 +112,16 @@ För användare som fortfarande har giltiga AuthN-tokens utförs följande steg:
 Detta flöde innebär en rundtur till MVPD.
 
 
-| Händelser på serversidan utlösta | <ul><li>Auktoriseringsförsök, auktorisering OK</li><li>Begäran om slutförd uppspelning</li> |
+| Händelser på serversidan som utlösts | <ul><li>Auktoriseringsförsök, auktorisering OK</li><li>Begäran om slutförd uppspelning</li> |
 |---|---|
 
 ## Autentiseringshändelser {#authn_events}
 
 ### Autentiseringsförsök {#authentication-attempt}
 
-Som framgår av diagrammet ovan aktiveras autentiseringshändelserna endast när användaren gör en rundtur till sidoskyddet. Autentiseringshändelser innehåller inte cachelagrade tokenautentiseringar.
+Som framgår av diagrammet ovan aktiveras autentiseringshändelserna endast när användaren gör en rundtur till MVPD. Autentiseringshändelserna innehåller inte cachelagrade tokenautentiseringar.
 
-Autentiseringsförsökshändelsen utlöses när användaren har klickat på ett visst MVPD från väljaren.
+Autentiseringsförsökshändelsen utlöses efter att användaren har klickat på ett visst MVPD från väljaren.
 
 * Den första händelsen på MVPD-sidan som ligger nära detta är sidinläsningen
 * Adobe Primetime-autentisering räknar inte upprepade inloggningsförsök från användaren på MVPD-sidan (felaktigt lösenord, försök igen)
@@ -129,12 +136,12 @@ Den här händelsen inträffar när omdirigeringsprocessen till Adobe Primetime-
 
 Användaren är en känd prenumerant på MVPD, vanligtvis med en Pay TV-prenumeration, men ibland med enbart Internet-åtkomst. En lyckad autentisering kan inträffa antingen på grund av att användaren uttryckligen angav giltiga inloggningsuppgifter med sitt MVPD, eller på grund av att han/hon tidigare hade angett giltiga inloggningsuppgifter och kontrollerat &quot;kom ihåg mig&quot; (och den tidigare sessionen inte hade gått ut).
 
-MVPD skickar därför Adobe Primetime-autentisering ett positivt svar på autentiseringsbegäran och Adobe Primetime-autentisering skapar en *AuthN-token*.
+MVPD skickar därför Adobe Primetime-autentisering ett positivt svar på autentiseringsbegäran och Adobe Primetime-autentisering skapar en *AuthN-token*.
 
 * Autentisering cachelagras vanligtvis under en lång tid (en månad eller mer). På grund av detta kommer autentiseringshändelser inte längre att finnas förrän token upphör att gälla och flödet startas igen.
 * När du kommer in från en annan webbplats/app via enkel inloggning aktiveras inga autentiseringshändelser.
 
- 
+
 
 ### Komcast Authentication {#comcast-authentication}
 
@@ -142,11 +149,11 @@ Comcast har ett annat AuthN-flöde än resten av de alternativa programmeringsdo
 
 Följande funktioner beskriver skillnaderna:
 
-* **Sessionscookie, beteende**: Detta gör att alla autentiseringstoken tas bort fullständigt när användaren har stängt webbläsaren. Den här funktionen finns endast på webben. Huvudsyftet är att se till att din Comcast-session inte är beständig på osäkra/delade datorer. Effekten blir att fler autentiseringsförsök/beviljade flöden görs än för resten av de alternativa dokumentationsdokumenten.
+* **Sessionscookie, beteende**: Detta medför att alla autentiseringstoken tas bort fullständigt när användaren har stängt webbläsaren. Den här funktionen finns endast på webben. Huvudsyftet är att se till att din Comcast-session inte är beständig på osäkra/delade datorer. Effekten blir att fler autentiseringsförsök/beviljade flöden görs än för resten av de alternativa dokumentationsdokumenten.
 
 * **AuthN per beställarID**: Comcast tillåter inte att AuthN-tillstånd cachas från ett begärande-ID till ett annat. På grund av detta måste varje webbplats/app gå till Comcast för att få en autentiseringstoken. Förutom att ta hänsyn till användarupplevelser, är effekten, som ovan, att fler autentiseringsförsök/händelser som beviljats kommer att genereras.
 
-* **Passiv autentisering**: För att förbättra användarupplevelsen men ändå behålla funktionen AuthN per requestID, sker ett passivt autentiseringsflöde i en dold iFrame. Användaren kommer inte att se något, men händelserna kommer fortfarande att utlösas som tidigare.
+* **Passiv autentisering**: För att förbättra användarupplevelsen men ändå behålla funktionen AuthN per requestID inträffar ett passivt autentiseringsflöde i en dold iFrame. Användaren kommer inte att se något, men händelserna kommer fortfarande att utlösas som tidigare.
 
 Om användaren klickar på &quot;kom ihåg mig&quot; på inloggningssidan för Comcast, kommer efterföljande besök på den här sidan (under en tvåveckorsperiod) bara att vara en snabb omdirigering. Annars måste användarna autentisera på sidan.
 
@@ -160,26 +167,26 @@ I majversionen 2013 kommer Adobe Primetime-autentisering att lägga till felkode
 
 Ett intressant mått som programmerare kan spåra är konverteringsgraden för autentisering, beräknad som (AuthN-begäranden/AuthN-beviljad) %.
 
-Några kommentarer om mätvärdena:
+Nedan följer några kommentarer om mätvärdena:
 
 * Eftersom det är ett händelsebaserat mått återspeglar det inte riktigt användarens unika konverteringsfrekvens - om en användare försöker åtta gånger och lyckas nionde gången - så kommer detta att avspegla sig mycket dåligt i konverteringsgraden ovan.
-* Adobe Primetime-autentisering (på serversidan) kan inte (än) beräkna en unik baserad autentiseringskonvertering.
+* Det finns ännu inget sätt att beräkna en unik baserad autentiseringskonvertering med Adobe Primetime-autentisering (på serversidan).
 * Om det finns automatiska AuthN-försök i webbplatsen/appen skevas även mätvärdena ovan.
 
 ## Auktoriseringshändelser {#authorization_events}
 
 ### Auktoriseringsförsök {#authorization_attempt}
 
-Förutom att hämta en autentiseringstoken måste användarna också få en autentiseringstoken innan de kan spela upp innehåll. Detta sker vanligtvis efter autentisering eller om auktoriseringstoken förfaller. Eftersom kontrollen görs på serversidan (från Adobe Primetime autentiseringsservrar till MVPD-servrar) behöver användaren inte göra något.
+Förutom att hämta en autentiseringstoken måste användarna också få en autentiseringstoken innan de kan spela upp innehåll. Detta sker vanligtvis efter autentisering eller om auktoriseringstoken förfaller. Eftersom kontrollen görs på serversidan (från Adobe Primetime autentiseringsservrar till MVPD-servrar) behöver användaren inte göra något.
 
 ### Tillstånd beviljad {#authorization-granted}
 
 En&quot;auktorisering beviljad&quot; signalerar att den autentiserade användarens prenumeration innehåller den begärda programmeringen.
 
-Observera att inte alla dokumentationsdokument för sidoskydd stöder ett separat steg för godkännande. för viss autentisering är lika med auktorisering. MVPD skickar ett svar på AuthZ-begäran via Adobe Primetime-autentisering och Adobe Primetime-autentisering skapar en AuthZ-token.
+Observera att inte alla programmeringsdokument har stöd för ett separat auktoriseringssteg. För viss autentisering är autentiseringen lika med auktorisering. MVPD skickar ett svar på AuthZ-begäran via Adobe Primetime-autentisering och Adobe Primetime-autentisering skapar en AuthZ-token.
 
 * AuthZ-token cachelagras under en tidsperiod, vanligtvis 24 timmar Under den här perioden utlöses inga AuthZ-händelser.
-* Vissa auktoriseringar på tillgångsnivå fungerar tillsammans med auktoriseringar på kanalnivå. - Beroende på vilket som används utlöses fler eller färre AuthZ-händelser. Även för auktorisering på kanalnivå finns cachelagring - så om samma resurs begärs på mindre än 24 timmar aktiveras inga händelser.
+* Vissa MVPD-program fungerar med auktoriseringar på tillgångsnivå, andra fungerar med auktoriseringar på kanalnivå - beroende på vilken som används utlöses fler eller färre AuthZ-händelser. Även för auktorisering på kanalnivå finns cachelagring - så om samma resurs begärs på mindre än 24 timmar aktiveras inga händelser.
 
 ### Behörighet nekad {#authorization-denied}
 
@@ -221,13 +228,13 @@ Detta antal omfattar alla händelser från Adobe Primetime-autentisering, minus 
 
 #### Dag 1 {#day1}
 
-Användare XYZ går till webbplatsen för att se en video.
+Användare XYZ går till webbplatsen för att titta på en video.
 
 Utlösta händelser:
 
 * AuthN-försök (ingen unik användare ännu)
 * AuthN beviljad
-   * just nu identifierar vi användaren utifrån vad som returneras av MVPD, så det dagliga antalet unika användare ökas med 1
+   * nu identifierar vi användaren unikt baserat på vad som returneras av MVPD, så det dagliga antalet unika användare ökas med 1
    * AuthN-token cachelagras i 30 dagar
 * AuthZ-försök/beviljad händelse
    * AuthZ-token cachelagrad i 1 dag

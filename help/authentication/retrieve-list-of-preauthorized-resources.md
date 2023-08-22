@@ -2,7 +2,7 @@
 title: Hämta lista över förauktoriserade resurser
 description: Hämta lista över förauktoriserade resurser
 exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -36,9 +36,9 @@ En begäran om Adobe Primetime-autentisering om att få en lista över föraukto
 Det finns två uppsättningar API:er: en uppsättning för Streaming App eller Programmer Service och en uppsättning för Second Screen Web App. Den här sidan beskriver API:t för Streaming App eller Programmer Service.
 
 
-| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
+| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/preauthorized | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. begärande (obligatoriskt)</br>2.  deviceId (obligatoriskt)</br>3.  resurslista (obligatoriskt)</br>4.  device_info/X-Device-Info (obligatoriskt)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Föråldrat)</br>7.  _appId_ (Föråldrat) | GET | XML eller JSON som innehåller individuella beslut före auktorisering eller felinformation. Se exemplen nedan. | 200 - lyckades</br></br>400 - Ogiltig begäran</br></br>401 - Obehörig</br></br>405 - Metoden är inte tillåten  </br></br>412 - Förhandsvillkoret misslyckades</br></br>500 - Internt serverfel |
+| &lt;sp_fqdn>/api/v1/preauthorized | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. beställare (obligatoriskt)</br>2.  deviceId (obligatoriskt)</br>3.  resurslista (obligatoriskt)</br>4.  device_info/X-Device-Info (obligatoriskt)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Föråldrat)</br>7.  _appId_ (Föråldrat) | GET | XML eller JSON som innehåller individuella beslut före auktorisering eller felinformation. Se exemplen nedan. | 200 - lyckades</br></br>400 - Ogiltig begäran</br></br>401 - Obehörig</br></br>405 - Metoden är inte tillåten  </br></br>412 - Förhandsvillkoret misslyckades</br></br>500 - Internt serverfel |
 
 
 | Indataparameter | Beskrivning |
@@ -46,16 +46,16 @@ Det finns två uppsättningar API:er: en uppsättning för Streaming App eller P
 | begärande | Programmerarens requestId som den här åtgärden är giltig för. |
 | deviceId | Byte för enhets-ID. |
 | resurslista | En sträng som innehåller en kommaavgränsad lista med resourceIds som identifierar det innehåll som kan vara tillgängligt för en användare och som känns igen av MVPD-auktoriseringsslutpunkter. |
-| device_info/</br></br>X-Device-Info | Information om direktuppspelningsenhet.</br></br>**Anteckning**: Detta kan skickas som en URL-parameter för device_info, men på grund av parameterns potentiella storlek och begränsningar i längden på en GET-URL bör det skickas som X-Device-Info i http-huvudet. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | Enhetstypen (till exempel Roku, PC).</br></br>Om den här parametern är korrekt angiven erbjuder ESM värden som är [uppdelad per enhetstyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) när du använder Klientlös, så att olika typer av analyser kan utföras, till exempel Roku, AppleTV och Xbox.</br></br>Se, [fördelar med att använda enhetstypparameter utan klient i passningsvärden ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Anteckning**: den `device_info` ersätter den här parametern. |
+| device_info/</br></br>X-Device-Info | Information om direktuppspelningsenhet.</br></br>**Anteckning**: Detta kan skickas som en URL-parameter, men på grund av parameterns potentiella storlek och begränsningar i längden på en GET-URL, bör det skickas som X-Device-Info i http-huvudet. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | Enhetstypen (till exempel Roku, PC).</br></br>Om den här parametern är korrekt angiven erbjuder ESM värden som är [uppdelad per enhetstyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) när du använder Klientlös, så att olika typer av analyser kan utföras, till exempel Roku, AppleTV och Xbox.</br></br>Se, [fördelar med att använda enhetstypparameter utan klient i passningsvärden ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Anteckning**: `device_info` ersätter den här parametern. |
 | _deviceUser_ | Enhetens användaridentifierare. |
-| _appId_ | Program-ID/namn. </br></br>**Anteckning**: device_info ersätter den här parametern. |
+| _appId_ | Program-ID/namn. </br></br>**Anteckning**: device_info ersätter den här parametern. |
 
 
 
 ### Exempelsvar {#sample-response}
 
- 
+
 
 **XML:**
 
@@ -85,7 +85,7 @@ Content-Type: application/xml; charset=utf-8
   </resource>
 </resources>
 ```
- 
+
 </br>
 
 **JSON:**

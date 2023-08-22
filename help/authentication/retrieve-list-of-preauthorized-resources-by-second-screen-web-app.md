@@ -2,7 +2,7 @@
 title: Hämta lista över förauktoriserade resurser per webbapp för sekundär skärm
 description: Hämta lista över förauktoriserade resurser per webbapp för sekundär skärm
 exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -35,8 +35,10 @@ En begäran om Adobe Primetime-autentisering om att få en lista över föraukto
 
 Det finns två uppsättningar API:er: en uppsättning för Streaming App eller Programmer Service och en uppsättning för Second Screen Web App. Den här sidan beskriver API:t för AuthN-appen.
 
- \
-| Slutpunkt | Anropad  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorized/{registration code} | AuthN-modul | 1.  registreringskod  </br>    (Bankomponent)</br>2.  begärande (obligatoriskt)</br>3.  resurslista (obligatoriskt) | GET | XML eller JSON som innehåller individuella beslut före godkännande eller felinformation. Se exemplen nedan. | 2000 - Slutfört</br></br>400 - Ogiltig begäran</br></br>401 - Obehörig</br></br>405 - Metoden är inte tillåten  </br></br>412 - Förhandsvillkoret misslyckades</br></br>500 - Internt serverfel |
+
+| Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
+| --- | --- | --- | --- | --- | --- |
+| &lt;sp_fqdn>/api/v1/preAuthze/{registreringskod} | AuthN-modul | 1. Registreringskod  </br>    (Bankomponent)</br>2.  begärande (obligatoriskt)</br>3.  resurslista (obligatoriskt) | GET | XML eller JSON som innehåller individuella beslut före auktorisering eller felinformation. Se exemplen nedan. | 200 - lyckades</br></br>400 - Ogiltig begäran</br></br>401 - Obehörig</br></br>405 - Metoden är inte tillåten  </br></br>412 - Förhandsvillkoret misslyckades</br></br>500 - Internt serverfel |
 
 
 
@@ -58,23 +60,23 @@ Adobe-Response-Confidence : full
 Content-Type: application/xml; charset=utf-8
 
 <resources>
-    <resource>
-        <id>TestStream1</id>
-        <authorized>true</authorized>
-    </resource>
-    <resource>
-        <id>TestStream2</id>
-        <authorized>false</authorized>  
-        <error>
-            <status>403</status>
-            <code>authorization_denied_by_mvpd</code>
-            <message>User not authorized</message>
-            <details>Your subscription package does not include the "TestStream3" channel.</details>
-            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
-            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
-            <action>none</action>
-        </error>
-    <resource>
+    <resource>
+        <id>TestStream1</id>
+        <authorized>true</authorized>
+    </resource>
+    <resource>
+        <id>TestStream2</id>
+        <authorized>false</authorized>  
+        <error>
+            <status>403</status>
+            <code>authorization_denied_by_mvpd</code>
+            <message>User not authorized</message>
+            <details>Your subscription package does not include the "TestStream3" channel.</details>
+            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
+            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
+            <action>none</action>
+        </error>
+    <resource>
 </resources>
 ```
 

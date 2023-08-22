@@ -1,57 +1,57 @@
 ---
-title: Kundfri API-implementering - felkoder/meddelanden med trolig orsak/orsak
-description: Kundfri API-implementering - felkoder/meddelanden med trolig orsak/orsak
+title: Klientlös API-implementering - Felkoder / meddelanden med sannolik orsak / orsak
+description: Klientlös API-implementering - Felkoder / meddelanden med sannolik orsak / orsak
 exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# Kundfri API-implementering - felkoder/meddelanden med trolig orsak/orsak {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# Klientlös API-implementering - Felkoder / meddelanden med sannolik orsak / orsak {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
+>Innehållet på denna sida tillhandahålls endast i informationssyfte. Användning av detta API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
 </br>
 
 
-## Fel: Ej auktoriserad
+## Fel: Inte auktoriserad
 
-### Orsaker:
+### Orsakar:
 
-1. Auktoriseringshuvud saknas i POSTEN
-1. Problem med auktoriseringshuvud - kontrollera om begärandetiden är i millisekunder.
+1. Auktoriseringshuvud saknas i självtest vid start
+1. Problem med auktoriseringshuvudet - kontrollera om förfrågningstiden är i millisekunder.
 
-## Fel: SC 400 vid autentisering
+## Fel: SC 400 under autentisering
 
-### Orsaker:
+### Orsakar:
 
-1. Servern hittade inte registreringskoden som skapades för en specifik begärare och miljö.
-1. Du kan stöta på cross domain-skriptproblem
+1. Servern hittade inte registreringskoden, som skapades för en specifik beställare och miljö.
+1. Du kan stöta på problem med skriptkörning över flera domäner
 1. Korrekt förfalskning bör läggas till i filen /etc/hosts
 
-## Fel: 400 Ogiltig begäran
+## Fel: 400 felaktig begäran
 
 ### Orsaker:
 
-1. Felaktig URL för POST/GET
-1. SAMLAsertionParserException - Den krypterade SAML-kontrollen kunde inte dekrypteras på Adobe end
+1. Felaktig webbadress för POST/GET
+1. SAMLAssertionParserException – Den krypterade SAML-försäkran kunde inte dekrypteras i slutet av Adobe
 
-## Fel: 403 Ej tillåtet
+## Fel: 403 Förbjuden
 
-### Orsaker:
+### Orsakar:
 
 1. För många snabba förfrågningar - en funktion i API-hanteringen för att förhindra DoS-attacker.
-2. Om du använder en fördefinierad miljö lägger du till förfalskning, annars kontrollerar du att förfalskning har tagits bort från filen /etc/hosts
+2. Om du använder prequal environment lägger du till förfalskning, annars ser du till att förfalskning har tagits bort från filen /etc/hosts
 
 ## Fel: Det går inte att logga in på MVPD-sidan
 
-### Orsaker:
+### Orsakar:
 
-1. Användarnamnet och lösenordet matchar inte 
+1. Användarnamnet och lösenordet matchar inte
 2. Inloggning kan ha inaktiverats
 3. Kontrollera om inloggningen är avsedd för produktion eller mellanlagring
 

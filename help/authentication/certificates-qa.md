@@ -2,7 +2,7 @@
 title: Frågor och svar om certifikat
 description: Frågor och svar om certifikat
 exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -29,6 +29,6 @@ ht-degree: 0%
 
 </br>
 
-**Fråga 3:** Krävs ett nytt certifikat för webbsidor som ska använda det nya flexibla TempPass? 
+**Fråga 3:** Krävs ett nytt certifikat för webbsidor som ska använda det nya flexibla TempPass?
 
-**S:** Certifikatet (och vilket certifikat som helst) har konfigurerats på Media Company- och Programmer-nivå. FlexibleTempPass är ett MVPD-program, du behöver inte konfigurera något certifikat för det, så om du integrerar en befintlig programmerare med flexibelt TempPass kommer det certifikat som redan har konfigurerats på programmerings-/medieföretagsnivå att användas.
+**S:** Certifikatet (och vilket certifikat som helst) har konfigurerats på Media Company- och Programmer-nivå. FlexibleTempPass är ett MVPD-program, du behöver inte konfigurera något certifikat för det, så om du integrerar en befintlig programmerare med flexibelt TempPass kommer det certifikat som redan har konfigurerats på programmerings-/medieföretagsnivå att användas.

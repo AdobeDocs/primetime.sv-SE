@@ -2,7 +2,7 @@
 title: JavaScript SDK - översikt
 description: JavaScript SDK - översikt
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -29,15 +29,15 @@ Det allmänna tillståndsflödet för Adobe Primetime-autentisering beskrivs i [
 
 ## Skapa dialogrutan för MVPD-val {#creating-the-mvpd-selection-dialog}
 
-För att en användare ska kunna logga in på sitt MVPD och bli autentiserad måste sidan eller spelaren kunna identifiera sitt MVPD-program på ett sätt som användaren kan använda. En standardversion av en dialogruta för MVPD-val tillhandahålls för utveckling. För produktion måste du implementera en egen MVPD-väljare. 
+För att en användare ska kunna logga in på sitt MVPD-dokument och bli autentiserad måste sidan eller spelaren kunna identifiera sitt MVPD-program på ett sätt som användaren kan använda. En standardversion av en dialogruta för MVPD-val tillhandahålls för utveckling. För produktion måste du implementera en egen MVPD-väljare.
 
-Om du redan vet vem som är kundens leverantör kan du [ställa in MVPD programmatiskt](/help/authentication/home.md), utan användarinteraktion. Tekniken är densamma, men kringgår steget att anropa dialogrutan Leverantörsväljare och be kunden att välja sitt MVPD-program.
+Om du redan vet vem som är kundens leverantör kan du [ställa in MVPD programmatiskt](/help/authentication/home.md), utan användarinteraktion. Tekniken är densamma, men kringgår steget att anropa dialogrutan Leverantörsväljare och be kunden att välja sitt MVPD-program.
 
 ## Visa tjänsteleverantören {#displaying-the-service-provider}
 
 I följande kodexempel visas hur du identifierar och visar tjänsteleverantören för den aktuella kunden:
 
- **HTML** - Den här sidan lägger till ett avsnitt på sidan som visar kundens valda leverantör, om de redan är inloggade:
+**HTML** - Den här sidan lägger till ett avsnitt på sidan som visar kundens valda leverantör, om de redan är inloggade:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ I följande kodexempel visas hur du identifierar och visar tjänsteleverantören
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** Den här JavaScript-filen frågar om Access Enabler för den aktuella providern är inloggad och visar resultatet i det reserverade sidavsnittet. Den implementerar även en dialogruta för MVPD-väljare:
 
@@ -197,13 +197,13 @@ I följande kodexempel visas hur du identifierar och visar tjänsteleverantören
 
 ## Loggar ut {#logout}
 
-Utlysning `logout()` för att initiera utloggningsprocessen. Den här metoden tar inga argument. Den loggar ut den aktuella användaren, rensar all autentiserings- och auktoriseringsinformation för den användaren och tar bort alla AuthN- och AuthZ-token från det lokala systemet.
+Utlysning `logout()` för att initiera utloggningsprocessen. Den här metoden tar inga argument. Den loggar ut den aktuella användaren, rensar all autentiserings- och auktoriseringsinformation för den användaren och tar bort alla AuthN- och AuthZ-token från det lokala systemet.
 
 Det finns vissa fall där spelaren inte ansvarar för att hantera användarutloggningar:
 
- 
 
-- **När utloggningen initieras från en webbplats som inte är integrerad med Adobe Primetime-autentisering.** I det här fallet kan MVPD anropa tjänsten Adobe Primetime authentication Single Logout via en omdirigering till webbläsaren. (Anrop av SLO via ett anrop i bakkanalen stöds inte för närvarande.)
+
+- **När utloggningen initieras från en webbplats som inte är integrerad med Adobe Primetime-autentisering.** I det här fallet kan MVPD anropa tjänsten Adobe Primetime authentication Single Logout via en omdirigering till webbläsaren. (Anrop av SLO via ett anrop i bakkanalen stöds inte för närvarande.)
 
 >[!NOTE]
 >

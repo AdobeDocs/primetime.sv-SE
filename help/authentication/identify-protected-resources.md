@@ -2,7 +2,7 @@
 title: Identifiera skyddade resurser
 description: Identifiera skyddade resurser
 exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Varje auktoriseringsbegäran (eller begäran om kontroll av auktorisering) måste innehålla en unik identifierare för den skyddade resurs som användaren begär åtkomst till. En skyddad resurs kan vara vilken nivå som helst av auktoriserat innehåll, enligt överenskommelse mellan en distributör och medverkande programmerare. Potentiella skyddade resurser måste passa in i denna trädstruktur av allt mer specifik granularitet:
 
@@ -23,17 +23,16 @@ Varje auktoriseringsbegäran (eller begäran om kontroll av auktorisering) måst
    - Kanal
       - Visa
          - Episod
-            - Tillgång\
-                
+            - Tillgång
 
 </br>
 
 ## Media RSS-format {#media_rss}
 
-Resurser kan identifieras med en enkel sträng (en unik identifierare för en kanal) eller representeras i Media RSS-format (MRSS) enligt överenskommelse mellan Adobe (eller en auktoriserad partner för Adobe Primetime-autentisering) och deltagande programmerare och programmerare. Den RSS-sträng som används som resursspecificerare kan innehålla ytterligare information, till exempel klassificeringar och metadata för föräldrakontroll.\
- 
+Resurser kan identifieras med en enkel sträng (en unik identifierare för en kanal) eller representeras i Media RSS-format (MRSS) enligt överenskommelse mellan Adobe (eller en auktoriserad partner för Adobe Primetime-autentisering) och deltagande programmerare och programmerare. Den RSS-sträng som används som resursspecificerare kan innehålla ytterligare information, till exempel klassificeringar och metadata för föräldrakontroll.
 
-Om du använder en enkel resursidentifierare, till exempel&quot;TNT&quot;, antas den representera en kanal och översätts till den här RSS-resursspecificeraren:
+
+Om du använder en enkel resursidentifierare, t.ex. &quot;TNT&quot;, antas den representera en kanal och översätts till den här RSS-resursspecificeraren:
 
 ```RSS
     <rss version="2.0"> 
@@ -42,9 +41,9 @@ Om du använder en enkel resursidentifierare, till exempel&quot;TNT&quot;, antas
         </channel>
     </rss>
 ```
- 
 
-En mer komplex specificerare kan t.ex. innehålla ytterligare klassificeringsinformation. Du kan skicka hela RSS-strängen till Access Enabler-funktioner som kräver ett resurs-ID, som [`getAuthorization()`](/help/authentication/rest-api-reference.md):
+
+En mer komplex specificerare kan t.ex. innehålla ytterligare graderingsinformation. Du kan skicka hela RSS-strängen till Access Enabler-funktioner som kräver ett resurs-ID, som [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 
 ```rss
     var resource = 
@@ -57,7 +56,7 @@ En mer komplex specificerare kan t.ex. innehålla ytterligare klassificeringsinf
     getAuthorization(resource);
 ```
 
-Resursspecifikationerna är ogenomskinliga för Adobe Primetime-autentisering. De skickas helt enkelt vidare till MVPD. Om MVPD inte känner igen eller kan tolka din resursspecificerare returneras ett fel till Adobe Primetime-autentiseringen, som skickar tillbaka felet till din `tokenRequestFailed()` återanrop.
+Resursspecificerare är ogenomskinliga för Adobe Primetime-autentisering. De skickas bara till MVPD. Om MVPD inte känner igen eller kan tolka din resursspecificerare returneras ett fel till Adobe Primetime-autentiseringen, som skickar tillbaka felet till din `tokenRequestFailed()` återanrop.
 
 <!--
 ## Related Information {#related}

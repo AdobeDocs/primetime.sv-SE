@@ -2,7 +2,7 @@
 title: iOS/tvOS API-förauktorisering
 description: iOS/tvOS API-förauktorisering
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -19,33 +19,33 @@ API:t för förauktorisering kan användas för att få ett beslut om förauktor
 
 >[!IMPORTANT]
 >
->Auktoriserings-API **måste** användas innan användaren ges åtkomst till de angivna resurserna.
+>Auktoriserings-API **måste** användas innan användaren ges åtkomst till de angivna resurserna.
 
-Om resultatet för Förhandsauktorisera API-svar innehåller en eller flera resurser med ett beslut om förauktorisering som inte stöds, kan ytterligare felinformation inkluderas **(se nedan)** för varje påverkad resurs.
+Om resultatet för Förhandsauktorisera API-svar innehåller en eller flera resurser med ett beslut om förauktorisering som inte stöds, kan ytterligare felinformation inkluderas **(se nedan)** för varje påverkad resurs.
 
 >[!IMPORTANT]
 >
 >Den förbättrade felrapporteringsfunktionen som lägger till ytterligare felinformation för nekade förauktoriseringsbeslut är tillgänglig på begäran eftersom den måste aktiveras på konfigurationssidan för Adobe Primetime-autentisering.
 
-Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Primetime Authentication SDK-fel eller om ett Adobe Primetime Authentication Services-fel inträffar, kommer ytterligare en felinformation (oavsett ovanstående konfiguration) och inga resurser att inkluderas som en del av förauktoriserings-API-svarsresultatet.
+Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Primetime Authentication SDK-fel eller om ett Adobe Primetime Authentication Services-fel inträffar, kommer ytterligare en felinformation (oavsett ovanstående konfiguration) och inga resurser att inkluderas i förauktoriserings-API-svarsresultatet.
 
 </br>
 
-## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
+## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
 
 
 **Tillgänglighet:** v3.6.0+
 
 **Parametrar:**
 
-- FörhandsauktoriseraBegäran: Det begäranobjekt som används för att skicka innehållet i API-begäran.
-- AccessEnablerCallback: Det callback-objekt som används för att returnera API-svaret.
-- PreAuthzeResponse: Det svarsobjekt som används för att returnera API-svarsinnehållet.
+- PreauthorizedRequest: Det begäranobjekt som används för att skicka innehållet i API-begäran;
+- AccessEnablerCallback: Det callback-objekt som används för att returnera API-svaret;
+- PreauthorizedResponse: Det svarsobjekt som används för att returnera API-svarsinnehållet.
 
- 
+
 </br>
 
-## `class PreauthorizeRequest`{#androidpreauthorizerequest}
+## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
 ### **class PreAuthzeRequest.Builder**
 
@@ -69,7 +69,7 @@ Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Pr
     ///
     public func setResources(resources: [String]) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Sets the features which you want to have them disabled when obtaining preauthorization decisions.
@@ -88,9 +88,9 @@ Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Pr
     ///
     /// - Returns: The reference to the same `Builder` object instance which is the receiver of the function call. It does this in order to allow the creation of function chaining.
     ///
-    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
+    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Creates and retrieves the reference of a new `PreauthorizeRequest` object instance.
@@ -107,9 +107,9 @@ Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Pr
     ///
     /// - Returns: The reference to a new `PreauthorizeRequest` object instance.
     ///
-    public func build() -> PreauthorizeRequest
+    public func build() -> PreauthorizeRequest
 ```
- 
+
 
 ## **enum PreauthorizedRequest.Feature**
 
@@ -132,11 +132,11 @@ Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Pr
 ## `interface AccessEnablerCallback<PreauthorizeResponse>` {#accessenablercallback}
 
 ```
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
     public func onResponse(result: PreauthorizeResponse)
 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
     public func onFailure(result: PreauthorizeResponse)
 ```
 
@@ -150,13 +150,13 @@ Om förauktoriserings-API-begäran inte kunde hanteras på grund av ett Adobe Pr
     /// - Returns: Additional status (state) information in case of error or failure.
     ///   Might hold a `nil` value.
     ///
-    public Status getStatus()
+    public Status getStatus()
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of error or failure.
     ///
-    public List<Decision> getDecisions()
+    public List<Decision> getDecisions()
 ```
 
 ### Exempel:
@@ -193,7 +193,7 @@ Alla begärda resurser har ett positivt beslut om förhandsgodkännande
         ]
     }
 ```
- 
+
 
 En eller flera resurser har ett nekat förauktoriseringsbeslut och den förbättrade felrapporteringsfunktionen är inte aktiverad i Adobe Primetime Authentication-konfigurationen
 
@@ -216,7 +216,7 @@ En eller flera resurser har ett nekat förauktoriseringsbeslut och den förbätt
         ]
     }
 ```
- 
+
 
 En eller flera resurser har ett nekat förauktoriseringsbeslut och den förbättrade felrapporteringsfunktionen är aktiverad i Adobe Primetime Authentication-konfigurationen
 
@@ -247,29 +247,29 @@ En eller flera resurser har ett nekat förauktoriseringsbeslut och den förbätt
         ]
     }
 ```
- 
+
 
 #### Fel
 
- 
+
 
 Ett fel uppstod i Adobe Primetime autentiseringstjänster vid behandling av förauktoriserings-API-begäran
 
 ```JSON
     {
-        "resources": [],
-        "status": {
-            "status": 400,
-            "code" : "bad_request",
-            "message": "Missing required parameter : deviceId",
-            "details": "",
-            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
-            "action" : "none"
-        }
+        "resources": [],
+        "status": {
+            "status": 400,
+            "code" : "bad_request",
+            "message": "Missing required parameter : deviceId",
+            "details": "",
+            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
+            "action" : "none"
+        }
     }
 ```
- 
+
 
 #### Fel
 
@@ -385,14 +385,14 @@ Adobe Primetime Authentication SDK träffar ett fel när förauktoriserings-API-
     ///
     /// - Returns: The resource id for which the decision was obtained.
     ///
-    public Status getId()
+    public Status getId()
 
     ///
     /// This is a getter function.
     ///
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
-    public boolean isAuthorized()
+    public boolean isAuthorized()
 
     ///
     /// This is a getter function.
@@ -400,7 +400,7 @@ Adobe Primetime Authentication SDK träffar ett fel när förauktoriserings-API-
     /// - Returns: Additional status (state) information in case some error has occurred.
     ///            Might hold a `nil` value.
     ///
-    public Status getError()
+    public Status getError()
 ```
 
 </br>
@@ -417,15 +417,15 @@ let disabledFeatures: Set<PreauthorizationRequest.Feature> = [PreauthorizationRe
 
 let request: PreauthorizationRequest = PreauthorizationRequest.Builder()
 
-                  .setResources(resources: resources)
+                  .setResources(resources: resources)
 
 
-                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
+                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
 
-                  .build();
+                  .build();
 
 // Build the AccessEnablerCallback by providing the constructor two callbacks for onResponse and onFailure handling  
-func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
+func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
 TODO };
 
 func onFailureCallback(result: PreauthorizeResponse) -> Void {

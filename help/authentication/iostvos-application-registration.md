@@ -2,14 +2,14 @@
 title: iOS/tvOS - programregistrering
 description: iOS/tvOS - programregistrering
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
 
 ---
 
-# iOS/tvOS - programregistrering {#iostvos-application-registration}
+# iOS/tvOS - programregistrering {#iostvos-application-registration}
 
 >[!NOTE]
 >
@@ -65,9 +65,9 @@ När du har fått programsatsen måste du skicka den som en parameter i konstruk
 
 Skicka en biljett till <tve-support@adobe.com>. Ange kanal-ID så skapar någon från vårt supportteam ett anpassat schema åt dig.
 
-## Så här använder du det anpassade schemat {#use_custom}
+## Använda det anpassade schemat {#use_custom}
 
-I programmets `info.plist` lägger till följande kod:
+I programmets `info.plist` läggs följande kod till i filen:
 
 ```plist
     <key>CFBundleURLTypes</key>

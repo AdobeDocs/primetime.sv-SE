@@ -2,7 +2,7 @@
 title: Registreringshantering för dynamisk klient
 description: Registreringshantering för dynamisk klient
 exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
-I och med den omfattande användningen av [Android Chrome, anpassade flikar](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} och [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} i våra kunders program uppdaterar användarautentiseringsflödet i Adobe Primetime Authentication. Mer specifikt kan vi inte längre uppnå målet att behålla tillståndet så att användaragentflödet för autentisering av en MVPD-prenumerant kan spåras mellan omdirigeringar. Detta har tidigare gjorts med HTTP-cookies. Den här begränsningen är drivrutinen för att börja migrera alla API:er till OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
+I och med den omfattande användningen av [Android Chrome, anpassade flikar](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} och [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} i våra kunders program uppdaterar vi användarautentiseringsflödet i Adobe Primetime Authentication. Mer specifikt kan vi inte längre uppnå målet att behålla tillståndet så att användaragentflödet för autentisering av en MVPD-prenumerant kan spåras mellan omdirigeringar. Detta har tidigare gjorts med HTTP-cookies. Den här begränsningen är drivrutinen för att börja migrera alla API:er till OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
 
-Med den här uppdateringen blir autentiseringsklienter för Adobe OAuth 2.0-klienter och en anpassad OAuth 2.0-auktoriseringsserver distribueras för att tillgodose behoven i Adobe Primetime autentiseringstjänst.
+Med den här uppdateringen blir autentiseringsklienter för Adobe OAuth 2.0-klienter och en anpassad OAuth 2.0-autentiseringsserver distribueras för att tillgodose behoven i Adobe Primetime autentiseringstjänst.
 
 För att klientprogrammen ska kunna utnyttja OAuth 2.0-auktoriseringen måste servern registrera sig dynamiskt för att få specifik information (klientautentiseringsuppgifter) för att kunna interagera med den. Som en del av registreringsprocessen måste klienten presentera en uppsättning inbyggda metadata för klientregistreringens slutpunkt.
 
@@ -51,25 +51,25 @@ Du kan skapa ett registrerat program på två sätt i TVE Dashboard:
 
 * [Kanalnivå](#channel-level) - gör att du kan skapa ett registrerat program som är permanent länkat till enbart den här kanalen.
 
-### Skapa ett registrerat program på programmeringsnivå {#prog-level}
+### Skapa ett registrerat program på programmerarnivå {#prog-level}
 
 Gå till **Programmerare** > **Registrerade program** -fliken.
 
 ![](assets/reg-app-progr-level.png)
 
-På fliken Registrerade program klickar du på **Lägg till nytt program**. Fyll i de obligatoriska fälten i det nya fönstret.
+Klicka på fliken Registrerade program **Lägg till nytt program**. Fyll i obligatoriska fält i det nya fönstret.
 
 Som du ser i bilden nedan är fälten som du ska fylla i:
 
 * **Programnamn** - namnet på programmet
 
-* **Tilldelad till kanal** - namnet på kanalen, t</span>som det här programmet är länkat till. Standardinställningen i den nedrullningsbara masken är **Alla kanaler.** I gränssnittet kan du välja en eller flera kanaler.
+* **Tilldelad till kanal** - namnet på kanalen, t</span>som det här programmet är länkat till. Standardinställningen i den nedrullningsbara masken är **Alla kanaler.** I gränssnittet kan du välja en eller flera kanaler.
 
-* **Programversion** - som standard är detta inställt på &quot;1.0.0&quot;, men vi rekommenderar starkt att du ändrar det med din egen programversion. Om du bestämmer dig för att ändra programversionen bör du tänka på det genom att skapa ett nytt registrerat program för det.
+* **Programversion** - som standard är detta inställt på &quot;1.0.0&quot;, men vi rekommenderar starkt att du ändrar det med din egen programversion. Om du bestämmer dig för att ändra programversionen bör du tänka på det genom att skapa ett nytt registrerat program för det.
 
-* **Programplattformar** - de plattformar som programmet ska länkas till. Du kan markera alla eller flera värden.
+* **Programplattformar** - de plattformar som programmet ska länkas till. Du kan markera alla eller flera värden.
 
-* **Domännamn** - domänerna som programmet ska länkas till. Domänerna i listrutan är ett enhetligt urval av alla domäner från alla kanaler. Du kan välja flera domäner i listan. Innehållet i domänerna är omdirigerings-URL:er [RFC6749](https://tools.ietf.org/html/rfc6749). I klientregistreringsprocessen kan klientprogrammet begära att få använda en omdirigerings-URL för att slutföra autentiseringsflödet. När ett klientprogram begär en viss omdirigerings-URL valideras den mot de domäner som vitlistas i det här registrerade programmet som är kopplat till programsatsen.
+* **Domännamn** - domänerna som programmet ska länkas till. Domänerna i listrutan är ett enhetligt urval av alla domäner från alla kanaler. Du kan välja flera domäner i listan. Innehållet i domänerna är omdirigerings-URL:er [RFC6749](https://tools.ietf.org/html/rfc6749). I klientregistreringsprocessen kan klientprogrammet begära att få använda en omdirigerings-URL för att slutföra autentiseringsflödet. När ett klientprogram begär en viss omdirigerings-URL valideras den mot de domäner som vitlistas i det här registrerade programmet som är kopplat till programsatsen.
 
 
 ![](assets/new-reg-app.png)
@@ -94,7 +94,7 @@ Så som visas nedan är det något annorlunda här, jämfört med samma åtgärd
 
 När du har skapat det registrerade programmet kan du hämta en programsats som presenterar auktoriseringsservern som en del av en begäran.
 
-Detta kan du göra genom att navigera antingen till den programmerare eller kanal som de registrerade programmen skapades för, där de listas. 
+Detta kan du göra genom att navigera antingen till den programmerare eller kanal som de registrerade programmen skapades för, där de listas.
 
 Som framgår nedan kommer alla poster i listan att identifieras med namn, version och symboler för de plattformar som de binds till.
 
@@ -124,13 +124,13 @@ Filens namn identifieras unikt genom att prefix anges med &quot;software_stateme
 
 Observera att för samma registrerade program kommer olika programsatser att tas emot varje gång som nedladdningsknappen klickas, men detta medför inte att tidigare programsatser för det här programmet blir ogiltiga. Det beror på att de genereras på plats, per åtgärdsbegäran.
 
-Det finns en **begränsning** om nedladdningsåtgärden. Om du tillfrågas om en programsats genom att klicka på knappen &quot;Ladda ned&quot; kort efter att du skapat det registrerade programmet och den här programsatsen ännu inte sparats och konfigurationsjson inte synkroniserats, visas följande felmeddelande längst ned på sidan. 
+Det finns en **begränsning** om nedladdningsåtgärden. Om du tillfrågas om en programsats genom att klicka på knappen &quot;Ladda ned&quot; kort efter att du skapat det registrerade programmet och den här programsatsen ännu inte sparats och konfigurationsjson inte synkroniserats, visas följande felmeddelande längst ned på sidan.
 
 ![](assets/error-sw-statement-notready.png)
 
 Detta omsluter en HTTP 404 Hittade inte felkod som hämtats från kärnan eftersom ID:t för det registrerade programmet ännu inte har spridits och kärnan inte har någon kunskap om det.
 
-När du har skapat det registrerade programmet väntar du i högst två minuter på att konfigurationen ska synkroniseras. När detta inträffar kommer felmeddelandet inte längre att tas emot och textfilen med programsatsen kommer att vara tillgänglig för hämtning.
+Lösningen är att efter att ha skapat det registrerade programmet vänta i högst två minuter på att konfigurationen ska synkroniseras. När detta inträffar kommer felmeddelandet inte längre att tas emot och textfilen med programsatsen kommer att vara tillgänglig för hämtning.
 
 Mer information om hur slutprocessen fungerar, eller om du vill få en inblick i hur förfrågningarna utförs och vilka svar som förväntas, finns i länken Relaterad information nedan, tillsammans med andra användbara länkar.
 

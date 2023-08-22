@@ -2,7 +2,7 @@
 title: Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless
 description: Aktivera Primetime Entitlement Services för en programmerare på Xbox 360 och XboxOne Clientless
 exl-id: ff7254de-9ea4-4c27-a186-d1c2eea12222
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -32,19 +32,19 @@ ht-degree: 0%
 
 1. Programmeraren begär sedan JWT (Java Web Token) eller STS Token för XboxOne respektive 360 från tjänsten Microsoft Xbox Live, som krypteras med det offentliga X509-certifikatet som tillhandahålls i steg 3.
 
-1. Detta är de tokens som innehåller det unika enhets-ID:t för Xbox-enheter. Inkludera token (JWT eller STS) i auktoriseringshuvudet med en x-parameter enligt nedan:
+1. Detta är de tokens som innehåller det unika enhets-ID:t för Xbox-enheter. Inkludera token (JWT eller STS) i auktoriseringshuvudet med en x-parameter enligt nedan:
 
    1. För Xbox 360 måste XSTS-token vara Base64-kodad innan den skickas till Primetimes betal-TV-autentisering.
-   1. För Xbox One är JWT redan korrekt kodad, så ingen extra kodning bör ske. 
+   1. För Xbox One är JWT redan korrekt kodad, så ingen extra kodning bör ske.
 
 1. Alla API-anrop från Xbox-enheten ska innehålla auktoriseringshuvudet med den ovannämnda token i x-parametern.
 
- 
+
 
 >[!NOTE]
 >
->Speciellt på Xbox finns några unika krav som rör digital signering. Enhets-ID:t för XBox-konsolen ingår i XSTS-token.  För Xbox 360 är detta en krypterad SAML-försäkran; för Xbox One är detta en krypterad JWT. XBox-konsolappen skickar hela XSTS-token till Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering dekrypterar token med dess offentliga nyckel, tolkar token och extraherar deviceId från den.
+>Speciellt på Xbox finns några unika krav som rör digital signering. Enhets-ID:t för XBox-konsolen ingår i XSTS-token.  För Xbox 360 är detta en krypterad SAML-försäkran; för Xbox One är detta en krypterad JWT. XBox-konsolappen skickar hela XSTS-token till Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering dekrypterar token med dess offentliga nyckel, tolkar token och extraherar deviceId från den.
 
 >[!NOTE]
 >
->På grund av den stora längden på XSTS-token har XBox-konsolen en teknisk begränsning: det inte kan skicka token som HTTP GET-parameter till Primetimes API:er för betal-TV-autentisering. För att hantera detta tillåter Primetimes betal-TV-autentisering att XSTS-token skickas som en del av HTTP-huvudet &quot;Authorization&quot; när API:erna anropas. XSTS-token måste krypteras med den offentliga nyckeln från X.509-certifikatet som utfärdas till programmeraren från Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering lagrar den associerade privata nyckeln och använder den för att dekryptera XSTS-token och extrahera deviceId från den.
+>På grund av den stora längden på XSTS-token har XBox-konsolen en teknisk begränsning: den kan inte skicka token som HTTP-GET-parameter till Primetimes API:er för betal-TV-autentisering. För att hantera detta tillåter Primetimes betal-TV-autentisering att XSTS-token skickas som en del av HTTP-huvudet &quot;Authorization&quot; när API:erna anropas. XSTS-token måste krypteras med den offentliga nyckeln från X.509-certifikatet som utfärdas till programmeraren från Primetimes betal-TV-autentisering. Primetimes betal-TV-autentisering lagrar den associerade privata nyckeln och använder den för att dekryptera XSTS-token och extrahera deviceId från den.

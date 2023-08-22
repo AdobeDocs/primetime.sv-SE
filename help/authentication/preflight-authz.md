@@ -2,14 +2,14 @@
 title: Preflight-auktorisering
 description: Preflight-auktorisering
 exl-id: 036b1a8e-f2dc-4e9a-9eeb-0787e40c00d9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
-# Preflight-auktorisering {#preflight-authorization}
+# Preflight-auktorisering {#preflight-authorization}
 
 >[!NOTE]
 >
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 </br>
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Den här funktionen ger en enkel behörighetskontroll för flera resurser. Syftet med den här enkla kontrollen är att dekorera användargränssnittet (till exempel att ange åtkomststatus med lås- och upplåsningsikoner). Preflight-auktoriseringen är så enkel och effektiv som möjligt, så att ett enda API-anrop ger auktoriseringsstatusen för en lista över resurser. Observera att den här funktionen inte är auktoritativ när det gäller att auktorisera en resurs.
 
-A `getAuthorization(resource)` eller `checkAuthorization(resource)` fortfarande måste anropas innan uppspelning tillåts.
+A `getAuthorization(resource)` eller `checkAuthorization(resource)` fortfarande måste anropas innan uppspelning tillåts.
 
 Preflight-auktoriseringen har också stöd för ett annat användningsfall där programmeraren måste begära behörighet för flera resurs-ID:n för att tillåta uppspelning av ett medieinnehåll. Programmeraren kan göra en inledande preflight-kontroll av de nödvändiga resurserna, och beroende på svaret, kan misslyckas tidigt om affärsvillkoren inte uppfylls.
 
-En lista över MVPD som stöder preflight-auktorisering finns i [MVPD Preflight-auktorisering](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) sida. 
+En lista över MVPD som stöder preflight-auktorisering finns i [MVPD Preflight-auktorisering](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) sida.
 
 >[!NOTE]
 >
@@ -34,13 +34,13 @@ En lista över MVPD som stöder preflight-auktorisering finns i [MVPD Preflight-
 
 ## AccessEnabler Preflight API {#AE_pre_api}
 
-AccessEnabler visar ett API-/callback-funktionspar för att implementera preflight-auktorisering. API-anropet tar en enda parameter som består av en lista med resurser. Callback-funktionen tar en parameter som representerar de faktiska auktoriserade resurserna. Följande exempel finns i ActionScript, men anropen finns i alla varianter av AccessEnabler.
+AccessEnabler visar ett API-/callback-funktionspar för att implementera preflight-auktorisering. API-anropet tar en enda parameter som består av en lista med resurser. Callback-funktionen tar en parameter som representerar de faktiska auktoriserade resurserna. Följande exempel finns i ActionScriptet, men anropen finns i alla varianter av AccessEnabler.
 
 ### checkPreauthorizedResources(Array:resources):void {#checkPreauthRes}
 
 Anropa den här funktionen i AccessEnabler-objektet för att begära auktoriseringsstatus för en lista över resurser.
 
-Parametern resources är en lista över resurser som auktoriseringen ska kontrolleras för. Varje element i listan ska vara en sträng som representerar resurs-ID:t. Resurs-ID har samma begränsningar som resurs-ID i `getAuthorization()` anrop, det vill säga, det värde som fastställts mellan Programmer och MVPD, eller ett mediets RSS-fragment, har bestämts. Observera att Adobe Primetime-autentisering inte hanterar resurser på något sätt, förutom ett tunt medieringslager som kan omvandla resursformat beroende på vad som stöds i MVPD.
+Parametern resources är en lista över resurser som auktoriseringen ska kontrolleras för. Varje element i listan ska vara en sträng som representerar resurs-ID:t. Resurs-ID har samma begränsningar som resurs-ID i `getAuthorization()` anrop, det vill säga, det värde som fastställts mellan Programmer och MVPD, eller ett mediets RSS-fragment, har bestämts. Observera att Adobe Primetime-autentisering inte hanterar resurser på något sätt, förutom ett tunt medieringslager som kan omvandla resursformat beroende på vad som stöds i MVPD.
 
 ### preauthorizedResources(Array:authorizedResources) {#preauthRes}
 
@@ -70,19 +70,19 @@ Det här är en callback-funktion som måste implementeras i programmerarens pro
 
 API-anropet försöker hitta en cachelagrad lista över auktoriserade resurser för den aktuella användaren i klientens lokala lagring. Om det inte finns någon cachelagrad lista görs ett HTTPS-anrop till AdobePass-servrarna för att hämta listan.
 
-Cachelagringsfunktionen förbättrar prestandatiden vid efterföljande anrop genom att helt hoppa över nätverksanropet. Dessutom kan den cachelagrade listan fyllas i i förväg som en del av autentiseringsprocessen.  (Information om hur du konfigurerar det här scenariot finns i [Integrering av preflight-auktorisering](/help/authentication/authz-usecase.md#preflight_authz_int) under Authorization i MVPD Integration Guide).
+Cachelagringsfunktionen förbättrar prestandatiden vid efterföljande anrop genom att helt hoppa över nätverksanropet. Dessutom kan den cachelagrade listan fyllas i i förväg som en del av autentiseringsprocessen.  (Information om hur du konfigurerar det här scenariot finns i [Integrering av preflight-auktorisering](/help/authentication/authz-usecase.md#preflight_authz_int) under Authorization i MVPD Integration Guide).
 
-Dessutom kan den cachelagrade resurslistan användas för att optimera auktoriseringsflödet, i den meningen att om det finns en cachelagrad resurslista, `checkAuthorization()` kan kontrollera det innan ett nätverksanrop görs. Om resursen inte finns med i listan över förauktoriserade resurser kan kontrollen misslyckas utan att anropa autentiseringsservrarna för Primetime.
+Dessutom kan den cachelagrade resurslistan användas för att optimera auktoriseringsflödet, i den meningen att om det finns en cachelagrad resurslista, `checkAuthorization()` kan kontrollera det innan ett nätverksanrop görs. Om resursen inte finns med i listan över förauktoriserade resurser kan kontrollen misslyckas utan att anropa autentiseringsservrarna för Primetime.
 
 
 ### Preflight med ChannelID {#preflight_using_channelID}
 
 Från och med version 2.4.1 av Primetime-autentisering fungerar preflight-flödet på följande sätt:
 
-1. Under autentiseringen läser Primetime-autentiseringen `channelIID` -element från MVPD:s SAML-svar och använder det här värdet för att ange `authorizedResources` -element i autentiseringstoken.
-1. Innanför `checkPreauthorizedResources()` API-funktion, Primetime-autentisering kontrollerar om `authorizedResources` -elementet är inställt.
-1. Om `authorizedResources` -elementet är inställt. Primetime-autentiseringen läser det värdet och utför en korsning mellan resurslistan från `authorizedResources` -element och en lista över resurser som tagits emot från `checkPreauthorizedResources()` parameter.  Resultatet av denna korsning är den slutliga listan över förauktoriserade resurser.
-1. Om `authorizedResources` -elementet har inte angetts, kör det tidigare implementerade flödet där listan med resurser som tagits emot från `checkPreauthorizedResources()` parametern skickas till PreAuthorizationServlet. Den här servern utför auktoriseringsanrop till MVPD-slutpunkterna och returnerar listan över förauktoriserade resurser.
+1. Under autentiseringen läser Primetime-autentiseringen `channelIID` -element från MVPD:s SAML-svar och använder det här värdet för att ange `authorizedResources` -element i autentiseringstoken.
+1. Innanför `checkPreauthorizedResources()` API-funktion, Primetime-autentisering kontrollerar om `authorizedResources` -elementet är inställt.
+1. Om `authorizedResources` -elementet är inställt. Primetime-autentiseringen läser det värdet och utför en korsning mellan resurslistan från `authorizedResources` -element och en lista över resurser som tagits emot från `checkPreauthorizedResources()` parameter.  Resultatet av denna korsning är den slutliga listan över förauktoriserade resurser.
+1. Om `authorizedResources` -elementet har inte angetts, kör det tidigare implementerade flödet där listan med resurser som tagits emot från `checkPreauthorizedResources()` parametern skickas till PreAuthorizationServlet. Den här servern utför auktoriseringsanrop till MVPD-slutpunkterna och returnerar listan över förauktoriserade resurser.
 
 ### Exempel på preflight med ChannelID
 
@@ -106,7 +106,7 @@ I exemplet nedan visas ett exempel på kanalutbud. Observera att namnet på attr
         <saml:AttributeValue xsi:type="xs:string">SPEED-SPEED2</saml:AttributeValue>
     </saml:Attribute>
 ```
- 
+
 
 The `authorizedResources` -elementet från autentiseringselementet visas så här:
 
@@ -129,28 +129,28 @@ The `authorizedResources` -elementet från autentiseringselementet visas så hä
     </authorizedResources>
 ```
 
-Programmeraren kör `checkPreauthorizedResources()` API-anrop, skickar följande parameterlista:</span>
+Programmeraren kör `checkPreauthorizedResources()` API-anrop, skickar följande parameterlista:</span>
 
-- &quot;MSNBC&quot; 
-- &quot;FBN&quot; 
-- &quot;TruTV&quot;
+- &quot;MSNBC&quot;
+- &quot;FBN&quot;
+- TruTV&quot;
 - &quot;fbc-fox&quot;
 
 Den aktuella preflight-implementeringen utför överlappningen med listan över resurser i `authorizedResources` -element och returnerar den här listan:
 
 - &quot;MSNBC&quot;
 - &quot;FBN&quot;
-- &quot;TruTV&quot;
+- TruTV&quot;
 
- 
+
 
 **Obs!** Observera att skärningen inte är skiftlägeskänslig.
 
- 
+
 
 ### POST / Förhandsauktorisera {#post}
 
-Anropet utförs automatiskt av AccessEnabler när det inte finns någon cachelagrad, auktoriserad resurslista. 
+Anropet utförs automatiskt av AccessEnabler när det inte finns någon cachelagrad, auktoriserad resurslista.
 
 
 #### Begäran {#req}
@@ -161,7 +161,7 @@ Anropet utförs automatiskt av AccessEnabler när det inte finns någon cachelag
 | `resource_id` | string | JA | En enda resurs. Detta kan anges flera gånger, en gång för varje element i resursarrayen som anges i `checkPreauthorizedResources()` API-anrop. |
 
 
-**Obs!** Det maximala antalet begärda resurser kan konfigureras.
+**Obs!** Det maximala antalet begärda resurser kan konfigureras.
 **Högsta standardvärde är 5.**
 
 
@@ -189,7 +189,7 @@ Svaret som den förauktoriserade servern skickar tillbaka har följande format:
 
 ### Lagring {#storage}
 
-En lista med förauktoriserade resurser som AccessEnabler får från tjänsteleverantören. Den här resurslistan:
+En lista med förauktoriserade resurser som AccessEnabler får från tjänsteleverantören. Den här listan över resurser:
 
 - Lagras tillsammans med AuthN- och AuthZ-tokens
 - Är giltig så länge som användaren finns på samma webbplats eller tills AuthN-token upphör att gälla
@@ -211,17 +211,17 @@ Den här listan heter &quot;preauktoriseringscache&quot;.
 
 #### Flöde {#flow}
 
-1. Programmerarens app/webbplats skapar en `checkPreauthorizedResources(resourceList)` ring.
+1. Programmerarens app/webbplats skapar en `checkPreauthorizedResources(resourceList)` ring.
 1. AccessEnabler verifierar autentiseringstoken för auktoriserade resurser:
-   1. Om autentiseringstoken innehåller auktoriserade resurser är den här listan auktoritativ och inget anrop bör göras för att få den här informationen. Resurser från resourceList söks igenom i listan över auktoriserade resurser på autentiseringstoken och endast de som hittades returneras av `preauthorizedResources()` återanrop.
-   1. Om autentiseringstoken INTE innehåller auktoriserade resurser - `resourceList` jämförs med listan med resurser i cachen för förhandsauktorisering.
-      1. Om listan innehåller samma resurser innebär det att ett anrop till servern redan har gjorts och att svaret redan finns i cachen för förauktorisering. Endast auktoriserade resurser returneras av `preauthorizedResources()` återanrop.
-      1. Om listan INTE innehåller samma resurser måste klienten anropa servern för att erhålla auktoriseringstillståndet för resurserna i resourceList. Svaret hämtas och lagras i cachen för förauktorisering, vilket helt ersätter de gamla resurserna. Endast auktoriserade resurser returneras av `preauthorizedResources()` återanrop.
+   1. Om autentiseringstoken innehåller auktoriserade resurser är den här listan auktoritativ och inget anrop bör göras för att få den här informationen. Resurser från resourceList söks igenom i listan över auktoriserade resurser på autentiseringstoken och endast de som hittades returneras av `preauthorizedResources()` återanrop.
+   1. Om autentiseringstoken INTE innehåller auktoriserade resurser - `resourceList` jämförs med listan med resurser i cachen för förhandsauktorisering.
+      1. Om listan innehåller samma resurser innebär det att ett anrop till servern redan har gjorts och att svaret redan finns i cachen för förauktorisering. Endast auktoriserade resurser returneras av `preauthorizedResources()` återanrop.
+      1. Om listan INTE innehåller samma resurser måste klienten anropa servern för att erhålla auktoriseringstillståndet för resurserna i resourceList. Svaret hämtas och lagras i cachen för förauktorisering, vilket helt ersätter de gamla resurserna. Endast auktoriserade resurser returneras av `preauthorizedResources()` återanrop.
 
 
 #### Listhämtning {#listRetrieve}
 
-När `checkPreauthorizedResources()` anropas kontrolleras listan över resurser som ska verifieras för auktorisering mot cachen för förauktorisering. Om listan innehåller samma uppsättning resurser anropas inte tjänsteleverantören eftersom alla resurser som behövs för att aktivera `preauthorizedResources()` återanrop finns redan i cachen.
+När en `checkPreauthorizedResources()` anropas kontrolleras listan över resurser som ska verifieras för auktorisering mot cachen för förauktorisering. Om listan innehåller samma uppsättning resurser anropas inte tjänsteleverantören eftersom alla resurser som behövs för att aktivera `preauthorizedResources()` återanrop finns redan i cachen.
 
 
 #### logOut() {#logout}
@@ -231,31 +231,31 @@ Cachen för förhandsauktorisering töms vid utloggning.
 
 ## Beroenden {#depends}
 
-Preflight-API:ts prestanda beror på specifika MVPD-implementeringar.  Implementeringsalternativ finns i [Integrering av preflight-auktorisering](/help/authentication/authz-usecase.md#preflight_authz_int) under Authorization i MVPD Integration Guide.
+Preflight-API:ts prestanda beror på specifika MVPD-implementeringar.  Implementeringsalternativ finns i [Integrering av preflight-auktorisering](/help/authentication/authz-usecase.md#preflight_authz_int) under Authorization i MVPD Integration Guide.
 
 
 ## Säkerhet {#security}
 
 Klient-API:erna är tillgängliga för alla programmerare.
 
-Implementeringen använder HTTPS som transport, men för att ha ett enklare anrop används inga ytterligare säkerhetsåtgärder (ingen signering, inga FAXS).
+Implementeringen använder HTTPS som transport, men för att ha ett lättare anrop används inga ytterligare säkerhetsåtgärder (ingen signering, inga FAXS).
 
-**Obs!** Använd INTE detta API på ett auktoritativt sätt för att avgöra om en användare ska beviljas åtkomst till en skyddad resurs. Syftet med denna API är att dekorera användargränssnittet och/eller preflight-granska affärsbeslut. The `getAuthorization()` och `checkAuthorization()` anrop ska alltid göras innan uppspelning tillåts.
+**Obs!** Använd INTE detta API på ett auktoritativt sätt för att avgöra om en användare ska beviljas åtkomst till en skyddad resurs. Syftet med denna API är att dekorera användargränssnittet och/eller preflight-granska affärsbeslut. The `getAuthorization()` och `checkAuthorization()` anrop ska alltid göras innan uppspelning tillåts.
 
 
 ## Kompatibilitet {#compat}
 
 Den här funktionen stöds i alla varianter av AccessEnabler: AS, JS, AIR, iOS, Android, Xbox (i AuthN-flöde på andra skärmen).
 
-Preflight-auktorisering stöder inte förauktoriserade resurser som innehåller CDATA-avsnitt. Fokus på det aktuella preflight-systemet är att stödja kanalnivåfiltrering. Resurser med CDATA-avsnitt är sannolikt resurser på tillgångsnivå. Preflight stöder enkla `mrss` resurser för förhandsauktorisering på kanalnivå, så länge de inte innehåller CDATA. 
+Preflight-auktorisering stöder inte förauktoriserade resurser som innehåller CDATA-avsnitt. Fokus på det aktuella preflight-systemet är att stödja kanalnivåfiltrering. Resurser med CDATA-avsnitt är sannolikt resurser på tillgångsnivå. Preflight stöder enkla `mrss` resurser för förhandsauktorisering på kanalnivå, så länge de inte innehåller CDATA.
 
-## Integration med andra funktioner {#integ_w_other_features}
+## Integrering med andra funktioner {#integ_w_other_features}
 
 En eventuell optimering kan ske i auktoriseringsflödet för att misslyckas snabbt om resursen inte finns med i listan över förauktoriserade resurser.
 
-I den här optimeringen integreras serverns preflight-slutpunkt med degraderingsmekanismen.  
+I den här optimeringen integreras serverns preflight-slutpunkt med degraderingsmekanismen.
 
-Om en regel av typen &quot;AuthN All&quot; finns på plats för MVPD och Requestor, speglar preflight-slutpunkten helt enkelt alla resurser som tagits emot i begäran.
+Om en regel av typen &quot;AuthN All&quot; finns på plats för MVPD och Requestor, kommer preflight-slutpunkten endast att spegla alla resurser som tagits emot i begäran.
 
 Detsamma gäller om&quot;AuthZ All&quot; är aktiverat för minst en av resurserna som finns i begäran.
 
