@@ -2,7 +2,7 @@
 title: Android SDK - översikt
 description: Android SDK - översikt
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ När autentiseringen och auktoriseringen är klar kommer Primetime-autentisering
 
 #### Autentiseringstoken
 
-- **AccessEnabler 1.6 och äldre** - **** Hur autentiseringstoken cachas på enheten beror på &quot;**Autentisering per begärande&quot;** flagga som är associerad med aktuellt MVPD:
+- **AccessEnabler 1.6 och äldre** - Hur autentiseringstoken cachelagras på enheten beror på&#x200B;**Autentisering per begärande&quot;** flagga som är associerad med aktuellt MVPD:
 
 
 1. Om funktionen&quot;Autentisering per begärande&quot; är *inaktiverad*, kommer en enda autentiseringstoken att lagras lokalt på det globala monteringsbordet. Denna token delas mellan alla program som är integrerade med det aktuella MVPD-programmet.
