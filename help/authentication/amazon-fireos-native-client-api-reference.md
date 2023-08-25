@@ -2,7 +2,7 @@
 title: API-referens för inbyggda Amazon FireOS-klienter
 description: API-referens för inbyggda Amazon FireOS-klienter
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 220c571db04afbd6bafc026b3179f78f60543372
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Om ett värde anges för *urls* parametern, aktiverar det resulterande nätverks
 | ```public void setRequestor(String requestorId)``` |
 
 
-**Tillgänglighet:**v 3.0+
+**Tillgänglighet:** v3.0+
 
 
 | API-anrop: konfiguration för begärare |
