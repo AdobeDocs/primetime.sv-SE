@@ -1,7 +1,7 @@
 ---
 title: Introduktion till övervakning av samtidig användning
 description: Introduktion till övervakning av samtidig användning
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ Att veta om [Eskaleringsprocedurer](/help/concurrency-monitoring/cm-escalation-p
 
 Med Concurrency Monitoring kan både identitets- och innehållsleverantörer (MVPD och Programmerare) definiera och tillämpa begränsningar för samtidig användning i flera olika program (som kanske ägs av flera partners).
 
-**API:t för övervakning av samtidig användning finns på följande plats:
+**API:t för övervakning av samtidig användning finns på följande plats:**
 
-* V2.0: [API för övervakning av samtidig användning](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [API för övervakning av samtidig användning](http://docs.adobeptime.io/cm-api-v2/)**
 
 Om du vill registrera dig för vår Concurrency Monitoring-tjänst kontaktar du [Supportteam](mailto:tve-support@adobe.com). Ange följande information så hjälper vårt team dig gärna:
 
