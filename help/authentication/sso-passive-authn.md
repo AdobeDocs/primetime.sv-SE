@@ -2,7 +2,7 @@
 title: enkel inloggning via passiv autentisering
 description: enkel inloggning via passiv autentisering
 exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 914ef0b9baaf5c51e6c26a280af9102ea0df5271
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Det här dokumentets omfattning är att beskriva implementeringen av det passiva
 
 Adobe Primetime-autentisering möjliggör enkel inloggning (SSO) mellan appar/platser. När en användare har loggat in med sina MVPD-autentiseringsuppgifter, genererar Adobe Primetime-autentiseringen en säker token som representerar MVPD:s autentiseringssession och binder denna token till användarens enhet med ett enhets-ID. Adobe Primetime-autentisering lagrar token/enhets-ID antingen på en server eller på enheten.
 
-Så länge token fortfarande är giltig visas användarna direkt som autentiserade. Detta gör att användare kan ange sina inloggningsuppgifter mindre ofta samtidigt som transaktionerna skyddas.
+Så länge token fortfarande är giltig visas användarna direkt som autentiserade. Detta gör att användare kan ange sina inloggningsuppgifter mindre ofta samtidigt som transaktionerna är säkra.
 
 
 
@@ -32,17 +32,17 @@ Affärsanvändningsexemplet som beskrivs här är ett mycket specifikt krav: att
 
 
 
-För att behålla affärsregeln men även behålla en bra användarupplevelse, kräver MVPD INTE att en användare anger autentiseringsuppgifter manuellt. Vi kan dra nytta av den tidigare angivna sessionscookien och försöka att utföra en automatisk omautentisering med det passiva flödet. ur användarens perspektiv kommer han att se ut som inloggad automatiskt.
+För att behålla affärsregeln men även behålla en bra användarupplevelse, kräver MVPD INTE att en användare anger autentiseringsuppgifter manuellt. Vi kan dra nytta av den tidigare angivna sessionscookie-filen och försöka att utföra en automatisk omautentisering med det passiva flödet. Ur användarens perspektiv kommer han att se ut som inloggad automatiskt.
 
 
 
-För att lösa dessa implementerade vi två olika funktioner: autentisering per nätverk och stöd för passiv autentisering. MVPD-programmen stöder SAML passiv authN där användaren helt enkelt autentiseras igen om det finns en authN-session på IdP, oavsett på vilken plats sessionen skapades.
+För att lösa dessa implementerade vi två distinkta funktioner: autentisering per nätverk och stöd för passiv autentisering. MVPD-programmen stöder SAML passiv authN där användaren helt enkelt autentiseras igen om det finns en authN-session på IdP, oavsett på vilken plats sessionen skapades.
 
 
 
 ## Autentisering per nätverk
 
-Den här funktionen ser till att MVPD tar emot en autentiseringsbegäran en gång för varje besökt webbplats. Den här funktionen innebär att en autentiseringstoken för Adobe Primetime kommer att begränsas till beställar-ID:t, och därmed endast gälla för det nätverk som begärde det. När användaren autentiserar sig på plats A och därefter besöker webbplatsen B måste han/hon autentisera sig.
+Den här funktionen ser till att MVPD tar emot en autentiseringsbegäran en gång för varje besökt webbplats. Den här funktionen innebär att en autentiseringstoken för Adobe Primetime kommer att begränsas till beställar-ID:t, och därmed endast gälla för det nätverk som begärde det. När användaren autentiserar på plats A och sedan besöker webbplatsen B måste han/hon autentisera.
 
 
 
@@ -101,7 +101,9 @@ Exempel på SAML-begäran Här följer ett SAML-begärandeexempel för passivt a
 </saml2p:AuthnRequest>
 ```
 
-Affärsregelns MVPD-program har specifika begränsningar för domäner för SSO-scoping. Exempelvis kan bara vissa domäner tillåtas av vissa distributörer av videoprogrammeringstjänster (SSO för samma medieföretag men inte för flera företag).
+## Affärsregler
+
+MVPD-program har specifika begränsningar för SSO-scoping-domäner. Exempelvis kan bara vissa domäner tillåtas av vissa distributörer av videoprogrammeringstjänster (SSO för samma medieföretag men inte för flera företag).
 Vissa MVPD-program kan kräva att olika autentiseringsregler används. MVPD kan till exempel ha olika autentiserings-TTL:er per olika nätverk. Dessutom kan programmeringsgränssnitten möjliggöra hembaserad autentisering för vissa nätverk men inte för andra (fall där föräldrakontroll används representeras starkt här).
 
 
@@ -111,7 +113,9 @@ Detta kan uppnås genom att använda autentisering per nätverk med passiv authN
 
 
 
-Kända begränsningar för iOS - På grund av iOS lokala lagring fungerar inte SSO-flöden i iOS för program som utvecklats av olika leverantörer. Mer information om enkel inloggning i iOS 8 och senare finns i denna Tech Note.
+## Kända begränsningar
+
+iOS - På grund av iOS lokala lagring fungerar inte SSO-flöden i iOS för program som utvecklats av olika leverantörer. Mer information om enkel inloggning i iOS 8 och senare finns i denna Tech Note.
 
 
 <!--
