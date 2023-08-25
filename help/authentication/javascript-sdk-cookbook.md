@@ -2,9 +2,9 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Introduktion (#intro)
+## Introduktion {#intro}
 
 I det här dokumentet beskrivs de tillståndsarbetsflöden som en programmers program implementerar för en JavaScript-integrering med Adobe Primetime Authentication-tjänsten. Länkar till JavaScript API Reference ingår i hela dokumentet.
 
 Observera även att [Relaterad information](#related) -avsnittet innehåller en länk till en uppsättning JavaScript-kodexempel.
 
-## Tillståndsflöden (#entitlement)
+## Tillståndsflöden {#entitlement}
 
 1. [Förutsättningar](#prereq)
 2. [Startflöde](#startup)
@@ -34,7 +34,7 @@ Observera även att [Relaterad information](#related) -avsnittet innehåller en 
 ![](assets/javascript-flows.png)
 
 
-## Krav(#prereq)
+## Förutsättningar {#prereq}
 
 **Beroenden:**
 
@@ -141,7 +141,7 @@ Utlysning `getAuthentication()` för att hämta autentiseringsstatus ELLER för 
 
 Autentiseringsflödet har slutförts när AccessEnabler anropar `setAuthenticationStatus()`med `isAuthenticated == 1`.
 
-## 4. Auktoriseringsflöde (#authz)
+## 4. Auktoriseringsflöde {#authz}
 
 **Beroenden:**
 
@@ -164,7 +164,7 @@ Använd Media Token Verifier för att validera den shortMediaToken som returnera
 - Om valideringen godkänns: Visa/spela upp det begärda mediet för användaren.
 - Om den misslyckas: AuthZ-token var ogiltig, ska mediebegäran avvisas och ett felmeddelande ska visas för användaren.
 
-## 5. Visa medieflöde (#logOut)
+## 5. Visa medieflöde {#logout}
 
 - Användaren väljer de media som ska visas.
    - Är media skyddade?
@@ -173,7 +173,7 @@ Använd Media Token Verifier för att validera den shortMediaToken som returnera
          - Om mediet inte är skyddat fortsätter du med Visa media-flödet.
          - Uppspelningsmedia
 
-## Konfigurera besökar-ID (#visitorID)
+## Konfigurera besökar-ID {#visitorID}
 
 Konfigurera en [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) värdet är mycket viktigt ur analyssynpunkt. När ett EC-besökarID-värde har angetts skickar SDK den här informationen tillsammans med varje nätverksanrop och Adobe Primetime Authentication-tjänsten samlar in den här informationen. På så sätt kan du korrelera analysdata från tjänsten Adobe Primetime Authentication med andra analysrapporter som du kan ha från andra program eller webbplatser. Information om hur du konfigurerar EC visitorID finns [här](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
