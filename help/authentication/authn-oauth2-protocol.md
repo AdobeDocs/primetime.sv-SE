@@ -2,7 +2,7 @@
 title: Autentisering med OAuth 2.0-protokollet
 description: Autentisering med OAuth 2.0-protokollet
 exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: d7d284e7e8563c5ca1ab1c8627cb75ecb1e1cbe5
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Även om SAML fortfarande är det viktigaste protokollet som används för autentisering av amerikanska distributörer och företag i allmänhet, finns det en tydlig trend mot att övergå till OAuth 2.0 som det primära autentiseringsprotokollet. OAuth 2.0-protokollet (https://tools.ietf.org/html/rfc6749) utvecklades främst för konsumentsajter och antogs snabbt av internetgianter som Facebook, Google &amp; Twitter.
 
@@ -39,7 +39,7 @@ Protokollet ger också större flexibilitet när det gäller de data som exponer
 
 För att stödja autentisering med OAuth 2.0 måste ett MVPD uppfylla följande krav:
 
-Först och främst måste dokumentationsfilen se till att den har stöd för *[Beviljande av auktoriseringskod](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flöde.
+Först och främst måste det VPD se till att det stöder [Beviljande av auktoriseringskod](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flöde.
 
 Efter att ha bekräftat att MVPD stöder flödet måste det förse oss med följande information:
 
@@ -53,12 +53,12 @@ Efter att ha bekräftat att MVPD stöder flödet måste det förse oss med följ
 * vi behöver en **slutpunkt för användarprofil**
    * den här slutpunkten tillhandahåller användar-ID, som måste vara unikt för ett konto och inte ska innehålla någon personligt identifierbar information
 * den **/loggout** slutpunkt (valfritt)
-   * Adobe Primetime-autentisering kommer att omdirigera till denna slutpunkt, ge MVPD en omdirigerings-URI. på den här slutpunkten kan MVPD rensa cookies på klientdatorn eller använda valfri logik för utloggning
+   * Adobe Primetime-autentisering dirigerar om till den här slutpunkten, ger MVPD en omdirigerings-URI; i den här slutpunkten kan MVPD rensa cookies på klientdatorn eller använda önskad logik för utloggning
 * vi rekommenderar starkt att du har stöd för auktoriserade klienter (klientappar som inte utlöser någon användarauktoriseringssida)
 * vi kommer också att behöva:
    * **clientID** och **klienthemlighet** för integreringskonfigurationerna
    * **time to live** (TTL)-värden för uppdateringstoken och åtkomsttoken
-   * Vi kan förse MVPD med en URI för auktoriseringsåteranrop och inloggning för återanrop. Vid behov kan vi även tillhandahålla en lista över IP-adresser som ska vitlistas i brandväggsinställningarna.
+   * Vi kan förse MVPD med en URI för auktoriseringsåteranrop och inloggning. Vid behov kan vi även tillhandahålla en lista över IP-adresser som ska vitlistas i brandväggsinställningarna.
 
 
 ## Autentiseringsflöde {#authn-flow}
