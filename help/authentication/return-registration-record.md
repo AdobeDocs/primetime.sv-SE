@@ -2,9 +2,9 @@
 title: Returregistreringspost
 description: Returregistreringspost
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## REST API-slutpunkter {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+`<REGGIE_FQDN>`:
 
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+`<SP_FQDN>`:
 
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 
 | Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Till exempel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. begärande  </br>    (Bankomponent)</br>2.  registreringskod  </br>    (Bankomponent) | GET | XML eller JSON som innehåller en registreringskod och information. Se schema och exempel nedan. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>Till exempel:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Strömmande app</br></br>eller</br></br>Programmerartjänst | 1. begärande  </br>    (Bankomponent)</br>2.  registreringskod  </br>    (Bankomponent) | GET | XML eller JSON som innehåller en registreringskod och information. Se schema och exempel nedan. | 200 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 | begärande | Begärande-ID |
 | mvpd | MVPD-ID |
 | genererad | Tidsstämpel för att skapa registreringskod (i millisekunder sedan 1 januari 1970 GMT) |
-| förfaller | Tidsstämpel när registreringskoden upphör (i millisekunder sedan 1 januari 1970 GMT) |
+| förfaller | Tidsstämpel när registreringskoden upphör att gälla (i millisekunder sedan 1 januari 1970 GMT) |
 | deviceId | Unikt enhets-ID (eller XSTS-token) |
 | deviceType | Enhetstyp |
 | deviceUser | Användaren är inloggad på enheten |
