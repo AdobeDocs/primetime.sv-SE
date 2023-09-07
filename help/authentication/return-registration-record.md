@@ -2,7 +2,7 @@
 title: Returregistreringspost
 description: Returregistreringspost
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Mellanlagring - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Beskrivning {#description}
@@ -37,7 +37,7 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 
 
 
-<div>
+
 
 
 | Slutpunkt | Anropat  </br>Av | Indata   </br>Parametrar | HTTP  </br>Metod | Svar | HTTP  </br>Svar |
@@ -46,14 +46,16 @@ Returnerar registreringskodposten som innehåller registreringskoden UUID, regis
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Indataparameter | Beskrivning |
 | --- | --- |
 | begärande | Programmerarens requestId som den här åtgärden är giltig för. |
 | registreringskod | Registreringskodvärdet som skulle visas på strömningsenheten (anges i autentiseringsflödet). |
 
-</br>
+
+
 
 ## XML-schema för svar {#response-xml-schema}
 
