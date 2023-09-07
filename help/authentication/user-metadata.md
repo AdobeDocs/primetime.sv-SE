@@ -2,7 +2,7 @@
 title: Användarmetadata
 description: Användarmetadata
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 4479df7985da16e8632a538f1042de05109f2392
+source-git-commit: 895438e2b915f8745d685dfc76340b18eccd48bc
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -43,10 +43,10 @@ Hämta metadata som MVPD delade om den autentiserade användaren.
 | --- | --- |
 | begärande | Programmerarens requestId som den här åtgärden är giltig för. |
 | deviceId | Byte för enhets-ID. |
-| device_info/<p>X-Device-Info | Information om direktuppspelningsenhet.<p>**Anteckning**: Detta kan skickas som en URL-parameter, men på grund av parameterns potentiella storlek och begränsningar i längden på en GET-URL, bör det skickas som X-Device-Info i http-huvudet. </br></br>Läs mer här: **Skicka information om enhet och anslutning** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | Enhetstypen (t.ex. Roku, PC).<p>Om den här parametern är korrekt angiven erbjuder ESM värden som är [uppdelad per enhetstyp](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) när du använder Klientlös, så att olika typer av analyser kan utföras för t.ex. Roku, AppleTV, Xbox osv.<p>Se [Fördelar med att använda parametern för enhetstyp utan klient i Pass etrics](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)<p>**Obs!** The `device_info` ersätter den här parametern. |
-| _deviceUser_ | Enhetens användaridentifierare.</br></br>**Obs!**Om den används, `deviceUser` ska ha samma värden som i [Skapa registreringskod](/help/authentication/registration-code-request.md) begäran. |
-| _appId_ | Program-ID/namn. <p>**Obs!**The `device_info` ersätter den här parametern. Om den används `appId` ska ha samma värden som i **Skapa registreringskod** begäran. |
+| device_info/<p>X-Device-Info | Information om direktuppspelningsenhet.</br></br> **Obs!** Detta kan skickas som en URL-parameter, men på grund av den här parameterns potentiella storlek och begränsningar i längden på en GET-URL, bör det skickas som X-Device-Info i http-huvudet. </br></br> Läs mer här: [Skicka information om enhet och anslutning](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Enhetstypen (t.ex. Roku, PC).</br></br> Om den här parametern är korrekt angiven erbjuder ESM värden som är [uppdelad per enhetstyp](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) när du använder Klientlös, så att olika typer av analyser kan utföras för t.ex. Roku, AppleTV, Xbox osv.</br></br> Se [Fördelar med att använda parametern för enhetstyp utan klient i mätvärden för pass](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Obs!** The `device_info` ersätter den här parametern. |
+| _deviceUser_ | Enhetens användaridentifierare.</br></br> **Obs!** Om den används `deviceUser` ska ha samma värden som i [Skapa registreringskod](/help/authentication/registration-code-request.md) begäran. |
+| _appId_ | Program-ID/namn. </br></br> **Obs!** The `device_info` ersätter den här parametern. Om den används `appId` ska ha samma värden som i [Skapa registreringskod](/help/authentication/registration-code-request.md) begäran. |
 
 >[!NOTE]
 > 
@@ -80,9 +80,9 @@ Efter ett lyckat anrop kommer servern att svara med ett XML- (standard) eller JS
 
 I objektets rot finns det tre noder:
 
-* **uppdaterad**: anger en UNIX-tidsstämpel som representerar den senaste gången metadata uppdaterades. Den här egenskapen ställs in från början av servern när metadata genereras under autentiseringsfasen. Efterföljande anrop (efter att metadata har uppdaterats) resulterar i en inkrementell tidsstämpel.
-* **data**: innehåller de faktiska metadatavärdena.
-* **krypterad**: en array med de krypterade egenskaperna. Om du vill dekryptera ett specifikt metadatavärde måste programmeraren utföra en Base64-avkodning på metadata och sedan tillämpa en RSA-dekryptering på resultatvärdet med hjälp av dess egen privata nyckel (Adobe krypterar metadata på servern med programmerarens offentliga certifikat).
+* *uppdaterad*: anger en UNIX-tidsstämpel som representerar den senaste gången metadata uppdaterades. Den här egenskapen ställs in från början av servern när metadata genereras under autentiseringsfasen. Efterföljande anrop (efter att metadata har uppdaterats) resulterar i en inkrementell tidsstämpel.
+* *data*: innehåller de faktiska metadatavärdena.
+* *krypterad*: en array med de krypterade egenskaperna. Om du vill dekryptera ett specifikt metadatavärde måste programmeraren utföra en Base64-avkodning på metadata och sedan tillämpa en RSA-dekryptering på resultatvärdet med hjälp av dess egen privata nyckel (Adobe krypterar metadata på servern med programmerarens offentliga certifikat).
 
 Om ett fel inträffar returnerar servern ett XML- eller JSON-objekt som anger ett detaljerat felmeddelande.
 
