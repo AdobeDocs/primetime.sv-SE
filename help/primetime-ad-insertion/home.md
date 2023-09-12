@@ -2,14 +2,14 @@
 title: Adobe Primetime Ad Insertion
 description: Hjälp om Adobe Primetime Ad Insertion
 exl-id: e758044e-a1f5-498a-a809-b6a351dfe8f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-# Översikt {#ptai-overview}
+# Ökning {#ptai-overview}
 
 Primetime Ad Insertion är en serversidesbaserad lösning för intäktsgenerering med annonsspårning på klientsidan som hjälper utgivaren att skapa nästa generations TV-upplevelser i live-, linjär- och VOD-strömmar.
 
@@ -34,7 +34,7 @@ Den här guiden visar hur Primetime Ad Insertion kan hjälpa utgivare att maxime
 |---|---|
 | [Hjälp om Primetime-programmering](../programming/home.md) | Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter. |
 | [Hjälp om migrering och konvertering av Primetime](../migration-guides/home.md) | Beskriver konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generations programsvit. |
-| [Referensimplementering](../android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
+| [Referenskörning](../android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
 | [Digital Rights Management](../digital-rights-management/home.md) | Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM) |
 | [API-referenser för Primetime](../reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Hämta PDF av den arkiverade dokumentationen. |
@@ -49,4 +49,3 @@ Den här guiden visar hur Primetime Ad Insertion kan hjälpa utgivare att maxime
 
 * [Adobe Primetime DRM-forum](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)

@@ -2,9 +2,9 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ Nätverksaktiviteten för AccessEnabler sker i en annan tråd så att gränssnit
 
    **Obs!** Nu har användaren möjlighet att avbryta autentiseringsflödet. Om detta inträffar ansvarar ditt UI-lager för att informera AccessEnabler om händelsen genom att anropa `setSelectedProvider()` med `null` som en parameter. Detta gör att AccessEnabler kan rensa upp dess interna tillstånd och återställa autentiseringsflödet.
 
-1. När användaren har loggat in identifierar programlagret inläsningen av en &quot;anpassad omdirigerings-URL&quot; (dvs: [http://adobepass.android.app](http://adobepass.android.app/)). Den här anpassade URL:en är en ogiltig URL som inte ska läsas in av WebView. Det är en signal om att autentiseringsflödet har slutförts och att WebView måste stängas.
+1. När användaren har loggat in identifierar programlagret inläsningen av en &quot;anpassad omdirigerings-URL&quot; (dvs: `http://adobepass.android.app`). Den här anpassade URL:en är en ogiltig URL som inte ska läsas in av WebView. Det är en signal om att autentiseringsflödet har slutförts och att WebView måste stängas.
 
 1. Stäng WebView-kontrollen och anropa `getAuthenticationToken()`, som instruerar AccessEnabler att hämta autentiseringstoken från backend-servern.
 
@@ -207,7 +207,7 @@ Nätverksaktiviteten för AccessEnabler sker i en annan tråd så att gränssnit
 
    a. I samma mönster som autentiseringsarbetsflödet skickar AccessEnabler-domänen en en begäran till gränssnittets programlager (via`navigateToUrl()` återanrop) för att skapa en WebView-kontroll och instruera den kontrollen att läsa in URL:en för utloggningsslutpunkten på serverdelen.
 
-   b. Återigen måste gränssnittet övervaka WebView-kontrollens aktivitet och upptäcka när kontrollen, när den går igenom flera omdirigeringar, läser in programmets anpassade URL (d.v.s.: [http://adobepass.android.app/](http://adobepass.android.app/)). När den här händelsen inträffar stänger gränssnittets programlager WebView och utloggningsprocessen är klar.
+   b. Återigen måste gränssnittet övervaka WebView-kontrollens aktivitet och upptäcka när kontrollen, när den går igenom flera omdirigeringar, läser in programmets anpassade URL (d.v.s.: `http://adobepass.android.app/`). När den här händelsen inträffar stänger gränssnittets programlager WebView och utloggningsprocessen är klar.
 
    **Obs!** Utloggningsflödet skiljer sig från autentiseringsflödet på så sätt att användaren inte behöver interagera med WebView på något sätt. Gränssnittets programlager använder en WebView för att se till att alla omdirigeringar följs. Det är därför möjligt (och rekommenderas) att göra WebView-kontrollen osynlig (dvs. dold) under utloggningsprocessen.
 

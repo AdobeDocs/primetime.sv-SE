@@ -3,9 +3,9 @@ title: Hjälp om Primetime Digital Rights Management
 description: Hjälp om Primetime Digital Rights Management
 copied-description: true
 exl-id: 07e4b91d-fc64-480b-aa41-218f682e1d1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De doku
 | [Versionsinformation om Primetime](/help/release-notes/home.md) | Innehåller versionsspecifik information, systemkrav, begränsningar, åtgärdade problem och kända fel. |
 | [Hjälp om Primetime-programmering](/help/programming/home.md) | Lär dig utveckla program och videospelare med Java på Android-enheter och Objective-C på iOS-enheter. |
 | [Hjälp om migrering och konvertering av Primetime](/help/migration-guides/home.md) | Beskriver konverterings- och migreringsprocessen för att gå över från din befintliga Primetime TVSDK Suite till nästa generations programsvit. |
-| [Referensimplementering](/help/android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
+| [Referenskörning](/help/android-reference-implementation/home.md) | Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare. |
 | [Hjälp om Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Förklarar hur ni kan tjäna pengar på innehåll genom att infoga användarinriktade dynamiska annonser på servern och engagera målgruppen med personaliserade annonser. |
 | [API-referenser för Primetime](/help/reference/api-references.md) | Innehåller detaljerad information om TVSDK-funktioner, datastrukturer och andra programmeringskonstruktioner. |
 | [Arkiv](https://helpx.adobe.com/primetime/archives.html) | Hämta PDF av den arkiverade dokumentationen. |
@@ -36,4 +36,3 @@ Välkommen till Digital Rights Management-hjälpen för Adobe Primetime. De doku
 
 * [Adobe Primetime DRM-forum](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)

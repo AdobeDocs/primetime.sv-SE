@@ -1,16 +1,16 @@
 ---
-title: Implementering av Primetime-referens
-description: Implementering av Primetime-referens
+title: Implementering av Primetime Reference
+description: Implementering av Primetime Reference
 copied-description: true
 exl-id: 66be90f1-27e4-4e5f-b84e-fa11ec6f43de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
-# Implementering av Primetime-referens
+# Implementering av Primetime Reference
 
 Välkommen till referensimplementeringshjälpen för Adobe Primetime. Dokumenten som listas i den vänstra navigeringen hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare.
 
@@ -36,4 +36,3 @@ Välkommen till referensimplementeringshjälpen för Adobe Primetime. Dokumenten
 
 * [Adobe Primetime DRM-forum](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)

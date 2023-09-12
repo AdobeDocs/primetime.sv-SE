@@ -2,7 +2,7 @@
 title: Använda Charles Proxy
 description: Använda Charles Proxy
 exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -140,8 +140,6 @@ Klicka på"Tillåt" för att tillåta att enheten använder Charles för att pro
 
 
 ## Använd Charles för Android
-
-<http://jaanus.com/post/17476995356/debugging-http-on-an-android-phone-or-tablet-with>
 
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
