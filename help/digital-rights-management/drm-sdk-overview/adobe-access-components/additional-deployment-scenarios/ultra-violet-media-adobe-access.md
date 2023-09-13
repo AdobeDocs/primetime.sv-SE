@@ -3,9 +3,9 @@ title: UltraViolet media och Adobe Primetime DRM
 description: UltraViolet media och Adobe Primetime DRM
 copied-description: true
 exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: d49042b559ce6083eca0738517d04c490755a033
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Det är enkelt att skapa ett UltraViolet-system tillsammans med Adobe Primetime 
 ![](assets/AdobeUV_web.png)
 
 1. Innehållsägaren kodar och paketerar innehållet i CFF. Det paketerade innehållet är licensierat till en återförsäljare för distribution.
-1. Återförsäljaren överför innehållet till en digital tjänsteleverantör, som CDN. Innehållet är nu tillgängligt för hämtning. Observera att vissa av dessa roller kan spelas upp av ett eller flera företag.
+1. Återförsäljaren överför innehållet till en digital tjänsteleverantör, som CDN. Innehållet är nu tillgängligt för hämtning. Vissa av dessa roller kan spelas upp av ett eller flera företag.
 
    Slutanvändaren har en enhet som stöder Adobe AIR. Dessutom måste användaren installera ett UltraViolet-kompatibelt program. Programmet innehåller den kod som krävs för att tolka CFF-filen och presentera den för körningsmiljön. Alla känsliga kryptografiska åtgärder hanteras i den säkra miljön.
-1. Programmet kan utlösa en domänanslutning för enheten, som interagerar med koordinatorn. Koordinatorn underhåller ett rättighetsinloggningsprogram, en användardatabas och domäner. Koordinatorns domänhanterare byggs med hjälp av Primetimes DRM SDK för att implementera DRM-specifika domänanslutningar/domänledighetsåtgärder.
+1. Programmet kan utlösa en domänanslutning för enheten, vilket interagerar med koordinatorn. Koordinatorn underhåller ett rättighetsarkiv, en användardatabas och domäner. Koordinatorns domänhanterare byggs med hjälp av Primetimes DRM SDK för att implementera DRM-specifika domänanslutningar/domänledighetsåtgärder.
 1. Användaren kan sedan använda programmet för att välja en video som han eller hon vill hämta från återförsäljaren. Detaljhandlaren tillhandahåller vanligtvis en webbportal och hanterar all affärslogik.
 1. Återförsäljaren interagerar sedan med koordinatorn för att lägga till en rättighetstoken. Återförsäljaren dirigerar sedan om begäran till tjänsteleverantören för den faktiska nedladdningen av innehåll.
-1. Om enheten ännu inte har någon licens för innehållet utlöses en licensbegäran med CFF. Begäran innehåller vanligtvis ett domäncertifikat, användarautentiseringsuppgifter och information om programmet. Tjänsteleverantören använder en Primetime DRM-licensserver (som utvecklats med Primetimes DRM SDK) som följer UltraViolet-specifikationerna.
+1. Om enheten ännu inte har någon licens för innehållet utlöses en licensbegäran med CFF. Begäran innehåller vanligtvis ett domäncertifikat, inloggningsuppgifter och information om programmet. Tjänsteleverantören använder en Primetime DRM-licensserver (som utvecklats med Primetimes DRM SDK) som följer UltraViolet-specifikationerna.
 1. Tjänsteleverantörens UltraViolet-affärslogik interagerar med koordinatorn efter behov för att hämta rätt behörighetstoken för att avgöra om en innehållslicens ska utfärdas.
 
    Innehållslicensen är bunden till domänen. Klientprogrammet kan infoga licensen i CFF-filen. Innehåll kan nu spelas upp i programmet, med alla skydd- och användningsregelkontroller som hanteras av DRM-komponenten Primetime i körningsmiljön.
