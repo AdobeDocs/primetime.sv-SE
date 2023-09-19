@@ -1,14 +1,14 @@
 ---
-title: Versionsinformation om autentisering av Android 3.7.3
-description: Versionsinformation om autentisering av Android 3.7.3
-source-git-commit: fbc0e710d205532d268213ca0bdc81449e9c9835
+title: Versionsinformation om Adobe Pass-autentisering Android 3.7.3
+description: Versionsinformation om Adobe Pass-autentisering Android 3.7.3
+source-git-commit: a294b5628ec7184491cf8b67a60fd6cf9410c431
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om autentisering av Android 3.7.3 {#android-sdk-370-release-notes}
+# Versionsinformation om Adobe Pass-autentisering Android 3.7.3 {#android-sdk-373-release-notes}
 
 >[!NOTE]
 >
@@ -18,13 +18,13 @@ Den här sidan beskriver nya funktioner, ändringar och kända fel i den här ve
 
 ## Byggnummer {#build-no-android-sdk-373}
 
-Adobe Primetime-autentisering: Android 3.7.3
+Adobe Pass-autentisering: Android 3.7.3
 
 Releasedatum: 2023-09-19
 
 
 
-## Versionsöversikt {#overview-android-sdk-370}
+## Versionsöversikt {#overview-android-sdk-373}
 
 * Ändringar av stöd för Android 14 och program med API-nivå 34 som mål
    * Lägg till flagga som krävs av [Android 14-runtime-registrerade sändningsmottagare](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported).
@@ -32,8 +32,6 @@ Releasedatum: 2023-09-19
    * Obs! En lösning på problemet med SDK &lt;3.7.3 är att öppna Chrome-appen på emulatorn och slutföra konfigurationen innan du försöker göra en MVPD-inloggning
 
 
-## Versionspaket {#rel=pkg-android373}
+## Versionspaket {#rel-pkg-android373}
 
 Du kan hämta Android SDK v3.7.3 från [här](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library).
-
-Innan du uppgraderar till den här versionen bör du kontrollera den här tekniken.
