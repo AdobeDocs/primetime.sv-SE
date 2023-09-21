@@ -2,8 +2,7 @@
 title: Leveransegenskaper för fjärrnyckel (iOS)
 description: Leveransegenskaper för fjärrnyckel (iOS)
 copied-description: true
-exl-id: 0fe3ed9b-a8ee-43b4-ab3c-8ea2e696503b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Leveransegenskaper för fjärrnyckel (iOS){#remote-key-delivery-properties-ios}
 
-Om du vill ha stöd för generering av licenser för fjärrnyckelleverans till en iOS-klient i Adobe Primetime DRM måste du ange nyckelservercertifikatet i `flashaccess-refimpl.properties` -fil.
+Om du vill ha stöd för generering av licenser för fjärrnyckelleverans till en iOS-klient i Adobe Primetime DRM måste du ange nyckelservercertifikatet i dialogrutan `flashaccess-refimpl.properties` -fil.
 
 Följande egenskaper har lagts till i Primetime DRM:
 

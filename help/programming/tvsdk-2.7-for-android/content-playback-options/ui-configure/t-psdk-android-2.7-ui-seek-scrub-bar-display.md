@@ -1,15 +1,14 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i VOD (video on demand) och liveströmmar.
-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
-exl-id: fb1a87ec-30ab-4dbe-9744-720eac523542
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
-# Visa ett söknavigeringsfält med den aktuella uppspelningspositionen {#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Visa ett söknavigeringsfält med aktuell uppspelningsposition {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i VOD (video on demand) och liveströmmar.
 
@@ -23,7 +22,7 @@ TVSDK har stöd för sökning till en viss position (tid) där strömmen är en 
    
    * `MediaPlayerEvent.SEEK_BEGIN`, där sökningen börjar.
    * `MediaPlayerEvent.SEEK_END`, där sökningen lyckas.
-   * `MediaPlayerEvent.OPERATION_FAILED`, där sökningen har misslyckats.
+   * `MediaPlayerEvent.OPERATION_FAILED`, där sökningen misslyckades.
 
 1. Vänta tills spelaren har en giltig status för sökning.
 

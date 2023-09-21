@@ -1,8 +1,7 @@
 ---
 description: Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
 title: Släpp en MediaPlayer-instans och resurser
-exl-id: 2a802754-5c51-4e5f-8c36-843074b487b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
@@ -13,11 +12,11 @@ ht-degree: 0%
 
 Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
 
-När du släpper en `MediaPlayer` objekt, de underliggande maskinvaruresurserna som är kopplade till detta `MediaPlayer` -objektet har frigjorts.
+När du släpper en `MediaPlayer` objekt, de underliggande maskinvaruresurserna som är kopplade till detta `MediaPlayer` -objektet är deallokerat.
 
 Här är några skäl att släppa en `MediaPlayer`:
 
-* Om du har onödiga resurser kan det påverka prestandan.
+* Otillräckliga resurser kan påverka prestandan.
 * Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
 
 1. Släpp `MediaPlayer`.

@@ -2,8 +2,7 @@
 title: Kontrollerar om Reference Implementation License Server körs korrekt
 description: Kontrollerar om Reference Implementation License Server körs korrekt
 copied-description: true
-exl-id: 97ca0b6c-2661-4cdc-b8d0-dcc545f009f6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Det finns flera sätt att avgöra om din Reference Implementation License Server har startats korrekt. Du kan visa [!DNL catalina.log] loggarna kanske inte är tillräckliga eftersom licensservern loggar till sina egna loggfiler. Följ stegen nedan för att kontrollera att referensimplementeringen har startats korrekt.
 
-* Kontrollera [!DNL AdobeFlashAccess.log] -fil. Här skriver Reference Implementation logginformation. Platsen för den här loggfilen anges av din [!DNL log4j.xml] och kan ändras så att den pekar på valfri plats. Loggfilen kopieras som standard till arbetskatalogen där du kör Catalin.
+* Kontrollera [!DNL AdobeFlashAccess.log] -fil. Här skriver Reference Implementation logginformation. Platsen för loggfilen anges av din [!DNL log4j.xml] och kan ändras så att den pekar på valfri plats. Loggfilen kopieras som standard till arbetskatalogen där du kör Catalin.
 
 * Gå till följande URL: [!DNL https:// flashaccess/license/v4]*din server:serverport*. Du bör se texten&quot;License Server is setup correctly&quot;.
 
@@ -24,7 +23,7 @@ Följande procedur beskriver processen:
 
 1. Gå till [!DNL \Reference Implementation\Command Line Tools] mapp.
 
-   Se [Installera kommandoradsverktygen](../drm-reference-implementations/command-line-tools/install-command-line-tools.md) om hur du installerar kommandoradsverktygen.
+   Se [Installera kommandoradsverktygen](../drm-reference-implementations/command-line-tools/install-command-line-tools.md) om hur kommandoradsverktygen installeras.
 
 1. Skriv följande kommando för att skapa en enkel anonym DRM-princip:
 

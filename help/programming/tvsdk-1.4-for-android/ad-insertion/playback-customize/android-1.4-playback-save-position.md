@@ -1,8 +1,7 @@
 ---
 description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 title: Spara videopositionen och återuppta den senare
-exl-id: cf7111c1-7d9c-4f35-ac3d-d02c69c1524c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att p
 
    Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet lokal tid, som du kan spara på enheten eller i en databas på servern.
 
-   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `getCurrentTime` kommer att returnera 1 200 sekunder, medan `getLocalTime` vid den här positionen kommer att returnera 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `getCurrentTime` kommer att returnera 1200 sekunder, medan `getLocalTime` vid denna position kommer att returnera 900 sekunder.
 
    >[!IMPORTANT]
    >
@@ -72,9 +71,9 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att p
 
    * Om du vill återuppta uppspelningen av videon från den position som sparades från en tidigare session använder du `seekToLocalTime`.
 
-      >[!TIP]
-      >
-      >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
+     >[!TIP]
+     >
+     >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
 
    * Om du vill söka till aktuell tid använder du `seek`.
 

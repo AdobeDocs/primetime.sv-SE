@@ -1,8 +1,7 @@
 ---
 description: TVSDK skickar annonsuppspelningshändelser som svar på annonsrelaterade åtgärder som när en annons börjar spelas upp.
 title: Lägg till uppspelningshändelser
-exl-id: 61e7c9ec-20ed-4221-8ae7-b5d43adb4ce4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -23,8 +22,8 @@ Om du vill få meddelanden om alla annonsuppspelningsrelaterade händelser regis
 |---|---|
 | AdBreakPlaybackEvent.[AD_BREAK_COMPLETED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_COMPLETED) | Ett reklamavbrott har spelat helt. |
 | AdBreakPlaybackEvent.[AD_BREAK_SKIPPED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_SKIPPED) | En annonsbrytning hoppades över under uppspelning. |
-| AdBreakPlaybackEvent.[AD_BREAK_STARTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_STARTED) | En annonsbrytning har börjat. |
-| AdClickEvent.[AD_KLICKA](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html#AD_CLICK) | Användaren har klickat på annonsen. Anger information till ditt program om annonsen som användaren klickade på som svar på ditt programanrop `notifyClick` på `MediaPlayerView`. |
+| AdBreakPlaybackEvent.[AD_BREAK_STARTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_STARTED) | En annonsbrytning har startat. |
+| AdClickEvent.[AD_KLICKA](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html#AD_CLICK) | Användaren har klickat på annonsen. Ger information till ditt program om annonsen som användaren klickade på som svar på ditt programanrop `notifyClick` på `MediaPlayerView`. |
 | AdPlaybackEvent.[AD _SLUTFÖRD](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_COMPLETED) | En annons har spelat helt och hållet. |
 | AdPlaybackEvent.[AD _PROGRESS](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_PROGRESS) | Annonsuppspelningen har fortskridit. Skickas flera gånger medan en annons spelas upp. |
 | AdPlaybackEvent.[AD_SEEK](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_STARTED) | En sökning har gjorts över annonsgränserna eller inom en annons. |

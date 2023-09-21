@@ -1,8 +1,7 @@
 ---
 description: Du kan använda funktionerna i Primetime Digital Rights Management-systemet (DRM) för att ge säker åtkomst till ditt videoinnehåll. Du kan också använda DRM-lösningar från tredje part som ett alternativ till Adobe-integrerad lösning.
 title: DRM, Widewin
-exl-id: 44ab032e-e665-4b63-a08b-54e862894987
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Du kan använda Androids inbyggda Widewin DRM med HLS CMAF-strömmar.
 
 >[!NOTE]
 >
-> Widewin CENC CTR-schemat kräver minst Android version 4.4 (API-nivå 19).
+> Widewin CENC CTR Scheme kräver minst Android version 4.4 (API Level 19).
 >
 > Bredvid CBCS-schema kräver minst Android version 7.1 (API-nivå 25).
 
@@ -69,7 +68,7 @@ MediaDrmCallback callback)
 
 Mer information finns i [Android TVSDK 3.11 API-dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
-## Hämta PSSH-ruta för den aktuella inlästa MediaPlayer-resursen {#pssh-box-mediaplayer-resoource}
+## Hämta PSSH-ruta för aktuell inläst MediaPlayer-resurs {#pssh-box-mediaplayer-resoource}
 
 Ring följande `com.adobe.mediacore.drm.DRMManager` API, helst i anpassad återanropsimplementering.
 

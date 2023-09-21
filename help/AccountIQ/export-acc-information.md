@@ -1,8 +1,7 @@
 ---
 title: Exportera information för konton med hög delning
 description: Exportera information för konton med hög delningspoäng.
-exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 1%
@@ -67,7 +66,7 @@ Det absoluta minsta antalet personer som var aktiva direktuppspelningsinnehåll 
 >
 >Det faktiska antalet personer (som strömmar innehåll) är nästan säkert mycket större än det minsta antalet personer som anges för ett visst konto.
 
-**Antal IP**
+**# IP-adresser**
 
 Antal IP-adresser som innehållet direktuppspelas från.
 
@@ -75,13 +74,13 @@ Antal IP-adresser som innehållet direktuppspelas från.
 
 Antal platser (baserat på postnummer) från vilka innehållet direktuppspelas.
 
-**# Städer**
+**Antal orter**
 
 Antal städer där strömningen har ägt rum.
 
 **Antal lägen**
 
-Antal lägen där direktuppspelningen har ägt rum.
+Antal lägen där strömningen har ägt rum.
 
 **# kluster**
 
@@ -119,7 +118,7 @@ Totalt antal olika kanaler som kontot har bevakat under tidsperioden.
 
 **Användningsmönster**
 
-Siffrorna i den här kolumnen är identifierare som mappar till ett av de 14 mönstren som vi identifierar alla användarkonton som.
+Numren i den här kolumnen är identifierare som mappar till ett av de 14 mönstren som vi identifierar alla användarkonton som.
 
 *Tabell: Användningsmönsteridentifierare i exporterad CSV-mappning med användningsmönster*
 

@@ -2,8 +2,7 @@
 title: Konfigurera licensserverdatabasen
 description: Konfigurera licensserverdatabasen
 copied-description: true
-exl-id: 1d5d988e-d22a-4405-8f39-1763f1f65094
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -49,7 +48,7 @@ Du måste konfigurera DBCP (Database Connection Pooling), som använder Jakarta-
 
 och återskapa WAR-filen med de uppdaterade filerna.
 
-Om du vill ändra någon av de här parametrarna redigerar du [!DNL context.xml] i [!DNL WebContent] och använd Ant-skriptet för att återskapa WAR-filen. Om du vill justera databasen ändrar du inställningarna för JNDI-datakällan i den här filen.
+Redigera [!DNL context.xml] i [!DNL WebContent] och använd Ant-skriptet för att återskapa WAR-filen. Om du vill justera databasen ändrar du inställningarna för JNDI-datakällan i den här filen.
 
 Om du felsöker Reference Implementation-projektet i Eclipse lägger du till `$CATALINA_HOME\lib\tomcat-dbcp.jar` till din körnings-/felsökningskonfiguration.
 

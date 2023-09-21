@@ -2,8 +2,7 @@
 title: Skydd av utdata
 description: Skydd av utdata
 copied-description: true
-exl-id: e27e49f9-9bc3-493f-a9ba-efe623694942
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 **Kontrollera om utdata till externa återgivningsenheter är skyddade. Ange analoga och digitala utdata oberoende av varandra.**
 
-Anger om utdata till externa återgivningsenheter ska begränsas. En extern enhet definieras som en video- eller ljudenhet som inte är inbäddad i datorn. I listan över externa enheter ingår inte integrerade skärmar, t.ex. bärbara datorer. Begränsningar för analoga och digitala utdata kan anges oberoende av varandra.
+Styr om utdata till externa återgivningsenheter ska begränsas. En extern enhet definieras som en video- eller ljudenhet som inte är inbäddad i datorn. I listan över externa enheter ingår inte integrerade skärmar, t.ex. bärbara datorer. Begränsningar för analoga och digitala utdata kan anges oberoende av varandra.
 
 Följande alternativ/efterlevnadsnivåer är tillgängliga:
 
@@ -28,7 +27,7 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoriskt</b> — Utdataskydd för analog kopiering (ACP) eller Copy Generation Management System - analog (CGMS-A) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Adobe Access-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker klienterna i Adobe Access 3.0 aktivera båda. Endast en måste dock vara aktiverad för att innehållet ska kunna spelas upp. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoriskt</b> — Utdataskydd för analog kopiering (ACP) eller Copy Generation Management System - analog (CGMS-A) måste aktiveras för att innehållet ska kunna spelas upp på en extern enhet. Adobe Access-klienter måste aktivera utdataskydd med hjälp av ACP eller CGMS-A. På enheter som stöder båda försöker klienterna i Adobe Access 3.0 aktivera båda. Endast en måste dock vara aktiverad för att spela upp innehållet. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
   </tr> 
@@ -43,7 +42,7 @@ Följande alternativ/efterlevnadsnivåer är tillgängliga:
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd om tillgängligt</b> — Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåta uppspelning om det inte är tillgängligt. Klienter med Adobe Access 3.0 kommer att försöka aktivera både ACP och CGMS-A om möjligt. Adobe Access 2.0-klienter försöker bara aktivera antingen AVS eller CGMS-A. Adobe Access-klienten kommer till exempel att försöka aktivera antingen ACP eller CGMS-A. Om försöket lyckas aktiveras inte det andra alternativet. Om försöket misslyckas görs ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet ändå upp. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Använd om tillgängligt</b> — Försök att aktivera AVS- och CGMS-A-utdataskydd om det är tillgängligt och tillåta uppspelning om det inte är tillgängligt. Klienter med Adobe Access 3.0 kommer att försöka aktivera både ACP och CGMS-A om möjligt. Klienter med Adobe Access 2.0 kommer endast att försöka aktivera antingen ACP eller CGMS-A. Adobe Access-klienten kommer till exempel att försöka aktivera antingen ACP eller CGMS-A. Om försöket lyckas aktiveras inte det andra alternativet. Om försöket misslyckas görs ett andra försök att aktivera det andra alternativet. Även om båda försöken misslyckas spelas innehållet ändå upp. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">JA </p> </td> 
   </tr> 

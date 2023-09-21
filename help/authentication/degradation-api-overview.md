@@ -1,15 +1,14 @@
 ---
-title: Översikt över försämringsAPI
-description: Översikt över försämringsAPI
-exl-id: c7d6685b-a235-42eb-9c9c-0ffa1747f614
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+title: Översikt över API-nedgradering
+description: Översikt över API-nedgradering
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-# Översikt över försämringsAPI {#degradation-api-overview}
+# Översikt över API-nedgradering {#degradation-api-overview}
 
 >[!NOTE]
 >
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta API är inte allmänt tillgängligt. Kontakta din Adobe-representant för att få uppdateringar.
+>Detta API är inte allmänt tillgängligt. Kontakta din Adobe-representant för att få uppdateringar om tillgänglighet.
 
 Den här funktionen ger alla tre parter i en integrering (programmerare, distributörer av videoprogrammeringstjänster och Adobe) möjlighet att tillfälligt kringgå specifika slutpunkter för MVPD-autentisering och -auktorisering. Vanligtvis är det Programmeraren som initierar en sådan åtgärd, men oavsett vem som utlöser en nedbrytningshändelse beror åtgärden på hur man tidigare kommit överens om arrangemang med de berörda PDF-filerna.
 
@@ -27,7 +26,7 @@ Det viktigaste användningsexemplet för den här funktionen är live-sporter el
 
 En försämringsregel tillämpas bara under en fast tidsperiod. Även om de primära kunderna för den här funktionen är sportkanaler och dynamiska nyhetskanaler, kan alla programmerare vilja ha tillgång till den här funktionen, eftersom programmerartjänsterna då och då är desamma.
 
-Försämringskommentarer:
+Försämringsinformation:
 
 * Den här funktionen är avsedd att användas tillsammans med API:t för användningsövervakning, som ger realtidsinformation om antalet autentiseringar och auktoriseringar per MVPD, genomsnittlig auktoriseringsfördröjning och andra mått som behövs för en fullständig serviceöversikt.
 * Den här funktionen tillåter inte att autentiseringstjänsten Adobe Primetime kringgås. Om Primetime-autentisering saknas finns det ingen mekanism i tjänsten som kan användas för att tillåta användare att se innehåll. Webbplatserna eller apparna kan dock själva dirigera runt Primetime-autentisering.

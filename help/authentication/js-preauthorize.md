@@ -1,8 +1,7 @@
 ---
 title: Förhandsauktorisera
 description: JavaScript-förauktorisering
-exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%
@@ -15,11 +14,11 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#preauth-overview}
+## Ökning {#preauth-overview}
 
 API-metoden för förauktorisering ska användas av program för att få beslut om förauktorisering för en eller flera resurser. Förauktoriserings-API-begäran ska användas för användargränssnittstips och/eller innehållsfiltrering. En faktisk begäran om auktoriserings-API måste göras innan användaråtkomst till de angivna resurserna tillåts.
 
-Om ett oväntat fel (till exempel nätverksproblem och slutpunkten för MVPD-auktorisering inte är tillgänglig) inträffar när en förauktoriserings-API-begäran bearbetas av Adobe Primetime Authentication-tjänster, kommer en eller flera separata feluppgifter att inkluderas för de berörda resurserna som en del av förauktoriserings-API-svarsresultatet.
+Om ett oväntat fel (till exempel nätverksproblem och slutpunkten för MVPD-auktorisering inte är tillgänglig) inträffar när en förauktoriserings-API-begäran bearbetas av Adobe Primetime Authentication-tjänster, inkluderas en eller flera separata feluppgifter för de berörda resurserna som en del av förauktoriserings-API-svarsresultatet.
 
 ### public preauthorized(request: PreAuthzeRequest, callback: AccessEnablerCallback&lt;any>): void {#preauth-method}
 
@@ -29,13 +28,13 @@ Om ett oväntat fel (till exempel nätverksproblem och slutpunkten för MVPD-auk
 
 **Parametrar:**
 
-* `PreauthorizeRequest`: Builder-objekt som används för att definiera begäran
+* `PreauthorizeRequest`: Det Builder-objekt som används för att definiera begäran
 * `AccessEnablerCallback`: återanrop som används för att returnera API-svar
-* `PreauthorizeResponse`: Objekt som används för att returnera API-svarsinnehållet
+* `PreauthorizeResponse`: Objektet som används för att returnera API-svarsinnehållet
 
 ### class PreAuthzeRequestBuilder {#preath-req-builder-class}
 
-#### setResources(resources: string[]): FörhandsauktoriseraBegäranBuilder {#set-res-preath-req-buildr}
+#### setResources(resources: sträng[]): PreauthorizedRequestBuilder {#set-res-preath-req-buildr}
 
 * Anger listan med resurser som du vill få beslut om förauktorisering för.
 * Det är obligatoriskt att ange det för användning av förauktoriserat API.
@@ -52,7 +51,7 @@ Om ett oväntat fel (till exempel nätverksproblem och slutpunkten för MVPD-auk
 * `@returns {PreauthorizeRequestBuilder}` Referensen till samma `PreauthorizeRequestBuilder` objektinstans, som är mottagare av metodanropet.
 * Den gör detta för att möjliggöra skapande av metodkedja.
 
-#### disableFeatures(...funktioner: string[]): FörhandsauktoriseraBegäranBuilder {#disabl-featres-preauth-req-buildr}
+#### disableFeatures(...features: string[]): PreauthorizedRequestBuilder {#disabl-featres-preauth-req-buildr}
 
 * Anger de funktioner som du vill ska inaktiveras när du fattar beslut om förauktorisering.
 * Den här funktionen anger bara informationen i det aktuella sammanhanget `PreauthorizeRequestBuilder` objektinstans, som är mottagare av det här funktionsanropet.
@@ -66,11 +65,11 @@ public func build() -> PreauthorizeRequest
 * `@returns` Referensen till samma `PreauthorizeRequestBuilder` objektinstans, som är mottagare av funktionsanropet.
 * Den gör detta för att möjliggöra skapandet av funktionskedjor.
 
-#### build(): FörhandsauktoriseraBegäran {#preauth-req}
+#### build(): PreauthorizedRequest {#preauth-req}
 
 * Skapar och hämtar referensen för en ny `PreauthorizeRequest` objektinstans.
 * Den här metoden instansierar en ny `PreauthorizeRequest` objekt varje gång det anropas.
-* Den här metoden använder de värden som angetts i förväg i det aktuella sammanhanget `PreauthorizeRequestBuilder` objektinstans, som är mottagare av det här metodanropet.
+* Den här metoden använder de värden som angetts i förväg i den aktuella kontexten `PreauthorizeRequestBuilder` objektinstans, som är mottagare av det här metodanropet.
 * Observera att denna metod inte ger några biverkningar.
 * Därför ändrar den inte SDK:s tillstånd eller tillståndet för `PreauthorizeRequestBuilder` objektinstans, som är mottagare av det här metodanropet.
 * Det innebär att efterföljande anrop av den här metoden för samma mottagare skapar nya `PreauthorizeRequest` objektinstanser, men med samma information, om värdena är inställda på `PreauthorizeRequestBuilder` om detta inte ändras mellan samtalet.
@@ -93,24 +92,24 @@ public func build() -> PreauthorizeRequest
 
 ### class PreAuthzeResponse {#preauth-response-class}
 
-#### offentlig status: Status, {#public-status}
+#### Offentlig status: Status; {#public-status}
 
-* Returnerar: Ytterligare statusinformation om fel uppstår.
+* Returnerar: Ytterligare statusinformation (tillstånd) om fel uppstår.
 * Kan hålla en `null` värde.
 
 #### Offentliga beslut: Beslut[]; {#public-decisions}
 
-* Returnerar: Listan över förauktoriseringsbeslut. Ett beslut för varje resurs.
+* Returnerar: Listan med förauktoriseringsbeslut. Ett beslut för varje resurs.
 * Listan kan vara tom om den misslyckas.
 
 ### klassstatus {#class-status}
 
-#### offentlig status: nummer; {#public-status-numbr}
+#### Offentlig status: nummer; {#public-status-numbr}
 
 * Statuskoden för HTTP-svar enligt RFC 7231.
 * Kan vara 0 om `Status` kommer från SDK i stället för Adobe Primetime autentiseringstjänster.
 
-#### offentlig kod: nummer; {#public-code-numbr}
+#### Offentlig kod: nummer. {#public-code-numbr}
 
 * Standardfelkoden för Adobe Primetime Authentication Services.
 * Kan innehålla en tom sträng eller en `null` värde.
@@ -120,13 +119,13 @@ public func build() -> PreauthorizeRequest
 * Det detaljerade meddelandet som i vissa fall tillhandahålls av MVPD-tillståndsslutpunkterna eller av reglerna för programmerarnedbrytning.
 * Kan innehålla en tom sträng eller en `null` värde.
 
-#### allmän information: sträng; {#public-details-strng}
+#### offentlig information: sträng; {#public-details-strng}
 
 * Innehåller ett detaljerat meddelande som i vissa fall tillhandahålls av MVPD-tillståndsslutpunkterna eller av reglerna för programmerarnedbrytning.
 * Kan innehålla en tom sträng eller en `null` värde.
 
 
-#### public helpUrl: sträng; {#public-help-url-string}
+#### public helpUrl: string; {#public-help-url-string}
 
 * Den URL som länkar till mer information om varför det här tillståndet/felet uppstod och möjliga lösningar.
 * Kan innehålla en tom sträng eller en `null` värde.
@@ -136,30 +135,30 @@ public func build() -> PreauthorizeRequest
 * Den unika identifieraren för det här svaret, som kan användas när support kontaktas för att identifiera specifika problem i mer komplexa scenarier.
 * Kan innehålla en tom sträng eller en `null` värde.
 
-#### offentlig åtgärd: sträng; {#public-action-string}
+#### offentlig åtgärd: sträng, {#public-action-string}
 
 * Rekommenderade åtgärder för att åtgärda situationen.
    * **ingen**: Tyvärr finns det ingen fördefinierad åtgärd för att åtgärda problemet. Detta kan tyda på ett felaktigt anrop av det offentliga API:t
    * **konfiguration**: En konfigurationsändring krävs via TVE-kontrollpanelen eller genom att kontakta support.
    * **programregistrering**: Programmet måste registrera sig igen.
-   * **autentisering**: Användaren måste autentisera eller återautentisera.
+   * **autentisering**: Användaren måste autentisera eller autentisera igen.
    * **auktorisation**: Användaren måste få behörighet för den specifika resursen.
-   * **nedbrytning**: Någon form av nedbrytning bör användas.
-   * **försök igen**: Ett nytt försök att utföra begäran kanske löser problemet
-   * **försök igen**: Ett nytt försök att utföra begäran efter den angivna tidsperioden kan lösa problemet.
+   * **nedbrytning**: En viss form av nedbrytning bör användas.
+   * **försök igen**: Ett nytt försök att utföra begäran kan lösa problemet
+   * **försök igen efter**: Om du försöker utföra begäran igen efter den angivna tidsperioden kan problemet lösas.
 * Kan innehålla en tom sträng eller en `null` värde.
 
 ### klassbeslut {#class-decision}
 
-#### offentligt ID: sträng; {#public-id-string}
+#### publikt ID: sträng; {#public-id-string}
 
 * Resurs-ID som beslutet togs för.
 
-#### offentligt auktoriserad: boolesk; {#public-auth-boolean}
+#### auktoriserad offentlig: boolesk, {#public-auth-boolean}
 
 * Värdet på flaggan som anger om beslutet har lyckats eller inte.
 
-#### allmänt fel: Status, {#public-error-status}
+#### allmänt fel: Status; {#public-error-status}
 
 * Ytterligare statusinformation om ett fel inträffar. Kan hålla en `null` värde.
 
@@ -252,18 +251,18 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     
     {
-    beslut: [
+    &quot;beslut&quot;: [
     {
     &quot;id&quot;: &quot;RES01&quot;,
-    auktoriserad: true
+    &quot;authorized&quot;: true
     },
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    auktoriserad: false
+    &quot;authorized&quot;: false
     },
     {
     &quot;id&quot;: &quot;RES03&quot;,
-    auktoriserad: true
+    &quot;authorized&quot;: true
     }
     ]
     }
@@ -279,25 +278,25 @@ accessEnablerApi.preauthorize(request, callback);
 
     &quot;JavaScript
     {
-    beslut: [
+    &quot;beslut&quot;: [
     {
     &quot;id&quot;: &quot;RES01&quot;,
-    auktoriserad: true
+    &quot;authorized&quot;: true
     },
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthentication_deny_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Neka\&quot;-beslut vid begäran om förauktorisering för den angivna resursen.&quot;
+    &quot;code&quot;: &quot;prepermission_deny_by_mvpd&quot;,
+    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Deny\&quot;-beslut när förauktorisering begärdes för den angivna resursen.&quot;
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     }
     },
     {
     &quot;id&quot;: &quot;RES03&quot;,
-    auktoriserad: true
+    &quot;authorized&quot;: true
     },
     ]
     }
@@ -326,18 +325,18 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     
     {
-    beslut: [
+    &quot;beslut&quot;: [
     {
     &quot;id&quot;: &quot;RES01&quot;,
-    auktoriserad: false
+    &quot;authorized&quot;: false
     },
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    auktoriserad: false
+    &quot;authorized&quot;: false
     },
     {
     &quot;id&quot;: &quot;RES03&quot;,
-    auktoriserad: false
+    &quot;authorized&quot;: false
     }
     ]
     }
@@ -354,36 +353,36 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     
     {
-    beslut: [
+    &quot;beslut&quot;: [
     {
     &quot;id&quot;: &quot;RES01&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthentication_deny_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Neka\&quot;-beslut vid begäran om förauktorisering för den angivna resursen.&quot;
+    &quot;code&quot;: &quot;prepermission_deny_by_mvpd&quot;,
+    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Deny\&quot;-beslut när förauktorisering begärdes för den angivna resursen.&quot;
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     }
     },
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthentication_deny_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Neka\&quot;-beslut vid begäran om förauktorisering för den angivna resursen.&quot;
+    &quot;code&quot;: &quot;prepermission_deny_by_mvpd&quot;,
+    &quot;message&quot;: &quot;MVPD har returnerat ett \&quot;Deny\&quot;-beslut när förauktorisering begärdes för den angivna resursen.&quot;
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     }
     },
     {
     &quot;id&quot;: &quot;RES03&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;maximum_execution_time_beyond&quot;,
-    &quot;message&quot;: &quot;Begäran slutfördes inte inom den tillåtna maxtiden. Om du försöker igen kanske problemet kan lösas.&quot;
+    &quot;code&quot;: &quot;maximum_execution_time_överstigit&quot;,
+    &quot;message&quot;: &quot;Begäran slutfördes inte inom den tillåtna tiden. Om du försöker igen kanske problemet kan lösas.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;retry&quot;
     }
@@ -398,7 +397,7 @@ accessEnablerApi.preauthorize(request, callback);
 </tbody>
 
 
-### Scenario 4: Ogiltig klientbegäran - inga resurser har angetts. {#bad-cl-req-no-res-sp}
+### Scenario 4: Felaktig klientbegäran - inga resurser har angetts. {#bad-cl-req-no-res-sp}
 
 <table>
 <thead>
@@ -418,7 +417,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;status&quot;: 400,
     &quot;code&quot;: &quot;internal_error&quot;,
     &quot;message&quot;: &quot;Begäran misslyckades på grund av ett internt fel.&quot;,
-    &quot;details&quot;: &quot;Den obligatoriska String[]-parametern &#39;resource&#39; finns inte&quot;,
+    &quot;details&quot;: &quot;Required String[] parameter &#39;resource&#39; is not present&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     },
@@ -448,7 +447,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     {
     &quot;status&quot;: {
-    &quot;status&quot;: 412,
+    status: 412,
     &quot;code&quot;: &quot;missing_resource&quot;,
     &quot;message&quot;: &quot;Resursparametern saknas&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
@@ -479,25 +478,25 @@ accessEnablerApi.preauthorize(request, callback);
 
     &quot;JavaScript
     {
-    beslut: [
+    &quot;beslut&quot;: [
     {
     &quot;id&quot;: &quot;RES01&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
     &quot;code&quot;: &quot;network_receive_error&quot;,
-    &quot;message&quot;: &quot;Det uppstod ett läsfel när svaret skulle hämtas från den associerade partnertjänsten. Om du försöker igen kanske problemet kan lösas.&quot;
+    &quot;message&quot;:&quot;Ett läsfel uppstod när svaret hämtades från den associerade partnertjänsten. Om du försöker igen kanske problemet kan lösas.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;retry&quot;
     }
     },
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    auktoriserad: false,
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
     &quot;code&quot;: &quot;network_receive_error&quot;,
-    &quot;message&quot;: &quot;Det uppstod ett läsfel när svaret skulle hämtas från den associerade partnertjänsten. Om du försöker igen kanske problemet kan lösas.&quot;
+    &quot;message&quot;:&quot;Ett läsfel uppstod när svaret hämtades från den associerade partnertjänsten. Om du försöker igen kanske problemet kan lösas.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;retry&quot;
     }
@@ -528,9 +527,9 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     {
     &quot;status&quot;: {
-    &quot;status&quot;: 0,
+    status: 0,
     &quot;code&quot;: &quot;authentication_session_missing&quot;,
-    &quot;message&quot;: &quot;Autentiseringssessionen som är associerad med denna begäran kunde inte hämtas. Användaren måste autentisera på nytt med en MVPD som stöds för att kunna fortsätta.&quot;,
+    &quot;message&quot;: &quot;Det gick inte att hämta autentiseringssessionen som är associerad med den här begäran. Användaren måste autentisera på nytt med en MVPD som stöds för att kunna fortsätta.&quot;,
     &quot;action&quot;: &quot;authentication&quot;
     },
     beslut: []
@@ -562,9 +561,9 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;JavaScript
     {
     &quot;status&quot;: {
-    &quot;status&quot;: 0,
-    &quot;code&quot;: &quot;request_not_configure&quot;,
-    &quot;message&quot;: &quot;Begäraren är ännu inte konfigurerad vilket är en förutsättning för att använda ett API förutom setRequestor API.&quot;
+    status: 0,
+    &quot;code&quot;: &quot;requested_not_configure&quot;,
+    &quot;message&quot;: &quot;Begäraren är inte konfigurerad än vilket är en förutsättning för att använda ett API förutom setRequestor API.&quot;
     &quot;action&quot;: &quot;retry&quot;
     },
     beslut: []

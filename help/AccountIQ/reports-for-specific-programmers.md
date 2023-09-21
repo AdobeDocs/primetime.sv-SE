@@ -1,8 +1,7 @@
 ---
 title: Visa kontodelningsrapporter för en viss programmerare
 description: Visa kontodelningsrapporter för en viss programmerare
-exl-id: 34b198e1-dbb9-4486-b688-92780eec0a56
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Så här visar du rapporter i konto-IQ när du har loggat in i programmet som et
 
 * [Allmän användning](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Delade konton](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Användningsmönster](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Kontrollpanel](/help/AccountIQ/dashboard.md) (kontrollpanelen ger en glimt av de markerade diagrammen från olika rapportsidor).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Var och en av dessa sidor återspeglar aktiviteten i det valda segmentet.

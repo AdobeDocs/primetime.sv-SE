@@ -2,8 +2,7 @@
 title: Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare
 description: Migrera från FMRMS 1.0 eller 1.5 till Adobe Access 2.0 och senare
 copied-description: true
-exl-id: 9aadf9a0-a7c5-466b-9dd1-c1bab2b8bfc6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
@@ -22,9 +21,9 @@ Om du vill importera licensinformation från LiveCycle ES till den Adobe Access-
 
 Befintliga policyer måste konverteras till Adobe Access-format för att kunna använda dessa policyer vid konvertering av metadata och utfärdande av licenser för 1.0- eller 1.5-innehåll. Mappen Reference Implementation\Server\Migration innehåller exempelkod för att skapa en Adobe Access-princip baserad på äldre principer.
 
-Om du migrerar från FMRMS 1.0 till Adobe Access läser du exemplet V1_0PolicyConverter.java. Kompilera exempelkoden genom att köra &quot; `ant-f build-migration.xml build-1.0-converter`&quot; (skriptet förväntar att biblioteken 1.0 och Adobe Access ska vara i [!DNL libs/1.0] och libs/flashaccess). Redigera filen converter.properties så att den pekar på LiveCycle ES-servern. Kör sedan &quot; `ant -f build-migration.xml migrate-all-1.0-policies`&quot; om du vill konvertera alla FMRMS 1.0-principer till Adobe Access-format.
+Om du migrerar från FMRMS 1.0 till Adobe Access läser du exemplet V1_0PolicyConverter.java. Kompilera exempelkoden genom att köra &quot; `ant-f build-migration.xml build-1.0-converter`&quot; (skriptet förväntar att biblioteken 1.0 och Adobe Access ska vara i [!DNL libs/1.0] och libs/flashaccess). Redigera filen converter.properties så att den pekar på LiveCyclets ES-server. Kör sedan &quot; `ant -f build-migration.xml migrate-all-1.0-policies`&quot; om du vill konvertera alla FMRMS 1.0-principer till Adobe Access-format.
 
-Om du migrerar från FMRMS 1.5 till Adobe Access läser du exemplet V1_5PolicyConverter.java. Kompilera exempelkoden genom att köra &quot; `ant-f build-migration.xml build-1.5-converter`&quot; (skriptet förväntar att 1.5- och 3.0-biblioteken ska finnas i libs/1.5 respektive libs/flashaccess). Redigera filen converter.properties så att den pekar på LiveCycle ES-servern. Kör sedan &quot; `ant -f build-migration.xml migrate-all-1.5-policies`&quot; om du vill konvertera alla FMRMS 1.5-principer till Adobe Access-format.
+Om du migrerar från FMRMS 1.5 till Adobe Access läser du exemplet V1_5PolicyConverter.java. Kompilera exempelkoden genom att köra &quot; `ant-f build-migration.xml build-1.5-converter`&quot; (skriptet förväntar att 1.5- och 3.0-biblioteken ska finnas i libs/1.5 respektive libs/flashaccess). Redigera filen converter.properties så att den pekar på LiveCyclets ES-server. Kör sedan &quot; `ant -f build-migration.xml migrate-all-1.5-policies`&quot; om du vill konvertera alla FMRMS 1.5-principer till Adobe Access-format.
 
 De konverterade profilerna skrivs till en uppsättning filer. Dessutom kommer PolicyConverter att generera en CSV-fil som innehåller mappning av gamla princip-ID:n till nya princip-ID:n. Den här filen kan importeras till registret PolicyConversion i referensimplementeringsdatabasen och kommer att användas av `RefImplMetadataConvReqHandler`.
 

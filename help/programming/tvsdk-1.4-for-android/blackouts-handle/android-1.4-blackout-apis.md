@@ -1,8 +1,7 @@
 ---
 description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
 title: API-element för svart
-exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -19,10 +18,10 @@ För att hantera strömavbrott i liveströmmar:
 
 1. Konfigurera appen för att identifiera svarta out-taggar genom att prenumerera på svarta out-taggar i ett live-stream-manifest.
 
-   TVSDK upptäcker inte ensam strömslutningstaggar. du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under tolkningen av manifestfilen.
+   TVSDK identifierar inte svartout-taggar separat. Du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under parsning av manifestfiler.
 1. Skapa händelseavlyssnare för taggar som spelaren prenumererar på (i det här fallet PLAYBACK- och BLACKOUTS-taggar).
 
-   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar `TimedMetadataObject` för `TimedMetadataEvent`.
+   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar en `TimedMetadataObject` för `TimedMetadataEvent`.
 
 1. Implementera hanterare för tidsbestämda metadatahändelser för både förgrunds- och bakgrundsströmmarna.
 
@@ -46,9 +45,9 @@ Du kan använda följande när du implementerar en svartpunkt i din spelare.
 
 * **BlackoutMetadata** -
 
-   En metadataklass som är specifik för strömavbrott.
+  En metadataklass som är specifik för strömavbrott.
 
-   På så sätt kan du ange icke sökbara intervall (en array med `TimeRanges`) på TVSDK. TVSDK söker efter dessa intervall varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas tvingar TVSDK användaren till slutet av det intervall som inte går att söka i.
+  På så sätt kan du ange icke sökbara intervall (en array med `TimeRanges`) på TVSDK. TVSDK söker efter dessa intervall varje gång användaren söker. Om den är inställd och användaren söker i ett intervall som inte kan sökas tvingar TVSDK användaren till slutet av det intervall som inte går att söka i.
 
 * **STARTA HÄR NÄSTA ANNONSMETOD** Aktivera eller inaktivera inledning i en liveström genom att ange `enableLivePreroll` till true eller false. Om värdet är false gör inte TVSDK något explicit annonsserveranrop för pre-roll-annonser före innehållsuppspelningen och spelar därför inte upp pre-roll. Detta påverkar inte mittrullarna. Standardvärdet är true.
 

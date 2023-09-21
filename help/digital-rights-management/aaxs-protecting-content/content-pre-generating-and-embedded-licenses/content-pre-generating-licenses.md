@@ -2,8 +2,7 @@
 title: Förgenererande licenser
 description: Förgenererande licenser
 copied-description: true
-exl-id: 2be8674c-736f-4ed3-b952-f661bf3ff48f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -12,11 +11,11 @@ ht-degree: 0%
 
 # Förgenererande licenser{#pre-generating-licenses}
 
-Använd `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` för att hämta en instans av `LicenseFactory`. En autentiseringsuppgift för licensservern måste anges för att de licenser som skapas av den här fabriken ska kunna signeras. Den här klassen har stöd för generering av Leaf-licenser utan licenskedning samt Leaf- och Root-licenser med [Förbättrad kedja av licenser](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
+Om du vill förgenerera licenser använder du `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` för att hämta en instans av `LicenseFactory`. En autentiseringsuppgift för licensservern måste anges för att de licenser som genereras av den här fabriken ska kunna signeras. Den här klassen har stöd för generering av Leaf-licenser utan licenskedning samt Leaf- och Root-licenser med [Förbättrad kedja av licenser](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
 När en Leaf-licens genereras måste innehållets metadata anges med `initContentInfo()`. Om metadata innehåller flera principer, eller om du vill använda en profil som inte fanns i metadata, använder du `setSelectedPolicy()` för att ange vilken profil som ska användas för att generera licensen. Om du använder en principuppdateringslista för att spåra uppdateringar av profiler kan du tillhandahålla principuppdateringslistan till licensfabriken innan du initierar metadata med `setPolicyUpdateList()`.
 
-När du genererar en rotlicens kan innehållets metadata anges enligt beskrivningen ovan. En rotlicens kan också genereras med en princip ( `setSelectedPolicy()`) och licensserverns URL ( `setLicenseServerURL()`) istället för metadata.
+När du genererar en rotlicens kan innehållets metadata anges enligt beskrivningen ovan. Du kan även skapa en rotlicens med hjälp av en princip ( `setSelectedPolicy()`) och licensserverns URL ( `setLicenseServerURL()`) istället för metadata.
 
 >[!NOTE]
 >

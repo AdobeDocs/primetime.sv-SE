@@ -1,8 +1,7 @@
 ---
 description: Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 title: Styra videovyns placering och storlek
-exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange ett annat
 >
 >Du kan inte ange `scalePolicy` till ett null-värde.
 
-## Utfallsscenarier utanför Flash {#non-flash-fallback-scenarios}
+## Fallscenarier som inte är Flashar {#non-flash-fallback-scenarios}
 
-För att skalningsprincipen ska fungera korrekt i andra scenarier än Flash anges video-div-elementet i `View` konstruktorn ska returnera värden som inte är noll för `offsetWidth` och `offsetHeight`. Om du vill ge ett exempel på en felaktig funktion, ibland när bredden och höjden på video-div-elementen inte anges explicit i css, kommer `View` konstruktorn returnerar noll för `offsetWidth` eller `offsetHeight`.
+För att skalningsprincipen ska fungera korrekt i andra scenarier än Flashar anges video-div-elementet i `View` konstruktorn ska returnera värden som inte är noll för `offsetWidth` och `offsetHeight`. Om du vill ge ett exempel på en felaktig funktion, ibland när bredden och höjden på video-div-elementen inte anges explicit i css, kommer `View` konstruktorn returnerar noll för `offsetWidth` eller `offsetHeight`.
 
 >[!NOTE]
 >
->CustomScalePolicy har begränsat stöd för ett fåtal webbläsare, bland annat IE, Edge och Safari 9. För dessa webbläsare går det inte att ändra videofilens ursprungliga proportioner. Videons position och dimensioner används dock enligt skalningsprincipen.
+>CustomScalePolicy har begränsat stöd för några webbläsare, bland annat IE, Edge och Safari 9. För dessa webbläsare går det inte att ändra videofilens ursprungliga proportioner. Videons position och dimensioner används dock enligt skalningsprincipen.
 
 1. Implementera `MediaPlayerViewScalePolicy` för att skapa en egen skalpolicy.
 
@@ -78,7 +77,7 @@ För att skalningsprincipen ska fungera korrekt i andra scenarier än Flash ange
 
 <!--<a id="example_ABCD79AE29DB4A668F9A8B729FE44AF9"></a>-->
 
-**Till exempel: Skala videon så att den fyller hela videovyn utan att behålla proportionerna:**
+**Exempel: Skala videon så att den fyller hela videovyn utan att behålla proportionerna:**
 
 ```
 /** 

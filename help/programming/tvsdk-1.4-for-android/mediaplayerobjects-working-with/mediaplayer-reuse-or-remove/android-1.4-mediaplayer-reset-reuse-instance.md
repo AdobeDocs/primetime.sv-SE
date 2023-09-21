@@ -1,8 +1,7 @@
 ---
 description: När du återställer en MediaPlayer-instans återgår den till det oinitierade IDLE-läget som definierats i MediaPlayerState.
 title: Återställa eller återanvända en MediaPlayer-instans
-exl-id: db8264f7-2f33-4441-86db-bb985edf7c3c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Den här åtgärden är användbar i följande fall:
 
 * Du vill återanvända en `MediaPlayer` -instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta föregående instans.
 
-   Om du återställer kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser.
+  Med återställning kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser.
 
 * När `MediaPlayer` är i ett FEL-tillstånd och måste rensas.
 
-   >[!IMPORTANT]
-   >
-   >Det här är det enda sättet att återställa efter FELstatus.
+  >[!IMPORTANT]
+  >
+  >Det här är det enda sättet att återställa efter FELstatus.
 
 1. Utlysning `reset` för att returnera `MediaPlayer` instansen till dess oinitierade tillstånd:
 
@@ -37,7 +36,7 @@ Den här åtgärden är användbar i följande fall:
 
    >[!TIP]
    >
-   >Läs in samma `MediaResource`.
+   >Om du vill ta bort ett fel läser du in samma `MediaResource`.
 
 1. När du får `STATUS_CHANGED` händelseåteranrop med statusen PREPARED, starta uppspelningen.
 
@@ -45,11 +44,11 @@ Den här åtgärden är användbar i följande fall:
 
 Du bör frisläppa en MediaPlayer-instans och resurser när du inte längre behöver MediaResource.
 
-När du släpper en `MediaPlayer` objekt, de underliggande maskinvaruresurserna som är kopplade till detta `MediaPlayer` -objektet har frigjorts.
+När du släpper en `MediaPlayer` objekt, de underliggande maskinvaruresurserna som är kopplade till detta `MediaPlayer` -objektet är deallokerat.
 
 Här är några skäl att släppa en MediaPlayer:
 
-* Om du har onödiga resurser kan det påverka prestandan.
+* Otillräckliga resurser kan påverka prestandan.
 * Leder en onödig `MediaPlayer` kan leda till kontinuerlig batteriförbrukning för mobila enheter.
 * Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
 

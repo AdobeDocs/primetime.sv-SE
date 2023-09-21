@@ -2,8 +2,7 @@
 title: Hantera certifikatuppdateringar när certifikat som utfärdas av Adobe upphör att gälla
 description: Hantera certifikatuppdateringar när certifikat som utfärdas av Adobe upphör att gälla
 copied-description: true
-exl-id: 9051a647-87ed-4df6-8bbc-bb5c112383ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -48,26 +47,26 @@ Så här uppdaterar du en server med nya certifikat:
 
       * I referensimplementeringen anger du den med `LicenseHandler.ServerCredential` -egenskap.
       * I Adobe Primetime DRM Server for Protected Streaming måste de aktuella autentiseringsuppgifterna vara den första autentiseringsuppgiften som anges i `LicenseServerCredential` i filen flashaccess-tenant.xml.
-   * Kontrollera att aktuella och gamla autentiseringsuppgifter anges till `AsymmetricKeyRetrieval`
+
+   * Se till att aktuella och gamla autentiseringsuppgifter anges till `AsymmetricKeyRetrieval`
 
       * I referensimplementeringen anger du den med `LicenseHandler.ServerCredential` och `AsymmetricKeyRetrieval.ServerCredential. n` egenskaper.
 
       * I Primetime DRM Server for Protected Streaming anges de gamla autentiseringsuppgifterna efter den första autentiseringsuppgifterna i `LicenseServerCredential` i filen flashaccess-tenant.xml.
+
    För transportinloggningsuppgifterna:
 
    * Kontrollera att den aktuella autentiseringsuppgiften skickas till `HandlerConfiguration.setServerTransportCredential()` metod:
 
       * I referensimplementeringen anger du den med `HandlerConfiguration.ServerTransportCredential` -egenskap.
       * I Primetime DRM-servern för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `TransportCredential` -elementet i [!DNL flashaccess-tenant.xml] -fil.
+
    * Se till att de gamla autentiseringsuppgifterna anges för `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * I referensimplementeringen anger du den med `HandlerConfiguration.AdditionalServerTransportCredential. n` egenskaper.
       * I DRM-servern Primetime för skyddad direktuppspelning anges detta efter den första autentiseringen i `TransportCredential` i filen flashaccess-tenant.xml.
 
-
-
-
-1. Uppdatera paketeringsverktygen för att se till att de paketerar innehåll med de aktuella inloggningsuppgifterna. Kontrollera att det senaste licensservercertifikatet, transportcertifikatet och paketerarens autentiseringsuppgifter används för paketering.
+1. Uppdatera paketeringsverktygen för att se till att de paketerar innehåll med aktuella inloggningsuppgifter. Kontrollera att det senaste licensservercertifikatet, transportcertifikatet och paketerarens autentiseringsuppgifter används för paketering.
 1. Uppdatera nyckelserverns licensservercertifikat enligt följande:
 
    * Uppdatera inloggningsuppgifterna i Adobe Primetime DRM Key Server-klientkonfigurationsfilen genom att ta med både den gamla och den nya inloggningsuppgifterna för Key Server i flashaccess-keyserver-tenant.xml.

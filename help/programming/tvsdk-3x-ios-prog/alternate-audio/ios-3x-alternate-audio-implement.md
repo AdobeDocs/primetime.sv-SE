@@ -1,22 +1,21 @@
 ---
-description: Ljud med sen bindning använder PTMediaPlayer för att spela upp en video som har angetts i en M3U8 HLS-spellista och som kan innehålla flera alternativa ljudströmmar.
-title: Åtkomst till alternativa ljudspår
-exl-id: c95e2bae-fcf3-4ae2-be11-fb3191b380f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: Ljud med låg bindning använder PTMediaPlayer för att spela upp en video som har angetts i en HLS-spellista för M3U8 och som kan innehålla flera alternativa ljudströmmar.
+title: Få tillgång till alternativa ljudspår
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-# Åtkomst till alternativa ljudspår {#access-alternate-audio-tracks}
+# Få tillgång till alternativa ljudspår {#access-alternate-audio-tracks}
 
-Ljud med sen bindning använder PTMediaPlayer för att spela upp en video som har angetts i en M3U8 HLS-spellista och som kan innehålla flera alternativa ljudströmmar.
+Ljud med låg bindning använder PTMediaPlayer för att spela upp en video som har angetts i en HLS-spellista för M3U8 och som kan innehålla flera alternativa ljudströmmar.
 
-1. Vänta tills MediaPlayer finns i minst `PTMediaPlayerStatusReady` status.
+1. Vänta tills MediaPlayer finns i åtminstone `PTMediaPlayerStatusReady` status.
 1. Lyssna efter den här händelsen:
 
-   avisering `PTMediaPlayerItemMediaSelectionOptionsAvailable`: Den första listan med ljudspår är tillgänglig.
+   meddelande `PTMediaPlayerItemMediaSelectionOptionsAvailable`: Den inledande listan med ljudspår är tillgänglig.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -25,7 +24,7 @@ Ljud med sen bindning använder PTMediaPlayer för att spela upp en video som ha
         object:self.player];
    ```
 
-1. Hämta de tillgängliga ljudspåren från `PTMediaPlayerItem` -instans.
+1. Hämta tillgängliga ljudspår från `PTMediaPlayerItem` -instans.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -35,4 +34,4 @@ Ljud med sen bindning använder PTMediaPlayer för att spela upp en video som ha
    ```
 
 1. (Valfritt) Visa tillgängliga spår för användaren.
-1. Ställ in det valda ljudspåret på `PTMediaPlayerItem` -instans.
+1. Ange det valda ljudspåret på `PTMediaPlayerItem` -instans.

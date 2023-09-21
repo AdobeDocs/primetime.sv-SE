@@ -1,15 +1,14 @@
 ---
 description: TVSDK hanterar strömavbrott i livevideoströmmar och tillhandahåller alternativt innehåll under ett strömavbrott.
-title: Hantera strömavbrott i liveströmmar
-exl-id: 772700ac-2b6d-4bf9-9400-c357dd77f701
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Hantera strömavbrott
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
-# Hantera strömavbrott i liveströmmar{#handle-blackouts-in-live-streams}
+# Hantera strömavbrott{#handle-blackouts-in-live-streams}
 
 TVSDK hanterar strömavbrott i livevideoströmmar och tillhandahåller alternativt innehåll under ett strömavbrott.
 

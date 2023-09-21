@@ -1,8 +1,7 @@
 ---
 description: Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta annonser.
 title: Ändringar i API:t för borttagning och ersättning av annonser
-exl-id: bde8bd6e-0afe-42d0-b716-f33f75de757e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -24,14 +23,14 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 
 * Nytt `ContentRemoval` class
 
-   `TimelineOperation` klass som definierar det tidsintervall som ska tas bort från tidslinjen
+  `TimelineOperation` klass som definierar det tidsintervall som ska tas bort från tidslinjen
 
 * `AuditudeResolver`
 
    * Nytt `private LinkedList<AuditudeRequest> _requestQueue`
-   * Nytt `void startConsumer()`: Startar bearbetningen av kön för anbudsförfrågningar för Primetime-annonsering och ser till att varje begäran utfärdas på `MIN_INIT_REQUEST_INTERVAL` intervall
+   * Nytt `void startConsumer()`: Börjar bearbeta kön för Primetime-annonsbegäranden och ser till att varje begäran skickas på `MIN_INIT_REQUEST_INTERVAL` intervall
 
-   * Nytt `processReplacementRange()`: Extraherar tidsintervall från annonsens metadata och genererar `PlacementInformations`och skapar en Primetime-annonsbegäran som innehåller `PlacementInformations`.
+   * Nytt `processReplacementRange()`: Extraherar tidsintervall från annonsmetadata och genererar `PlacementInformations`och skapar en Primetime-annonsbegäran som innehåller `PlacementInformations`.
 
    * Nytt `canDoResolver()`: Kontrollerar om placeringsmöjligheten har Primetime-annonsmetadata
 
@@ -56,7 +55,7 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 
 * `TimeRange` Nytt `compareTo(TimeRange timeRange)`: Så kan sortera TimeRanges baserat på starttid
 
-* Nytt `ReplacementTimeRange` Utökar `TimeRange` klass som representerar ett ersättningstidintervall, med `begin`, `end`och `replacement-duration` parameter.
+* Nytt `ReplacementTimeRange` Utökar `TimeRange` klass som representerar ett ersättningstidintervall, med en `begin`, `end`och `replacement-duration` parameter.
 
 * `TimeRangeCollection`
 
@@ -68,7 +67,7 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 * `MediaPlayerNotification`
 
    * Nytt `UNDEFINED_TIME_RANGES`: När annonseringssignaleringsläget är Server Map eller Manifest Cues, och ersättningsintervall också finns i annonsens metadata, ignoreras ersättningsintervall.
-   * Nytt `REPLACE_RANGES_NOT_AVAILABLE`: När signeringsläget Anpassade tidsintervall och ersättningsintervall inte är tillgängliga, skickas en varning.
+   * Nytt `REPLACE_RANGES_NOT_AVAILABLE`: När ett signeringsläge är Anpassade tidsintervall och ersättningsintervall inte är tillgängliga, skickas en varning.
 
 * `AdvertisingFactory` Nytt `public abstract List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
 
@@ -82,7 +81,7 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 
    * I `prepareToPlay()`: Går igenom listan med inledande placeringsinformation för `mediaplayerclient` att lösa.
 
-   * I `extractAdSignalingMode()`: Anpassa för det nya läget Anpassat tidsintervall.
+   * I `extractAdSignalingMode()`: Anpassa för det nya läget för anpassat tidsintervall.
    * Nytt `private static List<PlacementInformation> createInitalPlacementInformations()`: Genererar inledande placeringsinformation för annonseringssigneringsläget och innehållslösningar (härledda från annonseringsmetadata).
    * I `ContentPlacementCompletedListener`: Kontrollerar om `mediaPlayerClient` är `doneInitialResolving` före samtal `endAdResolving`.
 
@@ -90,7 +89,7 @@ Dessa ändringar i Android TVSDK API har stöd för att ta bort och ersätta ann
 
    * Nytt `List<ContentResolver> _contentResolvers`
    * Nytt `int _reservations`
-   * Nytt `lookupContentResolver(PlacementOpportunity placementOpportunity)`: Söker efter vilken lösare som kan matcha `PlacementOpportunity`.
+   * Nytt `lookupContentResolver(PlacementOpportunity placementOpportunity)`: Söker efter vilken lösare som kan lösa `PlacementOpportunity`.
 
    * Ändrad kod för att skapa flera innehållslösningar.
    * Nytt `public boolean doneInitialResolving()`: Kontrollerar om det finns några möjligheter kvar att lösa.

@@ -2,8 +2,7 @@
 title: Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor
 description: Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor
 copied-description: true
-exl-id: 34305dab-a2f0-41c2-9a59-3261e8dea7e2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -14,9 +13,9 @@ ht-degree: 0%
 
 Referensimplementeringen innehåller följande kommandoradsverktyg:
 
-* Principhanteraren: Ett verktyg för att skapa och hantera principer
-* Listhanterare för principuppdatering: Ett verktyg för att skapa och visa principuppdateringslistor
-* Hanteraren för spärrlista: Ett verktyg för att skapa och visa återkallningslistor
+* Policy Manager: Ett verktyg för att skapa och hantera principer
+* Listhanterare för principuppdatering: Ett verktyg för att skapa och visa listor för principuppdateringar
+* Hanteraren för återkallningslistor: Ett verktyg för att skapa och visa återkallningslistor
 * Media Packager: Ett verktyg för att skapa krypterade FLV- och F4V-filer
 * AIR Publisher ID
 * UtilityLicense Generator
@@ -37,7 +36,7 @@ Följande krav gäller för kommandoradsverktygen i referensimplementeringarna:
 
 Flera av kommandoradsverktygen kräver en konfigurationsfil som innehåller information om verktygen som ska användas för att tillämpa principer och kryptera filer.
 
-Standardkonfigurationsfilen är [!DNL flashaccesstools.properties]. Den finns i arbetskatalogen. d.v.s. den katalog som du kör verktygen från (se Installera kommandoradsverktygen). Varje verktyg innehåller också ett alternativ ( `-c`) som gör att du kan peka på den konfigurationsfil som du vill använda om du inte vill använda standardinställningen.
+Standardkonfigurationsfilen är [!DNL flashaccesstools.properties]. Den finns i arbetskatalogen, d.v.s. den katalog som du kör verktygen från (se Installera kommandoradsverktygen). Varje verktyg innehåller också ett alternativ ( `-c`) som gör att du kan peka på den konfigurationsfil som du vill använda om du inte vill använda standardinställningen.
 
 Konfigurationsfilen använder Java-egenskapens filformat. Om värden för någon av egenskaperna innehåller specialtecken bör du tänka på följande begränsningar:
 
@@ -48,6 +47,6 @@ Ange värden för egenskaper i konfigurationsfilen innan du kör verktygen. För
 
 ## Installera kommandoradsverktygen  {#installing-the-command-line-tools}
 
-Du kan kopiera de filer du behöver från [!DNL \Reference Implementation\Command Line Tools] katalog på dvd-skivan som innehåller standardkatalogen [!DNL flashaccesstools.properties] konfigurationsfil och en [!DNL libs] som innehåller JAR-filerna för verktygen.
+Du kan kopiera de filer du behöver från [!DNL \Reference Implementation\Command Line Tools] på dvd-skivan som innehåller standardkatalogen [!DNL flashaccesstools.properties] konfigurationsfil och en [!DNL libs] som innehåller JAR-filerna för verktygen.
 
 The [!DNL samples] -katalogen innehåller flera exempel på Java-källfiler som visar hur API:erna för Adobe Access SDK används. Använd [!DNL build-samples.xml] Ant script.

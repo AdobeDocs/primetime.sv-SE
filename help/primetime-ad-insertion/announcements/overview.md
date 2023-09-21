@@ -1,8 +1,7 @@
 ---
 title: Adobe Primetime Ad Insertion
-description: Kommentarer om de senaste funktionsreleaserna och andra relaterade nyheter om Primetime Ad Insertion
-exl-id: 7d85d3a2-6786-47bd-8d45-ec162aea0ab3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: Kommentarer om de senaste funktionerna och andra relaterade nyheter om Primetime Ad Insertion
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Publicerad 1 december 2020
 
 Adobe fokuserar på att hjälpa våra Primetime Ad Insertion-kunder att maximera avkastningen på sitt annonslager. Vi är särskilt uppmärksamma på att minska komplexiteten med att uppfylla programmatiska krav, som enligt eMarketer står för över tre fjärdedelar av USA:s utgifter för digital video och annonsering. Programmatisk försäljning ger utgivaren möjlighet att maximera efterfrågan på sitt annonslager, vilket leder till högre fyllnadsgrad och avkastning. Men det ökar också exponeringen för annonsfel som felaktiga VAST-svar, HTTP-fel och andra som kan leda till förlorade intäkter och/eller dåliga tittarupplevelser.
 
-Ett vanligt problem är långsamma annonssvar från programmatiska partner. Programatiska annonstransaktioner inträffar vanligtvis i millisekunder. Ibland kan det dock ta lång tid för en enda förbrukningskälla att svara. En fördröjning från en enskild leverantör kan påverka hela annonsprocessen, vilket kan orsaka tillfälliga tomma skärmar för användaren, ofyllda annonsplatser eller, i extrema fall, behovet av att starta om en videoström. Tyvärr är det en stor utmaning att identifiera och kringgå långsamma efterfrågningskällor.
+Ett vanligt problem är långsamma annonssvar från programmatiska partner. Programatiska annonstransaktioner inträffar vanligtvis i millisekunder. Ibland kan det dock ta lång tid för en enda förbrukningskälla att svara. En fördröjning från en enskild leverantör kan påverka hela annonsprocessen, vilket kan orsaka temporära tomma skärmar för användaren, ofyllda annonsplatser eller, i extrema fall, behovet av att starta om en videoström. Tyvärr är det en stor utmaning att identifiera och kringgå långsamma efterfrågningskällor.
 
 För att åtgärda detta problem har Adobe lagt till nya verktyg i Primetime Ad Insertion som gör att kunderna kan ange tidsbegränsningar för annonsupplösning. Om du ställer in dessa regler kringgås källor med långsam efterfrågan automatiskt, vilket säkerställer att videospelarna får annonssvar i tid. På så sätt kan utgivare avsevärt begränsa avbrott från långsamma efterfrågningskällor, vilket hjälper dem att maximera lagerfyllnadstakten och leverera tittarupplevelser i tevekvalitet utan avbrott.
 

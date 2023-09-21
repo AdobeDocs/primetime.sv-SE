@@ -1,8 +1,7 @@
 ---
 description: Du kan konfigurera anpassade taggnamn i TVSDK globalt med klassen MediaPlayerItemConfig.
 title: Konfig-klassmetoder för taggar
-exl-id: 6b3e344f-1d50-4743-9cc4-bd0bc82a0b9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -29,10 +28,10 @@ TVSDK tillämpar den globala konfigurationen automatiskt på alla medieströmmar
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] taggar); </span> </td> 
-   <td colname="col2"> Anger en lista över prenumerationstaggar som kommer att visas för programmet. <p>Ditt program prenumererar automatiskt på alla taggar som överförs via <span class="codeph"> setAdTags </span>. </p> </td> 
+   <td colname="col2"> Anger listan med prenumerationstaggar som kommer att visas för programmet. <p>Ditt program prenumererar automatiskt på alla taggar som överförs via <span class="codeph"> setAdTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Anpassa de annonstaggar som används av standardannonsdetektorn</b> </td> 
+   <td colname="col1"> <b>Anpassa de annonstaggar som används av standardaffärsmöjlighetens identifierare</b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -50,8 +49,8 @@ Kom ihåg följande:
 
 * Metoderna set tillåter inte att parametern tags innehåller null-värden.
 
-   Om TVSDK påträffas genereras ett `IllegalArgumentException`.
+  Om TVSDK påträffas genereras ett `IllegalArgumentException`.
 * Det anpassade taggnamnet måste innehålla prefixet #.
 
-   Till exempel: `#EXT-X-ASSET` är ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
+  Till exempel: `#EXT-X-ASSET` är ett korrekt anpassat taggnamn, men `EXT-X-ASSET` är felaktigt.
 * Du kan inte ändra konfigurationen efter att medieströmmen har lästs in.

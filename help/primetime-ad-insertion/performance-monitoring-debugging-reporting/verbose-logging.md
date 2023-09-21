@@ -2,8 +2,7 @@
 title: Utförlig loggning
 description: Utförlig loggning
 copied-description: true
-exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2155'
 ht-degree: 0%
@@ -107,7 +106,7 @@ Poster av den här typen loggar resultaten av manifestserverannonsbegäranden. F
 | status | string | Returnerad HTTP-statuskod |
 | request_duration | heltal | Tid (millisekunder) från begäran till svar |
 | ad_server_query_url | string | URL för annonsanropet, inklusive frågeparametrar |
-| ad_system_id | string | Annonssystem, från annonsserverns svar (Auditude om inte angivet) |
+| ad_system_id | string | Annonssystem, från annonsserverns svar (Auditude om inget anges) |
 | avail_id | string | ID för tillgången, från annonsreferensen i innehållsmanifestfilen (N/A för VOD) |
 | avail_duration | tal | Varaktighet (sekunder) för värdesinstansen, från annonsreferensen i innehållsmanifestfilen (N/A för VOD) |
 | ad_server_response | string | Base64-kodat svar från annonsservern |
@@ -171,11 +170,11 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 
 ### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE-poster {#trace-transcoding-no-media-to-transcode}
 
-Poster av den här typen loggar en annonsbyrå som saknas. Det enda fältet bortom `TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE` visas i tabellen.
+Poster av den här typen loggar en annonsannons som saknas. Det enda fältet bortom `TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE` visas i tabellen.
 
 | Fält | Typ | Beskrivning |
 |---|---|---|
-| ad_id | string | Fullständigt kvalificerat annons-ID (FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\] \] Q_AD_ID: PROTOKOLL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\] \] PROTOKOLL: AUDITUDE,VAST) |
+| ad_id | string | Fullständigt kvalificerat annons-ID (FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID..\] \] Q_AD_ID: PROTOCOL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\] \] PROTOKOLL: AUDITUDE,VAST) |
 
 Poster av den här typen loggar resultaten av omkodningsbegäranden som manifestservern skickar till CRS. Fält utanför `TRACE_TRANSCODING_REQUESTED` visas i den ordning som visas i tabellen, avgränsade med tabbar.
 
@@ -228,37 +227,37 @@ Poster av den här typen loggar svar på begäranden som manifestservern gör f�
 
 Poster av den här typen gör att manifestservern kan logga händelser och information som annars inte planerats när den importerar annonser. Fältet bortom `TRACE_MISC` består av en meddelandesträng. Följande meddelanden kan visas:
 
-* Annonsen ignorerades: AdPlacement \[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1\]
+* Ad ignore: AdPlacement \[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1\]
 * AdPlacement adManifestURL= adManifestURL, durationSeconds= seconds, ignore= ignore, redirectAd= redirectAd, priority= priority
 * Annonsplaceringen returnerade null.
-* Reklamen har sammanfogats.
+* Ad har sytts.
 * Annonsanropet misslyckades: felmeddelande.
 * Lägger till användaragent för att hämta råmanifestet: användaragent.
-* Lägger till cookie för att hämta Raw-manifestfil: #
+* Lägger till cookie för att hämta raw-manifestet: #
 * Felaktig URL begärd URL-felmeddelande. (Det gick inte att parsa variant-URL:en)
-* Anropad URL: URL returnerades: svarskod. (Live-URL)
-* Anropad URL: URL-returkod: svarskod. ( VOD URL)
-* Konflikt vid lösning av annonser: antingen en av - mittrullstart eller mittrullslut ligger inom pre-roll eller pre-roll som finns i mittrullen (VOD).
-* Ett ohanterat undantag upptäcktes som genererades av hanteraren för URI: begärande-URL.
+* Anropad url: URL returnerades: svarskod. (Live-URL)
+* Anropad url: URL-returkod: svarskod. ( VOD URL)
+* En konflikt uppstod när annonser löstes: antingen en av - mittrollstart eller mittrollslut faller inom pre-roll eller pre-roll som finns i mitrll (VOD).
+* Ett ohanterat undantag upptäcktes av hanteraren för URI: request URL.
 * Genereringen av variantmanifest har slutförts. (Variant)
 * Genereringen av variantmanifest har slutförts.
 * Undantag vid hantering av VAST-omdirigering *omdirigerings-URL *fel: felmeddelande.
 * Det gick inte att hämta annonsens spellista för annonsens manifest-URL.
 * Det gick inte att generera målmanifestet. (HLSManifestResolver)
-* Det gick inte att tolka första annonssamtalssvaret: felmeddelande.
-* Det gick inte att bearbeta *GET|POST *sökvägsbegäran: begärande-URL. (Live/VOD)
-* Det gick inte att bearbeta begäran om livemanifest: begärande-URL. (Live)
+* Det gick inte att parsa det första svaret på annonsanropet: felmeddelande.
+* Det gick inte att bearbeta *GET|POST *begäran för sökväg: begäran-URL. (Live/VOD)
+* Det gick inte att bearbeta begäran för live-manifestet: begärande-URL. (Live)
 * Det gick inte att returnera ett variantmanifest: felmeddelande.
 * Det gick inte att verifiera grupp-ID: grupp-ID.
 * Hämtar raw-manifest: innehålls-URL. (Live)
-* Efter VAST-omdirigering: omdirigerings-URL.
+* Följande VAST-omdirigering: omdirigerings-URL.
 * Tomma tillgängliga. (VOD)
 * Hittade *tal* annonser. (VOD)
 * HTTP-begäran har tagits emot. (Mycket första meddelande)
 * Annonsen ignoreras eftersom skillnaden mellan annonssvarets varaktighet (*annonsens svarstid *sek) och den faktiska annonstiden (*faktisk varaktighet *sek) är större än gränsen. (HLSManifestResolver)
 * Ignorerar tillgänglighet som inte gav något ID-värde. (GroupAdResolver.java)
 * Ignorerar tillgänglighet som gav ett ogiltigt tidsvärde: *time *för availId = avail ID.
-* Ignorerar tillgänglighet som angav ett ogiltigt tidsvärde: *duration *for availId = avail ID.
+* Ignorerar tillgänglighet som angav ett ogiltigt varaktighetsvärde: *duration *for availId = avail ID.
 * Initiera ny session. (Variant)
 * Ogiltig HTTP-metod. Det måste vara en GET. (VOD)
 * Ogiltig HTTP-metod. Spårningsbegäran måste vara en GET. (Live)
@@ -269,9 +268,9 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Ogiltig begäran. Spårningsbegäran måste göras efter att sessionen har upprättats. (VOD)
 * Ogiltig serverinstans för överlagringsgrupp-ID: grupp-ID. (Live)
 * Gränsen för VAST-omdirigeringar har uppnåtts - antal.
-* Ring annonser: och anropa URL.
+* Göra ett annonsanrop: och anropa URL.
 * Inget manifest hittades för: innehålls-URL. (Live)
-* Det gick inte att hitta någon matchande tillgänglig för användar-ID: användar-ID. (HLSManifestResolver)
+* Det gick inte att hitta något matchande tillgängligt ID: tillgängligt ID. (HLSManifestResolver)
 * Ingen uppspelningssession hittades. (HLSManifestResolver)
 * Bearbetar VOD-begäran för manifest content URL.
 * Bearbetar variant.
@@ -281,7 +280,7 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Begär: URL.
 * Returnerat felsvar för GET-begäran eftersom ingen uppspelningssession hittades. (VOD)
 * Returnerar felsvar för GET-begäran på grund av ett internt serverfel.
-* Returnerat felsvar för GET-begäran som anger en ogiltig resurs: ID för annonsförfrågan. (VOD)
+* Returnerat felsvar för GET-begäran som anger en ogiltig resurs: ID för annonsbegäran. (VOD)
 * Returnerat felsvar för GET-begäran som anger ett ogiltigt eller tomt grupp-ID: grupp-ID. (VOD)
 * Returnerat felsvar för GET-begäran som anger ett ogiltigt värde för spårningsposition. (VOD)
 * Returnerat felsvar för GET-begäran med ogiltig syntax - request URL. (Live/VOD)
@@ -290,7 +289,7 @@ Poster av den här typen gör att manifestservern kan logga händelser och infor
 * Servern är överbelastad. Fortsätt utan en förfrågan om sammanfogning. (Variant)
 * Börja generera målmanifest. (HLSManifestResolver)
 * Börja generera variantmanifest från: innehålls-URL. (Variant)
-* Sätt ihop annonser i manifest. (VODHLSResolver)
+* Börja sy ihop annonser i manifest. (VODHLSResolver)
 * Försöker sy ihop annons på `HH:MM:SS`: AdPlacement \[adManifestURL= ad Manifest URL, durationSeconds= seconds, ignore= ignore, redirectAd= redirect ad, priority= priority.\] \(HLSManifestResolver\)
 * Det går inte att hämta annonser på grund av ogiltig tidslinje - returnerade innehållet utan annonser. (VOD)
 * Det går inte att hämta annonser - returnerade innehållet utan annonser. (VOD)
@@ -308,7 +307,7 @@ Manifestservern genererar poster av den här typen när den tar emot en signal o
 | bandbredd | heltal | Strömmens bandbredd |
 | punkter | heltal | PTS-tid i ström |
 | ms_time | heltal | Tid när spårnings-URL genererades av manifestservern |
-| url | string | Omdirigerings-URL |
+| url | string | Omdirigeringsadress |
 | **as** header_user_agent | string | HTTP User-Agent header |
 | **as** header_dnt | heltal | HTTP do-not-track header |
 | **as** effective_remote_address | string | IPv4-giltig fjärradress |
@@ -328,15 +327,13 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 ```
 
 * **live/vod**
-Manifestservern anger det här värdet baserat på innehållets spellisttyp: Live/linear (
-`#EXT-X-PLAYLIST-TYPE:EVENT`) eller VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
+Manifestservern anger det här värdet baserat på innehållets spellisttyp: Live/linear (`#EXT-X-PLAYLIST-TYPE:EVENT`) eller VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
 
 * **publisherAssetID**
 Utgivarens unika ID för det specifika innehåll som anges i Bootstrap URL-begäran.
 
 * **rendering**
-Manifestservern anger detta baserat på 
-`BANDWIDTH` innehållsströmmens värde och använder det för att matcha bithastigheten för annonsen med bithastigheten för innehållet. Annonsbithastigheten får inte överskrida bithastigheten för innehållet om inte annonsåtergivningen med den lägsta bithastigheten gör det.
+Manifestservern anger detta baserat på `BANDWIDTH` innehållsströmmens värde och använder det för att matcha bithastigheten för annonsen med bithastigheten för innehållet. Annonsbithastigheten får inte överskrida bithastigheten för innehållet om inte annonsåtergivningen med den lägsta bithastigheten gör det.
 
 * **groupID**
 Manifestservern genererar det här värdet och använder det för att se till att annonserna placeras på ett konsekvent sätt, oavsett för vilken bithastighet som klienten begär annonser.

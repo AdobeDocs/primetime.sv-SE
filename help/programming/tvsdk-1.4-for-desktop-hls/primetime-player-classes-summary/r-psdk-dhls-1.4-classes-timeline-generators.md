@@ -1,15 +1,14 @@
 ---
 description: Dessa klasser hjälper till att identifiera möjligheter i en tidslinje för placering av innehåll, som annonser.
-title: Klasser för generatorer för tidslinje
-exl-id: 2c9d1f10-fdf6-48b9-8bda-cee291befeab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Klasser för tidslinjegeneratorer
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-# Klasser för generatorer för tidslinje{#timeline-generators-classes}
+# Klasser för tidslinjegeneratorer{#timeline-generators-classes}
 
 Dessa klasser hjälper till att identifiera möjligheter i en tidslinje för placering av innehåll, som annonser.
 

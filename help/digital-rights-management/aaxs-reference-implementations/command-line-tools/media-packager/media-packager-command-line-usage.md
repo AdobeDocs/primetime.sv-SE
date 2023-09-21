@@ -2,8 +2,7 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-exl-id: 55b18fee-b7d8-4a5a-91a7-a08cd23e7866
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -71,7 +70,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 >[!NOTE]
 >
->Under paketeringen genereras inte längre en .header-fil som standard. Om du vill generera den här filen använder du `-h` under paketeringen.
+>Under paketeringen genereras inte längre en .header-fil som standard. Använd `-h` under paketeringen.
 
 Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas i syntaxen ovan:
 

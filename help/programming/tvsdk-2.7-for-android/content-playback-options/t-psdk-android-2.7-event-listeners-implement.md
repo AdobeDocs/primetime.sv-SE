@@ -1,8 +1,7 @@
 ---
 description: Med händelsehanterare kan du svara på TVSDK-händelser.
 title: Implementera händelseavlyssnare och återanrop
-exl-id: c8825a6c-3d48-412f-81f5-542c7731a122
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -21,11 +20,11 @@ Programmet måste implementera händelseavlyssnare för alla TVSDK-händelser so
 
 1. Avgör vilka händelser programmet ska lyssna efter.
 
-   * Nödvändiga händelser: Lyssna efter alla uppspelningshändelser.
+   * Obligatoriska händelser: Lyssna efter alla uppspelningshändelser.
 
-      >[!IMPORTANT]
-      >
-      >Lyssna efter statusförändringshändelsen, som inträffar när spelarens status ändras på sätt som du behöver veta. Informationen innehåller fel som kan påverka vad spelaren kan göra härnäst.
+     >[!IMPORTANT]
+     >
+     >Lyssna efter statusförändringshändelsen, som inträffar när spelarens status ändras på sätt som du behöver veta. Informationen innehåller fel som kan påverka vad spelaren kan göra härnäst.
 
    * Andra händelser, beroende på programmet, finns i Sammanfattning av händelser.
 
@@ -33,7 +32,7 @@ Programmet måste implementera händelseavlyssnare för alla TVSDK-händelser so
 
    >[!NOTE]
    >
-   >För de flesta händelser skickar TVSDK argument till händelseavlyssnarna. Sådana värden ger information om händelsen som kan hjälpa dig att bestämma vad du ska göra sedan. The `MediaPlayerEvent` uppräkningen listar alla händelser som `MediaPlayer` skickar. Mer information finns i Sammanfattning av händelser.
+   >För de flesta händelser skickar TVSDK argument till händelseavlyssnarna. Sådana värden ger information om händelsen som kan hjälpa dig att bestämma vad du ska göra härnäst. The `MediaPlayerEvent` uppräkningen listar alla händelser som `MediaPlayer` skickar. Mer information finns i Sammanfattning av händelser.
 
    Om `mPlayer` är en instans av `MediaPlayer`, så här kan du lägga till och strukturera en händelseavlyssnare:
 
@@ -78,7 +77,7 @@ För live-/linjära strömmar, under uppspelningen när uppspelningsfönstret g�
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` om annonser har infogats
 
-## Ordning på annonsevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Ordning på reklamevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 

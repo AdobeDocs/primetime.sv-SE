@@ -1,8 +1,7 @@
 ---
 description: När du konfigurerar en säker nätverksarkitektur krävs nätverksprotokoll för interaktion mellan Adobe Primetime DRM och andra system i företagsnätverket.
 title: Adobe Primetime DRM-nätverksprotokoll
-exl-id: d5720ef4-6845-4a62-940a-9d8ba9b43b13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%

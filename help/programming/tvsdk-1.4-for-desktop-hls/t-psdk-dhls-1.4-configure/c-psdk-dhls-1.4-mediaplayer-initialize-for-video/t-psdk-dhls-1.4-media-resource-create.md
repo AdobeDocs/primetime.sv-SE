@@ -1,8 +1,7 @@
 ---
 description: Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 title: Skapa en medieresurs
-exl-id: 20515e90-cbe4-4945-823a-fe882ed460db
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
@@ -68,5 +67,5 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
 
    * Din MediaPlayer-instans.
 
-      Mer information finns i [Läsa in en medieresurs i medialagret](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+     Mer information finns i [Läsa in en medieresurs i medialagret](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
    * A `MediaPlayerItemLoader` Mer information finns i [Läsa in en medieresurs i medialagret](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).

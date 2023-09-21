@@ -1,8 +1,7 @@
 ---
 title: Tjänstleverantörsomfång
 description: Tjänstleverantörsomfång
-exl-id: 730c43e1-46c0-4eec-b562-b1ad93cce6d3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -15,9 +14,9 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
-Standardimplementeringen av en Adobe Primetime-autentiseringsintegrering med ett MVPD-dokument baseras på **OLCA-specifikation**. I avsnittet Autentiseringskrav i OLCA-specifikationen (6.5, Ämnesidentifierare) anges att det är möjligt att ange omfattningen för tjänstleverantörens SP (Service Provider) för Ämnesidentifieraren. (Ämnesidentifieraren är det obefuffserade användar-ID som MVPD returnerar till SP.)  I en Adobe Primetime-autentiseringsintegrering krävs att MVPD-program aktiverar omfång för SP-autentiseringsbegäranden.
+Standardimplementeringen av en Adobe Primetime-autentiseringsintegrering med ett MVPD-dokument baseras på **OLCA-specifikation**. I avsnittet Autentiseringskrav i OLCA-specifikationen (6.5, Ämnesidentifierare) anges att det är möjligt att ange omfattningen för tjänstleverantörens SP (Service Provider) för Ämnesidentifieraren. (Ämnesidentifieraren är det obefuffserade användar-ID som MVPD returnerar till SP:n.)  I en Adobe Primetime-autentiseringsintegrering krävs att MVPD-program aktiverar omfång för SP-autentiseringsbegäranden.
 
 Med Adobe Primetime autentisering som tar rollen som SP för programmeraren är det nödvändigt att implementera en anpassning som möjliggör SP-omfång för autentiseringsbegäran.  Detta måste göras så att distributören kan identifiera det nätverksmärke som skickades in i SAML-försäkran till identitetsleverantören (IdP).  Omfång kan implementeras på ett av de två sätt som beskrivs i nästa avsnitt.
 

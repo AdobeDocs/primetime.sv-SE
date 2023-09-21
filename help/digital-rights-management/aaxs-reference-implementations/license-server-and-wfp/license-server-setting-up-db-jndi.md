@@ -2,8 +2,7 @@
 title: Konfigurera databasen och konfigurera JNDI-datakällan
 description: Konfigurera databasen och konfigurera JNDI-datakällan
 copied-description: true
-exl-id: ed22f095-924b-4792-8a10-e7548fab2c3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -35,9 +34,9 @@ Om du vill köra licensservern måste du installera och konfigurera MySQL 5.1.34
 
    * Ta bort mappen *systemenhet:* [!DNL \Documents and Settings\All Users\Application Data\MySQL].
 
-   * Ta bort den gamla installationsmappen för MySQL: till exempel *systemenhet:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
+   * Ta bort den gamla installationsmappen för MySQL: *systemenhet:* [!DNL \Program Files\MySQL\MySQL Server 5.1].
 
-Därefter måste du installera MySQL JDBC Driver 5.1.7. Om du vill göra det kopierar du [!DNL mysql-connector-java-5.1.7-bin.jar] (finns i [!DNL Third Party\MySQL\Installer\5.1] till Tomcat Server lib directory: [!DNL ...\Tomcat6.0\lib].
+Därefter måste du installera MySQL JDBC Driver 5.1.7. Det gör du genom att kopiera [!DNL mysql-connector-java-5.1.7-bin.jar] (finns i [!DNL Third Party\MySQL\Installer\5.1] till Tomcat Server lib directory: [!DNL ...\Tomcat6.0\lib].
 
 >[!NOTE]
 >
@@ -63,6 +62,6 @@ Konfigurera exempeldatabasen genom att konfigurera databasschemat och fylla i da
 
 Du kan ignorera det här felet. Detta händer bara första gången du kör skriptet.
 
-Nu måste du konfigurera DBCP (Database Connection Pooling). DBCP använder Jakarta-Commons databasanslutningspool. En JNDI-datakälla för TestDB har konfigurerats för att dra nytta av den här anslutningspoolen för programservern. Om du vill ändra databasanslutningen till att peka på en MySQL-server som inte finns på localhost ändrar du [!DNL META-INF\context.xml] -fil (som anger plats, användarnamn och lösenord för licensserverns databas) som finns i [!DNL flashaccess.war], eller ändra [!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] och återskapa WAR-filen med de uppdaterade filerna. Om du vill ändra någon av de här parametrarna redigerar du [!DNL context.xml] finns i WebContent-katalogen och använder Ant-skriptet för att återskapa WAR-filen. Om du vill justera databasen ändrar du inställningarna för JNDI-datakällan i den här filen.
+Nu måste du konfigurera DBCP (Database Connection Pooling). DBCP använder Jakarta-Commons databasanslutningspool. En JNDI-datakälla för TestDB har konfigurerats för att dra nytta av den här anslutningspoolen för programservern. Om du vill ändra databasanslutningen till att peka på en MySQL-server som inte finns på localhost ändrar du [!DNL META-INF\context.xml] -fil (som anger plats, användarnamn och lösenord för licensserverns databas) som finns i [!DNL flashaccess.war], eller ändra [!DNL \Reference Implementation\Server\refimpl\WebContent\META-INF\context.xml] och återskapa WAR-filen med de uppdaterade filerna. Redigera [!DNL context.xml] finns i WebContent-katalogen och använder Ant-skriptet för att återskapa WAR-filen. Om du vill justera databasen ändrar du inställningarna för JNDI-datakällan i den här filen.
 
 Om du felsöker Reference Implementation-projektet i Eclipse måste du lägga till `$CATALINA_HOME\lib\tomcat-dbcp.jar` till din körnings-/felsökningskonfiguration. Det här steget krävs inte om du kör [!DNL flashaccess.war] på en fristående Tomcat 6.0-server.

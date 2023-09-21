@@ -1,8 +1,7 @@
 ---
 description: Innan något innehåll kan paketeras måste en eller flera profiler skapas. En översikt över användningsreglerna som kan anges i en profil finns i Användningsregler i Översikt över Adobe Access SDK.
 title: Skapa en ny princip
-exl-id: c8c78983-3578-4895-8f61-8f812aa59e20
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
@@ -13,4 +12,4 @@ ht-degree: 0%
 
 Innan något innehåll kan paketeras måste en eller flera profiler skapas. En översikt över användningsreglerna som kan anges i en profil finns i Användningsregler i Översikt över Adobe Access SDK.
 
-Om du vill skapa en ny profil klickar du på Ny och anger ett profilnamn. Fyll i önskade principattribut (alla inställningar är valfria). När du är klar klickar du på **[!UICONTROL Save]**. Principen sparas som [!DNL policyname.pol] i resurskatalogen.
+Om du vill skapa en ny profil klickar du på Ny och anger ett profilnamn. Fyll i önskade principattribut (alla inställningar är valfria). När du är klar klickar du **[!UICONTROL Save]**. Principen sparas som [!DNL policyname.pol] i resurskatalogen.

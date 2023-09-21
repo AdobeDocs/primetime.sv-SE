@@ -2,8 +2,7 @@
 title: Generera On Premises DRM-metadata
 description: Generera On Premises DRM-metadata
 copied-description: true
-exl-id: b42e3491-081b-45bf-bd00-8fb769a97446
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -20,7 +19,7 @@ A [!DNL CreateMetadata.jar] ingår i [!DNL create_metadata] mapp. Poängen med d
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      De två JAR-filerna kan finnas i [!DNL Command Line Tools/libs] mapp. The [!DNL createMetadata.properties] filen kan finnas bredvid [!DNL flashaccesstools.properties] -fil.
+     De två JAR-filerna kan finnas i [!DNL Command Line Tools/libs] mapp. The [!DNL createMetadata.properties] filen kan finnas bredvid [!DNL flashaccesstools.properties] -fil.
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 

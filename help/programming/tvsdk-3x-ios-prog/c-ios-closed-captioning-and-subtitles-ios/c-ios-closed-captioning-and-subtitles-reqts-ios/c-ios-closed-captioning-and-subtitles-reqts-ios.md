@@ -1,8 +1,7 @@
 ---
 description: Undertexter och undertexter har vissa unika skillnader och du kan aktivera dem på olika sätt.
 title: Krav för undertexter och undertexter
-exl-id: f90dcfb7-4fd2-41d5-8396-cdc827f8a8c4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
@@ -28,13 +27,13 @@ Du bör vara medveten om följande krav för undertexter och undertexter:
    * Undertexter finns vanligtvis på ett annat språk och innehåller inte bakgrundsljud.
    * Undertexter finns i strömmar som körs parallellt med huvudinnehållet.
 
-      The `PTMediaPlayer` spelar upp huvudinnehållet och annonserna, där huvudinnehållet kan vara live/linear eller VOD, och där annonserna kan vara pre-roll, mid-roll eller post-roll.
-   Nedan följer ytterligare krav för undertexter i iOS:
+     The `PTMediaPlayer` spelar upp huvudinnehållet och annonserna, där huvudinnehållet kan vara live/linear eller VOD, och där annonserna kan vara pre-roll, mid-roll eller post-roll.
+
+  Nedan följer ytterligare krav för undertexter i iOS:
 
    * För tidsstämplar är `X-TIMESTAMP-MAP` värde, som anges i rubrikavsnittet i `WebVTT` måste matcha videons tidsstämpel.
 
    * För systemet måste du använda iOS 6.1 eller senare.
-
 
 >[!IMPORTANT]
 >

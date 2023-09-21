@@ -1,8 +1,7 @@
 ---
 description: Du kan styra videovyns position och storlek med MediaPlayerView-objektet.
 title: Styra videovyns placering och storlek
-exl-id: 5e7ae557-7f2b-4697-85eb-e72d1f43a7fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -33,8 +32,7 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange ett annat
    >
    >Till exempel:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,6 +54,7 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange ett annat
    >       } 
    >}
    >```
+   >
 
 1. Tilldela implementeringen till `MediaPlayerView` -egenskap.
 
@@ -74,7 +73,7 @@ Du kan åsidosätta standardbeteendet för proportioner genom att ange ett annat
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**Till exempel: Skala videon så att den fyller hela videovyn utan att behålla proportionerna:**
+**Exempel: Skala videon så att den fyller hela videovyn utan att behålla proportionerna:**
 
 ```
 package com.adobe.mediacore.samples.utils { 

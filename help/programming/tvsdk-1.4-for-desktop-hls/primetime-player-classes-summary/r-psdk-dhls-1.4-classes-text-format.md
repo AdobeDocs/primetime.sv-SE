@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser anger formatering för text.
 title: Textformatklasser
-exl-id: 885de6f1-6c1a-4862-ab57-3854a3d5ebaf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Paket: [com.adobe.mediacore.textformat](https://help.adobe.com/en_US/primetime/a
 
 | Namn | Beskrivning |
 |---|---|
-| [Färg](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/Color.html) | En klass som kapslar in de godkända färgerna för de olika TextFormat-attributen, till exempel textfärgen, bakgrundsfärgen eller fyllningsfärgen. |
-| [Teckensnitt](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/Font.html) | Klass. Innehåller ett textteckensnitt. |
+| [Färg](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/Color.html) | En klass som kapslar in godkända färger för olika TextFormat-attribut, t.ex. textfärgen, bakgrundsfärgen eller fyllningsfärgen. |
+| [Teckensnitt](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/Font.html) | Klass. Innehåller ett teckensnitt. |
 | [FontEdge](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/FontEdge.html) | Klass. Anger önskad teckensnittskant. |
 | [Storlek](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/Size.html) | Klass. Anger ett värde för teckensnittsstorleken. |

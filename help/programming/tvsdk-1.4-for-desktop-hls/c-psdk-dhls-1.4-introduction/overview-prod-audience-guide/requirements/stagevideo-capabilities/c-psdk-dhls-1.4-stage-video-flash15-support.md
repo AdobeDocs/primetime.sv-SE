@@ -1,8 +1,7 @@
 ---
 description: Från Flash 15 och senare, när maskinvaruåtergivning med StageVideo inte är tillgängligt, återgår StageVideo sömlöst till ett StageVideo-programvaruobjekt.
 title: Flash 15-stöd för StageVideo
-exl-id: 23ef0806-3aa5-4c48-a4f7-4ad9b72bdcc9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -13,16 +12,16 @@ ht-degree: 0%
 
 Från Flash 15 och senare, när maskinvaruåtergivning med StageVideo inte är tillgängligt, återgår StageVideo sömlöst till ett StageVideo-programvaruobjekt.
 
-Titta på följande information om StageVideo-återgång till programmet Flash 15:
+Tänk på följande information om Flash 15 StageVideo som är en reserv till programmet:
 
 * Inga kodändringar krävs i programmet.
 * TVSDK behöver inte ändras.
 
-   Du behöver ingen TVSDK-uppdatering för att kunna använda StageVideo-återgång till programvara.
+  Du behöver ingen TVSDK-uppdatering för att kunna använda StageVideo-återgång till programvara.
 * Programmen måste kompileras om för Flash 15.
 * Program som du kompilerar om för Flash 15 fortsätter att fungera med Flash 14 och tidigare, så länge som dessa program inte använder några nya API:er som introducerades i Flash Player 15.
 
-   Om ditt Flash 14-program behöver använda ett nytt Flash 15-API måste du anropa API dynamiskt med en skiftning till objekttypen så att programmet inte misslyckas i Flash Player 14 vid körning.
+  Om Flash 14-programmet behöver använda ett nytt Flash 15-API måste du anropa API dynamiskt med en skiftning till objekttypen så att programmet inte misslyckas i Flash Player 14 vid körning.
 
 ## HTML-övertäckningar {#html-overlays}
 

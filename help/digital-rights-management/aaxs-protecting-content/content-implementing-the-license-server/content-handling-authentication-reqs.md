@@ -2,8 +2,7 @@
 title: Hantera autentiseringsbegäranden
 description: Hantera autentiseringsbegäranden
 copied-description: true
-exl-id: c1d46ec0-e053-4824-b3b1-20320e259fbe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -20,4 +19,4 @@ Hanteraren läser en autentiseringsbegäran och tolkar begärandemeddelandet nä
 
 * Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationHandler`
 * Begärandemeddelandeklassen är `com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationRequestMessage`
-* Om både klient och server har stöd för protokoll version 5 är begärande-URL:en &quot;License Server URL in metadata: + &quot;/flashaccess/authn/v4&quot;. Om protokollversion 3 är den högsta som stöds av antingen klienten eller servern skickar Adobe Access-klienterna autentiseringsbegäranden till &quot;License Server URL in metadata&quot; + &quot;/flashaccess/authn/v3&quot;. Annars skickas autentiseringsbegäranden till licensserverns URL i metadata + /flashaccess/authn/v1
+* Om både klienten och servern stöder protokoll version 5 är förfrågnings-URL:en &quot;License Server URL in metadata: + &quot;/flashaccess/authn/v4&quot;. Om protokollversion 3 är den högsta som stöds av antingen klienten eller servern skickar Adobe Access-klienterna autentiseringsbegäranden till &quot;License Server URL in metadata&quot; + &quot;/flashaccess/authn/v3&quot;. Annars skickas autentiseringsbegäranden till licensserverns URL i metadata + /flashaccess/authn/v1

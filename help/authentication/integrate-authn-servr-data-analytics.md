@@ -1,8 +1,7 @@
 ---
 title: Integrera data från Primetime-autentiseringsservern i Adobe Analytics
 description: Integrera data från Primetime-autentiseringsservern i Adobe Analytics
-exl-id: c1f1f2a3-c98c-4aed-92ad-1f9bfd80b82b
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 4%
@@ -26,11 +25,11 @@ Den är inte avsedd att ersätta en implementering på klientsidan om det redan 
 | Händelse | Beskrivning |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------|
 | AuthN begärdes | Antal initierade autentiseringsflöden |
-| AuthN väntar | Antal autentiseringstoken som genererats (oavsett om klienten verkligen fått den eller inte) |
+| AuthN väntar | Antal autentiseringstoken som har genererats (oavsett om klienten har fått den eller inte) |
 | AuthN OK | Antal autentiseringstoken som har hämtats av användare |
 | AuthZ begärdes | Antal försök till auktorisering |
 | AuthZ OK | Antal godkända auktoriseringar |
-| AuthZ misslyckades | Antal nekade auktoriseringar av sidoskyddsprogram på programnivå |
+| AuthZ misslyckades | Antal nekade auktoriseringar av sidoskyddsprogram på applikationsnivå |
 | Spela upp begäran | Antal genererade korta medietoken (som motsvarar antalet uppspelningsbegäranden) |
 | Utloggning begärd | Antal initierade utloggningsflöden |
 | Utloggningen är klar | Antal slutförda utloggningsflöden |
@@ -38,23 +37,23 @@ Den är inte avsedd att ersätta en implementering på klientsidan om det redan 
 | Förauktorisering begärdes | Antal initierade förauktoriseringsflöden |
 | Förhandsauktorisering OK | Antal lyckade förauktoriseringshändelser med resurser som förauktoriserats |
 | Förauktorisering nekad | Antal förauktoriseringshändelser med resurser som nekats förauktorisering |
-| Förauktoriseringen misslyckades | Antal misslyckade förauktoriseringshändelser |
+| Förhandsauktoriseringen misslyckades | Antal misslyckade förauktoriseringshändelser |
 
 | Adobe Analytics Name | Beskrivning |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kanal | ID för begärande som används för att utföra berättigandebegäran |
 | MVPD | Det huvuddokument som ansvarar för att bevilja behörighet till användaren |
 | Proxy | Proxyvariabeln MVPD (som kommer att vara &quot;Direkt&quot; för direkta integreringar) |
-| SDK-typ | Klient-SDK som används (Flash, HTML5, Android-modernt, iOS, klientlöst osv.) |
+| SDK-typ | Klient-SDK används (Flash, HTML5, Android-inbyggt, iOS, klientlöst osv.) |
 | SDK-version | Versionen av Adobe Primetime autentiseringsklient-SDK |
 | Resurs-ID | Den faktiska resurstitel som ingår i auktoriseringsbegäran (extraherad från MRSS-nyttolasten som artikel/titel om sådan finns) |
-| AuthZ-feltyp | Orsaken till fel, enligt Adobe Primetime-autentisering <br/> Här är de vanligaste värdena <br/> **noAuthZ** = MVPD svarade att användaren inte har kanalen i paketet<br/> **nätverk** = det gick inte att nå MVPD (MVPD har ett problem vid tidpunkten för samtalet och svarade inte)<br/> **norefreshtoken** = detta gäller endast för OAuth-implementeringar och det kan inträffa om användaren ändrar sitt lösenord eller MVPD av någon anledning nekar det. Det resulterar vanligtvis i en ny autentisering<br/> **felmatchning** = om begäran görs från en annan enhet än den som hade autentiseringstoken. Kan leda till att användare försöker lura systemet, men de flesta av dessa hände i samband med vårt gamla JavaScript SDK där enhets-ID använde IP-adressen som en del av beräkningen. Om en användare tittade på TVE hemma och sedan på jobbet skulle det här felet utlösas och de måste autentisera igen<br/> **ogiltig** = ogiltig begäran, saknade eller ogiltiga parametrar<br/>  **authzNone** = Programmerare kan neka tillstånd för en specifik channelMVPD-kombination. Detta utlöses av ett backend-API som programmerare har tillgång till<br/> **bedrägeri** = det är en skyddsmekanism på vår sida. Om användaren misslyckas med auktoriseringen och sedan begär det igen ett antal gånger i ett kort intervall (sekunder), nekar vi anropet direkt. Det händer vanligtvis när en programmerare har ett fel i implementeringen som frågar efter auktorisering hela tiden om det misslyckas. |
+| AuthZ-feltyp | Orsaken till fel, enligt Adobe Primetime-autentisering <br/> De vanligaste värdena <br/> **noAuthZ** = MVPD svarade att användaren inte har kanalen i paketet<br/> **nätverk** = det gick inte att nå MVPD (MVPD har ett problem vid tidpunkten för samtalet och svarade inte)<br/> **norefreshtoken** = detta gäller endast för OAuth-implementeringar och det kan inträffa om användaren ändrar sitt lösenord eller MVPD av någon anledning nekar det. Det resulterar vanligtvis i en ny autentisering<br/> **felmatchning** = om begäran görs från en annan enhet än den som hade autentiseringstoken. Kan leda till att användare försöker lura systemet, men de flesta av dessa hände i samband med vårt gamla JavaScript SDK där enhets-ID använde IP-adressen som en del av beräkningen. Om en användare tittade på TVE hemma och sedan på jobbet skulle det här felet utlösas och de måste autentisera igen<br/> **ogiltig** = ogiltig begäran, saknade eller ogiltiga parametrar<br/>  **authzNone** = Programmerare kan neka tillstånd för en specifik channelMVPD-kombination. Detta utlöses av ett backend-API som programmerare har tillgång till<br/> **bedrägeri** = det är en skyddsmekanism på vår sida. Om användaren misslyckas med auktoriseringen och sedan begär det igen ett antal gånger i ett kort intervall (sekunder), nekar vi anropet direkt. Det händer vanligtvis när en programmerare har ett fel i implementeringen som frågar efter auktorisering hela tiden om det misslyckas. |
 | Tokentyp | När tokens skapas på grund av AuthZ Alla och AuthN Alla, måste vi veta vad som orsakas av ett nedbrytningsmått.<br/> De är:<br/> &quot;normal&quot; = det normala fallet<br/> &quot;authall&quot; = När AuthN Alla är aktiverat<br/> &quot;authzall&quot; = När AuthZ Alla är aktiverat<br/>  &quot;hba&quot; = När värdbussadaptern är aktiverad |
 | Typ av klientlös enhet | Enhetsplattformen (alternativ) som för närvarande används för klientlösa.<br/> Värdena kan vara:<br/> Ej tillämpligt - händelsen kom inte från en klientlös SDK<br/> Okänd - eftersom parametern deviceType kommer från en **Klientlöst API** är valfritt, det finns anrop som inte innehåller något värde.<br/> Alla andra värden som skickas via **Klientlöst API**. Till exempel xbox, appletv och roku. |
 | MVPD-användar-ID | Ersätter cookie-baserat besökar-ID |
 
 
-## Detaljer {#details-int-authn-analyt}
+## Information {#details-int-authn-analyt}
 
 * Måtten infogas, händelse för händelse i den specifika rapportsviten via Adobe Analytics Data Insertion API
 * Infogningen grupperas och skickas var 30:e minut. På grund av detta måste rapporten tidsstämplas
@@ -79,7 +78,6 @@ Rapporten måste tidsstämplas eftersom händelserna skickas gruppvis.
 >Alla ska anges med:
 >
 >* Räknare (inga underrelationer)
-
 
 | Händelse | Adobe Analytics event |
 |---------------------------------------|-----------------------|
@@ -110,9 +108,8 @@ Rapporten måste tidsstämplas eftersom händelserna skickas gruppvis.
 >Alla ska anges med:
 >
 >* Allokering: Senaste (senaste)
->* Förfaller efter: Träff
+>* Förfaller efter: träff
 >* Typ: Textsträng
-
 
 | Egenskap | eVar |
 |-----------------------------------|--------------------------------|

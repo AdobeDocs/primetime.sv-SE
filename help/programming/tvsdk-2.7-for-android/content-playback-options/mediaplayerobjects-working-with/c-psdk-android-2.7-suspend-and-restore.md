@@ -1,9 +1,8 @@
 ---
-description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
+description: Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
 keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
 title: Pausa och återställa MediaPlayer
-exl-id: 159f0f4f-2bb7-40a1-9747-be970dfbb04d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Pausa och återställa MediaPlayer {#suspend-and-restore-mediaplayer}
 
-Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är inaktiverad och aktiverad måste hanteras av programmet.
+Att pausa och återställa TVSDK MediaPlayer när en enhetsskärm är avstängd och aktiverad måste hanteras av programmet.
 
 Du kan hantera åtgärder för uppehåll och återställning på `MediaPlayer` i Androids sändningsmottagare för att slå på/av på skärmen.
 

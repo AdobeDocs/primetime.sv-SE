@@ -1,8 +1,7 @@
 ---
 description: Referensimplementeringsservern kan hjälpa dig att skapa en fullt fungerande licensserver som använder alla funktioner i Adobe Primetime DRM Java SDK.
 title: Licensserver
-exl-id: a928b7ac-9191-4b8c-b038-eb92a09286fa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Referensimplementeringsservern kan hjälpa dig att skapa en fullt fungerande licensserver som använder alla funktioner i Adobe Primetime DRM Java SDK.
 
-I den här implementeringen autentiseras användare baserat på användarposter i en databas. Servern innehåller demonstrationslogik för att utfärda licenser och erbjuder kompatibilitetsstöd för Flash Media Rights Management Server 1.0 och 1.5.
+I den här implementeringen autentiseras användare baserat på användarposter i en databas. Servern innehåller affärslogik för att utfärda licenser och erbjuder kompatibilitetsstöd för Flash Media Rights Management Server 1.0 och 1.5.
 
 ## Krav för licensservern {#license-server-requirements}
 

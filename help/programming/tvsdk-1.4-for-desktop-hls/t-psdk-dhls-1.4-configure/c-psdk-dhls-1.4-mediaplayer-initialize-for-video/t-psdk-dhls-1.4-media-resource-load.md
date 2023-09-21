@@ -1,8 +1,7 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 title: Läsa in en medieresurs i MediaPlayer
-exl-id: 8258c45e-f8bf-434d-9621-88c189e1530d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 
-1. Ange `MediaPlayer` objektets uppspelningsbara objekt med den nya resurs som ska spelas upp.
+1. Ställ in `MediaPlayer` objektets uppspelningsbara objekt med den nya resurs som ska spelas upp.
 
    Ersätt det befintliga MediaPlayer-objektet genom att anropa `MediaPlayer.replaceCurrentResource` och skicka en befintlig `MediaResource` -instans.
 
@@ -23,17 +22,17 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
    * FÖRBEREDD
    * FEL
 
-      Genom dessa evenemang `MediaPlayer` -objektet kan meddela programmet när mediaresursen har lästs in.
+     Genom dessa evenemang `MediaPlayer` -objektet kan meddela programmet när mediaresursen har lästs in.
 
 1. När mediespelarens tillstånd ändras till INITIALIZED kan du anropa `MediaPlayer.prepareToPlay`
 
-   Initieringstillståndet anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
+   INITIALIZED-läget anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
 
 1. När mediespelarens status ändras till PREPARED har medieströmmen lästs in och förbereds för uppspelning.
 
    När medieströmmen läses in, `MediaPlayerItem` skapas.
 
-Om ett fel inträffar växlar MediaPlayer till FELstatus. Programmet meddelas också genom att `STATUS_CHANGED` för `MediaPlayerStatusChangeEvent` återanrop.
+Om ett fel inträffar växlar MediaPlayer till FEL-status. Programmet meddelas också genom att `STATUS_CHANGED` event för `MediaPlayerStatusChangeEvent` återanrop.
 
 Detta skickar flera parametrar:
 * A `type` parameter av typen sträng med värdet `ERROR`.

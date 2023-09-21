@@ -1,8 +1,7 @@
 ---
 description: Du kan använda Browser TVSDK för att hämta information om media som du kan visa i sökfältet.
 title: Visa videons varaktighet, aktuella tid och återstående tid
-exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%

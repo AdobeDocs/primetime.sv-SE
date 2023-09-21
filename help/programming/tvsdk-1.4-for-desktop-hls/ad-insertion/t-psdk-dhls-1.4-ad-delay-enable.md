@@ -1,8 +1,7 @@
 ---
 description: Du kan ange om uppspelning ska tillåtas innan alla annonser har lästs in och placerats på tidslinjen. När du startar uppspelningen på det här sättet får tittaren snabbare åtkomst till huvudinnehållet. Den här funktionen gäller endast för live DVR och fungerar inte med, till exempel VOD-resurser.
 title: Aktivera lazy och loading
-exl-id: 6b70a7ae-28ce-4a19-9560-26e937c721cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

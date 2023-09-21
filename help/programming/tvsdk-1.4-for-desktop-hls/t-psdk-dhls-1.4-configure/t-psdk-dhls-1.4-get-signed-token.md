@@ -1,8 +1,7 @@
 ---
-description: Flash Runtime TVSDK behöver en signerad token för att validera att du har rätt att anropa TVSDK API på domänen där ditt program finns.
+description: Flash Runtime TVSDK behöver en signerad token för att verifiera att du har behörighet att anropa TVSDK API på domänen där ditt program finns.
 title: Läs in din signerade token
-exl-id: fef6b764-dc65-412e-a990-3f0b1fef94dd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Läs in din signerade token {#load-your-signed-token}
 
-Flash Runtime TVSDK behöver en signerad token för att validera att du har rätt att anropa TVSDK API på domänen där ditt program finns.
+Flash Runtime TVSDK behöver en signerad token för att verifiera att du har behörighet att anropa TVSDK API på domänen där ditt program finns.
 
 1. Hämta en signerad token från din Adobe-representant för var och en av dina domäner (där varje domän kan vara en specifik domän eller en jokerteckendomän).
 
@@ -19,9 +18,9 @@ Flash Runtime TVSDK behöver en signerad token för att validera att du har rät
    
    * An [!DNL .xml] som fungerar som token för en enda domän eller jokerteckendomän.
 
-      >[!NOTE]
-      >
-      >En token för en jokerteckendomän täcker den domänen och alla dess underdomäner. En jokertecken för domänen [!DNL mycompany.com] skulle även täcka [!DNL vids.mycompany.com] och [!DNL private.vids.mycompany.com]; jokertecken för [!DNL vids.mycompany.com] skulle även täcka [!DNL private.vids.mycompany.com]. *Jokertecken för domäntoken stöds bara för vissa versioner av Flash Player.*
+     >[!NOTE]
+     >
+     >En token för en jokerteckendomän täcker den domänen och alla dess underdomäner. En jokertecken för domänen [!DNL mycompany.com] skulle även täcka [!DNL vids.mycompany.com] och [!DNL private.vids.mycompany.com]; en jokertecken-token för [!DNL vids.mycompany.com] skulle även täcka [!DNL private.vids.mycompany.com]. *Jokertecken för domäntoken stöds bara för vissa Flashar Player.*
 
    * A [!DNL .swf] -fil som innehåller tokeninformation för flera domäner (exklusive jokertecken) (en eller jokertecken) som programmet kan läsa in dynamiskt.
 
@@ -29,13 +28,14 @@ Flash Runtime TVSDK behöver en signerad token för att validera att du har rät
 
    Som standard söker TVSDK efter token på den här platsen. Du kan också ange tokens namn och plats i `flash_vars` i filen HTML.
 1. Om din tokenfil är en enda XML-fil:
-   1. Använd `utils.AuthorizedFeaturesHelper.loadFrom` för att hämta data som lagras på den angivna URL:en (tokenfilen) och extrahera `authorizedFeatures` information.
+   1. Använd `utils.AuthorizedFeaturesHelper.loadFrom` för att hämta data som lagras på den angivna URL:en (tokenfilen) och extrahera `authorizedFeatures` information från den.
 
       Det här steget kan variera. Du kanske vill utföra autentiseringen innan du startar programmet, eller så kanske du får token direkt från ditt innehållshanteringssystem (CMS).
 
    1. TVSDK skickar en `COMPLETED` om inläsningen lyckades eller `FAILED` i annat fall. Vidta lämpliga åtgärder när du upptäcker någon av händelserna.
 
       Detta måste lyckas för att ditt program ska kunna tillhandahålla de nödvändiga `authorizedFeatures` objekt till TVSDK i form av en `MediaPlayerContext`.
+
    I det här exemplet visas hur du kan använda en enda token [!DNL .xml] -fil.
 
    ```
@@ -57,9 +57,9 @@ Flash Runtime TVSDK behöver en signerad token för att validera att du har rät
    1. Lyssna efter COMPLETE-händelsen som TVSDK skickar om inläsningen lyckas.
 
       Lyssna också efter FEL-händelsen och vidta lämpliga åtgärder.
-   1. Om inläsningen är slutförd använder du `AuthorizedFeaturesHelper` för att få `ByteArray` som innehåller PCKS-7-kodade säkerhetsdata.
+   1. Om inläsningen är klar använder du `AuthorizedFeaturesHelper` för att få `ByteArray` som innehåller PCKS-7-kodade säkerhetsdata.
 
-      Dessa data används via AVE V11 API för att få auktoriseringsbekräftelsen från Flash Runtime Player. Om bytearrayen inte har något innehåll använder du proceduren för att söka efter en endomänstokenfil.
+      Dessa data används via AVE V11-API för att få auktoriseringsbekräftelsen från Flash Runtime Player. Om bytearrayen inte har något innehåll använder du proceduren för att söka efter en endomänstokenfil.
    1. Använd `AuthorizedFeatureHelper.loadFeatureFromData` för att hämta data från bytearrayen.
    1. Ta bort [!DNL .swf] -fil.
 

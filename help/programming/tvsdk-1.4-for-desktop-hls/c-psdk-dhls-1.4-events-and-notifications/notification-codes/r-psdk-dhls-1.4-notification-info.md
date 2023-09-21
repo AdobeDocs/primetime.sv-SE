@@ -1,8 +1,7 @@
 ---
 description: Den här tabellen innehåller detaljerad information om INFO-typmeddelanden.
 title: INFO-meddelandekoder
-exl-id: 6f813797-b4ef-4e75-a096-d55103b7304b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 4%
@@ -24,7 +23,7 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <th colname="2" class="entry"> Namn </th> 
    <th colname="3" class="entry"> Inre meddelande </th> 
    <th colname="4" class="entry"> Metadatanycklar </th> 
-   <th colname="5" class="entry"> Kommentarer </th> 
+   <th colname="5" class="entry"> Kommentar </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -73,7 +72,7 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300005 </span> </td> 
    <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
-   <td colname="3"> <p>FELMEDDELANDE. </p> </td> 
+   <td colname="3"> <p>FELMEDDELANDEN. </p> </td> 
    <td colname="4"><span class="codeph"> LÄGE </span> </td> 
    <td colname="5"> Spelarläget har ändrats. När tillståndet är FEL är det inre meddelandeobjektet det felmeddelandeobjekt som utlöste växlingen till FELläge. </td> 
   </tr> 
@@ -159,7 +158,7 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="2"><span class="codeph"> AD_PROGRESS </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> FÖRLOPP</span> </td> 
-   <td colname="5"> Uppspelningen av en viss annons har nått en viss procentandel av den annonsen. </td> 
+   <td colname="5"> Uppspelningen av en viss annons har nått en viss procentandel av just den annonsen. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>LBA (Late-binding audio)</b> </td> 

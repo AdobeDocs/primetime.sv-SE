@@ -1,8 +1,7 @@
 ---
 description: Använd funktionen Extern CEK för att leverera och paketera licenser med din befintliga CKMS.
 title: Använda externt CEK för att sälja och paketera licenser
-exl-id: 3944624a-099e-4fc0-b829-6ab154a53758
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -34,9 +33,8 @@ Vid licensköp observerar AXS-licensservern en flagga i metadata som identifiera
 >[!NOTE]
 >
 >* Java-källkoden kan byggas med den medföljande ANT-koden `build-samples.xml`
->* Flash Access SDK ( `adobe-flashaccess-sdk.jar`) måste finnas i klassökvägen
+>* Flash Access-SDK ( `adobe-flashaccess-sdk.jar`) måste finnas i klassökvägen
 >
-
 
 ## Serverarbetsflöde
 

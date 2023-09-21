@@ -1,15 +1,14 @@
 ---
-title: Bootstrap API
-description: Bootstrap API
-exl-id: bc7fe244-8664-43ac-b9a1-3967ea8749b1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: BOOTSTRAP API
+description: BOOTSTRAP API
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
 
 ---
 
-# Bootstrap API {#bootstrap-api}
+# BOOTSTRAP API {#bootstrap-api}
 
 API:t för Bootstrap är vanligtvis den URL som skickas till klient-/videouppspelnings-API:erna.  Information om alternativ och parametrar som kan konfigureras finns i [Bootstrap API-parametrar](#bootstrap-api-parameters).
 
@@ -42,7 +41,7 @@ API:t för Bootstrap är vanligtvis den URL som skickas till klient-/videouppspe
 
    **HTTP vs. HTTPS-begäranden**
 
-   Manifestservern skapar URL:er med samma HTTP-protokoll som klientens begäran. Om en spelare gör en osäker HTTP-begäran (http) returnerar manifestservern URL:er för manifest och Auditude tracking URL:er med http-protokollet. Om en spelare skapar en säker HTTP-anslutning (https), manifestserver, returneras manifest-URL:er och Auditude tracking-URL:er med https-protokollet.
+   Manifestservern skapar URL:er med samma HTTP-protokoll som klientens begäran. Om en spelare gör en osäker HTTP-begäran (http) returnerar manifestservern URL:er för manifest och URL:er för Auditude-spårning med http-protokollet. Om en spelare skapar en säker HTTP-anslutning (https), en manifestserver, returneras manifest-URL:er och URL:er för spårning av Auditude med https-protokollet.
 
    >[!NOTE]
    >
@@ -54,7 +53,7 @@ Frågeparametrar talar om för manifestservern vilken typ av klient som skickade
 Den fullständiga URL:en består av bas-URL:en följt av ett frågetecken och därefter `parameterName=value` argument avgränsade med et-tecken. Till exempel: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
 Manifestservern känner igen följande parametrar. Alla frågesträngar\
-parametrar skickas till annonsservern.
+-parametrar skickas till annonsservern.
 
 | parameter | description | format |
 |---|---|---|
@@ -67,16 +66,16 @@ parametrar skickas till annonsservern.
 | ptassetid | Unikt ID för innehållet som tilldelas och underhålls av utgivaren.  Krävs när det används tillsammans med Akamai Ad Scaler. | HLS/DASH |
 | ptcdn | Lista över ett eller flera CDN:er som ska vara värd för omkodade resurser. Mer information finns i [Leverans och lagring](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md).<br>Möjliga värden:<br>akamai, level3, llnw (limelight network), comcast.<br>Som standard används CDN:er för Primetime Ad Insertion. | HLS/DASH |
 | ptcueformat | Det angivna formatet för taggar som ska utföra annonsbeslut (till exempel scte35).<br>Möjliga värden:<br>dpisimple, dpiscte35, elemental<br>Om du har egna cue-format kontaktar du din tekniska kontorepresentant för att få information om vilket värde du ska använda | HLS/DASH |
-| ptfailover | Signalerar manifestservern för att identifiera primära strömmar och failover-strömmar som anges i den överordnad spellistan och för att behandla dem som osammanhängande uppsättningar. Detta underlättar redundans och förhindrar timingfel. (Endast för Apple HLS-enheter.) Mer information finns i [Underlätta växling av HLS-spelare](hls-switching-to-failover.md) | Endast HLS |
+| ptfailover | Signalerar manifestservern för att identifiera primära strömmar och failover-strömmar som anges i huvudspelningslistan och för att behandla dem som osammanhängande uppsättningar. Detta underlättar redundans och förhindrar timingfel. (Endast för Apple HLS-enheter.) Mer information finns i [Underlätta växling av HLS-spelare](hls-switching-to-failover.md) | Endast HLS |
 | ptmulticall | Om det här alternativet är aktiverat görs en separat annonsbegäran för varje tillgång som hittas i en VOD-resurs.  Som standard försöker Primetime Ad Insertion samla in all tillgänglig information och skicka den till annonsservern på en begäran. Möjliga värden:true för att aktivera, <br>utelämna för att inaktivera (standard inaktiverat) | HLS/DASH |
 | ptparallelstream | Gör det möjligt för kunder med spelare som begär CMAF-demultiplexade ljud- eller videoströmmar parallellt för att säkerställa att annonserna i ljud- och videospår är enhetliga. | Endast HLS |
 | ptprotoswitch | Aktiverar namngivna regler för omskrivning av manifest samt regler för hämtning av annonser, som vanligtvis kommer att konfigureras av din tekniska supportrepresentant.<br>Exempel: adfetch_fw, cdn_akm | HLS/DASH |
 | ptagds | Aktiverar inmatning av EXT-X-DISCONTINUITY-SEQUENCE-taggar i HLS-rubriker.Möjliga värden:true för att inaktivera (standard inaktiverat) | Endast HLS |
-| pttimeline | En sträng som innehåller den önskade tidslinjen för annonsplacering och innehåll, som åsidosätter och bryter i innehållsströmmen. [ Se VOD-tidslinjeformat ] | HLS/DASH |
+| pttimeline | En sträng som innehåller den önskade tidslinjen för annonsplacering och innehåll, som åsidosätter och bryter i innehållsströmmen. [Se VOD-tidslinjeformat] | HLS/DASH |
 | pttoken | Aktiverar tokenskyddsscheman för innehållsfragment-/segmentauktoriseringstoken för CDN:er<br>Möjliga värden:<br>akamai, llnw (limelight), ctl (centurylink) (standardtokenisering är inaktiverat) | HLS/DASH |
 | pttrackingmode | Aktivera annonsuppföljningsscheman.<br>Möjliga värden:<br>enkel för annonsspårning på klientsidan<br>sstm för annonsspårning på serversidan<br>Simplesstm för hybridklient/server och spårning (som standard utförs ingen annonsspårning) | HLS/DASH |
-| pttrackingposition | Instruerar manifestservern att endast returnera annonsspårningsinformation. Ange inte den här parametern i Bootstrap-begäran.<br>Obs! Manifestservern ignorerar alla skickade värden. Om du skickar en null-sträng eller tom sträng returnerar manifestservern M3U8. | HLS/DASH<br>Spårning på klientsidan |
+| pttrackingposition | Instruerar manifestservern att endast returnera annonsspårningsinformation. Ange inte den här parametern i Bootstrap-begäran.<br>Obs! Manifestservern ignorerar alla skickade värden. Om du skickar en tom sträng eller null returnerar manifestservern M3U8 | HLS/DASH<br>Spårning på klientsidan |
 | pttrackingversion | Anger vilken formatversion som ska returneras.<br>Möjliga värden:<br>v1, v2, v3 eller vmap | HLS/DASH<br>Spårning på klientsidan |
 | scteTracking | Den här parametern anger för manifestservern att spelaren som hämtar M3U8 behöver SCTE-tagginformation för att kunna hämtas.<br>Möjliga värden:<br>true eller false (standard false)<br>Obs! SCTE-35-data returneras i JSON-sidecar med följande kombination av frågeparametervärden:<br>ptcueformat=turner | elementärt | nfl | DPIScte35<br>pttrackingversion=v2<br>scteTracking=true<br> | Endast HLS |
-| veargetmultiplikator | Antalet segment från direktpunkten Förskjutningen före rullning konfigureras med: ( vetargetmultiplikator * målduration ) + vebufflength<br>Obs! Den här parametern gäller endast för live-/linjära HLS-strömmar<br>Möjliga värden:<br>numeric float<br>(standard: 3.0 - samma som HLS-specifikationen) | Endast HLS |
-| vebufferLength | Antalet sekunder från direktpunkten, som används tillsammans med vektamultiplikatorn.<br>Obs! Den här parametern gäller endast för live-/linjära HLS-strömmar<br>Möjliga värden:<br>numeric float<br>(standard: 3.0) | Endast HLS |
+| veargetmultiplikator | Antalet segment från direktpunkten Förskjutningen före rullning konfigureras med: ( vetargetMultilier * target duration ) + vebufflength<br>Obs! Den här parametern gäller endast för live/linjär HLS-strömmar<br>Möjliga värden:<br>numeric float<br>(standard: 3.0 - samma som HLS-specifikationen) | Endast HLS |
+| vebufferLength | Antalet sekunder från direktpunkten, som används tillsammans med vektamultiplikatorn.<br>Obs! Den här parametern gäller endast för live/linjär HLS-strömmar<br>Möjliga värden:<br>numeric float<br>(standard: 3.0) | Endast HLS |

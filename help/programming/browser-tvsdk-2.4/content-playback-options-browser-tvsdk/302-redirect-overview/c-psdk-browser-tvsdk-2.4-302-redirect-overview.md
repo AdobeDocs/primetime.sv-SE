@@ -1,8 +1,7 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 title: Omdirigeringsoptimering för HTTP 302
-exl-id: 80d5d38d-c998-4fc0-b527-b38e578d76e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Om en huvudmanifestbegäran omdirigeras och 302-optimering aktiveras i spelaren 
 >
 >Den här funktionen stöds endast i certifierade webbläsare som stöder `responseURL` -egenskapen i `XMLHttpRequest` -objekt.
 
-Kom ihåg följande information för Flash fallback:
+Kom ihåg följande information om reservlösningar för Flashar:
 
 * Slutanvändarna måste ha Adobe Flash Player version 23 eller senare installerat.
 * Om dataströmmens integritet är inaktiverad stöds 302-omdirigering endast i certifierade webbläsare.

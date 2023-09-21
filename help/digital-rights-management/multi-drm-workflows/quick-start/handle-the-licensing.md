@@ -1,8 +1,7 @@
 ---
 description: Licensiering är den primära mekanismen genom vilken användare tillåts eller nekas möjlighet att spela upp ett skyddat videoinnehåll. En berättigad (berättigad) användare kan få en licens (en nyckel) för att dekryptera och spela upp en viss del av innehållsleverantörens krypterade innehåll.
 title: Licenser
-exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -20,9 +19,8 @@ Din berättigande- eller butiksserver begär en licenstoken från den relevanta 
 >[!NOTE]
 >
 >Licenstokenbegäran kan inte göras från själva klienten:
->1. Rättigheterna ska kontrolleras i en tillförlitlig miljö. och
+>1. Rättigheterna ska kontrolleras i en tillförlitlig miljö.
 >1. Kundautentiseraren måste hemlighållas.
-
 
 1. Gör en begäran om licenstoken.
 

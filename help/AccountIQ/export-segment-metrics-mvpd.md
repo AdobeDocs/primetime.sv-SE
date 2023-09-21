@@ -1,8 +1,7 @@
 ---
 title: Exportera mätvärden för ett MVPD och utvalda programmerare
 description: Exportera mätvärden för ett MVPD och utvalda programmerare
-exl-id: 868016ec-71aa-44b9-a002-0d124a64c167
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -20,11 +19,11 @@ Så här exporterar du mätvärden för ett MVPD-dokument och utvalda programmer
 1. Gå till någon av följande paneler:
 
    * Programmerare i segment
-      ![](assets/prog-segment-export-option.png)
+     ![](assets/prog-segment-export-option.png)
 
    * Antal konton och användning genom att dela sannolikhetsnivå
 
-      ![](assets/progr-usage-panel-export.png)
+     ![](assets/progr-usage-panel-export.png)
 
 1. Välj **Exportera** i panelens övre högra hörn.
 
@@ -32,9 +31,9 @@ Data exporteras i CSV-format och filen hämtas lokalt till din enhet. Du kan anv
 
 * Programmerare i segment
 
-   ![](assets/export-progr-in-seg.png)
+  ![](assets/export-progr-in-seg.png)
 
 
 * Antal konton och användning genom att dela sannolikhetsnivå
 
-   ![](assets/export-acc-usage.png)
+  ![](assets/export-acc-usage.png)

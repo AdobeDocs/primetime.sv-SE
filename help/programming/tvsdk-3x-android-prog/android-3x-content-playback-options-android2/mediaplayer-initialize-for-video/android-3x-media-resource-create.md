@@ -1,8 +1,7 @@
 ---
 description: Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 title: Skapa en medieresurs
-exl-id: d9693ee5-c192-4ac5-925a-d64e629920b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
 
 1. Skapa en `MediaResource` genom att skicka information om mediet till `MediaResource` konstruktor.
 
-   The `MediaResource` konstruktorn kräver följande parametrar:
+   The `MediaResource` för konstruktorn krävs följande parametrar:
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
    <thead> 
@@ -37,12 +36,12 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
       <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
       <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-format för basmediefil (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Beskrivning av MPEG-DASH-mediepresentation (MPD) </li> 
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASH mediepresentationsbeskrivning (MPD) </li> 
       </ul> </td> 
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> En instans av <span class="codeph"> Metadata </span> class (a dictionary-like structure), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Konfigurera <span class="codeph"> AuditudeSettings </span> innan denna konstruktor används <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Lägg in metadata </a>. </td> 
+      <td colname="col2"> En instans av <span class="codeph"> Metadata </span> class (a dictionary-like structure), som kan innehålla ytterligare information om innehållet som ska läsas in, till exempel alternativt innehåll eller annonsinnehåll som ska placeras inuti huvudinnehållet. Konfigurera <span class="codeph"> AuditudeSettings </span> innan denna konstruktor används <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Lägg till metadata för annonsinfogning </a>. </td> 
    </tr> 
    </tbody> 
    </table>

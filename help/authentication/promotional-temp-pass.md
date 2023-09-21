@@ -1,8 +1,7 @@
 ---
 title: Kampanjtillfälligt pass
 description: Kampanjtillfälligt pass
-exl-id: 705c1ba9-0430-4e3b-add1-d9e4da3f82d1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 0%
@@ -51,7 +50,7 @@ Programmeraren kommer att ge en hash över användarens PII-kod för autentiseri
 Baserat på enhets-ID och den information som användaren angett och enligt logiken nedan avgör Adobe Primetime-autentiseringen om användaren befinner sig i en ny testversion eller i en befintlig:
 
 * ny hash over användartillhandahållen information (t.ex. e-post), nytt enhets-ID => ny testversion
-* befintlig hash-over-användartillhandahållen information (t.ex. e-post), nytt enhets-ID => befintlig testversion (med befintlig hash-over-användartillhandahållen information (t.ex. e-post))
+* befintlig hash-over-användartillhandahållen information (t.ex. e-post), nytt enhets-ID => befintlig testversion (med befintlig hash-over-användarinformation (t.ex. e-post))
 * ny hash over användartillhandahållen information (t.ex. e-post), befintligt enhets-ID => befintlig testversion (med befintligt enhets-ID)
 * befintlig hash-over-användartillhandahållen information (t.ex. e-post), befintligt enhets-ID => befintlig testversion
 
@@ -62,7 +61,7 @@ Baserat på enhets-ID och den information som användaren angett och enligt logi
 
 * Användardefinierad informationsnyckel (t.ex. e-post)
 * Antal resurser som användaren har rätt att använda
-* TTL - den tidsram inom vilken användaren har rätt att förbruka det konfigurerade antalet resurser
+* TTL - tidsramen som användaren har rätt att använda det konfigurerade antalet resurser
 
 ### Användarmetadata {#user-metadata}
 
@@ -88,7 +87,7 @@ För kampanjflöden för tillfälligt pass kommunicerar autentiseringen och aukt
 
 När en preflight- eller preauktoriseringsbegäran görs för ett Kampanjtillfälligt pass-MVPD, kommer motsvarande preflight-svar som returneras att innehålla hela listan med resurser från Preflight-begäran som preflight-godkänd.
 
-Logiken bakom detta är: Villkoren för godkännande av kampanjtillfälligt pass baseras på tids- och resursnummergränsen i stället för på specifika resurser. Mer specifikt: så länge som tidsbegränsningen uppfylls och resursgränsen inte överskrids, kommer de anropade resurserna att auktoriseras.
+Logiken bakom detta är: Villkoren för godkännande av kampanjtillfälligt pass baseras på tids- och resursnummergränsen i stället för på specifika resurser. Om tidsbegränsningen uppfylls och resursgränsen inte överskrids, kommer de anropade resurserna att auktoriseras.
 
 ### SSO {#sso}
 
@@ -96,13 +95,13 @@ SSO är inte aktiverat för instanser av kampanjtillfälligt pass, som har konfi
 
 ### Utloggning {#logout}
 
-Alla token på en enhet tas bort vid utloggning. Därför bör en övergång från Kampanjtillfälligt pass till ett regelbundet användarvalt MVPD inte vara beroende av den här implementeringen. Rekommendationen är att använda `setSelectedProvider(null)` för att rensa programtillståndet och sedan starta om autentiseringsflödet, vilket ger en bättre användarupplevelse.
+Alla token på en enhet tas bort vid utloggning. Därför bör en övergång från Kampanjtillfälligt pass till ett vanligt MVPD som väljs av användaren inte vara beroende av den här implementeringen. Rekommendationen är att använda `setSelectedProvider(null)` för att rensa programtillståndet och sedan starta om autentiseringsflödet, vilket ger en bättre användarupplevelse.
 
 ### Flödesdiagram för tillfälligt kampanjpass {#promo-tempass-flowdia}
 
 ![Flödesdiagram för tillfälligt kampanjpass](assets/promo-temp-pass-flow.png)
 
-*Bild: Kampanjens tillfälliga genomströmningsflöde*
+*Bild: Kampanjens temp-isoleringsflöde*
 
 ## Implementera tillfälligt kampanjpass {#impl-promo-tempass}
 
@@ -133,7 +132,7 @@ Vissa affärsregler kräver en regelbunden rensning av kampanjens tillfälliga p
 
 | `DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset` |
 |----|
-| <ul><li>Protokoll: **https**</li><li>Värd:<ul><li>Version: **mgmt.auth.adobe.com**</li><li>Föregående: **mgmt-prequal.auth.adobe.com**</li></ul></li><li>Sökväg: **/reset-tempass/v2/reset**</li><li>Frågeparametrar: **device_id=all&amp;request_id=THE_REQUESTOR_ID&amp;mvpd_id=THE_TEMPASS_MVPD_ID**</li><li>sidhuvuden: ApiKey: **1232293681726481**</li> <li>Svar:<ul><li>Slutfört: **HTTP 204**</li><li>Fel: **HTTP 400** för felaktiga ansökningar, **HTTP 401** om ApiKey inte anges, **HTTP 403** om ApiKey är ogiltig</li></ul></li></ul> |
+| <ul><li>Protokoll: **https**</li><li>Värd:<ul><li>Version: **mgmt.auth.adobe.com**</li><li>Föregående: **mgmt-prequal.auth.adobe.com**</li></ul></li><li>Sökväg: **/reset-tempass/v2/reset**</li><li>Frågeparametrar: **device_id=all&amp;request_id=THE_REQUESTOR_ID&amp;mvpd_id=THE_TEMPASS_MVPD_ID**</li><li>rubriker: ApiKey: **1232293681726481**</li> <li>Svar:<ul><li>Slutfört: **HTTP 204**</li><li>Fel: **HTTP 400** för felaktiga ansökningar, **HTTP 401** om ApiKey inte anges, **HTTP 403** om ApiKey är ogiltig</li></ul></li></ul> |
 
 Utöver kraven för att tömma tillfälligt pass använder det tillfälliga erbjudandepasset hash-informationen för användaridentifieraren som skickas som **generisk_data** om autentisering och auktorisering för rensning.
 
@@ -147,8 +146,8 @@ $ curl -X DELETE -H "Authorization:Bearer H4j7cF3GtJX81BrsgDa10GwSizVz" "https:/
 
 | Adobe Primetime-autentiseringsklienter | Kampanjtillfälligt pass | Återställ verktyg | Stöder dedikerad svarskod/klientfel |
 |:--------------------------------------:|:---------------------:|:----------:|:-----------------------------------------------:|
-| Aktivera JS-åtkomst | JA | JA | JA (från v 3.0.0) |
-| iOS för inbyggd klient | JA | JA | JA (från v 1.10) |
+| JS Access Enabler | JA | JA | JA (från v 3.0.0) |
+| IOS för inbyggd klient | JA | JA | JA (från v 1.10) |
 | Android för inbyggd klient | JA | JA | JA |
 | Klientlöst API | JA | JA | NEJ |
 

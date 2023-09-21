@@ -1,8 +1,7 @@
 ---
 description: Referensimplementeringen för Primetime använder ett JSON-baserat feedformat för svar. Det här formatet tolkas med en implementering av IFeedItemAdapter-gränssnittet.
 title: Katalogformat
-exl-id: faaeb647-9c01-4290-be1e-2b8461c8ad27
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
@@ -93,7 +92,7 @@ Följande kodblock definierar de JSON-objekt som utgör arrayen för **innehåll
 | format | Måste vara m3u8-format för Android. |
 | url | URL:en till videoströmmen för det angivna formatet. |
 
-Följande kodblock definierar de JSON-objekt som utgör arrayen för **miniatyrbildobjekt**:
+Följande kodblock definierar de JSON-objekt som utgör arrayen för **miniatyrobjekt**:
 
 ```
 "thumbnails": [
@@ -115,8 +114,8 @@ Följande kodblock definierar de JSON-objekt som utgör arrayen för **miniatyrb
 | Egenskap | Beskrivning |
 |---|---|
 | format | En sträng som anger formatet för miniatyrfilen, till exempel JPEG, PNG osv. |
-| height | Höjden på miniatyrbilden. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
-| width | Bredden på miniatyrbilden. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
+| height | Miniatyrbildens höjd. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
+| width | Miniatyrbildens bredd. I referensprogrammet returneras miniatyrbilden med den minsta höjden och bredden som en liten miniatyrbild och den med den största bredden och höjden som en stor miniatyrbild. |
 | url | URL:en till miniatyrfilen. |
 
 Följande kodblock definierar **metadataobjekt**:
@@ -137,7 +136,7 @@ Följande kodblock definierar **metadataobjekt**:
 | Egenskap | Beskrivning |
 |--- |--- |
 | ad | Annonsrelaterade metadata. |
-| type | Värdet kan vara Primetime Ads, Direct Ad Breaks eller Custom Ad Marers. <br/><br/>PSDK har inbyggt stöd för följande typer av metadata: Auditude-relaterade metadata för Primetime Ad Serving (Primetime Ads), direkta annonsbrytningar med annonsadresser (Direct Ad Breaks) och anpassade annonsmarkörer som anger tidsintervallet för varje annonsmarkör (Custom Ad Marers). Varje typ har en inbyggd AdProvider i PSDK som bearbetar metadata.  <br/><br/>JSON-formatet för var och en av dessa har definierats nedan. |
+| type | Värdet kan vara Primetime Ads, Direct Ad Breaks eller Custom Ad Marers. <br/><br/>PSDK har inbyggt stöd för följande typer av metadata: Auditude-relaterade metadata för Primetime Ad Serving (Primetime Ads), direkta annonsbrytningar med annonser (Direct Ad Breaks) och anpassade annonsmarkörer som tillhandahåller tidsintervall för varje annonsmarkör (anpassade annonsmärken). Varje typ har en inbyggd AdProvider i PSDK som bearbetar metadata.  <br/><br/>JSON-formatet för var och en av dessa har definierats nedan. |
 | information | Innehåller attribut för annonsmetadata. Båda typerna av annonsmetadata har en egen uppsättning attribut som definieras nedan. För de inbyggda typerna definierar attributen de data som förväntas av PSDK för den typen. |
 | berättigande | Tillståndsrelaterade metadata |
 | id | Medieresurs-ID som används för auktoriseringsbegäranden mot Adobe Primetime betal-TV-pass-tjänst. ID:t kan vara antingen en textsträng eller en HTML-kodad mRSS-sträng. Allt mediainnehåll som kräver auktorisering måste innehålla ett giltigt resurs-ID. |

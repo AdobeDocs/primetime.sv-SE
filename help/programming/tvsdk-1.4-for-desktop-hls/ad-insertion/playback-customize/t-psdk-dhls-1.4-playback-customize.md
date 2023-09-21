@@ -1,8 +1,7 @@
 ---
 description: Du kan anpassa eller åsidosätta annonsbeteenden.
 title: Konfigurera anpassad uppspelning
-exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Gör något av följande om du vill anpassa annonsbeteenden:
 
 * Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
+  Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
 * Utöka `DefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
+  Det här alternativet rekommenderas om du bara behöver åsidosätta **några** standardbeteenden.
 
 Utför följande uppgifter för båda alternativen:
 
@@ -62,4 +61,4 @@ Utför följande uppgifter för båda alternativen:
 
    >[!TIP]
    >
-   >Om den anpassade innehållsfabriken har registrerats för en specifik ström via `MediaPlayerItemConfig` -klassen rensas den när `MediaPlayer` instansen har avallokerats. Programmet måste registrera det varje gång en ny uppspelningssession skapas.
+   >Om den anpassade innehållsfabriken har registrerats för en specifik ström via `MediaPlayerItemConfig` -klassen rensas den när `MediaPlayer` -instansen har avallokerats. Programmet måste registrera det varje gång en ny uppspelningssession skapas.

@@ -2,8 +2,7 @@
 title: Tidsbaserade regler
 description: Tidsbaserade regler
 copied-description: true
-exl-id: 02a5c10d-13f5-4482-b525-bf6a1ec9dcf0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Exempel: Använd ett absolut förfallodatum för att spegla slutet på distribut
 
 Det relativa slutdatumet anger licensens förfallodatum, som anges i förhållande till paketeringsdatumet, inte i förhållande till det datum då licensen utfärdades.
 
-Exempel: I en automatiserad paketeringsprocess använder du en enda Primetime DRM-princip med det här alternativet för en serie videor för att ange förfallodatumet till 30 dagar i förhållande till paketeringsdatumet.
+Exempel: I en automatiserad paketeringsprocess använder du en enda Primetime DRM-princip med det här alternativet för en serie videor för att ange ett förfallodatum på 30 dagar i förhållande till paketeringsdatumet.
 
 ## Licensens cachelagringstid{#license-caching-duration}
 
@@ -43,15 +42,15 @@ Licensens cachelagringstid anger hur länge en licens kan cachelagras på disken
 
 När cachens förfallodatum har passerat är licensen inte längre giltig och klienten måste begära en ny licens från licensservern.
 
-Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. vid uthyrning. Du kan ange en 30-dagars uthyrning (med cache-lagring av licenser) för att ange den totala licenstiden för innehållet.
+Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. i ett uthyrningsfall. Du kan ange en 30-dagars uthyrning (med cache-lagring av licenser) för att ange den totala licenstiden för innehållet.
 
 ## Uppspelningsfönster {#playback-window}
 
 Uppspelningsfönstret anger hur länge en licens är giltig efter första gången den används för att spela upp skyddat innehåll.
 
-Exempel: Vissa affärsmodeller tillåter en hyrperiod på 30 dagar, men när uppspelningen börjar måste uppspelningen vara slutförd på 48 timmar. I det här fallet är licensens 48-timmarsperiod uppspelningsfönstret.
+Exempel: I vissa affärsmodeller tillåts en hyrperiod på 30 dagar, men när uppspelningen börjar måste uppspelningen vara slutförd på 48 timmar. I det här fallet är licensens 48-timmarsperiod uppspelningsfönstret.
 
-**Från version 5.3 framåt** - Uppspelningsfönstret har också stöd för alternativet att aktivera eller inaktivera Hårt stopp, vilket anger om dekrypteringssammanhanget för uppspelningen ska stoppas när uppspelningsfönstret (aktiverat) upphör eller fortsätta trots att det är inaktiverat.
+**Från version 5.3 och framåt** - Uppspelningsfönstret har också stöd för alternativet att aktivera eller inaktivera Hårt stopp, vilket anger om dekrypteringssammanhanget för uppspelningen ska stoppas när uppspelningsfönstret (aktiverat) upphör eller fortsätta trots att det är inaktiverat.
 
 >[!NOTE]
 >

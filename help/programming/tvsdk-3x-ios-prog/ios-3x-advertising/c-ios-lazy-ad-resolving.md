@@ -1,8 +1,7 @@
 ---
-description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att använda en strategi med två spelare.
+description: Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att man använder en strategi med två spelare.
 title: Just-in-Time-annonsvisning
-exl-id: dd5342c5-9f34-4778-a47a-91ff2eb03155
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Just-in-Time-annonsvisning {#just-in-time-ad-resolving}
 
-Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att använda en strategi med två spelare.
+Annonsupplösning och annonsinläsning kan orsaka en oacceptabel fördröjning för en användare som väntar på att uppspelningen ska starta. Funktionen Lazy Ad Loading Resolving kan minska startfördröjningen. Annonserna kan nu lösas vid ett angivet intervall innan annonsbrytningens position. Detta uppnås genom att man använder en strategi med två spelare.
 
 **Grundläggande annonslösning och inläsningsprocess:**
 
@@ -27,7 +26,7 @@ Spelaren använder URL:erna i manifestet för att hämta annonsinnehållet (krea
 1. TVSDK *löser och läser in* alla förrollsannonser, flyttar spelaren till PREPARED-status och uppspelningen av innehåll börjar.
 1. TVSDK *lösningar* varje annonsbrytning före sin position baserat på det värde som definieras i `PTAdMetadata::delayAdLoadingTolerance`.
 
-Som standard `delayAdLoadingTolerance` är inställt på 5 sekunder. Om en AdBreak är inställd på att spelas upp på 3:00 löses den vid 2:55:00. Du kanske vill öka värdet om du tror att annonsupplösningen tar längre tid än 5 sekunder.
+Som standard `delayAdLoadingTolerance` är inställt på 5 sekunder. Om en AdBreak är inställd på att spelas upp på 3:00 löses den vid 2:55:00 Du kanske vill öka värdet om du tror att annonsupplösningen tar längre tid än 5 sekunder.
 
 >[!IMPORTANT]
 >
@@ -35,10 +34,9 @@ Som standard `delayAdLoadingTolerance` är inställt på 5 sekunder. Om en AdBre
 >* Lazy Ad Resolving stöds bara för VOD-strömmar med positionerna SERVER_MAP och signaleringsläge.
 >* Lazy Ad Resolving är inte aktiverat som standard. Du måste ange `PTAdMetadata::delayAdLoading` = JA för att aktivera den.
 >* Lazy Ad Resolving är inte kompatibelt med funktionen Instant On. Mer information om Direkt på finns i [Direkt på](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
->* Bild-i-bild-läget stöds inte med Lazy Ad Resolving. Inaktivera bild-i-bild-lägen om du aktiverar Lazy Ad Resolving.
+>* Bild-i-bild-läget stöds inte med Lazy Ad Resolving. Inaktivera alla bild-i-bild-lägen om du aktiverar Lazy Ad Resolving.
 >* Lazy-annonsupplösningen påverkar inte pre-roll-annonser.
 >
-
 **Aktivera lat och löst**
 
 Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).

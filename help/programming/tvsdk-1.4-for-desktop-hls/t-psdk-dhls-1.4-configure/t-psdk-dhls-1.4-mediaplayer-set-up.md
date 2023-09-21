@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer-gränssnittet kapslar in en mediespelares funktioner och beteende.
 title: Konfigurera MediaPlayer
-exl-id: eec51f3e-4779-4fb5-b735-d5be412de64e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -28,7 +27,7 @@ TVSDK erbjuder en enda implementering av `MediaPlayer` gränssnitt: klassen Defa
        new MediaPlayerContext(authorizedFeatures)
    ```
 
-1. Instansiera en `MediaPlayer` med metoden public create factory, skicka en `MediaPlayerContext` kontextobjekt:
+1. Instansiera en `MediaPlayer` med metoden&quot;public create factory&quot;, skicka en `MediaPlayerContext` kontextobjekt:
 
    ```
    public static function create(context:Context):MediaPlayer

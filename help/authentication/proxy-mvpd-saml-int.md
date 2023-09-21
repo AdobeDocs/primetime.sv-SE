@@ -1,8 +1,7 @@
 ---
 title: Proxy MVPD SAML-integrering
 description: Proxy MVPD SAML-integrering
-exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
@@ -15,7 +14,7 @@ ht-degree: 1%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview-proxy-mvpd-saml-int}
+## Ökning {#overview-proxy-mvpd-saml-int}
 
 I det här dokumentet beskrivs SAML-autentiseringsflödet för proxyintegreringar.  Dessa flöden är beroende av att det finns proxykonfigurationsdata i Adobe Primetime autentiseringsserverkonfiguration. Proxy MVPD skickar sina Proxy-konfigurationsdata till Adobe Primetime autentiseringsserver via Adobe Primetime autentiseringsproxywebbtjänst.
 
@@ -33,7 +32,7 @@ Varje MVPD-proxy tillhandahåller proxykonfigurationsdata för sina proxybaserad
 
 ## SAML-integreringsflöden {#saml-int-flows}
 
-När en MVPD-prenumerant besöker en programmerares webbplats eller program svarar Adobe Primetime-autentiseringen på ett API-anrop från webbplatsen eller programmet med en lista över MVPD som är aktiverat för den programmeraren.  Integrationen kan vara direkt eller proxibel. det inte finns någon skillnad mellan dem och programmeraren. På så sätt kan programmerare presentera listan över aktiva MVPD:er på det sätt de vill. Abonnenten väljer sitt MVPD och Adobe Primetime-autentiseringen dirigerar om abonnenten till MVPD:s specifika identitetsleverantör.
+När en MVPD-prenumerant besöker en programmerares webbplats eller program svarar Adobe Primetime-autentiseringen på ett API-anrop från webbplatsen eller programmet med en lista över MVPD som är aktiverat för den programmeraren.  Integrationen kan vara direkt eller proxibel; det är ingen skillnad mellan dem och programmeraren. På så sätt kan programmerare presentera listan över aktiva MVPD:er på det sätt de vill. Abonnenten väljer sitt MVPD och Adobe Primetime-autentiseringen dirigerar om abonnenten till MVPD:s specifika identitetsleverantör.
 
 Om det är en integrerad MVPD-proxy sker integreringen mellan Adobe Primetime-autentisering och MVPD-proxyn. Adobe Primetime-autentisering skickar begäran om användarautentisering till MVPD-proxyn och MVPD-proxyn hanterar omdirigeringen. För att MVPD-proxyn ska veta var användarautentiseringsbegäran ska dirigeras om skickar Adobe Primetime-autentiseringen en MVPD-identifierare i SAML-autentiseringsbegäran.  Den här identifieraren är det MVPD-ID som anges av proxyprovidern via proxywebbtjänsten enligt ovan.
 

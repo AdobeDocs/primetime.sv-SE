@@ -1,21 +1,20 @@
 ---
 description: Du kan ange en gränssnittskontroll för ljudvolymen.
-title: Ange volymkontroll
-exl-id: 058d79d2-35cc-4238-8fc1-2820a2d91ffb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Tillhandahåll volymkontroll
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-# Ange volymkontroll{#provide-volume-control}
+# Tillhandahåll volymkontroll{#provide-volume-control}
 
 Du kan ange en gränssnittskontroll för ljudvolymen.
 
 1. Vänta tills MediaPlayer-instansen har en giltig status för det här kommandot.
 
-   Alla lägen utom för SLÄPPT är giltiga.
+   Alla lägen utom FRISLÄPPT är giltiga.
 1. Anropa metoden för volyminställning på `MediaPlayer` -instans för att ange ljudvolymen.
 
    ```

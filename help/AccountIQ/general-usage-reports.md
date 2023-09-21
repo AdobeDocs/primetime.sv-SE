@@ -1,8 +1,7 @@
 ---
 title: Allmänna användningsrapporter
 description: Allmänna användningsrapporter
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Allmänna användningsrapporter {#general-usage-reports}
 
-IQ-rapporter för konton är grundläggande analysverktyg och rapporter som gör att du kan gå in i data för att isolera dem [kohorter](/help/AccountIQ/product-concepts.md#segmet-def), identifiera avvikelser och bygga upp en förståelse för dina kontoegenskaper.
+IQ-rapporter är grundläggande analysverktyg och rapporter som gör att du kan gå in i data för att isolera dem [kohorter](/help/AccountIQ/product-concepts.md#segmet-def), identifiera avvikelser och bygga upp en förståelse för dina kontoegenskaper.
 
 Rapporteringssidan General Usage innehåller verktyg för att ta bort undergruppsmått baserat på antalet kontoenheter som används, IP-adresser som har identifierats och respektive postnummer.
 
@@ -46,7 +45,7 @@ I linjediagrammen här visas hur värdena för AuthN OK, AuthZ OK, Play-begäran
 ![](assets/progr-line-graph-gu.png)
 
 
-*Bild: AuthN OK/AuthZ OK/Play-begäranden/unika prenumeranter för programmeraren*
+*Bild: AuthN OK / AuthZ OK / Uppspelningsbegäranden / Unika prenumeranter för programmeraren*
 
 
 +++
@@ -57,7 +56,7 @@ I linjediagrammen här visas hur värdena för AuthN OK, AuthZ OK, Play-begäran
 ![](assets/mvpd-line-graph-gu.png)
 
 
-*Bild: AuthN OK/AuthZ OK/Unika prenumeranter för MVPD-användare*
+*Bild: AuthN OK / AuthZ OK / Unika prenumeranter för MVPD-användare*
 
 
 +++
@@ -66,28 +65,28 @@ X-axeln visar enheterna inom den aktuella tidsramen och y-axeln representerar gr
 
 * **AuthN OK**
 
-   AuthN OK är antalet lyckade autentiseringar. Mer information och definitioner finns i [Produktbegrepp: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  AuthN OK är antalet lyckade autentiseringar. Mer information och definitioner finns i [Produktbegrepp: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK är antalet lyckade auktoriseringar. Mer information och definitioner finns i [Produktbegrepp: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK är antalet lyckade auktoriseringar. Mer information och definitioner finns i [Produktbegrepp: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Spela upp begäranden**
 
-   Uppspelningsbegäranden är antalet uppspelningsbegäranden. Mer information och definitioner finns i [Produktbegrepp: Spela upp begäranden](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Uppspelningsbegäranden är antalet uppspelningsbegäranden. Mer information och definitioner finns i [Produktbegrepp: uppspelningsbegäranden](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >Linjediagrammet för uppspelningsförfrågningar är inte tillgängligt för MVPD-användare.
+  >[!NOTE]
+  >
+  >Linjediagrammet för uppspelningsförfrågningar är inte tillgängligt för MVPD-användare.
 
 
 * **Unika prenumeranter**
 
-   Unika prenumeranter är antalet godkända unika prenumeranter. Mer information och definitioner finns i [Produktbegrepp: Unika prenumeranter](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  Unika prenumeranter är antalet godkända unika prenumeranter. Mer information och definitioner finns i [Produktbegrepp: Unika prenumeranter](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >Det totala antalet unika prenumeranter omfattar även antalet unika enheter om en programmerare använder Adobe TempPass (som är en kostnadsfri förhandsversion) som en del av segmentet.
+  >[!NOTE]
+  >
+  >Det totala antalet unika prenumeranter omfattar även antalet unika enheter om en programmerare använder Adobe TempPass (som är en kostnadsfri förhandsversion) som en del av segmentet.
 
 ## Översikt över ögonblicksbild - konton över tröskelvärden {#snapshot-overview}
 
@@ -123,7 +122,7 @@ I diagrammet visas följande:
 
 * Procentandel av det totala abonnentkontot i det segmentet.
 
-   som använder X-antal enheter, Y-nummer för IP-adresser och Z-nummer för Zip-koder för att förbruka innehåll från din kanal för (definierat segment av) MVPD-program under en tidsram.
+  som använder X-antal enheter, Y-nummer för IP-adresser och Z-nummer för Zip-koder för att förbruka innehåll från din kanal för (definierat segment av) MVPD-program under en tidsram.
 
 ![](assets/select-thresholds.png)
 
@@ -155,7 +154,7 @@ Med donationsdiagrammet kan du snabbt bedöma storleken på prenumerantkonton so
 
 Gilla [Enheter per vecka (eller månad) per konto](#devices-week-account)kan du använda måtten Platser per vecka (eller månad) per konto för att analysera hur abonnentkontot används från olika platser, för att mer noggrant identifiera lösenordsdelning. X-axeln visar Antal konton och y-axeln visar Antal platser.
 
-Resultat från det här måttet kombinerat med antal [Enheter per vecka (eller månad) per konto](#devices-week-account) och antal [IP-adresser per vecka (eller månad) per konto](#ip-week-account) hjälpa dig att bedöma instanserna av lösenordsdelning mer korrekt, så att autentiska användare inte räknas in.
+Resultat från det här måttet kombinerat med antal [Enheter per vecka (eller månad) per konto](#devices-week-account) och antal [IP-adresser per vecka (eller månad) per konto](#ip-week-account) hjälper dig att bedöma instanserna för lösenordsdelning mer korrekt, så att autentiska användare inte räknas in.
 
 ![](assets/graph-loc-week-acc.png)
 
@@ -191,7 +190,7 @@ I diagrammet med historikvyn kan du jämföra användningsstatistik för olika t
 
 * De orangefärgade strecken betecknar segment i olika tidsramar.
 
-* Linjediagrammet ritar upp ändringarna i [Enheter per vecka (eller månad) per konto](#devices-week-account), [Platser per vecka (eller månad) per konto](#locations-week-account)och [IP-adresser per vecka (eller månad) per konto](#ip-week-account) värden över tidsbildrutan baserat på tröskelvärdet.
+* Linjediagrammet ritar upp ändringarna i [Enheter per vecka (eller månad) per konto](#devices-week-account), [Platser per vecka (eller månad) per konto](#locations-week-account)och [IP-adresser per vecka (eller månad) per konto](#ip-week-account) värden för hela tidsramen baserat på tröskelvärdet.
 
 ![](assets/historical-view.png)
 
@@ -204,4 +203,3 @@ I diagrammet med historikvyn kan du jämföra användningsstatistik för olika t
 >[!MORELIKETHIS]
 >
 >* Lär dig hur du exporterar rapporter för de 1000 mest populära prenumeranterna i det valda segmentet med hjälp av filter i den allmänna användningsrapporten med hjälp av [Exportera de 1 000 populäraste kontona](/help/AccountIQ/export-acc-information.md) alternativ.
-

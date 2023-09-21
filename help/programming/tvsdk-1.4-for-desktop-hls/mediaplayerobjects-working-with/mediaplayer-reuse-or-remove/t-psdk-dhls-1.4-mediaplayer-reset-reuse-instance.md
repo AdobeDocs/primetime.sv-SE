@@ -1,8 +1,7 @@
 ---
 description: När du återställer en MediaPlayer-instans återgår den till det oinitierade IDLE-läget som definierats i MediaPlayerStatus.
 title: Återställa eller återanvända en MediaPlayer-instans
-exl-id: e06a0052-ce0a-4a6c-8ebc-0666b109cf07
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Den här åtgärden är användbar i följande fall:
 
 * Du vill återanvända en `MediaPlayer` -instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta föregående instans.
 
-   Om du återställer kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser. The `replaceCurrentItem` och `replaceCurrentResource` metoder utför automatiskt dessa steg åt dig utan att du behöver anropa återställningsmetoden.
+  Med återställning kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser. The `replaceCurrentItem` och `replaceCurrentResource` metoder utför automatiskt dessa steg åt dig utan att du behöver anropa återställningsmetoden.
 
 * När `MediaPlayer` har en FELstatus och måste rensas.
 
-   >[!IMPORTANT]
-   >
-   >Det här är det enda sättet att återställa efter FELstatus.
+  >[!IMPORTANT]
+  >
+  >Det här är det enda sättet att återställa efter FELstatus.
 
 1. Utlysning `reset` för att returnera `MediaPlayer` instansen till dess oinitierade tillstånd:
 
@@ -37,6 +36,6 @@ Den här åtgärden är användbar i följande fall:
 
    >[!TIP]
    >
-   >Läs in samma `MediaResource`.
+   >Om du vill ta bort ett fel läser du in samma `MediaResource`.
 
 1. När du får `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` med `PREPARED` status, starta uppspelningen.

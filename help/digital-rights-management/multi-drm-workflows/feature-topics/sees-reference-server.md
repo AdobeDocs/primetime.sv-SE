@@ -1,8 +1,7 @@
 ---
 description: Ett sätt att samordna licensiering och policystyrning är att bygga in dessa funktioner i en tillståndsserver. Adobe tillhandahåller den SEES-referenstillståndsserver som du kan arbeta med för att skapa en egen server.
 title: Referensserver - exempel ExpressPlay-tillståndsserver (SEES)
-exl-id: aa5b63f4-dffc-4808-8aa6-6b8f63df592c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -15,10 +14,10 @@ Ett sätt att samordna licensiering och policystyrning är att bygga in dessa fu
 
 Referensservern SEES demonstrerar ExpressPlay-berättigandetjänsten och visar två tjänster: grundläggande tidsbaserat berättigande och enhetsbindningsberättigande.
 
-SEES är byggt på två ExpressPlay Fairplay-tjänster:
+SEES är byggt på två ExpressPlay-tjänster:
 
 1. Tjänst för uttryckstokenbegäran
-1. Tjänst för hämtning av Expresdisplay-post
+1. Tjänst för hämtning av Expressplaceringspost
 
 URL-formatet för ExpressPlay-tokenbegäran har två former, en för produktion, en för testmiljön:
 

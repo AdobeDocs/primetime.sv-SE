@@ -1,15 +1,14 @@
 ---
 description: Den här guiden innehåller information om hur du utvecklar videospelarprogram med TVSDK for Desktop HLS, som implementeras i ActionScript.
-title: Översikt
-exl-id: 02efcef8-c4ac-4ff9-bf3b-4ca6553f7617
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Ökning
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview}
+# Ökning {#overview}
 
 Den här guiden innehåller information om hur du utvecklar videospelarprogram med TVSDK for Desktop HLS, som implementeras i ActionScript.
 
@@ -21,7 +20,7 @@ Specifika maskin- och programvarukrav för TVSDK finns på [Krav](../../c-psdk-d
 
 ## Målgrupp {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-I den här handboken förutsätts det att du förstår hur du utvecklar program och videospelare med ActionScript. Du implementerar ett användargränssnitt för videospelaren med det språket och inkluderar TVSDK-funktioner.
+I den här handboken förutsätts det att du förstår hur du utvecklar program och videospelare med hjälp av ActionScript. Du implementerar ett användargränssnitt för videospelaren med det språket och inkluderar TVSDK-funktioner.
 
 ## Om den här guiden {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 

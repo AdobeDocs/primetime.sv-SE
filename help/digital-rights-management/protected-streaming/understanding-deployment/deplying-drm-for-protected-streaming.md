@@ -2,8 +2,7 @@
 title: Driftsätta Adobe Primetime DRM Server for Protected Streaming
 description: Driftsätta Adobe Primetime DRM Server for Protected Streaming
 copied-description: true
-exl-id: 814c08e6-5d09-495b-b529-cedc9b9c02a7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Innan du kan distribuera Adobe Primetime DRM Server for Protected Streaming mås
 Paketet Primetime DRM Server for Protected Streaming innehåller [!DNL flashaccesserver.war]. Om du:
 
 * Vill du distribuera den här WAR-filen måste du kopiera den till Tomcat&#39;s [!DNL webapps] katalog.
-* Tidigare har WAR-filen distribuerats, du kan behöva ta bort den opackade WAR-katalogen ( [!DNL flashaccessserver] på Tomcat&#39;s [!DNL webapps] katalog).
+* Tidigare har WAR-filen distribuerats, du kan behöva ta bort den opackade WAR-katalogen ( [!DNL flashaccessserver] på Tomcat&#39;s [!DNL webapps] ).
 
 * Vill du hindra Tomcat från att packa upp WAR-filer redigerar du [!DNL server.xml] fil i Tomcat&#39;s [!DNL conf] och konfigurera `unpackWARs` genom att ställa in det på `false`.
 

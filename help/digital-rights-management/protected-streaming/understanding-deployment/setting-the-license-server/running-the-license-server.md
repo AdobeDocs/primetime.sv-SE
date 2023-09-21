@@ -1,16 +1,15 @@
 ---
-title: Köra DRM-servern för skyddad direktuppspelning
-description: Köra DRM-servern för skyddad direktuppspelning
+title: Köra DRM-servern för skyddad strömning
+description: Köra DRM-servern för skyddad strömning
 copied-description: true
-exl-id: 05dc4c55-a97e-4bdc-aea8-32741299454c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
 
 ---
 
-# Köra DRM-servern för skyddad direktuppspelning {#running-the-drm-server-for-protected-streaming}
+# Köra DRM-servern för skyddad strömning {#running-the-drm-server-for-protected-streaming}
 
 Innan du kan starta Adobe Primetime DRM Server for Protected Streaming rekommenderar vi att du kontrollerar att inställningarna i konfigurationsfilerna är giltiga.
 
@@ -57,7 +56,7 @@ Partitionsloggfilen, [!DNL flashaccess-partition.log]finns i `<LicenseServer.Log
 
 ### Klientloggfil {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Varje klientorganisations loggfil, [!DNL flashaccess-tenant.log]finns i `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Klientloggen innehåller granskningsinformation som beskriver varje licens som skapas för den här klienten.
+Varje klientorganisations loggfil, [!DNL flashaccess-tenant.log]finns i `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Klientloggen innehåller granskningsinformation som beskriver varje licens som genereras för den här klienten.
 
 ## Konfigurationsfiler uppdateras {#updating-configuration-files}
 
@@ -67,7 +66,7 @@ När du ändrar konfigurationsfilen lagrar licensservern den tid som filen senas
 
 Om du vill styra hur ofta servern söker efter uppdateringar måste du ange `refreshDelaySeconds` i `Caching` -element i den globala konfigurationsfilen. Om `refreshDelaySeconds` är inställt på 3 600 sekunder kommer servern att uppdatera konfigurationen inom högst en timme från ändringsdatumet för konfigurationsfilen. If `refreshDelaySeconds` anges till 0, söker servern efter konfigurationsuppdateringar vid varje begäran. Vi rekommenderar inte att du anger `refreshDelaySeconds` till ett lågt värde i alla produktionsmiljöer eftersom detta kan påverka prestandan.
 
-The `Caching` -elementet styr också hur många klientkonfigurationer som cachelagras samtidigt. Du kan ange det här värdet till ett tal som är mindre än det totala antalet klientorganisationer för att begränsa mängden minne som används för att cachelagra konfigurationsinformationen. Om en begäran tas emot för en klientorganisation som inte finns i cachen, läses konfigurationen in innan begäran kan behandlas. Om cacheminnet är fullt tas den senast använda klientorganisationen bort från cacheminnet.
+The `Caching` -elementet styr också hur många klientkonfigurationer som cachelagras samtidigt. Du kan ange det här värdet till ett tal som är mindre än det totala antalet klientorganisationer för att begränsa mängden minne som används för att cachelagra konfigurationsinformationen. Om en begäran tas emot för en klientorganisation som inte finns i cachen, läses konfigurationen in innan begäran kan behandlas. Om cachen är full tas den senast använda klientorganisationen bort från cachen.
 
 Den cachelagrade versionen av konfigurationen fortsätter att användas i följande situationer (fram till nästa gång servern söker efter uppdateringar):
 

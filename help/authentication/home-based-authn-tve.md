@@ -1,8 +1,7 @@
 ---
 title: Hembaserad autentisering för TV överallt
 description: Hembaserad autentisering för TV överallt
-exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 HBA (Home Based Authentication) är en TV Everywhere-funktion som gör att betal-TV-prenumeranter kan visa tv-innehåll online utan att ange MVPD-autentiseringsuppgifter när de är hemma, vilket avsevärt förbättrar användarupplevelsen av autentiseringsflödet.
 
-Hembaserad autentiseringsdefinition av OATC (Open Authentication Technology Committee): &quot;Automatisk autentisering hemma är den process genom vilken en MVPD/OVD använder hemnätverkets egenskaper (eller identifierare som automatiskt är tillgängliga mellan enheter i hemnätverket) för att autentisera vilket prenumerationskonto som är associerat med hemnätverket så att användarna inte behöver ange inloggningsuppgifter manuellt när de skapar en TVE-session för att komma åt TVE-skyddat innehåll.&quot;
+Hembaserad autentiseringsdefinition av OATC (Open Authentication Technology Committee):&quot;Automatisk autentisering hemma är den process genom vilken ett MVPD/OVD använder hemnätverkets egenskaper (eller identifierare som automatiskt är tillgängliga mellan enheter i hemnätverket) för att autentisera vilket prenumerantkonto som är kopplat till hemnätverket så att användarna inte behöver ange inloggningsuppgifter manuellt när de skapar en TVE-session för åtkomst till TVE-skyddat innehåll.&quot;
 
 
 
@@ -39,7 +38,7 @@ När värdbussadaptern aktiverats av en av de fem bästa videoprogrammeringsarna
 
 ![](assets/authn-conv-pre-post.png)
 
-Nedan ser du också inloggningskonverteringsgraden för en kanal som är integrerad med olika videoprogrammeringsappar: de som har aktiverat HBA för det och de som inte har HBA. Konverteringsgraden för dem med HBA är betydligt högre än för dem utan HBA.
+Nedan ser du också inloggningskonverteringsgraden för en kanal som är integrerad med olika MVPD-program: de som har aktiverat HBA för den och de som inte har HBA. Konverteringsgraden för dem med HBA är betydligt högre än för dem utan HBA.
 
 ![](assets/hba-vs-non-hba.png)
 
@@ -82,7 +81,7 @@ Följande tabeller innehåller information om användarupplevelsen för de platt
 | Med HBA aktiverat | När användare är hemma och använder en klientlös REST API-app autentiseras de automatiskt på den andra skärmenheten efter att registreringskoden har angetts och deras MVPD-fil har valts. När HBA AuthN-token upphör att gälla återautentiseras användare automatiskt (på den andra skärmenheten). |
 | Utan HBA | Användarna uppmanas att välja sitt MVPD och ange sina inloggningsuppgifter, även om de är hemma. När AuthN-token har upphört att gälla måste användaren ange sina inloggningsuppgifter igen. |
 
-### Teknisk information om implementering av HBA {#tech-details-hba}
+### Teknisk information om implementering av värdbussadapter {#tech-details-hba}
 
 #### OAuth 2.0-protokoll {#oauth-2-protocol}
 
@@ -108,7 +107,7 @@ Beskrivning av HBA-autentiseringsflödet för SAML-autentiseringsprotokollet
 | Användaråtgärder | Systemåtgärder |
 |---|---|
 | Användaren navigerar till programmerarens webbplats. När du försöker spela upp en video visas MVPD-väljaren. Användaren väljer sin MVPD och klickar på Logga in. | En bakgrundskontroll utförs. MVPD tillämpar sina regler för användaridentifiering (mappa till exempel användarens IP-adress till MAC-adressen för distributörsetablerade modem eller bredbandsanslutna digitalboxar). |
-| En skärm som visas i cirka 3 sekunder visas. En interstitiell sida kan visas som informerar användaren om att han/hon automatiskt loggas in med hjälp av sitt MVPD-konto. | <ol><li>AccessEnabler, som är installerat på programmeraren, skickar en autentiseringsbegäran (som en HTTP-begäran) till slutpunkten för Adobe Primetime-autentisering.</li><li>Slutpunkten för Primetime-autentisering dirigerar om begäran till slutpunkten för MVPD-autentisering.</li><li>MVPD bör skicka ett autentiseringsbeslut i form av ett SAML-svar som ska innehålla HBA-flaggan: hba_status (true/false).</li><li>Ett anrop till slutpunkten för MVPD-användarprofilen skickas för att visa [hba_status-nyckel i användarens metadata](/help/authentication/user-metadata-feature.md#obtaining).</li></ol> |
+| En skärm som visas i cirka 3 sekunder visas. En interstitiell sida kan visas som informerar användaren om att han/hon automatiskt loggas in med hjälp av sitt MVPD-konto. | <ol><li>AccessEnabler, som är installerat på programmeraren, skickar en autentiseringsbegäran (som en HTTP-begäran) till slutpunkten för Adobe Primetime-autentisering.</li><li>Slutpunkten för Primetime-autentisering dirigerar om begäran till slutpunkten för MVPD-autentisering.</li><li>MVPD ska skicka ett autentiseringsbeslut i form av ett SAML-svar som ska innehålla HBA-flaggan: hba_status (true/false).</li><li>Ett anrop till slutpunkten för MVPD-användarprofilen skickas för att visa [hba_status-nyckel i användarens metadata](/help/authentication/user-metadata-feature.md#obtaining).</li></ol> |
 | Användaren är autentiserad och kan nu bläddra bland det berättigade TV Everywhere-innehållet. | Autentiseringstoken skickas till användaren som nu kan bläddra på programmerarens webbplats. |
 
 
@@ -151,7 +150,7 @@ Mer information om de videofilmsprogram som stöder hembaserad autentisering fin
 
 * [HBA (Instant Access) Recommendations](http://www.ctamtve.com/instantaccess){target=_blank} - av CTAM
 * [Exempel på implementering av HBA i programmerarapp](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/HBA_Flow_Sample.pdf?dc=201604222139-1346){target=_blank} - av Adobe
-   <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
+  <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
 * [Hembaserad autentisering - Användningsfall och krav](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} av OATC
 * [Hembaserad autentiseringsinformation](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} - av Adobe
 * [Autentisering med OAuth 2.0-protokollet](/help/authentication/authn-oauth2-protocol.md)

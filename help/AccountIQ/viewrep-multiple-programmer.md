@@ -1,8 +1,7 @@
 ---
 title: Visa kontodelningsrapporter för flera programmerare och kanaler
 description: Visa kontodelningsrapporter för flera programmerare och kanaler
-exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Så här visar du delningstatistik för prenumerationskonton för flera kanaler:
 
 * [Kontrollpanel](/help/AccountIQ/dashboard.md) (kontrollpanelen ger en glimt av de markerade diagrammen från olika rapportsidor).
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *Bild: Instrumentpanelsrapport för flera programmerare*
+  *Bild: Instrumentpanelsrapport för flera programmerare*
 
 * [Allmän användning](/help/AccountIQ/general-usage-reports.md)
 

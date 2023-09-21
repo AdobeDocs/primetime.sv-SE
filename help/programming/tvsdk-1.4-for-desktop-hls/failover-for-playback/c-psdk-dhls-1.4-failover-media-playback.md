@@ -1,8 +1,7 @@
 ---
 description: För live- och video-on-demand-media (VOD) börjar TVSDK uppspelningen genom att ladda ned den spellista som är associerad med den mellanupplösta bithastigheten och hämtar de mediesegment som definieras av spellistan. Den väljer snabbt spelningslistan med hög upplösning och tillhörande media och fortsätter hämtningsprocessen.
 title: Medieuppspelning och failover
-exl-id: 43a44631-0b45-4f4e-8ec3-d3e1a0d5c71a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Alert.show(event.error.toString(), “Error occurred”);
 break;
 ```
 
-Om klientsidans nätverk inte fungerar kan du använda den här koden för att verifiera.
+Om klientsidans nätverk är avstängt kan du använda den här koden för att verifiera.
 
 ```
 psdkutils::PSDKString 
@@ -47,7 +46,7 @@ _networkDownVerificationUrl = value; return psdkutils::kECSuccess; }
 
 Om setNetworkDownVerificationUrl inte är inställt använder TVSDK MainManifest-URL som standard för att ta reda på om nätverket är nere.
 
-## segmentredundans saknas {#section_ED8CF666289042D39E9914D42BDD9BA4}
+## Segmentredundans saknas {#section_ED8CF666289042D39E9914D42BDD9BA4}
 
 När ett segment saknas, till exempel om ett visst segment inte kan hämtas, försöker TVSDK att återställas genom en mängd olika redundansförsök. Om det inte går att återställa genereras ett fel.
 

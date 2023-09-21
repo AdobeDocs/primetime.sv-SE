@@ -1,8 +1,7 @@
 ---
 description: I vissa fall kanske du vill hindra slutanvändare från att spela upp innehåll på flera enheter när innehållet köpts eller hyrts. Om kunden använder Expressplay kan detta göras genom att använda Expressplay-API:erna för att binda användarens Expressplay-token till användarens dator.
 title: Enhetsbindning
-exl-id: 96ead794-e3eb-4059-91d3-a2c351a17ea3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -26,6 +25,6 @@ Du kan använda API:erna på följande sätt.
 
    * Ange denna token för användaren.
 
-      Den här processen genererar en token för innehållet som är bundet till användarens device_id. När användarens dator skickar en licensbegäran med denna token, kommer Expressplay back-end att kontrollera token&#39;s device_id med licensbegärans device_id.
+     Den här processen genererar en token för innehållet som är bundet till användarens device_id. När användarens dator skickar en licensbegäran med denna token, kommer Expressplay back-end att kontrollera token&#39;s device_id med licensbegärans device_id.
 
-      En exempeltillståndsserver för uttryck implementerar det här arbetsflödet.
+     En exempeltillståndsserver för uttryck implementerar det här arbetsflödet.

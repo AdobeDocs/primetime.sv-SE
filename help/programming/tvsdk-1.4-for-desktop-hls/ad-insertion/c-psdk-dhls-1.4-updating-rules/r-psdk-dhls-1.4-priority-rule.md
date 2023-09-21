@@ -2,8 +2,7 @@
 description: Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väljs för uppspelning från ett VAST/VMAP-svar.
 keywords: prioritetsregel;regler för kreativt urval
 title: Prioritetsregler
-exl-id: a045e102-1c16-46b5-8322-0bcab086ac67
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -62,7 +61,7 @@ Prioritetsregeln definierar prioritetsordningen för annonskreatörerna som väl
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> <p>TVSDK kommer att använda <span class="codeph"> matchar</span> på <span class="codeph"> artikel</span> av källans kreativa innehåll och matcha mot värdena som definieras i den här arrayen</p> </td> 
+   <td> <p>TVSDK använder <span class="codeph"> matchar</span> på <span class="codeph"> artikel</span> av källans kreativa innehåll och matcha mot värdena som definieras i arrayen</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 

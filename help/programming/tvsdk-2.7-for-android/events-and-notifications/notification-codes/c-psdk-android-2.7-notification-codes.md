@@ -1,15 +1,14 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: Meddelandekoder
-exl-id: 7bf016c6-8651-413b-a478-ac2d24f9453c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Översikt {#notification-codes-overview}
+# Ökning {#notification-codes-overview}
 
 TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 
@@ -31,7 +30,7 @@ Meddelandeobjekt tillhandahåller information som är relaterad till spelarens s
    <td colname="1"> <span class="codeph"> kod</span> </td> 
    <td colname="2"> <p>Meddelandena tilldelas följande numeriska beteckningar: 
      <ul id="ul_A86BF89D6B3B410E81FAD718D3C4A9F0"> 
-      <li id="li_8180972D704C40098723734DD4B45643">Felmeddelandehändelser, från 100000 till 199999 </li> 
+      <li id="li_8180972D704C40098723734DD4B45643">Felmeddelandehändelser, från 100000 till 19999 </li> 
       <li id="li_0EC29EA5F0034E5EBFEF8E68A6498D39">Varningsmeddelandehändelser, från 200000 till 299999 </li> 
       <li id="li_189A53D3D7EF4960A521AB04D00DCF70">Informationshändelser, från 300000 till 399999 </li> 
      </ul> </p> <p>Varje intervall på den översta nivån, t.ex. fel, delas upp i underintervall, t.ex. 101000 till 101999, som representerar uppspelningsfel. </p> </td> 
@@ -46,7 +45,7 @@ Meddelandeobjekt tillhandahåller information som är relaterad till spelarens s
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2"> <p>En referens till en annan <span class="codeph"> MediaPlayerNotification</span> objekt som direkt påverkade meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
+   <td colname="2"> <p>En referens till en annan <span class="codeph"> MediaPlayerNotification</span> objekt som direkt påverkade det här meddelandet. </p> <p>Ett exempel kan vara ett meddelande om ett fel vid annonsinfogning som direkt motsvarar en konflikt vid en infogning av tidsrader. Alla meddelanden har inte ett internt meddelande. </p> </td> 
   </tr> 
  </tbody> 
 </table>

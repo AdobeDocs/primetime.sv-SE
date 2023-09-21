@@ -1,8 +1,7 @@
 ---
 description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill gå över till trickuppspelningsläget måste du ange ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 title: Implementera snabbt framåt och bakåt
-exl-id: c1d70d46-449b-494b-9b89-5553e9bcdbc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -15,14 +14,14 @@ När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickl
 
 Om du vill växla hastighet måste du ange ett värde.
 
-1. Gå från normalt uppspelningsläge (1x) till uppspelningsläge genom att ställa in `rate` på `MediaPlayer` till ett tillåtet värde.
+1. Gå från normalt uppspelningsläge (1x) till uppspelningsläge genom att ställa in `rate` -egenskapen på `MediaPlayer` till ett tillåtet värde.
 
    * The `MediaPlayerItem` -klassen definierar de tillåtna uppspelningshastigheterna.
    * TVSDK väljer den närmaste tillåtna hastigheten om den angivna hastigheten inte tillåts.
 
-      När trickfrekvensen ändras från 0 (paus) eller 1 (normal uppspelning) till en hastighet som är större än 1 eller mindre än -1 tas alla annonser på tidslinjen bort. Det finns bara en period på hela tidslinjen som underlättar en trickåtgärd för att innehållet ska kunna vidarebefordras och lindras snabbt utan att stanna vid någon annonsposition. Den här åtgärden aktiveras av en åtgärd för att ta bort alla lösta annonsbrytningar på tidslinjen i TVSDK. När trickspelet återupptas vid 0 eller 1 återställs annonsbrytningarna först av åtgärden för att bifoga en tidslinje.
+     När trickfrekvensen ändras från 0 (paus) eller 1 (normal uppspelning) till en hastighet som är större än 1 eller mindre än -1 tas alla annonser på tidslinjen bort. Det finns bara en period på hela tidslinjen som underlättar en trickåtgärd för att innehållet ska kunna vidarebefordras och lindras snabbt utan att stanna vid någon annonsposition. Den här åtgärden aktiveras av en åtgärd för att ta bort alla lösta annonsbrytningar på tidslinjen i TVSDK. När trickspelet återupptas vid 0 eller 1 återställs annonsbrytningarna först av åtgärden för att bifoga en tidslinje.
 
-      Kom ihåg följande information:
+     Kom ihåg följande information:
 
    * Om trickåtgärden är att spola tillbaka innehållet återupptas uppspelningen när hastigheten ändras till 1.
    * Om trickåtgärden är att snabbspola fram innehållet spelas den senast hoppade annonsen upp vid meritpositionen.
@@ -50,7 +49,7 @@ Om du vill växla hastighet måste du ange ett värde.
 
 ## API-element för prisändring {#rate-change-api}
 
-TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om trippelning stöds och andra funktioner som rör snabb framåtspolning och tillbakaspolning.
+TVSDK innehåller metoder, egenskaper och händelser för att fastställa giltiga frekvenser, aktuella frekvenser, om trippelning stöds och andra funktioner som är relaterade till snabb framåtspolning och tillbakaspolning.
 
 Använd följande API-element om du vill ändra uppspelningsfrekvensen:
 
@@ -64,7 +63,7 @@ Använd följande API-element om du vill ändra uppspelningsfrekvensen:
 
 | Kursens värde | Effekt vid uppspelning |
 |---|---|
-| 2.0, 4.0, 8.0, 16.0, 32.0, 64.0  , 128.0 | Växlar till snabbläge med den angivna multiplikatorn snabbare än normalt (4 är till exempel 4 gånger snabbare än normalt) |
+| 2.0, 4.0, 8.0, 16.0, 32.0, 64.0  , 128.0 | Växlar till snabbläge med den angivna multiplikatorn snabbare än normalt (4 gånger snabbare än normalt) |
 | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0  , -128.0 | Växlar till snabbspolningsläge |
 | 1.0 | Växlar till normalt uppspelningsläge (anrop `play` är detsamma som att ställa in egenskapen rate på 1.0) |
 | 0.0 | Pausar (anropar `pause` är detsamma som att ställa in egenskapen rate på 0,0) |
@@ -73,7 +72,7 @@ Använd följande API-element om du vill ändra uppspelningsfrekvensen:
 
 Här är begränsningarna för trickläge:
 
-* Den överordnad spellistan måste innehålla segment som bara är för bildrutor. Endast nyckelbildrutorna från I-frame-spåret visas på skärmen.
+* Huvudspelningslistan måste innehålla segment med bara I-frame. Endast nyckelbildrutorna från I-bildrutespåret visas på skärmen.
 * Ljudspåret och undertexter är inaktiverade.
 * Logiken för anpassad bithastighet (ABR) är inaktiverad. TVSDK väljer en bithastighet mellan den lägsta angivna hastigheten och 800 kbit/s och använder den hastigheten under hela uppspelningssessionen.
 * Uppspelning och paus är aktiverat.
@@ -90,4 +89,4 @@ Här är begränsningarna för trickläge:
    * The `AdBreakPlaybackEvent.AD_BREAK_SKIPPED` -händelsen skickas omedelbart innan en annonsbrytning kommer att hoppas över. Spelaren kan använda den här händelsen för att implementera anpassad logik som är relaterad till de överhoppade annonsbrytningarna.
    * När du avslutar trick play anropas samma annonsuppspelningsprincip som när sökningen avslutas.
 
-      Som vid sökning beror därför beteendet på om programmets uppspelningsprincip skiljer sig från standardinställningen. Standardinställningen är att den senast hoppade annonsbrytningen spelas upp där du kommer ut ur tricksspelet.
+     Som vid sökning beror därför beteendet på om programmets uppspelningsprincip skiljer sig från standardinställningen. Standardinställningen är att den senast hoppade annonsbrytningen spelas upp där du kommer ut ur tricksspelet.

@@ -1,8 +1,7 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayer-attribut för åtkomst till MediaResource-information
-exl-id: 183a2992-06f2-4b1d-84c3-a6c2a7223e32
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   <tr rowsep="1"> 
    <td colname="1"> Liveström </td> 
    <td colname="2"> <span class="codeph"> live </span> </td> 
-   <td colname="3"> True om strömmen är live; false om det är VOD. </td> 
+   <td colname="3"> True if the stream is live; false if it is VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Undertexter </td> 
@@ -67,12 +66,12 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> Innehåller en lista över de tidsbestämda metadataobjekt som är associerade med strömmen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"> Flera profiler (bithastighet) </td> 
+   <td colname="1" morerows="1"> Flera profiler (bithastigheter) </td> 
    <td colname="2" morerows="1"> <span class="codeph"> profiler </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Tillhandahåller en lista med associerade bithastighetsprofiler som är associerade med den här strömmen. <p>Obs! Du kan hämta bithastigheten för varje profil och höjden och bredden på profilen. </p> </td> 
+   <td colname="3"> Tillhandahåller en lista med associerade bithastighetsprofiler som är associerade med den här strömmen. <p>Obs! Du kan hämta bithastigheten för varje profil samt höjden och bredden på profilen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Medieresurs </td> 

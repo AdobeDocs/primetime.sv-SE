@@ -1,8 +1,7 @@
 ---
 description: Operativsystem och programservrar ingår i Adobe Primetime DRM-lösning.
 title: Leverantörsspecifik säkerhetsinformation
-exl-id: 4cc39414-cab5-4282-825d-64651d9b03e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
@@ -22,8 +21,8 @@ När du skyddar ditt operativsystem måste du implementera de mått som beskrivs
 Här är några av åtgärderna:
 
 * Definiera och styra användare, roller och behörigheter
-* Övervaka loggar och åtkomsthistorik
-* Onödiga tjänster och program tas bort
+* Övervakningsloggar och verifieringskedja
+* Tar bort onödiga tjänster och program
 * Säkerhetskopiera filer
 
 Här är information om de operativsystem som stöds av Adobe Primetime DRM:
@@ -59,7 +58,7 @@ Här följer information om strategier för att minimera säkerhetsluckor i oper
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Säkerhetsuppdateringar </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. </p> <p>Obs! Kontrollera att du testar säkerhetsuppdateringar innan du använder dem på produktionsservrar. </p> <p class="- topic/p ">Du måste skapa principer och procedurer för att regelbundet söka efter och installera korrigeringsfiler. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det finns en ökad risk för att en obehörig användare får åtkomst till programservern om leverantörens säkerhetsuppdateringar och uppgraderingar inte tillämpas i tid. </p> <p>Obs! Kontrollera att du testar säkerhetspatchar innan du använder dem på produktionsservrar. </p> <p class="- topic/p ">Du måste skapa principer och procedurer för att regelbundet söka efter och installera korrigeringsfiler. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Virusskydd </p> </td> 

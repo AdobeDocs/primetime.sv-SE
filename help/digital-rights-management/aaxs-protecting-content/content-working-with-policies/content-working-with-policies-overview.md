@@ -1,20 +1,19 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: 15733120-b1bb-46a7-90d2-4eb11c539d62
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
 
 ---
 
-# Översikt  {#overview}
+# Ökning  {#overview}
 
 Med Adobe® Access™ kan innehållsleverantörer tillämpa regler på mediefiler. Med hjälp av API:erna för principhantering kan administratörer skapa, visa information om och uppdatera principer.
 
-A *policy* definierar hur användare kan visa innehåll, det är en samling information som innehåller säkerhetsinställningar, autentiseringskrav och användarrättigheter. När regler tillämpas tillåter kryptering och signering att innehållsleverantörer behåller kontrollen över sitt innehåll oavsett hur brett det distribueras. Skyddade filer kan levereras med Adobe® Flash® Media Server eller en HTTP-server. De kan laddas ned och spelas upp i anpassade spelare som skapats med Adobe® AIR®, Adobe® Flash® Player och Adobe® Primetime SDK för iOS. Principen är en mall som licensservern kan använda när den genererar en licens. Klienten kan också hänvisa till policyn innan han begär en licens för att avgöra om han eller hon måste be användaren autentisera innan han eller hon skickar en licensbegäran till servern.
+A *policy* definierar hur användare kan visa innehåll. Det är en samling information som innehåller säkerhetsinställningar, autentiseringskrav och användarrättigheter. När regler tillämpas tillåter kryptering och signering innehållsleverantörer att behålla kontrollen över sitt innehåll oavsett hur brett det distribueras. Skyddade filer kan levereras med Adobe® Flash® Media Server eller en HTTP-server. De kan laddas ned och spelas upp i anpassade spelare som skapats med Adobe® AIR®, Adobe® Flash® Player och Adobe® Primetime SDK för iOS. Principen är en mall som licensservern kan använda när den genererar en licens. Klienten kan också hänvisa till policyn innan han begär en licens för att avgöra om han eller hon måste be användaren autentisera innan han eller hon skickar en licensbegäran till servern.
 
 En princip anger en eller flera rättigheter som beviljas klienten. En profil innehåller vanligtvis minst&quot;Spela upp höger&quot;. Det går också att ange flera uppspelningsrättigheter, var och en med olika begränsningar. När klienten påträffar en licens med flera uppspelningsrättigheter, används den första som den uppfyller alla begränsningar för. Den här funktionen kan till exempel användas för att tillämpa olika inställningar för utdataskydd på olika plattformar. Exempelkod som illustrerar det här exemplet finns i `CreatePolicyWithOutputProtection.java` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.
 

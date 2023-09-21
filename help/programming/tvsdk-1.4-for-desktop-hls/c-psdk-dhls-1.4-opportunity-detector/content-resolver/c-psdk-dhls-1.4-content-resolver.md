@@ -1,22 +1,21 @@
 ---
 description: En affärsmöjlighetsdetektor är en TVADK-komponent som identifierar anpassade taggar i en ström och identifierar placeringsmöjligheter. Dessa möjligheter skickas till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa affärsmöjlighetsdetektorer och innehållslösningar
-exl-id: 0721278c-e128-4afc-ae81-4f23c2644859
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-# Översikt {#customize-opportunity-detectors-and-content-resolvers-overiew}
+# Ökning {#customize-opportunity-detectors-and-content-resolvers-overiew}
 
 En affärsmöjlighetsdetektor är en TVADK-komponent som identifierar anpassade taggar i en ström och identifierar placeringsmöjligheter. Dessa möjligheter skickas till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 
 TVSDK innehåller standarddetektorer för affärsmöjligheter:
 
 * `SpliceOutOpportunityDetector`, som förstår standard ad cues
-* `AdSignalingModeOpportunityGenerator`, som skapar inledande annonsmöjligheter baserat på annonseringssigneringsläget
+* `AdSignalingModeOpportunityGenerator`, som ansvarar för att skapa inledande annonsmöjligheter baserat på annonseringssigneringsläget
 * `SpliceOutOpportunityGenerator`, som skapar annonsmöjligheter från valfri #EXT-X-CUE-tagg
 
 TVSDK innehåller även en standardinnehållshanterare som tillhandahåller innehåll som ska infogas baserat på metadatanyckeln i spelarobjektet:

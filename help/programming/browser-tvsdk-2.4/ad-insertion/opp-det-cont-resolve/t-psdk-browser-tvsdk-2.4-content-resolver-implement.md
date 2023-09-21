@@ -1,8 +1,7 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
 title: Implementera en anpassad innehållshanterare
-exl-id: f594840b-ff56-49c5-baf5-ac2800411215
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Kom ihåg följande information:
 
 * Innehållslösaren anropar `client.process` för att ange vilken tidslinjeåtgärd som TVSDK måste utföra.
 
-   Åtgärden är vanligtvis en annonsbrytningsplacering.
+  Åtgärden är vanligtvis en annonsbrytningsplacering.
 
 * Innehållslösaren anropar `client.notifyCompleted` om lösningsprocessen lyckas eller `client.notifyFailed` om processen misslyckas.
 

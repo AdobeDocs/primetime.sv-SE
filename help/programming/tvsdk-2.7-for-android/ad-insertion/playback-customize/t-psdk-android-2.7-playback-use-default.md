@@ -1,8 +1,7 @@
 ---
 description: Du kan välja att använda standardbeteenden för annonser.
 title: Använd standardbeteendet för uppspelning
-exl-id: eb4ce0b4-9dfd-4de8-8cbf-8aba093a5ddd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -27,11 +26,11 @@ Innan du anpassar eller åsidosätter annonsbeteenden ska du registrera annonspo
 
 * Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
+  Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
 * Utöka `DefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
+  Det här alternativet rekommenderas om du bara behöver åsidosätta **några** standardbeteenden.
 
 Så här anpassar du annonsbeteenden:
 
@@ -40,7 +39,7 @@ Så här anpassar du annonsbeteenden:
 
    >[!NOTE]
    >
-   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `MediaPlayer` instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
+   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `MediaPlayer` -instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
 
    Till exempel:
 

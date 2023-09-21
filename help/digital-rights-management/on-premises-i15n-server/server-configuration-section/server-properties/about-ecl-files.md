@@ -2,8 +2,7 @@
 title: Om ECI-filer
 description: Om ECI-filer
 copied-description: true
-exl-id: ac452897-3c64-4481-a3b7-4b69ef6edb61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Om ECI-filer{#about-eci-files}
 
-Förutom listor över återkallade certifikat måste du även regelbundet uppdatera filer i det inbäddade gemensamma gränssnittet (ECI). När Adobe lägger till stöd för en ny Primetime DRM-klientplattform (till exempel: iOS, Android, Windows Flash Player osv.) skapas en ny ECI-post. För att stödja personaliseringen av den här klienten måste en motsvarande ECI-post finnas på Individualization Server.
+Förutom listor över återkallade certifikat måste du även regelbundet uppdatera filer i det inbäddade gemensamma gränssnittet (ECI). När Adobe lägger till stöd för en ny Primetime DRM-klientplattform (t.ex. iOS, Android, Windows Flash Player) skapas en ny ECI-post. För att stödja personaliseringen av den här klienten måste en motsvarande ECI-post finnas på Individualization Server.
 
 Eftersom det inte är särskilt vanligt att nya Primetime DRM-klienter släpps kommer Adobe att släppa uppdaterade ECI-data vid behov. Adobe kommer regelbundet att samla in ECI-filer och lagra dem på nedanstående plats för distribution:
 

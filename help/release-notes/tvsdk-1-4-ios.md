@@ -1,10 +1,9 @@
 ---
 title: Versionsinformation om TVSDK 1.4 för iOS
-description: I versionsinformationen för TVSDK 1.4 för iOS beskrivs vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända samt vilka enhetsproblem som har uppstått i TVSDK iOS 1.4
+description: I versionsinformationen för TVSDK 1.4 för iOS beskrivs vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända samt vad som gäller enheter i TVSDK iOS 1.4
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 30284f89-969b-49be-98b4-bd3f23258590
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6549'
 ht-degree: 0%
@@ -13,13 +12,13 @@ ht-degree: 0%
 
 # Versionsinformation om TVSDK 1.4 för iOS {#tvsdk-for-ios-release-notes}
 
-I versionsinformationen för TVSDK 1.4 för iOS beskrivs vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända samt vilka enhetsproblem som har uppstått i TVSDK iOS 1.4.
+I versionsinformationen för TVSDK 1.4 för iOS beskrivs vad som är nytt eller ändrat, vilka problem som har åtgärdats och kända samt vad som gäller enheter i TVSDK iOS 1.4.
 
 ## Nya funktioner {#new-features}
 
 **Version 1.4.45**
 
-* För att uppfylla Xcode10 har TVSDK flyttat från &quot;`libstdc++`&quot; till &quot;`libc++`&quot;, och därför är den version som minst stöds iOS 7. Tidigare var det iOS 6.
+* För att uppfylla Xcode10 har TVSDK flyttat från &quot;`libstdc++`till`libc++`&quot;, och därför är den version som minst stöds iOS 7. Tidigare var det iOS 6.
 
 **Version 1.4.44**
 
@@ -28,7 +27,7 @@ I versionsinformationen för TVSDK 1.4 för iOS beskrivs vad som är nytt eller 
 **Version 1.4.43**
 
 * TV-liknande upplevelse av att kunna vara med mitt i en annons utan att aktivera spårning av delar av annonser.\
-   Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
+  Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
 
    * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
    * Annonsspårare för delvis uppspelade annonser (andra annonsen) aktiveras inte. Spåraren för endast den tredje annonsen aktiveras.
@@ -44,8 +43,8 @@ Inga nya funktioner har lagts till i den här versionen. En lista med åtgärdad
 
 API-ändringar:
 
-* **isSecure**: Ett nytt API har introducerats: Skydda spelaren från att spela in och utlösa ett fel. Standardvärdet är true.
-* **allowExternalRecording**: Ett nytt API har introducerats för att tillåta spegling av airplay för ett säkert innehåll. Airplay-spegling behandlas därför som inspelning. Därför måste allowExternalRecording-värdet anges till True, så att airplay-spegling tillåts eller anges till False för att stoppa airplay-speglingen för säkert innehåll. Som standard är värdet true.
+* **isSecure**: Ett nytt API har introducerats ärSäkert för att förhindra att spelaren spelar in och utlöser ett fel. Standardvärdet är true.
+* **allowExternalRecording**: Ett nytt API introduceras för att ge möjlighet till airplay-spegling för ett säkert innehåll. Airplay-spegling behandlas därför som inspelning. Därför måste allowExternalRecording-värdet anges till True, så att airplay-spegling tillåts eller anges till False för att stoppa airplay-speglingen för säkert innehåll. Som standard är värdet true.
 
 **Version 1.4.40**
 
@@ -59,13 +58,13 @@ Inga nya funktioner.
 
 **Version 1.4.36**
 
-Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska barriären i implementeringen av VideoHeartbeatsLibrary genom att minska komplexiteten i programmeringsgränssnitten.
+Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska barriären i implementeringen av VideoHeartbeatsLibrary genom att minska komplexiteten i API:erna.
 
 **Version 1.4.34**
 
 * Nätverksannonsinformation
 
-   TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klass tillgänglig via  `networkAdInfo`  på en annonsresurs. Den här informationen kan användas för integrering med andra annonseringsplattformar som **Moat Analytics**.
+  TVSDK API:er ger nu ytterligare information om VAST-svar från tredje part. Ad ID, Ad System och VAST Ad Extensions finns i `PTNetworkAdInfo` klass tillgänglig via  `networkAdInfo`  på en annonsresurs. Den här informationen kan användas för integrering med andra annonseringsplattformar som **Moat Analytics**.
 
 **Version 1.4.31**
 
@@ -73,7 +72,7 @@ Integrera och certifiera VHL 2.0 i iOS TVSDK: Minska barriären i implementering
 
 Varje gång TVSDK genererar en direktuppspelningshändelse börjar spelaren att skicka HTTP-meddelanden regelbundet till Adobe faktureringssystem. Perioden, som kallas fakturerbar varaktighet, kan vara en annan för VOD av standardtyp, VOD av proffskvalitet (aktiverad annonsering i mellanrullar) och direktinnehåll. Standardlängden för varje innehållstyp är 30 minuter, men ditt kontrakt med Adobe avgör de faktiska värdena.
 
-* **Multi-CDN-stöd för CRS-annonser** TVSDK har nu stöd för Multi-CDN för CRS-annonser. Genom att ange FTP-information för CRS-annonser kan du ange CDN-platser, andra än det Adobe-ägda standardnätverket för CDN, till exempel Akamai.
+* **Stöd för flera CDN-annonser** TVSDK har nu stöd för Multi-CDN för CRS-annonser. Genom att ange FTP-information för CRS-annonser kan du ange CDN-platser, andra än det Adobe-ägda standardnätverket för CDN, till exempel Akamai.
 
 **Version 1.4.29**
 
@@ -81,7 +80,7 @@ I klassen PTSDKConfig har API:t forceHTTPS lagts till.
 
 Klassen PTSDKConfig innehåller metoder för att tillämpa SSL på begäranden som görs till Adobe Primetime-servrar för annonsbeslut, DRM och videoanalys. Mer information finns i `forceHTTPS` och `isForcingHTTPS` metoder i den här klassen. Om ett manifest läses in via HTTPS, bevarar TVSDK innehållsanvändningen för HTTPS och respekterar denna användning när relativa URL:er läses in från det manifestet.
 
-**Anteckning**: Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande förfrågningar ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
+**Anteckning**: Begäranden till tredjepartsdomäner som annonsspårning av pixlar, innehålls- och annonsadresser och liknande begäranden ändras inte, och det är innehållsleverantörernas och annonsservrarnas ansvar att tillhandahålla URL:er som stöds via HTTPS.
 
 **Version 1.4.18**
 
@@ -93,7 +92,7 @@ Mer information om VPAID 2.0 finns i [Stöd för VPAID och](../programming/tvsdk
 
 * tvOS
 
-   TVSDK stöder inbyggda tvOS-program.
+  TVSDK stöder inbyggda tvOS-program.
 * Följande typer av innehåll kan spelas upp:
 
    * VOD
@@ -180,7 +179,6 @@ DRM-profiler kan nu ange den högsta tillåtna upplösningen, beroende på enhet
 >* Långsam rörelse, oavsett plattform eller version.
 >* Livetrick.
 
-
 **Version 1.4.43**
 
 * TVSDK 1.4.43 är certifierat för iOS 11.
@@ -203,9 +201,9 @@ Den här versionen av TVSDK har certifierats med FairPlay-stöd för iOS och tvO
 
 * tvOS
 
-   Den här versionen av TVSDK har stöd för tvOS och har certifierats för okrypterade HLS-strömmar.
+  Den här versionen av TVSDK har stöd för tvOS och har certifierats för okrypterade HLS-strömmar.
 
-   **Anteckning**: Kom ihåg följande riktlinjer för kompilering:
+  **Anteckning**: Kom ihåg följande riktlinjer för kompilering:
 
    * Stödet för tvOs i TVSDK är begränsat till DRM-krypterade strömmar som inte är Adobe. Du måste ta bort referensen till drmNativeInterface.framework i inställningarna för tvOS-bygget. AES-krypterade strömmar stöds fortfarande.
    * Apple kräver att alla Apple TV-program är bitkodsaktiverade, så du måste aktivera den här flaggan i projektinställningarna.
@@ -247,7 +245,7 @@ Comment Type: draft
 
 * Biljett nr 34801 - currentTime och localTime uppdaterades inte vid sökning till en ny position under pausad status
 
-   * Spelarens aktuella tid kan nu anges till noll om spelaren är i pausat läge. tidigare var den aktuella tiden inställd på noll endast i uppspelningsläge.
+   * Spelarens aktuella tid kan nu anges till noll om spelaren är i pausat läge. Tidigare var den aktuella tiden inställd på noll endast i uppspelningstillstånd.
 
 * Biljett nr 35037 - Uppspelningen stoppas med felaktig URL när den återgår från signalbaserad annonsinfogning.
 
@@ -260,7 +258,7 @@ Comment Type: draft
 * (ZD#33905) - iOS TVSDK anropar manifestfilerna med två användaragenter. Problemet med användaragenten har åtgärdats i första m3u8-anropet (fall av ny installation). M3u8 har samma användaragenter för alla samtal nu.
 * (ZD#34293) - Förrullningar som infogats i LINEAR-strömmar spelas inte upp korrekt på iOS11. Problemet är åtgärdat för förhandsannonser.
 * (ZD#34684) - När principen för att hoppa över annonser tillämpas visas bildrutor för förrullning i några sekunder. Ett nytt API, enableVodPreroll, har introducerats för att inaktivera uppspelning före videouppspelning. Standardvärdet för denna API är Yes. API:t gör att det inte går att sammanfoga annonsinnehåll i huvudinnehållet.
-* (ZD#34765) - Efter att stop() anropats hämtas fortfarande få transportströmssegment. Förbättrade API:t Stop() för att undvika hämtning av de extra segmenten.
+* (ZD#34765) - Efter att stop() anropats hämtas fortfarande få transportströmssegment. Förbättrade API:t Stop() för att undvika nedladdning av de extra segmenten.
 * (ZD#34865) - Annonser före registrering för djurbesättningar trunkeras på iOS. Relaterat till iOS11 och en extra kontroll som bekräftar om strömmen är pre-roll eller main-content åtgärdar detta problem.
 * (ZD#35093) - Korrigerade ett redundansscenario där uppspelningen inte växlar till säkerhetskopieringsströmmen om den primära varianten av strömmen misslyckas vid start (returnerar 404).
 
@@ -268,98 +266,98 @@ Comment Type: draft
 
 * (ZD#34385) - Uppspelningen stoppas med en felaktig URL vid återgång från signalbaserad annonsinfogning.
 
-   Öka det maximala antalet samtidiga för CustomAVAssetLoaderOperations, så att manifestläsningarna kan fortsätta att köras.
+  Öka det maximala antalet samtidiga för CustomAVAssetLoaderOperations, så att manifestläsningarna kan fortsätta att köras.
 * (ZD#34373) - Slutanvändare kan inte direktuppspela till HDMI-anslutna enheter när direktuppspelningsinspelning inte tillåts.
 * (ZD#32678) - TVSDK samlar inte in rätt annons-ID på iOS.
 
-   Annons-ID för den slutliga annonseringen hämtas nu i VHL-pingar vid VAST-/VMAP-omdirigeringar.
+  Annons-ID för den slutliga annonseringen hämtas nu i VHL-pingar vid VAST-/VMAP-omdirigeringar.
 * (ZD#33904) - TVSDK har inte registrerats för AVFoundation-meddelanden AVAudioSessionMediaServicesWhereLostNotification och AVAudioSessionMediaServicesWhereResetNotification.
 
-   PTMediaServicesWhereLostNotification och PTMediaServicesWhereResetNotification kan nu registreras i spelarappen för att få meddelanden när medietjänsterna återställs eller förloras.
+  PTMediaServicesWhereLostNotification och PTMediaServicesWhereResetNotification kan nu registreras i spelarappen för att få meddelanden när medietjänsterna återställs eller förloras.
 
-* (ZD#33815) - Kunder kan inte uppdatera sina CRS-regler för prioritering och normalisering utan att behöva uppdatera appen.
+* (ZD#33815) - Kunderna kan inte uppdatera sina CRS-regler för prioritering och normalisering utan att behöva uppdatera appen.
 
-   API:erna getCRSRulesJsonURL och setCRSRulesJsonURL har lagts till i iOS TVSDK.
+  API:erna getCRSRulesJsonURL och setCRSRulesJsonURL har lagts till i iOS TVSDK.
 
 **Version 1.4.41 (1.4.41.76)**
 
 * (ZD #34464) - Issues building Reference App with TVSDK Version 1.4.41
 
-   Från och med den här versionen krävs Xcode 9 för kompilering av TVSDK för iOS.
+  Från och med den här versionen krävs Xcode 9 för kompilering av TVSDK för iOS.
 * (ZD #29456) - Airplay startar i pausat läge
 
-   Åtgärdade pausproblemet som uppstod när videon pausades när airplay startades.
+  Åtgärdade pausproblemet som uppstod när videon pausades när airplay startades.
 * (ZD #30371) - Starttiden för AdBreak ändras när vi infogar mer än 2 annonser i linjär ström
 
-   Korrigerade felet vid uppspelning av innehåll på Apple TV, vilket förhindrar uppspelning helt
+  Korrigerade felet vid uppspelning av innehåll på Apple TV, vilket förhindrar uppspelning helt
 * (ZD #32146) - Inget PTMediaPlayerStatusError har tagits emot för HLS Live-innehåll när iOS 11 dev beta blockeras
 
-   Inget PTMediaPlayerStatusError har tagits emot för HLS Live- och VOD-innehåll som blockeras med Charles (Drop connection and 403)
+  Inget PTMediaPlayerStatusError har tagits emot för HLS Live- och VOD-innehåll som blockeras med Charles (Drop connection and 403)
 * (ZD #29242) - Airplay-videouppspelning misslyckas med annonser aktiverade
 
-   När annonser är aktiverade och AirPlay är aktiverat för att starta uppspelning av en video startar videouppspelningen aldrig och inget fel visas
+  När annonser är aktiverade och AirPlay är aktiverat för att starta uppspelning av en video startar videouppspelningen aldrig och inget fel visas
 * (ZD#33341) - DRMInterface.h utlöser byggvarningar i Xcode 9
 
-   Korrigerade två blockprototyper i DRMInterface.h som saknade ordet void i sina parameterlistor
+  Korrigerade två blockprototyper i DRMInterface.h som saknade ordet void i sina parameterlistor
 * (ZD#31979) - Kompilerar/körs inte när det är iOS 10 eller senare för iPhone 7/iPhone7+
 
-   Korrigerad kompilering av IB-dokument för tidigare versioner än iOS 7 stöds inte längre
+  Korrigerad kompilering av IB-dokument för tidigare versioner än iOS 7 stöds inte längre
 * (ZD#32920) - Tom skärm inom en annonsbrytning och ingen annonsbrytning slutförd
 
-   När en annonsbrytning visar annonsinstanser och när en annonsinstans är klar visas en tom skärm
+  När en annonsbrytning visar annonsinstanser och när en annonsinstans är klar visas en tom skärm
 * (ZD#32509) - Inaktivera iOS 11 skärminspelning Inaktivera skärminspelning på iOS 11
 
 * (ZD#33179) - Intermittent händelsefel i iOS11
 
-   Åtgärdade händelsefelet i iOS 11
+  Åtgärdade händelsefelet i iOS 11
 
-**Version 1.4.40** (1.4.40.72)
+**Version 1.4.40** 1.4.40.72
 
 * (ZD #32465) - Spelaren kan inte hantera sammanfogade spellistor.
 
-   Anropa finishLoadingWithError(med: Fel) för AV-grund för att prova alternativa strömmar/utlösa failover.
+  Anropa finishLoadingWithError(med: Error) för AV-basen för att prova alternativa strömmar/utlösa failover.
 
 * (ZD #31951) - TVSDK-fel under licensroteringar.
 
-   Korrigerade licensrotationsproblemet.
+  Korrigerade licensrotationsproblemet.
 * (ZD #31951) - Tom skärm i en annonsbrytning och ingen annonsbrytning slutförs.
 
-   Hanterades ett problem där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda \&amp;lt;AdParameters\&amp;gt. VAST-nod.
-* (ZD #33336) - [iOS] TVSDK - Ad pods not be fill, trots att tillräckligt många annonser returnerades av Freewheel.
+  Ett problem har korrigerats där Facebook VPAID-annonser ofta returnerade flera CDATA-block i en enda \&amp;lt;AdParameters\&amp;gt; VAST-nod.
+* (ZD #3336) - [iOS] TVSDK - Ad pods not be fill, trots att tillräckligt många annonser returnerades av Freewheel.
 
-   Skapade en överordnad-underordnad relation mellan sekvensannons och reservannons och sortering baserat på överordnad sekvens och index.
+  Skapade en överordnad-underordnad relation mellan sekvensannons och reservannons och sortering baserat på överordnad sekvens och index.
 
-**Version 1.4.39** (1.4.39.43)
+**Version 1.4.39** 1.4.39.43
 
 * (ZD #32178) - iOS TVSDK-versionen är felaktig.
 
-   TVSDK-versionen i loggfilerna var 1.0.211. Den är fast för att få rätt version.
+  TVSDK-versionen i loggfilerna var 1.0.211. Den är fast för att få rätt version.
 
 * (ZD #32199) - Lazy Ad loading - Video visas inte för innehållet.
 
-   Den lokala Adbreak-tidslinjen som inte initierades tidigare uppdateras nu innan den används.
+  Den lokala Adbreak-tidslinjen som inte initierades tidigare uppdateras nu innan den används.
 
 * (ZD #27528) - Video, ljud eller båda fryser 1-45 sekunder efter att en resurs börjar spelas upp, om det sekundära ljudet är inställt på icke-standard i iOS 1.2.
 
-   Förbered och informera ljudspår i tillståndet Ready.
+  Förbered och informera ljudspår i tillståndet Ready.
 
-* (ZD #30411) - Du kan få oväntade resultat, t.ex. inget ljud eller felaktigt ljud, om du väljer ett sekundärt Sap-språk.
+* (ZD #30411) - Du kan få oväntade resultat, till exempel inget ljud eller felaktigt ljud, om du väljer ett sekundärt Sap-språk.
 
-   Förbered och informera ljudspår i tillståndet Ready.
+  Förbered och informera ljudspår i tillståndet Ready.
 
 * (ZD #32199) - Lazy Ad loading - Video visas inte för innehållet.
 
-   Den lokala Adbreak-tidslinjen som inte initierades tidigare uppdateras nu innan den används.
+  Den lokala Adbreak-tidslinjen som inte initierades tidigare uppdateras nu innan den används.
 
 * (ZD #27528) - Video, ljud eller båda fryser 1-45 sekunder efter att en resurs börjar spelas upp, om det sekundära ljudet är inställt på icke-standard i iOS 1.2.
 
-   Förbered och informera ljudspår i tillståndet Ready.
+  Förbered och informera ljudspår i tillståndet Ready.
 
-* (ZD #30411) - Du kan få oväntade resultat, t.ex. inget ljud eller felaktigt ljud, om du väljer ett sekundärt Sap-språk.
+* (ZD #30411) - Du kan få oväntade resultat, till exempel inget ljud eller felaktigt ljud, om du väljer ett sekundärt Sap-språk.
 
-   Förbered och informera ljudspår i tillståndet Ready.
+  Förbered och informera ljudspår i tillståndet Ready.
 
-**Version 1.4.38** (1.4.38.860)
+**Version 1.4.38** 1.4.38.860
 
 * (ZD #29281) - iOS: Lägg till AdSystem och Creative Id i CRS-begäranden
 
@@ -403,7 +401,7 @@ Problemet är åtgärdat. iOS TVSDK genererar ett undantag (AUDNetworkAdInfo::in
 
 Inkludera AdSystem och CreativeId som nya parametrar i förfrågningarna 1401 och 1403 (alla andra parametrar är desamma).
 
-**Version 1.4.35** (1.4.35.830)
+**Version 1.4.35** 1.4.35.830
 
 * (ZD #27830) - Måste programmässigt avgöra skillnaden mellan undertexter och undertexter i iOS.
 
@@ -470,7 +468,6 @@ Problemet löstes genom att sammanföra diskontinuitetstaggar i olika variantman
 Problemet löstes genom att paketet PSDKLilibrary.framework paketerades enligt begäran.
 
 * (ZD# 26364) Multi-CDN-stöd för CRS-annonser
-
 <!-- 
 Comment Type: draft
 For more information, see [Multiple CDN support for CRS Ad Delivery](http://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-concept-Multiple_CDN_support_for_CRS_ad_delivery).
@@ -509,19 +506,19 @@ När den sista starttiden för en annonsbrytning från VMAP infaller innan den t
 
 Problemet löstes genom att API:t assetDuration lades till i `PTVideoAnalyticsTrackingMetadata` för att uppdatera resursens varaktighet för direktuppspelning/linjär direktuppspelning och tillhandahålla en logik för att kontrollera direktuppspelningen.
 
-* (ZD# 22675) VHL - Analys: Uppdaterar livevideoresursens varaktighet
+* (ZD# 22675) VHL - Analys: Uppdatera varaktigheten för livevideoresurs
 
 Problemet är detsamma som ZD #22351.
 
-* (ZD #25908) VHL - Analys: Händelsekrasch för pulsslag i Adobe
+* (ZD #25908) VHL - Analys: Adobe pulsslagshändelsekrasch
 
 Problemet löstes genom att implementeringen uppdaterades för att använda den senaste versionen av VHL för iOS version 1.5.9 för att förbättra stabilitet och prestanda.
 
-* (ZD #25956) VHL - Analys: Krasch vid upprepad uppspelning av videoklipp
+* (ZD #25956) VHL - Analys: Krasch vid upprepade uppspelningar av videor
 
 Problemet är detsamma som ZD #25908.
 
-**Version 1.4.29** (1.4.29.743)
+**Version 1.4.29** 1.4.29.743
 
 * (ZD# 23901) Annonser från tredje part spelas inte upp
 
@@ -539,7 +536,7 @@ Problemet löstes genom att TVSDK inte kunde konvertera tomma strängar till abs
 
 Stöd har lagts till för anpassade rubriker i segmentbegäranden via klassen PTNetworkConfiguration.
 
-**Version 1.4.28** (1.4.28.722)
+**Version 1.4.28** 1.4.28.722
 
 * (ZD #24549) Flera annonseringsanrop
 
@@ -629,7 +626,7 @@ Problemet löstes genom att logiken uppdaterades för att visa spelarvyn om en V
 
 Problemet löstes genom att VideoAnalyticsTracker uppdaterades för att korrekt identifiera inledande/slutförande av kapitel vid övergång mellan kapitelgränser och icke-kapitelgränser.
 
-* (ZD #20784) - Analys: Utlösande av innehåll för live-videoövergångar
+* (ZD #20784) - Analys: Triggering content complete for live video transitions
 
 Problemet löstes genom att en logik lades till för att manuellt aktivera slutförandet av innehåll under en videospårningssession.
 
@@ -664,7 +661,7 @@ Problemet löstes genom att felmeddelanden förbättrades när ett allvarligt fe
 
 * (ZD #20580) - Krasch i PTSplicerManager
 
-Problemet löstes genom att ge ytterligare skydd mot samtidiga problem som orsakar kraschen.
+Problemet löstes genom att ge ytterligare skydd mot samtidighetsproblem som orsakar kraschen.
 
 * (ZD #21782) - iOS Error Code 10100
 
@@ -694,7 +691,7 @@ Problemet löstes genom att en JSON-konfigurationsfil lades till för att ange p
 
 * (ZD #19770) - Skyddad AES-videoutgång spelas inte längre
 
-Problemet med att vissa 302 omdirigerade strömmar inte kunde spelas upp har åtgärdats.
+Problemet där vissa 302 omdirigerade strömmar inte spelades upp har åtgärdats.
 
 * (ZD #19629) - Live Video Pauses when Entering Airplay to ATV 4
 
@@ -722,7 +719,7 @@ I EVENT-strömmar aktiveras annonsbrytningar inte korrekt i den tidigare version
 
 **1.4.21** (1.4.21.605) för iOS 6.0+
 
-* (ZD #20749) - Återställning hoppar över VAST-svar som inte är tomma. Extra URL-adresser för annonsspårning
+* (ZD #20749) - Fallback hoppar över VAST-svar som inte är tomma, extra URL:er för annonsspårning
 
 Ett problem med dubblettping på reservannonser har lösts.
 
@@ -759,7 +756,7 @@ I den aktuella implementeringen hoppades reservannonser över och packades inte 
 
 Omdirigeringsproblemet har åtgärdats eftersom omdirigerings-URL:en rensades av clearConnectionData innan den kunde användas för att analysera manifestet.
 
-* (ZD #19856) - Undertexter visas inte för vissa bithastigheter när de är aktiverade som standard
+* (ZD #19856) - Undertexter visas inte för vissa bithastigheter när de aktiveras som standard
 
 Problemet löstes genom att felet från iOS hanterades för de segment i strömmarna där undertexterna inte visas.
 
@@ -771,7 +768,7 @@ Kraschen i TVSDK som felaktigt avallokerade en instans av den stora parsern har 
 
 JavaScript Mime-typen inkluderades inte alltid eller ansågs vara en giltig MIME-typ. Problemet löstes genom att JavaScript inkluderades som en giltig MIME-typ.
 
-* (ZD #20749) - Återställning hoppar över VAST-svar som inte är tomma. Extra URL-adresser för annonsspårning
+* (ZD #20749) - Fallback hoppar över VAST-svar som inte är tomma, extra URL:er för annonsspårning
 
 Problemet med att en del kreatörer inte packas om har åtgärdats.
 
@@ -823,7 +820,7 @@ Alla varningar har åtgärdats.
 
 **Anteckning**: tvOS-kompatibla bibliotek har lagts till för TVSDK.
 
-**Version 1.4.16** (1.4.16.1454)
+**Version 1.4.16** 1.4.16.1454
 
 * Zendesk #3875 - Tab S kraschar vid uppspelning
 
@@ -843,7 +840,7 @@ TVSDK kraschade i Android M OS när färgkonverteringen för YUV-> RGB används 
 
 * Zendesk #18072 - Android M - Application Crash
 
-Den här kraschen inträffar när API:erna MediaCodecList och MediaCodecInfo anropas när profilen och nivån kontrolleras. Adobe söker Google support för ytterligare information. Problemet löstes genom att en tillfällig lösning skapades genom att all kodekinformation lästes in i förväg för att undvika anrop av dessa API:er endast när kodekinformation behövs.
+Den här kraschen inträffar när API:erna MediaCodecList och MediaCodecInfo anropas när profilen och nivån kontrolleras. Adobe söker Google support för ytterligare information. Problemet löstes genom att en temporär lösning skapades genom att all kodekinformation lästes in i förväg för att undvika att anropa dessa API:er endast när kodekinformation behövs.
 
 * Zendesk #18074 - Arabiska undertexter som inte fungerar på Nexus med Android 6.0
 
@@ -928,46 +925,46 @@ PTPlaybackInformation har uppdaterats för att visa den uppdaterade versionen av
 
 Stöd för att pinga tomma URL:er för annonsbrytningsspårning, TVSDK kommer nu att verifiera start av annonsbrytning och slutföra pingar för tomma annonsbrytningar
 
-**Version 1.4.8** (1.4.8.402)
+**Version 1.4.8** 1.4.8.402)
 
 * (ZD #3158) IOS 7 kraschar vid repriser av fullständiga händelser
 
-**Version 1.4.7** (1.4.7.382)
+**Version 1.4.7** 1.4.7.382
 
 * (ZD #2197) Spårning och fel. Det gick inte att läsa in manifestet för det tillagda meddelandet för resursen.
 * (ZD #2894) Spelaren gör fyra manifestbegäranden på högsta nivån under uppspelning.
 * (ZD #2992) Auditude Rapporterar konstiga varaktigheter och identifierare.
 
-**Version 1.4.6**(1.4.6.325)
+**Version 1.4.6** 1.4.6.325
 
 * (ZD #2197) Spårning och fel. Tillagda meddelanden för resursen kunde inte läsa in manifestet
 
-**Version 1.4.5** (1.4.5.283)
+**Version 1.4.5** 1.4.5.283
 
 * (ZD #2141) Analysimplementering för TreeHouse-appen, lade till AdobeAnalyticsPlugin.a-biblioteket för att skapa paket.
 * Video Heartbeats Library update to 1.4.1.2
 * (PTPALY-4226) (relaterat till ZD #2423) Om du utför DRM-återställning kan programdokumentdata tas bort.
 
-**Version 1.4.4** (1.4.4.242)
+**Version 1.4.4** 1.4.4.242
 
 * Video Heartbeats Library (VHL) update to 1.4.1.
 
 * (ZD #2435) TV SDK-dokumentation om uppdateringar av analysbehov
 
-**Version 1.4.2** (1.4.2.210): iOS 6.0+)
+**Version 1.4.2** (1.4.2.210: iOS 6.0+)
 
 * (ZD #1129) _player.currentItem.audioOptions returnerar tom
 * (ZD #2109) Primetime PSDK 1.4.1.125 fungerar inte med Xcode 5.1.1
 * (ZD #2137) Krasch i PSDK på iOS när DRM-metadata inte kan läsas in
 
-**Version 1.4.1** (1.4.1.125)
+**Version 1.4.1** 1.4.1.125
 
 * (ZD #1107) CocoaLumberjack - duplicerade symboler
 * (ZD #1644) Ändra iOS-användaragent för målgruppsanpassning och rapportering
 * (ZD #1850) Cocoa Lumberjack-filer som ingår i iOS SDK
 * (ZD#1908) Anpassade taggar ignoreras av PSDK om det finns fler än 1
 
-**Version 1.4.0** (1.4.0.32)
+**Version 1.4.0** 1.4.0.32
 
 * Zendesk #1024 - Funktion för att ta bort annonser från strömmen via manifest
 
@@ -979,12 +976,12 @@ Stöd för att pinga tomma URL:er för annonsbrytningsspårning, TVSDK kommer nu
 * Det kan hända att licensrotationsvideo inte spelas upp på iOS 11 och att den spelas upp som den ska på iOS 9.x och iOS 10.x.
 * Om uppspelningen är aktiv över AirPlay hoppas VPAID-annonser över i VPAID 2.0-stödet.
 * drmNativeInterface.framework länkar inte korrekt när minimimålet är iOS7 (eller senare).\
-   Tillfällig lösning: Ange explicit `libstdc++6`.  dylib-bibliotek enligt följande: Gå till Target->Build Phases->Länka binära till bibliotek och lägg till `libstdc++.6.dylib`.
+  Tillfällig lösning: Ange explicit `libstdc++6`.  dylib-bibliotek enligt följande: Gå till Target->Build Phases->Länka binärt med bibliotek och lägg till `libstdc++.6.dylib`.
 
 * Det gick inte att infoga post-roll för att ersätta API.
 * Om du söker efter en annonsbrytning (utan att komma ut ur den) utfärdas en dubblett och ett meddelande om annonsbrytningar startas
 * Inställning av currentTimeUpdateInterval har ingen effekt.\
-   Obs! I vissa iOS-versioner läser operativsystemet inte in resurserna i PSDKLilibrary.framework automatiskt. Det är viktigt att manuellt kopiera PSDKResources.bundle till programmets paketresurser: Gå till&quot;Bygg faser&quot; och kopiera paketresurser.
+  Obs! I vissa iOS-versioner läser operativsystemet inte in resurserna i PSDKLilibrary.framework automatiskt. Det är viktigt att manuellt kopiera PSDKResources.bundle till programmets paketresurser: Gå till&quot;Build Phases&quot; och kopiera paketresurser.
 * Referensappen kan inte byggas med Xcode 8 eller tidigare versioner. iOS TVSDK version 1.4.41 och senare, använd Xcode 9 för att kompilera.
 
 ## Användbara resurser {#helpful-resources}

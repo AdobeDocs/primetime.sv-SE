@@ -1,8 +1,7 @@
 ---
 description: Egenskapen MediaPlayerItem.timedMetadata ger åtkomst till alla TimedMetadata-objekt som skapas från taggarna playlist/manifest eller från ID3-taggar i medieströmmen.
 title: Meddelanden om manifesttaggar
-exl-id: a8a3cada-d796-460a-bd8f-fc4a2703e7f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

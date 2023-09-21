@@ -1,8 +1,7 @@
 ---
 description: TVSDK har för närvarande inbyggt stöd för annonsleverantörens metadata för TVSDK-annonser, direkta annonsbrytningar och anpassade annonsmarkörer.
 title: Annonsinfogningstyper
-exl-id: 1634ff41-8a8f-4f34-9685-149ec58518ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Det stöder följande typer av arbetsflöden för annonsinfogning för VOD och d
   <tr> 
    <td colname="col1"> Adobe Primetime annonser för annonsbeslut </td> 
    <td colname="col2">VOD <p>Live </p> <p>Linjär </p> </td> 
-   <td colname="col3">Referensimplementeringen innehåller <span class="codeph"> AuditudeMetadata</span> information för att ansluta till servern för Primetimes annonsbeslut (tidigare Auditude), baserat på informationen i Primetimes annonsdel</a> JSON-konfigurationsfilen</a>. </td> 
+   <td colname="col3">Referensimplementeringen innehåller <span class="codeph"> Auditudemetadata</span> information för att ansluta till servern för Primetime-annonsbeslut (tidigare Auditude), baserat på informationen i Primetimes annonsdel</a> JSON-konfigurationsfilen</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Direktreklam </td> 

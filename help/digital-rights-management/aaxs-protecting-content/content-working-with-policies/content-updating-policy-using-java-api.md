@@ -2,8 +2,7 @@
 title: Uppdatera en princip med Java API
 description: Uppdatera en princip med Java API
 copied-description: true
-exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Så här uppdaterar du en princip med Java API:
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Uppdatera `Policy` genom att ange dess egenskaper, till exempel dess namn och användningsregler.
+1. Uppdatera `Policy` genom att ange dess egenskaper, t.ex. dess namn och användningsregler.
 
    ```java
      // Change the policy name.  
@@ -60,4 +59,4 @@ Så här uppdaterar du en princip med Java API:
       out.close(); 
    ```
 
-Om du vill se den fullständiga källan för den här exempelkoden går du till `com.adobe.flashaccess.samples.policy.UpdatePolicy` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.
+Om du vill se den fullständiga källan för den här exempelkoden kan du gå till `com.adobe.flashaccess.samples.policy.UpdatePolicy` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.

@@ -1,9 +1,8 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: 866b3147-c28b-41b0-8653-06ba867354c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -40,7 +39,7 @@ java -jar AdobePackager.jar
 * `source` - Namnet på filen som du vill kryptera.
 * `dest` - Namnet på den resulterande krypterade filen.
 
-   Om du anger en katalog sparas den krypterade filen automatiskt i den angivna katalogen med samma filnamn som du angav som källfil. Du kan dock inte ange en målkatalog som innehåller källfilen.
+  Om du anger en katalog sparas den krypterade filen automatiskt i den angivna katalogen med samma filnamn som du angav som källfil. Du kan dock inte ange en målkatalog som innehåller källfilen.
 
 **Paketera flera filer med samma nyckel** (för stöd för flera bithastigheter):
 
@@ -93,7 +92,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger något namn eller en plats söker DRM Media Packager efter <span class="filepath"> flashaccesstools.properties </span> i den aktuella arbetskatalogen. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger något namn eller en plats söker DRM Media Packager efter <span class="filepath"> flashaccesstools.properties </span> i aktuell arbetskatalog. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
@@ -113,7 +112,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en unik identifierare för det här innehållssegmentet. </p> <p class="- topic/p ">Om du inte anger någon identifierare används målfilens namn automatiskt. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en unik identifierare för detta innehållssegment. </p> <p class="- topic/p ">Om du inte anger någon identifierare används målfilens namn automatiskt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> value </span> </p> </td> 
@@ -208,15 +207,15 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en licensnyckel. </p> <p class="- topic/p ">Om du inte anger någon tangent genereras nyckeln slumpmässigt. Om du inte aktiverar tangentrotation kan du använda den här nyckeln för att kryptera innehåll. </p> <p class="- topic/p ">När du aktiverar tangentrotation kan du använda den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda blanksteg mellan hexadecimala värden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger en licensnyckel. </p> <p class="- topic/p ">Om du inte anger någon tangent genereras nyckeln slumpmässigt. Om du inte aktiverar tangentrotation kan du använda den här nyckeln för att kryptera innehåll. </p> <p class="- topic/p ">När du aktiverar tangentrotation kan du använda den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda mellanrum mellan hexadecimala värden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. </p> <p class="- topic/p ">Om värdet är false, vilket är standardinställningen, inaktiveras tangentrotation och den överordnad CEK används för att kryptera alla samplingar i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera segment av vilket innehåll som helst. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. </p> <p class="- topic/p ">Om värdet är false, vilket är standardinställningen, inaktiveras tangentrotation och huvud-CEK används för att kryptera alla exempel i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera segment av vilket innehåll som helst. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som du kan ange för att kryptera innehåll när nyckelrotation är aktiverad. </p> <p class="- topic/p ">Om du inte anger några tangenter genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda blanksteg mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När du anger flera tangenter bläddras nycklarna igenom i den ordning som du har angett. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som du kan ange för att kryptera innehåll när nyckelrotation är aktiverad. </p> <p class="- topic/p ">Om du inte anger några tangenter genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda mellanrum mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När du anger flera tangenter bläddras nycklarna igenom i den ordning som du har angett. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 

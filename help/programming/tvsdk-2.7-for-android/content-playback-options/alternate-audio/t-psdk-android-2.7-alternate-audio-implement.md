@@ -1,8 +1,7 @@
 ---
 description: Alternativt ljud använder MediaPlayer för att spela upp en video som har angetts i en HLS-spellista för M3U8 och som kan innehålla flera alternativa ljudströmmar.
 title: Få tillgång till alternativa ljudspår
-exl-id: e5f5b943-4886-4884-80d2-225b5c7e3aed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%

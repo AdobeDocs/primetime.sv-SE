@@ -2,8 +2,7 @@
 title: Konfigurera en domänserver
 description: Konfigurera en domänserver
 copied-description: true
-exl-id: eeb0d39d-58a4-4414-9123-2cf1b27b73de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
@@ -23,4 +22,4 @@ Så här konfigurerar du en domänserver på en befintlig licensserverinstallati
    Det här certifikatet används sedan för att signera domäncertifikat och token.
 1. Ange värdet för `DomainServerlURL`.
 
-   Om värdet är inställt på `NULL`kan domänautentiseringen lyckas. När du ansluter till domänen kan det dock uppstå ett anslutningsdomänfel.
+   Om det här värdet är inställt på `NULL`kan domänautentiseringen lyckas. När du ansluter till domänen kan det dock uppstå ett anslutningsdomänfel.

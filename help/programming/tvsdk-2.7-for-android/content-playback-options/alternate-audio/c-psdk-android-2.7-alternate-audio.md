@@ -1,15 +1,14 @@
 ---
 description: Med alternativt ljud kan du växla mellan tillgängliga ljudspår för ett videospår. Användarna kan välja vilket språkspår de vill när videon spelas upp.
 title: Alternativt ljud
-exl-id: c2eb10dc-3fe0-472b-8450-2fbfc6b09487
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
-# Översikt {#alternate-audio-overview}
+# Ökning {#alternate-audio-overview}
 
 Med alternativt ljud kan du växla mellan tillgängliga ljudspår för ett videospår. Användarna kan välja vilket språkspår de vill när videon spelas upp.
 
@@ -19,7 +18,7 @@ När TVSDK skapar `MediaPlayerItem` -instans för den aktuella videon, skapar de
 
 >[!TIP]
 >
->Om ett ytterligare ljudspår blir tillgängligt efter att TVSDK har skapat `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_TRACK_UPDATED` -händelse.
+>Om ytterligare ljudspår blir tillgängliga efter att TVSDK har skapat `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_TRACK_UPDATED` -händelse.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -51,7 +50,7 @@ AudioTrack getSelectedAudioTrack();
 
 `selectAudioTrack`
 
-Den här funktionen väljer ett alternativt ljudspår som ska spelas upp.
+Den här funktionen väljer ett alternativt ljudspår att spela upp.
 
 ```java
 void selectAudioTrack(AudioTrack audioTrack);

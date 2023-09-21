@@ -2,8 +2,7 @@
 title: Definiera tidsbaserade regler
 description: Definiera tidsbaserade regler
 copied-description: true
-exl-id: ef72ee76-7d83-486d-86fe-df90c2aaca3a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Adobe Access använder&quot;mjuk tillämpning&quot; av tidsbaserade licensbegrä
 Även om mjuk tvång är standardbeteendet kan du även aktivera hård tvång genom att utföra någon av följande åtgärder:
 
 * Be din videospelare att regelbundet avsöka licensen för att säkerställa att inga tidsbegränsningar har gått ut. Detta kan uppnås genom att ringa `DRMManager.loadVoucher(LOCAL_ONLY).`En felkod anger att den lokalt lagrade licensen inte längre är giltig.
-* När användaren klickar på pausknappen kan du spela in den aktuella videons tidsstämpel och sedan anropa `Netstream.stop().`När användaren klickar på uppspelningsknappen kan du söka efter den inspelade platsen och sedan anropa `Netstream.play()`.
+* När användaren klickar på pausknappen kan du spela in den aktuella tidsstämpeln och sedan anropa `Netstream.stop().`När användaren klickar på uppspelningsknappen kan du söka efter den inspelade platsen och sedan anropa `Netstream.play()`.
 
 ## Startdatum {#start-date}
 
@@ -43,13 +42,13 @@ Anger hur länge en licens kan cachas på disken i klientens lokala License Stor
 
 När cachens förfallodatum har passerat är licensen inte längre giltig och klienten måste begära en ny licens från licensservern.
 
-Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. vid uthyrning. En 30-dagars uthyrning kan anges (med cache-lagring av licenser) för att ange den totala licenstiden inom vilken innehållet ska konsumeras.
+Exempel: Använd licensens cachelagringstid för att ange en fast tidsperiod som är giltig för en viss licens, t.ex. i ett uthyrningsfall. En 30-dagars uthyrning kan anges (med cache-lagring av licenser) för att ange den totala licenstiden för innehållet.
 
 ## Uppspelningsfönster {#playback-window}
 
 Anger hur länge en licens är giltig efter första gången den används för att spela upp skyddat innehåll.
 
-Exempel: Vissa affärsmodeller tillåter en uthyrningsperiod på 30 dagar, men när uppspelningen börjar måste den slutföras på 48 timmar. Denna 48-timmarsperiod för licensen definieras som uppspelningsfönstret.
+Exempel: Vissa affärsmodeller tillåter en uthyrningsperiod på 30 dagar, men när uppspelningen börjar måste den slutföras på 48 timmar. Denna 48-timmars livslängd för licensen definieras som uppspelningsfönstret.
 
 ## Krav för synkronisering {#requirements-for-synchronization}
 

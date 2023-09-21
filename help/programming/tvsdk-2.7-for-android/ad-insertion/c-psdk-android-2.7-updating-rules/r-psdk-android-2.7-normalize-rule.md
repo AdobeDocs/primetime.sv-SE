@@ -2,8 +2,7 @@
 description: Regeln normalize definierar en URL-omvandling som ska användas på en kreativ källwebbadress som hämtas från ett VAST/VMAP-svar.
 keywords: normalisera regel;regler för kreativt urval
 title: Normalisera regler
-exl-id: 28f315fe-b665-4abb-9b28-0182e999a8b2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -56,7 +55,7 @@ Regeln normalize definierar en URL-omvandling som ska användas på en kreativ k
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK kommer att använda <span class="codeph"> matchar</span> på <span class="codeph"> artikel</span> av källans kreativa innehåll och matcha mot värdena som definieras i den här arrayen.</td> 
+   <td>TVSDK använder <span class="codeph"> matchar</span> på <span class="codeph"> artikel</span> av källans kreativa innehåll och matcha mot värdena som definieras i den här arrayen.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> sök</span></td> 

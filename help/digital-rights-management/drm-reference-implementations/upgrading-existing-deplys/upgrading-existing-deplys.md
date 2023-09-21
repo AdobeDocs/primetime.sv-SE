@@ -1,15 +1,14 @@
 ---
 description: Om du vill uppgradera en server som stöder Reference Implementation License Server version 3.0 eller Watched Folder Packager måste du ersätta de .war-filer som har distribuerats på en Application Server med de filer som har inkluderats i Adobe Primetime DRM Reference Implementation Server.
 title: Uppgradera befintliga distributioner
-exl-id: 83edaf0a-e527-470d-8b8d-23e5ba86b039
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
-# Översikt {#upgrade-existing-deployments-overview}
+# Ökning {#upgrade-existing-deployments-overview}
 
 Om du vill uppgradera en server som stöder Reference Implementation License Server version 3.0 eller Watched Folder Packager måste du ersätta de .war-filer som har distribuerats på en Application Server med de filer som har inkluderats i Adobe Primetime DRM Reference Implementation Server.
 
@@ -25,7 +24,7 @@ Så här bevarar du databasposter och lägger till nya tabeller:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Lägg till följande egenskaper i [!DNL flashaccess-refimpl.properties] för att använda domänstödet:
+1. Lägg till följande egenskaper i [!DNL flashaccess-refimpl.properties] om du vill använda domänstödet:
 
    * `HandlerConfiguration.DomainCAs.n` eller `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 

@@ -1,8 +1,7 @@
 ---
 title: Prenumerationssegment och tidsram
 description: Definiera kohorter eller välj abonnentsegment för att mäta möjligheterna och mönstren för kontodelning för era kanaltittare så att de kan använda grafiska verktyg och rapporter i konto-IQ.
-exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Följande listrutealternativ används för att definiera segment:
 
 **MVPD i segment**
 
-The **MVPD i segment** väljer du [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) (personer eller grupp) vars prenumerant du vill visa rapporterna om kontodelning för.
+The **MVPD i segment** väljer du [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) (individer eller grupper) vars prenumerant du vill visa rapporterna om kontodelning för.
 
 I den här väljaren kan du förutom att markera de enskilda programmeringsversionerna även välja följande grupper:
 

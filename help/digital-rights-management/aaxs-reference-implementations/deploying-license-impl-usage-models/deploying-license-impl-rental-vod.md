@@ -1,15 +1,14 @@
 ---
-title: Uthyrning/video på begäran
-description: Uthyrning/video på begäran
+title: Uthyrning/video-on-demand
+description: Uthyrning/video-on-demand
 copied-description: true
-exl-id: e9b02fd1-0e3f-4526-af55-1c2ac54fac83
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
-# Uthyrning/video på begäran {#rental-video-on-demand}
+# Uthyrning/video-on-demand {#rental-video-on-demand}
 
-Med användningsmodellen Video-On-Demand (VOD) erbjuds innehåll tidsbaserade begränsningar. En användare kan till exempel spela upp innehållet under en 30-dagarsperiod. Men när uppspelningen börjar har användaren upp till 48 timmar på sig att slutföra tittandet, och därefter kommer innehållet inte längre att kunna spelas upp. När användaren begär en licens måste han/hon autentisera sig så att servern kan verifiera att användaren har ett uthyrningskonto.
+Med användningsmodellen Video-On-Demand (VOD) erbjuds innehåll tidsbaserade begränsningar. En användare har till exempel möjlighet att spela upp innehållet under en 30-dagarsperiod. När uppspelningen börjar har användaren dock upp till 48 timmar på sig att sluta titta, och därefter kommer innehållet inte längre att kunna spelas upp. När användaren begär en licens måste han/hon autentisera sig så att servern kan verifiera att användaren har ett uthyrningskonto.

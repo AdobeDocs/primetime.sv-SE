@@ -1,8 +1,7 @@
 ---
 description: Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelning. DVR-stödet innefattar begreppet sökbart fönster och klientens direktpunkt.
 title: Skapa ett kontrollfält förbättrat för DVR
-exl-id: 12e989f3-0e39-4224-89a7-ebfeb130f5fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -16,11 +15,11 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
 * För VOD är längden på det sökbara fönstret längden på hela resursen.
 * För direktuppspelning definieras längden på DVR-fönstret (sökbart) som det tidsintervall som börjar vid direktuppspelningsfönstret och slutar vid klientens direktpunkt.
 
-   Kom ihåg följande information:
+  Kom ihåg följande information:
 
    * Klientens direktpunkt beräknas genom att den buffrade längden subtraheras från livefönstrets slut.
 
-      Målets varaktighet är ett värde som är större än eller lika med den maximala längden för ett fragment i manifestet.
+     Målets varaktighet är ett värde som är större än eller lika med den maximala längden för ett fragment i manifestet.
    * Standardvärdet är 10000 ms.
    * Kontrollfältet för direktuppspelning stöder DVR genom att först placera tummen vid klientens direktpunkt när uppspelningen startar och genom att visa ett område som markerar det område där sökning inte är tillåten.
 
@@ -28,14 +27,15 @@ Du kan implementera ett kontrollfält med DVR-stöd för VOD och direktuppspelni
 
 ![](assets/dvr-window.PNG){width="684"}
 
-1. Följ stegen i [Visa ett söknavigeringsfält med den aktuella uppspelningspositionen.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) med följande skillnader:
+1. Följ stegen i [Visa ett söknavigeringsfält med aktuell uppspelningsposition.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) med följande skillnader:
 
    * Du kan implementera ett kontrollfält som bara är mappat för det sökbara intervallet i stället för för uppspelningsintervallet.
 
-      All användarinteraktion för sökning kan anses vara säker i sökbart intervall.
+     All användarinteraktion för sökning kan anses vara säker i sökbart intervall.
    * Du kan implementera ett kontrollfält som är mappat för uppspelningsintervallet, men som även visar det sökbara intervallet.
 
-      För ett kontrollfält:
+     För ett kontrollfält:
+
    1. Lägg till en övertäckning i kontrollfältet som representerar uppspelningsintervallet.
    1. När användaren börjar söka kontrollerar du om den önskade sökpositionen ligger inom det sökbara intervallet med hjälp av `MediaPlayer.getSeekableRange`.
 

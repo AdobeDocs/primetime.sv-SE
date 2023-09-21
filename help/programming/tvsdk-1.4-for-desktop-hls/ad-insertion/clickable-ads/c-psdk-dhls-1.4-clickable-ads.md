@@ -1,8 +1,7 @@
 ---
 description: TVSDK ger dig information så att du kan agera på klickbara annonser. När du skapar användargränssnittet måste du bestämma hur du ska svara när en användare klickar på en klickbar annons.
 title: Klickbara annonser
-exl-id: 50c74c82-c5d8-43f6-accf-8330a426a7bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -21,7 +20,7 @@ När en användare klickar på en annons eller en relaterad knapp ansvarar ditt 
 
 I det här exemplet visas ett sätt att hantera annonsklickningar.
 
-1. Visa en knapp ovanpå mediespelaren varje gång en annons spelas upp. En användare som klickar på annonsen omdirigeras till annonsens URL. Den här knappen är en del av [!DNL ClickableAdsOverlay.xml].
+1. Visa en knapp ovanpå mediespelaren varje gång en annons spelas upp. En användare som klickar på annonsen omdirigeras till annonsens URL. Den här knappen ingår i [!DNL ClickableAdsOverlay.xml].
 
    ```xml
       <?xml version="1.0"?> 
@@ -73,7 +72,7 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
 
 1. Lyssna på `AdclickEvent.AD_CLICK` -händelse.
 
-   Om en annons spelas skickar TVSDK `AdClickEvent.AD_CLICK` -händelse, från vilken du kan hämta klicknings-URL:en och relaterad information.
+   Om en annons spelas skickar TVSDK `AdClickEvent.AD_CLICK` -händelse, från vilken du kan hämta klicknings-URL och relaterad information.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
@@ -96,9 +95,9 @@ I det här exemplet visas ett sätt att hantera annonsklickningar.
    
    * Öppna klicknings-URL:en i en webbläsare i programmet.
 
-      På skrivbordsplattformar används video- och uppspelningsområdet vanligtvis för att anropa klicknings-URL:er när användaren klickar.
+     På skrivbordsplattformar används video- och uppspelningsområdet vanligtvis för att anropa klicknings-URL:er när användaren klickar.
    * Dirigera om användaren till den externa webbläsaren för mobila enheter.
 
-      På mobila enheter används video- och uppspelningsområdet för andra funktioner, som att dölja och visa kontroller, pausa uppspelning, expandera till helskärm och så vidare. På mobila enheter visas därför vanligtvis en separat vy, som en sponsorknapp, för användaren som ett sätt att starta klicknings-URL:en.
+     På mobila enheter används video- och uppspelningsområdet för andra funktioner, som att dölja och visa kontroller, pausa uppspelning, expandera till helskärm och så vidare. På mobila enheter visas därför vanligtvis en separat vy, som en sponsorknapp, för användaren som ett sätt att starta klicknings-URL:en.
 
 1. Stäng webbläsarfönstret där genomklickningsinformationen visas och återuppta uppspelningen av videon.

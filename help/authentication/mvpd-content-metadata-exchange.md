@@ -1,8 +1,7 @@
 ---
 title: MVPD Content Metadata Exchange
 description: MVPD Content Metadata Exchange
-exl-id: d17e60dc-6c61-4ca2-bad8-1840c95261e0
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -15,18 +14,18 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#content-metadat-exchange-overview}
+## Ökning {#content-metadat-exchange-overview}
 
 På den här sidan beskrivs två standardimplementeringar som Adobe Primetime-autentisering använder för att skicka strukturerade data till MVPD på auktoriseringsbegäran.  De strukturerade data representerar den resurs (programmeraren) som gör begäran och, eventuellt, ytterligare data, till exempel klassificering av innehåll.
 
-På programmerarsidan har Adobe Primetime-autentisering stöd för strukturerade MRSS-dataresurser enligt följande:
+På programmerarsidan har Adobe Primetime-autentisering stöd för strukturerade MRSS-dataresurser på följande sätt:
 
 1. Programmeraren skickar resursen som en MRSS-sträng. Adobe Primetime-autentisering kodar inte den på klientsidan för varken webben eller inbyggda enheter. MRSS skickas som en vanlig sträng till Adobe Primetime autentiseringsserver.
 1. På serversidan valideras MRSS mot det fördefinierade schemat (http://search.yahoo.com/mrss/).  Om valideringen godkänns extraherar Adobe Primetime-autentiseringen informationen från MRSS-fälten, inklusive:
    * kanaltitel
    * objekttitel
    * resursidentifierare
-   * värderingsvärde och typ
+   * Värderingsvärde och typ
 1. De värden som extraheras från MRSS används för att skapa den auktoriseringsbegäran som skickas till MVPD.
 
 Adobe Primetime-autentisering stöder två metoder för översättning av MRSS till format som stöds av MVPD:

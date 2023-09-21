@@ -2,8 +2,7 @@
 title: Lägg till annonser
 description: Lägg till annonser
 copied-description: true
-exl-id: 9400b762-4f49-44ac-8d6f-1f6a62cb4334
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
@@ -15,4 +14,4 @@ ht-degree: 0%
 Du kan lägga till annonsfunktioner till spelaren genom att skapa en `AdsManager` eller med hjälp av hanterarfabriken.
 
 * Skapa en `AdsManager`:
-* Så här använder du en `ManagerFactory` aktivera eller inaktivera annonser
+* Använda en `ManagerFactory` aktivera eller inaktivera annonser

@@ -2,8 +2,7 @@
 title: Markera intervall
 description: Markera intervall
 copied-description: true
-exl-id: b3314ee5-bb30-4b25-beff-ff810eff06b2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -143,7 +142,7 @@ Så här implementerar du `PTTimeRangeCollection` och radera innehållsintervall
 
 Så här implementerar du `PTTimeRangeCollection` och radera innehållsintervall som annonser:
 1. Förbered `PTTimeRangeCollection`.
-1. Ange typ av `PTTimeRangeCollection` till `PTTimeRangeCollectionTypeDeleteRanges`, som meddelar TVSDK att de angivna intervallen måste tas bort.
+1. Ange typ av `PTTimeRangeCollection` till `PTTimeRangeCollectionTypeDeleteRanges`, som meddelar TVSDK om att de angivna intervallen måste tas bort.
 
    ```
    #define PSDK_TIMESCALE 100000 

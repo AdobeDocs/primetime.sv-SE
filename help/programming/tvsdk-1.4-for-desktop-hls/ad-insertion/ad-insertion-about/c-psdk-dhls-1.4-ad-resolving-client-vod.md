@@ -1,8 +1,7 @@
 ---
 description: För VOD-innehåll (video-on-demand) infogar TVSDK annonsbrytningar genom att dela annonserna i huvudinnehållet så att tidslinjens varaktighet ökar.
 title: VOD-annonsmatchning och infogning
-exl-id: 6f02c7fc-028d-442f-92d4-9efa671b7f02
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -30,7 +29,7 @@ När uppspelningen har startats kan inga ytterligare ändringar göras i innehå
 * Infogad
 * Borttagen
 
-   Du kan t.ex. inte ta bort inbyggda annonser från innehållet för att erbjuda en reklamfri upplevelse.
+  Du kan t.ex. inte ta bort inbyggda annonser från innehållet för att erbjuda en reklamfri upplevelse.
 * Ersatt
 
-   Du kan till exempel inte ersätta inbyggda annonser med riktade annonser.
+  Du kan till exempel inte ersätta inbyggda annonser med riktade annonser.

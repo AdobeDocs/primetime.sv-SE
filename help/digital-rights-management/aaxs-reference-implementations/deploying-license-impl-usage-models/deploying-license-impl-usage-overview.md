@@ -2,8 +2,7 @@
 title: Implementera översikten över användningsmodeller
 description: Implementera översikten över användningsmodeller
 copied-description: true
-exl-id: 48e7db54-484f-4c46-9a4e-a51bae7c84b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -41,16 +40,16 @@ När en användare begär en licens kontrollerar Reference Implementation-server
 
       * Om `Customer.IsSubscriber` egenskapen är `true`, generera en licens för *Prenumeration* användningsmodell och skicka den till användaren.
 
-      * Leta efter en post i `CustomerAuthorization` databastabell för denna användare och detta innehålls-ID. Om en post hittades:
+      * Leta efter en post i `CustomerAuthorization` databastabell för den här användaren och innehålls-ID:t. Om en post hittades:
 
          * If `CustomerAuthorization.UsageType` är `DTO`, generera en licens för *Hämta till egen* användningsmodell och skicka den till användaren.
 
          * If `CustomerAuthorization.UsageType` är `VOD`, generera en licens för *Video On Demand* användningsmodell och skicka den till användaren.
+
    * Om ingen av profilerna tillåter anonym åtkomst:
 
       * Om det inte finns någon giltig autentiseringstoken i begäran returnerar du felet &quot;autentisering krävs&quot;.
       * Annars returneras ett &quot;ej auktoriserat&quot; fel.
-
 
 * Om någon av profilerna tillåter anonym åtkomst skapar du en licens för den annonsfinansierade användningsmodellen och skickar den till användaren.
 

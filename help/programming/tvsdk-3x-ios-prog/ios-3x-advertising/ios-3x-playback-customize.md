@@ -1,8 +1,7 @@
 ---
 description: När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller slutar i en annonsbrytning definierar TVSDK ett standardbeteende för positionen av det aktuella spelhuvudet.
 title: Anpassa uppspelning med annonser
-exl-id: 522f0b55-dcc4-4175-91ab-757b72bbad23
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
@@ -15,7 +14,7 @@ När uppspelningen når en annonsbrytning, skickar en annonsbrytning eller sluta
 
 >[!TIP]
 >
->Du kan åsidosätta standardbeteendet med `PTAdPolicySelector` klassen.
+>Du kan åsidosätta standardbeteendet genom att använda `PTAdPolicySelector` klassen.
 
 Standardbeteendet varierar beroende på om användaren skickar annonsbrytningen under den normala uppspelningen eller söker i en video.
 
@@ -25,7 +24,7 @@ Du kan anpassa beteendet för annonsuppspelning på följande sätt:
 * Om en annonsbrytning visas för användaren visar du inga ytterligare annonser under ett antal minuter, även om användaren söker efter en ny position.
 * Om innehållet inte kan spelas upp efter några minuter startar du om strömmen eller växlar om till en annan källa för samma innehåll.
 
-   För att användaren ska kunna hoppa över annonser och återuppta den tidigare misslyckade positionen kan du inaktivera annonser före och/eller meddelanden i mellanrullning under redundansuppspelningssessionen. TVSDK tillhandahåller metoder för att aktivera hoppning av annonser före och efter rullning.
+  För att användaren ska kunna hoppa över annonser och återuppta den tidigare misslyckade positionen kan du inaktivera pre-roll- och/eller middle-roll-annonser under redundansuppspelningssessionen. TVSDK tillhandahåller metoder för att aktivera hoppning av annonser före och efter rullning.
 
 ## API-element för annonsuppspelning {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
@@ -76,11 +75,11 @@ Gör något av följande om du vill anpassa annonsbeteenden:
 
 * Följ `PTAdPolicySelector` och implementera alla nödvändiga principvalsmetoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
+  Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
 * Åsidosätt `PTDefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
+  Det här alternativet rekommenderas om du bara behöver åsidosätta **några** standardbeteenden.
 
 Utför följande uppgifter för båda alternativen:
 
@@ -88,7 +87,7 @@ Utför följande uppgifter för båda alternativen:
 
    >[!NOTE]
    >
-   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `PTMediaPlayer` instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
+   >Anpassade annonsprinciper som registreras i början av uppspelningen rensas när `PTMediaPlayer` -instansen har avallokerats. Programmet måste registrera en principväljarinstans varje gång en ny uppspelningssession skapas.
 
    Till exempel:
 
@@ -260,7 +259,7 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att p
 
    Annonsbrytningar kan variera mellan olika sessioner på grund av annonsmönster, frekvensbegränsning och så vidare. Den aktuella tidpunkten för videon i en session kan vara annorlunda i en framtida session. När du sparar en position i videon hämtar programmet den lokala tiden. Använd  `localTime` för att läsa den här positionen, som du kan spara på enheten eller i en databas på servern.
 
-   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` är 1 200 sekunder, medan `localTime` vid den här positionen är 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` är 1 200 sekunder, medan `localTime` vid denna position är 900 sekunder.
 
    >[!IMPORTANT]
    >

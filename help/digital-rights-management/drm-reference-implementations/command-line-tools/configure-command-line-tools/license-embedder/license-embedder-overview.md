@@ -1,9 +1,8 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: 9aebdbd0-a6f0-4c9d-be2f-a8789cadf287
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -23,7 +22,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
 * `sourcefile` representerar en krypterad fil.
 * `destfile` Anger namnet på filen där det krypterade innehållet med den inbäddade licensen sparas.
 
-   Om du anger en katalog sparas filen i målkatalogen. Namnet på källfilen blir också namnet på filen som sparas i målkatalogen.
+  Om du anger en katalog sparas filen i målkatalogen. Namnet på källfilen blir också namnet på filen som sparas i målkatalogen.
 
 I följande tabell beskrivs de kommandoradsalternativ som du kan ange:
 

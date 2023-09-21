@@ -1,8 +1,7 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-exl-id: 28757b1d-8aa5-4172-91ba-6bacf7b5eb22
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
@@ -19,29 +18,29 @@ Kom ihåg följande information när du använder TVSDK:
 
 * Adobe Primetime fungerar för närvarande inte på Android-emulatorer.
 
-   Du måste använda riktiga enheter för testning.
+  Du måste använda riktiga enheter för testning.
 * Uppspelning stöds endast för HTTP-direktuppspelning (HLS).
 * Huvudinnehållet i videon kan multiplexas, där video- och ljudströmmar finns i samma återgivning, eller inte multiplexas, där video- och ljudströmmar finns i separata återgivningar.
 * TVSDK-API:t implementeras i Java.
 * För närvarande måste du köra de flesta TVSDK API-åtgärder på gränssnittstråden, som är Android-huvudtråden.
 
-   Åtgärder som körs korrekt på huvudtråden kan orsaka ett fel och avslutas när de körs på en bakgrundstråd.
+  Åtgärder som körs korrekt på huvudtråden kan orsaka ett fel och avslutas när de körs på en bakgrundstråd.
 * Videouppspelning kräver Adobe Video Engine (AVE). Detta påverkar hur och när medieresurser kan nås:
 
    * Undertexter stöds i den utsträckning som AVE tillhandahåller.
    * Beroende på kodningsprecisionen kan den faktiska längden för kodade medier skilja sig från varaktigheten som registreras i strömmens resursmanifest.
 
-      Det finns inget tillförlitligt sätt att återsynkronisera mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
+     Det finns inget tillförlitligt sätt att återsynkronisera mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
    * Inkommande användaragentnamn för alla mediebegäranden från TVSDK på den här plattformen tilldelas följande strängmönster:
 
-      ```
-      "Adobe Primetime/ + 
-      <varname>
-      originalUserAgent
-      </varname>" 
-      ```
+     ```
+     "Adobe Primetime/ + 
+     <varname>
+     originalUserAgent
+     </varname>" 
+     ```
 
-      Alla annonsrelaterade anrop använder Androids standardanvändaragent eller den anpassade användaragenten om du ställer in den när du ställer in metadata för annonsinfogning.
+     Alla annonsrelaterade anrop använder Androids standardanvändaragent eller den anpassade användaragenten om du ställer in den när du ställer in metadata för annonsinfogning.
 
 ## God praxis {#section_tvsdk_best_practices}
 

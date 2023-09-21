@@ -1,8 +1,7 @@
 ---
 description: Du kan använda ExpressPlays Bento4-paketerare för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
 title: ExpressPlay Packager / Cloud DRM / TVSDK
-exl-id: ff937279-3866-4d0a-9a19-cf61726299e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -57,7 +56,7 @@ I den här uppgiften beskrivs hur du använder ett verktyg från tredje part fö
    
    1. Kunden väljer innehåll. Den här implementeringen måste innehålla en slutpunkt där klienter kan begära en innehållstoken för ett visst innehålls-ID.
    1. Kundberättigande
-   1. Licenstoken-begäranden (ExpressPlay) från klienten ( [ExpressPlay-licenstokenbegäran/svarsreferens](../../license-token-req-resp-ref/license-req-resp-overview.md))
+   1. Licenstoken-begäranden (ExpressPlay) från klienten ( [ExpressPlay-licensens tokenbegäran/svarsreferens](../../license-token-req-resp-ref/license-req-resp-overview.md))
 
 1. Skapa en kund.
 

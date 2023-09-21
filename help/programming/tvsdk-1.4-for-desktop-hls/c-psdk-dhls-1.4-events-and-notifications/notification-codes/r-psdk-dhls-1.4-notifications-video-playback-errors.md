@@ -1,15 +1,14 @@
 ---
 description: Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
 title: NATIVE_ERROR Videouppspelningsvärden
-exl-id: 8e6ea6f8-bef2-4000-97a5-8d14c165079e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 6%
 
 ---
 
-# NATIVE_ERROR: Värden för videouppspelning{#native-error-video-playback-values}
+# NATIVE_ERROR: Videouppspelningsvärden{#native-error-video-playback-values}
 
 Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i NATIVE_ERROR-metadataobjektet.
 
@@ -25,7 +24,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> -1 </td> 
    <td colname="col2"><span class="codeph"> END_OF_PERIOD</span> </td> 
-   <td colname="col3"> Periodens slut. </td> 
+   <td colname="col3"> Slutet av perioden. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 0 </td> 
@@ -95,7 +94,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 13 </td> 
    <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
-   <td colname="col3"> Resursen har en storlek, men är okänd. </td> 
+   <td colname="col3"> Resursen har en storlek, men den är okänd. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
@@ -229,7 +228,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   </tr> 
   <tr> 
    <td colname="col1"> 40 </td> 
-   <td colname="col2"><span class="codeph"> AVBRUTEN</span> </td> 
+   <td colname="col2"><span class="codeph"> ABORTERAD</span> </td> 
    <td colname="col3"> Åtgärden avbröts av ett explicit anrop om att avbryta eller förstöra. </td> 
   </tr> 
   <tr> 
@@ -240,12 +239,12 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 42 </td> 
    <td colname="col2"><span class="codeph"> CANNOT_FAIL_OVER</span> </td> 
-   <td colname="col3"> Det går inte att redundansväxla. </td> 
+   <td colname="col3"> Kan inte redundansväxla. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 43 </td> 
    <td colname="col2"><span class="codeph"> HTTP_TIME_OUT</span> </td> 
-   <td colname="col3"> Tidsgränsen för HTTP-hämtning har uppnåtts. </td> 
+   <td colname="col3"> Tidsgränsen för HTTP-hämtning har överskridits. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
@@ -310,7 +309,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 55 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
-   <td colname="col3"> Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Detta är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder. </td> 
+   <td colname="col3"> Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Det här är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -320,7 +319,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHZED</span> </td> 
-   <td colname="col3"> HLS-uppspelning har inte aktiverats i Flash Player. Se <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
+   <td colname="col3"> HLS-uppspelning har inte aktiverats i Flashen Player. Se <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -355,7 +354,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr> 
    <td colname="col1"> 64 </td> 
    <td colname="col2"><span class="codeph"> RENDITION_M3U8_ERROR</span> </td> 
-   <td colname="col3"> Det uppstod ett fel när återgivningsspellistan lästes in. Detta gäller endast AVE, inte FlashPlayer. </td> 
+   <td colname="col3"> Återgivningsspellistan hade ett fel vid inläsningen. Detta gäller endast AVE, inte FlashPlayer. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 65 </td> 

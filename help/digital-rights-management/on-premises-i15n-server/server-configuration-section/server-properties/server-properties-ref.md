@@ -2,8 +2,7 @@
 title: Referens för serveregenskaper
 description: Referens för serveregenskaper
 copied-description: true
-exl-id: 8724d097-7cba-4ca9-b597-df56f80b2e9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -54,15 +53,15 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> Innehållscache </td> 
-   <td>Dessa inställningar styr den plats från vilken personaliseringsservern hämtar innehåll och var innehållet cachas på disken. Personaliseringsservern kontrollerar om det finns nytt innehåll på innehållsservern när den startas och därefter med den frekvens/tid som anges av dessa egenskaper. <p>För On Premises Individualization Server har vi tagit med en inledande uppsättning innehållscachedata. Var noga med att kopiera <i>INNEHÅLL</i> för cachemappen (inte själva cachemappen) till den konfigurerade <span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span> plats. </p> </td> 
+   <td>Dessa inställningar styr den plats från vilken personaliseringsservern hämtar innehåll och var innehållet cachas på disken. Personaliseringsservern kontrollerar om det finns nytt innehåll på innehållsservern när den startas och därefter med den frekvens/tid som anges av dessa egenskaper. <p>För On Premises Individualization Server har vi tagit med en inledande uppsättning innehållscachedata. Kopiera <i>INNEHÅLL</i> för cachemappen (inte själva cachemappen) till den konfigurerade <span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span> plats. </p> </td> 
    <td> 
     <ul id="ul_r4n_1r2_jr"> 
      <li id="li_CA5F562577B04B4A9966EF46E039A137"><span class="codeph"> contentServer.localDirectory =</span> [Katalog där lokalt innehåll ska lagras (normalt tomcat/temp)] </li> 
      <li id="li_9A78FBD6C54D47708226378340B46E8E"><span class="codeph"> contentServer.server =</span> [Webbserver att kontakta för ECI-information (<i>stöds inte i den här versionen</i>)] </li> 
      <li id="li_4E7D7F76085D411688B5003E855F860B"><span class="codeph"> contentServer.timeout =</span> [Tidsgräns för anslutning, i sekunder] </li> 
-     <li id="li_4B751F238A1643A7AC730CD9354887B6"><span class="codeph"> contentServer.pollFrequency =</span> [Hur ofta avsökning av servern ska göras, i dagar (minimum är 1 dag)] </li> 
+     <li id="li_4B751F238A1643A7AC730CD9354887B6"><span class="codeph"> contentServer.pollFrequency =</span> [Hur ofta du ska avfråga servern, i dagar (minimum 1 dag)] </li> 
      <li id="li_8E23C3C6E7EF46B0AFDD7993DE79F142"><span class="codeph"> contentServer.pollTime =</span> [Tid på dagen att avfråga servern, i minuter sedan midnatt] </li> 
-    </ul> <p>Läs avsnittet <i>CRL- och ECI-filer</i> om att hålla cacheminnet uppdaterat. </p> </td> 
+    </ul> <p>Läs avsnittet <i>CRL- och ECI-filer</i> om att hålla cachen uppdaterad. </p> </td> 
   </tr> 
   <tr> 
    <td> Certifikatutfärdarens CRL </td> 
@@ -132,7 +131,7 @@ ht-degree: 0%
    <td> 
     <ul id="ul_kwq_12f_jr"> 
      <li id="li_5E5D34FE5EB44BB898090494C7DDEBD8"><span class="codeph"> adobe.weblogs.loc =</span> [Katalog där loggfiler skapas] </li> 
-     <li id="li_0E34CD32CD5E47729B69B50414F93678"><span class="codeph"> log.FileName =</span> [Prefix för loggfiler. Datum/tid och <span class="filepath"> .log</span> filnamnstillägget läggs till i filnamnet] </li> 
+     <li id="li_0E34CD32CD5E47729B69B50414F93678"><span class="codeph"> log.FileName =</span> [Prefix för loggfiler. Datum/tid och <span class="filepath"> .log</span> läggs till i filnamnet] </li> 
      <li id="li_8AB15ACEC39041A2A04C7301154C6EDB"><span class="codeph"> log.Level =</span> [Den lägsta nivån för loggmeddelanden som kan visas i loggarna] </li> 
      <li id="li_A17E84DA3ED243F381FF3A6184A3CAA0"><span class="codeph"> log.RollInterval =</span> [Anger hur ofta loggarna rullas.] </li> 
      <li id="li_C2B3D111608945DA9D1428BE98D61664"><span class="codeph"> log.RollSize =</span> [Rulla loggarna när de når den här storleken (loggarna rullar när antingen <span class="codeph"> RollInterval</span> eller <span class="codeph"> RollSize</span> nås, beroende på vilket som inträffar först)] </li> 

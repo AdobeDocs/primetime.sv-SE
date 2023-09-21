@@ -2,8 +2,7 @@
 title: Information om NATIVE_ERROR-meddelandet
 description: Information om NATIVE_ERROR-meddelandet
 copied-description: true
-exl-id: 08121879-d5a6-4224-b08d-9e66fe4d185a
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -33,7 +32,7 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> NATIVE_ERROR</span> </td> 
-   <td colname="col2">Kort beskrivning av meddelandet (t.ex. <span class="codeph"> AAXS_InvalidVoucher</span> eller <span class="codeph"> DECODER_FAILED</span>). </td> 
+   <td colname="col2">Kort beskrivning av meddelandet (till exempel <span class="codeph"> AAXS_InvalidVoucher</span> eller <span class="codeph"> DECODER_FAILED</span>). </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> BESKRIVNING</span> </td> 
@@ -109,7 +108,7 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> CONTENT_ERROR</span> </td> 
-   <td colname="col2">Beskrivning av fel under fragment (t.ex. <span class="codeph"> ts</span>) nedladdning. </td> 
+   <td colname="col2">Beskrivning av fel under fragment (till exempel <span class="codeph"> ts</span>) nedladdning. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>Fel i ljudspår</b> </td> 
@@ -140,7 +139,7 @@ När TVSDK hanterar ett systemspecifikt fel returneras några eller alla följan
    <td colname="col2"></td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> Auditude_ERROR_CODE</span> </td> 
+   <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
    <td colname="col2"> Auditude felkod (tal). </td> 
   </tr> 
  </tbody> 
@@ -154,7 +153,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
 
 >[!TIP]
 >
->Den här listan innehåller TVSDK-specifik information om felen. Fullständiga beskrivningar finns i [ActionScript referens för körningsfel i ActionScript för Adobe Flash Platform](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html#3300).
+>Den här listan innehåller TVSDK-specifik information om felen. Fullständiga beskrivningar finns i [ActionScripten för körningsfel i ActionScripten för Adobe Flash Platform](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html#3300).
 
 <table id="table_CD59A859865F4FFDBAA249C89C74770A"> 
  <thead> 
@@ -172,12 +171,12 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
     <ul id="ul_516E4CB32D624B22892DDB9266CB04CA"> 
      <li id="li_348FC0F38B11417994119B61C9244076">Vad distributörens programvara ska göra: 
       <ul id="ul_7AFD45CF92454BA4927783FAA628FBC4"> 
-       <li id="li_0D9CCE61612643648C12DCDDD252E52A">Om du använder Google Chrome, är i Incognito-läge och din Flash Player-version är mindre än 11.6 kan det här felet uppstå. <p>Vi rekommenderar att spelaren kontrollerar webbläsarens versionsnummer och råder användaren att avsluta Incognito-läget. </p> </li> 
+       <li id="li_0D9CCE61612643648C12DCDDD252E52A">Om du använder Google Chrome, är i Incognito-läge och Flashen Player är mindre än 11.6 kan det här felet uppstå. <p>Vi rekommenderar att spelaren kontrollerar webbläsarens versionsnummer och råder användaren att avsluta Incognito-läget. </p> </li> 
        <li id="li_1DC6B755BD0840D48BEC92568FD330BA">Begär licensen igen. <p>Om begäran lyckas behöver du inte logga eller eskalera. Om begäran misslyckas loggar du det innehåll som orsakade felet. <span class="codeph"> subErrorId</span> innehåller ett radfel om det finns ett. </p> </li> 
       </ul> </li> 
      <li id="li_060B5D60C9BB419CBFA7B062FBCF2632">Vad distributören ska göra: 
       <ul id="ul_FADB29DBF0DA4A0E8E54134AEB7DCD8A"> 
-       <li id="li_FC5B1C04D21E4AECB0EBD9ADD3198504">Om nya försök misslyckas på andra konfigurationer än Chrome med Flash som är mindre än version 11.6 kan ett fel ha uppstått i förpackningen. </li> 
+       <li id="li_FC5B1C04D21E4AECB0EBD9ADD3198504">Om nya försök misslyckas på andra konfigurationer än Chrome med Flash som är lägre än version 11.6 kan ett fel ha uppstått i paketeringen. </li> 
        <li id="li_A720ECE591254021879B335B81B1F76D">Kontrollera om problemet är specifikt för visst innehåll och ompackning. </li> 
       </ul> </li> 
     </ul> </td> 
@@ -228,22 +227,22 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col2"><span class="codeph"> AAXS_ClientUpdateRequire</span> </td> 
    <td colname="col3"> Använd en nyare version av TVSDK för Android. <p>Den aktuella klienten kan inte slutföra den begärda åtgärden, men en uppdaterad klient kan eventuellt slutföra begäran. </p> <p>Detta kan ha flera orsaker: 
      <ul id="ul_2EC4D42D5273439FA1AFDA1A2578B3D6"> 
-      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">En delad domän användes som inte är tillgänglig på den här klienten. Detta är troligtvis fallet när uppspelningen fungerar i Chrome, men inte i någon annan webbläsare och vice versa. <p> <p>Tips: Chrome använder en annan PHDS/PHLS-nyckel än de andra webbläsarna. Mer information finns i <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
+      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">En delad domän användes som inte är tillgänglig på den här klienten. Detta är troligtvis fallet när uppspelningen fungerar i Chrome, men inte i någon annan webbläsare och vice versa. <p> <p>Tips! Chrome använder en annan PHDS/PHLS-nyckel än de andra webbläsarna. Mer information finns i <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
       <li id="li_3B633FB699234DCEA136E9BE3CC3386D">Programmet försöker lägga till flera DRMS-sessioner när det körs på en tidigare iOS-version än 5.0. </li> 
       <li id="li_F7ED993AF0B941A7A27216B4D587A999">Metadata har version 3 eller senare när endast version 2 stöds. </li> 
      </ul> </p> 
      <ul id="ul_EE4AE6AD4F1745A5B5623E53B599DB62"> 
       <li id="li_7A83869D4262443DA35FA1DF8D3097DD">Distributörens programvara ska varna användaren och avbryta åtgärden. <p>Om programmet har ett sätt att avgöra om en uppgradering är tillgänglig kan du hänvisa användaren till uppgraderingen på lämpligt sätt för plattformen. </p> </li> 
-      <li id="li_AF9C2711FDE54DA196EB9D2864632000">Om problemet uppstår på grund av en delad domän måste distributören kontrollera med Adobe om det finns en uppdaterad körningsversion eller bibliotek. <p>För Flash-miljön kan distributören framtvinga uppgraderingen direkt i programmet. Om det är ett bibliotek måste distributören skaffa ett uppdaterat bibliotek, bygga om programmet och distribuera det till användarna. </p> <p>Om ett problem uppstår på grund av flera DRMSessions måste distributören uppdatera programmet för att kontrollera iOS-versionsnumret innan flera DRMS-sessioner läggs till. Eller så kan de begränsa distributionen av sina program till iOS v5 och senare. </p> <p>om problemet inträffar på grund av att metadataversionen är högre än version 2 är problemet antagligen skadade metadata. De kan försöka återskapa metadata och se resultaten. Om de fortsätter att se problemet loggar de in och eskalerar till Adobe. </p> </li> 
-     </ul> <p>Mer information om den här felkoden finns i <a href="https://forums.adobe.com/thread/1266675" format="https" scope="external"> Så här åtgärdar du en 3306 DRMErrorEvent-felkod</a> </p> </td> 
+      <li id="li_AF9C2711FDE54DA196EB9D2864632000">Om problemet uppstår på grund av en delad domän måste distributören kontrollera med Adobe om det finns en uppdaterad körningsversion eller bibliotek. <p>För Flash runtime kan distributören framtvinga uppgraderingen direkt i programmet. Om det är ett bibliotek måste distributören skaffa ett uppdaterat bibliotek, bygga om programmet och distribuera det till användarna. </p> <p>Om ett problem uppstår på grund av flera DRMSessions måste distributören uppdatera programmet för att kontrollera iOS-versionsnumret innan flera DRMS-sessioner läggs till. Eller så kan de begränsa distributionen av sina program till iOS v5 och senare. </p> <p>om problemet inträffar på grund av att metadataversionen är högre än version 2 är problemet antagligen skadade metadata. De kan försöka återskapa metadata och se resultaten. Om de fortsätter att se problemet loggar de in och eskalerar till Adobe. </p> </li> 
+     </ul> <p>Mer information om den här felkoden finns i <a href="https://forums.adobe.com/thread/1266675" format="https" scope="external"> Åtgärda en 3306 DRMErrorEvent-felkod</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3307 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InternalFailure</span> </td> 
    <td colname="col3"> <p>Detta representerar vanligtvis ett fel i Adobe Access-koden och är oväntat, såvida det inte finns ett känt fel, som framgår nedan. subErrorId innehåller ett klientspecifikt fel eller radfel. </p> 
     <ul id="ul_79F4A9655A2148519B1E9509C41F78C3"> 
-     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Om webbläsaren är Chrome i Windows och Flash version är 11.6 (SWF version 19 eller senare) bör distributörens program anta att användaren tryckte på <span class="uicontrol"> Neka</span> på informationsfältet och behandla samma som 3368. </li> 
-     <li id="li_0215D1089B344861A2C0A73E1067CFEF">Om 3307 inträffar när webbläsaren inte är Chrome eller Flash inte är 11.6 bör distributören eskalera till Adobe. </li> 
+     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Om webbläsaren är Chrome i Windows och Flash version är 11.6 (SWF version 19 eller senare), bör distributörens program anta att användaren tryckte på <span class="uicontrol"> Neka</span> på informationsfältet och behandla samma som 3368. </li> 
+     <li id="li_0215D1089B344861A2C0A73E1067CFEF">Om 3307 inträffar när webbläsaren inte är Chrome eller om Flashen inte är 11.6 bör distributören eskalera till Adobe. </li> 
     </ul> <p>Viktigt: <span class="codeph"> 3307:1107296344 (FailedToGetBrokerHandle)</span> kan hända med webbläsarversionerna 24-28 för Chrome. </p> </td> 
   </tr> 
   <tr> 
@@ -313,12 +312,12 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3315 </td> 
    <td colname="col2"><span class="codeph"> AAXS_PermissionDenied </span> </td> 
-   <td colname="col3"> <p>Det finns kända fel där den här felkoden genereras när 3305 är avsedd. Mer information finns i <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed] - orsaker och upplösning</a>. </p> <p>Fjärr-SWF som lästs in av AIR har inte åtkomst till Flash Access-funktioner. Den här felkoden kan också genereras om ett säkerhetsfel inträffar under nätverksåtkomst. Exempel är om målservern inte ansluter klienten med crossdomain.xml, eller så går det inte att nå crossdomain.xml. </p> <p>Mer information finns i <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM-fel 3315 - möjlig rotorsak och upplösning</a>. </p> </td> 
+   <td colname="col3"> <p>Det finns kända fel där den här felkoden genereras när 3305 är avsedd. Mer information finns i <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed] - orsaker och upplösning</a>. </p> <p>Fjärr-SWF som lästs in av AIR har inte åtkomst till Flashens Access funktioner. Den här felkoden kan också genereras om ett säkerhetsfel inträffar under nätverksåtkomst. Exempel är om målservern inte ansluter klienten med crossdomain.xml, eller så går det inte att nå crossdomain.xml. </p> <p>Mer information finns i <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM-fel 3315 - möjlig rotorsak och upplösning</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3316 </td> 
    <td colname="col2"><span class="codeph"> AAXS_NOTUSED_MOVED </span> </td> 
-   <td colname="col3"> var <span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModul</span>. Flyttad till 3344 på grund av en konflikt med felkoden för Flash. </td> 
+   <td colname="col3"> var <span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModul</span>. Flyttad till 3344 på grund av en konflikt med Flashens felkod. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3317 </td> 
@@ -354,7 +353,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Om felet är konsekvent mellan olika plattformar bör du eskalera problemet med Adobe. </li> 
        <li id="li_0C6EB7B912FA41E59657216498DA3515">Om felet är begränsat till Chrome i Windows vägleder du användaren till att tillåta åtkomst till obegränsat plugin-program. </li> 
-      </ul> <p>Distributörerna bör uppdatera SWF till version 19 eller senare och det Chrome-specifika 3321-felet genereras ett 3368-fel. Fel 3368 kan hanteras mer specifikt av distributörens programvara. Den här ändringen introducerades i Chrome Stable Channel version 26.0.1410.43. </p> <p>Tips: Fel <span class="codeph"> 3321:1090519056</span> kan inträffa med Flash Player, version 11.1 till 11.6. Vi rekommenderar att du uppgraderar till den senaste Flash Player-versionen. </p> </li> 
+      </ul> <p>Distributörerna bör uppdatera SWF till version 19 eller senare och det Chrome-specifika 3321-felet genereras ett 3368-fel. Fel 3368 kan hanteras mer specifikt av distributörens programvara. Den här ändringen infördes i Chrome Stable Channel version 26.0.1410.43. </p> <p>Tips: Fel <span class="codeph"> 3321:1090519056</span> kan inträffa med Flash Player version 11.1 till 11.6. Vi rekommenderar att du uppgraderar till den senaste Flashen Player. </p> </li> 
     </ul> <p>Mer information finns i <a href="https://forums.adobe.com/thread/1277138" format="https" scope="external"> DRM-fel 3321 Orsaker och upplösning</a>. </p> </td> 
   </tr> 
   <tr> 
@@ -367,7 +366,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed </span> </td> 
    <td colname="col3"> <p>Enheten verkar inte matcha konfigurationen som fanns när den initierades. subErrorId innehåller ett klient- eller radfel. </p> <p>Distributörens programvara ska utföra någon av följande uppgifter: 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Om enheten inte använder Flash Player och använder AIR, iOS osv., ringer du <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Om problemet inträffar på iOS under en utvecklingsfas ber du utvecklaren att bekräfta om problemet uppstår vid växling mellan byggen som har hämtats från tredjepartssystem för distribution före lansering (till exempel HockeyApp) och en lokal version från Xcode. Attribut för en tidigare installation skrivs inte över helt när du växlar mellan en build som distribuerats från HockeyApp och en build från Xcode. Den här situationen kan utlösa felet 3322. </p> <p>För att lösa det här problemet bör utvecklaren ta bort den äldre versionen från enheten innan den nya versionen installeras. </p> </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Om enheten inte använder Flash Player och använder AIR, iOS osv., ringer du <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Om problemet inträffar i en utvecklingsfas på iOS ber du utvecklaren att bekräfta om problemet uppstår när man växlar mellan byggen som har hämtats från tredjepartssystem för distribution före lansering (till exempel HockeyApp) och en lokal version från Xcode. Attribut för en tidigare installation skrivs inte över helt när du växlar mellan en build som distribuerats från HockeyApp och en build från Xcode. Den här situationen kan utlösa felet 3322. </p> <p>För att lösa det här problemet bör utvecklaren ta bort den äldre versionen från enheten innan den nya versionen installeras. </p> </li> 
       <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Om enheten använder Flash Player, och den inte kan användas från felkoderna 3322 eller 3346, kan du läsa instruktionerna från Adobe om hur du återställer DRM-licensarkivet programmatiskt på <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM-fel 3322/3346/3368 i Chrome (Info-Bar-problem)</a>. </li> 
      </ul> </p> <p>Detta fel förväntas inte inträffa ofta. I företagsmiljöer där centrala profiler används ökar risken för att fel 3322 inträffar när användaren loggar in från olika datorer om en användare visar innehåll som skyddas av DRM. Distributören bör om möjligt försöka hämta informationen från användaren. </p> <p>Om felet inträffar ofta eskalerar du till Adobe. Du måste meddela Adobe om återställningen av licensarkivet lyckades lösa problemet och ange för Adobe vilka webbläsare felet inträffar. </p> <p>Mer information finns i följande artiklar: 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
@@ -389,11 +388,11 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3324 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MachineTokenInvalid </span> </td> 
-   <td colname="col3"> Återställ lokal DRM-lagring för det här programmet. Anropa DRMManager.resetDRM. <p>Licensservern kanske inte kan ansluta till CRL-servern (Certificate Revocation List) för att uppdatera sina CRL-filer, eller så begär klientdatorn en licens/autentisering som har återkallats av licensservern. </p> <p>I serverloggarna är felkoden 111 MachineTokenInvalid. På klientnivå översätts felkod 111 till felkod 3324. </p> <p>DRM-licensserveradministratören bör kontrollera om kundens licensserver någonsin har kunnat hämta Adobe CRL-filer. Om kunden använder Tomcat kan kunden kontrollera<span class="filepath"> tomcat/temp/</span> för att se om det finns fyra CRL-filer. </p> 
+   <td colname="col3"> Återställ lokal DRM-lagring för det här programmet. Ring DRMManager.resetDRM. <p>Licensservern kanske inte kan ansluta till CRL-servern (Certificate Revocation List) för att uppdatera sina CRL-filer, eller så begär klientdatorn en licens/autentisering som har återkallats av licensservern. </p> <p>I serverloggarna är felkoden 111 MachineTokenInvalid. På klientnivå översätts felkod 111 till felkod 3324. </p> <p>DRM-licensserveradministratören bör kontrollera om kundens licensserver någonsin har kunnat hämta Adobe CRL-filer. Om kunden använder Tomcat kan kunden kontrollera<span class="filepath"> tomcat/temp/</span> för att se om det finns fyra CRL-filer. </p> 
     <ul id="ul_23B7F1A104AF49E79EA87DB8E15E337E"> 
       <li id="li_855D87F251184FE688A8D5FA0F6C9EF5">Om filerna finns i den här katalogen dubbelklickar du på filerna i Utforskaren i Windows och i CRL-visningsprogrammet för att avgöra om någon av filerna har gått ut. </li> 
       <li id="li_58EC4EDA2B5146188A0FF7B33C91E2FD">Om det inte finns några filer i tomcat/temp/ kan det förutsättas att den här licensservern aldrig har kunnat nå Adobe CRL-servern på grund av ett brandväggs-/routningsproblem. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> Brandväggsregler.</a></li>
-    </ul> </p> <p>Om CRL-filerna inte är tillgängliga eller har gått ut måste du bekräfta om licensservern kan nås. Öppna en nätverkssniffer på kundens licensserver, starta om servern och be en klient begära en licens från servern. Du kan observera nätverkstrafiken för att se om anrop till följande URL-slutpunkter lyckas: <p>Tips: Du kan också ange följande URL-adresser för listor över återkallade certifikat i en webbläsare för att se om du kan hämta varje fil manuellt. </p> 
+    </ul> </p> <p>Om CRL-filerna inte är tillgängliga eller har gått ut måste du bekräfta om licensservern kan nås. Öppna en nätverkssniffer på kundens licensserver, starta om servern och be en klient begära en licens från servern. Du kan observera nätverkstrafiken för att se om anrop till följande URL-slutpunkter lyckas: <p>Tips! Du kan även ange följande URL-adresser för listor över återkallade certifikat i en webbläsare för att se om du kan hämta varje fil manuellt. </p> 
     <ul id="ul_9B65C7ABBDEC4AC9BF3755FFD3587971"> 
       <li id="li_6867A9050E8D421C9138AC853D1784C9"><a href="https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl</a> </li> 
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
@@ -426,19 +425,19 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col3"> Fixa klockan eller hämta <span class="codeph"> Authn/Lic/Domain</span> licensiera igen. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><b>Fel i autentisering/licens/domänserver</b> </td> 
+   <td colname="col1"><b>Autentiserings-/licens-/domänserverfel</b> </td> 
    <td colname="col2"> </td> 
    <td colname="col3"> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3328 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ServerErrorTryIgen </span> </td> 
-   <td colname="col3"> <p>Det här är ett fel på serversidan där servern inte kunde slutföra klientens begäran. Det här felet kan inträffa när servern till exempel är upptagen, HTTP/500, servern inte har den nyckel som krävs för att dekryptera begäran och så vidare. </p> <p>På klienten går det inte att avgöra vad som gick fel. Kunden måste granska serverloggarna för Adobe Access, som vanligtvis kallas <span class="codeph"> AdobeFlashAccess.log</span>, för att avgöra vad som gick fel. Det finns alltid en beskrivande stackspårning i loggen som indikerar problemet. <span class="codeph"> subErrorId</span> innehåller ett serverspecifikt eller radfel. </p> <p>Distributören bör titta i serverloggarna för att identifiera vilken server som skickar det här felet. För 3328-fel med underfelkod 101 kan servern inte dekryptera begäran. Kunden måste validera att de licens-/transportservercertifikat som är installerade på licensservern matchar och motsvarar de certifikat som används vid paketeringen. </p> <p>Om kunderna dessutom använder referensimplementeringen måste de se till att det inte finns några stavfel i <span class="codeph"> flashaccess-refimpl.properties</span> fil där primära och ytterligare certifikat anges. </p> </td> 
+   <td colname="col3"> <p>Det här är ett fel på serversidan där servern inte kunde slutföra klientens begäran. Det här felet kan inträffa när servern till exempel är upptagen, HTTP/500, servern inte har den nyckel som krävs för att dekryptera begäran och så vidare. </p> <p>På klienten går det inte att avgöra vad som gick fel. Kunden måste granska serverloggarna för Adobe Access, som vanligtvis kallas <span class="codeph"> AdobeFlashAccess.log</span>, för att avgöra vad som gick fel. Det finns alltid en beskrivande stackspårning i loggen som indikerar problemet. <span class="codeph"> subErrorId</span> innehåller ett serverspecifikt eller radfel. </p> <p>Distributören bör titta i serverloggarna för att identifiera vilken server som skickar det här felet. För 3328-fel med underfelkod 101 kan servern inte dekryptera begäran. Kunden måste validera att de licens-/transportservercertifikat som är installerade på licensservern överensstämmer med och motsvarar de certifikat som används vid paketeringen. </p> <p>Om kunderna dessutom använder referensimplementeringen måste de se till att det inte finns några stavfel i <span class="codeph"> flashaccess-refimpl.properties</span> fil där primära och ytterligare certifikat anges. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3329 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ApplicationSpecificError </span> </td> 
-   <td colname="col3"> <p>Den programspecifika underfelkoden är inte känd för Flash Access. <span class="codeph"> subErrorId</span> innehåller ett serverspecifikt fel från utgivarens anpassade licensserver. Servern returnerade ett fel i det programspecifika namnutrymmet. </p> </td> 
+   <td colname="col3"> <p>Flashen Access känner inte till den programspecifika underfelkoden. <span class="codeph"> subErrorId</span> innehåller ett serverspecifikt fel från utgivarens anpassade licensserver. Servern returnerade ett fel i det programspecifika namnutrymmet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3330 </td> 
@@ -472,7 +471,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3334 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidDRMPlatform </span> </td> 
-   <td colname="col3"> <p>Den här plattformen tillåts inte att spela upp innehållet eftersom innehållsleverantören till exempel har konfigurerat Adobe Access att neka innehåll till Adobe Access på en plattform eller en delad domänbunden licens är bunden till en delad domäntoken som är avsedd för en annan partition. </p> <p>CDM kan orsaka det här felet om innehållet inte paketerades med en lämplig (CDM-funktionsstyrd) paketerarcertifiering. </p> <p>Om innehållet paketeras med ett felaktigt PHDS/PHLS-certifikat kan innehållet fungera i Chrome men inte i andra webbläsare (eller tvärtom). <p>Tips: Detta beror på att Chrome använder olika PHDS/PHLS-certifikat. </p>Bekräfta vilket certifikat som används genom att dumpa informationen i innehållets metadata och leta efter <i>mottagarens certifikat</i>. Mer information finns i <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
+   <td colname="col3"> <p>Den här plattformen tillåts inte att spela upp innehållet eftersom innehållsleverantören till exempel har konfigurerat Adobe Access att neka innehåll till Adobe Access på en plattform eller en delad domänbunden licens är bunden till en delad domäntoken som är avsedd för en annan partition. </p> <p>CDM kan orsaka det här felet om innehållet inte paketerades med en lämplig (CDM-funktionsstyrd) paketerarcertifiering. </p> <p>Om innehållet paketeras med ett felaktigt PHDS/PHLS-certifikat kan innehållet fungera i Chrome men inte i andra webbläsare (eller tvärtom). <p>Tips! Detta beror på att Chrome använder olika PHDS/PHLS-certifikat. </p>Bekräfta vilket certifikat som används genom att dumpa informationen i innehållets metadata och leta efter <i>mottagarens certifikat</i>. Mer information finns i <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3335 </td> 
@@ -480,7 +479,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
    <td colname="col3"> Uppgradera till den senaste versionen av TVSDK för Android. <p>Lös problemet genom att utföra någon av följande åtgärder: 
      <ul id="ul_BF1742948BC9461CB8686DE70124D3CD"> 
       <li id="li_690D440C94CC45A0AE55EC319B1C4C23">Uppgradera AIR </li> 
-      <li id="li_CDD20251C881466E88BE7BBB53D61EBC">För Flash Player uppgraderar du AdobeCP-modulen och försöker spela upp igen. </li> 
+      <li id="li_CDD20251C881466E88BE7BBB53D61EBC">Uppgradera AdobeCP-modulen och försök spela upp igen om du vill ha Flash Player. </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
@@ -491,19 +490,19 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3337 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimeVersion </span> </td> 
-   <td colname="col3"> Uppgradera till den senaste versionen av TVSDK för Android. <p>Detta inträffar om innehållet eller servern är konfigurerad att neka uppspelning till en viss version av Flash- eller AIR-miljöerna. </p> 
+   <td colname="col3"> Uppgradera till den senaste versionen av TVSDK för Android. <p>Detta inträffar om innehållet eller servern är konfigurerad att neka uppspelning till en viss version av Flashen eller AIR-körningsversionerna. </p> 
     <ul id="ul_B0732D941256483CABBDD30C9BF43249"> 
-     <li id="li_72782B1D638F48C0B87084689FB9C798">Om användaren befinner sig i ett operativsystem där Flash kan uppgraderas bör distributörens programvara uppmana användaren att uppgradera Flash och försöka igen. Annars rekommenderar du användaren att använda en annan dator. </li> 
+     <li id="li_72782B1D638F48C0B87084689FB9C798">Om användaren befinner sig i ett operativsystem där Flashen kan uppgraderas bör distributörens programvara uppmana användaren att uppgradera Flashen och försöka igen. Annars rekommenderar du användaren att använda en annan dator. </li> 
      <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Om fel 3337s misstänks, identifiera om det förekommer för visst innehåll och paketera om innehållet. Om innehållet har paketerats på rätt sätt kan du läsa Diagnostikpolicy/licensavvikelser </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3338 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UnknownConnectionType </span> </td> 
-   <td colname="col3"> <p>Det går inte att identifiera anslutningstypen och principen kräver att du aktiverar utdataskydd. Problemet förväntas bara om innehållet paketeras för att kräva digitalt eller analogt utdataskydd. </p> <p>Ett fel i versioner av Flash Player som är äldre än version 11.8.800.168 orsakade att fel 3338 ibland inträffade i innehåll som enligt skyddsprofilen är <span class="codeph"> ANVÄND OM TILLGÄNGLIGT</span>. Problemet har åtgärdats i version 11.8.800.168 och senare. </p> 
+   <td colname="col3"> <p>Det går inte att identifiera anslutningstypen och principen kräver att du aktiverar utdataskydd. Problemet förväntas bara om innehållet paketeras för att kräva digitalt eller analogt utdataskydd. </p> <p>Ett problem i versioner av Flash Player äldre än version 11.8.800.168 orsakade att fel 3338 ibland inträffade i innehåll där profilen indikerade att innehållsskydd är <span class="codeph"> ANVÄND OM TILLGÄNGLIGT</span>. Problemet har åtgärdats i version 11.8.800.168 och senare. </p> 
     <ul id="ul_4B6CA26A53F84838B5B95400925464D4"> 
-     <li id="li_CBD890F467E449EBB5116E1561252058">Distributörens programvara väljer en variant av innehållet som inte kräver utdataskydd (till exempel en SD-variant av en HD-ström). <p>Om fel 3338 uppstår på <span class="codeph"> USE_IF_AVAILABLE </span> innehåll, kontrollera om det finns något versionsnummer för spelaren. Om spelarversionen är mindre än 11.8.800.168 rekommenderar du att du uppgraderar Flash Player. Om fel 3338 inträffar i versioner över 11.8.800.168 loggar du vilket innehåll som orsakade felet. </p> </li> 
-     <li id="li_62886C1D96264B129928A7E29E6C70E1">Distributören bör kontrollera vilket innehåll som orsakar det här felet och validera att innehållets princip är inställd <span class="codeph"> NO_PROTECTION</span> eller <span class="codeph"> USE_IF_AVAILABLE</span> för analoga och digitala utdata. <p>Om innehåll av misstag paketeras med <span class="codeph"> NO_OUTPUT</span> eller <span class="codeph"> OBLIGATORISKT</span>, paketera om innehållet. Om innehållet är rätt paketerat kan du läsa Diagnostikpolicy/licensavvikelser. I annat fall eskalera till Adobe. </p> </li> 
+     <li id="li_CBD890F467E449EBB5116E1561252058">Distributörens programvara väljer en variant av innehållet som inte kräver utdataskydd (till exempel en SD-variant av en HD-ström). <p>Om fel 3338 uppstår på <span class="codeph"> USE_IF_AVAILABLE </span> innehåll, kontrollera om det finns något versionsnummer för spelaren. Om spelarversionen är mindre än 11.8.800.168 rekommenderar du att du uppgraderar Flashen Player. Om fel 3338 inträffar i versioner över 11.8.800.168 loggar du vilket innehåll som orsakade felet. </p> </li> 
+     <li id="li_62886C1D96264B129928A7E29E6C70E1">Distributören bör kontrollera vilket innehåll som orsakar det här felet och validera att innehållets princip är inställd <span class="codeph"> NO_PROTECTION</span> eller <span class="codeph"> USE_IF_AVAILABLE</span> för analoga och digitala utdata. <p>Om innehåll av misstag paketeras med <span class="codeph"> NO_OUTPUT</span> eller <span class="codeph"> KRÄVS</span>, paketera om innehållet. Om innehållet är rätt paketerat kan du läsa Diagnostikpolicy/licensavvikelser. I annat fall eskalera till Adobe. </p> </li> 
     </ul> <p>Mer information finns i <a href="https://forums.adobe.com/message/5518688" format="https" scope="external"> Vill du få oväntade 338-fel när DRM-principen är inställd på USE_IF_AVAILABLE?</a> </p> </td> 
   </tr> 
   <tr> 
@@ -519,7 +518,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3341 </td> 
    <td colname="col2"><span class="codeph"> AAXS_NoDigitalPlaybackAllowed </span> </td> 
-   <td colname="col3"> Det går inte att spela upp innehåll på en digital enhet. <p>Viktigt: Problemet bör inte uppstå i en produktionsmiljö eftersom utgivare inte ska tillåta digital uppspelning. </p> </td> 
+   <td colname="col3"> Det går inte att spela upp innehåll på en digital enhet. <p>Viktigt: Problemet bör inte inträffa i en produktionsmiljö, eftersom utgivare inte bör tillåta digital uppspelning. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3342 </td> 
@@ -529,12 +528,12 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3343 </td> 
    <td colname="col2"><span class="codeph"> AAXS_IntegrityVerificationFailed </span> </td> 
-   <td colname="col3"> <p>Gäller inte för Android. </p> <p>Det här felet inträffar för närvarande när en ny version av Flash släpps upp. Det beror på att Flash uppgraderades medan Flash var öppet, vilket försätter Flash i ett felaktigt tillstånd tills webbläsaren startas om. </p> 
+   <td colname="col3"> <p>Gäller inte för Android. </p> <p>Det här felet inträffar för närvarande när en ny version av Flashen har släppts. Det beror på att Flashen uppgraderades medan Flashen var öppen, vilket försätter Flashen i ett felaktigt tillstånd tills webbläsaren startas om. </p> 
     <ul id="ul_A0AC4A77550E40409A04BD33748EA987"> 
      <li id="li_F41C1ABD838D41ABB0DF65093E664A29">Distributörens programvara ska utföra följande uppgifter: 
       <ul id="ul_79B2AB1372074D448F129851AA24F985"> 
        <li id="li_B93EDD263D78434FAF198A01938D3508">Rekommendera att användaren stänger eller avslutar alla webbläsare och sedan öppnar igen. </li> 
-       <li id="li_ADFBCFA66AD849E18DB390455458528E">Kontrollera om Flash har aktuell version. <p>Om versionen inte är aktuell kan du råda kunden att uppgradera, stänga alla flikar i webbläsaren och öppna den igen. </p> </li> 
+       <li id="li_ADFBCFA66AD849E18DB390455458528E">Kontrollera om Flashen är aktuell. <p>Om versionen inte är aktuell kan du råda kunden att uppgradera, stänga alla flikar i webbläsaren och öppna den igen. </p> </li> 
       </ul> </li> 
      <li id="li_281B54582B5949AEA7D166246917EE41">Om ett fel uppstår efter att webbläsaren har startats om kan du eskalera till Adobe. <p>När en ny version släpps rekommenderar vi att du kontaktar supporten för Adobe för att se om problemet med bakgrundsuppdateringar har åtgärdats. </p> </li> 
     </ul> </td> 
@@ -547,7 +546,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3345 </td> 
    <td colname="col2"><span class="codeph"> AAXS_DRMNoAccessError </span> </td> 
-   <td colname="col3"> <p>Gäller inte för Android. </p> <p>Det här felet inträffar när en del av Flash eller AIR inte har installerats korrekt. </p> <p>Distributörens programvara ska göra något av följande: 
+   <td colname="col3"> <p>Gäller inte för Android. </p> <p>Det här felet inträffar när en del av Flashen eller AIR inte har installerats korrekt. </p> <p>Distributörens programvara ska göra något av följande: 
      <ul id="ul_D1188E2D4FDF4BD89A04F5629D75D981"> 
       <li id="li_B33FBCA5D4534D668B86A5E93DB3A809">Be användaren avinstallera och installera om AIR. </li> 
       <li id="li_B7D2388E9FA84C26AF1C87B48AF9EF16">För Flash Player, ring <span class="codeph"> System.update</span>. </li> 
@@ -561,7 +560,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
      <li id="li_3C44F0740B08490E9C62D89C40B57DC2">Distributörens programvara ska göra något av följande: 
       <ul id="ul_7D90526684BF4EB2BBADCF598AA13086"> 
        <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">Om AIR, ring <span class="codeph"> DRMManager.resetDRMVouchers()</span> </li> 
-       <li id="li_40A51D35408249CFA28DBC49FDA3408B">Om Flash inte kan användas på grund av felen 3322 eller 3346 bör du gå till <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> och följ instruktionerna i Adobe-artikeln om hur du återställer DRM-licensarkivet. </li> 
+       <li id="li_40A51D35408249CFA28DBC49FDA3408B">Om Flashen inte kan användas på grund av felen 3322 eller 3346 bör du gå till <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> och följ instruktionerna i Adobe-artikeln om hur du återställer DRM-licensarkivet. </li> 
       </ul> </li> 
      <li id="li_0464471E4A094C80BF2986694341921A">Om det här felet inträffar ofta bör distributören ange information om frekvensspelarversionen och webbläsarversionen för Adobe. </li> 
     </ul> <p>Mer information finns i följande forumartiklar: 
@@ -597,7 +596,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3351 </td> 
    <td colname="col2"><span class="codeph"> AAXS_DomainTokenInvalid </span> </td> 
-   <td colname="col3"> Domäntoken var ogiltig. Åtgärda problemet genom att registrera dig hos domänen igen. </td> 
+   <td colname="col3"> Domäntoken var ogiltig. Du löser det här problemet genom att registrera dig hos domänen igen. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3352 </td> 
@@ -687,12 +686,12 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
   <tr> 
    <td colname="col1"> 3369 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InterfaceNotAvailable</span> </td> 
-   <td colname="col3"> <p>Ett nödvändigt webbläsargränssnitt är inte tillgängligt. Problemet inträffar bara på Pepper. Det kan finnas en felmatchning mellan plugin-programmet för Flash och webbläsarversionen. </p> <p>Distributörens programvara bör hjälpa användaren att se till att den senaste versionen av webbläsaren är installerad. </p> <p> Om det här felet ökar och motsvarar en webbläsaruppdatering som släpps, eskalerar du till Adobe. </p> </td> 
+   <td colname="col3"> <p>Ett nödvändigt webbläsargränssnitt är inte tillgängligt. Problemet inträffar bara på Pepper. Flash-plugin-programmet och webbläsarversionen kan vara olika. </p> <p>Distributörens programvara bör hjälpa användaren att se till att den senaste versionen av webbläsaren är installerad. </p> <p> Om det här felet ökar och motsvarar en webbläsaruppdatering som släpps, eskalerar du till Adobe. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3370 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentIdSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>Användaren har inaktiverat <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Tips: Det här felet uppstod med Pepper-versionerna 13.0.0.x eller senare. </p> <p>Distributörens programvara bör vägleda användaren att aktivera <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Distributörens verksamhetsteam bör vägleda användaren att aktivera <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Mer information finns i <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
+   <td colname="col3"> <p>Användaren har inaktiverat <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Tips! Det här felet uppstod i Pepper-versionerna 13.0.0.x eller senare. </p> <p>Distributörens programvara bör vägleda användaren att aktivera <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Distributörens verksamhetsteam bör vägleda användaren att aktivera <span class="uicontrol"> Tillåt identifierare för skyddat innehåll</span> inställning. </p> <p>Mer information finns i <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3371 </td> 
@@ -717,7 +716,7 @@ När du rapporterar DRM-fel till Adobe måste du inkludera `NATIVE_SUBERROR_CODE
  </tbody> 
 </table>
 
-## NATIVE_ERROR: Värden för videouppspelning {#section_7079501250C2487499639F92EC774525}
+## NATIVE_ERROR: Videouppspelningsvärden {#section_7079501250C2487499639F92EC774525}
 
 Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i dialogrutan `NATIVE_ERROR` metadataobjekt.
 
@@ -733,7 +732,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> -1 </td> 
    <td colname="col2"><span class="codeph"> END_OF_PERIOD</span> </td> 
-   <td colname="col3"> Periodens slut. </td> 
+   <td colname="col3"> Slutet av perioden. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 0 </td> 
@@ -803,7 +802,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 13 </td> 
    <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
-   <td colname="col3"> Resursen har en storlek, men är okänd. </td> 
+   <td colname="col3"> Resursen har en storlek, men den är okänd. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
@@ -937,7 +936,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   </tr> 
   <tr> 
    <td colname="col1"> 40 </td> 
-   <td colname="col2"><span class="codeph"> AVBRUTEN</span> </td> 
+   <td colname="col2"><span class="codeph"> ABORTERAD</span> </td> 
    <td colname="col3"> Åtgärden avbröts av ett explicit anrop om att avbryta eller förstöra. </td> 
   </tr> 
   <tr> 
@@ -948,12 +947,12 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 42 </td> 
    <td colname="col2"><span class="codeph"> CANNOT_FAIL_OVER</span> </td> 
-   <td colname="col3"> Det går inte att redundansväxla. </td> 
+   <td colname="col3"> Kan inte redundansväxla. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 43 </td> 
    <td colname="col2"><span class="codeph"> HTTP_TIME_OUT</span> </td> 
-   <td colname="col3"> Tidsgränsen för HTTP-hämtning har uppnåtts. </td> 
+   <td colname="col3"> Tidsgränsen för HTTP-hämtning har överskridits. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
@@ -1018,7 +1017,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 55 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
-   <td colname="col3"> Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Detta är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder. </td> 
+   <td colname="col3"> Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Det här är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -1028,7 +1027,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHZED</span> </td> 
-   <td colname="col3"> HLS-uppspelning har inte aktiverats i Flash Player. Se AuthorizedFeatures.enableHLSPlayback. </td> 
+   <td colname="col3"> HLS-uppspelning har inte aktiverats i Flashen Player. Se AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -1063,7 +1062,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 64 </td> 
    <td colname="col2"><span class="codeph"> RENDITION_M3U8_ERROR</span> </td> 
-   <td colname="col3"> Det uppstod ett fel när återgivningsspellistan lästes in. Detta gäller endast AVE, inte FlashPlayer. </td> 
+   <td colname="col3"> Återgivningsspellistan hade ett fel vid inläsningen. Detta gäller endast AVE, inte FlashPlayer. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 65 </td> 
@@ -1203,7 +1202,7 @@ Videokodningsgränssnittet i AVE returnerar dessa videouppspelningsmeddelanden i
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Det uppstod ett fel när media spelades upp i <i>trick</i> läge. Trick-uppspelningsläget avslutas och flödet pausas. Utlysning <span class="codeph"> Play()</span> för att spela upp media i normalläge. </td> 
+   <td colname="col3">Det uppstod ett fel när media spelades upp i <i>trick</i> läge. Trick-uppspelningsläget avslutas och flödet pausas. Utlysning <span class="codeph"> Play()</span> för att spela upp media i normalt läge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
@@ -1222,7 +1221,7 @@ Krypteringsmodulen i Adobe-videomotorn returnerar dessa meddelanden i `NATIVE_ER
 | 300 | `CRYPTO_ALGORITHM_NOT_SUPPORTED` | Algoritmen som används stöds inte. |
 | 301 | `CRYPTO_ERROR_CORRUPTED_DATA` | Data är skadade. |
 | 302 | `CRYPTO_ERROR_BUFFER_TOO_SMALL` | Bufferten är för liten. |
-| 303 | `CRYPTO_ERROR_BAD_CERTIFICATE` | Felaktigt certifikat. |
+| 303 | `CRYPTO_ERROR_BAD_CERTIFICATE` | Fel certifikat. |
 | 304 | `CRYPTO_ERROR_DIGEST_UPDATE` | Sammandragsuppdatering. |
 | 305 | `CRYPTO_ERROR_DIGEST_FINISH` | Sammanfattning. |
-| 306 | `CRYPTO_ERROR_BAD_PARAMETER` | Felaktig parameter. |
+| 306 | `CRYPTO_ERROR_BAD_PARAMETER` | Ogiltig parameter. |

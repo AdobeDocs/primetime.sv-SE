@@ -1,8 +1,7 @@
 ---
 description: Du kan spara den aktuella uppspelningspositionen i en video och återuppta uppspelningen på samma plats i en framtida session.
 title: Spara videopositionen och återuppta den senare
-exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att p
    // save the resumeTime to a persistent location
    ```
 
-   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` kommer `be` 1 200 sekunder, medan `localTime` på den här positionen `be` 900 sekunder.
+   Om användaren till exempel är på den 20:e minuten av videon och den här positionen innehåller fem minuters annonser, `currentTime` kommer `be` 1 200 sekunder, medan `localTime` vid denna position `be` 900 sekunder.
 
 1. Återställ användarsessionen när spelaraktiviteten återupptas.
 
@@ -43,9 +42,9 @@ Annonser som infogats dynamiskt skiljer sig mellan användarsessioner, så att p
 
    * Om du vill återuppta uppspelningen av videon från den position som sparades från en tidigare session använder du `seekToLocal`.
 
-      >[!TIP]
-      >
-      >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
+     >[!TIP]
+     >
+     >Den här metoden anropas bara med lokala tidsvärden. Om metoden anropas med aktuella tidsresultat inträffar ett felaktigt beteende.
 
    * Om du vill söka till aktuell tid använder du `seek`.
 

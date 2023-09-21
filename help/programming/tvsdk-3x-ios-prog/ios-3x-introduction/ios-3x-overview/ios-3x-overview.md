@@ -2,15 +2,14 @@
 title: Introduktion
 description: Introduktion
 copied-description: true
-exl-id: 881ad531-b914-42f6-a06e-119da13965e0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview}
+# Ökning {#overview}
 
 Adobe Primetime Software Development Kit (TVSDK) är en verktygslåda som gör att du kan lägga till avancerade videouppspelningsfunktioner i dina program.
 
@@ -27,7 +26,7 @@ Specifika maskin- och programvarukrav för TVSDK finns i Krav
 
 ## Målgrupp {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-I den här handboken förutsätts att du förstår hur du utvecklar program och videospelare med Objective-C. Du implementerar ett användargränssnitt för videospelaren med det språket och inkluderar TVSDK-funktioner.
+Den här guiden förutsätter att du förstår hur du utvecklar program och videospelare med Mål-C. Du implementerar ett användargränssnitt för videospelaren med det språket och inkluderar TVSDK-funktioner.
 
 ## Om den här guiden {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 

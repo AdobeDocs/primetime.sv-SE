@@ -2,8 +2,7 @@
 title: HSM-konfiguration
 description: HSM-konfiguration
 copied-description: true
-exl-id: a3e5759e-1419-4519-bcd7-de83364a48f8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -21,7 +20,7 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Om du ser dina inloggningsuppgifter i listan är HSM korrekt konfigurerat och licensservern kan komma åt inloggningsuppgifterna.
+Om du ser dina autentiseringsuppgifter i listan är HSM korrekt konfigurerat och licensservern kan komma åt autentiseringsuppgifterna.
 
 >[!NOTE]
 >

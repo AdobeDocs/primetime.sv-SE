@@ -2,8 +2,7 @@
 title: Konfigurera Tomcat
 description: Konfigurera Tomcat
 copied-description: true
-exl-id: 766b66dd-6070-4b0d-a860-a426fca05e56
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -31,4 +30,4 @@ På Individualization-servern ändrar du Tomcat-s [!DNL conf/server.xml] -fil so
 
 >[!NOTE]
 >
->Framtida DRM-klienter kräver att du aktiverar och konfigurerar CORS-filtret (Cross-Origin Resource Sharing) som är tillgängligt för Tomcat. Inga DRM-klienter har för närvarande detta krav.
+>Framtida DRM-klienter kräver att du aktiverar och konfigurerar CORS-filtret (Cross-Origin Resource Sharing) som är tillgängligt för Tomcat. Inga DRM-klienter har för närvarande det här kravet.

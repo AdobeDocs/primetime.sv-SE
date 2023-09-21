@@ -1,15 +1,14 @@
 ---
 description: När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
-title: Ordning på annonsevenemang
-exl-id: 131b1dc1-3a59-4276-b639-d004ab7394ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Ordning på reklamevenemang
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-# Ordning på annonsevenemang{#order-of-advertising-events}
+# Ordning på reklamevenemang{#order-of-advertising-events}
 
 När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 

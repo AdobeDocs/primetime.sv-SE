@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser innehåller information som hjälper dig att avgöra hur bra spelaren fungerar.
 title: QoS-klasser
-exl-id: 7d8b2bb2-491d-4c36-a6b3-8f91cf2304aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licensiering och uppspelning av DASH-innehåll som krypterats med WideVM och PlayReady.
 title: Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady
-exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Det här Multi-DRM-arbetsflödet tar dig igenom konfiguration, paketering, licensiering och uppspelning av DASH-innehåll som krypterats med WideVM och PlayReady.
 
-Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-encrypted DASH-innehåll på HTML5 och Android i TVSDK version 2.X. DASH-innehållskryptering definieras av Common Encryption-specifikationen, vars fullständiga information ligger utanför det här dokumentets omfång. I det här avsnittet finns viktig information om DASH-formatet, krypteringsspecifikationen och information om några verktyg som du kan använda för att generera det innehåll som stöds.
+Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-encrypted DASH-innehåll på HTML5 och Android i TVSDK version 2.X. DASH-innehållskryptering definieras av Common Encryption-specifikationen, vars fullständiga information ligger utanför det här dokumentets räckvidd. I det här avsnittet finns viktig information om DASH-formatet, krypteringsspecifikationen och information om några verktyg som du kan använda för att generera det innehåll som stöds.
 
 >[!NOTE]
 >
@@ -21,7 +20,7 @@ Primetime TVSDK stöder endast uppspelning av Widewin-encrypted eller PlayReady-
 
 ## Översikt över DASH-innehåll och gemensam kryptering {#section_33A881158F724835B4B89AAE97302B17}
 
-Dash-innehåll består av ett huvudmanifest, skrivet i xml, som pekar på video- och ljudfiler som ska spelas upp. I exemplet nedan pekar DASH-manifestet på en video-URL, video/1080_30.mp4, och en ljud-URL, audio/1080_30.mp4, i förhållande till manifestets URL.
+Streck består av ett huvudmanifest, skrivet i xml, som pekar på video- och ljudfiler som ska spelas upp. I exemplet nedan pekar DASH-manifestet på en video-URL, video/1080_30.mp4, och en ljud-URL, audio/1080_30.mp4, i förhållande till manifestets URL.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">

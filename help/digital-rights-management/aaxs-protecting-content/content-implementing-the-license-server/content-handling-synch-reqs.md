@@ -2,8 +2,7 @@
 title: Hantera synkroniseringsbegäranden
 description: Hantera synkroniseringsbegäranden
 copied-description: true
-exl-id: bbfc6096-72df-4597-96b3-8f67a640ea8f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
@@ -16,7 +15,7 @@ ht-degree: 0%
 
 * Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
 * Begärandemeddelandeklassen är `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
-* Om både klient och server har stöd för protokoll version 5 är begärande-URL:en &quot;License Server URL in metadata: + &quot;/flashaccess/sync/v4&quot;. I annat fall är begärande-URL:en &quot;License Server URL in metadata&quot; + &quot;/flashaccess/sync/v3&quot;
+* Om både klienten och servern stöder protokoll version 5 är förfrågnings-URL:en &quot;License Server URL in metadata: + &quot;/flashaccess/sync/v4&quot;. I annat fall är begärande-URL:en &quot;License Server URL in metadata&quot; + &quot;/flashaccess/sync/v3&quot;
 
 Synkroniseringsmeddelanden används för att synkronisera klientens tid med serverns tid. Om licenser är inbäddade i innehållet och inte behöver hämtas från en licensserver är det viktigt att synkronisera klientens tid för att förhindra att klientens klocka ändras för att kringgå licensens förfallotid.
 

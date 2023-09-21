@@ -1,8 +1,7 @@
 ---
 description: För varje nytt videoinnehåll initierar du en MediaResource-instans med information om videoinnehållet och läser in medieresursen. Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 title: Skapa en medieresurs
-exl-id: cda70f91-7f30-4e37-9dfa-888b707e3d61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -71,8 +70,9 @@ För varje nytt videoinnehåll initierar du en MediaResource-instans med informa
 
    * Din MediaPlayer-instans.
 
-      Mer information finns i [Läsa in en medieresurs i MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
+     Mer information finns i [Läsa in en medieresurs i MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
    * A `MediaPlayerItemLoader` Mer information finns i [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >Läs inte in medieresursen på en bakgrundstråd. De flesta TVSDK-åtgärder måste köras på huvudtråden, och om de körs på en bakgrundstråd kan åtgärden orsaka ett fel och avsluta åtgärden.

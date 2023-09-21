@@ -1,8 +1,7 @@
 ---
 description: TVSDK buffrar ibland videoströmmen för att ge en jämnare tittarupplevelse. Du kan konfigurera hur spelaren buffrar.
 title: Ange buffringstider
-exl-id: 4542d10a-b6f8-430d-8b9a-5a358d1c0e9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,20 +30,20 @@ The `MediaPlayer` innehåller metoder för att ställa in och hämta den inledan
    
    * Så här anger du den inledande bufferttiden som motsvarar uppspelningsbufferttiden:
 
-      ```java
-      public static BufferControlParameters createSimple( 
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createSimple( 
+         long bufferTime)
+     ```
 
    * Så här anger du både inledande och uppspelad bufferttid:
 
-      ```java
-      public static BufferControlParameters createDual( 
-          long initialBuffer,   
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createDual( 
+         long initialBuffer,   
+         long bufferTime)
+     ```
 
-      Dessa metoder genererar en `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
+     Dessa metoder genererar `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
 
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
@@ -61,7 +60,7 @@ The `MediaPlayer` innehåller metoder för att ställa in och hämta den inledan
       BufferControlParameters getBufferControlParameters()  
    ```
 
-   Om AVE inte kan ange de angivna värdena, kommer mediespelaren att `ERROR` med felkoden `SET_BUFFER_PARAMETERS_ERROR`.
+   Om AVE inte kan ange de angivna värdena, kommer mediespelaren att `ERROR` status med felkoden `SET_BUFFER_PARAMETERS_ERROR`.
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
@@ -71,4 +70,4 @@ Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och up
 mediaPlayer.setBufferControlParameters(BufferControlParameters.createDual(2000, 30000));
 ```
 
-Primetimes referensimplementering demonstrerar denna funktion; Använd programmets inställningar för att ange buffertvärden.
+Referensimplementeringen för Primetime demonstrerar den här funktionen. Använd programmets inställningar för att ange buffertvärden.

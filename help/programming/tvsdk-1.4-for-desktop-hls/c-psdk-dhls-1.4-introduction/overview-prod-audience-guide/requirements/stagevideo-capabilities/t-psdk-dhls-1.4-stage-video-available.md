@@ -1,8 +1,7 @@
 ---
 description: Om StageVideo inte är tillgängligt och programmet försöker använda StageVideo, genererar inte TVSDK något fel. Programmet kan avgöra om StageVideo är tillgängligt genom att avlyssna StageVideoAvailabilityEvent.
 title: Kontrollera om StageVideo är tillgängligt
-exl-id: 24136a14-8d7d-4569-9911-fac4e2de3227
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%

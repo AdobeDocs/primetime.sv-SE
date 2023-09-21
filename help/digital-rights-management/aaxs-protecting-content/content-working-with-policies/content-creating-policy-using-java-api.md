@@ -2,8 +2,7 @@
 title: Skapa en profil med Java API
 description: Skapa en profil med Java API
 copied-description: true
-exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -65,4 +64,4 @@ Så här skapar du en profil med hjälp av Java API:
      out.close();
    ```
 
-Om du vill se den fullständiga källan för den här exempelkoden går du till *com.adobe.flashaccess.samples.policy.CreatePolicy* i kommandoradsverktygen för referensimplementering &quot; [!DNL samples]&quot;.
+Om du vill se den fullständiga källan för den här exempelkoden kan du gå till *com.adobe.flashaccess.samples.policy.CreatePolicy* i kommandoradsverktygen för referensimplementering &quot; [!DNL samples]&quot;.

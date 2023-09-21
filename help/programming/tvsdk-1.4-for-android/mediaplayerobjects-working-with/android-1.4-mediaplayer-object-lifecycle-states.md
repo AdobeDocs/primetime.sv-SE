@@ -1,8 +1,7 @@
 ---
 description: Från det ögonblick du skapar MediaPlayer-instansen till det ögonblick du avslutar (återanvänder eller tar bort) den, slutförs en serie övergångar mellan lägen i den här instansen.
 title: MediaPlayer-objektets livscykel
-exl-id: efb39fea-1050-41e5-93d8-1175a54f81e5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -15,13 +14,13 @@ Från det ögonblick du skapar MediaPlayer-instansen till det ögonblick du avsl
 
 Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Anropa till exempel `play` in `IDLE` är inte tillåtet. Du kan bara anropa den här statusen när spelaren når `PREPARED` tillstånd.
 
-Så här arbetar du med lägen:
+Arbeta med lägen:
 
 * Du kan hämta aktuell status för `MediaPlayer` objekt med `MediaPlayer.getStatus`.
 
-   ```java
-   PlayerState getStatus() throws IllegalStateException;
-   ```
+  ```java
+  PlayerState getStatus() throws IllegalStateException;
+  ```
 
 * Listan med lägen definieras i `MediaPlayer.PlayerState`.
 
@@ -42,7 +41,7 @@ I följande tabell finns mer information:
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="codeph"> IDLE </span> </td> 
-   <td colname="col2"> <p>Programmet begärde en ny mediespelare genom att ringa <span class="codeph"> DefaultMediaPlayer.create </span>. Den nya spelaren väntar på att du ska ange ett mediespelarobjekt. Detta är mediespelarens startläge. </p> </td> 
+   <td colname="col2"> <p>Programmet begärde en ny mediespelare genom att ringa <span class="codeph"> DefaultMediaPlayer.create </span>. Den nya spelaren väntar på att du ska ange ett mediespelarobjekt. Det här är mediespelarens startläge. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> INITIERAR </span> </td> 
@@ -54,14 +53,14 @@ I följande tabell finns mer information:
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> FÖRBEREDER </span> </td> 
-   <td colname="col2"> <p>Ditt program har anropats <span class="codeph"> MediaPlayer.prepareToPlay </span>. Mediespelaren läser in mediespelarobjektet och tillhörande resurser. </p> <p>Tips: En del buffring av huvudmediet kan förekomma. </p> <p>TVSDK förbereder medieströmmen och försöker genomföra annonslösningar och annonsinfogning (om det är aktiverat). </p> <p>Tips: Om du vill ställa in starttiden på ett värde som inte är noll anropar du <span class="codeph"> prepareToPlay(startTime) </span> med tiden i millisekunder. </p> </td> 
+   <td colname="col2"> <p>Ditt program har anropats <span class="codeph"> MediaPlayer.prepareToPlay </span>. Mediespelaren läser in mediespelarobjektet och tillhörande resurser. </p> <p>Tips! En del buffring av huvudmediet kan förekomma. </p> <p>TVSDK förbereder medieströmmen och försöker genomföra annonsupplösning och annonsinfogning (om det är aktiverat). </p> <p>Tips! Om du vill ange ett värde som inte är noll som starttid anropar du <span class="codeph"> prepareToPlay(startTime) </span> med tiden i millisekunder. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> FÖRBEREDD </span> </td> 
    <td colname="col2"> <p>Innehållet förbereds och annonser har infogats på tidslinjen, eller så misslyckades annonseringsproceduren. Buffring eller uppspelning kan börja. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> SPELA UPP </span> </td> 
+   <td colname="col1"> <span class="codeph"> SPELAR </span> </td> 
    <td colname="col2"> <p>Ditt program har anropat <span class="codeph"> play </span>så TVSDK försöker spela upp videon. Viss buffring kan inträffa innan videon spelas upp. </p> </td> 
   </tr> 
   <tr> 
@@ -70,7 +69,7 @@ I följande tabell finns mer information:
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> UPPHÄVD </span> </td> 
-   <td colname="col2"> <p>Ditt program navigerade bort från uppspelningen, stängde av enheten eller växlade program medan spelaren spelades upp eller pausades. Mediespelaren har pausats och resurser har släppts. Återställ mediespelaren för att fortsätta. </p> </td> 
+   <td colname="col2"> <p>Ditt program navigerade bort från uppspelningen, stängde av enheten eller växlade program medan spelaren spelades upp eller pausades. Mediespelaren har pausats och resurser har släppts. Återställ mediespelaren om du vill fortsätta. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> SLUTFÖRD </span> </td> 

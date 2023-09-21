@@ -2,8 +2,7 @@
 title: Förbered lösenord för serveregenskapsfilerna
 description: Förbered lösenord för serveregenskapsfilerna
 copied-description: true
-exl-id: b613d43d-17ec-44e9-bd14-81f9bb9a7f62
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -22,4 +21,4 @@ Verktyget genererar det krypterade lösenordet, som du måste kopiera till [!DNL
 
 >[!NOTE]
 >
->Lösenord som har kodats med `ScrambleUtil.class` som har tillhandahållits med referensimplementeringen inte fungerar med Primetime DRM-servern för skyddad direktuppspelning.
+>Lösenord som har kodats med `ScrambleUtil.class` som har tillhandahållits med referensimplementeringen inte fungerar med Primetime DRM-servern för skyddad strömning.

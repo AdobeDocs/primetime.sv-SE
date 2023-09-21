@@ -1,8 +1,7 @@
 ---
 description: För att passa kunder som bara vill betala för det de använder, i stället för en fast avgift oavsett faktisk användning, samlar Adobe in användningsuppgifter och använder dessa värden för att avgöra hur mycket kunderna ska faktureras.
 title: Faktureringsanvändningsstatistik
-exl-id: 8b76d8ea-c8d6-427b-886a-4ae8764bd47a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Meddelandena innehåller följande information:
 * Om annonser är aktiverade
 * Anger om annonser på mellannivå är aktiverade (endast VOD)
 * Anger om strömmen skyddas av DRM
-* Version och plattform för TVSDK
+* TVSDK-versionen och -plattformen
 
 Adobe förkonfigurerar det här arrangemanget, men om du vill ändra ordningen ska du arbeta med din representant för Adobe Enablement.
 

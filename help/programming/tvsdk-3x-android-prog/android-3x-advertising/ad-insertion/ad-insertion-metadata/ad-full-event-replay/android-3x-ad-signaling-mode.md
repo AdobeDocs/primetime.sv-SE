@@ -1,8 +1,7 @@
 ---
 description: Annonssignaleringsläget anger var videoströmmen ska hämta annonsinformation.
 title: Läge för annonssignalering
-exl-id: ddee6753-522f-46e8-8ba2-38b9593e7abe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
@@ -47,7 +46,7 @@ I följande tabell beskrivs effekten av `AdSignalingMode` värden för de olika 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> Live/linear </td> 
+   <td colname="1"> Live/linjär </td> 
    <td colname="2"> 
     <ul id="ul_82AAC9EE056F49E999F809536A96C2F8"> 
      <li id="li_73BAD2BAA95F4592808B77F8DA436237"> Manifest-cues används för platsidentifiering </li> 

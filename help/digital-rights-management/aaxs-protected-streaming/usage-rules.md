@@ -2,8 +2,7 @@
 title: Användningsregler
 description: Användningsregler
 copied-description: true
-exl-id: 0f6df09f-47fd-4a05-bcb0-786beaba325a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Med Adobe Access Server för skyddad strömning anges alla användningsregler på servern via konfigurationsfiler. Alla användningsregler som anges i det skyddade innehållet åsidosätts, så vi rekommenderar att du använder en enkel anonym princip under paketeringen av innehållet. Användningsregler som kan konfigureras kan anges per innehavare.
 
-Adobe Access Server för skyddad strömning stöder följande användningsregler:
+Adobe Access Server for Protected Streaming stöder följande användningsregler:
 
 * Utdataskydd
 * Programbegränsningar för Adobe® AIR®, SWF, iOS och Android

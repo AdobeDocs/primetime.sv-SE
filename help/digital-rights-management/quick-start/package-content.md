@@ -2,8 +2,7 @@
 title: Paketera krypterat innehåll
 description: Paketera krypterat innehåll
 copied-description: true
-exl-id: e5792917-8172-48b0-8792-7a7e942596c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -21,11 +20,12 @@ ht-degree: 0%
 
    * `encrypt.license.serverurl=[license-server-url]`: Licensserverns URL, t.ex.:    `https://<License Server Hostname>:8080/flashaccessserver/sampletenant`.
 
-   * `encrypt.license.servercert=[transport-certificate.cer]`: Sökvägen till transportcertifikatet (det slutar vanligtvis med [!DNL .cer], [!DNL .der], eller [!DNL .pem]).
+   * `encrypt.license.servercert=[transport-certificate.cer]`: Sökvägen till transportcertifikatet (det avslutas vanligtvis med [!DNL .cer], [!DNL .der], eller [!DNL .pem]).
 
-   * `encrypt.sign.certfile=[packager-credentials.pfx]`: Sökvägen till ditt Packager-certifikat (detta slutar med [!DNL .pfx]).
+   * `encrypt.sign.certfile=[packager-credentials.pfx]`: Sökvägen till ditt Packager-certifikat (slutar med [!DNL .pfx]).
 
    * `encrypt.sign.certpass=[password]`: Lösenordet för ditt Packager-certifikat.
+
    >[!NOTE]
    >
    >Kontrollera att du inte ändrar lösenordet.
@@ -42,7 +42,7 @@ ht-degree: 0%
 1. Kopiera MP4-, FLV- eller F4V-videofilen som du vill kryptera till din lokala `Command Line Tools\` mapp.
 1. Paketera innehållet.
 
-   Låt oss säga att källvideofilen är [!DNL sample.mp4]. I din lokala `Command Line Tools\` kör du följande kommando:
+   Säg att källvideofilen är [!DNL sample.mp4]. I din lokala `Command Line Tools\` kör du följande kommando:
 
    ```
    java -jar libs/AdobePackager.jar sample.mp4 sample_encrypted.mp4 -p examplepolicy.pol

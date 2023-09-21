@@ -1,8 +1,7 @@
 ---
 description: Programmet måste använda rätt PTTimedMetadata-objekt vid rätt tidpunkt.
 title: Lagra tidsbestämda metadataobjekt när de skickas
-exl-id: 43bc2b47-b947-4af1-bba8-6f2063c7b60c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Programmet måste utföra följande uppgifter:
 1. Håll reda på aktuell uppspelningstid.
 1. Matcha den aktuella uppspelningstiden med den skickade `PTTimedMetadata` objekt.
 
-1. Använd `PTTimedMetadata` där starttiden är lika med den aktuella uppspelningstiden.
+1. Använd `PTTimedMetadata` där starttiden motsvarar den aktuella uppspelningstiden.
 
    >[!NOTE]
    >

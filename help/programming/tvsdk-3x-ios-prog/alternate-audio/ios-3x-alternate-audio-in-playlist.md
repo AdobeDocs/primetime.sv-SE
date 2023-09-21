@@ -1,8 +1,7 @@
 ---
 description: Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
 title: Alternativa ljudspår i spellistan
-exl-id: d8d8c122-5837-4f0e-934f-a3d6e1b037c8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Följande krav gäller om du använder alternativa ljudspår och inkluderar anno
 * Om huvudinnehållet har alternativa ljudspår måste annonserna ha minst en ström med enbart ljud.
 * Varaktigheten för varje segment i en annons ström med enbart ljud måste vara lika med segmentlängden för en annons videoström.
 
-Huvudljudspåret ingår i ljudspåren med `default` label. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA` taggar med `TYPE=AUDIO`.
+Huvudljudspåret ingår i ljudspåren med `default` etikett. Metadata för de alternativa ljudströmmarna finns med i spellistan i `#EXT-X-MEDIA` taggar med `TYPE=AUDIO`.
 
 Ett M3U8-manifest som anger flera alternativa ljudströmmar kan till exempel se ut så här:
 

@@ -1,8 +1,7 @@
 ---
 description: Ett annat sätt att lösa en medieresurs är med MediaPlayerItemLoader. Detta är användbart när du vill få information om en viss medieström utan att initiera en MediaPlayer-instans.
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-exl-id: 08379bd8-1602-4013-a6fb-b1aa6ba539aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Via `MediaPlayerItemLoader` -klassen kan du byta ut en medieresurs för motsvara
 
    * `MediaPlayerItemLoaderEvent.ERROR` event
 
-      TVSDK använder detta för att informera programmet om att ett fel har inträffat. TVSDK tillhandahåller en felegenskap som innehåller diagnostikinformation.
+     TVSDK använder detta för att informera programmet om att ett fel har inträffat. TVSDK tillhandahåller en felegenskap som innehåller diagnostikinformation.
 
 1. Registrera den här instansen för `MediaPlayerItemLoader`.
 1. Utlysning `DefaultMediaPlayerItemLoader.load`, skicka en instans av en `MediaResource` -objekt.

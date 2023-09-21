@@ -1,8 +1,7 @@
 ---
 description: Webbläsarens TVSDK innehåller standardgeneratorer för affärsmöjligheter och innehållslösningar som placerar annonser i tidslinjen, och dessa generatorer och lösare är baserade på taggar som inte är standard i manifestet. Programmet kan behöva ändra tidslinjen baserat på de möjligheter som identifieras i manifestet.
 title: Generatorer för affärsmöjligheter och lösningar för innehåll
-exl-id: a47acd22-8b1b-4c66-a7eb-a4d99afb5f17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Affärsmöjligheter identifieras i en tidslinje i `TimedMetata`. The `ManifestCu
 >
 >Om `AdvertisingMetadata.livePreroll` eller `AdvertisingMetadata.preroll` egenskapen är inställd, `AdSignalingModeOpportunityGenerator` genererar en pre-roll-möjlighet för liveströmmar.
 
-När ditt program meddelas om en affärsmöjlighet (tagg) kan programmet ändra tidslinjen genom att till exempel infoga en serie annonser. Som standard anropar webbläsarens TVSDK rätt *`content resolver`* för att implementera de ändringar eller åtgärder som krävs på tidslinjen. Ditt program kan använda webbläsarens TVSDK-annonsinnehållshanterare eller registrera en egen innehållshanterare.
+När ditt program meddelas om en affärsmöjlighet (tagg) kan programmet ändra tidslinjen genom att till exempel infoga en serie annonser. Som standard anropar webbläsarens TVSDK rätt *`content resolver`* för att implementera de ändringar eller åtgärder som krävs på tidslinjen. Ditt program kan använda webbläsarens TVSDK-annonsinnehållshanterare som standard eller registrera en egen innehållshanterare.
 
 Du kan också använda `MediaPlayerItemConfig.adTags` om du vill lägga till fler markörtaggar/tips för standardinställningen `ManifestCuesOpportunityGenerator` klass och användning `MediaPlayerItemConfig.subscribedTags` så att TVSDK kan meddela programmet om ytterligare taggar som kan ha information om annonsarbetsflöde.
 

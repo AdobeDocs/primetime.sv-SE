@@ -1,8 +1,7 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
 title: Arbeta med cookies
-exl-id: ea9d83f9-a047-4e24-98e5-f565b8a31a89
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -48,7 +47,7 @@ TVSDK frågar detta `cookieManager` vid körning kontrollerar om det finns någr
 
 Händelsen MediaPlayerEvent.COOKIES_UPDATED anropas när C++-cookies uppdateras. Denna cookiesUpdatedEvent har en metod, getCookieString(), som returnerar ett strängvärde för cookien.
 
-Ett exempelkodfragment visas nedan:
+Nedan följer ett exempelkodfragment:
 
 ```
 private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener()  

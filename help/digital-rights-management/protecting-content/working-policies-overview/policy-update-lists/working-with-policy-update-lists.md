@@ -2,8 +2,7 @@
 title: Arbeta med DRM-principuppdateringslistor
 description: Arbeta med DRM-principuppdateringslistor
 copied-description: true
-exl-id: 140f1fff-2078-427b-ade2-8ec18a14216f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -37,13 +36,13 @@ Så här arbetar du med DRM-principuppdateringslistor:
 1. Skapa en `PolicyUpdateListFactory` -instans med `ServerCredential` som du skapade.
 1. Ange det DRM-princip-ID som du vill återkalla.
 1. Skapa en `PolicyRevocationEntry` objekt med hjälp av DRM-princip-ID `String` som du just har skapat och sedan lagt till den i DRM-principuppdateringslistan genom att skicka den till `PolicyUpdateListFactory.addRevocationEntry()`.
-1. Generera den nya uppdateringslistan för DRM-principen genom att anropa `PolicyUpdateListFactory.generatePolicyUpdateList()`.
+1. Generera den nya DRM-principuppdateringslistan genom att ringa `PolicyUpdateListFactory.generatePolicyUpdateList()`.
 
    På samma sätt kan du uppdatera DRM-profiler till listan med `PolicyUpdateEntry`.
 1. Om det redan finns en uppdateringslista för DRM-principen kan du serialisera den för inläsning genom att anropa `PolicyUpdateList.getBytes()`.
 
    Om du vill läsa in listan ringer du `PolicyUpdateListFactory.loadPolicyUpdateList()` och skicka det i den serialiserade listan.
-1. Verifiera att signaturen är giltig och att listan har signerats av rätt licensservercertifikat genom att anropa `PolicyUpdateList.verifySignature()`.
+1. Kontrollera att signaturen är giltig och att listan har signerats av rätt licensservercertifikat genom att ringa `PolicyUpdateList.verifySignature()`.
 1. Skicka DRM-princip-ID `String` till `PolicyUpdateList.isRevoked()` för att verifiera att en post har återkallats.
 
    Du kan också skicka listan till `HandlerConfiguration` där det sedan tillämpas när licenser utfärdas.

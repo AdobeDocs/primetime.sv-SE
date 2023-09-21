@@ -1,15 +1,14 @@
 ---
 description: När ett segment saknas, till exempel om ett visst segment inte kan hämtas, försöker återskapa det med hjälp av en mängd olika redundansförsök. Om det inte går att återställa genereras ett fel.
-title: segmentredundans saknas
-exl-id: e941008a-99a5-4fff-ac88-133abcf9380d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Segmentredundans saknas
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
-# segmentredundans saknas{#missing-segment-failover}
+# Segmentredundans saknas{#missing-segment-failover}
 
 När ett segment saknas, till exempel om ett visst segment inte kan hämtas, försöker återskapa det med hjälp av en mängd olika redundansförsök. Om det inte går att återställa genereras ett fel.
 

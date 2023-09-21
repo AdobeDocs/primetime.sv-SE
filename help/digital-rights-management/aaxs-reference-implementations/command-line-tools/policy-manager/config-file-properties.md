@@ -2,8 +2,7 @@
 title: Egenskaper för konfigurationsfil
 description: Egenskaper för konfigurationsfil
 copied-description: true
-exl-id: 6405126d-4cf2-4ffc-821d-fbfdc00b60ef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.name</span> <p class="- topic/p "><span class="codeph"> -n</span> <i class="+ topic/ph hi-d/i ">principnamn</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Det läsbara principnamnet. </td> 
+   <td colname="2" class="- topic/entry "> Principnamnet som kan läsas av människor. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">boolesk</i> </p> </td> 
@@ -32,7 +31,7 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.enforcementJailbreak</span> <p class="- topic/p "><span class="codeph"> -enforcementJailbreak</span> <i class="+ topic/ph hi-d/i ">boolesk</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Om värdet är true tillåts inte uppspelning om jailbreak har upptäckts på enheter som stöder jailbreak-identifiering. </td> 
+   <td colname="2" class="- topic/entry "> Om värdet är true tillåts inte uppspelning på enheter som stöder jailbreak-identifiering om jailbreak har upptäckts. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.critical</span> <p class="- topic/p "><span class="codeph"> -kritisk</span> <i class="+ topic/ph hi-d/i ">boolesk</i> </p> </td> 
@@ -45,7 +44,7 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.chaining.rootKey</span> <p class="- topic/p "><span class="codeph"> -rootKey</span> <i class="+ topic/ph hi-d/i ">rotnyckel</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Ange rotkrypteringsnyckeln för den förbättrade licenskopplingen. Om ingen nyckel har angetts och Förbättrad licenskoppling är aktiverad, genereras en slumpmässig nyckel. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda blanksteg mellan hexadecimala värden. För uppdateringar tillåts inte kommandoradsalternativet och egenskapen ignoreras. </td> 
+   <td colname="2" class="- topic/entry "> Ange rotkrypteringsnyckeln för den förbättrade licenskopplingen. Om ingen nyckel har angetts och Förbättrad licenskoppling är aktiverad, genereras en slumpmässig nyckel. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda mellanrum mellan hexadecimala värden. För uppdateringar tillåts inte kommandoradsalternativet och egenskapen ignoreras. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.url</span> <p class="- topic/p "><span class="codeph"> -domainURL</span> <i class="+ topic/ph hi-d/i ">url</i> </p> </td> 
@@ -67,7 +66,7 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
      <li class="- topic/li " id="li_FF14594A0714480496793A82C3FA1610"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE</span> </p> </li> 
      <li class="- topic/li " id="li_721FCC4DC1F34AE398EFAE4C0D3F50F5"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE_ACP</span> </p> </li> 
      <li class="- topic/li " id="li_D588BB278BEE4CEAB034BD48550EBCDC"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE_CGMSA</span> </p> </li> 
-     <li class="- topic/li " id="li_7E5F006D2F114502BA6D0A9C4173004E"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> OBLIGATORISKT</span> </p> </li> 
+     <li class="- topic/li " id="li_7E5F006D2F114502BA6D0A9C4173004E"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> KRÄVS</span> </p> </li> 
      <li class="- topic/li " id="li_9EBFAA4AACF249C2A94432D88E12C3B9"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> REQUIRED_ACP</span> </p> </li> 
      <li class="- topic/li " id="li_6720C6A085864BEB957C0BF2C38551C9"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> REQUIRED_CGMSA</span> </p> </li> 
      <li class="- topic/li " id="li_6FD98473ECDB4A66AC4B506FB9B3B360"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> NO_PLAYBACK</span> </p> </li> 
@@ -100,11 +99,11 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.startDate</span> </td> 
-   <td colname="2" class="- topic/entry ">Det datum efter vilket innehållet är giltigt. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> (t.ex. <span class="codeph"> 2009-01-31</span> representerar 31 januari kl. 12.00) eller <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> (t.ex. <span class="codeph"> 2009-01-31-14:30:00</span> representerar 31 januari klockan 2:30). </td> 
+   <td colname="2" class="- topic/entry ">Det datum efter vilket innehållet är giltigt. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> (till exempel <span class="codeph"> 2009-01-31</span> representerar 31 januari kl. 12.00) eller <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> (till exempel <span class="codeph"> 2009-01-31-14:30:00</span> representerar 31 januari klockan 2:30). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.endDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det datum före vilket innehållet är giltigt. Båda <span class="codeph"> policy.expiration.endDate</span> och policy.expiration.duration får inte anges samtidigt. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det datum före vilket innehållet är giltigt. Båda <span class="codeph"> policy.expiration.endDate</span> och policy.expiration.duration får inte anges samtidigt. Använd formatet <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> eller <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sek</span> (till exempel 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.duration</span> </td> 
@@ -112,7 +111,7 @@ Konfigurationsfilen anger följande egenskaper. För egenskapsnamn som innehåll
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den tid en licens kan cachas på klienten (i minuter). Ange den här egenskapen till 0 om du inte vill tillåta licenscachelagring. Värdet måste vara 0 eller högre. Båda <span class="codeph"> policy.licenseCaching.duration</span> och <span class="codeph"> policy.licenseCaching.endDate</span> Ska inte användas samtidigt. </p> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Anteckning</b>: Den här principinställningen används endast för licenscachning på disken. Det styr inte längden på den cachelagrade licensen för minnet. Licensen kan cachas på minnet även om den angivna varaktigheten är noll. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Den tid en licens kan cachas på klienten (i minuter). Ange den här egenskapen till 0 om du inte vill tillåta licenscachelagring. Värdet måste vara 0 eller högre. Båda <span class="codeph"> policy.licenseCaching.duration</span> och <span class="codeph"> policy.licenseCaching.endDate</span> Ska inte användas samtidigt. </p> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Anteckning</b>: Den här principinställningen används endast för licenscachning på disken. Det styr inte längden på den cachelagrade licensen för minnet. Licensen kan cachelagras på minnet även om den angivna varaktigheten är noll. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.endDate</span> </td> 

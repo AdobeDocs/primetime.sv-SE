@@ -1,8 +1,7 @@
 ---
 description: När TVSDK identifierar en prenumerationstagg i spellistan/manifestet försöker spelaren automatiskt att bearbeta taggen och visa den i form av ett TimedMetadata-objekt.
 title: Timed metadata, klass
-exl-id: d45e304a-703e-45f4-b3f5-756fc6a614cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -62,15 +61,15 @@ Kom ihåg följande:
 
 * TVSDK extraherar automatiskt attributlistan till nyckelvärdepar och lagrar attributen i metadataegenskapen.
 
-   >[!TIP]
-   >
-   >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Till exempel:
-   >
-   >
-   ```
-   >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0, 
-   >url="www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```
+  >[!TIP]
+  >
+  >Komplexa data i anpassade taggar i manifestet, till exempel strängar med specialtecken, måste anges inom citattecken. Till exempel:
+  >
+  >```
+  >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0, 
+  >url="www.example.com:8090?parameter1=xyz&parameter2=abc"
+  >```
+  >
 
 * Om extraheringen misslyckas på grund av ett anpassat taggformat, kommer metadataegenskapen att vara tom och programmet måste extrahera den faktiska informationen. Inget fel genereras i det här fallet.
 

@@ -1,8 +1,7 @@
 ---
 description: Du kan välja följande krypteringsalternativ när du skapar ett paket. Du kan dock inte ändra krypteringsalternativen när du skaffar licenser
 title: Nyckelrotation
-exl-id: 1b439b5f-7a63-4fe2-ae15-c18cda0b31cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%

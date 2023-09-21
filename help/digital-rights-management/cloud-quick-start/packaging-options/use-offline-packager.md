@@ -2,8 +2,7 @@
 title: Använd den medföljande offline-paketeraren i Primetime
 description: Använd den medföljande offline-paketeraren i Primetime
 copied-description: true
-exl-id: 6a1d0dc3-8906-4de5-8351-890c1cf31efd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Kontext för aktuell uppgift
 |---|---|
 | `policy_file` | principfilens sökväg. Adobe ska tillhandahålla flera förkonfigurerade strategier att välja bland. |
 | `pkgr_pfx` | Sökväg till Packager-autentiseringsuppgifter. Du måste ange egna Adobe-utfärdade autentiseringsuppgifter för paketeraren ( [!DNL .pfx]) här. |
-| `pkgr_pfx_pwd` | Lösenord för Packager-autentiseringsuppgifter. Du måste ange lösenordet till din Adobe-utgivna paketerarautentiseringsuppgift här. |
+| `pkgr_pfx_pwd` | Lösenord för Packager-autentiseringsuppgifter. Du måste ange lösenordet till den paketerare som du har utfärdat i Adobe här. |
 
 ## Paketera med kommandorad {#section_DFBE462679E34D62963BE201FD3321F9}
 

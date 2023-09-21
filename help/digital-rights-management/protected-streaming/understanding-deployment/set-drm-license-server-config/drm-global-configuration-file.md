@@ -1,8 +1,7 @@
 ---
 description: Konfigurationsfilen flashaccess-global.xml innehåller inställningar som gäller för alla innehavare av licensservern.
 title: Global konfigurationsfil
-exl-id: 3e74bce6-1634-469f-9d02-1121e9d50687
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Den globala konfigurationsfilen innehåller:
 
 * Cachelagring - Styr cachelagring av konfigurationsfiler i minnet.
 
-   Se *Konfigurationsfiler uppdateras* om du vill ha information om cachelagringsinställningarna.
+  Se *Konfigurationsfiler uppdateras* för information om cachelagringsinställningarna.
 * Loggning - Anger loggningsnivån och hur ofta loggfiler rullas.
 * HSM-lösenord - Krävs endast om en HSM används för att lagra serverautentiseringsuppgifter.
 

@@ -3,8 +3,7 @@ title: Versionsinformation om TVSDK 2.4.1 för Android
 description: Versionsinformation om TVSDK 2.4.1 för Android beskriver de nya och stödda funktionerna och de kända problemen och begränsningarna i TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Här hittar du dokumentation:
 
 ・ [Javadocs TVSDK 2.4 för Android Java API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
 
-Javadocs är den ultimata auktoriteten eftersom de automatiskt genereras direkt från TVSDK-källkoden.
+Javadocs är den ultimata auktoriteten eftersom de automatiskt genereras direkt från TVSDK:s källkod.
 
 ・ [API-dokumentation för C++ för TVSDK 2.4 för Android C++ API](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
@@ -49,17 +48,17 @@ Här är de viktigaste nya funktionerna i version 2.4.1:
 
    * **Videouppspelning** (spela upp, pausa, söka) med spelarkontroll för live-, linear- och VOD-strömmar.
    * **Undertexter.** TVSDK kan visa undertexter för 608/708 med ett urval av teckensnitt, teckenstorlekar, färger och bakgrund. Det kan även stödja videor med uppslagna beskrivningar och växla mellan språkspår om sådana finns.
-   * **Trick play mode** har stöd för snabb framåtspolning och tillbakaspolning för HLS-strömmar som använder I-Frames. Alla videouppspelningskontroller fungerar på innehållet. Långsam rörelse (framåt) är tillgängligt för externt videouppspelningsläge med hastigheter mellan 0 och 1.
+   * **Trick play-läge** har stöd för snabb framåtspolning och tillbakaspolning för HLS-strömmar som använder I-Frames. Alla videouppspelningskontroller fungerar på innehållet. Långsam rörelse (framåt) är tillgängligt för externt videouppspelningsläge med hastigheter mellan 0 och 1.
    * **Adaptiv bithastighet (ABR)** låter spelaren dynamiskt välja vilken av flera versioner av samma innehållsström som ska spelas upp, baserat på nätverk och andra förhållanden. Du kan ange parametrar dynamiskt eller i manifestfilen för att välja bland aggressiva, måttliga och konservativa markeringsprinciper.
    * **Byteintervall** kan en enda TS-fil innehålla flera TS-segment.
-   * **Alternativa ljudåtergivningar** gör att spelaren kan växla mellan tillgängliga ljudspår.
+   * **Alternativ ljudåtergivning** gör att spelaren kan växla mellan tillgängliga ljudspår.
    * **ID3-stöd.** TVSDK kan spela upp HLS-ljud- och videoströmmar som innehåller ID3-ljudmetadata, till exempel artistnamn, titel och album.
    * **Redundans. **TVSDK använder strategier för att fortsätta oavbruten uppspelning, trots fel i värdservrar, spellistfiler och segment.
    * **Flerkanaligt ljudpass-through (DD+).** TVSDK kan skicka Dolby Digital Plus-ljuddata (E-AC3) till hårdvara.
 
 * Innehållsskyddsfunktioner
 
-   * **DRM för HLS.** Alla API:er för videouppspelning fungerar med krypterat videomaterial som skyddas av Adobe Access. Följande DRM-funktioner stöds:
+   * **DRM för HLS.** Alla API:er för videouppspelning fungerar med krypterat videoinnehåll som skyddas av Adobe Access. Följande DRM-funktioner stöds:
 
       * Licensrotation
       * Nyckelrotation
@@ -74,14 +73,14 @@ Här är de viktigaste nya funktionerna i version 2.4.1:
 
    * **Spårning för annonser som infogats på serversidan.** TVSDK kan spåra annonser som infogats av annonsinfogningstjänsten i Adobe Cloud. Det har stöd för linjära annonser i formaten VAST2, VAST3 och VMAP för VOD och live/linear streams.
    * **Anpassade HLS-taggar.** TVSDK använder `MediaPlayerConfig` för att aktivera meddelande till spelarprogrammet när anpassade HLS-taggar visas i strömmen.
-   * **Annonsinfogning på klientsidan.** Biblioteket för annonsinfogning i Auditude fungerar tillsammans med Adobe Auditude-servrar för att matcha annonser för dynamisk infogning i live-, linjärt- och VOD-innehåll, både före- och efter-rollpositioner.
+   * **Annonsinfogning på klientsidan.** Biblioteket för annonsinfogning i Auditude fungerar tillsammans med Adobe Auditude-servrar för att matcha annonser för dynamisk infogning i live-, linjärt- och VOD-innehåll, vid positioner före, efter- eller efter-rollplaceringar.
    * **Anpassade annonslösare.** The `ContentResolver, OpportunityGenerator,` och `MediaPlayerClientFactory` Med -gränssnitt kan du implementera en anpassad annons/alternativ innehållshanterare och registrera en anpassad affärsmöjlighetsdetektor för att arbeta med TVSDK. The `TestAdResolver` och `AuditudeResolver` -klasser innehåller C++-exempel på implementering av en innehållslösare. Du hittar ett Javascript-exempel på `samples/jspsdk/testapp/psdk.js`.
    * **Enhetligt annonsbeteende.** Använd `AdPolicySelector` -gränssnitt för att aktivera konsekvent beteende för alla spelare för åtgärder som sökning och tricks spelar när det finns annonser i innehållet. Om du inte implementerar din egen, använder TVSDK `DefaultAdPolicySelector`.
    * **Ta bort/byt ut C3-annonser.** Använd lämpligt TVSDK API för att ta bort anpassade innehållsområden och dynamiskt infoga nya annonser utan ytterligare förberedelser. Detta är praktiskt när live/linjärt innehåll sänds och sedan omedelbart görs tillgängligt på begäran utan rensning.
 
 Här är de viktigaste nya funktionerna i version 2.4:
 
-* **Direkt aktiverad för VOD och live** När du aktiverar direkt, initierar och buffrar TVSDK media innan uppspelningen startar. Eftersom du kan starta flera `MediaPlayerItemLoader` -instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.4 har även stöd för Instant On för liveströmmar. De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
+* **Direkt aktiverad för VOD och live** När du aktiverar direkt, initierar och buffrar TVSDK media innan uppspelningen startar. Eftersom flera `MediaPlayerItemLoader` -instanser samtidigt i bakgrunden kan du buffra flera strömmar. När en användare ändrar kanalen och strömmen har buffrats korrekt startar uppspelningen på den nya kanalen omedelbart. TVSDK 2.4 har även stöd för Instant On för liveströmmar. De aktiva strömmarna buffras om när det aktiva fönstret flyttas.
 
 * **Prestandaförbättringar **Den nya TVSDK 2.4-arkitekturen har flera prestandaförbättringar:
 
@@ -119,7 +118,7 @@ Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffe
 
 * **Fakturering**
 
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här rapporten över faktureringsanvändning regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen.
 
 ## Funktioner som stöds {#supported-features}
 
@@ -149,7 +148,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
 | Ange parametrar för buffertkontroll | VOD + Live | √ | ² (endast VOD) |
 | Ange adaptiva bithastighetskontroller | VOD + Live | √ | ² (endast VOD) |
 | Anpassade Manifest-taggar (HLS)/händelseströmmar (DASH) | VOD + Live | √ | ² (endast VOD) |
-| Sena bundna ljud | VOD + Live | √ | ² (endast VOD) |
+| Ljud med låg bindning | VOD + Live | √ | ² (endast VOD) |
 | 302 Omdirigering | VOD + Live | √ | ² (endast VOD) |
 
 ### Avancerade uppspelningsfunktioner {#advanced-playback-features}
@@ -345,7 +344,7 @@ TVSDK för Android 2.4 har stöd för ett antal funktioner som du kan implemente
    <td>Stöds inte</td> 
   </tr>
   <tr>
-   <td>Regelbaserad Creative VOD + Live Prioritization</td> 
+   <td>Regelbaserad kreativ VOD + Live-prioritering</td> 
    <td>VOD + Live</td> 
    <td>√ </td> 
    <td>Stöds inte</td> 

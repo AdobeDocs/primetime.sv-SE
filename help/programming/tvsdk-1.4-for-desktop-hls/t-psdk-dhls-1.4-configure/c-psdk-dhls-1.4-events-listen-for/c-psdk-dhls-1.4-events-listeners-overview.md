@@ -1,15 +1,14 @@
 ---
 description: Händelser från TVSDK indikerar spelarens tillstånd, fel som inträffar, slutförandet av åtgärder som du har begärt, till exempel att en video börjar spelas upp eller åtgärder som utförs implicit, till exempel att en annons slutförs.
 title: Lyssna efter händelser för Primetime Player
-exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
-# Översikt {#implement-event-listeners-and-callbacks-overview}
+# Ökning {#implement-event-listeners-and-callbacks-overview}
 
 Händelsehanterare gör att TVSDK kan svara på händelser. När en händelse inträffar anropar TVSDK:s händelsemekanism din registrerade händelsehanterare och skickar händelseinformationen till hanteraren.
 
@@ -19,13 +18,13 @@ Flash Runtime har en generisk händelsemekanism som TVSDK också använder och d
 
    * **Nödvändiga händelser**: Lyssna efter alla uppspelningshändelser.
 
-      >[!IMPORTANT]
-      >
-      >Uppspelningshändelsen `MediaPlayerStatusChangeEvent.STATUS_CHANGE` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
+     >[!IMPORTANT]
+     >
+     >Uppspelningshändelsen `MediaPlayerStatusChangeEvent.STATUS_CHANGE` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
 
-   * **Andra händelser**: Valfritt, beroende på ditt program.
+   * **Andra händelser**: Valfritt, beroende på vilket program du använder.
 
-      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
+     Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
 
 1. Implementera händelseavlyssnare för varje händelse.
 
@@ -45,7 +44,7 @@ Flash Runtime har en generisk händelsemekanism som TVSDK också använder och d
 
 1. Registrera dina callback-avlyssnare med `MediaPlayer` objekt genom att använda `MediaPlayer.addEventListener`.
 
-   `MediaPlayer` extends `flash.events.IEventDispatcher`, som är en del av Flash spelarens kärnfiler och innehåller funktionerna `addEventListener` och `removeEventListener`.
+   `MediaPlayer` extends `flash.events.IEventDispatcher`, som är en del av Flashens spelarhuvudfiler och innehåller funktionerna `addEventListener` och `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 

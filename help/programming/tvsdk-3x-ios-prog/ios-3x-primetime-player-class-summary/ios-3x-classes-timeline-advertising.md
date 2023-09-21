@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 title: Tidslinjeannonsklasser
-exl-id: 4411c86d-8c40-457b-bfc1-40fbea77154e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%
@@ -47,7 +46,7 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
-   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. 
+   <td colname="2">En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. 
     <pre>
       Representerar en kontinuerlig sekvens med annonser som delas upp i innehållet.
     </pre> </td> 
@@ -85,7 +84,7 @@ Dessa klasser innehåller information om annonser som förekommer i en tidslinje
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 
-   <td colname="2">En klass som abstraherar en begäran om placeringsinformation. Varje löst annons måste ha en placeringsinformation kopplad till sig. Placeringsinformationen beskriver var annonsen är avsedd att placeras på tidslinjen. Den innehåller information om: 
+   <td colname="2">En klass som abstraherar en begäran om placeringsinformation. Varje löst annons måste ha en placeringsinformation kopplad till sig. Placeringsinformationen beskriver var annonsen ska placeras på tidslinjen. Den innehåller information om: 
     <ul id="ul_A9105A78F0C24488BCD5E3F2EE62A3EE"> 
      <li id="li_01E968A4330D4B40BA1EB6F4A6000FFD">Placeringsposition (i ms) </li> 
      <li id="li_A3DC9498BEE14FBA9E7A5D26874F3984">Placeringens typ (före-, mitt- eller efterrullning) </li> 

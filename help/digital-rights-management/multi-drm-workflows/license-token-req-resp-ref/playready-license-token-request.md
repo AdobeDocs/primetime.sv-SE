@@ -1,8 +1,7 @@
 ---
 description: Licenstoken för PlayReady ger tillgång till produktions- och testtjänster.
 title: PlayReady-licenstokenbegäran/svar
-exl-id: 12f925f7-336b-42b2-95a9-e806801bab8c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
@@ -25,31 +24,31 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
 
 * **Exempelbegäran:**
 
-   ```
-   <xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
-   https://pr-gen.test.expressplay.com/hms/pr/token?customerAuthenticator=
-    <ExpressPlay customer authenticator identifier>
-    &kid=<CEKSID>
-    &contentKey=<CEK>
-    &rightsType=BuyToOwn
-    &analogVideoOPL=0
-    &compressedDigitalAudioOPL=0
-    &compressedDigitalVideoOPL=0
-    &uncompressedDigitalAudioOPL=0
-    &uncompressedDigitalVideoOPL=0
-   </xref href="https:>
-   ```
+  ```
+  <xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
+  https://pr-gen.test.expressplay.com/hms/pr/token?customerAuthenticator=
+   <ExpressPlay customer authenticator identifier>
+   &kid=<CEKSID>
+   &contentKey=<CEK>
+   &rightsType=BuyToOwn
+   &analogVideoOPL=0
+   &compressedDigitalAudioOPL=0
+   &compressedDigitalVideoOPL=0
+   &uncompressedDigitalAudioOPL=0
+   &uncompressedDigitalVideoOPL=0
+  </xref href="https:>
+  ```
 
 * **Exempelsvar:**
 
-   ```
-   {"licenseAcquisitionUrl":"https://expressplay-licensing.axprod.net/LicensingService.ashx",
-               "token":"<base64-encoded ExpressPlay token>"}
-   ```
+  ```
+  {"licenseAcquisitionUrl":"https://expressplay-licensing.axprod.net/LicensingService.ashx",
+              "token":"<base64-encoded ExpressPlay token>"}
+  ```
 
 ## Frågeparametrar för begäran {#section_26F8856641A64A46A3290DBE61ACFAD2}
 
-**Tabell 9: Parametrar för tokenfråga**
+**Tabell 9: Tokenfrågeparametrar**
 
 <table id="table_zxg_dyr_pv">  
  <thead> 
@@ -67,7 +66,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td>Antingen <span class="codeph"> html</span> eller <span class="codeph"> json</span>. If <span class="codeph"> html</span> (standardvärdet) en HTML-representation av eventuella fel anges i svarets entitetstext. <p>If <span class="codeph"> json</span> anges returneras ett strukturerat svar i JSON-format. Se <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel</a> för mer information. </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list</span> om framgång, <span class="codeph"> text/html</span> för felformatet HTML, eller <span class="codeph"> application/json</span> för JSON-felformat. </p> </td> 
+   <td>Antingen <span class="codeph"> html</span> eller <span class="codeph"> json</span>. If <span class="codeph"> html</span> (standard) en HTML-representation av eventuella fel tillhandahålls i svarets entitetstext. <p>If <span class="codeph"> json</span> anges returneras ett strukturerat svar i JSON-format. Se <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel</a> för mer information. </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list</span> om framgång, <span class="codeph"> text/HTML</span> för felformatet HTML, eller <span class="codeph"> application/json</span> för JSON-felformat. </p> </td> 
    <td> Nej </td> 
   </tr> 
  </tbody> 
@@ -121,7 +120,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td><span class="codeph"> hyrtid.playDuration</span> </td> 
-   <td>Tid i sekunder som innehållet kan spelas upp när uppspelningen har startat. Endast giltigt om <span class="codeph"> rightsType</span> är Uthyrning. </td> 
+   <td>Tid i sekunder som innehållet kan spelas upp när uppspelningen har startat. Endast giltigt om <span class="codeph"> rightsType</span> är uthyrning. </td> 
    <td> Nej </td> 
   </tr> 
   <tr> 
@@ -220,7 +219,7 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> Otillräckliga tokens är tillgängliga </td> 
+   <td> Otillräckliga variabler tillgängliga </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
@@ -240,11 +239,11 @@ Denna HTTP-begäran returnerar en token som kan läsas in för en PlayReady-lice
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Ogiltig varaktighet för uthyrning av uppspelning </td> 
+   <td> Ogiltig varaktighet för uthyrningsuppspelning </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> Innehållskrypteringsnyckeln måste vara 32-hexadecimala siffror lång </td> 
+   <td> Innehållskrypteringsnyckeln måste innehålla 32 hexadecimala siffror </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 

@@ -1,22 +1,21 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: 267188d0-83f8-42dc-88e3-78b52945cb6c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview}
+# Ökning {#overview}
 
 För att erhålla en licens skickar klienterna en begäran från de metadata som är inbäddade i det paketerade innehållet och skickar sedan begäran till licensservern. Licensservern använder information som hämtats från innehållets metadata för att generera en licens.
 
 Om både klienten och servern stöder protokollversion 5 är URL:en för begäran &quot;License Server URL in metadata&quot; + &quot; [!DNL /flashaccess/license/v4]&quot;. Om protokollversion 3 är den maximala som stöds av antingen klienten eller servern skickar Primetime DRM-klienter sedan autentiseringsbegäranden till &quot;Licensiera server-URL i metadata&quot; + &quot; [!DNL /flashaccess/license/v3]&quot;. Annars skickas autentiseringsbegäranden till&quot;License Server URL in metadata&quot; + &quot; [!DNL /flashaccess/license/v1]&quot;
 
-En enhet kan ha flera licenser för samma innehåll (samma licens-ID), men kan bara ha en licens för ett visst licens-ID och DRM-princip-ID. Om den får en licens med ett duplicerat LicenseID/PolicyID ersätter den nya licensen bara den gamla om den nya licensens utfärdandedatum infaller senare än den befintliga licensens utfärdandedatum. Den här logiken används för att bearbeta licenser som är inbäddade i innehållet. Därför bör du inte bädda in mer än en licens med samma DRM-princip-ID i ett innehållssegment. Samma logik gäller för licenser som skickas till klienten via `DRMManager.storeVoucher()` ActionScript3 API; Om klienten redan har en licens med ett senare utfärdandedatum kan den angivna licensen ignoreras.
+En enhet kan ha flera licenser för samma innehåll (samma licens-ID), men kan bara ha en licens för ett visst licens-ID och DRM-princip-ID. Om den får en licens med ett duplicerat LicenseID/PolicyID ersätter den nya licensen bara den gamla om den nya licensens utfärdandedatum infaller senare än den befintliga licensens utfärdandedatum. Den här logiken används för att bearbeta licenser som är inbäddade i innehållet. Därför bör du inte bädda in mer än en licens med samma DRM-princip-ID i ett innehållssegment. Samma logik gäller för licenser som skickas till klienten via `DRMManager.storeVoucher()` ActionScript3 API; om klienten redan har en licens med ett senare utfärdandedatum kan den angivna licensen ignoreras.
 
 ## Hanteringsklasser för licensbegäran {#section_190E3BEF316C4B09ACC21E4C2BAC5C75}
 

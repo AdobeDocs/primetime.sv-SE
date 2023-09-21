@@ -1,8 +1,7 @@
 ---
 description: För annonsinfogning live-strömmar kan du behöva avsluta en annonsbrytning innan alla annonser i pausen spelas upp tills de är klara.
 title: Implementera tidig radbrytning
-exl-id: 584e870e-1408-41a9-bb6f-e82b921fe99e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Här är några krav att tänka på:
 
 * Tolka markörer som `EXT-X-CUE-IN` (eller motsvarande markeringstagg) som visas i de linjära eller FER-strömmarna.
 
-   Registrera markörerna som markör för snabb annonsretur. Endast uppspelning `adBreaks` till den här markörpositionen under uppspelningen, som åsidosätter längden på `adBreak` markerad med radavstånd `EXE-X-CUE-OUT` markör.
+  Registrera markörerna som markör för snabb annonsretur. Endast uppspelning `adBreaks` till den här markörpositionen under uppspelningen, som åsidosätter längden på `adBreak` markerad med radavstånd `EXE-X-CUE-OUT` markör.
 
 * Om två `EXT-X-CUE-IN` det finns markörer för samma `EXT-X-CUE-OUT` markör, den första `EXT-X-CUE-IN` som visas är den som räknas.
 
 * Om `EXE-X-CUE-IN` markören visas på tidslinjen utan radavstånd `EXT-X-CUE-OUT` markör, `EXE-X-CUE-IN` markören ignoreras.
 
-   I en liveström, om det ledande `EXT-X-CUE-OUT` markören har nyligen flyttats ut ur fönstret, TVSDK kommer inte att svara på det.
+  I en liveström, om det ledande `EXT-X-CUE-OUT` markören har nyligen flyttats ut ur fönstret, TVSDK kommer inte att svara på det.
 
 * När man får en tidig radbrytning är `adBreak` spelas upp tills spelhuvudet återgår till den ursprungliga positionen när annonsbrytningen skulle avslutas och fortsätter spela upp huvudinnehållet från den positionen.
 
@@ -64,7 +63,7 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-I ett exempel med olika typer av markörer, om längden på `SpliceOut` typen är noll, `SpliceOut` och `SpliceIn` måste fungera tillsammans för varje annonsbrytning. För närvarande är `SpliceOut` markör med en längd som inte är noll och som inte behöver länkas `SpliceIn` markörer är mer typiska.
+I ett exempel med olika typer av markörer, om längden på `SpliceOut` typen är noll, `SpliceOut` och `SpliceIn` måste fungera tillsammans för varje annonsbrytning. För närvarande, en `SpliceOut` markör med en längd som inte är noll och som inte behöver länkas `SpliceIn` markörer är mer typiska.
 
 **Två separata markörer**
 

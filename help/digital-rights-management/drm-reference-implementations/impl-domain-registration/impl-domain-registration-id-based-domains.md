@@ -2,8 +2,7 @@
 title: Identitetsbaserad domänregistreringslogik
 description: Identitetsbaserad domänregistreringslogik
 copied-description: true
-exl-id: 6e391fce-00b4-45cf-b785-3b0ec734a11e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -36,8 +35,8 @@ Referensimplementeringen använder följande logik för identitetsbaserad domän
       1. Om det här är en ny dator lägger du till en post i `UserDomainMembership` tabell.
       1. Sök efter matchande poster i `UserDomainRefCount` tabell.
       1. Lägg till en post om det inte finns någon post för det här maskin-GUID:t.
-   1. Om det är en ny enhet, och `Max Membership` värdet har nåtts, returfel.
 
+   1. Om det är en ny enhet, och `Max Membership` värdet har nåtts, returfel.
 
 1. Sök efter alla domännycklar för den här domänen i `DomainKeys` tabell:
 
@@ -56,7 +55,7 @@ Referensimplementeringen använder följande logik för identitetsbaserad domän
    Domännamnet är `namequalifier:username`, som extraheras från autentiseringstoken. Om ingen token är tillgänglig returneras felet `DOM_AUTHENTICATION_REQUIRED (503)` inträffar.
 1. Sök efter det begärda domännamnet i `DomainServerInfo` tabell.
 1. Söka efter domännamnet i `UserDomainMembership` tabell.
-1. Jämför varje dator-ID som du hittar med dator-ID i begäran.
+1. Jämför varje dator-ID som du hittar med dator-ID:t i begäran.
 1. Leta reda på motsvarande post i `UserDomainRefCount` tabell.
 
    Om ingen matchande post hittas returneras ett fel.

@@ -2,8 +2,7 @@
 title: Paketera media
 description: Paketera media
 copied-description: true
-exl-id: fc2d1f12-8fab-4e62-8d4c-527911be347f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -16,11 +15,11 @@ Använd fliken Paketera media för att paketera innehåll. I avsnittet Packager 
 
 Om du vill paketera en enskild FLV- eller F4V-fil väljer du **[!UICONTROL Select Single File]** och ange den fullständiga sökvägen till källfilen och den fullständiga sökvägen där den krypterade filen ska sparas.
 
-Om du vill paketera alla filer i en mapp väljer du **[!UICONTROL Select Single Folder]** alternativ. Ange den mapp som innehåller källfilerna. Endast filer i Indatamappen som matchar **[!UICONTROL Input Media File Selection]** kommer att paketeras (filer i undermappar paketeras inte). Välj om du vill kryptera [!DNL .flv] filer, [!DNL .f4v] eller ange ett eget reguljärt uttryck (till exempel &quot;.&#42;&quot; krypterar alla filer i mappen). De krypterade filerna sparas i den angivna utdatamappen med samma filnamn som originalfilen.
+Välj alternativet **[!UICONTROL Select Single Folder]** alternativ. Ange den mapp som innehåller källfilerna. Endast filer i Indatamappen som matchar **[!UICONTROL Input Media File Selection]** kommer att paketeras (filer i undermappar paketeras inte). Välj att kryptera [!DNL .flv] filer, [!DNL .f4v] eller ange ett eget reguljärt uttryck (till exempel &quot;.&#42;&quot; krypterar alla filer i mappen). De krypterade filerna sparas i den angivna utdatamappen med samma filnamn som originalfilen.
 
 >[!NOTE]
 >
->Filsökvägarna måste referera till filer som är tillgängliga för paketeringsservern. Om du kör Flash Access Manager på en annan dator än paketeringsservern måste du ange en sökväg som är tillgänglig för servern (antingen på en nätverksenhet eller på själva servern).
+>Filsökvägarna måste referera till filer som är tillgängliga för paketeringsservern. Om du kör Flash Access Manager på en annan dator än paketeringsservern måste du ange en sökväg som är tillgänglig för  (antingen på en nätverksenhet eller på själva servern).
 
 I följande tabell beskrivs inställningarna för Paketmedia:
 

@@ -1,8 +1,7 @@
 ---
 description: HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på tillgänglig bandbredd.
 title: Adaptiva bithastigheter (ABR) för videokvalitet
-exl-id: 2fd24360-4159-4330-a479-02310c6aa525
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Du kan ange den adaptiva byteprincipen för bithastighet (ABR) och den inledande
  <tbody> 
   <tr> 
    <td colname="col01"> Inledande bithastighet </td> 
-   <td colname="col2"> <p>Den önskade uppspelningsbithastigheten (i bitar per sekund) för det första segmentet. När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. </p> <p> Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. </p> <p>Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p> <span class="apiname"> ABRInitialBitRate </span> returnerar ett heltalsvärde som representerar byteprofilen per sekund. </p> </td> 
+   <td colname="col2"> <p>Uppspelningens önskade bithastighet (i bitar per sekund) för det första segmentet. När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. </p> <p> Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. </p> <p>Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p> <span class="apiname"> ABRInitialBitRate </span> returnerar ett heltalsvärde som representerar byteprofilen per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Minsta bithastighet </td> 
@@ -29,7 +28,7 @@ Du kan ange den adaptiva byteprincipen för bithastighet (ABR) och den inledande
   </tr> 
   <tr> 
    <td colname="col01"> Maximal bithastighet </td> 
-   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. ABR-växling ignorerar profiler med en bithastighet som är högre än den här bithastigheten. </p> <p> <span class="apiname"> ABRMaxBitRate </span> returnerar ett heltalsvärde som representerar profilen bitar per sekund. </p> </td> 
+   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. ABR-växling ignorerar profiler med en bithastighet som är högre än denna bithastighet. </p> <p> <span class="apiname"> ABRMaxBitRate </span> returnerar ett heltalsvärde som representerar profilen bitar per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> ABR-växlingsprincip </td> 
@@ -61,7 +60,7 @@ Om du anger ett intervall på 300000 till 2000000 kommer TVSDK endast att ta hä
 
 Gör något av följande om du vill ange ABR-kontrollparametrar:
 
-* Använd `ABRControlParameterBuilder` hjälpklass för att ställa in en delmängd av parametrarna (arbetar på `ABRControlParameter` bakom scenen)
+* Använd `ABRControlParameterBuilder` hjälpklass för att ställa in en delmängd av parametrarna (arbetar på `ABRControlParameter` bakom kulisserna)
 
 * Ange parametrarna på `ABRControlParameter` klassen.
 
@@ -81,8 +80,7 @@ Den här klassen innehåller även `toABRControlParameters()` hjälpmetod. Anvä
    >
    >I följande exempel initieras alla parametrar till standardvärdena, och sedan anges endast principen till konservativ och den maximala bithastigheten begränsas till 100000:
    >
-   >
-   ```
+   >```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
@@ -90,6 +88,7 @@ Den här klassen innehåller även `toABRControlParameters()` hjälpmetod. Anvä
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
    >```
+   >
 
 1. Ändra enskilda ABR-parametrar vid körning.
 

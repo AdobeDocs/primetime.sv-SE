@@ -1,8 +1,7 @@
 ---
 description: 302 omdirigeringsoptimering minimerar antalet 302 omdirigeringssvar, vilket gör att programmet kan belastningsutjämna mer effektivt.
 title: Inaktivera eller aktivera 302 omdirigeringsoptimering
-exl-id: b1bdb6d6-b34d-4e0a-8c96-7fd4ce77b5c9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%

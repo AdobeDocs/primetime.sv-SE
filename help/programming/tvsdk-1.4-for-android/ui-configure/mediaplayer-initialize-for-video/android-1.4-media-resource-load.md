@@ -1,8 +1,7 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 title: Läsa in en medieresurs i MediaPlayer
-exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
 
 1. När mediespelarens tillstånd ändras till INITIALIZED kan du anropa `MediaPlayer.prepareToPlay`
 
-   Initieringstillståndet anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
+   INITIALIZED-läget anger att mediet har lästs in. Anropar `prepareToPlay` startar processen för upplösning och placering av annonser, om sådan finns.
 
 1. När TVSDK anropar `onPrepared` återanrop har medieströmmen lästs in och förbereds för uppspelning.
 
@@ -36,7 +35,6 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
 >* A `state` parameter av typen `MediaPlayer.PlayerState` med värdet för `MediaPlayer.PlayerState.ERROR`.
 >
 >* A `notification` parameter av typen `MediaPlayerNotification` som innehåller diagnostikinformation om felhändelsen.
-
 
 Följande förenklade exempelkod visar processen för inläsning av en medieresurs:
 

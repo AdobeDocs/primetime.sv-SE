@@ -1,8 +1,7 @@
 ---
 description: Innan du kan använda de flesta TVSDK-spelarmetoderna måste spelaren ha en giltig status.
 title: Vänta på ett giltigt tillstånd
-exl-id: 150b37b8-c36d-4143-bead-ddc601bba6fe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
@@ -13,6 +12,6 @@ ht-degree: 0%
 
 Innan du kan använda de flesta TVSDK-spelarmetoderna måste spelaren ha en giltig status.
 
-Spelaren rör sig genom olika statusar. Om du väntar på att spelaren ska ha rätt status ser du till att medieresursen har lästs in. Om spelaren inte har minst rätt status kommer många spelarmetoder att `IllegalStateException`.
+Spelaren rör sig genom olika statusar. Om du väntar på att spelaren ska ha rätt status ser du till att medieresursen har lästs in. Om spelaren inte har minst rätt status kommer många spelarmetoder att visa `IllegalStateException`.
 
 Nödvändig status är vanligtvis `PTMediaPlayerStatusReady`.

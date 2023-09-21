@@ -1,8 +1,7 @@
 ---
 description: Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer-instansen.
 title: Skapa en medieresurs
-exl-id: ab66255d-7848-479a-a8cd-c6113cdd7749
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -38,7 +37,7 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
     </tr> 
     <tr> 
     <td colname="col1"> <p>metadata </p> </td> 
-    <td colname="col2"> <p>En instans av <span class="codeph"> Metadata </span> -klass, som kan innehålla anpassad information om innehållet som ska läsas in. Exempel på innehåll är alternativ eller annonsinnehåll som ska placeras inuti huvudinnehållet. Konfigurera <span class="codeph"> AuditudeSettings </span> innan den här konstruktorn används. Mer information finns i <a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>. </p> <p>Tips: Om det behövs kan du tvinga fram Flash-reservlösningar med <span class="codeph"> forceFlash </span> när en medieresurs skapas. Detta kan vara användbart eftersom inte alla funktioner (till exempel arbetsflöden för Live Ad) stöds i Browser TVSDK. Flash fallback används för att spela upp videoinnehåll. </p> </td> 
+    <td colname="col2"> <p>En instans av <span class="codeph"> Metadata </span> -klass, som kan innehålla anpassad information om innehållet som ska läsas in. Exempel på innehåll är alternativ eller annonsinnehåll som ska placeras inuti huvudinnehållet. Konfigurera <span class="codeph"> AuditudeSettings </span> innan den här konstruktorn används. Mer information finns i <a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>. </p> <p>Tips! Du kan tvinga fram en återgång av Flashen genom att använda <span class="codeph"> forceFlash </span> när en medieresurs skapas. Detta kan vara användbart eftersom inte alla funktioner (till exempel arbetsflöden för Live Ad) stöds i Browser TVSDK. Flashens reserv används för att spela upp videoinnehåll. </p> </td> 
     </tr> 
     </tbody> 
    </table>
@@ -60,6 +59,6 @@ Klassen MediaResource representerar innehållet som ska läsas in av MediaPlayer
 
    >[!TIP]
    >
-   >Du kan använda `MediaResource` accessorer (getters) för att undersöka resursens typ, URL och metadata.
+   >Du kan när som helst efter detta använda `MediaResource` accessorer (getters) för att undersöka resursens typ, URL och metadata.
 
 1. Läs in din MediaPlayer-instans. Mer information finns i [Läsa in en medieresurs i MediaPlayer](../../content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md).

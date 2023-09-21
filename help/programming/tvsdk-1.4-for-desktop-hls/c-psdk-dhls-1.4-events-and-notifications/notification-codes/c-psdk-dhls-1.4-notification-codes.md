@@ -1,15 +1,14 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: Meddelandekoder
-exl-id: 7ea079f1-658d-45ab-891d-044b7b4ff4ec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-# Översikt {#notification-codes-overview}
+# Ökning {#notification-codes-overview}
 
 TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 
@@ -31,7 +30,7 @@ Meddelandeobjekt innehåller information om spelarens status. TVSDK tillhandahå
    <td colname="1"> kod </td> 
    <td colname="2">Den numeriska representation som tilldelats meddelandet: 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">Felmeddelandehändelser, från 100000 till 199999 </li> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Felmeddelandehändelser, från 100000 till 19999 </li> 
      <li id="li_11AE91D1325E4F718228E662C9C55F9A">Varningsmeddelandehändelser, från 200000 till 299999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Informationshändelser, från 300000 till 399999 </li> 
     </ul> <p>Varje intervall på den översta nivån, t.ex. fel, delas upp i underintervall, t.ex. 101000 till 101999, som representerar uppspelningsfel. </p>

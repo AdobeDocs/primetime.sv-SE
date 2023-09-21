@@ -1,8 +1,7 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Kvalitetsstatistik för tjänster
-exl-id: 1e9f32fb-3faf-4646-8af1-0c1cc441cb42
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -36,7 +35,7 @@ Det innehåller även information om enheten, till exempel modell, operativsyste
 
 1. (Valfritt) Läs uppspelningsstatistiken.
 
-   En lösning för att läsa uppspelningsstatistik är att ha en timer, till exempel en `NSTimer`, som regelbundet hämtar de nya QoS-värdena från `PTQOSProvider`. Till exempel:
+   En lösning för att läsa uppspelningsstatistik är att ha en timer, som `NSTimer`, som regelbundet hämtar de nya QoS-värdena från `PTQOSProvider`. Till exempel:
 
    ```
    - (void)printPlaybackInfoLog { 

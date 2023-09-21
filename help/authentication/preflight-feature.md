@@ -1,8 +1,7 @@
 ---
-title: Preflight-funktion, Aktivera, Felsök eller Bestäm problemet
-description: Preflight-funktion, Aktivera, Felsök eller Bestäm problemet
-exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+title: Preflight-funktion, Så här aktiverar, felsöker eller fastställer du problemet
+description: Preflight-funktion, Så här aktiverar, felsöker eller fastställer du problemet
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Det externa gränssnittet för PreAuthorization API är oförändrat, inga uppda
 
 Preflight-resurserna beräknas på tre sätt:
 
-* **Fork- och kopplingsmetod till MVPD**: Detta innebär att Adobe måste göra flera anrop till MVPD (klienten måste ändå göra ett preflight-anrop).
+* **Fork- och kopplingsmetod till MVPD**: detta innebär att Adobe gör flera auktoriseringsanrop till MVPD (klienten måste ändå göra ett preflight-anrop).
 * **Kanaljustering**: MVPD visar kanalraden för den inloggade användaren i SAML-autentiseringssvaret och Adobe returnerar de auktoriserade resurserna baserat på detta. SAML authN-svaret i SAML-spåraren bör visa den listan.
 * **Flerkanalsauktorisering**: både klient- och Adobe-autentiseringen gör ett enda anrop till MVPD för en uppsättning resurser.
 
@@ -28,7 +27,7 @@ Oavsett vilket MVPD-värde som används kommer klientprogrammet att göra ett en
 
 Om Preflight baseras på förgrunds- och kopplingsmetoden kontrollerar Adobe Primetime Authentication-backend ett värde som angetts för det maximala förauktoriseringsanropet i dess konfiguration. Detta konfigureras av Adobe.
 
-Standardvärdet för konfiguration med max antal förauktoriseringsanrop är 5, vilket innebär att det endast går att skicka 5 resurser i Preflight för förauktoriserings- och join-MVPD-anropen. Om du skickar fler än 5 resurser genereras ett undantag och en null-lista returneras. Detta är det förväntade beteendet. Vi kan konfigurera detta till vilket värde som helst om det virtuella dokumentfönstret inte stöder kanalindelning eller flerkanalsauktorisering, men bara efter att ha konsulterat dem eftersom flera auktoriseringsanrop för gaffel och join ökar deras laddningstider.
+Standardvärdet för konfiguration med max antal förauktoriseringsanrop är 5, vilket innebär att det endast går att skicka 5 resurser i Preflight för förauktoriserings- och join-MVPD-anropen. Om du skickar fler än 5 resurser genereras ett undantag och en null-lista returneras. Detta är det förväntade beteendet. Vi kan konfigurera detta till vilket värde som helst om det virtuella dokumentfönstret inte stöder kanalindelning eller flerkanalsauktorisering, men bara efter att ha konsulterat dem eftersom flera auktoriseringsanrop för gaffel och join ökar deras laddningstid.
 
 Detta är alltså saker som man bör tänka på när man aktiverar/felsöker preflight för ett PDF-dokument:
 

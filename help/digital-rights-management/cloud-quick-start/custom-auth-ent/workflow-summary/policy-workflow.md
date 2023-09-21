@@ -2,8 +2,7 @@
 title: Information om policyarbetsflöde
 description: Information om policyarbetsflöde
 copied-description: true
-exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 * **Policy** - Skapa en DRM BEES-kompatibel profil som anger att BEES krävs för allt innehåll som paketeras med den här principen.
 * **Paketering** - Paketera innehåll med den BEES-medvetna DRM-principen.
 * **Autentisering** - Autentisera klientenheten och använd Primetimes DRM API, eller Primetime API, för att associera denna token med Primetime Cloud DRM. Om du gör det skickar klientenheten denna autentiseringstoken upp till Primetime Cloud DRM tillsammans med alla licensbegäranden. Primetime Cloud DRM kommer inte att bearbeta den här token, utan skickar den (som en ogenomskinlig blob) till BEES-slutpunkten för bearbetning.
-* **Licenser** - Begär licens för ditt skyddade innehåll. Klientenheten lägger automatiskt till din tidigare angivna autentiseringstoken till samtalet.
+* **Licenser** - Begär en licens för ditt skyddade innehåll. Klientenheten lägger automatiskt till din tidigare angivna autentiseringstoken till samtalet.
 * **Tillstånd** - Primetime Cloud DRM fastställer att innehållet har paketerats med en profil som kräver BEES. Primetime Cloud DRM skapar en JSON-begäran som skickas till BEES-slutpunkten. Svaret på BEES instruerar Primetime Cloud DRM om huruvida en licens ska utfärdas eller inte, och eventuellt vilken DRM-princip som ska användas.
 
 ## Information om policyarbetsflöde {#policy-workflow-details}
@@ -31,7 +30,7 @@ Använd DRM-principen som anger BEES-kravet och ange följande två anpassade eg
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
-Använd till exempel Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) anger du följande två anpassade egenskaper i [!DNL flashaccesstools.properties] konfigurationsfil:
+Använd till exempel Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) anger du följande två anpassade egenskaper i dialogrutan [!DNL flashaccesstools.properties] konfigurationsfil:
 
 * `policy.customProp.1=bees.required=true`
 * `policy.customProp.2=bees.url=https://mybeesserver.example.com/bees`

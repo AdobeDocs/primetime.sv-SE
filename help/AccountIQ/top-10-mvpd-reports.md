@@ -1,8 +1,7 @@
 ---
 title: Hur man visar rapporter för de 10 bästa PDF-filerna per programmerarprofil.
 description: Visa rapporter för de 10 bästa PDF-filerna.
-exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -37,7 +36,7 @@ För en inloggad programmerare finns följande tre standardval (för att visa ra
 
 ## Top 10 MVPDs by sharing score {#top-10mvpds-sharingscore}
 
-När du använder markeringen **de tio bästa PDF-filerna genom att dela poäng** för att definiera ert segment identifierar konto-IQ-systemet 10 MVPD-filer från hela branschen och anger högst tio MVPD-filer (tillsammans med deras motsvarande värden) i fallande ordning efter deras [övergripande delningspoäng](/help/AccountIQ/product-concepts.md#overall-sharing-score)
+När du använder markeringen **de tio bästa PDF-filerna genom att dela poäng** för att definiera ert segment identifierar konto-IQ-systemet 10 MVPD-filer från hela branschen och anger högst tio MVPD-filer (tillsammans med deras motsvarande värden) i fallande ordning efter deras [totalpoäng för delning](/help/AccountIQ/product-concepts.md#overall-sharing-score)
 
 Så här visar du listan och rapporterna för de tio bästa PDF-filerna genom att dela poängen för din kanal:
 

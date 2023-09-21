@@ -1,8 +1,7 @@
 ---
 description: När du fastställer brandväggsregler bör du tänka på följande typer av URL-adresser
 title: Brandväggsregler
-exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -51,7 +50,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
      <li id="li_5112283BDCF1457099056733B633FAF1"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
      <li id="li_F73A570E2C1A45E1BBF21C1468B90D3A"><span class="filepath"> /flashaccess/license/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Att utfärda licenser till slutanvändare. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Så här utfärdar du licenser till slutanvändare. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -97,7 +96,7 @@ Externa användare kan komma åt följande URL:er via den yttre brandväggen:
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Returnera licenser. </p> <p> URL:en måste vara tillgänglig om du implementerar stöd för licensreturer. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Returnera licenser. </p> <p> URL:en måste vara tillgänglig om du implementerar licensreturstöd. </p> </td> 
   </tr> 
  </tbody> 
 </table>

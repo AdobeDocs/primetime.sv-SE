@@ -2,8 +2,7 @@
 title: Ange XSTS-token i spelaren
 description: Ange XSTS-token i spelaren
 copied-description: true
-exl-id: 1b83baac-e6a6-4e84-8ea5-07bd7e4afd9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Primetime DRM finns på Xbox360-plattformen. Det är dock bara användningsexemplet Skyddad strömning som stöds, inte hela sviten med DRM-principrättigheter. DRM-principrättigheter som inte direktuppspelas, t.ex. enhetsdomängrupper, stöds inte. Xbox360 ignorerar rättigheter som inte stöds vid uppspelning av innehåll.
 
-Primetimes DRM-principrättigheter som stöds för Xbox är:
+De DRM-principrättigheter som stöds för Xbox är:
 * Digital Output Protection
 * Slutdatum för offlinecachelagring av licenser
 * Startdatum för licens
@@ -58,16 +57,16 @@ private void Player_RequestKeyAttribute(object sender, RequestKeyAttributeEventA
 
 ## XSTS-tokenvalidering för Xbox Live {#xbox-live-xsts-token-validation}
 
-För XSTS-förfrågningar: `customerSpecificAuthToken` fältet innehåller Base64-kodad XSTS-token. Provet `XSTSValidator` koden undersöker Base64-avkodad token för förekomsten av `EncryptedAssertion` element, Du kan dock använda andra metoder för att skilja mellan dessa förfrågningar och förfrågningar som inte kommer från Xbox. Du kan till exempel använda en annan URL.
+För XSTS-förfrågningar: `customerSpecificAuthToken` fältet innehåller Base64-kodad XSTS-token. Exemplet `XSTSValidator` koden undersöker Base64-avkodad token för förekomsten av `EncryptedAssertion` -element, men du kan använda andra metoder för att skilja mellan dessa förfrågningar och förfrågningar som inte kommer från Xbox. Du kan till exempel använda en annan URL.
 
 Den princip som returneras i svarsmeddelandet åsidosätter den ursprungliga principen i de DRM-metadata som medföljer Xbox-nyckelbegäran. Endast en deluppsättning av principfunktioner stöds av Xbox-klienten och dessa fält är de enda som kommer att åsidosätta den ursprungliga principen.
 
-Ytterligare installationssteg krävs för att stödja tokendekryptering och validering. Du måste läsa in [!DNL xsts_partner_cert.pfx] och [!DNL x_secure_token_service.part.xboxlive.com.cer] inloggningsuppgifter till en nyckelbehållare i JKS-format, som du sedan anger som systemegenskap för den bakomliggande tillståndsservern `xsts-keystore`. Som standard är partnern [!DNL .pfx] har aliaset `xsts`och tokenvalideringscertifikatet har aliaset `xsts-verify-cert`. Du kan även åsidosätta dessa med hjälp av systemegenskaper. Slutligen finns det en systemegenskap `xsts-keystore-password` som inte har något standardvärde och som innehåller nyckellösenordet. Systemegenskaperna som läses av `XSTSValidator` koden sammanfattas nedan:
+Ytterligare installationssteg krävs för att stödja tokendekryptering och validering. Du måste läsa in [!DNL xsts_partner_cert.pfx] och [!DNL x_secure_token_service.part.xboxlive.com.cer] inloggningsuppgifter till en nyckelbehållare i JKS-format, som du sedan anger som systemegenskap för den bakomliggande tillståndsservern `xsts-keystore`. Som standard är partnern [!DNL .pfx] har alias `xsts`och tokenvalideringscertifikatet har aliaset `xsts-verify-cert`. Du kan även åsidosätta dessa med hjälp av systemegenskaper. Slutligen finns det en systemegenskap `xsts-keystore-password` som inte har någon standardinställning och som innehåller nyckelbehållarlösenordet. Systemegenskaperna som läses av `XSTSValidator` koden sammanfattas nedan:
 
 | Systemegenskap | Standardvärde | Kommentar |
 |---|---|---|
 | xsts-keystore | xsts.jks | JKS-formatnyckelbehållare som används av valideraren. |
-| xsts-keystore-password |  | Lösenord för nyckelbehållaren |
+| xsts-keystore-password | | Lösenord för nyckelbehållaren |
 | xsts-alias | xts | Alias som används för att hämta dekrypteringsnyckeln från nyckelbehållaren |
 | xsts-verify-cert-alias | xsts-verify-cert | Alias som används för att hämta verifieringscertifikatet från nyckelbehållaren |
 

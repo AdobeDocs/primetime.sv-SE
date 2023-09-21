@@ -1,8 +1,7 @@
 ---
 description: Vanligtvis är alla Primetime DRM-licenser bundna till en unik enhet när de skapas. Denna bindning förhindrar att användare delar licenser mellan olika enheter utan behörighet. Förutom bindning per enhet ger Primetime DRM möjlighet att binda licenser till en enhetsdomän eller grupp av enheter.
 title: Spela upp krypterat innehåll med domänstöd
-exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -23,11 +22,12 @@ Så här spelar du upp krypterat innehåll med Primetime DRM:
 
 1. Använda `VoucherAccessInfo.deviceGroup`kontrollerar du om enhetsgruppsregistrering krävs.
 1. Om autentisering krävs:
-   1. Använd `DeviceGroupInfo.authenticationMethod` egenskapen kontrollerar om autentisering krävs.
-   1. Om autentisering krävs autentiserar du användaren genom att utföra NÅGOT av följande steg:
+   1. Använd `DeviceGroupInfo.authenticationMethod` egenskapen tar reda på om autentisering krävs.
+   1. Om autentisering krävs autentiserar du användaren genom att utföra ETT av följande steg:
 
       * Hämta användarens användarnamn och lösenord och anropa `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
       * Hämta en cachelagrad/förgenererad autentiseringstoken och anropa `DRMManager.setAuthenticationToken()`.
+
    1. Anropa `DRMManager.addToDeviceGroup()`
 1. Hämta licensen för innehållet genom att utföra någon av följande åtgärder:
    1. Använd `DRMManager.loadVoucher()` -metod.

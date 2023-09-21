@@ -1,8 +1,7 @@
 ---
 description: Information om paketering och skydd av innehåll gör att du kan skydda ditt innehåll.
 title: Paketera och skydda innehåll
-exl-id: f33d382b-07d7-4630-9e44-820d6249fee4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Om implementeringen av innehållspaketeringen kräver nätverksanslutning måste
 
 Konfigurationsfilen för kommandoradsverktyget Adobe Primetime DRM Media Packager kräver en PKCS12-autentiseringsuppgift som används vid paketeringen.
 
-I kommandoradsverktygen för referensimplementering lagras lösenordet för PKCS12-inloggningsfilen i `flashaccess.properties` i klartext. Därför bör du vara extra försiktig när du skyddar datorn som är värd för filen och ser till att datorn är i en säker miljö. Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-guidelines/physical-sec-and-access.md).
+I verktygen för referensimplementering lagras lösenordet för PKCS12-inloggningsfilen i `flashaccess.properties` i klartext. Därför bör du vara extra försiktig när du skyddar datorn som är värd för filen och ser till att datorn är i en säker miljö. Mer information finns i [Fysisk säkerhet och åtkomst](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Paketeraren använder även transportcertifikaten för licensservern och licensservern, och integriteten och sekretessen för informationen måste skyddas. Endast behöriga enheter bör tillåtas att använda paketeraren. Om dina privata nycklar har komprometterats ska du omedelbart informera Adobe Systems Incorporated så att certifikatet kan återkallas.
 
@@ -57,7 +56,7 @@ Mer information om hur du skapar program med SDK finns i Primetimes DRM API:er p
 
 Asymmetrisk nyckelkryptering, som även kallas kryptering med offentlig nyckel, använder nyckelpar. Den ena nyckeln är för kryptering och den andra för dekryptering.
 
-dekrypteringsnyckeln eller *`private key`*&#x200B;är hemlig, krypteringsnyckeln eller *`public key`*, är tillgängligt för alla som har behörighet att kryptera innehåll. Alla som har tillgång till den offentliga nyckeln kan kryptera innehållet. Det är dock bara någon som har tillgång till den privata nyckeln som kan dekryptera innehållet. Den privata nyckeln kan inte rekonstrueras från den offentliga nyckeln.
+dekrypteringsnyckeln eller *`private key`*, hemlighålls; krypteringsnyckeln eller *`public key`*, är tillgängligt för alla som har behörighet att kryptera innehåll. Alla som har tillgång till den offentliga nyckeln kan kryptera innehållet. Det är dock bara någon som har tillgång till den privata nyckeln som kan dekryptera innehållet. Den privata nyckeln kan inte rekonstrueras från den offentliga nyckeln.
 
 När du paketerar innehåll används licensserverns offentliga nyckel för att kryptera innehållskrypteringsnyckeln (CEK) i DRM-metadata. Du måste se till att bara licensservern har tillgång till licensserverns privata nyckel. Om någon annan har nyckeln kan de dekryptera och visa innehållet.
 

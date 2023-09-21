@@ -2,8 +2,7 @@
 title: Leverans och lagring
 description: Leverans och lagring
 copied-description: true
-exl-id: 84ccc140-02e6-4293-b087-13f87aee355b
-source-git-commit: e3ab3718add5ff1f31f8f72d8388a39a940f36a4
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Leverans och lagring {#delivery-and-storage}
 
-Primetime Ad Insertion har stöd för annonsutrymme i CDN:er (customer CDN) eller CDN:er på Adobe.
+Primetime Ad Insertion har stöd för annonsutrymme i CDN:er (customer CDN) eller CDN:er som ligger i Adobe.
 
 ## Stöd för flera CDN {#multi-cdn-support}
 

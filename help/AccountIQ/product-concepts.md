@@ -1,8 +1,7 @@
 ---
 title: IQ-ordlista för konto
 description: En ordlista med produktterminologier.
-exl-id: 2ee54442-9538-4c30-b999-265310b3935f
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 0%
@@ -19,11 +18,11 @@ En kontrollpanel med diagram som delar upp de aktuella segmenten i kategorier so
 
 ## Åtgärd {#action-def}
 
-En direkt eller indirekt händelse som är associerad med en [Åtgärd](#operation-def) som påverkar egenskaperna (t.ex. Delningspoäng eller antal enheter som används) för ett relaterat åtgärdssegment (eller kohort).
+En direkt eller indirekt händelse som är associerad med en [Åtgärd](#operation-def) som påverkar egenskaperna (t.ex. Delningspoäng eller antal enheter som används) för ett relaterat operationssegment (eller kohort).
 
 ## Aggregerad delningspoäng {#sharing-probability-level-def}
 
-En kontrollpanel med diagram som delar upp de aktuella segmenten i kategorier som Mycket låg, Låg, Måttlig, Hög och Mycket hög, tillsammans med varje kategori i procent av den totala mängden direktuppspelning för segmentet.
+En kontrollpanel med diagram som delar upp de aktuella segmenten i kategorier som Mycket låg, Låg, Måttlig, Hög och Mycket hög, tillsammans med varje kategori i procent av den totala mängden strömning för segmentet.
 
 ## AuthN {#authn-def}
 
@@ -51,7 +50,7 @@ Ett kluster är en samling platser och enheter. Klustren skapas genom att hitta 
 
 ### Mobilkluster {#mobile-cluster-def}
 
-Ett kluster som inte har några statiska enheter.
+Ett kluster utan statiska enheter.
 
 ### Statiskt kluster {#static-cluster-def}
 
@@ -72,7 +71,7 @@ Avståndet mellan de längsta punkterna i en uppsättning platser.
 
 ## Kornighet {#granularity-def}
 
-Med avseende på tidsram, periodens storlek. som en vecka eller en månad.
+Med avseende på tidsram, periodens storlek, t.ex. en vecka eller en månad.
 
 ## Branschmedelindex {#industry-avg-index-def}
 
@@ -80,7 +79,7 @@ Ett värde som beräknas för var och en av riskindexen (konton, användning, to
 
 ## IP {#ip-def}
 
-Den Internetprotokolladress som tilldelats en enhet av en Internetleverantör. Till exempel kabelleverantör och cellleverantör.
+Den Internetprotokolladress som tilldelats en enhet av en Internetleverantör. Till exempel kabelleverantör och celltjänstleverantör.
 
 ## Isoleringsläge {#isolation-mode-def}
 
@@ -160,7 +159,7 @@ En enhet med mycket låg mobilitet. Exempel: spelkonsol, övre ruta och tv-appar
 
 Det kallas även Period- eller Tidsfack och är tidsfönstret som innehåller aktiviteten för uppspelningsbegäran som representeras i användargränssnittet och tabellerna från början till slut.
 
-## MVPD i segment {#top-mvpds-def}
+## MVPD i segmentet {#top-mvpds-def}
 
 De översta (högst 10) MVPD-värdena i det valda segmentet mäts antingen genom Delningsnivå, Användning från delade konton eller övergripande delningspoäng.
 
@@ -178,7 +177,7 @@ Antalet unika MVPD-konton för en viss period som har interagerat med programmer
 
 Mer än 37 spelförfrågningar per månad.
 
-### Ovanliga användare {#infrequent-users-def}
+### Sällan användare {#infrequent-users-def}
 
 Färre än 9 uppspelningsbegäranden per månad.
 

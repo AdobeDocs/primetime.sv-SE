@@ -2,8 +2,7 @@
 title: Uppdatera en DRM-princip med Java API
 description: Uppdatera en DRM-princip med Java API
 copied-description: true
-exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Så här uppdaterar du en DRM-princip med Java API:
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Uppdatera DRM `Policy` genom att ange dess egenskaper, till exempel dess namn och användningsregler.
+1. Uppdatera DRM `Policy` genom att ange dess egenskaper, t.ex. dess namn och användningsregler.
 
    ```java
    // Change the DRM policy name.  

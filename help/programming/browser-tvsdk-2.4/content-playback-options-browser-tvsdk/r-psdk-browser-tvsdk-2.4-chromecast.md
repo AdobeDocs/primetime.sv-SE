@@ -1,8 +1,7 @@
 ---
 description: Du kan omvandla alla strömmar från en TVSDK-baserad avsändarapp och låta strömmen spelas upp på Chromecast med Browser TVSDK.
 title: Google Cast-app för webbläsare TVSDK
-exl-id: 71077467-8040-4f04-a43b-cc963701c426
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -19,12 +18,12 @@ Det finns två komponenter i en Cast-aktiverad app:
 
 * Avsändarappen som fungerar som fjärrkontroll.
 
-   Avsändarapparna innehåller smartphones, persondatorer osv. Appen kan utvecklas med systemspecifika SDK:er för iOS, Android och Chrome.
+  Avsändarapparna innehåller smarttelefoner, persondatorer och så vidare. Appen kan utvecklas med systemspecifika SDK:er för iOS, Android och Chrome.
 * Mottagarappen som körs på Chromecast och spelar upp innehållet.
 
-   >[!IMPORTANT]
-   >
-   >Den här appen kan bara vara en HTML5-app.
+  >[!IMPORTANT]
+  >
+  >Den här appen kan bara vara en HTML5-app.
 
 Avsändaren och mottagaren kommunicerar genom att använda SDK:er för att skicka meddelanden.
 
@@ -56,7 +55,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Skapa en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Upprätta en anslutning {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -67,18 +66,18 @@ För att upprätta en anslutning måste avsändaren och mottagaren utföra följ
 * Avsändaren måste läsa dokumentationen för plattformen på [Utveckling av avsändarprogram](https://developers.google.com/cast/docs/sender_apps).
 * Mottagaren använder Cast-mottagarens API:er för att upprätta en anslutning till avsändarappen. Till exempel:
 
-   ```js
-   window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
-   
-   window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
-   
-   var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
-   customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
-   
-   window.castReceiverManager.start(); 
-   ```
+  ```js
+  window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
+  
+  window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
+  
+  var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
+  customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
+  
+  window.castReceiverManager.start(); 
+  ```
 
 ## Meddelandehantering {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 

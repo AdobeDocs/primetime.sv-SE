@@ -2,8 +2,7 @@
 title: Loggfiler
 description: Loggfiler
 copied-description: true
-exl-id: 23de35da-1583-4718-ba35-e9d4bf750239
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
@@ -16,4 +15,4 @@ Loggfilerna som genereras av Adobe Access Server för skyddad strömning finns i
 
 >[!NOTE]
 >
->Om de aktuella loggfilerna tas bort eller flyttas medan servern körs, kanske inte loggfilen skapas igen och viss logginformation går förlorad.
+>Om de aktuella loggfilerna tas bort eller flyttas medan servern körs, kanske inte loggfilen skapas på nytt och viss logginformation går förlorad.

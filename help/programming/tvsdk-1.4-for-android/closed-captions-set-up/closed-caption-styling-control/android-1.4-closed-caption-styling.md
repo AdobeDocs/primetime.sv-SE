@@ -1,8 +1,7 @@
 ---
 description: Du kan ange formatinformation för textningsspår med klassen TextFormat. Detta anger formatet för alla undertexter som visas av spelaren.
 title: Styr textningsformat
-exl-id: 0083c141-9c03-46a2-902b-6e7eebaadea4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -42,7 +41,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
 1. Hämta en referens till ett objekt som implementerar `TextFormat` gränssnitt, anropa `TextFormatBuilder.toTextFormat` public-metod.
 
-   Detta returnerar `TextFormat` objekt som kan tillämpas på mediespelaren.
+   Detta returnerar en `TextFormat` objekt som kan tillämpas på mediespelaren.
 
    ```java
    public TextFormat toTextFormat()
@@ -52,31 +51,31 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
    * Få alla formatinställningar med `MediaPlayer.getCCStyle`.
 
-      Returvärdet är en instans av `TextFormat` gränssnitt.
+     Returvärdet är en instans av `TextFormat` gränssnitt.
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
    * Hämta inställningarna en åt gången via `TextFormat` get-metoder för gränssnitt.
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
 1. Gör något av följande om du vill ändra formatinställningarna:
 
@@ -86,41 +85,41 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
    * Använda metoden set `MediaPlayer.setCCStyle`, skicka en instans av `TextFormat` gränssnitt:
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
    * Använd `TextFormatBuilder` -klass, som definierar enskilda set-metoder.
 
-      The `TextFormat` -gränssnittet definierar ett objekt som inte kan ändras så att det bara finns get-metoder och inga set-metoder. Du kan bara ange parametrar för textningsformat med `TextFormatBuilder` klass:
+     The `TextFormat` -gränssnittet definierar ett objekt som inte kan ändras så att det bara finns get-metoder och inga set-metoder. Du kan bara ange parametrar för textningsformat med `TextFormatBuilder` klass:
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
 Att ställa in stilen för undertexter är en asynkron åtgärd, så det kan ta upp till några sekunder innan ändringarna visas på skärmen.
 
@@ -157,7 +156,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips: De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips! De faktiska teckensnitten som finns på en enhet kan variera och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
@@ -166,7 +165,7 @@ public TextFormatBuilder(
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDEL </span> - Standardstorleken </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - Cirka 30 % större än mediet </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än mediet </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - bildtextens standardstorlek, samma som medium </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medelvärdet </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 

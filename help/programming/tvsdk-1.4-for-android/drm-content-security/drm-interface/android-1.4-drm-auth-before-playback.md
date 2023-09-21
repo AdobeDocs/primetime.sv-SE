@@ -1,8 +1,7 @@
 ---
 description: När DRM-metadata för en video är åtskilda från medieströmmen ska du autentisera innan uppspelningen börjar.
 title: DRM-autentisering före uppspelning
-exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -15,7 +14,7 @@ När DRM-metadata för en video är åtskilda från medieströmmen ska du autent
 
 En videoresurs kan ha en associerad DRM-metadatafil. Till exempel:
 
-* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* url: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
 * &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
 Om så är fallet, använd `DRMHelper` metoder för att hämta innehållet i DRM-metadatafilen, tolka den och kontrollera om DRM-autentisering krävs.
@@ -165,7 +164,7 @@ Om så är fallet, använd `DRMHelper` metoder för att hämta innehållet i DRM
    } 
    ```
 
-1. Starta uppspelningen om autentiseringen lyckas.
+1. Om autentiseringen lyckas startar du uppspelningen.
 1. Om autentiseringen inte lyckas kontaktar du användaren och startar inte uppspelningen.
 
 Programmet måste hantera eventuella autentiseringsfel. Det gick inte att autentisera innan TVSDK spelas upp. Detta leder till ett feltillstånd. Det innebär att dess status ändras till FEL, att ett fel genereras som innehåller felkoden från DRM-biblioteket och att uppspelningen stoppas. Programmet måste lösa problemet, återställa spelaren och läsa in resursen igen.

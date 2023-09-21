@@ -1,7 +1,7 @@
 ---
 title: Versionsinformation om autentisering av iOS/tvOS 3.8.1
 description: Versionsinformation om autentisering av iOS/tvOS 3.8.1
-source-git-commit: 6a32450d99b84835d820b54679a73ffe5dc61636
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -18,9 +18,9 @@ Den här sidan beskriver nya funktioner, ändringar och kända fel i den här ve
 
 ## Byggnummer {#build-no-ios-tvos-sdk-381}
 
-Adobe Primetime-autentisering: iOS / tvOS 3.8.1
+Adobe Primetime-autentisering: iOS/tvOS 3.8.1
 
-Releasedatum: 26/05/2023
+Releasedatum: 2023-05-26
 
 
 

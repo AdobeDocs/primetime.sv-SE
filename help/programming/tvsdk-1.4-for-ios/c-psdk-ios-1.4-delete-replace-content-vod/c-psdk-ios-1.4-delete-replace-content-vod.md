@@ -1,8 +1,7 @@
 ---
 description: TVSDK stöder programmatisk borttagning och ersättning av annonsinnehåll i VOD-strömmar.
 title: Ta bort och ersätta annonser i VOD-strömmar
-exl-id: 44d75250-23ee-4ce3-a0c1-59bd488a5aba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -24,15 +23,15 @@ Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
    * `property PTTimeRangeCollectionType type` anger typen av tidsintervall.
    * `property NSArray* ranges` används för att ange tidsintervall.
 
-      Den förväntade typen av objekt i arrayen är `PTReplacementTimeRange` eller `CMTimeRange`.
+     Den förväntade typen av objekt i arrayen är `PTReplacementTimeRange` eller `CMTimeRange`.
 
-      >[!TIP]
-      >
-      >Alla objekt i arrayen måste vara av samma typ.
+     >[!TIP]
+     >
+     >Alla objekt i arrayen måste vara av samma typ.
 
    * `PTTimeRangeCollectionType` är en uppräkning som definierar beteendet för de intervall som definieras i `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`: Intervalltypen är *Mark*. Intervallen används för att markera intervallen i innehållet som annonser.
+      * `PTTimeRangeCollectionTypeMarkRanges`: Intervalltypen är *Märk*. Intervallen används för att markera intervallen i innehållet som annonser.
 
       * `PTTimeRangeCollectionTypeDeleteRanges`: Intervalltypen är Delete. De definierade intervallen tas bort från huvudinnehållet innan annonsinfogningen.
       * `PTTimeRangeCollectionTypeReplaceRanges`: Intervalltypen är Ersätt. De definierade intervallen ersätts från huvudområdet med annonser (annonseringsläget är inställt på `PTAdSignalingModeCustomTimeRanges`).
@@ -56,11 +55,11 @@ Följande ändringar i TVSDK har stöd för att ta bort och ersätta annonser.
 
       * Typ - Varning
       * Beskrivning - Annonssignaleringsläget definieras som anpassade intervall, men de anpassade intervallen definieras inte.
+
    * `INVALID_TIME_RANGES`
 
       * Typ - Varning
       * Beskrivning - Ett eller flera tidsintervall är ogiltiga och ignoreras eller ändras.
-
 
 **Föråldrade API:er**
 

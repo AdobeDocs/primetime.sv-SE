@@ -4,8 +4,7 @@ description: Nyheter i Primetime Offline Packager 2.1 och 2.3.1
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 911549b4-45b3-400a-b903-fa1479ee862b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -43,7 +42,7 @@ Följande problem finns i den här versionen.
 
 ## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
 
-### Lägsta systemkrav {#minimum-system-requirements}
+### Systemkrav {#minimum-system-requirements}
 
 Operativsystem som stöds
 
@@ -57,9 +56,9 @@ Maskinvarukrav
 
 * Hårddisk
 
-(Disk-SAS): Minst 10 GB med 7 500 v/min
+(disk-SAS): Minst 10 GB med 7 500 v/min
 
-(Disk-SSD): 400 MB/s läs-/skrivhastighet
+(Disk-SSD): läs-/skrivhastighet på 400 MBps
 
 (NAS): 1 GB dedikerad länk
 
@@ -95,7 +94,7 @@ Följande problem har också åtgärdats i den här versionen.
 
 ## Adobe Primetime Offline Packager 2.1 {#adobe-primetime-offline-packager-2}
 
-### Lägsta systemkrav {#minimum-system-requirements-1}
+### Systemkrav {#minimum-system-requirements-1}
 
 **Operativsystem som stöds**
 
@@ -111,8 +110,8 @@ Följande problem har också åtgärdats i den här versionen.
 
 * Hårddisk
 
-   * (Disk-SAS): Minst 10 GB med 7 500 v/min
-   * (Disk-SSD): 400 MB/s läs-/skrivhastighet
+   * (disk-SAS): Minst 10 GB med 7 500 v/min
+   * (Disk-SSD): läs-/skrivhastighet på 400 MBps
    * (NAS): 1 GB dedikerad länk
 
 **Programvarukrav**

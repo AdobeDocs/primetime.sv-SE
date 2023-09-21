@@ -1,16 +1,15 @@
 ---
-title: Fjärradministration och lokal leverans av iOS-nycklar
-description: Fjärradministration och lokal leverans av iOS-nycklar
+title: Fjärr- och lokal nyckelleverans från iOS
+description: Fjärr- och lokal nyckelleverans från iOS
 copied-description: true
-exl-id: de9c7070-46a9-453c-9d98-a9f161282cfa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-# Fjärradministration och lokal leverans av iOS-nycklar{#remote-and-local-ios-key-delivery}
+# Fjärr- och lokal nyckelleverans från iOS{#remote-and-local-ios-key-delivery}
 
 Adobe Primetime har stöd för två alternativ:
 

@@ -2,8 +2,7 @@
 title: Egenskaper för konfigurationsfil
 description: Egenskaper för konfigurationsfil
 copied-description: true
-exl-id: ce4193fa-d217-4134-b08e-715c2cc57c84
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Innan du kör licensgeneratorn anger du värden för licensgeneratoregenskaperna
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> Ange den lägsta klientversion som stöds. Om den inte anges stöds alla versioner som standard. Ange det här värdet för att kontrollera hur äldre klienter svarar på licenskrav som de inte stöder. Ange x (för Adobe Access x.0) där x är det största releasenumret. </td> 
+   <td colname="2" class="- topic/entry "> Ange den lägsta klientversion som stöds. Om den inte anges stöds alla versioner som standard. Ange det här värdet för att kontrollera hur äldre klienter svarar på licenskrav som de inte stöder. Ange x (för Adobe Access x.0) där x är det största versionsnumret. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 

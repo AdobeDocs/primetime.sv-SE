@@ -2,8 +2,7 @@
 title: Identitetsbaserade domäner
 description: Identitetsbaserade domäner
 copied-description: true
-exl-id: de7b6c8a-5227-4679-933a-3278921903d7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -17,10 +16,10 @@ I det här fallet har varje autentiserad användare sin egen domän och ett viss
 Referensimplementeringen implementerar följande logik för domänregistrering:
 
 1. Avgör vilket domännamn som ska tilldelas den här användaren. Domännamnet är * `namequalifier:username`* extraherat från autentiseringstoken. Om det inte finns någon autentiseringstoken returnerar du felet DOM_AUTHENTICATION_REQUIRED (503).
-1. Sök efter domännamnet i `DomainServerInfo` tabell. Om ingen post hittas infogar du en post i tabellen (standardvärden är autentisering krävs, max domänmedlemskap=5).
+1. Sök efter domännamnet i dialogrutan `DomainServerInfo` tabell. Om ingen post hittas infogar du en post i tabellen (standardvärden är autentisering krävs, max domänmedlemskap=5).
 1. Kontrollera om enheten redan har registrerats i domänen:
 
-   1. Sök efter domännamnet i dialogrutan `UserDomainMembership` tabell. Jämför varje dator-ID som hittas med dator-ID i begäran. Om det här är en ny dator lägger du till en post i `UserDomainMembership` tabell. Leta reda på matchande poster i `UserDomainRefCount` tabell. Lägg till en post om det inte finns någon post för det här maskin-GUID:t.
+   1. Sök efter domännamnet i dialogrutan `UserDomainMembership` tabell. Jämför varje dator-ID som hittas med dator-ID:t i begäran. Om det här är en ny dator lägger du till en post i `UserDomainMembership` tabell. Leta reda på matchande poster i `UserDomainRefCount` tabell. Lägg till en post om det inte finns någon post för det här maskin-GUID:t.
 
    1. Om det är en ny enhet och det maximala medlemskapet redan har nåtts returnerar du felet DOM_LIMIT_REACHED (502).
 
@@ -34,7 +33,7 @@ Referensimplementeringen implementerar följande logik för domänavregistrering
 
 1. Avgör vilket domännamn som ska tilldelas den här användaren. Domännamnet blir *namequalifier:användarnamn* extraheras från autentiseringstoken. Om det inte finns någon autentiseringstoken returnerar du felet DOM_AUTHENTICATION_REQUIRED (503).
 1. Sök efter det begärda domännamnet i `DomainServerInfo` tabell.
-1. Sök efter domännamnet i `UserDomainMembership` tabell. Jämför varje dator-ID som hittas med dator-ID i begäran. Sök efter motsvarande post i `UserDomainRefCount` tabell. Om ingen matchande post hittas returneras felet DEREG_DENIED (401).
+1. Sök efter domännamnet i dialogrutan `UserDomainMembership` tabell. Jämför varje dator-ID som hittas med dator-ID:t i begäran. Sök efter motsvarande post i `UserDomainRefCount` tabell. Om ingen matchande post hittas returneras felet DEREG_DENIED (401).
 
 1. Om detta inte är en förhandsgranskningsbegäran tar du bort posten från `UserDomainRefCount` tabell. Om det inte finns fler poster i tabellen för datorn tar du bort posten från `UserDomainMembership` och ange flaggan&quot;Key Rollover Required&quot; i `DomainServerInfo`.
 

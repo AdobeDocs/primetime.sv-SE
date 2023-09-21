@@ -1,8 +1,7 @@
 ---
 title: Översikt för programmerare
 description: Översikt för programmerare
-exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Adobe Primetime autentisering för TV Everywhere förmedlar dessa berättigandet
 
 ![](assets/user-ent-mediatedby-authn.png)
 
-*Bild: Tillstånd för användare medierat av Adobe Primetime-autentisering*
+*Bild: Användarrättigheter medieras av Adobe Primetime-autentisering*
 
 Adobe Primetime-autentisering fungerar som din proxy i utbyte med medverkande MVPD-program, så att du kan ge tittarna ett enhetligt gränssnitt för olika webbplatser. Med Adobe Primetime autentisering kan du även ge dina tittare autentisering och behörighet för enkel inloggning (SSO). Autentisering och auktorisering spåras för alla deltagande tjänster, så att en prenumerant inte behöver logga in igen efter sin första autentisering på sitt eget system.
 
@@ -48,7 +47,7 @@ Adobe Primetime-autentisering hanterar de faktiska berättigandearbetsflödena o
 
 * Ställa in din identitet. (Programmeraren är&quot;begärande&quot; i berättigandeflödet för Adobe Primetime-autentisering.)
 * Autentisera en användare med ett visst MVPD.  (MVPD är identitetsleverantören eller IdP i berättigandeflödet för Adobe Primetime-autentisering.)
-* Auktorisera en användare med det virtuella dokumentfönstret för en viss resurs.
+* Auktorisera en användare med det virtuella dokumentarkivet för en viss resurs.
 * Logga ut användaren.
 
 Programmeraren ansvarar för den översta webbsidan eller spelarprogrammet som utför följande:
@@ -60,7 +59,7 @@ Målet med Adobe Primetime-autentisering är att skapa ett enkelt, modulärt sä
 
 ## Förstå token {#understanding-tokens}
 
-Lösningen för berättigande av Adobe Primetime-autentisering bygger på generering av specifika datadelar som skapas när autentiserings- och auktoriseringsarbetsflödena har slutförts. Dessa datadelar kallas för tokens. Tokens har begränsad livslängd. När de upphör att gälla måste tokens utfärdas på nytt genom att autentiserings- och auktoriseringsarbetsflödena återupptas.
+Lösningen för berättigande av Adobe Primetime-autentisering bygger på generering av specifika datadelar som skapas när autentiserings- och auktoriseringsarbetsflödena har slutförts. Dessa datadelar kallas för tokens. Tokens har begränsad livslängd. När de förfaller måste tokens utfärdas på nytt genom att autentiserings- och auktoriseringsarbetsflödena återupptas.
 
 Mer information om variabler finns i följande avsnitt:
 
@@ -73,32 +72,32 @@ Mer information om variabler finns i följande avsnitt:
 
 Tre typer av token utfärdas under autentiserings- och auktoriseringsarbetsflödena. AuthN- och AuthZ-tokens är&quot;långlivade&quot;, vilket ger kontinuitet i användarens visningsupplevelse. Media Token är en kortlivad token som ger stöd för branschens bästa metoder för att förhindra bedrägerier genom strömavhämtning. Programmerarna anger TTL-värden (time-to-live) för varje typ av token baserat på avtal som har gjorts med MVPD. Programmerarna bestämmer sig för ett TTL-värde som passar ert företag och era kunder bäst.
 
-* **AuthN-token** (&quot;Långlivad&quot;): Vid lyckad autentisering skapar Adobe Primetime-autentisering en AuthN-token som är kopplad både till den begärande enheten och en globalt unik identifierare (GUID).
+* **AuthN-token** (&quot;Långvarig&quot;): Vid lyckad autentisering skapar Adobe Primetime-autentisering en AuthN-token som är associerad med både den begärande enheten och en globalt unik identifierare (GUID).
    * Adobe Primetime-autentisering skickar AuthN-token till Access Enabler, som cachelagrar den säkert på klientens system.  Även om AuthN-token finns där och ännu inte har gått ut, är den tillgänglig för alla program som använder Adobe Primetime-autentisering. Åtkomstaktiveraren använder AuthN-token för auktoriseringsflödet.
    * Vid ett givet tillfälle cachelagras bara en AuthN-token. När en ny AuthN-token utfärdas och en gammal redan finns, skriver Adobe Primetime-autentiseringen över den cachelagrade token.
-* **AuthZ-token** (&quot;Långlivad&quot;): Vid lyckad auktorisering skapar Adobe Primetime-autentisering en AuthZ-token som är associerad med den begärande enheten och en specifik skyddad resurs.  Den skyddade resursen identifieras av ett unikt resurs-ID.
+* **AuthZ-token** (&quot;Lång tid&quot;): Vid lyckad auktorisering skapar Adobe Primetime-autentisering en AuthZ-token som är associerad med den begärande enheten och en specifik skyddad resurs.  Den skyddade resursen identifieras av ett unikt resurs-ID.
    * Adobe Primetime-autentisering skickar AuthZ-token till Access Enabler, som cachelagrar den säkert på det lokala systemet. Åtkomstaktiveraren använder sedan AuthZ-token för att skapa den kortlivade medietoken som används för visningsåtkomst.
    * Vid en given tidpunkt cachelagras bara en AuthZ-token per resurs. Adobe Primetime-autentisering kan cachelagra flera AuthZ-token, så länge de är kopplade till olika resurser. När en ny AuthZ-token utfärdas och en gammal redan finns för samma resurs, skriver Adobe Primetime-autentiseringen över den cachelagrade token.
-* **Medietoken** (&quot;Kortlivad&quot;): Åtkomstaktiveraren använder AuthZ-token för att generera en kort livslängd (standard: 7 minuter) Medietoken. Detta är den punkt där en lyckad uppspelningsbegäran anses ha inträffat.
+* **Medietoken** (&quot;Kortlivad&quot;): Åtkomstaktiveraren använder AuthZ-token för att generera en kort (standard: 7 minuter) medietoken. Detta är den punkt där en lyckad uppspelningsbegäran anses ha inträffat.
    * Innan du ger åtkomst till den skyddade resursen måste medieservern använda en autentiseringskomponent från Adobe Primetime, Media Token Verifier, för att validera medietoken.
-   * Eftersom medietoken inte är bunden till enheten är dess livslängd betydligt kortare (standard: 7 minuter) än de långvariga AuthN- och AuthZ-tokenerna.
+   * Eftersom medietoken inte är bunden till enheten är dess livstid betydligt kortare (standard: 7 minuter) än för de långlivade AuthN- och AuthZ-tokenerna.
    * Den kortlivade medietoken är begränsad till engångsbruk och cachelagras aldrig. Den hämtas från Adobe Primetime autentiseringsserver varje gång ett auktoriserings-API anropas.
 
 ### Tokenlagring {#token-storage}
 
 I Access Enabler lagras långlivade tokens (AuthN och AuthZ) på platser som är specifika för dess miljö:
 
-* **Flash 10.1** (eller högre): De långvariga tokenerna lagras som lokala delade objekt.
-* **HTML5**: De långvariga variablerna lagras säkert i webbläsarens lokala lagringsplats i HTML5.
+* **Flash 10.1** (eller senare): De långvariga token lagras som lokala delade objekt.
+* **HTML5**: De långvariga token lagras säkert i webbläsarens lokala lagringsplats i HTML5.
 * **iOS**: De långlivade tokenerna lagras på ett beständigt monteringsbord, där de kan nås av andra Adobe Primetime-autentiserings-klientprogram.
-* **Android**: De långvariga tokenerna lagras i en delad databasfil, där de kan nås av andra klientprogram för Adobe Primetime-autentisering.
-* **Klientlösa API-enheter**: Tokens lagras på Primetimes autentiseringsservrar.
+* **Android**: De långvariga tokenerna lagras i en delad databasfil, där de kan nås av andra Adobe Primetime-klientprogram för autentisering.
+* **Klientlösa API-enheter**: Token lagras på Primetimes autentiseringsservrar.
 
 ### Tokensäkerhet {#token-security}
 
 Adobe Primetime Authentication Server signerar digitalt alla långlivade token med enhets-ID (härledd från enhetens maskinvaruegenskaper). Den digitala signaturen skiljer sig åt i hur den genereras, skyddas och valideras beroende på miljön:
 
-* **Flash 10.1** (eller senare) - Enhets-ID:t är beroende av enhets-ID:t, ett unikt certifikat som utfärdas av Adobe-servern för personalisering. Säkerheten motsvarar DRM-tekniken i FAXS. Den här valideringen på serversidan jämför det unika enhets-ID:t i token med enhetsautentiseringsuppgifterna (som kommuniceras säkert från Flash Player till Adobe Primetime-autentisering). Enhetens autentiseringsuppgifter identifierar även FAXS-klientversionen och Flash Player (eller AIR)-versionen som den utfärdades till. Enhetens bindning är starkare än med HTML5, så TTL-värdet (time-to-live) för tokens är vanligtvis längre med Flash.
+* **Flash 10.1** (eller senare) - Enhets-ID:t är beroende av enhets-ID:t, ett unikt certifikat som utfärdas av Adobe-servern för personalisering. Säkerheten motsvarar DRM-tekniken i FAXS. Den här valideringen på serversidan jämför det unika enhets-ID:t i token med enhetsautentiseringsuppgifterna (som kommuniceras säkert från Flash Player till Adobe Primetime-autentisering). Enhetens autentiseringsuppgifter identifierar även FAXS-klientversionen och den Flash Player (eller AIR) version som den utfärdades till. Enhetens bindning är starkare än med HTML5, så TTL-värdet (time-to-live) för tokens är vanligtvis längre med Flash.
 * **HTML5** - Enheten anpassas individuellt på klientsidan. Den använder egenskaper som är tillgängliga via JavaScript för att skapa ett pseudoenhets-ID som innehåller webbläsar- och operativsystemsversioner, en IP-adress och ett webbläsar-cookie-GUID (globalt unik identifierare). Detta enhets-ID jämförs med enhetens pseudoenhets-ID. Eftersom IP-adressen kan ändras vid normal användning, även under samma session, lagras HTML5-token på två platser i Adobe Primetime-autentiseringen: localStorage och sessionStorage. Om IP-ändringarna och sessionStorage-token i övrigt fortfarande är giltiga, behålls sessionen. Med HTML5 är enhetsbindningen inte lika stark, så TTL för tokens är vanligtvis kortare än för Flash.
 * **Inbyggda klienter** (iOS och Android) - De långvariga token innehåller information om enhets-ID-personalisering och är därmed bundna till den begärande enheten. Autentiserings- och auktoriseringsbegäranden skickas via HTTPS, och information om enhets-ID signeras digitalt av biblioteket för åtkomstaktivering innan den skickas till serverdelsservrarna. På serversidan valideras enhets-ID-informationen mot den associerade digitala signaturen.
 * **Klientlösa API-klienter** - Den klientlösa API-lösningen har en uppsättning säkerhetsprotokoll som innefattar digital signering av alla API-anrop. Token som genereras under tillståndsflödena lagras säkert på Adobe Primetime autentiseringsservrar.
@@ -109,8 +108,8 @@ Adobe Primetime-autentisering validerar varje långvarig token för att säkerst
 
 Program på olika plattformar delar inte ut token. Det finns många skäl till detta, bland annat följande:
 
-* Enligt beskrivning i [Tokenlagring](#token-storage), varierar metoden för att lagra tokens mellan olika plattformar (till exempel Local Shared Objects för Flash, WebStorage för JavaScript).
-* Graden av tokensäkerhet skiljer sig mellan olika plattformar. Flash-tokens är till exempel starkt bundna till en enhet med FAXS. Token i en ren JavaScript-miljö har inte samma DRM-stöd som i Flash.  Att dela JS-tokens med Flash-program ökar risken för att mindre säkra tokens utnyttjar en säkrare miljö.
+* Enligt beskrivning i [Tokenlagring](#token-storage), varierar metoden för att lagra tokens mellan olika plattformar (till exempel Local Shared Objects for Flash, WebStorage for JavaScript).
+* Graden av tokensäkerhet skiljer sig mellan olika plattformar. Flash-tokens är till exempel starkt bundna till en enhet med FAXS. Token i en ren JavaScript-miljö har inte samma DRM-stöd som i Flash.  Genom att dela JS-token med Flash-program ökar risken för att mindre säkra tokens utnyttjar en säkrare miljö.
 
 ## Programmeringsintegreringslivscykel {#prog-integ-lifecycle}
 
@@ -127,13 +126,13 @@ I följande flödesdiagram visas den övergripande processen för att bekräfta 
 
 ![](assets/ent-flowchart.png)
 
-*Bild: Process för att bekräfta berättigande*
+*Bild: Processen för att bekräfta berättigande*
 
 ### Autentiseringssteg {#authn-steps}
 
-I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetime.  Detta är den del av tillståndsprocessen i vilken en programmerare avgör om användaren är en giltig kund till ett MVPD.  I det här scenariot är användaren en giltig prenumerant på ett MVPD.  Användaren försöker visa skyddat innehåll med en programmerares Flash-program:
+I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetime.  Detta är den del av tillståndsprocessen i vilken en programmerare avgör om användaren är en giltig kund till ett MVPD.  I det här scenariot är användaren en giltig prenumerant på ett MVPD.  Användaren försöker visa skyddat innehåll med en programmerares program för Flash:
 
-1. Användaren bläddrar till programmerarens webbsida, som läser in programmerarens Flash-program och Adobe Primetime Authentication Access Enabler-komponenterna på användarens dator. Programmet Flash använder Access Enabler för att ange programmerarens identifiering med Adobe Primetime-autentisering, och Adobe Primetime-autentiseringar använder Access Enabler med konfigurations- och lägesdata för den programmeraren (&quot;begäraren&quot;). Åtkomstaktiveraren måste ta emot dessa data från servern innan andra API-anrop kan utföras. Teknisk anmärkning: Programmeraren anger sin identitet med åtkomstaktiverarens `setRequestor()` metod, mer information finns i [Integreringshandbok för programmerare](/help/authentication/programmer-integration-guide-overview.md).
+1. Användaren går till programmerarens webbsida, som läser in programmerarens program för Flash och Adobe Primetime Authentication Access Enabler-komponenterna på användarens dator. Flashen använder Access Enabler för att ange programmerarens identitet med Adobe Primetime-autentisering, och Adobe Primetime-autentiseringar använder Access Enabler med konfigurations- och tillståndsdata för den programmeraren (&quot;begäraren&quot;). Åtkomstaktiveraren måste ta emot dessa data från servern innan andra API-anrop kan utföras. Teknisk kommentar: Programmeraren anger sin identitet med åtkomstaktiverarens `setRequestor()` metod; mer information finns i [Integreringshandbok för programmerare](/help/authentication/programmer-integration-guide-overview.md).
 1. När användaren försöker visa programmerarens skyddade innehåll, visar programmerarens program användaren en lista med distributörer (MVPD) som användaren väljer en leverantör från.
 1. Användaren omdirigeras till en Adobe Primetime-autentiseringsserver, där en [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) begäran för det användarvalda MVPD skapas. Denna begäran skickas som en autentiseringsbegäran för programmeraren till MVPD. Beroende på vilket system som används i MVPD dirigeras användarens webbläsare sedan antingen till webbplatsen för MVPD för att logga in, eller så skapas en iFrame-inloggning i programmerarens app.
 1. I båda fallen (omdirigering eller iFrame) accepterar MVPD begäran och visar sin inloggningssida.
@@ -141,8 +140,8 @@ I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetim
 1. När användaren valideras skapar MVPD ett svar (SAML &amp; encrypted) som MVPD skickar tillbaka till Adobe Primetime-autentiseringen.
 1. Adobe Primetime-autentisering tar emot MVPD-svaret, ser att en HTTP-session för Adobe Primetime-autentisering är öppen, validerar SAML-svaret från MVPD och dirigerar om tillbaka till programmerarens webbplats.
 1. Programmerarens webbplats läses in igen, Access Enabler läses in igen och programmeraren anropar setRequestor() igen.  Det andra anropet till setRequestor() är nödvändigt eftersom den aktuella konfigurationen har ändrats - det finns nu en flagga som informerar Access Enabler om att en AuthN-token väntar på att genereras på servern.
-1. Åtkomstaktiveraren ser att det finns en väntande autentisering och begär token från Adobe Primetime autentiseringsserver. Token hämtas från servern genom att Flash Player DRM-funktionerna anropas.
-1. AuthN-token lagras i programmerarens Flash Player LSO-cache. autentiseringen är nu klar och sessionen tas bort från Adobe Primetime autentiseringsserver.
+1. Åtkomstaktiveraren ser att det finns en väntande autentisering och begär token från Adobe Primetime autentiseringsserver. Token hämtas från servern genom att Flashens Player DRM-funktioner anropas.
+1. AuthN-token lagras i programmerarens LSO-cache för Flash Player. Autentiseringen är nu slutförd och sessionen förstörs på Adobe Primetime autentiseringsserver.
 
 ### Auktoriseringssteg {#authz-steps}
 
@@ -159,11 +158,11 @@ Följande steg fortsätter från [Autentiseringssteg](#authn-steps):
 
 Det första steget i att arbeta med Adobe Primetime-autentisering är att registrera dig hos Adobe eller hos en av Adobe Primetime auktoriserade partners.
 
-När du registrerar dig anger du en lista över de domäner du ska kommunicera från med Adobe Primetime-autentisering. Domänerna för Turner Broadcasting System omfattar till exempel tbs.com och tnt.tv som Adobe Primetime autentiseringsregistrerade domäner. Var och en av dessa webbplatser får åtkomst till Adobe Primetime-autentisering och tilldelas ett eget begärande-ID (till exempel&quot;TBS&quot; och&quot;TNT&quot;). Om du bestämmer dig för att lägga till ytterligare webbplatser måste du informera Adobe om de ytterligare domännamnen för att få dem placerade i listan över tillåtna domäner och få ytterligare begärande-ID:n.
+När du registrerar dig anger du en lista över de domäner du ska kommunicera från med Adobe Primetime-autentisering. Domänerna för Turner Broadcasting System omfattar till exempel tbs.com och tnt.tv som autentiseringsregistrerade domäner för Adobe Primetime. Var och en av dessa webbplatser får åtkomst till Adobe Primetime-autentisering och tilldelas ett eget begärande-ID (till exempel&quot;TBS&quot; och&quot;TNT&quot;). Om du bestämmer dig för att lägga till ytterligare webbplatser måste du informera Adobe om de ytterligare domännamnen för att få dem placerade i listan över tillåtna domäner och få ytterligare begärande-ID:n.
 
 >[!WARNING]
 >
->Kontrollera att testservern finns på en registrerad domän som du tänker använda i produktionen medan du testar integreringen. Begäranden, även testbegäranden, som kommer från icke-godkända domäner ignoreras. Om du t.ex. har begärt att domain.com ska användas i produktionen måste du se till att du distribuerar din testintegration under domain.com, test.domain.com och staging.domain.com.
+>Kontrollera att testservern finns på en registrerad domän som du tänker använda i produktionen medan du testar integreringen. Begäranden, även testbegäranden, som kommer från icke-godkända domäner ignoreras. Om du t.ex. har begärt att domain.com ska användas i produktionen kontrollerar du att du distribuerar testintegreringen under domain.com, test.domain.com och staging.domain.com.
 >
 >Begäranden som innehåller användarnamn och/eller lösenord i URL:en ignoreras även om domäner vitlistas. Exempel: `//username@registered-domain/`
 
@@ -195,10 +194,10 @@ Det första steget är att registrera dig hos Adobe eller hos en auktoriserad pa
 
 Nästa steg är att integrera Access Enabler i ditt befintliga mediespelarprogram eller på din webbsida:
 
-* Du kan bädda in Flash-versionen, `AccessEnabler.swf`, i en videospelare baserad på Flash eller så kan du bädda in den direkt i HTML på din webbsida. Du kan kommunicera med Access Enabler SWF i antingen ActionScript eller JavaScript. Bas-API:t är ActionScript, men om du föredrar att arbeta med JavaScript finns det ett fullständigt wrapper-bibliotek som du kan använda på dina sidor.
-* För miljöer som inte är Flash kan du:
+* Du kan bädda in Flashens version, `AccessEnabler.swf`, i en videospelare som är baserad på Flash eller så kan du bädda in den direkt i HTML på webbsidan. Du kan kommunicera med Access Enabler SWF i antingen ActionScript eller JavaScript. Bas-API:t är ActionScript, men om du föredrar att arbeta med JavaScript finns det ett fullständigt wrapper-bibliotek som du kan använda på dina sidor.
+* I miljöer som inte är Flashar kan du:
    * Använd HTML5-/JavaScript-versionen, AccessEnabler.js, och kommunicera med den via JavaScript API
-   * Använd AIR Native Extension för Adobe Primetime-autentisering för att kombinera systemspecifik kod med inbyggda ActionScript-klasser
+   * Använd AIR Native Extension för Adobe Primetime-autentisering för att kombinera systemspecifik kod med inbyggda klasser i ActionScriptet
    * Använd en av de inbyggda klientversionerna av Access Enabler-biblioteket (iOS eller Android)
 
 ### 2. Hantera autentisering och auktorisering {#authn-authz}
@@ -215,7 +214,6 @@ Kommunikationen mellan Access Enabler och webbsidan eller spelarappen är asynkr
 >* Autentisering sker som SAML-utbyte mellan Adobe Primetime-autentisering som tjänsteleverantör (SP) och MVPD som identitetsleverantör (IdP).
 >
 >* Auktoriseringen använder ett serverbaserat (server-till-server) webbtjänstutbyte mellan Adobe Primetime-autentisering (SP) och ett MVPD (IdP).
-
 
 
 #### 2b. Ange ett berättigandeanvändargränssnitt {#entitlement-ui}
@@ -235,7 +233,7 @@ Du måste integrera Adobe Primetime-autentiseringsmedietoken Verifier-komponente
 I de flesta fall ansvarar mediespelaren för att hantera användarutloggningar via ett enkelt API för åtkomstaktivering. När du anropar logOut() gör Access-funktionen följande:
 
 * Loggar ut den aktuella användaren
-* Raderar all autentiserings- och auktoriseringsinformation för den utloggade användaren
+* Rensar all autentiserings- och auktoriseringsinformation för den utloggade användaren
 * Tar bort alla AuthN- och AuthZ-token från användarens lokala system
 
 Om användaren lämnar datorn inaktiv tillräckligt länge för att tokenerna ska upphöra att gälla, kan användaren fortfarande återgå till sessionen och initiera utloggningen. Adobe Primetime-autentisering säkerställer att alla tokens tas bort och meddelar även MVPD att ta bort deras session.
@@ -257,7 +255,7 @@ Här beskrivs olika sätt som användar-ID representeras i Adobe Primetime auten
 **Sammanfattning**
 
 * MVPD-användar-ID är ett generellt, men inte garanterat, beständigt unikt ID som **som genererats från PDF:erna och skickats till Adobe om autentiseringen lyckades**. Den är i allmänhet konsekvent i alla nätverk med några undantag.
-* MVPD-användar-ID:t innehåller inte PII och är INTE ett kontonummer. Den behöver inte exponeras i krypterad form eftersom vi har validerat med alla dokumentskyddsinspektörer att ingen PII skickas.
+* MVPD-användar-ID:t innehåller inte PII och är INTE ett kontonummer. Den behöver inte exponeras i krypterad form eftersom vi har verifierat med alla de alternativa dokumentationsdokumenten att ingen PII skickas.
 
 
 Hur du använder användar-ID beror på användningsfallet:

@@ -1,17 +1,16 @@
 ---
-description: Det finns vissa API:er som kan hjälpa dig att använda Adobe Flash Player.
-title: Användbara API:er för Adobe Flash Player
-exl-id: 3a80088b-382e-4624-bbaa-6d7e9f0126e2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: Det finns vissa API:er som kan hjälpa dig att använda Flashen Player Adobe.
+title: Användbara API:er för Flashen Player Adobe
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
-# Användbara API:er för Adobe Flash Player{#helpful-apis-for-the-adobe-flash-player}
+# Användbara API:er för Flashen Player Adobe{#helpful-apis-for-the-adobe-flash-player}
 
-Det finns vissa API:er som kan hjälpa dig att använda Adobe Flash Player.
+Det finns vissa API:er som kan hjälpa dig att använda Flashen Player Adobe.
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -19,7 +18,7 @@ Det finns vissa API:er som kan hjälpa dig att använda Adobe Flash Player.
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Om det stöds kan du använda `forceFlash` parameter som åsidosätter sekvensen för bestämning av uppspelningstekniken och tvingar implementeringen att använda Flash Player.
+Om det stöds kan du använda `forceFlash` -parameter som åsidosätter sekvensen för bestämning av uppspelningsteknik och tvingar implementeringen att använda Flashen Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 

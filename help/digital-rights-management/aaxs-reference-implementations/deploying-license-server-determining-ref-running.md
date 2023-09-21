@@ -2,8 +2,7 @@
 title: Kontrollerar om Reference Implementation License Server körs som den ska
 description: Kontrollerar om Reference Implementation License Server körs som den ska
 copied-description: true
-exl-id: ef28e169-f8d2-4c7f-b606-aa4e811aae9b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Det finns flera sätt att avgöra om servern har startats korrekt. Visa [!DNL catalina.log] loggarna kanske inte är tillräckliga eftersom licensservern loggar till sina egna loggfiler. Följ stegen nedan för att kontrollera att referensimplementeringen har startats korrekt.
 
-* Kontrollera [!DNL AdobeFlashAccess.log] -fil. Här skriver Reference Implementation logginformation. Platsen för den här loggfilen anges av din [!DNL log4j.xml] och kan ändras så att den pekar på valfri plats. Som standard kommer loggfilen att skrivas ut i arbetskatalogen där du har kört Catalina.
+* Kontrollera [!DNL AdobeFlashAccess.log] -fil. Här skriver Reference Implementation logginformation. Platsen för loggfilen anges av din [!DNL log4j.xml] och kan ändras så att den pekar på valfri plats. Som standard kommer loggfilen att skrivas ut i arbetskatalogen där du har kört Catalina.
 
 * Navigera till följande URL: `https:///flashaccess/license/v4<your server:server port>`. Du bör se texten&quot;License Server is setup correctly&quot;.
 
@@ -30,7 +29,7 @@ Ett annat sätt att testa om servern körs som den ska är att paketera en del a
 
    Mer information om hur du skapar principer med Policy Manager finns i [Användning av kommandorad](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
 
-1. Ange `encrypt.license.serverurl` -egenskapen i [!DNL flashaccesstools.properties] till licensserverns URL (t.ex. `https:// localhost:8080/`). The [!DNL flashaccesstools.properties] filen finns under [!DNL \Reference Implementation\Command Line Tools] mapp.
+1. Ange `encrypt.license.serverurl` -egenskapen i [!DNL flashaccesstools.properties] till licensserverns URL (till exempel `https:// localhost:8080/`). The [!DNL flashaccesstools.properties] filen finns under [!DNL \Reference Implementation\Command Line Tools] mapp.
 
 1. Paketera en del av innehållet med följande kommando:
 

@@ -1,15 +1,14 @@
 ---
 description: Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK för Android, som implementeras i Java.
-title: Översikt
-exl-id: 21d224fe-a843-4200-ad13-9b8eba52d74f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Ökning
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview}
+# Ökning {#overview}
 
 Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK för Android, som implementeras i Java.
 

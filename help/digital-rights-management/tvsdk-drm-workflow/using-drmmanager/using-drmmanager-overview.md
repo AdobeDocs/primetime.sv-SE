@@ -2,8 +2,7 @@
 title: Använda översikten över klassen DRMManager
 description: Använda översikten över klassen DRMManager
 copied-description: true
-exl-id: 941a69fb-3085-45d6-9176-08ebb93cada4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Du kan också använda `DRMManager` för att autentisera användaren mot en Prim
 
 ## Hantera DRMStatus-händelser {#handling-drmstatus-events}
 
-The `DRMManager` skickar en `DRMStatusEvent` objektet efter ett anrop till `loadVoucher()` metoden har slutförts. Om en licens hämtas har detail-egenskapen för event-objektet värdet: `DRM.voucherObtained`och egenskapen voucher innehåller `DRMVoucher` -objekt. Om ingen licens hämtas har detail-egenskapen fortfarande värdet: `DRM.voucherObtained`; voucher-egenskapen är emellertid null. Det går inte att hämta en licens om du t.ex. använder `LoadVoucherSetting` av `localOnly` och det finns ingen lokal cachelagrad licens. Om `loadVoucher()` anropet inte slutförs korrekt, kanske på grund av ett autentiserings- eller kommunikationsfel, kan `DRMManager` skickar en `DRMErrorEvent` eller `DRMAuthenticationErrorEvent` i stället.
+The `DRMManager` skickar en `DRMStatusEvent` objektet efter ett anrop till `loadVoucher()` metoden har slutförts. Om en licens hämtas har detail-egenskapen för event-objektet värdet: `DRM.voucherObtained`och egenskapen voucher innehåller `DRMVoucher` -objekt. Om ingen licens hämtas har detail-egenskapen fortfarande värdet: `DRM.voucherObtained`; egenskapen voucher är emellertid null. Det går inte att hämta en licens om du t.ex. använder `LoadVoucherSetting` av `localOnly` och det finns ingen lokal cachelagrad licens. Om `loadVoucher()` anropet inte slutförs korrekt, kanske på grund av ett autentiserings- eller kommunikationsfel, kan `DRMManager` skickar en `DRMErrorEvent` eller `DRMAuthenticationErrorEvent` i stället.
 
 ## Hantera DRMAuthenticationComplete-händelser{#handling-drmauthenticationcomplete-events}
 

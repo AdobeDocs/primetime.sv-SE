@@ -2,8 +2,7 @@
 title: Översikt över out-of-band-licenser
 description: Översikt över out-of-band-licenser
 copied-description: true
-exl-id: 31a9f097-74e8-41d0-9b9a-1c2a08d3e63a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -53,6 +52,6 @@ Efter enhetsregistreringen använder programmet det genererade ID:t på samma s�
 
 När användaren av enheten anropar alternativet DRM-fabriksåterställning rensas enhetscertifikatet. Om du vill fortsätta spela upp det skyddade innehållet måste programmet gå igenom enhetsregistreringsproceduren igen. Om programmet skickar en inaktuell förgenererad licens, kommer Primetime DRM-klienten att avvisa den eftersom licensen krypterades för ett äldre enhets-ID.
 
-* Flash API: [DRMManager.resetDRMVouchers()](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html#resetDRMVouchers()) - (Kan endast anropas som svar på vissa DRM-felkoder som inte kan återställas.)
+* Flash-API: [DRMManager.resetDRMVouchers()](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html#resetDRMVouchers()) - (Kan endast anropas som svar på vissa DRM-felkoder som inte kan återställas.)
 * iOS API: [DRMManager resetDRM](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/interface_d_r_m_manager.html#a0dd6c9662428583196e0419d3ea69446)
 * Android API: [DRMManager.resetDRM()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMManager.html#resetDRM(com.adobe.ave.drm.DRMOperationErrorCallback,%20com.adobe.ave.drm.DRMOperationCompleteCallback))

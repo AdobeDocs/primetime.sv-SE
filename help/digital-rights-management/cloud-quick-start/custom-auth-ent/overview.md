@@ -2,8 +2,7 @@
 title: BEES - översikt
 description: BEES - översikt
 copied-description: true
-exl-id: 481af72b-40a3-4f33-9e91-990dc5308596
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Primetime Cloud DRM använder anonym licensleverans som standard. Det innebär a
 Licensbegäran innehåller DRM-principen som användes under paketeringen/krypteringen av innehållet. DRM-principen används för att generera den DRM-licens som returneras till klienten. I standardscenariot måste du fatta alla DRM-principbeslut när innehållet paketeras. Kunder som vill ha bättre kontroll över dessa arbetsflöden har följande alternativ:
 
 1. Integrera Primetime-autentisering för att lägga till extra behörighetskontroller före uppspelning.
-1. Skapa en lokal tillståndstjänst som Primetime Cloud DRM frågar efter innan någon enhet kan spela upp innehåll som du har paketerat.
+1. Skapa en lokal tillståndstjänst som Primetime Cloud DRM frågar efter innan någon enhet kan spela upp innehåll som du har packat.
 
 Din lokala tillståndstjänst måste ge ett svar till Primetime Cloud DRM som innehåller följande två datadelar:
 
@@ -28,4 +27,4 @@ Din lokala tillståndstjänst måste ge ett svar till Primetime Cloud DRM som in
 
 Dessa avgör om en enhet får spela upp innehållet och vilken DRM-princip som ska användas för att generera DRM-licensen (om `isAllowed` är sant).
 
-Det här dokumentet innehåller det du behöver göra för att uppnå alternativ 2 ovan: Implementera din egen lokala externa tillståndstjänst och gör den tillgänglig för Primetime Cloud DRM för innehåll som du har paketerat.
+Det här dokumentet beskriver vad du behöver göra för att uppnå alternativ 2 ovan: Implementera din egen lokala externa tillståndstjänst och gör den tillgänglig för Primetime Cloud DRM för innehåll som du har paketerat.

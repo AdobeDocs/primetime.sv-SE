@@ -1,8 +1,7 @@
 ---
 description: Webbläsare-TVSDK buffrar ibland videoströmmen för att ge en smidigare visning. Du kan konfigurera hur spelaren buffrar.
 title: Buffring
-exl-id: 786379d1-0f2d-44a9-b580-1c8dcbd3fd17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
@@ -23,13 +22,13 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
 >
 >Om du inte anger parametrar för buffertkontroll innan uppspelningen startar, blir mediaspelaren som standard 2 sekunder för den inledande bufferten och 30 sekunder för den pågående uppspelningsbufferttiden.
 
-* Om du vill använda buffertparametrarna använder du MediaPlayers `bufferControlParameters` -attribut.
+* Använd MediaPlayers buffertparametrar `bufferControlParameters` -attribut.
 
-   Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och uppspelningsbufferttiden på 30 sekunder:
+  Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och uppspelningsbufferttiden på 30 sekunder:
 
-   ```js
-   var params = new AdobePSDK.BufferControlParameters(2000, 30000);
-   ```
+  ```js
+  var params = new AdobePSDK.BufferControlParameters(2000, 30000);
+  ```
 
 ## Buffringstidsregler {#section_7EF2947931654CCC8DAB9172391FA4EB}
 
@@ -41,4 +40,4 @@ När videon återges fortsätter Browser TVSDK att buffra nya fragment tills den
 
 >[!TIP]
 >
->Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en jämnare uppspelning under en längre tid. Men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.
+>Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en mjuk uppspelning under en längre tid, men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.

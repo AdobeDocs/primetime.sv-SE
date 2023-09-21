@@ -1,8 +1,7 @@
 ---
 description: När mediespelaren byter sin aktuella profil till en ny profil kan du hämta information om växeln, bland annat när den växlades, information om bredd och höjd eller varför en annan bithastighet användes.
 title: Hämta information om profilväxling
-exl-id: b46909fe-666a-4730-8922-15c3eb7a1cba
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -20,9 +19,9 @@ När mediespelaren byter sin aktuella profil till en ny profil kan du hämta inf
 
    * `profile`: Identifierare för den nya profilen som används.
    * `time`: Den direktuppspelningstid som växeln inträffade vid.
-   * `description`: Textuell beskrivning av orsaken till en bithastighetsändring, som en sträng med semikolonavgränsade nyckel-/värdepar. Innehåller högst ett `Reason` och en `Bitrate`. Om informationen inte är tillgänglig eller bithastigheten inte ändrades är strängen tom.
+   * `description`: Textuell beskrivning av orsaken till en bithastighetsändring, som en sträng med semikolonavgränsade nyckel/värde-par. Innehåller högst ett `Reason` och en `Bitrate`. Om informationen inte är tillgänglig eller bithastigheten inte ändrades är strängen tom.
 
-      <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
+     <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
        <thead> 
          <tr> 
          <th colname="col1" class="entry"> Nyckelnamn </th> 
@@ -51,20 +50,20 @@ När mediespelaren byter sin aktuella profil till en ny profil kan du hämta inf
        </tbody> 
        </table>
 
-      Här är några exempel på returnerade `description` strängar:
+     Här är några exempel på returnerade `description` strängar:
 
-      ```
-      "Bitrate::=up;Reason::=Network Adaptation;" 
-      
-      "Bitrate::=down;Reason::=Failover;"
-      ```
+     ```
+     "Bitrate::=up;Reason::=Network Adaptation;" 
+     
+     "Bitrate::=down;Reason::=Failover;"
+     ```
 
    * `width`: Heltal som anger bredden i pixlar.
-   * `height`: Heltal som anger höjden i pixlar.
+   * `height`: Heltal som anger höjd i pixlar.
 
-      >[!NOTE]
-      >
-      >Bredd- och höjddata är bara tillgängliga när de ingår i `RESOLUTION` i M3U8-manifestet. Om informationen inte ingår i M3U8 anges egenskaperna width och height till 0 eftersom de inte ingår i profilinformationen.
+     >[!NOTE]
+     >
+     >Bredd- och höjddata är bara tillgängliga när de ingår i `RESOLUTION` i M3U8-manifestet. Om informationen inte ingår i M3U8 anges egenskaperna width och height till 0 eftersom de inte ingår i profilinformationen.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 

@@ -1,8 +1,7 @@
 ---
 description: Använd hjälpklassen AuditudeSettings, som utökar klassen MetadataNode, för att ställa in Adobe Primetime-metadata för annonsbeslut.
 title: Ställ in metadata för annonsinfogning
-exl-id: da5bfdc1-2c55-45f2-b2a8-3e32450cb30d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Använd hjälpklassen AuditudeSettings, som utökar klassen MetadataNode, för a
 >
 >Adobe Primetime annonsbeslut kallades tidigare Auditude.
 
-Advertising metadata is in the `MediaResource.Metadata` -egenskap. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
+Reklammetadata finns i `MediaResource.Metadata` -egenskap. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
 
 1. Bygg `AuditudeSettings` -instans.
 
@@ -48,7 +47,7 @@ Advertising metadata is in the `MediaResource.Metadata` -egenskap. När du start
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. Skapa en `MediaResource` -instans genom att använda medieströmmens URL och de annonseringsmetadata som skapats tidigare.
+1. Skapa en `MediaResource` -instans med medieströmmens URL och de annonseringsmetadata som skapats tidigare.
 
    ```java
    MediaResource mediaResource = new MediaResource( 

@@ -2,8 +2,7 @@
 title: Distribuera Adobe Primetime DRM
 description: Distribuera Adobe Primetime DRM
 copied-description: true
-exl-id: 64a96d70-502c-48b8-9f43-59f4001a7ab6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -21,8 +20,8 @@ Steg på hög nivå för att distribuera Primetime DRM är:
 1. Skapa en licensserver med SDK eller distribuera Primetime DRM-servern för skyddad direktuppspelning.
 1. Skapa innehållspaket och principhanteringsverktyg för att paketera innehåll, använda de medföljande verktygen för innehållsförberedelse eller licensiera en av paketen i Adobe HTTP Dynamic Streaming.
 1. Definiera användningsregler för ditt innehåll och skapa profiler som stöder dessa regler.
-1. Paketera innehållet med hjälp av paketerings- och policyhanteringsverktygen.
-1. Utveckla videoapplikationer som kunderna kan använda för att visa skyddat innehåll med Flash Player eller Adobe AIR, eller använd en etablerad OVP (Online Video Platform) som stöder Primetime DRM.
+1. Paketera innehållet med paketerings- och policyhanteringsverktygen.
+1. Utveckla videoprogram med vilka konsumenter kan visa skyddat innehåll med Flash Player eller Adobe AIR, eller använda en etablerad OVP (Online Video Platform) som stöder Primetime DRM.
 1. Distribuera en SWF-fil för användning med Flash Player på webbplatsen eller lägg upp installationsprogrammet för Adobe AIR för nedladdning.
 
 De här stegen beskrivs närmare i följande avsnitt, med referenser till andra dokument som innehåller ytterligare information.
@@ -55,7 +54,7 @@ Mer information om hur du skapar verktyg för innehållspaketering och policyhan
 
 Med de användningsregler som stöds av SDK måste ni definiera och skapa profiler som stöder er organisations affärsmodell och sedan paketera innehållet med dessa profiler. När reglerna tillämpas på innehållet under paketeringen kan ni behålla kontrollen över innehållet oavsett hur brett det distribueras.
 
-Profilerna i Adobe Primetime DRM har stöd för en mängd olika användningsregler, bland annat:
+Profilerna i Adobe Primetime DRM har stöd för ett stort antal olika användningsregler, bland annat:
 
 * Ange hur många dagar en licens är giltig när en konsument börjar titta på innehållet.
 * Tillåter licenscache-lagring.
@@ -66,6 +65,6 @@ Mer information om paketering av innehåll finns i *Skydda innehåll*. Mer infor
 
 ## Utveckla program för videouppspelning {#develop-applications-for-video-playback}
 
-Om du vill att tittarna ska kunna få tillgång till och visa innehåll utvecklar du ett videouppspelningsprogram med Flash Player eller Adobe AIR. När du väl har utvecklat ett videouppspelningsprogram måste du distribuera det till konsumenterna. Om du utvecklar ett program med Flash Player ska du lägga det på din organisations webbplats. Om du utvecklar ett program med Adobe® AIR® skickar du installationsprogrammet för AIR så att användarna kan hämta och installera programmet på sina datorer.
+Om du vill att tittarna ska kunna få tillgång till och visa innehåll utvecklar du ett videouppspelningsprogram med Flash Player eller Adobe AIR. När du väl har utvecklat ett videouppspelningsprogram måste du distribuera det till konsumenterna. Om du utvecklar ett program med Flash Player kan du lägga det på din organisations webbplats. Om du utvecklar ett program med Adobe® AIR® kan du skicka installationsprogrammet för AIR så att användarna kan hämta och installera programmet på sina datorer.
 
-Mer information om hur du utvecklar anpassade videouppspelningsprogram för användning med Adobe Primetime DRM finns i kapitlet&quot;Arbeta med video&quot; i [Utvecklarhandbok för ActionScript 3.0](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html), [Adobe Video Technology Center](https://www.adobe.com/devnet/video/)och Open Source Media Framework.
+Mer information om hur du utvecklar anpassade videouppspelningsprogram för användning med Adobe Primetime DRM finns i kapitlet&quot;Arbeta med video&quot; i [ActionScript 3.0 Developer Guide](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html), [Adobe Video Technology Center](https://www.adobe.com/devnet/video/)och Open Source Media Framework.

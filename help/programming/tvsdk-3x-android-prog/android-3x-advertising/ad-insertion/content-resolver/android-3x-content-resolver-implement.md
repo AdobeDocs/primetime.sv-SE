@@ -1,8 +1,7 @@
 ---
 description: Du kan implementera egna innehållslösningar baserat på standardlösare.
 title: Implementera en anpassad innehållshanterare
-exl-id: 1f442e2b-65fc-4040-ada2-7a49e488bdef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -67,7 +66,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
    itemLoader.load(resource, id, config);
    ```
 
-1. Godkänn `AdvertisingMetadata` till TVSDK enligt följande:
+1. Skicka `AdvertisingMetadata` till TVSDK enligt följande:
    1. Skapa en `AdvertisingMetadata` -objekt.
    1. Spara `AdvertisingMetadata` objekt till `MediaPlayerItemConfig`.
 
@@ -90,7 +89,7 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
       void doCleanup();
       ```
 
-      Du får `advertisingMetadata` från objektet som skickades `doConfigure`:
+      Du får din `advertisingMetadata` från objektet som skickades `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -116,22 +115,22 @@ När TVSDK genererar en ny affärsmöjlighet itererar företaget genom de regist
 
       * Om annonsen lyckas ringer du `process(List<TimelineOperation> proposals)` och `notifyCompleted(Opportunity opportunity)` på `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
       * Om annonsen inte lyckas ringer du `notifyResolveError` på `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         Till exempel:
+        Till exempel:
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 

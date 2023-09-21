@@ -2,8 +2,7 @@
 title: Anonyma domäner
 description: Anonyma domäner
 copied-description: true
-exl-id: a9358582-ad25-4016-94d2-cd82b4c00573
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
@@ -17,14 +16,14 @@ I det här fallet tillhör ett stort antal enheter en enda domän och autentiser
 Referensimplementeringen implementerar följande logik för domänregistrering:
 
 1. Tolka domännamnet från begärande-URL:en.
-1. Sök efter domännamnet i `DomainServerInfo` tabell. Om ingen post hittas infogar du en post i tabellen (standardvärden: autentisering krävs inte och inget medlemskap är maximalt).
+1. Sök efter domännamnet i dialogrutan `DomainServerInfo` tabell. Om en post inte hittas infogar du en post i tabellen (standardvärden: autentisering krävs inte och inget maximalt medlemskap krävs).
 1. Om autentisering krävs för den begärda domänen kontrollerar du att en giltig autentiseringstoken har inkluderats i begäran och att den matchar autentiseringsnamnutrymmet, om det har angetts i databasen.
 
    1. Om autentisering krävs men ingen giltig auth-token har angetts returneras fel `DOM_AUTHENTICATION_REQUIRED (503)`.
 
 1. Kontrollera om enheten redan har registrerats i domänen:
 
-   1. Sök efter domännamnet i `DomainMembership` tabell. Jämför varje dator-GUID som hittas med maskin-GUID i begäran. Om det här är en ny dator lägger du till en post i `DomainMembership` tabell.
+   1. Sök efter domännamnet i dialogrutan `DomainMembership` tabell. Jämför varje dator-GUID som hittas med maskin-GUID i begäran. Om det här är en ny dator lägger du till en post i `DomainMembership` tabell.
 
    1. Om det är en ny enhet och det maximala medlemskapet redan har nåtts returneras ett fel `DOM_LIMIT_REACHED (502)`.
 
@@ -43,4 +42,4 @@ Referensimplementeringen implementerar följande logik för domänavregistrering
 
 1. Om detta inte är en förhandsgranskningsbegäran tar du bort posten från `DomainMembership` och ange `Key Rollover Required` flagga in `DomainServerInfo`.
 
-I det här fallet går det inte att matcha dator-ID:t fullständigt eftersom ett stort antal datorer kan ansluta till domänen. I stället används det slumpmässiga maskin-GUID som tilldelats datorn under personaliseringen.
+I det här fallet är det inte möjligt att matcha dator-ID:t fullständigt eftersom ett stort antal datorer kan ansluta till domänen. I stället används det slumpmässiga maskin-GUID som tilldelats datorn under personaliseringen.

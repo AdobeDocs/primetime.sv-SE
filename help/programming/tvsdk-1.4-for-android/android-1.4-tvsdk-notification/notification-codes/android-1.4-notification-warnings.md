@@ -1,8 +1,7 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
 title: Varningsmeddelandekoder
-exl-id: e787fad5-fbdc-416d-b03d-8c84f4884c5a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 2%
@@ -24,7 +23,7 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <th colname="2" class="entry"> Namn </th> 
    <th colname="3" class="entry"> InnerNotification </th> 
    <th colname="4" class="entry"> Metadatanycklar </th> 
-   <th colname="5" class="entry"> Kommentarer </th> 
+   <th colname="5" class="entry"> Kommentar </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -52,7 +51,7 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 201000 </span> </td> 
    <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_FAILED </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
    <td colname="5"> <p>Annonslösaren kunde inte matcha/infoga annonsinnehållet. Uppspelningen kan fortsätta. </p> </td> 
   </tr> 
@@ -161,4 +160,4 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
  </tbody> 
 </table>
 
->[OBS!] adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` nyckel.
+>[OBS!] adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` -tangenten.

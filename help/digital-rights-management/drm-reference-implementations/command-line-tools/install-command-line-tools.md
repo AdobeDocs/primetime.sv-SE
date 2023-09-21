@@ -2,8 +2,7 @@
 title: Installera kommandoradsverktygen
 description: Installera kommandoradsverktygen
 copied-description: true
-exl-id: a4775d96-3a3b-4896-bdfb-c7bc51347166
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -20,6 +19,6 @@ ht-degree: 0%
    * [!DNL libs/] - Innehåller JAR-filer för kommandoradsverktyg
    * [!DNL samples/] - Innehåller ant build-skriptet ( [!DNL build-samples.xml]) och Java-källfiler.
 
-      >[!NOTE]
-      >
-      >Java-källfilerna visar hur du använder API:erna för Primetime DRM SDK. Kör [!DNL build-samples.xml] Ant script in [!DNL samples/].
+     >[!NOTE]
+     >
+     >Java-källfilerna visar hur du använder API:erna för Primetime DRM SDK. Om du vill skapa och köra exemplen kör du [!DNL build-samples.xml] Ant script in [!DNL samples/].

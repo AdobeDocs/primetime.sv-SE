@@ -1,8 +1,7 @@
 ---
-description: Du kan tillåtelselista era iOS-program genom att använda Adobe Machotools-verktyget.
+description: Du kan tillåtelselista era iOS-appar med Adobe Machotools.
 title: Tillåtelselista ditt iOS-program
-exl-id: ff647647-6c5f-4a10-9040-8600f6103b99
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Tillåtelselista ditt iOS-program {#allowlist-your-ios-application}
 
-Du kan tillåtelselista era iOS-program genom att använda Adobe Machotools-verktyget.
+Du kan tillåtelselista era iOS-appar med Adobe Machotools.
 
 När du slutför ett TVSDK-program kan du vanligtvis använda kommandoradsverktygen i Adobe Primetime DRM för att tillåtelselista din app.
 

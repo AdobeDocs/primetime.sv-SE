@@ -1,8 +1,7 @@
 ---
 title: Android-programregistrering
 description: Android-programregistrering
-exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -40,7 +39,7 @@ En programsats är en JWT-token som innehåller information om programmet. Alla 
 * Ange ett namn och en version för programmet och välj de plattformar som det ska vara tillgängligt på. Android, i vårt fall.
 * Ange ett domännamn genom att välja i en lista över domäner som redan har konfigurerats för din programmerare.
 * Skicka ändringarna till servern och gå sedan tillbaka till fliken Registrerade program i Kanalen.
-* Du bör se en lista med alla registrerade program. Välj **Hämta** på programmet som du just har skapat. Du kan behöva vänta några minuter innan programsatsen är klar för nedladdning.
+* Du bör se en lista med alla registrerade program. Välj **Ladda ned** på programmet som du just har skapat. Du kan behöva vänta några minuter innan programsatsen är klar för nedladdning.
 * En textfil hämtas. Använd innehållet som programsats.
 
 Mer information finns i [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md)

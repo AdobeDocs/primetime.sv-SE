@@ -1,8 +1,7 @@
 ---
 title: Integrera medietokenverifieraren
 description: Integrera medietokenverifieraren
-exl-id: 1688889a-2e30-4d66-96ff-1ddf4b287f68
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -53,13 +52,13 @@ Biblioteket för medietokentverifieraren finns i Java-arkivet `mediatoken-verifi
 Arkivet innehåller alla beroenden och certifikatnyckelbehållare. Standardlösenordet för den inkluderade certifikatnyckelbehållaren är &quot;123456&quot;.
 
 * Verifieringsbiblioteket kräver JDK version 1.5 eller senare.
-* Använd den önskade JCE-leverantören för signaturalgoritmen SHA256WithRSA.
+* Använd den önskade JCE-providern för signaturalgoritmen SHA256WithRSA.
 
 
 **Verifieringsbiblioteket måste vara det enda sättet som används för att analysera tokeninnehållet. Programmerare bör inte tolka token och extrahera själva data eftersom tokenformatet inte är garanterat och kan komma att ändras senare.** Det är bara API:t för verifieraren som garanterat fungerar korrekt. Tolkning av strängen direkt kan fungera tillfälligt, men orsaka problem i framtiden när formatet kan ändras. Verifierings-API:t hämtar information från token, till exempel:
 
 * Är token giltig ( `isValid()` metod)?
-* Resurs-ID som är knutet till token ( `getResourceID()` metod), detta kan jämföras med (och bör matcha) den andra parametern i `setToken()` funktionsåteranrop. Om det inte matchar kan det tyda på bedrägligt beteende.
+* Resurs-ID som är knutet till token ( `getResourceID()` ); den kan jämföras med (och den ska matcha) den andra parametern i `setToken()` funktionsåteranrop. Om det inte matchar kan det tyda på bedrägligt beteende.
 * Tiden då token utfärdades (`getTimeIssued()` metod).
 * TTL (`getTimeToLive()` metod).
 * Ett anonymiserat autentiserings-GUID togs emot från MVPD (`getUserSessionGUID()` metod).

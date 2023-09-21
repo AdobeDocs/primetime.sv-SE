@@ -2,8 +2,7 @@
 title: Arbeta med principuppdateringslistor
 description: Arbeta med principuppdateringslistor
 copied-description: true
-exl-id: 71715eec-e6a3-4640-b17f-ec0c38caf73e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
@@ -27,6 +26,6 @@ När du arbetar med listor för principuppdatering används en `PolicyUpdateList
 1. Kontrollera att signaturen är giltig och att listan signerades av rätt licensservercertifikat genom att anropa `PolicyUpdateList.verifySignature()`.
 1. Om du vill kontrollera om en post har återkallats skickar du princip-ID:t `String` till `PolicyUpdateList.isRevoked()`. Listan kan även skickas till `HandlerConfiguration` och kommer att verkställas när licenserna utfärdas.
 
-Lägga till fler poster i en befintlig `PolicyUpdateList`, läser in en befintlig principuppdateringslista. Skapa ett nytt `PolicyUpdateListFactory` -instans. Utlysning P `olicyUpdateListFactory.addEntries` om du vill lägga till alla poster från den gamla listan i den nya listan. Utlysning `PolicyUpdateListFactory.addRevocationEntry` eller `addUpdatedEntry` om du vill lägga till nya återkallnings- eller uppdateringsposter i PolicyUpdateList.
+Lägga till fler poster i en befintlig `PolicyUpdateList`, läser in en befintlig principuppdateringslista. Skapa ett nytt `PolicyUpdateListFactory` -instans. Ring P `olicyUpdateListFactory.addEntries` om du vill lägga till alla poster från den gamla listan i den nya listan. Utlysning `PolicyUpdateListFactory.addRevocationEntry` eller `addUpdatedEntry` om du vill lägga till nya återkallnings- eller uppdateringsposter i PolicyUpdateList.
 
 Exempelkod som visar hur du skapar en principuppdateringslista, läser in en befintlig principuppdateringslista och kontrollerar om en princip har återkallats finns i `com.adobe.flashaccess.samples.policyupdatelist` `.CreatePolicyUpdateList` i kommandoradskatalogen för Reference Implementation Tools &quot;samples&quot;.

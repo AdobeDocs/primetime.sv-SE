@@ -1,15 +1,14 @@
 ---
 description: En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade taggar i en ström, anpassade markörer för annonseringsläge och så vidare. Affärsmöjlighetsgeneratorn skickar dessa placeringsmöjligheter till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa generatorer och innehållslösare för affärsmöjligheter
-exl-id: 2ce859c4-6bf6-4ec5-82b1-2bc6a2316fd9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
 
 ---
 
-# Översikt {#customize-opportunity-generators-and-content-resolvers-overview}
+# Ökning {#customize-opportunity-generators-and-content-resolvers-overview}
 
 En affärsmöjlighetsgenerator identifierar placeringsmöjligheter med anpassade taggar i en ström, anpassade markörer för annonseringsläge och så vidare. Affärsmöjlighetsgeneratorn skickar dessa placeringsmöjligheter till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 

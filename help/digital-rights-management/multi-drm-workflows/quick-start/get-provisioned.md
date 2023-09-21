@@ -1,8 +1,7 @@
 ---
 description: För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste du konfigurera Adobe Cert- och ExpressPlay-konton med din Adobe-representant.
 title: Skaffa licenser (konton, etc.)
-exl-id: 2543d997-3495-4545-9395-072c07431aba
-source-git-commit: a0917e128862184ce18050792c2ee2ac265050d2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -17,7 +16,7 @@ För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste 
 
    Ange den e-postadress som du vill använda som kontaktpunkt för din Adobe-representant. Adobe skapar sedan två konton åt dig:
 
-   * ***Certifikatportalkonto*** - ( https://certportal.primetime.adobe.com): The *Adobe Access/Primetime DRM Certificate Enrollment Management Team* skickar ett e-postmeddelande till de adresser du har angett. E-postmeddelandet innehåller URL:en för Adobe cert-portalen, tillsammans med en länk till dokumentationen för registrering av Adobe-certifikat (de senaste dokumenten finns här: [Handbok för registrering av certifikat](../../../digital-rights-management/certificate-enrollment-guide/about-certs.md)).
+   * ***Certifikatportalkonto*** - ( https://certportal.primetime.adobe.com) : *Adobe Access/Primetime DRM Certificate Enrollment Management Team* skickar ett e-postmeddelande till de adresser du har angett. E-postmeddelandet innehåller URL:en för Adobe cert-portalen, tillsammans med en länk till dokumentationen för registrering av Adobe-certifikat (de senaste dokumenten finns här: [Handbok för registrering av certifikat](../../../digital-rights-management/certificate-enrollment-guide/about-certs.md)).
 
    * ***ExpressPlay-konto*** - Adobe skickar ett e-postmeddelande till dig som innehåller en länk som du använder för att registrera ditt ExpressPlay Admin-konto.
 
@@ -29,7 +28,7 @@ För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste 
 
 1. På Adobe cert-portalen kan du begära en *testversion* cert.
 
-   För Multi-DRM-testversionen kommer ett och samma testcertifikat att omfatta alla dessa aspekter av innehållsskydd: paketering, licensiering och transport. Du måste själv ange [CSR](../../../digital-rights-management/certificate-enrollment-guide/request-certs/gen-cert-signing-req.md) för att göra en förfrågan om certifikat:
+   För Multi-DRM-testversionen kommer ett testcertifikat att omfatta alla dessa aspekter av innehållsskydd: paketering, licensiering och transport. Du måste själv ange [CSR](../../../digital-rights-management/certificate-enrollment-guide/request-certs/gen-cert-signing-req.md) för att göra en förfrågan om certifikat:
    <!--<a id="fig_op1_xwj_wv"></a>-->
 
    ![](assets/cert_portal_trial_request-web.png)
@@ -41,7 +40,7 @@ För att komma igång med Primetime DRM Cloud, som drivs av ExpressPlay, måste 
 
 1. Skapa ett ExpressPlay-administratörskonto.
 
-   Följ länken till ExpressPlay som Adobe har gett dig. Då öppnas *Skapa ett konto* på ExpressPlay. Fyll i de obligatoriska uppgifterna och skicka in formuläret. Du får ett e-postmeddelande från `operations@expressplay.com` som innehåller en aktiveringslänk som är bra i en vecka. Konfigurera ExpressPlay-tjänsten när du har aktiverat:
+   Följ länken till ExpressPlay som Adobe har gett dig. Då öppnas *Skapa ett konto* på ExpressPlay. Fyll i de uppgifter som krävs och skicka in formuläret. Du får ett e-postmeddelande från `operations@expressplay.com` som innehåller en aktiveringslänk som är bra i en vecka. Konfigurera ExpressPlay-tjänsten när du har aktiverat:
    <!--<a id="fig_cjl_ztk_wv"></a>-->
 
    ![](assets/expressplay_create_service-web.png)

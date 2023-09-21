@@ -1,8 +1,7 @@
 ---
 description: Med termen Direkt on avses att förhandsladda en eller flera kanaler så att en användare som väljer en kanal eller byter kanal ser innehållet spelas upp direkt. Bufferten görs redan när användaren börjar titta.
 title: Direkt på
-exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

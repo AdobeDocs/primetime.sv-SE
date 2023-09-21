@@ -1,8 +1,7 @@
 ---
 description: QoS (Quality of Service) ger en detaljerad bild av hur videomotorn fungerar. TVSDK tillhandahåller detaljerad statistik om uppspelning, buffring och enheter.
 title: Spåra på fragmentnivå med hjälp av inläsningsinformation
-exl-id: 29e82a93-783f-4e32-ab5e-12713a60cfec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
@@ -57,17 +56,17 @@ TVSDK tillhandahåller även information om följande hämtade resurser:
       <tr> 
       <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
       <td colname="col1"> <span class="codeph"> int </span> </td> 
-      <td colname="col2"> Index för motsvarande spår, om det är känt. annars 0. </td> 
+      <td colname="col2"> Index för motsvarande spår, om det är känt; annars 0. </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
-      <td colname="col2"> Namnet på motsvarande spår, om det är känt. annars null. </td> 
+      <td colname="col2"> Namnet på motsvarande spår, om det är känt, annars null. </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <span class="codeph"> Sträng </span> </td> 
-      <td colname="col2"> Typ av motsvarande spår, om den är känd. annars null. </td> 
+      <td colname="col2"> Typ av motsvarande spår, om den är känd, annars null. </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> type </span> </td> 

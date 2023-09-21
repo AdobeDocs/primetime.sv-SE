@@ -1,15 +1,14 @@
 ---
-title: Integrationsplan för MVPD Direct
-description: Integrationsplan för MVPD Direct
-exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+title: Integrationsplan för MVPD
+description: Integrationsplan för MVPD
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 0%
 
 ---
 
-# MVPD-startguide: Plan för direktintegrering av MVPD {#mvpd-dir-int-plan}
+# MVPD-startguide: MVPD-direktintegreringsplan {#mvpd-dir-int-plan}
 
 >[!NOTE]
 >
@@ -21,9 +20,9 @@ Välkommen till Adobe Primetime-autentisering för TV Everywhere.  Vi ser fram e
 
 >[!NOTE]
 >
->Det här är Kickstart Guide for Multichannel Video Programming Distributors (MVPDs). Om du är programmerare (innehållsleverantör) kan du läsa [Programmerarnas Kickstart Guide](/help/authentication/programmer-kickstart-guide.md).
+>Det här är Kickstart-guiden för distributörer av flerkanalsvideo (MVPD). Om du är programmerare (innehållsleverantör), se [Programmerarnas Kickstart Guide](/help/authentication/programmer-kickstart-guide.md).
 
-Support är alltid tillgänglig genom Primetimes biljettsystem för autentisering på Zendesk. Här hittar du också exempel, dokumentation och videokurser för våra processer. För att kunna använda [Zendesk](https://adobeprimetime.zendesk.com/)måste du registrera dig och skapa ett konto på https://tve.zendesk.com/home. Det finns ingen gräns för hur många användare du kan registrera och vem som kan se eller posta kommentarer på en arkiverad biljett. Alla supportfrågor ska riktas till: tve-support på adobe.com
+Support är alltid tillgänglig genom Primetimes biljettsystem för autentisering på Zendesk. Här hittar du också exempel, dokumentation och videokurser för våra processer. För att kunna använda [Zendesk](https://adobeprimetime.zendesk.com/)måste du registrera dig och skapa ett konto på https://tve.zendesk.com/home. Det finns ingen gräns för hur många användare du kan registrera och vem som kan se eller posta kommentarer på en arkiverad biljett. Alla supportfrågor kan ställas till: tve support på adobe.com
 
 **Teamkontakter**:
 
@@ -41,8 +40,8 @@ Objekt som ska klargöras, se [MVPD-integreringsfunktioner](/help/authentication
 
 Det finns flera inställningar som behöver beskrivas i detalj:
 
-* **MVPD:s logotyp-URL** - Det här är en fil med följande dimensioner: 112 x 33 pixlar. Logotypen visas av programmerare på deras webbplatser när användaren klickar på knappen &quot;Logga in&quot; för att välja sin Pay TV-leverantör.
-* **TTL-värden (time-to-live)** - TTL anges vanligtvis av MVPD under autentiserings-/auktoriseringsprocessen. Adobe kan dock åsidosätta dessa TTL-värden och ange olika värden beroende på vad som överenskommits av både Programmer och MVPD.
+* **MVPD:s logotyp URL** - Det här är en fil med följande dimensioner: 112 x 33 pixlar. Logotypen visas av programmerare på deras webbplatser när användaren klickar på knappen &quot;Logga in&quot; för att välja sin Pay TV-leverantör.
+* **TTL-värden (time to live)** - TTL anges vanligtvis av MVPD under autentiserings-/auktoriseringsprocessen. Adobe kan dock åsidosätta dessa TTL-värden och ange olika värden beroende på vad som överenskommits av både Programmer och MVPD.
 * **Visningsnamn** - Detta visas av programmerare på deras webbplatser när användaren klickar på knappen &quot;Logga in&quot; för att välja sin Pay TV-leverantör.
 * **Testa autentiseringsuppgifter** - Båda profilerna (staging och production) bör ha en lista med testautentiseringsuppgifter.
 
@@ -52,9 +51,9 @@ Det finns flera inställningar som behöver beskrivas i detalj:
 
 >[!CAUTION]
 >
->Ett viktigt meddelande för varje enskild MVPD: användar-ID:t får INTE innehålla någon PII-kod (personligt identifierbar information), information som kan användas fristående eller tillsammans med annan information för att identifiera, kontakta eller hitta användaren.
+>Ett viktigt meddelande för varje MVPD: användar-ID:t får INTE innehålla någon PII (Personally Identiitable Information), information som kan användas fristående eller tillsammans med annan information för att identifiera, kontakta eller hitta användaren.
 
-## 2. Metadatautbyte {#metadata-ex}
+## 2. Utbyte av metadata {#metadata-ex}
 
 De två sidorna måste utbyta metadata för alla berörda miljöer (produktion, mellanlagring osv.).
 
@@ -85,8 +84,8 @@ Utvecklingsfasens varaktighet bestäms efter att specifikationerna har granskats
 
 Adobe erbjuder olika miljöer för olika faser av utvecklingsprocessen:
 
-* **Prekvalificering** (FÖRE KVAL): Miljön PRE-QUAL innehåller nästa release-kandidat. Adobe integrerar till att börja med nya partners i den här miljön innan man uppgraderar integreringen till releasemiljön. Partners har två veckor på sig att testa PRE-QUAL-miljön och måste uttryckligen begära ändringar i PRE-QUAL-konfigurationen (kontakta Adobe för mer information om ändringsförfrågningsprocessen). Felkorrigeringar utlöser nya distributioner i den här miljön.
-* **Frigör** (UTGÅVA): Adobe nuvarande produktionsbygge distribueras till en aktiv miljö här.
+* **Prekvalificering** (PRE-QUAL): I PRE-QUAL-miljön finns nästa release-kandidat. Adobe integrerar till att börja med nya partners i den här miljön innan man uppgraderar integreringen till releasemiljön. Partners har två veckor på sig att testa PRE-QUAL-miljön och måste uttryckligen begära ändringar i PRE-QUAL-konfigurationen (kontakta Adobe för mer information om ändringsförfrågningsprocessen). Felkorrigeringar utlöser nya distributioner i den här miljön.
+* **Frigör** (RELEASE): Adobe nuvarande produktionsbygge distribueras till en aktiv miljö här.
 
 Mer information om hur du använder Adobe-miljöer finns i [Förstå Adobe-miljöer](/help/authentication/understanding-the-adobe-environments.md)
 

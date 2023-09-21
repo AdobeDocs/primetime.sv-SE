@@ -2,8 +2,7 @@
 title: Fysisk säkerhet och åtkomst
 description: Fysisk säkerhet och åtkomst
 copied-description: true
-exl-id: be4d278e-9e87-405c-8478-b3ad8515398f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -18,4 +17,4 @@ Som regel rekommenderas att din Adobe Access-miljö finns i ett säkert serverru
 
 För att uppnå en extremt hög säkerhetsnivå måste skyddet även omfatta nätaggregat, UPS-aggregat, nätverksutrustning och annan tillhörande utrustning. Eventuella avbrott i de här objekten påverkar servern, särskilt om den alltid måste vara igång. Åtkomsten måste bestå av två delar, till exempel märke och PIN-kod eller märke och fingeravtryck. Dessutom måste skräddarsydda anordningar installeras på dörren för att förhindra att behöriga personer tar in obehöriga personer med sig.
 
-Allmän information och rekommendationer om fysiska säkerhetsstandarder finns på ISO FAQs-webbplatsen.
+Allmän information och rekommendationer om fysiska säkerhetsstandarder finns på ISO FAQs-sajten.

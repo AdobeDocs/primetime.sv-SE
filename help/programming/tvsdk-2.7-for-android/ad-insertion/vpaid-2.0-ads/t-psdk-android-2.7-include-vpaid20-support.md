@@ -1,8 +1,7 @@
 ---
 description: Om du vill lägga till stöd för VPAID 2.0 lägger du till en anpassad annonsvy och lämpliga avlyssnare.
 title: Implementera VPAID 2.0-integrering
-exl-id: 8a6b81e7-1034-48fc-87aa-4cb8ab305d15
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -44,8 +43,7 @@ Så här lägger du till stöd för VPAID 2.0:
    >
    >Ta bara bort den anpassade annonsvyn när återställning anropas. Till exempel:
    >
-   >
-   ```
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -55,8 +53,7 @@ Så här lägger du till stöd för VPAID 2.0:
    >
    >Slutligen måste du ta bort den anpassade annonsvyn från `FrameLayout`. Till exempel:
    >
-   >
-   ```
+   >```
    >if (_playerFrame != null) 
    >       _playerFrame.removeAllViews(); 
    >```

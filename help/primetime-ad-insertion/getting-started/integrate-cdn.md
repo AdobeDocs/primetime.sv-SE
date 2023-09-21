@@ -1,8 +1,7 @@
 ---
 title: Integrera ditt CDN
 description: Integrera ditt CDN
-exl-id: b93031a2-6e66-4de1-9cf2-b0260f88fe13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Primetime Ad Insertion fungerar som en proxy mellan klientprogrammet och -manifestationerna, inte själva videosegmenten. Distribuera ditt innehåll till valfritt CDN och skicka URL:en till Primetime Ad Insertion med Bootstrap API:t. Mer information om integrering finns i [CDN:er som stöds](/help/primetime-ad-insertion/technical-reference/supported-cdns.md).
 
-## CDN-tokeniseringsscheman som stöds {#cdn-tokenization-schemes}
+## CDN-tokeniseringssystem som stöds {#cdn-tokenization-schemes}
 
 CDN:er har ofta olika tokeniseringsscheman för fragmentauktorisering. Primetime Ad Insertion stöder aktivt större CDN-nätverk, bland annat:
 

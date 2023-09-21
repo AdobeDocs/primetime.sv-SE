@@ -2,8 +2,7 @@
 title: Egenskaper för konfigurationsfil
 description: Egenskaper för konfigurationsfil
 copied-description: true
-exl-id: eec6a53d-d831-4ec4-a90c-8b3e7997f330
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
@@ -68,7 +67,7 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. Ange x (Adobe Access x.0) där x = större versionsnummer. Servrar före Adobe Access 3.0 stöder inte den här inställningen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger den lägsta serverversion som krävs för att utfärda licenser för innehållet som paketeras. Ange x (Adobe Access x.0) där x = större versionsnummer. Servrar före Adobe Access 3.0 har inte stöd för den här inställningen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.flyttcert</span> </td> 
@@ -76,15 +75,15 @@ Innan du kör Media Packager anger du värden för egenskaperna för Media Packa
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ange licensnyckel. Om ingen nyckel anges genereras nyckeln slumpmässigt. När nyckelrotation inte är aktiverad är det den här nyckeln som används för att kryptera innehållet. </p> <p class="- topic/p ">När tangentrotation är aktiverad används den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda blanksteg mellan hexadecimala värden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ange licensnyckel. Om ingen nyckel anges genereras nyckeln slumpmässigt. När nyckelrotation inte är aktiverad är det den här nyckeln som används för att kryptera innehållet. </p> <p class="- topic/p ">När tangentrotation är aktiverad används den här tangenten för att skydda rotationstangenterna. Nyckeln måste vara 16 byte lång och anges som hex-värden. Det är valfritt att använda mellanrum mellan hexadecimala värden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.enable</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. Om värdet är false (standard) inaktiveras nyckelrotation och det överordnad CEK-värdet används för att kryptera alla samplingar i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera delar av innehållet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger om tangentrotation är aktiverad. Om värdet är false (standard) inaktiveras nyckelrotation och huvud-CEK används för att kryptera alla exempel i innehållet. </p> <p class="- topic/p ">Om värdet är true aktiveras nyckelrotation och olika nycklar kan användas för att kryptera delar av innehållet. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som används för att kryptera innehåll när nyckelrotation är aktiverad. Om inga nycklar anges genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda blanksteg mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När flera nycklar anges kommer nycklarna att bläddras igenom i den ordning som anges. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sekvens med roterade nycklar som används för att kryptera innehåll när nyckelrotation är aktiverad. Om inga nycklar anges genereras nycklarna slumpmässigt. Nycklarna måste vara 16 byte långa och anges som Hex-värden. </p> <p class="- topic/p ">Det är valfritt att använda mellanrum mellan hexadecimala värden. <i class="+ topic/ph hi-d/i ">n</i> måste öka monotont, med början från 1. När flera nycklar anges kommer nycklarna att bläddras igenom i den ordning som anges. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 

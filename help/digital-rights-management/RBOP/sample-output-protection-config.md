@@ -1,8 +1,7 @@
 ---
 description: I det här avsnittet visas ett exempel på en konfiguration som illustrerar koncept och form för konfigurationen.
 title: Exempel på RBOP-konfiguration
-exl-id: 0f40be83-9c7f-482b-ac42-9aa4e3f46f58
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
@@ -18,8 +17,8 @@ I följande exempel på JSON-konfiguration definieras en pixelutdataprincip som 
 * Begränsa dekryptering av videon till upplösningar 1 080 eller lägre
 * Ange särskilda begränsningar för upplösningar på 720 och 480:
 
-   * För 720-upplösning: kräva HDCP för digitala utdata, krav *Copy Generation Management System - analog* (CGMS-A) skydd för analoga utdata.
-   * För 480-upplösning: kräva HDCP för digitala utdata, kräver inget skydd för analog
+   * För 720-upplösning: kräver HDCP för digitala utdata; kräver *Copy Generation Management System - analog* (CGMS-A) skydd för analoga utdata.
+   * För 480-upplösning: kräver HDCP för digitala utdata; kräver inte skydd för analoga
 
 ```
 { 

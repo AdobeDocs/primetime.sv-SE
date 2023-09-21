@@ -1,32 +1,31 @@
 ---
-description: TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
-title: Companion banner ads
-exl-id: e7b0ce38-e4b0-4e10-8d76-2d43d8eff665
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: TVSDK har stöd för bannerannonser som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
+title: Banderollannonser
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-# Companion banner ads {#companion-banner-ads}
+# Banderollannonser {#companion-banner-ads}
 
-TVSDK har stöd för banners som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
+TVSDK har stöd för bannerannonser som är annonser som medföljer en linjär annons och ofta finns kvar på sidan när den linjära annonsen är slut. Ditt program ansvarar för att visa de övriga banderoller som levereras med en linjär annons.
 
-Följ dessa rekommendationer när du visar följeslagarannonser:
+Följ de här rekommendationerna när du visar följeslagarannonser:
 
 * Försök att presentera så många banners som passar in i spelarens layout.
-* Visa bara en tilläggsbanderoll om du har en plats som exakt matchar den angivna höjden och bredden.
+* Visa bara en tilläggsbanderoll om du har en plats som exakt matchar dess angivna höjd och bredd.
 
-   >[!TIP]
-   >
-   >Ändra inte storlek på banderollen.
+  >[!TIP]
+  >
+  >Ändra inte storlek på banderollen.
 
 * Presentera den eller de tillhörande banderollerna så snart som möjligt efter det att annonsen börjar.
 * Täck inte över huvud-annons-/videobehållaren med pekbanderoller.
 * Fortsätt visa tilläggsbanners när annonsen är slut.
 
-   Standarden är att visa varje pekbanderoll tills du har en ersättare för den här banderollen.
+  Standarden är att visa varje pekbanderoll tills du har en ersättare för den här banderollen.
 
 ## Kompletterande banderolldata {#companion-banner-data}
 
@@ -59,7 +58,7 @@ Varje `PtAdAsset` innehåller information om hur resursen visas.
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
      <li id="li_02B7224C67004095B3F6E50FD21E507E">html: Data finns i HTML-kod. </li> 
      <li id="li_5F37E14472424F808C6094F42009E676">iframe: Data är en iframe-URL (src). </li> 
-     <li id="li_76B945007CE842158B5125422765E0B2">statisk: Data är en staticURL som är en direkt URL till en bild. </li> 
+     <li id="li_76B945007CE842158B5125422765E0B2">static: Data är en staticURL som är en direkt URL till en bild. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -79,7 +78,7 @@ Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL-adressen till en statisk bild eller en Adobe Flash SWF-fil
+* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
 
 För varje kompletterande annons visar TVSDK vilka typer som är tillgängliga för ditt program.
 

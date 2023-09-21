@@ -2,8 +2,7 @@
 description: Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är aktiverat som standard).
 keywords: Lazy;Annonsupplösning;Annonsinläsning;delayLoading
 title: Aktivera lat och löst
-exl-id: 4cd53ace-b0f5-4eef-93c3-644c2f48ce49
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -22,22 +21,22 @@ Du kan aktivera eller inaktivera Lazy Ad Resolving genom att ringa [AdvertisingM
    * If `hasDelayAdLoading` returnerar true, tolkar TVSDK bara de initiala annonserna och övergångarna till tillståndet PREPARED. De återstående annonserna löses och placeras under uppspelningen.
    * När `hasPreroll` eller `hasLivePreroll` return false, TVSDK antar att det inte finns någon förhandsgranskning och startar uppspelningen av innehållet omedelbart. Standardvärdet är true.
 
-      API:er som är relevanta för lata annonsupplösningar:
+     API:er som är relevanta för lata annonsupplösningar:
 
-      ```
-      Class: 
-         com.adobe.mediacore.metadata.AdvertisingMetadata 
-      
-      Methods: 
-      […] 
-          public final boolean hasDelayAdLoading() // Check if Lazy Ad Resolving enabled 
-          public final void setDelayAdLoading()    // Enable or disable Lazy Ad Resolving 
-          public final boolean hasPreroll()        // Check for existence of pre-roll ads 
-          public final void setPreroll()           // Set pre-roll true or false 
-          public final boolean hasLivePreroll()    // Check for live pre-roll ads 
-          public final void setLivePreroll()       // Set live pre-roll true or false 
-      […]
-      ```
+     ```
+     Class: 
+        com.adobe.mediacore.metadata.AdvertisingMetadata 
+     
+     Methods: 
+     […] 
+         public final boolean hasDelayAdLoading() // Check if Lazy Ad Resolving enabled 
+         public final void setDelayAdLoading()    // Enable or disable Lazy Ad Resolving 
+         public final boolean hasPreroll()        // Check for existence of pre-roll ads 
+         public final void setPreroll()           // Set pre-roll true or false 
+         public final boolean hasLivePreroll()    // Check for live pre-roll ads 
+         public final void setLivePreroll()       // Set live pre-roll true or false 
+     […]
+     ```
 
 1. Lyssna efter `TimelineEvent` och rita om rensningsfältet varje gång du får den här händelsen.
 

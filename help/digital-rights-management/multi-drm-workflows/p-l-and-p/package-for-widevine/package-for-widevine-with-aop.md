@@ -1,8 +1,7 @@
 ---
 description: Adobe Offline Packager används som okrypterat MP4-innehåll.
 title: Paketera ditt innehåll med Adobe Offline Packager
-exl-id: 4433d76a-57c0-41e6-b358-5408b0fe87e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Ett typiskt anrop till en Adobe offline-paketerare ser ut som anropet nedan:
     -playready_keyid c595f214d84dc7ecf31a8ebf1b7ddda5
     -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 
-I det här specifika fallet lägger offlinepaketeraren till både WideVM-innehållsskydd och PlayReady-innehållsskyddsinitieringsdata till DASH-utdatainnehållet. Värdet för `-key_file_path` är för en base64-kodad nyckel. Värdet för `-playready_LA_URL` är till för PlayReady-licensköp.
+I det här specifika fallet lägger offlinepaketeraren till både WideVM-innehållsskydd och PlayReady-innehållsskyddsinitieringsdata till DASH-utdatainnehållet. Värdet för `-key_file_path` är för en base64-kodad nyckel. Värdet för `-playready_LA_URL` är till för PlayReady-licensförvärv.
 
 Argumentet conf_path pekar på en konfigurationsfil som skulle innehålla följande:
 

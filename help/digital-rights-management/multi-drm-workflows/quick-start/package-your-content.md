@@ -1,8 +1,7 @@
 ---
 description: Paketera innehåll är processen att förbereda videomaterial för uppspelning på webben. Paketeringen innefattar att omvandla råvideo till manifestfiler och att eventuellt kryptera innehållet med olika DRM-lösningar för olika enheter och webbläsare.
 title: Paketera ditt innehåll
-exl-id: d6f922d6-afec-4314-a01e-b951c1f8a7e8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -53,12 +52,12 @@ Här följer ett exempel på hur du använder Adobe Offline Packager for Widewin
 * `in_path` - Den här posten pekar på var källvideon finns på den lokala paketeringsdatorn.
 * `out_type` - Denna post beskriver typen av förpackade utdata, i detta fall DASH (för skydd av vinstockar på HTML5).
 * `out_path` - Den plats på den lokala datorn där du vill att dina utdata ska hamna.
-* `drm_sys` - Den DRM-lösning du packar för. Detta kommer att vara antingen `widevine`, `fairplay`, eller `playready`.
+* `drm_sys` - Den DRM-lösning du packar för. Det här kommer att vara antingen `widevine`, `fairplay`, eller `playready`.
 
 * `frag_dur` och `target_dur` är DASH-specifika varaktighetsposter som gäller videouppspelning.
 
 * `key_file_path` - Det här är den plats där licensfilen finns på paketeringsdatorn som fungerar som CK (Content Encryption Key). Det är en Base-64-kodad 16-byte hex-sträng.
-* `widevine_content_id` - Detta är &quot;vindrubriker&quot;. det är alltid `2a`. (Blanda inte ihop detta med `widevine_key_id`.)
+* `widevine_content_id` - Det här är en WideVM-plåt; det är alltid `2a`. (Blanda inte ihop detta med `widevine_key_id`.)
 
 * `widevine_provider` - För våra syften ska du alltid ställa in detta på `intertrust`.
 

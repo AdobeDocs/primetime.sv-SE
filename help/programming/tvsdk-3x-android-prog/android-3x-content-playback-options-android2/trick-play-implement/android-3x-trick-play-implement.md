@@ -1,15 +1,14 @@
 ---
 description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill aktivera trickuppspelningsläget anger du ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 title: Implementera snabbt framåt och bakåt
-exl-id: 9e2dd250-a86d-4d75-8eba-385624af17af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# Översikt {#implement-fast-forward-and-rewind}
+# Ökning {#implement-fast-forward-and-rewind}
 
 När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill aktivera trickuppspelningsläget anger du ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 
@@ -22,31 +21,31 @@ Om du vill växla hastighet måste du ange ett värde.
    * The `MediaPlayerItem` -klassen definierar de tillåtna uppspelningshastigheterna.
    * TVSDK väljer den närmaste tillåtna hastigheten om den angivna hastigheten inte tillåts.
 
-      I följande exempel ställs spelarens interna uppspelningshastighet in på den begärda hastigheten:
+     I följande exempel ställs spelarens interna uppspelningshastighet in på den begärda hastigheten:
 
-      ```
-      import com.adobe.mediacore.MediaPlayer; 
-      import com.adobe.mediacore.MediaPlayerItem; 
-      import com.adobe.mediacore.MediaPlayerException; 
-      import java.util.List; 
-      import java.lang.Float; 
-      
-      private boolean setPlaybackRate(MediaPlayer player, float rate)  
-        throws MediaPlayerException { 
-          // Get list of playback rates that the media player supports 
-          MediaPlayerItem item = player.getCurrentItem(); 
-          if (item == null) return false; 
-          List<Float> availableRates = player.getCurrentItem().getAvailablePlaybackRates(); 
-      
-          // Return false if requested rate is not supported 
-          if (availableRates.indexOf(rate) == -1) return false; 
-      
-          // Otherwise set the playback rate to the requested rate  
-          // (this can throw MediaPlayerException) 
-          player.setRate(rate); 
-          return true; 
-      }
-      ```
+     ```
+     import com.adobe.mediacore.MediaPlayer; 
+     import com.adobe.mediacore.MediaPlayerItem; 
+     import com.adobe.mediacore.MediaPlayerException; 
+     import java.util.List; 
+     import java.lang.Float; 
+     
+     private boolean setPlaybackRate(MediaPlayer player, float rate)  
+       throws MediaPlayerException { 
+         // Get list of playback rates that the media player supports 
+         MediaPlayerItem item = player.getCurrentItem(); 
+         if (item == null) return false; 
+         List<Float> availableRates = player.getCurrentItem().getAvailablePlaybackRates(); 
+     
+         // Return false if requested rate is not supported 
+         if (availableRates.indexOf(rate) == -1) return false; 
+     
+         // Otherwise set the playback rate to the requested rate  
+         // (this can throw MediaPlayerException) 
+         player.setRate(rate); 
+         return true; 
+     }
+     ```
 
 1. Du kan avlyssna ränteförändringshändelser, som meddelar dig när du har begärt en tariffändring och när prisförändringen faktiskt inträffar.
 
@@ -56,4 +55,4 @@ TVSDK skickar följande händelser som är relaterade till trick play:
 
 * `MediaPlayerEvent.RATE_PLAYING`när uppspelningen återupptas med vald hastighet.
 
-   TVSDK skickar de här händelserna när spelaren återgår från tricks-uppspelningsläge till normalt uppspelningsläge.
+  TVSDK skickar de här händelserna när spelaren återgår från tricks-uppspelningsläge till normalt uppspelningsläge.

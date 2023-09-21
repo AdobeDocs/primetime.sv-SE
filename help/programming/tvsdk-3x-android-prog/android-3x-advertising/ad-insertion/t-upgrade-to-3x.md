@@ -1,8 +1,7 @@
 ---
 description: Gränssnittet com.adobe.mediacore.timeline.TimelineMarker innehåller nu en ny metod
 title: Uppgradera från 2.5.x Lazy Ad Resolving till 3.0.0 Lazy Ad Resolving (API/Workflow changes)
-exl-id: 403ccb25-99a9-4545-9d17-3b71583bc6d8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%

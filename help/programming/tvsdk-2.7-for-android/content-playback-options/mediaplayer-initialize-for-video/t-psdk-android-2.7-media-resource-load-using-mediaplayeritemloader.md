@@ -1,8 +1,7 @@
 ---
 description: Med MediaPlayerItemLoader kan du få information om en medieström utan att initiera en MediaPlayer-instans. Detta är särskilt användbart i pre-buffring av strömmar så att uppspelningen kan börja utan fördröjning.
 title: Läsa in en medieresurs med MediaPlayerItemLoader
-exl-id: 6bd081bb-b92b-4c0a-a3bc-ef2128d0d8bf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -76,10 +75,11 @@ The `MediaPlayerItemLoader` klassen hjälper dig att byta ut en medieresurs för
    }
    ```
 
-   I `onLoadComplete()` callback, gör något av följande:
+   I `onLoadComplete()` återanrop gör du något av följande:
 
    * Kontrollera att allt som kan påverka buffringen, till exempel när du väljer WebVTT eller ljudspår, är fullständigt och att anropa `prepareBuffer()` för att utnyttja möjligheterna direkt.
    * Bifoga objektet till `MediaPlayer` instans genom att använda `replaceCurrentItem()`.
+
    Om du ringer `prepareBuffer()`får du händelsen BUFFER_PREPARED i `onBufferPrepared` hanterare när preparatet är klart.
 
 1. Utlysning `load` på `MediaPlayerItemLoader` instansen och skicka resursen som ska läsas in, och eventuellt innehålls-ID:t, och `MediaPlayerItemConfig` -instans.
@@ -101,6 +101,7 @@ The `MediaPlayerItemLoader` klassen hjälper dig att byta ut en medieresurs för
       1. Utlysning `prepareToPlay()`.
       1. Vänta på statusen FÖRBEREDD.
       1. Utlysning `play()`.
+
    * Om objektet är buffrat:
 
       1. Vänta på den buffertförberedda händelsen.

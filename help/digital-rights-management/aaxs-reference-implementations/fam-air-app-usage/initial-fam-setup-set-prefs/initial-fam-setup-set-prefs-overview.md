@@ -2,8 +2,7 @@
 title: Översikt över inställningar
 description: Översikt över inställningar
 copied-description: true
-exl-id: 9618a038-c5b0-4b49-8936-ef8fcacf2105
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Med undantag för Packager Server-URL:en lagras alla inställningar som anges ne
 >
 >Alla kataloger och sökvägar refererar till kataloger på paketerarservern, inte till klienten som kör AIR.
 
-Alla ändringar som görs här börjar gälla omedelbart när inställningarna har sparats. Servern behöver inte startas om om inte Packager-tråden avslutas på grund av konfigurationsproblem.
+Alla ändringar som görs här börjar gälla omedelbart när inställningarna sparas. Servern behöver inte startas om om inte Packager-tråden avslutas på grund av konfigurationsproblem.
 
 Inställningsbeskrivningarna använder följande termer:
 
@@ -40,7 +39,7 @@ Inställningsbeskrivningarna använder följande termer:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Licensserverns URL </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för den server från vilken klienten ska begära en licens. till exempel <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för den server som klienten ska begära en licens från, till exempel <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
   </tr> 
  </tbody> 
 </table>

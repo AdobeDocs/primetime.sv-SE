@@ -1,8 +1,7 @@
 ---
 title: Bästa praxis
 description: Läs vidare för att lära dig hur du bättre använder IQ-verktyget för konton.
-exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # Bästa praxis {#aiq-best-practices}
 
-Med konto-IQ kan du identifiera delning av autentiseringsuppgifter, mäta dess omfattning och effekt, segmentera relevanta kohorter och spåra effekten av riktade åtgärder. Det innehåller en mängd verktyg, diagram och rapporter som används för att förstå och hantera delade konton och som kan användas på många olika sätt. Varje direktuppspelningstjänst hanterar detta beteende och utvecklar processer som matchar deras unika mål, och produkten är utformad för att på ett flexibelt sätt tillgodose dessa behov.  Det finns dock vissa allmänna regler för praxis som kan tillämpas på en rad olika scenarier.
+Med konto-IQ kan du identifiera delning av autentiseringsuppgifter, mäta dess omfattning och effekt, segmentera relevanta kohorter och spåra effekten av riktade åtgärder. Det innehåller en mängd verktyg, diagram och rapporter som används för att förstå och hantera delade konton och som kan användas på många olika sätt. Varje direktuppspelningstjänst tar sig an detta beteende och utvecklar processer som matchar deras unika mål, och produkten är utformad för att på ett flexibelt sätt tillgodose dessa behov.  Det finns dock vissa allmänna regler för praxis som kan tillämpas på en rad olika scenarier.
 
 ## Analysera och förstå {#analyze-understand}
 
-Med IQ-verktygen för konton blir det lättare att förstå vilken typ av och bredd som delning av autentiseringsuppgifter ger i ditt företag, från diagram på högsta nivå som visar procentandelen delade konton till export på lägsta nivå som rapporterar de enskilda kontonas egenskaper. I synnerhet från början använder du dessa verktyg för att utforska data och identifiera ovanliga eller intressanta kohorter eller beteendemönster - vilket till exempel indikerar en hög grad av delning. Sedan kan segment som representerar en viss möjlighet eller ett visst mål identifieras.
+Med IQ-verktygen för konton blir det lättare att förstå vilken typ av och bredd som delning av autentiseringsuppgifter ger i ditt företag, från diagram på högsta nivå som visar procentandelen delade konton till export på lägsta nivå som rapporterar de enskilda kontonas egenskaper. I synnerhet från början använder du dessa verktyg för att utforska data och identifiera ovanliga eller intressanta kohorter eller beteendemönster - vilket till exempel indikerar en hög grad av delning. Sedan kan segment som representerar en viss affärsmöjlighet eller ett visst mål identifieras.
 
 Så här förstår du hur delning påverkar ditt företag:
 
@@ -36,13 +35,13 @@ Använd åtgärdsverktyget för att definiera målsegmentet och en drifttidsram.
 
 * Skapa en åtgärd som definierar målsegmentets och åtgärdens tidsram.
 
-* Beroende på mål som merförsäljning, ökad annonsbelastning eller begränsad åtkomst till falska konton kan du vidta relevanta åtgärder för den definierade användaruppsättningen, till exempel: i apperbjudanden, extra annonser eller multifaktorsautentisering krävs.
+* Beroende på mål som att sälja vidare, öka annonsbördan eller begränsa tillgången till bedrägliga konton kan du vidta relevanta åtgärder för den definierade användaruppsättningen, till exempel: i apperbjudanden, extra annonser eller kräva multifaktorautentisering.
 
 <!--If necessary, gauge the affect [by measuring the impact of actions taken](#track-measure-impact).-->
 
 ## Spåra och mäta effekten av åtgärder {#track-measure-impact}
 
-Åtgärder kräver tid för att träda i kraft. Använd operationen och tillhörande diagram för att spåra driftstatus och segmentegenskaper under efterföljande veckor eller månader av drifttidsramen. Kombinera denna information med andra analyser för att besvara eller förstå resultatet. Till exempel: Hur stor procentandel av låntagarna som konverterats till abonnenter? Hur många ytterligare annonser har visats? Minskade antalet låntagare?
+Åtgärder kräver tid för att träda i kraft. Använd operationen och tillhörande diagram för att spåra driftstatus och segmentegenskaper under efterföljande veckor eller månader av drifttidsramen. Kombinera denna information med andra analyser för att besvara eller förstå resultatet. Exempel: Hur stor procentandel av låntagarna som konverterats till prenumeranter? Hur många ytterligare annonser har visats? Minskade antalet låntagare?
 
 * Använd åtgärdsdiagram och andra analyser för att spåra och mäta effekten av åtgärder.
 

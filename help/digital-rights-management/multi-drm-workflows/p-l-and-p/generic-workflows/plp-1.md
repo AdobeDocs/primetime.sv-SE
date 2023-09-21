@@ -1,8 +1,7 @@
 ---
 description: Du kan använda Adobe Offline Packager för att förbereda innehåll för alla DRM-lösningar som stöds av Primetime Cloud DRM, som drivs av ExpressPlay.
 title: Primetime Packager / Cloud DRM / TVSDK
-exl-id: 2055c18b-62de-41bf-9644-f366609e0198
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Den här uppsättningen instruktioner förutsätter att du redan har konfigurera
 
 1. Välj ett KMS (Key Management System):
 
-   * Använd ExpressPlays KMS ( [ExpressPlay-nyckellagring](https://www.expressplay.com/developer/key-storage/)). det här systemet hanterar dina innehållsnycklar via ExpressPlays RESTful API.
+   * Använd ExpressPlays KMS ( [ExpressPlay-nyckellagring](https://www.expressplay.com/developer/key-storage/)); det här systemet hanterar dina innehållsnycklar via ExpressPlays RESTful API.
 
-      eller...
+     eller...
 
    * Skapa en egen KMS. Skapa en databas med innehållsnycklar som kan väljas med innehålls-ID.
 
-      I båda fallen hanterar KMS leveransen av innehållsnycklar, där varje nyckel har ett associerat innehålls-ID.
+     I båda fallen hanterar KMS leveransen av innehållsnycklar, där varje nyckel har ett associerat innehålls-ID.
 
 1. Paketera innehållet. Med Primetime Packager kan du paketera en del av innehållet för en viss DRM-lösning eller för flera DRM-lösningar.
 
@@ -35,41 +34,41 @@ Den här uppsättningen instruktioner förutsätter att du redan har konfigurera
 
    * [Widewin med Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) (genererar MPD-fil):
 
-      ```
-      java -jar OfflinePackager.jar \ 
-        -in_path [ 
-        <your_content.mp4>] \ 
-        -out_type dash \ 
-        -out_path [ 
-        <your_out_file_path>] \ 
-        -drm \ 
-        -drm_sys WIDEVINE \ 
-        -key_file_path "creds/widevine_key.bin" \ 
-        -widevine_key_id [ 
-        <some_keyID>] \ 
-        -widevine_content_id [ 
-        <some_content-ID] \ 
-        -widevine_header provider:intertrust#content_id:2a
-      ```
+     ```
+     java -jar OfflinePackager.jar \ 
+       -in_path [ 
+       <your_content.mp4>] \ 
+       -out_type dash \ 
+       -out_path [ 
+       <your_out_file_path>] \ 
+       -drm \ 
+       -drm_sys WIDEVINE \ 
+       -key_file_path "creds/widevine_key.bin" \ 
+       -widevine_key_id [ 
+       <some_keyID>] \ 
+       -widevine_content_id [ 
+       <some_content-ID] \ 
+       -widevine_header provider:intertrust#content_id:2a
+     ```
 
    * [FairPlay med Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=20) (Skapar en M3U8-fil):
 
-      ```
-      java -jar OfflinePackager.jar  
-        -in_path [ 
-        <your_content.mp4>]  
-        -out_type hls  
-        -out_path [ 
-        <your_out_file_path>]  
-        -drm  
-        -drm_sys FAIRPLAY  
-        -key_file_path "creds/fairplay_key.bin"  
-        -key_url "user_provided_value"
-      ```
+     ```
+     java -jar OfflinePackager.jar  
+       -in_path [ 
+       <your_content.mp4>]  
+       -out_type hls  
+       -out_path [ 
+       <your_out_file_path>]  
+       -drm  
+       -drm_sys FAIRPLAY  
+       -key_file_path "creds/fairplay_key.bin"  
+       -key_url "user_provided_value"
+     ```
 
-      >[!NOTE]
-      >
-      >The `key_url` värdet kopieras som i M3U8-filen.
+     >[!NOTE]
+     >
+     >The `key_url` värdet kopieras som i M3U8-filen.
 
 1. Skapa en&quot;storefront server&quot;.
 
@@ -77,7 +76,7 @@ Den här uppsättningen instruktioner förutsätter att du redan har konfigurera
    
    1. Kunden väljer innehåll. Den här implementeringen måste innehålla en slutpunkt där klienter kan begära en innehållstoken för ett visst innehålls-ID.
    1. Kundberättigande
-   1. Licenstoken-begäranden (ExpressPlay) från klienten ( [ExpressPlay-licenstokenbegäran/svarsreferens](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md))
+   1. Licenstoken-begäranden (ExpressPlay) från klienten ( [ExpressPlay-licensens tokenbegäran/svarsreferens](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md))
 
 1. Skapa en kund.
 

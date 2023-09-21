@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 title: Tidslinjeannonsklasser
-exl-id: 2ac1f6b7-48b2-4d9c-b39d-a7e6f1ff2ac5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 0%
@@ -20,13 +19,13 @@ Paket: [com.adobe.mediacore.timeline.advertising.policy](https://help.adobe.com/
 |---|---|
 | [Annons](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och en `MediaResource`. The `MediaResource` innehåller den URL där det faktiska annonsinnehållet finns. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | En klass som representerar en resurs som ska visas. En klass som representerar en annonsresurs. |
-| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. |
+| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. |
 | [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakPolicy.html) | En uppräkning som definierar annonsuppspelningsprincipen som relaterar till användaren som åsidosätter annonser vid sökning. |
 | [AdBreakTimelineItem](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdBreakTimelineItem.html) | Tidslinjeobjekt som är associerat med en viss annonsbrytning. |
 | [AdBreakWatchedPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdBreakWatchedPolicy.html) | Uppräkningsklass för möjliga principer för när en annonsbrytning ska markeras som bevakad. |
 | [AdClick](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | En klass som representerar en klickinstans som är associerad med en resurs. Den här instansen innehåller information om klicknings-URL:en och rubriken som kan användas för att ge användaren mer information. |
 | [AdPolicy](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdPolicy.html) | Uppräkningsklass för möjliga principer för var en annonsbrytning ska återupptas efter sökning eller uppspelning med trick. |
-| [AdPolicyMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdPolicyMode.html) | Uppräkningsklass som visar hur spelaren spelas upp, t.ex. sökning eller normal uppspelning. |
+| [AdPolicyMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdPolicyMode.html) | Uppräkningsklass som visar hur spelaren spelas upp, till exempel sökning eller normal uppspelning. |
 | [AdPolicyInfo](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdPolicySelector.html) | Gränssnitt som definierar egenskaper för `AdPolicySelector` API-anrop. Dessa egenskaper utgör kontexten för att framtvinga varje annonsbeteende. |
 | [AdPolicySelector](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/policy/AdPolicySelector.html) | Ett gränssnitt för annonsprincipväljare för att framtvinga annonsbeteenden. Program kan anpassa sig till det här gränssnittet genom att implementera alla nödvändiga metoder eller genom att utöka den befintliga standardprincipväljarklassen för att anpassa specifika beteenden. |
 | [AdTimelineItem](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/advertising/AdTimelineItem.html) | Tidslinjeobjekt som är associerat med en viss annons. |

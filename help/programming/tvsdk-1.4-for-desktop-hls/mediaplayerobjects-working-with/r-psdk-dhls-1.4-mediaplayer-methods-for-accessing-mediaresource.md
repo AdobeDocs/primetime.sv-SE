@@ -1,8 +1,7 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayer-metoder för åtkomst till MediaResource-information
-exl-id: 74e453d6-233e-4146-9f63-ab6919a4ba39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> function get isLive():Boolean; </span> </td> 
-   <td colname="3"> <p>True om strömmen är live; false om det är VOD. </p> </td> 
+   <td colname="3"> <p>True if the stream is live; false if it is VOD. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>DRM-skyddad</b> </td> 
@@ -38,7 +37,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> <p>True om strömmen är DRM-skyddad. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get drmMetadataInfos(): Vektor.&lt;drmmetadatainfo&gt;; </span> </td> 
+   <td colname="2"> <span class="codeph"> function get drmMetadataInfos(): Vector.&lt;drmmetadatainfo&gt;; </span> </td> 
    <td colname="3"> <p>Visar alla DRM-metadataobjekt som identifieras i manifestet. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -82,7 +81,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
    <td colname="3"> <p>Hämtar ljudspåret som valts med <span class="codeph"> selectAudioTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectAudioTrack(audioTrack: AudioTrack ) </span> </td> 
+   <td colname="2"> <span class="codeph"> selectAudioTrack(audioTrack: AudioTrack) </span> </td> 
    <td colname="3"> <p>Väljer att ett ljudspår ska vara aktuellt ljudspår. </p> </td> 
   </tr> 
   <tr rowsep="1"> 

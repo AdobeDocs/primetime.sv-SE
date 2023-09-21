@@ -2,8 +2,7 @@
 title: Konfigurationsfil för innehavare
 description: Konfigurationsfil för innehavare
 copied-description: true
-exl-id: 0f6cafbe-99d9-43bc-9a7f-d87c4da1f37f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -22,17 +21,17 @@ Klientkonfigurationsfilen innehåller:
 * **Autentiseringsuppgifter för licensservern** — Anger en eller flera inloggningsuppgifter för licensservern (certifikat och privat nyckel) som utfärdas av Adobe. Kan anges som en sökväg till en pfx-fil och ett lösenord, eller ett alias för en referens som lagras på en HSM. Flera sådana autentiseringsuppgifter kan anges här, antingen som filsökvägar, nyckelalias eller både och. Mer information om när ytterligare autentiseringsuppgifter behövs finns i Hantera certifikatuppdateringar i *Använda Adobe Access SDK för att skydda innehåll *.
 * **Certifikat för nyckelserver** — Valfritt. Anger nyckelserverns licensservercertifikat som utfärdas av Adobe. Kan anges som en sökväg till en .cer-fil eller ett alias till ett certifikat som lagras på en HSM. Det här alternativet måste anges för att licenser ska kunna utfärdas för innehåll som paketerats med en profil som kräver fjärrnyckelleverans för iOS-enheter.
 * **Anpassade författare** — Valfritt. Anger anpassade behörighetsklasser som ska anropas för varje licensbegäran. Om flera auktoriserare anges anropas de i den ordning som anges. Mer information finns i &quot;[Anpassade auktoriseringstillägg](../../aaxs-protected-streaming/custom-authorization-extensions.md)&quot;.
-* **Lista över godkända paket** — Valfritt. Anger certifikat som identifierar entiteter som är auktoriserade att paketera innehåll för den här licensservern. Om inget paketerarcertifikat har angetts utfärdar servern licenser för innehåll som paketerats av en paketerare.
-* **Klientversion som stöds minimalt** (Se *Använda Adobe Access SDK för att skydda innehåll*).
+* **Lista över auktoriserade paket** — Valfritt. Anger certifikat som identifierar entiteter som är auktoriserade att paketera innehåll för den här licensservern. Om inget paketerarcertifikat har angetts utfärdar servern licenser för innehåll som paketerats av en paketerare.
+* **Klientversion som stöds** (Se *Använda Adobe Access SDK för att skydda innehåll*).
 * **Användningsregler**
 
    * **Licenscache** — Valfritt. Anger hur länge licensen kan lagras på klienten. Som standard är cachning av licenser inaktiverat. Om du vill aktivera cache-lagring av licenser under en begränsad tidsperiod anger du slutdatumet eller antalet sekunder som licensen ska lagras för (med början när licensen utfärdas). Om du anger antalet sekunder till 0 inaktiveras licenscachelagring.
 
-      Observera att alla licenser som utfärdas av servern för skyddad direktuppspelning har en förfalloperiod på 24 timmar (8 6400 sekunder). Det här värdet gäller därför implicit som en övre gräns för vilket slutdatum eller vilken varaktighet som helst som är inställt för licenscachning, med ett maximalt värde på 86400 sekunder, även om schemat har högre gränser.
+     Observera att alla licenser som utfärdas av servern för skyddad direktuppspelning har en förfalloperiod på 24 timmar (8 6400 sekunder). Det här värdet gäller därför implicit som en övre gräns till vilket slutdatum eller vilken varaktighet som helst som är inställt för licenscachning, med ett maximalt värde på 86400 sekunder, även om schemat har högre gränser.
 
    * **Spela upp höger** — Minst en rättighet måste anges. Om flera rättigheter anges kommer klienten att använda den första rättigheten som den uppfyller alla krav för.
 
-      * **Utdataskydd** — Anger om utdata till externa återgivningsenheter ska skyddas.
+      * **Utdataskydd** — Styr om utdata till externa återgivningsenheter ska skyddas.
       * **AIR och SWF** — Valfritt tillåtelselista i SWF- och AIR-program som kan spela upp innehållet (dvs. endast de angivna programmen tillåts). SWF-program identifieras av en URL eller av sammanfattningen från SWF och den längsta tiden som krävs för att ladda ned och verifiera sammandraget. Information om hur du beräknar sammandraget i SWF finns i avsnittet&quot;SWF Hash Calculator&quot;. AIR- och iOS-program identifieras av ett utgivar-ID och valfritt program-ID, minimiversion och maxversion. Om inga programbegränsningar anges kan innehållet spelas upp i SWF- eller AIR-program.
       * **Begränsningar för DRM- och körningsmodulen** — Anger den lägsta säkerhetsnivå som krävs för modulen DRM/Runtime. Du kan även inkludera en blockeringslista med versioner som inte får spela upp innehållet. Modulversioner identifieras av attribut som operativsystem och/eller ett versionsnummer. DRM-modulbegränsningar och begränsningar för körningsmodulen har nu stöd för följande ytterligare attribut:
 
@@ -40,13 +39,12 @@ Klientkonfigurationsfilen innehåller:
          * `model`
          * `screenType`
 
-         Följande attribut är nu valfria:
+        Följande attribut är nu valfria:
 
          * `osVersion`
          * `version`
+
       * **Krav för enhetskapacitet** — Anger vilken maskinvara som krävs för att få åtkomst till innehållet.
       * **Krav för identifiering av Jailbreak** — Alternativt kan du ange att uppspelning inte tillåts för enheter där jailbreak upptäcks.
-
-
 
 Mer information finns i kommentarerna i exempelfilen för klientkonfiguration.

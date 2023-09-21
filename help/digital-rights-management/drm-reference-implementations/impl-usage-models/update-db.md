@@ -2,8 +2,7 @@
 title: Uppdatera referensimplementeringsdatabasen
 description: Uppdatera referensimplementeringsdatabasen
 copied-description: true
-exl-id: b337bf9c-7add-47b8-9576-db7fa067c51d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -20,9 +19,9 @@ Om du vill styra vilka användningsmodeller som en licens utfärdas till en utse
 
 1. Ge en användare åtkomst enligt användningsmodellerna Hämta till äga eller Video på begäran.
 
-       Lägg till poster i tabellen &quot;CustomerAuthorization&quot; för att specificera:
+       Lägg till poster i tabellen CustomerAuthorization för att specificera:
    
    * Användningsmodellen
    * Varje innehållssegment som en användare har tillgång till
 
-Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql] skript (finns på din Primetime DRM DVD i [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] katalog).
+Mer information om hur du fyller i varje tabell finns i [!DNL PopulateSampleDB.sql] skript (finns på din Primetime DRM DVD i [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] ).

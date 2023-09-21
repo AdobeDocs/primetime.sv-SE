@@ -1,15 +1,14 @@
 ---
 description: SEES-referensservern visar hur du aktiverar den enhetsbindande tillståndstjänsten med ExpressPlay.
 title: Enhetsbindningsbehörighet för referenstjänst
-exl-id: 91f9d406-f3f9-47d3-aa50-f47c4e81b9fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
-# Referenstjänst: Enhetsbindningsberättigande {#reference-service-device-binding-entitlement}
+# Referenstjänst: Enhetsbindningsbehörighet {#reference-service-device-binding-entitlement}
 
 SEES-referensservern visar hur du aktiverar den enhetsbindande tillståndstjänsten med ExpressPlay.
 
@@ -17,7 +16,7 @@ SEES-referensservern visar hur du aktiverar den enhetsbindande tillståndstjäns
 >
 >Den enhetsbundna berättigandetjänsten kan också vara tidsbunden eller ge uthyrningstid.
 
-Om du vill bootstrap `device_id` information, spela upp ett dummy M3U8-innehåll. Du kan sedan bädda in en cookie i ExpressPlay-token, generera en SPC (som innehåller `device_id`) och skicka `getToken` till ExpressPlay-servern.
+Om du vill bootstrap `device_id` information, spela upp ett dummy M3U8-innehåll. Du kan sedan bädda in en cookie i ExpressPlay-token, generera en SPC (som innehåller `device_id`) och skicka en `getToken` till ExpressPlay-servern.
 
 ![](assets/fees-device-binding.png)
 

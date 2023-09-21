@@ -1,8 +1,7 @@
 ---
 description: Du kan ange formatinformation för textningsspår med klassen TextFormat som anger formatet för textning som visas av spelaren.
 title: Styr textningsformat
-exl-id: 43c1391d-a937-464f-99fd-fe8deda7da44
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '842'
 ht-degree: 0%
@@ -44,7 +43,7 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
 1. Hämta en referens till ett objekt som implementerar `TextFormat` gränssnitt, anropa `TextFormatBuilder.toTextFormat` public-metod.
 
-   Detta returnerar `TextFormat` objekt som kan tillämpas på mediespelaren.
+   Detta returnerar en `TextFormat` objekt som kan tillämpas på mediespelaren.
 
    `public TextFormat toTextFormat()`
 
@@ -53,90 +52,89 @@ Du kan formatera undertexttexten med TVSDK-metoder.
 
    * Få alla formatinställningar med `MediaPlayer.getCCStyle` Returvärdet är en instans av `TextFormat` gränssnitt.
 
-      ```java
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws MediaPlayerException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws MediaPlayerException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws MediaPlayerException;
+     ```
 
    * Hämta inställningarna en åt gången via `TextFormat` get-metoder för gränssnitt.
 
-      ```java
-      public java.lang.String getFontColor(); 
-      public java.lang.String getBackgroundColor(); 
-      public java.lang.String getFillColor(); // retrieve the font fill color 
-      public java.lang.String getEdgeColor(); // retrieve the font edge color 
-      public TextFormat.Size getSize(); // retrieve the font size 
-      public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
-      public TextFormat.Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity(); 
-      public java.lang.String getBottomInset(java.lang.String bi); 
-      public java.lang.String getSafeArea(java.lang.String sa);
-      ```
+     ```java
+     public java.lang.String getFontColor(); 
+     public java.lang.String getBackgroundColor(); 
+     public java.lang.String getFillColor(); // retrieve the font fill color 
+     public java.lang.String getEdgeColor(); // retrieve the font edge color 
+     public TextFormat.Size getSize(); // retrieve the font size 
+     public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
+     public TextFormat.Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity(); 
+     public java.lang.String getBottomInset(java.lang.String bi); 
+     public java.lang.String getSafeArea(java.lang.String sa);
+     ```
 
 1. Gör något av följande om du vill ändra formatinställningarna:
 
    * Använda metoden set `MediaPlayer.setCCStyle`, skicka en instans av `TextFormat` gränssnitt:
 
-      ```java
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws MediaPlayerException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws MediaPlayerException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
+     ```
 
    * Använd `TextFormatBuilder` -klass, som definierar enskilda set-metoder.
 
-      The `TextFormat` -gränssnittet definierar ett objekt som inte kan ändras så att det bara finns get-metoder och inga set-metoder. Du kan bara ange parametrar för textningsformat med `TextFormatBuilder` klass:
+     The `TextFormat` -gränssnittet definierar ett objekt som inte kan ändras så att det bara finns get-metoder och inga set-metoder. Du kan bara ange parametrar för textningsformat med `TextFormatBuilder` klass:
 
-      ```java
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(String backgroundColor) 
-      public void setFillColor(String fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(String edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(String fontColor) 
-      public void setBottomInset(String bi) 
-      public void setSafeArea(String sa) 
-      public void setTreatSpaceAsAlphaNum(bool)
-      ```
+     ```java
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(String backgroundColor) 
+     public void setFillColor(String fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(String edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(String fontColor) 
+     public void setBottomInset(String bi) 
+     public void setSafeArea(String sa) 
+     public void setTreatSpaceAsAlphaNum(bool)
+     ```
 
-      >[!IMPORTANT]
-      >
-      >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextfärger med en hexadecimal sträng som representerar färgvärden för RGB. Färgrepresentationen för RGB hex är den välkända 6 byte-strängen som du använder i program som Photoshop:
-      >
-      >* FFFFFF = Svart
-      >* 000000 = Vit
-      >* FF0000 = röd
-      >* 00FF00 = Grön
-      >* 0000FF = Blå
-         >och så vidare.
-
-      >
-      >När du skickar information om färgstilar till `TextFormatBuilder`använder du fortfarande `Color` uppräkning som tidigare, men nu måste du lägga till `getValue()` till färgen för att få värdet som en sträng. Till exempel:
-      >
-      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
+     >[!IMPORTANT]
+     >
+     >**Färginställningar:** I Android TVSDK 2.X har färgstilen för undertexter förbättrats. Förbättringen gör det möjligt att ställa in undertextfärger med en hexadecimal sträng som representerar färgvärden för RGB. Färgrepresentationen för RGB hex är den välkända 6 byte-strängen som du använder i program som Photoshop:
+     >
+     >* FFFFFF = Svart
+     >* 00000 = Vit
+     >* FF0000 = röd
+     >* 00FF00 = Grön
+     >* 0000FF = Blå
+     >och så vidare.
+     >
+     >När du skickar information om färgstilar till `TextFormatBuilder`använder du fortfarande `Color` uppräkning som tidigare, men nu måste du lägga till `getValue()` till färgen för att få värdet som en sträng. Till exempel:
+     >
+     >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 Att ställa in stilen för undertexter är en asynkron åtgärd, så det kan ta upp till några sekunder innan ändringarna visas på skärmen.
 
@@ -174,7 +172,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips: De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips! De faktiska teckensnitten som finns på en enhet kan variera och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
@@ -183,7 +181,7 @@ public TextFormatBuilder(
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDEL </span> - Standardstorleken </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - Cirka 30 % större än mediet </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än mediet </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - bildtextens standardstorlek, samma som medium </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medelvärdet </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 

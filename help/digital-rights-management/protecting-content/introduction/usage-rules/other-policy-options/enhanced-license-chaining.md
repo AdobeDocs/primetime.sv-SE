@@ -2,8 +2,7 @@
 title: Förbättrad kedja av licenser
 description: Förbättrad kedja av licenser
 copied-description: true
-exl-id: 269e7866-fe43-45a8-84d8-c51e4fc95f77
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -20,6 +19,6 @@ Om du vill aktivera förbättrad licenssammanlänkning måste du tilldela en rot
 
 >[!NOTE]
 >
->Förbättrad kedja av licenser stöds av Primetime DRM-klienter version 3.0 eller senare. Om en äldre klient begär en licens för innehåll som har stöd för den förbättrade licenskedjan kan licensservern fortfarande utfärda en licens till den här klienten genom att använda den licenssammankoppling som stöds av Primetime DRM 2.0.
+>Förbättrad kedja av licenser stöds av Primetime DRM-klienter version 3.0 eller senare. Om en äldre klient begär en licens för innehåll som har stöd för den förbättrade licenskedjan kan licensservern fortfarande utfärda en licens till den här klienten genom att använda den licenssammanlänkning som stöds av Primetime DRM 2.0.
 
 Exempel: Använd det här alternativet om du vill uppdatera länkade licenser genom att hämta en enda rotlicens. Implementera t.ex. prenumerationsmodeller där innehållet kan spelas upp så länge som användaren förnyar prenumerationen på månadsbasis. Fördelen med detta är att användarna bara behöver skaffa en enda licens för att uppdatera alla sina prenumerationslicenser.

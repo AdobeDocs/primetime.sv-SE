@@ -1,8 +1,7 @@
 ---
 description: En MediaResource representerar det innehåll som ska läsas in av MediaPlayer-instansen.
 title: Klasserna MediaPlayer och MediaResource
-exl-id: d3ac1a8d-3549-417a-83e9-c561a3d12127
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -20,9 +19,9 @@ TVSDK-biblioteket är ett enkelt sätt att läsa in och förbereda innehåll fö
 * En URL, som representerar platsen för innehållet som ska läsas in.
 * En typ, som är den typ av innehåll som ska läsas in.
 
-   Det här är en enkel uppräkning i `MediaResource` -klass som definierar de typer av innehåll som kan läsas in av MediaPlayer. Möjliga värden är HLS och HDS. Varje värde är associerat med strängen som representerar de filtillägg som används ofta. `m3u8` för HLS och `f4m` för HDS.
+  Det här är en enkel uppräkning i `MediaResource` -klass som definierar de typer av innehåll som kan läsas in av MediaPlayer. Möjliga värden är HLS och HDS. Varje värde är associerat med strängen som representerar de filtillägg som används ofta. `m3u8` för HLS och `f4m` för HDS.
 * Vissa metadata, som är en instans av `Metadata` klassen.
 
-   Den här ordlisteliknande strukturen kan innehålla ytterligare information om innehållet som ska läsas in, till exempel information om alternativ-/annonsinnehållet som ska placeras i huvudinnehållet.
+  Den här ordlisteliknande strukturen kan innehålla ytterligare information om innehållet som ska läsas in, till exempel information om alternativ-/annonsinnehållet som ska placeras i huvudinnehållet.
 
 Metadata är det medium genom vilket information som är relaterad till alternativt innehåll skickas till TVSDK. The `Metadata` -gränssnittet definierar API:t för ett generiskt nyckelvärdeslager, där både nyckeln och värdet är rena strängar.

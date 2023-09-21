@@ -1,8 +1,7 @@
 ---
 description: Spelaren kan lyssna efter en rad händelser som anger spelarens tillstånd.
 title: Konfigurera meddelanden
-exl-id: 52039895-5529-4fc3-8e58-13309de12e80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -70,7 +69,7 @@ Anta att `PTMediaPlayer` är en egenskap för klientspelaren, `self.player` i f�
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification </span> </td> 
-   <td colname="2"> En annons fortskrider. skickas kontinuerligt medan en annons spelas upp. </td> 
+   <td colname="2"> En annons fortskrider; skickas kontinuerligt medan en annons spelas upp. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification </span> </td> 
@@ -168,7 +167,7 @@ Anta att `PTMediaPlayer` är en egenskap för klientspelaren, `self.player` i f�
 
 ## Exempelhanterare för meddelanden {#section_D729C2403A234DD09596829D26882ADC}
 
-Följande kodfragment illustrerar några av de sätt som du kan använda meddelanden på.
+Följande kodfragment illustrerar några sätt som du kan använda meddelanden på.
 
 Hämta `PTAdBreak` instans med `PTMediaPlayerAdBreakKey`:
 

@@ -1,16 +1,15 @@
 ---
-title: Förhandsgranska licens
-description: Förhandsgranska licens
+title: Förhandsgranskning av licens
+description: Förhandsgranskning av licens
 copied-description: true
-exl-id: 53a57610-86a8-4c5d-9494-679ede35abf8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
-# Förhandsgranska licens {#license-preview}
+# Förhandsgranskning av licens {#license-preview}
 
 Om det finns en fråga om en enhet kan använda och tillämpa en Primetime DRM-licens fullt ut eller inte, kan du använda funktionen Förhandsgranska licens. En förhandsvisningslicens matchar alla begränsningar som definierats i den slutliga licensen, men innehåller inte den CK (Content Encryption Key) som behövs för att dekryptera det skyddade innehållet. Den här funktionen är användbar för att avgöra om kunden faktiskt kan förbruka licensen innan innehållsdistributören bestämmer sig för att tillhandahålla en viss licens till klienten. En kund vill till exempel titta på HD-innehåll, men innehållsdistributören vill vara säker på att enheten kan identifiera och aktivera HDCP fullt ut. I den här situationen kan kunden ringa `DRMManager.loadPreviewVoucher()`. Om en `DRMStatusEvent` tas emot i stället för `DRMErrorEvent`, så bekräftas det att klienten till fullo kan tillämpa begränsningarna för utdataskydd i licensen och att innehållsdistributören fritt kan tillhandahålla den här typen av licens till klienten.
 

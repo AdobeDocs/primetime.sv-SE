@@ -1,8 +1,7 @@
 ---
-description: Huvudkomponenterna i Primetime DRM består av en Java SDK och klientmiljöerna för Flash Player och Adobe AIR.
+description: Huvudkomponenterna i Primetime DRM består av en Java SDK samt Flashs Player- och Adobe AIR-klientmiljöer.
 title: Java SDK, Flash Player och Adobe AIR-klient
-exl-id: 5422d282-da9c-4810-a782-3c3af5fdeb3f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -27,11 +26,11 @@ Dessa API:er används för att definiera rättigheter och förbereda innehåll f
 
 * Policyhantering
 
-   API:t för principhantering används för att skapa och ändra principer som ska tillämpas på innehåll. Du kan skapa eller uppdatera profiler, inklusive hämta/ange alla användningsregler och tillåta ytterligare parametrar i ett anpassat namnutrymme.
+  API:t för principhantering används för att skapa och ändra principer som ska tillämpas på innehåll. Du kan skapa eller uppdatera profiler, inklusive hämta/ange alla användningsregler och tillåta ytterligare parametrar i ett anpassat namnutrymme.
 
 * Innehållspaket
 
-   Innehållspaketerings-API:t används för att kryptera innehåll och hämta metadata från det paketerade innehållet.
+  Innehållspaketerings-API:t används för att kryptera innehåll och hämta metadata från det paketerade innehållet.
 
 ## Java-API:er för utfärdande av licenser{#java-apis-for-issuing-licenses}
 
@@ -39,16 +38,16 @@ Dessa API:er används när en klient begär en licens från servern. SDK:n stöd
 
 * Autentisering
 
-   Autentiserings-API:t kan användas för att hantera autentiseringsbegäranden och generera autentiseringstoken.
+  Autentiserings-API:t kan användas för att hantera autentiseringsbegäranden och generera autentiseringstoken.
 
 * Generering och inköp av licenser
 
-   API:t för licensgenerering och hämtning används för att generera en licens för användaren.
+  API:t för licensgenerering och hämtning används för att generera en licens för användaren.
 
 * Stöd för Adobe AIR version 1.5-klienter och innehåll
 
-   För bakåtkompatibilitet har SDK API:er för att hantera begäranden från AIR-program som skapats för användning med AIR version 1.5 och tidigare samt skyddat innehåll.
+  För bakåtkompatibilitet har SDK API:er för att hantera begäranden från AIR-program som skapats för användning med AIR version 1.5 och tidigare samt skyddat innehåll.
 
-## Referensimplementering {#reference-implementation}
+## Referenskörning {#reference-implementation}
 
 SDK innehåller en referensimplementering, en enkel Adobe Primetime DRM-distribution som visar hur du använder Java API:er. Referensimplementeringen innehåller en licensserver, övervakad mapppaketerare, Primetime DRM Manager AIR-program och kommandoradsverktyg för innehållspaketering och principhantering baserat på Java API:er. Mer information om implementeringen av Primetimes DRM-referens finns i Skydda innehåll.

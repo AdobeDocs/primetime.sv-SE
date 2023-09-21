@@ -1,8 +1,7 @@
 ---
-description: Använd Browser TVSDK:s biblioteksfiler i din app för att skapa en Browserify-kompatibel spelare med hjälp av UI-Framework.
+description: Använd Browser TVSDK:s biblioteksfiler i din app för att skapa en Browserify-kompatibel spelare med UI-Framework.
 title: Skapa en Browserify-kompatibel spelare med UI-Framework
-exl-id: cd72cae1-f67e-4192-9a7e-1c1492d88922
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Skapa en Browserify-kompatibel spelare med UI-Framework {#create-a-browserify-compatible-player-using-the-ui-framework}
 
-Använd Browser TVSDK:s biblioteksfiler i din app för att skapa en Browserify-kompatibel spelare med hjälp av UI-Framework.
+Använd Browser TVSDK:s biblioteksfiler i din app för att skapa en Browserify-kompatibel spelare med UI-Framework.
 
 Exempel på Browserify-filer som ingår i TVSDK:
 
@@ -20,7 +19,7 @@ Exempel på Browserify-filer som ingår i TVSDK:
 * [!DNL [...]/samples/browserify/ui-framework/examples/sample.html]
 * [!DNL [...]/samples/browserify/ui-framework/examples/sample.js]
 
-Om du vill skapa en Browserify-kompatibel app med UI-Framework måste du `require` de två Browserify-modulerna (tillhandahålls av Browser TVSDK) i programkoden:
+Om du vill skapa en Browserify-kompatibel app med hjälp av UI-ramverket måste du `require` de två Browserify-modulerna (tillhandahålls av Browser TVSDK) i programkoden:
 
 1. Kräv Browserify-moduler:
 

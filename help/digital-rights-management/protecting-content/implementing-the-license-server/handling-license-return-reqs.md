@@ -2,8 +2,7 @@
 title: Hantera licensreturbegäranden
 description: Hantera licensreturbegäranden
 copied-description: true
-exl-id: de577cb9-4ede-440e-8b71-1b39c6cc3c5b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -17,4 +16,4 @@ Om klientprogrammet behöver returnera en licens, anropas `DRMManager.returnVouc
 * Klassen för begäranhanteraren är `com.adobe.flashaccess.sdk.protocol.licensereturn.LicenseReturnHandler`
 * Begärandemeddelandeklassen är `com.adobe.flashaccess.sdk.protocol.licensereturn.LicenseReturnRequestMessage`
 
-Minimivärdet `Adobe Primetime DRM` SDK-version som krävs är version 5; URL för begäran är &quot; [!DNL /flashaccess/lreturn/v5]&quot;. Precis som med domänavregistrering använder servern `getRequestPhase()` för att avgöra om kunden kan förhandsgranska en licensretur.
+Minimivärdet `Adobe Primetime DRM` SDK-version som krävs är version 5. URL:en för begäran är [!DNL /flashaccess/lreturn/v5]&quot;. Precis som med domänavregistrering använder servern `getRequestPhase()` för att avgöra om kunden kan förhandsgranska en licensretur.

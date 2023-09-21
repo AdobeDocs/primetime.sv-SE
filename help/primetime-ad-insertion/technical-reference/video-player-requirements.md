@@ -1,8 +1,7 @@
 ---
-description: Alla videospelare måste tillhandahålla funktioner som manifestservern förlitar sig på för att infoga annonser och aktivera annonsspårning.
+description: Alla videospelare måste tillhandahålla funktioner som manifestservern använder för att infoga annonser och aktivera annonsspårning.
 title: Krav för videospelare
-exl-id: 23134e4c-6902-4b97-bf15-4524f47850e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Krav för videospelare {#video-player-requirements}
 
-Alla videospelare måste tillhandahålla funktioner som manifestservern förlitar sig på för att infoga annonser och aktivera annonsspårning.
+Alla videospelare måste tillhandahålla funktioner som manifestservern använder för att infoga annonser och aktivera annonsspårning.
 
 Om du vill använda API:t för annonsinfogning i Primetime måste en videospelare uppfylla följande:
 

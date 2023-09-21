@@ -4,8 +4,7 @@ description: Versionsinformationen för DRM 5.3.1 beskriver de nya funktionerna 
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: e4e0a933-cfc6-4713-ae13-5df11cfc1aad
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Versionsinformationen för DRM 5.3.1 beskriver de nya funktionerna och de kända
    * /flashaccess/licenseRet/v5 (licensretur)
    * /flashaccess/getServerVersion/v5 (Hämta serverversion)
 
-Nu kan alla förfrågningar (som kommer från en CDM i HTML5) dirigeras till en enda slutpunkt: /req
+Nu kan alla begäranden (som kommer från en CDM i HTML5) dirigeras till en enda slutpunkt: /req
 
 Den här ändringen är bakåtkompatibel med andra plattformar än CDM, till exempel Flash Player, Android och iOS.
 

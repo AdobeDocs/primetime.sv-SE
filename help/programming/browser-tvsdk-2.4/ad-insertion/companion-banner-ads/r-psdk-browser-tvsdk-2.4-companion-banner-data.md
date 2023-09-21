@@ -1,8 +1,7 @@
 ---
 description: Innehållet i en AdBannerAsset beskriver en tilläggsbanderoll.
 title: Kompletterande banderolldata
-exl-id: 94954233-4357-43be-a61f-6d8010c930ca
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
@@ -40,7 +39,7 @@ Varje `AdBannerAsset` innehåller information om hur resursen visas.
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
      <li id="li_02B7224C67004095B3F6E50FD21E507E">html: Data finns i HTML-kod. </li> 
      <li id="li_5F37E14472424F808C6094F42009E676">iframe: Data är en iframe-URL (src). </li> 
-     <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">statisk: Data är en statisk bild-URL (src). </li> 
+     <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">static: Data är en statisk bild-URL (src). </li> 
     </ul> </td> 
   </tr> 
   <tr> 

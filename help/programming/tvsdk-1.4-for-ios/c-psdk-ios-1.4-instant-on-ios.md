@@ -1,8 +1,7 @@
 ---
 description: Direktinstallation förladdar delar av mediet på en eller flera kanaler. När en användare har valt eller bytt kanal börjar innehållet tidigare eftersom en del av bufferten redan har slutförts.
 title: Direkt
-exl-id: 3a1b2172-8036-40f1-86b6-8304ef771aa9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -27,6 +26,6 @@ TVSDK slutför några eller alla följande uppgifter för `prepareToPlay`:
 
 >[!TIP]
 >
->The `PTMediaPlayer` och `PTMediaPlayerItem` `prepareToPlay` är lika. Så här undviker du att skapa en separat `PTMediaPlayer` -instans för varje resurs använder du `PTMediaPlayerItem` -metod.
+>The `PTMediaPlayer` och `PTMediaPlayerItem` `prepareToPlay` metoderna är lika. Så här undviker du att skapa en separat `PTMediaPlayer` -instans för varje resurs använder du `PTMediaPlayerItem` -metod.
 
 Med Direktstart kan du starta flera mediespelarinstanser, eller inläsarinstanser av mediespelarobjekt, samtidigt i bakgrunden och buffra videoströmmar i alla dessa instanser. När en användare ändrar kanalen och strömmen har buffrats korrekt, anropar `play` på den nya kanalen startar uppspelningen tidigare.

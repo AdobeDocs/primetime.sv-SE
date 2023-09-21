@@ -1,8 +1,7 @@
 ---
 description: Den här tabellen innehåller detaljerad information om INFO-typmeddelanden.
 title: INFO-meddelandekoder
-exl-id: 162c73c2-c077-4b50-b340-76938b15783a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 4%
@@ -22,7 +21,7 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <th colname="2" class="entry"> Namn </th> 
    <th colname="3" class="entry"> Inre meddelande </th> 
    <th colname="4" class="entry"> Metadatanycklar </th> 
-   <th colname="5" class="entry"> Kommentarer </th> 
+   <th colname="5" class="entry"> Kommentar </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -108,7 +107,7 @@ De flesta informationsmeddelanden innehåller relevanta metadata, till exempel U
    <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"> <p>Ingen </p> </td> 
-   <td colname="5"> <p>Spår för undertexter har ändrats. </p> </td> 
+   <td colname="5"> <p>Spår för underrubriker har ändrats. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,15 +1,14 @@
 ---
 description: Genom att använda anpassade annonsmarkörer kan du markera specifika avsnitt i huvudinnehållet som reklamrelaterade innehållsperioder.
 title: Lägga till egna annonsmärken
-exl-id: 310b2b81-873f-4b37-b18d-d586e6408978
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
-# Översikt {#add-custom-ad-markers-overview}
+# Ökning {#add-custom-ad-markers-overview}
 
 Genom att använda anpassade annonsmarkörer kan du markera specifika avsnitt i huvudinnehållet som reklamrelaterade innehållsperioder.
 
@@ -21,7 +20,7 @@ Annonsuppföljning hanteras inte internt av TVSDK, till exempel när annonser l�
 
 * Annonsbrytning
 
-   En annonsbrytning är en ordnad lista med enskilda annonser i följd.
+  En annonsbrytning är en ordnad lista med enskilda annonser i följd.
 * En enskild annons
 
 Uppspelningshändelser utlöses separat för annonsbrytningar och annonser vid start- och slutpunkten för varje annons.

@@ -1,8 +1,7 @@
 ---
 description: Följ de här stegen för att skapa en grundläggande spelare med webbläsarens TVSDK.
 title: Skapa en basspelare med TVSDK
-exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
 1. Skapa en ny katalog där du kan hämta komprimerade filer för Browser TVSDK.
 1. Ladda ned Browser TVSDK från Zendesk, expandera filerna och placera ramverksmappen i den nya katalogen.
 1. Skapa en enkel HTML-mallsida för koden med en `div` i den.
-1. Placera den här mallsidan i en HTML-fil i den katalog du skapade i steg 1.
+1. Placera den här mallsidan i en HTML-fil i den katalog som du skapade i steg 1.
 
    ```
    <!DOCTYPE html> 
@@ -32,7 +31,7 @@ Följ de här stegen för att skapa en grundläggande spelare med webbläsarens 
    </html>
    ```
 
-1. Lägg till webbläsarens TVSDK-bibliotek i head-avsnittet.
+1. Lägg till Browser TVSDK-biblioteken i head-avsnittet.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 

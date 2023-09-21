@@ -1,8 +1,7 @@
 ---
 description: För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just den DRM-lösning du arbetar med. Den här spelaren kan vara en exempelspelare som tillhandahålls av Adobe eller ett eget TVSDK-baserat videoprogram.
 title: Spela upp skyddat innehåll
-exl-id: b0e09474-f752-495f-a702-93f288535403
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -29,15 +28,15 @@ För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just
 
    * HTML5 Reference Player:
 
-      ```
-      https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
-      ```
+     ```
+     https://ptdemos.com/html5/internal/1_2/2.4_GM/samples/reference/reference_player.html
+     ```
 
    * Shaka Player:
 
-      ```
-      https://shaka-player-demo.appspot.com
-      ```
+     ```
+     https://shaka-player-demo.appspot.com
+     ```
 
    * Exempel på TVSDK Player (under utveckling) -
 
@@ -47,7 +46,7 @@ För att testa DRM-lösningen behöver du ett videoprogram som kan bearbeta just
 
    **Kontrollera uppspelningen när du testar konfigurationen för FairPlay:** FairPlay kräver några extra steg för att spela upp innehåll när du använder ExpressPlay-licensservrarna. Om du använder [!DNL curl] för att testa dina anslutningar (enligt beskrivningen i [Licenser](../../multi-drm-workflows/quick-start/handle-the-licensing.md)) måste du *redigera ditt M3U8-manifest* (ditt paketerade innehåll) enligt följande:
 
-1. Lägg till det svar du fick tillbaka från din licenstokenbegäran i `#EXT-X-KEY:` Märket i manifestet. och
+1. Lägg till det svar du fick tillbaka från din licenstokenbegäran i `#EXT-X-KEY:` Märket i manifestet.
 1. Ändra protokollet för den URL:en från svaret (nu i manifestet) från `https://` till `skd://`.
 
    Här är ett komplett exempel på hur du testar uppspelning med FairPlay, inklusive licensieringssteget:

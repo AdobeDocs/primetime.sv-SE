@@ -2,8 +2,7 @@
 title: Översikt över licensanskaffningsprocessen
 description: Översikt över licensanskaffningsprocessen
 copied-description: true
-exl-id: 0e1c43a5-9a7d-4534-acd6-7feff94f4670
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Översikt över licensanskaffningsprocessen{#license-acquisition-process-overview}
 
-Hur du gör det möjligt för ditt program att spela upp innehåll under skydd av Primetime DRM beskrivs i följande avsnitt med hjälp av kodexempel i ActionScript 3 (AS3). Avvikelserna från det här arbetsflödet för inbyggda appar på mobilplattformar presenteras där det är lämpligt. Arbetsflödena för Primetime DRM är dock mycket lika för alla plattformar, så om du förstår AS3-koden blir det ganska enkelt att extrapolera till andra plattformar.
+Hur du gör det möjligt för ditt program att spela upp innehåll under skydd av Primetime DRM beskrivs i följande avsnitt med hjälp av kodexempel för ActionScript 3 (AS3). Avvikelserna från det här arbetsflödet för inbyggda appar på mobilplattformar presenteras där det är lämpligt. Arbetsflödena för Primetime DRM är dock mycket lika för alla plattformar, så om du förstår AS3-koden blir det ganska enkelt att extrapolera till andra plattformar.
 
 **Licensanskaffningsprocess:**
 

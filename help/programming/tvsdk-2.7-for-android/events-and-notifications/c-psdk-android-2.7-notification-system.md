@@ -1,8 +1,7 @@
 ---
 description: MediaPlayerStatus-objekt innehåller information om förändringar i spelarstatus. Meddelandeobjekt innehåller information om varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren. Du implementerar händelseavlyssnare för att hämta och svara på händelser (MediaPlayerEvent-objekt).
 title: Meddelanden och händelser för spelarstatus, aktivitet, fel och loggning
-exl-id: c25e834e-ffa0-444c-9285-331e6841ac29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -21,14 +20,14 @@ Programmet kan hämta information om meddelanden och status. Med hjälp av den h
 
 `MediaPlayerNotification` innehåller information som är relaterad till spelarens status.
 
-TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification` och varje meddelande innehåller följande information:
+TVSDK tillhandahåller en kronologisk lista med `MediaPlayerNotification` meddelanden och varje meddelande innehåller följande information:
 
 * En tidsstämpel
 * Diagnostiska metadata som består av följande element:
 
-   * `type`: INFORMATION, VARNING eller FEL.
-   * `code`: En numerisk representation av anmälan.
-   * `name`: En beskrivning av meddelandet som kan läsas av människor, till exempel SEEK_ERROR
+   * `type`: INFO, VARNING eller FEL.
+   * `code`: En numerisk representation av meddelandet.
+   * `name`: En läsbar beskrivning av meddelandet, till exempel SEEK_ERROR
    * `metadata`: Nyckel-/värdepar som innehåller relevant information om meddelandet. En nyckel med namnet `URL` tillhandahåller ett värde som är en URL som är relaterad till meddelandet.
 
    * `innerNotification`: En referens till en annan `MediaPlayerNotification` objekt som direkt påverkar detta meddelande.
@@ -64,7 +63,7 @@ Med meddelandesystemet kan du samla in loggnings- och felsökningsinformation f�
 >
 >Återloggningen är inte en del av en produktionskonfiguration och förväntas inte hantera trafik med hög belastning. Om implementeringen inte behöver vara helt fullständig bör du tänka på hur effektiv dataöverföringen är för att undvika att överbelasta systemet.
 
-Här följer ett exempel på hur du hämtar meddelanden:
+Här är ett exempel på hur du hämtar meddelanden:
 
 1. Skapa en timerbaserad körningstråd för videoprogrammet som regelbundet frågar efter data som samlats in av TVSDK-meddelandesystemet.
 1. Om timerns intervall är för stort och händelselistans storlek är för liten, kommer meddelandehändelselistan att flöda över.
@@ -75,7 +74,7 @@ Här följer ett exempel på hur du hämtar meddelanden:
    >
    >1. Minska tidsintervallet som styr tråden som avfrågar efter nya händelser.
    >1. Öka storleken på meddelandelistan.
-
+   >
 
 1. Serialisera de senaste meddelandehändelseposterna i JSON-format och skicka posterna till en fjärrserver för efterbearbetning.
 

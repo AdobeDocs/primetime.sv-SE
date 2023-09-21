@@ -1,8 +1,7 @@
 ---
 description: Om du aktiverar direkt innebär det att en eller flera kanaler är förinlästa. När användare väljer en kanal eller byter kanal spelas innehållet upp omedelbart. Bufferten är klar när användaren börjar titta.
 title: Direkt på
-exl-id: 59293e07-160a-41a2-8ffe-7ca9323048f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -27,18 +26,18 @@ Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs med Medi
 
 * Skapa och bifoga en QoS-provider till en `mediaPlayerItemLoader` instance
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   När uppspelningen har startat använder du `_qosProvider` för att `timeToLoad` och `timeToPrepare` QoSdata. Återstående QoS-mått kan hämtas med `QoSProvider` som är kopplad till `mediaPlayer`.
+  När uppspelningen har startat använder du `_qosProvider` för att `timeToLoad` och `timeToPrepare` QoSdata. Återstående QoS-mått kan hämtas med `QoSProvider` som är kopplad till `mediaPlayer`.
 
-   Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+  Mer information om `MediaPlayerItemLoader`, se [Läsa in en medieresurs med MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
 ## Konfigurera buffring för Direkt på {#section_4FE346B7BE434BA8A2203896D6E52146}
 

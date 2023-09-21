@@ -1,8 +1,7 @@
 ---
 description: Du kan återställa, återanvända eller frigöra en MediaPlayer-instans som du inte längre behöver.
 title: Återanvända eller ta bort en MediaPlayer-instans
-exl-id: 2403e6dd-74c4-43fb-913a-d04e61041628
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Den här åtgärden är användbar i följande fall:
 
 * Du vill återanvända en `MediaPlayer` -instans men måste läsa in en ny `MediaResource` (videoinnehåll) och ersätta föregående instans.
 
-   Om du återställer kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser. The `replaceCurrentItem` utförs dessa steg automatiskt.
+  Med återställning kan du återanvända `MediaPlayer` utan att frigöra resurser, skapa om `MediaPlayer`och omfördela resurser. The `replaceCurrentItem` utförs dessa steg automatiskt.
 
 * När `MediaPlayer` är i ett FEL-tillstånd och måste rensas.
 
-   >[!IMPORTANT]
-   >
-   >Det här är det enda sättet att återställa efter FELstatus.
+  >[!IMPORTANT]
+  >
+  >Det här är det enda sättet att återställa efter FELstatus.
 
 1. Utlysning `MediaPlayer.reset()` för att returnera `MediaPlayer` instansen till dess oinitierade tillstånd:
 
@@ -40,7 +39,7 @@ Den här åtgärden är användbar i följande fall:
 
    >[!TIP]
    >
-   >Läs in samma `MediaResource`.
+   >Om du vill ta bort ett fel läser du in samma `MediaResource`.
 
 1. Ring `prepareToPlay()` -metod.
 
@@ -54,16 +53,16 @@ Du bör släppa en `MediaPlayer` -instans och -resurser när du inte längre beh
 
 Här är några skäl att släppa en `MediaPlayer`:
 
-* Om du har onödiga resurser kan det påverka prestandan.
+* Otillräckliga resurser kan påverka prestandan.
 * Leder en onödig `MediaPlayer` kan leda till kontinuerlig batteriförbrukning för mobila enheter.
 * Om flera instanser av samma videokodek inte stöds på en enhet kan uppspelningsfel uppstå för andra program.
 
 * Släpp `MediaPlayer`.
 
-   ```js
-   void release()
-   ```
+  ```js
+  void release()
+  ```
 
-   >[!NOTE]
-   >
-   >Efter `MediaPlayer` -instansen släpps, du kan inte längre använda den. Om någon metod i `MediaPlayer` -gränssnittet anropas när det har släppts, och `IllegalStateException` kastas.
+  >[!NOTE]
+  >
+  >Efter `MediaPlayer` -instansen släpps, du kan inte längre använda den. Om någon metod i `MediaPlayer` -gränssnittet anropas när det har släppts, och `IllegalStateException` kastas.

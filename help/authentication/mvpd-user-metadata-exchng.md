@@ -1,8 +1,7 @@
 ---
 title: MVPD-utbyte av användarmetadata
 description: MVPD-utbyte av användarmetadata
-exl-id: 8bce6acc-cd33-476c-af5e-27eb2239cad1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 MVPD-program bevarar användarspecifika metadata om sina kunder som i vissa fall delas med programmerare. Syftet med Adobe Primetime autentisering är att förmedla ett utbyte av dessa &quot;användarmetadata&quot;, men inte att genomdriva några regler för utbytet. Utbytesreglerna är avsedda för programmeringsföretag att samarbeta med sina programmeringspartners.
 
-Följande metadatatyper är tillgängliga för utbyte:
+Följande metadatatyper för användare finns för utbyte:
 
 * Postnummer
 * Högsta betyg (VChift eller MPAA)
@@ -68,7 +67,7 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-Adobe Primetime-autentisering har faktiskt stöd för mer detaljerad auktorisering, ända ned till tillgångsnivå, när det stöds av både MVPD och Programmer. Resursen och dess metadata är ogenomskinliga för Adobe. Avsikten är att skapa ett standardformat för att ange resurs-ID och metadata på ett normaliserat sätt, för att skicka resurs-ID:n till olika programmeringsmediefiler.
+Adobe Primetime-autentisering har faktiskt stöd för mer detaljerad auktorisering, ända ned till tillgångsnivå, när det stöds av både MVPD och Programmer. Resursen och dess metadata är ogenomskinliga för Adobe. Avsikten är att skapa ett standardformat för att ange resurs-ID och metadata på ett normaliserat sätt och skicka resurs-ID:n till olika MVPD-filer.
 
 >[!NOTE]
 >
@@ -105,13 +104,13 @@ Adobe Primetime autentisering gör följande antaganden:
 
 ### Anteckningar {#notes-mvpd-progr-metadata-exch-flow}
 
-**Normalisering och validering av resurser.** Resurs-ID:n kan skickas som en oformaterad sträng eller en MRSS-sträng. En programmerare kan välja att använda antingen det rena strängformatet eller MRSS, men måste ha ett förhandsavtal med MVPD så att MVPD vet hur resursen ska hanteras.
+**Normalisering och validering av resurser.** Resurs-ID:n kan skickas som en vanlig sträng eller en MRSS-sträng. En programmerare kan välja att använda antingen det rena strängformatet eller MRSS, men måste ha ett förhandsavtal med MVPD så att MVPD vet hur resursen ska hanteras.
 
-**Resurs-ID och metadataspecifikation.** Adobe Primetime-autentisering använder RSS-standarden med Media RSS-tillägget för att ange en resurs och dess metadata. I kombination med mediets RSS-tillägg stöder Adobe Primetime-autentisering en mängd olika metadata, till exempel föräldrakontroll (via `<media:rating>`) eller geopositionering (`<media:location>`).
+**Specifikation av resurs-ID och metadata.** Adobe Primetime-autentisering använder RSS-standarden med Media RSS-tillägget för att ange en resurs och dess metadata. I kombination med mediets RSS-tillägg har Adobe Primetime-autentisering stöd för en mängd olika metadata, till exempel föräldrakontroll (via `<media:rating>`) eller geopositionering (`<media:location>`).
 
 Adobe Primetime-autentisering kan även stödja genomskinlig konvertering från den äldre kanalsträngen till motsvarande RSS-resurs för MVPD-filer som kräver RSS. I den andra riktningen har Adobe Primetime-autentisering stöd för konvertering från RSS+MRSS till vanlig kanaltitel, för kanalspecifika MVPD-program.
 
-**Adobe Primetime-autentisering ger fullständig bakåtkompatibilitet med befintliga integreringar.** För programmerare som använder autentisering på kanalnivå ser Adobe Primetime-autentisering till att kanal-ID paketeras i det format som krävs innan det skickas till en MVPD som förstår det formatet. Det omvända gäller också: Om en programmerare anger alla resurser i ett nytt format, översätts det nya formatet till en enkel kanalsträng om autentisering görs mot ett MVPD-dokument som bara tillåter kanalnivåauktorisering.
+**Adobe Primetime-autentisering ger fullständig bakåtkompatibilitet med befintliga integreringar.** För programmerare som använder autentisering på kanalnivå ser Adobe Primetime-autentisering till att kanal-ID paketeras i det format som krävs innan det skickas till en MVPD som förstår det formatet. Det motsatta gäller också: om en programmerare anger alla resurser i ett nytt format, översätts det nya formatet med Adobe Primetime-autentisering till en enkel kanalsträng om auktorisering mot ett MVPD-dokument som bara gör kanalnivåauktorisering.
 
 ## Användningsexempel för användarmetadata {#user-metadata-use-cases}
 
@@ -120,7 +119,7 @@ Användningsexemplen förändras hela tiden och blir allt fler när fler PDF-fil
 * [MVPD-användar-ID](#mvpd-user-id)
 * [Hushållets-ID](#household-user-id)
 * [Postnummer](#zip-code)
-* [Högsta betyg (föräldrakontroll)](#max-rating-parental-control)
+* [Maximal klassificering (Föräldrakontroll)](#max-rating-parental-control)
 * [Kanallinje](#channel-line-up)
 
 ### MVPD-användar-ID {#mvpd-user-id}
@@ -144,10 +143,10 @@ Användningsexemplen förändras hela tiden och blir allt fler när fler PDF-fil
 * Kan anges med AuthZ-svaret för snabba uppdateringar
 * Stöd för MVPD: Vissa MVPD
 
-### Högsta betyg (föräldrakontroll) {#max-rating-parental-control}
+### Maximal klassificering (Föräldrakontroll) {#max-rating-parental-control}
 
 * AuthN initialt, plus AuthZ-uppdatering
-* Filtrera innehåll från gränssnittet
+* Filtrera innehåll från användargränssnittet
 * MPAA- eller VChift-klassificeringar
 * Stöd för MVPD: Vissa MVPD
 

@@ -1,15 +1,14 @@
 ---
 description: Medieströmmar kan innehålla ytterligare metadata i form av taggar i MPD-filen (Media Presentation Description), och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
 title: Egna taggar
-exl-id: 9e6343b5-ade7-467a-b2a1-8f8d69492a1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-# Översikt {#custom-tags-overview}
+# Ökning {#custom-tags-overview}
 
 Medieströmmar kan innehålla ytterligare metadata i form av taggar i MPD-filen (Media Presentation Description), och den här filen anger var annonsen placeras. Du kan ange egna taggnamn och få meddelanden när vissa taggar visas i manifestfilen.
 
@@ -64,9 +63,9 @@ Programmet kan konfigurera följande scenarier:
 * Ett meddelande när `#EXT-X-ASSET` -taggar, eller andra uppsättningar egna taggnamn som du har prenumererat på, finns i filen.
 * Infoga annonser när en `#EXT-X-AD` -taggen, eller något annat anpassat taggnamn, finns i strömmen.
 
-Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Du meddelas med en `TimedMetadata` -händelsen vid parsning av manifestfiler.
+Du kan prenumerera på följande taggar som anpassade taggar: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Du får ett meddelande med `TimedMetadata` -händelsen vid parsning av manifestfiler.
 
-Det finns några reklamtaggar, som `EXT-X-CUE`som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` -egenskap.
+Det finns några reklamtaggar, till exempel `EXT-X-CUE`som du redan prenumererar på. Dessa annonstaggar används också av standardgeneratorn för affärstillfällen. Du kan ange vilka annonstaggar som ska användas av standardgeneratorn för affärsmöjlighet genom att ange `adTags` -egenskap.
 
 ## DASH-innehållstaggar {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
@@ -74,9 +73,9 @@ DASH har två sätt att signalera händelser:
 
 * I MPD-filen.
 
-   Den här filen liknar M3U8-filen i HLS-innehåll och MPD-händelser finns i .mpd-filen.
+  Den här filen liknar M3U8-filen i HLS-innehåll och MPD-händelser finns i .mpd-filen.
 * Inband i representationen
 
-   Inband-händelser multiplexas med representationer genom att händelsemeddelandena läggs till som en del av segmenten. En representation är en lista över video- och ljudsegment som spelas upp i sekvens. Inband-händelsedata är inbäddade i dessa segment.
+  Inband-händelser multiplexas med representationer genom att händelsemeddelandena läggs till som en del av segmenten. En representation är en lista över video- och ljudsegment som spelas upp i sekvens. Inband-händelsedata är inbäddade i dessa segment.
 
 Dessa händelser meddelas när `TimedMetadata` -händelser till programmet så snart de tolkas av Browser TVSDK. När en händelse har meddelats kommer den inte att meddelas igen.

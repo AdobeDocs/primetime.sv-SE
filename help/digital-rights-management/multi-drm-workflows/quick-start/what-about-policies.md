@@ -1,8 +1,7 @@
 ---
 description: Att ställa in principer är en process för att ange villkor för när och hur en användare får spela upp skyddat videoinnehåll.
 title: Ställa in profiler
-exl-id: ab7295c8-88f2-4d4a-a7f1-3332df7bb735
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%

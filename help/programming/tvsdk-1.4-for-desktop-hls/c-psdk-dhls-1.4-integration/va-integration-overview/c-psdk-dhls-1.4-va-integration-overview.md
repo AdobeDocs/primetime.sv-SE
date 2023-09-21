@@ -1,8 +1,7 @@
 ---
 description: Du kan spåra videoanvändning genom att integrera TVSDK med Adobe Analytics.
 title: Videoanalys
-exl-id: 02303511-2713-4974-ada7-6f50fc500325
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -19,14 +18,15 @@ Följande procedur sammanfattar stegen som krävs för att aktivera videospårni
 
 1. Initiera och/eller konfigurera följande videospårningskomponenter:
 
-   * **AppMeasurement-bibliotek** - Innehåller den grundläggande logiken för datainsamling på låg nivå. Det är här som videons pulsslagdata samlas in och skickas över nätverket.
+   * **AppMeasurementen bibliotek** - Innehåller den grundläggande logiken för datainsamling på låg nivå. Det är här som videons pulsslagdata samlas in och skickas över nätverket.
    * **Bibliotek för videohjärtslag** - Innehåller kärnlogik för datainsamling med pulsslag. Biblioteket för videohjärtslag har åtkomst till en delmängd av `AppMeasurement` biblioteks-API:er.
 
-      >[!TIP]
-      >
-      >Din app interagerar inte direkt med videons hjärtslagskod. I stället använder appen TVSDK API:er för att konfigurera spelarens videospårningsfunktioner.
+     >[!TIP]
+     >
+     >Din app interagerar inte direkt med videons hjärtslagskod. I stället använder appen TVSDK API:er för att konfigurera spelarens videospårningsfunktioner.
 
    * **VisitorID-bibliotek** - Identifierar unikt besökarna på den webbsida som är värd för videospelaren.
+
    >[!IMPORTANT]
    >
    >Den inbyggda funktionen för videospårning i TVSDK är beroende av en korrekt konfigurerad `AppMeasurement` -instans. Spårningselementen förutsätter att `AppMeasurement` biblioteket har redan instansierats och konfigurerats innan videospårning konfigureras och aktiveras. Funktioner för videospårning i TVSDK är beroende av att det finns en fullt fungerande och korrekt konfigurerad instans av `AppMeasurement` bibliotek.

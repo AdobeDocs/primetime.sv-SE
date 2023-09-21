@@ -2,8 +2,7 @@
 title: Använda skyddsprofiler för utdata
 description: Använda skyddsprofiler för utdata
 copied-description: true
-exl-id: d91c9181-a6b2-4982-a3ba-57c4b56428eb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -16,9 +15,9 @@ ht-degree: 0%
 
 Widewin stöder både analoga och digitala begränsningar för skydd av utdata. Läs dokumentationen från din Widewin-leverantör om hur du bifogar dessa policyer till genererade licenser.
 
-Om du använder Expresshow som Widewin-tjänsteleverantör måste du bifoga principer för skydd av digitala utdata vid tokengenerering via hdcpOutputControl-flaggan: Tillåtna värden är 0, 1, 2 där 0 = HDCP_NONE, 1 = HDCP_V1, 2 = HDCP_V2. Både HDCP_V1 och HDCP_V2 tillämpar HDCP version 1.X respektive 2.X.
+Om du använder Expresplay som Widewin-tjänstleverantör kopplar du principer för digitalt utdataskydd vid tokengenereringstid via hdcpOutputControl-flaggan: Tillåtna värden är 0, 1, 2 där 0 = HDCP_NONE, 1 = HDCP_V1, 2 = HDCP_V2. Både HDCP_V1 och HDCP_V2 tillämpar HDCP version 1.X respektive 2.X.
 
-Uttrycket stöder för närvarande inte koppling av analoga utdatabegränsningar
+Uttrycket har för närvarande inte stöd för att koppla analoga utdatabegränsningar
 
 **Principer för PlayReady-utdataskydd**
 

@@ -1,9 +1,8 @@
 ---
-title: Cachelagring
-description: Cachelagring
+title: Cachning
+description: Cachning
 copied-description: true
-exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -16,10 +15,10 @@ Primetime Ad Insertion respekterar som standard rubriker för HTTP-cachekontroll
 
 ## För live/linjärt innehåll {#caching-live-linear-content}
 
-* Överordnad manifest: 24 timmar eller Cache-Control: max-age=86400
-* Mediematerial: 1 sekund, eller Cache-Control: max-age=1
+* Huvudmanifest: 24 timmar, eller Cache-Control: max-age=86400
+* Mediematerial: 1 sekund eller Cache-Control: max-age=1
 
 ## För VOD-innehåll {#caching-vod-content}
 
-* Överordnad manifest: 24 timmar eller Cache-Control: max-age=86400
-* Mediematerial: 24 timmar eller Cache-Control: max-age=86400
+* Huvudmanifest: 24 timmar, eller Cache-Control: max-age=86400
+* Mediematerial: 24 timmar, eller Cache-Control: max-age=86400

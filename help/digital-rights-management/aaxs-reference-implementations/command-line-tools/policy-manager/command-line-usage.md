@@ -2,8 +2,7 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-exl-id: 2142cb76-e71c-4443-8b5d-348e45587331
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -59,7 +58,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e datum </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det datum som licenserna ska gälla före. Ange som <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span>. Exempel: 2008-12-1 eller 2008-12-1-00:00:00 i midnatt den 1 december 2008. Värdet måste vara större än värdet för <span class="codeph"> -s </span>, om det finns. Det här alternativet kan inte användas med <span class="codeph"> -r </span>. Om du vill ta bort slutdatumet när du uppdaterar en profil använder du <span class="codeph"> -e </span> utan att ange ett datum. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Det datum som licenserna ska vara giltiga till. Ange som <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span>. Exempel: 2008-12-1 eller 2008-12-1-00:00:00 i midnatt den 1 december 2008. Värdet måste vara större än värdet för <span class="codeph"> -s </span>, om det finns. Det här alternativet kan inte användas med <span class="codeph"> -r </span>. Om du vill ta bort slutdatumet när du uppdaterar en profil använder du <span class="codeph"> -e </span> utan att ange ett datum. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r minuter </span> </td> 
@@ -75,11 +74,11 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l minuter </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Licensens cachelagringstid i minuter, vilket är den tidpunkt då en licens tillåts cachelagras i klientens License Store efter att licensen har utfärdats av servern. Värdet får inte vara negativt. Ange <span class="codeph"> -l 0 </span> att ange att cache-lagring av licenser inte är tillåten. Använd <span class="codeph"> -l </span> utan att ange ett antal minuter för obegränsad licenscachelagring. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Licensens cachelagringstid i minuter, vilket är den tidpunkt då en licens tillåts cachelagras i klientens License Store efter att licensen har utfärdats av servern. Värdet får inte vara negativt. Ange <span class="codeph"> -l 0 </span> att ange att cache-lagring av licenser inte är tillåten. Använd <span class="codeph"> -l </span> utan att ange ett antal minuter för obegränsad licenscache. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -ldate </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Licensens slutdatum för cachelagring (det datum efter vilket licenserna inte kan cachas i klientens License Store, efter att licensen har utfärdats av servern). Ange som <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span><i class="+ topic/ph hi-d/i "> </i>eller<i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span>. Exempel: 2008-12-1 eller 2008-12-1-00:00:00 i midnatt den 1 december 2008. Använd <span class="codeph"> -l </span> utan att ange ett antal minuter för obegränsad licenscachelagring. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Licensens slutdatum för cachelagring (det datum efter vilket licenserna inte kan cachas i klientens License Store, efter att licensen har utfärdats av servern). Ange som <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span><i class="+ topic/ph hi-d/i "> </i>eller<i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span>. Exempel: 2008-12-1 eller 2008-12-1-00:00:00 i midnatt den 1 december 2008. Använd <span class="codeph"> -l </span> utan att ange ett antal minuter för obegränsad licenscache. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -authNS </span> </td> 
@@ -95,7 +94,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> <i class="+ topic/ph hi-d/i ">/</i> <span class="+ topic/ph pr-d/codeph codeph"> value </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> par </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna hindrade åtkomst till skyddat innehåll. Värdet består av kommaavgränsade namn:värdepar med följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1 </span>. Använd <span class="codeph"> -drmBlacklist </span> utan de återstående argumenten för att ta bort alla poster från listan. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna hindrade åtkomst till skyddat innehåll. Värdet består av kommaavgränsade namn:värdepar med följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1 </span>. Använd <span class="codeph"> -drmBlacklist </span> utan återstående argument för att ta bort alla poster från listan. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
@@ -111,7 +110,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeBlacklist name </span> <i class="+ topic/ph hi-d/i ">/</i> <span class="+ topic/ph pr-d/codeph codeph"> value </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> par </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Programkörningsmiljöerna hindrade från att komma åt skyddat innehåll. Värdet består av kommaavgränsade namn:värdepar med följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | program | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Använd <span class="codeph"> -runtimeBlacklist </span> utan de återstående argumenten för att ta bort alla poster från listan. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Programkörningsmiljöerna hindrade från att komma åt skyddat innehåll. Värdet består av kommaavgränsade namn:värdepar med följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | program | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Använd <span class="codeph"> -runtimeBlacklist </span> utan återstående argument för att ta bort alla poster från listan. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -123,11 +122,11 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= värde </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger anpassade nycklar/värden som ska läggas till i profilen. Flera <span class="codeph"> -k </span> kan anges. Använd <span class="codeph"> -k </span> utan de återstående argumenten för att ta bort alla egenskaper. Tolkningen eller hanteringen av dessa data är helt och hållet upp till implementeringen av Adobe Access-licensservern. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger anpassade nycklar/värden som ska läggas till i profilen. Flera <span class="codeph"> -k </span> kan anges. Använd <span class="codeph"> -k </span> utan återstående argument för att ta bort alla egenskaper. Tolkningen eller hanteringen av dessa data är helt och hållet upp till implementeringen av Adobe Access-licensservern. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -p name= value </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lägger till en anpassad egenskap som visas i licensen som skapas för varje klient. Flera <span class="codeph"> -p </span> kan anges för att lägga till flera egenskaper. Använd <span class="codeph"> -p </span> utan de återstående argumenten för att ta bort alla egenskaper. Tolkningen eller hanteringen av dessa data är helt och hållet upp till implementeringen av klientapplikationen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lägger till en anpassad egenskap som visas i licensen som skapas för varje klient. Flera <span class="codeph"> -p </span> kan anges för att lägga till flera egenskaper. Använd <span class="codeph"> -p </span> utan återstående argument för att ta bort alla egenskaper. Tolkningen eller hanteringen av dessa data är helt och hållet upp till implementeringen av klientapplikationen. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,8 +1,7 @@
 ---
 description: Från det att MediaPlayer-instansen skapas tills den avslutas övergår den här instansen från ett läge till nästa.
 title: Livscykel och lägen för MediaPlayer-objektet
-exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Här är möjliga lägen:
 
 * **FÖRBEREDD**: `MediaPlayerStatus.PREPARED`
 
-* **SPELA UPP**: `MediaPlayerStatus.PLAYING`
+* **SPELAR**: `MediaPlayerStatus.PLAYING`
 
 * **PAUSAT**: `MediaPlayerStatus.PAUSED`
 
@@ -46,7 +45,7 @@ När en medieresurs läses in och spelas upp, övergår spelaren på följande s
 1. Det inledande tillståndet är IDLE.
 1. Dina programsamtal `MediaPlayer.replaceCurrentResource`, som flyttar spelaren till INITIALIZING-läget.
 1. Om webbläsar-TVSDK läser in resursen ändras läget till INITIALIZED.
-1. Dina programsamtal `MediaPlayer.prepareToPlay`och läget ändras till PREPARING.
+1. Dina programsamtal `MediaPlayer.prepareToPlay`och läget ändras till FÖRBEREDELSE.
 1. Webbläsare-TVSDK förbereder medieströmmen och startar annonslösningen och annonsinfogningen (om den är aktiverad).
 
    När det här steget är klart infogas annonser i tidslinjen eller så har annonsproceduren misslyckats och spelarläget ändras till PREPARED.
@@ -54,9 +53,9 @@ När en medieresurs läses in och spelas upp, övergår spelaren på följande s
 
    >[!TIP]
    >
-   >När du navigerar bort från uppspelningen, stänger av enheten eller växlar program ändras läget till SUSPENDED och resurser frigörs när du spelar upp eller pausar. Återställ mediespelaren för att fortsätta.
+   >När du navigerar bort från uppspelningen, stänger av enheten eller växlar program ändras läget till SUSPENDED och resurser frigörs när du spelar upp eller pausar. Återställ mediespelaren om du vill fortsätta.
 
-1. När spelaren når slutet av strömmen blir läget SLUTFÖRD.
+1. När spelaren kommer till slutet av strömmen blir läget SLUTFÖRD.
 1. När programmet släpper mediespelaren ändras läget till FRISLÄPPT.
 1. Om ett fel inträffar under processen ändras statusen till FEL.
 

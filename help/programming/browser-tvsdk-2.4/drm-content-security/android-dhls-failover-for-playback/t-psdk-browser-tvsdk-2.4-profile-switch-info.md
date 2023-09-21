@@ -1,8 +1,7 @@
 ---
 description: När mediespelaren byter sin aktuella profil till en ny profil kan du hämta information om växeln, bland annat när den växlades, information om bredd och höjd eller varför en annan bithastighet användes.
 title: Hämta information om profilväxling
-exl-id: 3ef4b319-dd78-4abd-9c2d-ab1d608f6cea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%
@@ -20,7 +19,7 @@ När mediespelaren byter sin aktuella profil till en ny profil kan du hämta inf
 
    * `profile`: Identifierare för den nya profilen som används.
    * `time`: Den direktuppspelningstid som växeln inträffade vid.
-   * `description`: Textuell beskrivning av orsaken till en bithastighetsändring, som en sträng med semikolonavgränsade nyckel-/värdepar. Innehåller högst ett `Reason` och en `Bitrate`. Om informationen inte är tillgänglig eller bithastigheten inte ändrades är strängen tom.
+   * `description`: Textuell beskrivning av orsaken till en bithastighetsändring, som en sträng med semikolonavgränsade nyckel/värde-par. Innehåller högst ett `Reason` och en `Bitrate`. Om informationen inte är tillgänglig eller bithastigheten inte ändrades är strängen tom.
 
    <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
     <thead> 
@@ -60,7 +59,7 @@ När mediespelaren byter sin aktuella profil till en ny profil kan du hämta inf
    ```
 
    * `width`: Heltal som anger bredden i pixlar.
-   * `height`: Heltal som anger höjden i pixlar.
+   * `height`: Heltal som anger höjd i pixlar.
 
    >[!NOTE]
    >

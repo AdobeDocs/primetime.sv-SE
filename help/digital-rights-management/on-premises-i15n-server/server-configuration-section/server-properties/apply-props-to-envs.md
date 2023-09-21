@@ -1,8 +1,7 @@
 ---
 description: Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du kan göra detta med något av följande
 title: Tillämpa egenskaper på servermiljöer
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -15,16 +14,16 @@ Du måste konfigurera serveregenskaperna så att de återspeglar din miljö. Du 
 
 * [!DNL flashaccess-i15n.properties] - Prov som ingår i [!DNL .war] filer
 
-* [!DNL AdobeInitial.properties] - Provet finns i [!DNL /shared] på dvd-skivan
+* [!DNL AdobeInitial.properties] - Provet finns i [!DNL /shared] mapp på dvd-skivan
 
-   Du kan använda den här filen för att åsidosätta egenskaperna som anges i WAR-filen enligt följande:
+  Du kan använda den här filen för att åsidosätta egenskaperna som anges i WAR-filen enligt följande:
 
    1. Ange åsidosättningsegenskapsvärden i [!DNL AdobeInitial.properties]
    1. Montera [!DNL AdobeInitial.properties] på klassökvägen.
 
-   >[!NOTE]
-   >
-   >Adobe rekommenderar att du använder [!DNL AdobeInitial.properties] eftersom det gör att du kan uppdatera dina AIR-programfiler utan att riskera att förlora tidigare egenskapskonfigurationsinställningar som du har gjort i [!DNL flashaccess-i15n.properties] -fil.
+  >[!NOTE]
+  >
+  >Adobe rekommenderar att du använder [!DNL AdobeInitial.properties] eftersom det gör att du kan uppdatera dina AIR-programfiler utan att riskera att förlora tidigare egenskapskonfigurationsinställningar som du har gjort i [!DNL flashaccess-i15n.properties] -fil.
 
 * Egenskapsmekanismen för Java System.
 
@@ -65,4 +64,4 @@ Servern använder den här sökordningen för egenskaper:
 >[!NOTE]
 >
 >Du måste ange serverns miljönamn som en Java-systemegenskap när du startar servern. Exempel: när du startar Tomcat med [!DNL catalina.bat], ange `CATALINA_OPTS` miljövariabel enligt följande:
->-DENVIRONMENT_NAME=[ DEV | SCEN | PROD ]
+>-DENVIRONMENT_NAME=[DEV | SCENEN | PROD]

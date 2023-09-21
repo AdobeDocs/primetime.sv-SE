@@ -1,8 +1,7 @@
 ---
 description: Om du väljer en HSM för att lagra serverinloggningsuppgifterna måste du läsa in privata nycklar och certifikat till HSM och skapa en pkcs11.cfg-konfigurationsfil.
 title: HSM-konfiguration
-exl-id: 4c4423ea-b7af-4a30-99ac-f5b74a1e1168
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -26,4 +25,4 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Om du kan visa dina inloggningsuppgifter i listan är HSM korrekt konfigurerat och licensservern kan nu komma åt inloggningsuppgifterna.
+Om du kan visa dina autentiseringsuppgifter i listan är HSM korrekt konfigurerat och licensservern kan nu komma åt autentiseringsuppgifterna.

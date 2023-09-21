@@ -1,8 +1,7 @@
 ---
 title: Förstå användar-ID:n
 description: Förstå användar-ID:n
-exl-id: 813a8501-db72-4850-a387-c8db6120db80
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
@@ -32,7 +31,7 @@ Här beskrivs olika sätt som användar-ID representeras i Adobe Primetime auten
 
 * MVPD ger i allmänhet ett unikt ID <u>och skickar det till Adobe vid lyckad autentisering</u>. Den är i allmänhet enhetlig i alla nätverk. Undantaget är Comcast MVPD, som tillhandahåller olika användar-ID för varje kanal.
 
-* MVPD-användar-ID:t innehåller inte PII och är INTE ett kontonummer. Den behöver inte exponeras i krypterad form eftersom vi har validerat med alla dokumentskyddsinspektörer att ingen PII skickas.
+* MVPD-användar-ID:t innehåller inte PII och är INTE ett kontonummer. Den behöver inte exponeras i krypterad form eftersom vi har verifierat med alla de alternativa dokumentationsdokumenten att ingen PII skickas.
 
 Hur du använder användar-ID beror på användningsfallet:
 

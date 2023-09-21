@@ -1,15 +1,14 @@
 ---
 description: Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
 title: Alternativt ljud
-exl-id: c8158888-2e2a-42a6-a948-dc6ba4ce7a9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# Översikt {#alternate-audio-overview}
+# Ökning {#alternate-audio-overview}
 
 Alternativt, eller sent, ljud kan du växla mellan tillgängliga ljudspår för ett videospår. På så sätt kan användarna välja ett språkspår när videon spelas upp.
 
@@ -19,7 +18,7 @@ När TVSDK skapar `MediaPlayerItem` -instans för den aktuella videon, skapar de
 
 När det är dags att spela upp videon kan du be om en lista med tillgängliga ljudspår, om du vill låta användaren välja ett, och ställa in videon som ska spelas upp med det valda spåret.
 
-Om ett extra ljudspår blir tillgängligt efter att det skapats `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_UPDATED` -händelse.
+Om ett extra ljudspår blir tillgängligt efter att det har skapat `MediaPlayerItem`, TVSDK utlöser en `MediaPlayerItem.AUDIO_UPDATED` -händelse.
 
 ## Lagt till API:er {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -67,7 +66,7 @@ PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const
 
 `selectAudioTrack`
 
-Den här funktionen väljer ett alternativt ljudspår som ska spelas upp.
+Den här funktionen väljer ett alternativt ljudspår att spela upp.
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack) 

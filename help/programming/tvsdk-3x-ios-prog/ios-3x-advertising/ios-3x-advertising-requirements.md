@@ -1,8 +1,7 @@
 ---
 description: Ni kan infoga annonser i ert VOD-innehåll och direktsänt/linjärt innehåll med hjälp av Adobe Primetime annonsbeslutsgränssnitt.
 title: Krav för annonsering
-exl-id: 164a5e79-1634-4853-a2b9-d4b5bdbbf190
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Primetimes annonsbeslut fungerar tillsammans med TVSDK för att identifiera anno
 Om du vill lägga in annonser i videomaterialet måste du se till att annonsen och det huvudsakliga videomaterialet uppfyller följande krav:
 
 * Annonsinnehållets HLS-version får inte vara högre än huvudinnehållets HLS-version.
-* Annonserna måste vara multiplexade och måste innehålla en rendering som bara innehåller ljud, oavsett om huvudinnehållet är multiplexat eller inte.
+* Ads must be multiplexed and must contain an audio-only rendition, whether the main content is multiplexed.
 * Lägg till spellistor bör ha samma bithastighetsåtergivningar som återgivningarna i spellistan för huvudinnehållet.
 * Mållängden och den individuella fragmentlängden för en annons får inte överskrida mållängden för huvudinnehållet.
 * Om huvudinnehållet innehåller en ström med enbart ljud måste annonsinnehållet även innehålla en ström med enbart ljud.

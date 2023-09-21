@@ -1,8 +1,7 @@
 ---
 description: Du kan markera, ta bort och ersätta tidsintervall i VOD-strömmar genom att använda olika kombinationer av annonssignaleringsläge och metadata. Olika kombinationer av signaleringsläge och metadata ger olika beteenden.
 title: Effekt vid infogning och borttagning av annonser i signeringsläge och metadatakombinationer
-exl-id: 949ca84f-4aa9-4668-b91b-99fdf13f625c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -71,7 +70,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
   </tr> 
   <tr> 
    <td></td> 
-   <td> Mark </td> 
+   <td> Märk </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markerade intervall </td> 
@@ -124,7 +123,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
   </tr> 
   <tr> 
    <td></td> 
-   <td> Mark </td> 
+   <td> Märk </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markerade intervall </td> 
@@ -162,7 +161,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td> Ingen </td> 
-   <td> Inga annonser har infogats </td> 
+   <td> Inga annonser infogade </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -173,7 +172,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
   </tr> 
   <tr> 
    <td></td> 
-   <td> Mark </td> 
+   <td> Märk </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markerade intervall </td> 
@@ -222,7 +221,7 @@ Följande tabell innehåller information om signaleringsläget och metadatakombi
   </tr> 
   <tr> 
    <td></td> 
-   <td> Mark </td> 
+   <td> Märk </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markerade intervall </td> 

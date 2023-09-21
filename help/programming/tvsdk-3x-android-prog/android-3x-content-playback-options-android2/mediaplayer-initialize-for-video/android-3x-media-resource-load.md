@@ -1,8 +1,7 @@
 ---
 description: Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det videoinnehåll som ska spelas upp. Detta är ett sätt att läsa in en medieresurs.
 title: Läsa in en medieresurs i mediespelaren
-exl-id: f39d3aa2-8912-4dac-9f10-91b6d20395ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Läs in en resurs genom att direkt instansiera en MediaResource och läsa in det
 
    Detta startar resursinläsningsprocessen.
 
-1. Registrera `MediaPlayerEvent.STATUS_CHANGED` med `MediaPlayer` -instans. Kontrollera om det finns minst följande statusvärden i återanropet:
+1. Registrera `MediaPlayerEvent.STATUS_CHANGED` -händelsen med `MediaPlayer` -instans. Kontrollera om det finns minst följande statusvärden i återanropet:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Genom dessa evenemang `MediaPlayer` -objektet meddelar programmet när medieresursen har lästs in.
+   Genom dessa evenemang `MediaPlayer` -objektet meddelar programmet när mediaresursen har lästs in.
 1. När statusen för mediespelaren ändras till `INITIALIZED`kan du ringa `MediaPlayer.prepareToPlay()`.
 
    Den här statusen anger att mediet har lästs in. Den nya `MediaPlayerItem` är redo för uppspelning. Anropar `prepareToPlay()` startar processen för upplösning och placering av annonser, om sådan finns.

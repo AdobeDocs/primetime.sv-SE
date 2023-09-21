@@ -1,8 +1,7 @@
 ---
 description: TVSDK buffrar ibland videoströmmen för att ge en jämnare tittarupplevelse. Du kan konfigurera hur spelaren buffrar.
 title: Buffringstidsregler
-exl-id: 78f1bb9f-3d10-4f05-90dd-5b52eee0feec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
@@ -27,4 +26,4 @@ När videon återges fortsätter TVSDK att buffra nya fragment tills det har buf
 
 >[!TIP]
 >
->Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en jämnare uppspelning under en längre tid. Men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.
+>Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en mjuk uppspelning under en längre tid, men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.

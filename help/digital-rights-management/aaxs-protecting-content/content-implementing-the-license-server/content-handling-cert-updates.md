@@ -2,8 +2,7 @@
 title: Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla
 description: Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla
 copied-description: true
-exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
 
-Det kan finnas tillfällen när du måste skaffa ett nytt certifikat från Adobe. När ett produktionscertifikat upphör att gälla upphör till exempel ett utvärderingscertifikat att gälla eller när du växlar från en utvärdering till ett produktionscertifikat. När ett certifikat upphör att gälla och du inte vill paketera om innehållet som använde det gamla certifikatet. Du kan göra licensservern uppmärksam på både gamla och nya certifikat.
+Det kan finnas tillfällen när du måste skaffa ett nytt certifikat från Adobe. När ett produktionscertifikat upphör att gälla upphör till exempel ett utvärderingscertifikat att gälla, eller när du växlar från en utvärdering till ett produktionscertifikat. När ett certifikat upphör att gälla och du inte vill paketera om innehållet som använde det gamla certifikatet. Du kan göra licensservern uppmärksam på både gamla och nya certifikat.
 
 Använd följande procedur för att uppdatera servern med de nya certifikaten:
 
@@ -46,25 +45,25 @@ Använd följande procedur för att uppdatera servern med de nya certifikaten:
 
       * I referensimplementeringen anger du den via `LicenseHandler.ServerCredential` -egenskap.
       * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `LicenseServerCredential` i filen flashaccess-tenant.xml.
-   * Kontrollera att aktuella och gamla autentiseringsuppgifter anges till `AsymmetricKeyRetrieval`
+
+   * Se till att aktuella och gamla autentiseringsuppgifter anges till `AsymmetricKeyRetrieval`
 
       * I referensimplementeringen anger du den via `LicenseHandler.ServerCredential` och `AsymmetricKeyRetrieval.ServerCredential. n` egenskaper.
       * I Adobe Access Server för skyddad direktuppspelning anges de gamla autentiseringsuppgifterna efter den första autentiseringsuppgifterna i `LicenseServerCredential` i filen flashaccess-tenant.xml.
+
    För transportinloggningsuppgifterna:
 
    * Se till att aktuella autentiseringsuppgifter skickas till `HandlerConfiguration.setServerTransportCredential()` metod:
 
       * I referensimplementeringen anger du den via `HandlerConfiguration.ServerTransportCredential` -egenskap.
       * I Adobe Access Server för skyddad direktuppspelning måste den aktuella autentiseringsuppgiften vara den första autentiseringsuppgiften som anges i `TransportCredential` i filen flashaccess-tenant.xml.
+
    * Se till att de gamla autentiseringsuppgifterna anges för `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * I referensimplementeringen anger du den via `HandlerConfiguration.AdditionalServerTransportCredential. n` egenskaper.
       * I Adobe Access Server för skyddad direktuppspelning anges detta efter de första autentiseringsuppgifterna i `TransportCredential` i filen flashaccess-tenant.xml.
 
-
-
-
-1. Uppdatera paketeringsverktygen för att säkerställa att de paketerar innehåll med de aktuella inloggningsuppgifterna. Kontrollera att det senaste licensservercertifikatet, transportcertifikatet och paketerarens autentiseringsuppgifter används för paketering.
+1. Uppdatera paketeringsverktygen för att säkerställa att de paketerar innehåll med aktuella inloggningsuppgifter. Kontrollera att det senaste licensservercertifikatet, transportcertifikatet och paketerarens autentiseringsuppgifter används för paketering.
 1. Så här uppdaterar du nyckelserverns licensservercertifikat:
 
    * Uppdatera autentiseringsuppgifterna i klientserverns konfigurationsfil för Adobe Access Key Server. Inkludera både den gamla och nya Key Server-inloggningsuppgifterna i flashaccess-keyserver-tenant.xml.

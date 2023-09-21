@@ -1,21 +1,20 @@
 ---
-title: Översikt över sekretessupporten
-description: Översikt över sekretessupporten
-exl-id: 9868a7e7-30f6-420e-a660-7d2f7870374d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+title: Översikt över sekretesssupport
+description: Översikt över sekretesssupport
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-# Översikt över sekretessupporten {#priv-supp-overview}
+# Översikt över sekretesssupport {#priv-supp-overview}
 
 >[!NOTE]
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 **GDPR**- Den allmänna dataskyddsförordningen (GDPR), en lag som gäller den 25 maj 2018, ger alla individer (registrerade) inom EU:s gränser kontroll över sina personuppgifter och förenklar regelmiljön för den internationella verksamheten. Denna lag är tillämplig på alla företag (registeransvariga) som erbjuder varor eller tjänster för att övervaka, övervaka och samla in personuppgifter från enskilda personer inom EU:s gränser när deras personuppgifter behandlas, oavsett var den registeransvarige befinner sig
 

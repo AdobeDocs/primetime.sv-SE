@@ -1,8 +1,7 @@
 ---
 title: Operationer i konto IQ
 description: Operationer med konto-IQ innefattar att vidta åtgärder för att utföra automatisering och gruppåtgärder på prenumerantkonton och spåra deras effekter.
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Visa **Operationer** sidmarkering **Operationer** option under **Åtgärder** i 
 
 ![](assets/operations-page.png)
 
-*Bild: Lista och information om befintliga åtgärder i konto-IQ*
+*Figur: Lista och information om befintliga operationer i konto-IQ*
 
 På sidan Åtgärder kan du:
 
@@ -59,7 +58,7 @@ Du kan analysera effekterna av en åtgärd genom att visa dess rapport. Så här
 
    ![](assets/operation-impact-report.png)
 
-   *Bild: Verksamhetsrapport för att visa verksamhetens konsekvenser*
+   *Figur: Verksamhetsrapport för att visa effekterna av operationerna*
 
    X-axeln representerar utvärderingsperioden och y-axeln beskriver åtgärdens inverkan (i antal konton i ett segment under utvärderingsperioden). Varje stapel är uppdelad i tre delar.
 
@@ -68,6 +67,7 @@ Du kan analysera effekterna av en åtgärd genom att visa dess rapport. Så här
    * En annan del representerar antalet aktiva konton för den perioden som ursprungligen fanns i segmentet, men som inte längre uppfyller operationssegmentets villkor.
 
    * Den tredje delen representerar konton som inte var aktiva under den perioden.
+
    >[!NOTE]
    >
    >Den första raden representerar antalet konton som uppfyller villkoren för operationssegmentet i början av utvärderingsperioden.

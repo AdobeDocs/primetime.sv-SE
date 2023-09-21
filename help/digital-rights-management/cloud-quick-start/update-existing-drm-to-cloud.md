@@ -2,8 +2,7 @@
 title: Uppdatera befintligt DRM-innehåll till molnbaserad DRM (valfritt)
 description: Uppdatera befintligt DRM-innehåll till molnbaserad DRM (valfritt)
 copied-description: true
-exl-id: 89b1e99a-cb28-4524-9c47-f71f92d3753d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Det går att använda Primetime DRM Java SDK för att uppdatera metadata program
 Omrubriker måste uppdatera följande fält för att kunna använda CloudDRM:
 
 * Licensserverns URL (till [!DNL ht<span></span>tps://access.adobeprimetime.com/flashaccessserver/axs_prod])
-* Licensservercertifikat (till servercertifikatet för CloudDRM-licensen)
+* Licensservercertifikat (till servercertifikatet för CloudDRM)
 * Transportcertifikat (till CloudDRM-transportcertifikatet)
 * Packager Credential (Till de paketerarautentiseringsuppgifter som du har aktiverat för användning med CloudDRM)
 

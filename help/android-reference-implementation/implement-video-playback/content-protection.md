@@ -1,8 +1,7 @@
 ---
 description: Primetime-spelaren stöder integrering av Primetime DRM som anpassade DRM-arbetsflöden. Detta innebär att ditt program måste implementera arbetsflödena för DRM-autentisering innan strömmen spelas upp.
 title: Skydd av DRM-innehåll
-exl-id: c1904d15-023f-49fb-95f9-d157d17b3516
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -29,47 +28,47 @@ Så här skapar du en innehållshanterare:
 
 * Initiera DRM-systemet.
 
-   I följande kodexempel visas anropet `loadDRMServices` i programmet `onCreate()` för att se till att alla initieringar som krävs för DRM-systemet initieras innan uppspelningen startar.
+  I följande kodexempel visas anropet `loadDRMServices` i programmet `onCreate()` för att se till att alla initieringar som krävs för DRM-systemet initieras innan uppspelningen startar.
 
-   ```java
-   @Override 
-    public void onCreate() { 
-        super.onCreate();  
-        DrmManager.loadDRMServices(getApplicationContext()); 
-    }
-   ```
+  ```java
+  @Override 
+   public void onCreate() { 
+       super.onCreate();  
+       DrmManager.loadDRMServices(getApplicationContext()); 
+   }
+  ```
 
 * Läs in DRM-licenserna i förväg.
 
-   I följande kodexempel visas inläsningen av `VideoItems` när innehållslistan har lästs in. Detta resulterar i att DRM-licenserna hämtas från licensservern och cachas lokalt, så att innehållet läses in med minimal fördröjning när uppspelningen startar.
+  I följande kodexempel visas inläsningen av `VideoItems` när innehållslistan har lästs in. Detta resulterar i att DRM-licenserna hämtas från licensservern och cachelagras lokalt, så att innehållet läses in med minimal fördröjning när uppspelningen startar.
 
-   ```java
-   DrmManager.preLoadDrmLicenses(item.getUrl(),  
-     new MediaPlayerItemLoader.LoaderListener() { 
-   
-       @Override 
-       public void onLoadComplete(MediaPlayerItem item) { 
-           Player.logger.w(LOG_TAG + "::DRMPreload#onLoadComplete", item.getResource().getUrl()); 
-       } 
-   
-       @Override 
-       public void onError(MediaErrorCode errorCode, String s) { 
-           Player.logger.e(LOG_TAG + "::DRMPreload#onError", s); 
-       } 
-   } 
-   ```
+  ```java
+  DrmManager.preLoadDrmLicenses(item.getUrl(),  
+    new MediaPlayerItemLoader.LoaderListener() { 
+  
+      @Override 
+      public void onLoadComplete(MediaPlayerItem item) { 
+          Player.logger.w(LOG_TAG + "::DRMPreload#onLoadComplete", item.getResource().getUrl()); 
+      } 
+  
+      @Override 
+      public void onError(MediaErrorCode errorCode, String s) { 
+          Player.logger.e(LOG_TAG + "::DRMPreload#onError", s); 
+      } 
+  } 
+  ```
 
-   >[!NOTE]
-   >
-   >Du kan ställa in Preache DRM-licenser på ON i användargränssnittet för inställningar för att köra preache-DRM-licenser när du läser in innehåll. Det bästa sättet är dock att förhandsladda en viss post i stället för att alla licenser i katalogen lagras i förväg.
-   >
-   >![](assets/precache-drm-licenses.jpg)
+  >[!NOTE]
+  >
+  >Du kan ställa in Preache DRM-licenser på ON i användargränssnittet för inställningar för att köra preache-DRM-licenser när du läser in innehåll. Det bästa sättet är dock att förhandsladda en viss post i stället för att alla licenser i katalogen lagras i förväg.
+  >
+  >![](assets/precache-drm-licenses.jpg)
 
 * Används `ManagerFactory` för att implementera DRM-felhantering, se till att följande kodrad finns i [!DNL PlayerFragment.java] fil:
 
-   ```java
-   drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
-   ```
+  ```java
+  drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
+  ```
 
 **Relaterad API-dokumentation**
 

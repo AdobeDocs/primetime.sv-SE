@@ -2,8 +2,7 @@
 title: Konfigurera videoanalysrapporter på serversidan
 description: Konfigurera videoanalysrapporter på serversidan
 copied-description: true
-exl-id: 964d8ebd-6454-4875-b423-b2ab8360b729
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
@@ -20,7 +19,7 @@ Din Adobe-representant hanterar de flesta aspekter av serverkonfigurationen för
    1. Välj **[!UICONTROL Edit Settings]** > **[!UICONTROL General]** > **[!UICONTROL General Account Settings]**.
    1. I **[!UICONTROL Conversion Level]** kombinationsruta, välja **[!UICONTROL Enabled, no Shopping Cart]**.
    1. Klicka **[!UICONTROL Save]**.
-1. Så här aktiverar du videospårning:
+1. Aktivera videospårning:
    1. Åtkomst **[!UICONTROL Admin Tools]**.
    1. Välj **[!UICONTROL Report Suites]**
    1. Välj det RSID som du vill konfigurera.

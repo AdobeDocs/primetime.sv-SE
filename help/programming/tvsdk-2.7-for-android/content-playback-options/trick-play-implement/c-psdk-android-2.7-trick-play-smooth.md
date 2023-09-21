@@ -1,8 +1,7 @@
 ---
 description: Om ditt system har tillgång till maskinvarustödd avkodning kan du få ett jämnare trick än med den rena programimplementeringen av TVSDK genom att använda iFrame-formatet.
 title: Smidigare tricks-play-åtgärder
-exl-id: 2dcc8ee2-78a1-4ec8-b876-e06e5ec1e398
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%

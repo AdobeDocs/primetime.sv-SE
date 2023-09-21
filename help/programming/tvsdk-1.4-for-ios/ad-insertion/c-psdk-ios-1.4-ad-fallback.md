@@ -1,8 +1,7 @@
 ---
 description: För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digital Video Ad Serving Template (VAST) hanterar TVSDK en annons med en ogiltig medietyp som en tom annons och försöker använda återgångsannonser i stället. Du kan konfigurera vissa aspekter av reservbeteendet.
 title: Annonsersättning för VAST- och VMAP-annonser
-exl-id: 5c469686-f8db-463a-ad1a-cb64e9192fb7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -15,7 +14,7 @@ För annonser (eller kreatörer) som har återgångsregeln aktiverad för Digita
 
 I specifikationen VAST/Digital Video Multiple Ad Playlist (VMAP) anges att för annonser där VAST-återgång är aktiverad, utlöser tomma annonser automatiskt användningen av reservannonser. När en VAST-annons är tom söker TVSDK efter en giltig ersättning för HLS-medietyp bland reservannonserna. När en VAST-annons i en wrapper har en ogiltig medietyp hanterar TVSDK den här annonsen som tom. Du kan konfigurera om TVSDK ska göra samma sak för annonser som är infogade i en VMAP. Mer information om VAST `fallbackOnNoAd` funktion, se [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
-## Definiera reservannonsbeteenden för VMAP-textbundna annonser {#section_D90BB3C6E539472EABF000C0F616DBE2}
+## Definiera reservannonser för VMAP-textbundna annonser {#section_D90BB3C6E539472EABF000C0F616DBE2}
 
 Du kan aktivera reservfunktionen när en intern VMAP-fil innehåller en ogiltig medietyp.
 

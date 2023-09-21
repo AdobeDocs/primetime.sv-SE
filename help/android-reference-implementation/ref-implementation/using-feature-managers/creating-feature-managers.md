@@ -1,8 +1,7 @@
 ---
 description: TVSDK-funktioner drivs av konfiguration och implementeras via MediaPlayer.
 title: Skapa funktionshanterare genom att skicka konfigurationsinformation till MediaPlayer
-exl-id: 47377ceb-ed3e-4dca-9b55-82e4fe6b0194
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -15,13 +14,13 @@ TVSDK-funktioner drivs av konfiguration och implementeras via MediaPlayer.
 
 * Konfiguration är en lista med specifika inställningar för funktionen, till exempel inledande bithastighet för ABR-kontroll och synlighet för stängd bildtext som standard.
 
-   Funktionshanterare måste hämta konfigurationerna för att kunna avgöra funktionens beteende.
+  Funktionshanterare måste hämta konfigurationerna för att kunna avgöra funktionens beteende.
 
-   I referensimplementeringen av Primetime lagras konfigurationen i delade inställningar, men du kan lagra konfigurationen på det sätt som passar din miljö bäst.
+  I referensimplementeringen av Primetime lagras konfigurationen i delade inställningar, men du kan lagra konfigurationen på det sätt som passar din miljö bäst.
 
 * `MediaPlayer` är det TVSDK-mediespelarobjekt som innehåller videoresursen.
 
-   Funktionshanterare registrerar TVSDK-händelseavlyssnare för det här spelarobjektet, hämtar data från uppspelningssessionen och utlöser TVSDK-funktioner till uppspelningssessionen.
+  Funktionshanterare registrerar TVSDK-händelseavlyssnare för det här spelarobjektet, hämtar data från uppspelningssessionen och utlöser TVSDK-funktioner till uppspelningssessionen.
 
 Varje funktion har ett motsvarande konfigurationsgränssnitt. Till exempel: `CCManager` använder `ICCConfig` för att hämta konfigurationen. `ICCConfig` innehåller metoder för att hämta konfigurationsinformation som endast gäller undertextning.
 

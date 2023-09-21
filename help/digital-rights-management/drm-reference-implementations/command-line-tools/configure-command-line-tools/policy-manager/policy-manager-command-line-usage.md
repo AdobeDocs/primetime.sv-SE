@@ -2,8 +2,7 @@
 title: Kommandoradsanvändning för principhanteraren
 description: Kommandoradsanvändning för principhanteraren
 copied-description: true
-exl-id: 888be282-7eaa-4101-b4b1-4f8df99a967a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%
@@ -39,7 +38,7 @@ java -jar AdobePolicyManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger något namn eller en plats söker DRM Policy Manager efter <span class="filepath"> flashaccesstools.properties </span> i den aktuella arbetskatalogen. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger något namn eller en plats söker DRM Policy Manager efter <span class="filepath"> flashaccesstools.properties </span> i aktuell arbetskatalog. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
@@ -93,7 +92,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -ldate </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Licensens slutdatum för cachelagring. </p> <p class="- topic/p ">Detta anger det sista datumet då klienten kan cachelagra licenser i klientens licensarkiv efter att Primetime DRM-servern har utfärdat licensen. </p> <p>Du kan ange datumet i följande format: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Slutdatum för licenscache-lagring. </p> <p class="- topic/p ">Detta anger det sista datumet då klienten kan cachelagra licenser i klientens licensarkiv efter att Primetime DRM-servern har utfärdat licensen. </p> <p>Du kan ange datumet i följande format: 
      <ul id="ul_112DE7248A9C48B19520A3AA9E5D1F03"> 
       <li id="li_01C5400E78B84A3B8955972FBA875AAC"> <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> </li> 
       <li id="li_AA13B1EFA07A4542A3DB41FA3320B143"> <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> </li> 
@@ -109,11 +108,11 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista med AIR-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan använda det här alternativet om du vill begränsa vilka utgivare, program och versioner som kan få åtkomst till innehåll som är skyddat med den här DRM-principen. </p> <p class="- topic/p ">Om du inte anger <i class="+ topic/ph hi-d/i ">appId</i>, alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> tillåts. </p> <p>Obs!  <i class="+ topic/ph hi-d/i ">min</i> och <i class="+ topic/ph hi-d/i ">max</i> versionsnummer är valfria. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -air </span> för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. Om du vill ta bort eller ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -air </span> utan de återstående argumenten. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista med AIR-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan använda det här alternativet om du vill begränsa vilka utgivare, program och versioner som kan få åtkomst till innehåll som är skyddat med den här DRM-principen. </p> <p class="- topic/p ">Om du inte anger <i class="+ topic/ph hi-d/i ">appId</i>, alla program för utgivaren <i class="+ topic/ph hi-d/i ">pubId</i> tillåts. </p> <p>Obs!  <i class="+ topic/ph hi-d/i ">min</i> och <i class="+ topic/ph hi-d/i ">max</i> versionsnummer är valfria. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -air </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. Om du vill ta bort eller ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -air </span> utan de återstående argumenten. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> <i class="+ topic/ph hi-d/i ">/</i> <span class="+ topic/ph pr-d/codeph codeph"> value </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> par </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsade namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1 </span>. Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -drmBlacklist </span> utan de återstående argumenten. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM-klienterna som är begränsade från åtkomst till skyddat innehåll. </p> <p class="- topic/p ">Värdet stöder kommaavgränsade namn:värdepar i följande format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Till exempel: <span class="codeph"> os=Win,release=2.0.1 </span>. Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -drmBlacklist </span> utan återstående argument. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
@@ -137,7 +136,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista av SWF-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -swf </span> för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. </p> <p>Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -swf </span> utan de återstående argumenten. Om du vill identifiera ett SWF med dess hash-värde måste du ange SWF-filen som hash-värdet ska beräknas för och den maximala tiden som SWF-verifieringen ska slutföras (i sekunder). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista av SWF-program som kan spela upp skyddat innehåll. </p> <p class="- topic/p ">Du kan ange flera <span class="codeph"> -swf </span> alternativ för att tillåta flera program. Om du inte anger något AIR- eller SWF-program kan alla program få åtkomst till det här innehållet. </p> <p>Om du vill ta bort alla poster från listan under en uppdatering använder du <span class="codeph"> -swf </span> utan de återstående argumenten. Om du vill identifiera ett SWF med dess hash-värde måste du ange SWF-filen som hash-värdet ska beräknas för och den maximala tiden som SWF-verifieringen ska slutföras (i sekunder). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= värde </span> </td> 

@@ -1,15 +1,14 @@
 ---
 description: TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 title: Metadata för Primetime och server
-exl-id: 3723dd2f-292c-4ce5-9670-fda1b1f2b5df
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
-# Översikt {#primetime-ad-server-metadata-overview}
+# Ökning {#primetime-ad-server-metadata-overview}
 
 TVSDK stöder lösning och infogning av annonser för VOD och live/linear streams.
 
@@ -17,12 +16,11 @@ TVSDK stöder lösning och infogning av annonser för VOD och live/linear stream
 >
 >Innan du kan inkludera annonser i videoinnehållet måste du ange följande metadatainformation:
 >
->* A `mediaID`, som identifierar det specifika innehåll som ska spelas upp.
+>* A `mediaID`, som anger vilket innehåll som ska spelas upp.
 >* Dina `zoneID`, som identifierar ditt företag eller din webbplats.
 >* Din annonsserverdomän, som anger domänen för den tilldelade annonsservern.
->* Andra parametrar för målinriktning.
+>* Andra målparametrar.
 >
-
 
 ## Konfigurera metadata för Primetime och server {#section_86C4A3B2DF124770B9B7FD2511394313}
 
@@ -30,7 +28,7 @@ Ditt program måste tillhandahålla TVSDK med den information som krävs `PTAudi
 
 Så här ställer du in annonsserverns metadata:
 
-1. Skapa en instans av [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) och ange dess egenskaper.
+1. Skapa en instans av [PTAuditudemetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) och ange dess egenskaper.
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  

@@ -1,8 +1,7 @@
 ---
 title: Programmeraren kickstart
 description: Programmeraren kickstart
-exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Välkommen till Adobe Primetime-autentisering för TV Everywhere. Vi ser fram em
 
 >[!NOTE]
 >
->Det här är Kickstart-guiden för programmerare (innehållsleverantörer). Om du har en distributör av flerkanalsvideo Programming (MVPD), se [MVPD - startguide](/help/authentication/mvpd-kickstart-guide.md).
+>Detta är Kickstart Guide for Programmers (innehållsleverantörer). Om du har en distributör av flerkanalsvideo Programming (MVPD), se [MVPD - startguide](/help/authentication/mvpd-kickstart-guide.md).
 
 
 Kontakter för Adobe Primetime-autentisering:
@@ -56,13 +55,13 @@ Adobe kommer att tillhandahålla
 
 ## Konfigurera testmiljö {#test-env-setup}
 
-Adobe ska först ställa in dig på testplatsen Adobe, där Adobe fungerar som ett sidoskydd för teständamål. Teamet kan sedan skapa en testwebbplats som anropar Adobe API. Använd MVPD-standardväljaren och välj Adobe som idP.
+Adobe ska först ställa in dig på testplatsen Adobe, där Adobe fungerar som ett sidoskydd för teständamål. Teamet kan sedan skapa en testwebbplats som anropar Adobe API:t. Använd MVPD-standardväljaren och välj Adobe som idP.
 
-Du ska ange:
+Du kommer att ange:
 
 1. Begärande-ID. Detta är en sträng som unikt identifierar varumärket på webbplatsen eller det program som begär Adobe Primetime-autentisering. Själva strängen är godtycklig men måste avtalas mellan Adobe och programmeraren
 1. Kanalinformation. Detta är en uppsättning strängar som identifierar innehållskanaler som begärande-ID begär. I många fall är kanalen och begärande-ID desamma. Du kan dock ha flera kanaler med innehåll som kan begäras av samma ID. Kanalnamnssträngarna ska motsvara kabel-TV-kanalerna. Vissa MVPD-program validerar det här värdet via AuthN- och/eller AuthZ-protokollet.
-1. Domännamn (tillåts för det begärande-ID:t). Detta är en lista över faktiska domännamn som Adobe kommer att visa för att godkänna begärande-ID. Detta garanterar att endast godkända domäner har tillgång till Adobe Primetime-autentisering med dina metadata. OBS! Domännamn som är giltiga för produktion kan vara olika för testning/testning och båda ska anges och identifieras.
+1. Domännamn (tillåts för det begärande-ID:t). Detta är en lista över faktiska domännamn som Adobe kommer att visa för att godkänna begärande-ID. Detta garanterar att endast godkända domäner har tillgång till Adobe Primetime-autentisering med dina metadata. Obs! Domännamn som är giltiga för produktion kan vara olika för testning/testning och både ska anges och identifieras.
 
 Adobe kommer att upprätta kontot och Adobe kommer att tillhandahålla följande:
 
@@ -76,12 +75,12 @@ Du kommer att tillhandahålla (via MVPD):
 
 * **Två uppsättningar autentiseringsuppgifter**:
    * AuthN + AuthZ : inloggning/lösenord för en användare som är autentiserad och auktoriserad
-   * AuthN + Non-AuthZ : inloggning/lösenord för en användare som är autentiserad men inte auktoriserad
-* **Resurs-ID**. Detta är en specifik innehållsidentifierare som valideras med ett MVPD-protokoll över AuthZ-protokollet. Detta kan vara på kanal-, show-, avsnitt- eller resursnivå. det ska avtalas med ditt MVPD.
+   * AuthN + Non-AuthZ: inloggning/lösenord för en användare som är autentiserad men inte auktoriserad
+* **Resurs-ID**. Detta är en specifik innehållsidentifierare som valideras med ett MVPD-protokoll över AuthZ-protokollet. Detta kan vara på kanal-, show-, avsnitt- eller tillgångsnivå; det ska överenskommas med ditt MVPD.
 
 Adobe Primetime-autentisering stöder ett MRSS-baserat metadatamatchema, vilket innebär att resurs-ID:n kan vara så specifika som behövs, och kan innehålla identifierare som kan vara unika för ett specifikt MVPD.
 
-**NYTT Integrering med MVPD**: Det är viktigt att komma ihåg att ditt valda MVPD spelar en viktig roll när det gäller att slutföra integreringen. Adobe måste skriva kod för varje MVPD enligt sina specifikationer. Innan dessa steg är slutförda kan du inte välja det MVPD i dialogrutan eller slutföra produkttestningen. Adobe måste schemalägga detta arbete i förväg för att passa nästa tillgängliga sprint. (Aktuell schemainformation finns i Release Calendar.)
+**NYTT Integrering med MVPD**: Det är viktigt att komma ihåg att ditt valda MVPD spelar en viktig roll när det gäller att slutföra integreringen. Adobe måste skriva kod för varje MVPD enligt sina specifikationer. Innan dessa steg är slutförda kan du inte välja det MVPD-programmet i dialogrutan eller slutföra produkttestningen. Adobe måste schemalägga detta arbete i förväg för att passa nästa tillgängliga sprint. (Aktuell schemainformation finns i Release Calendar.)
 
 **Befintliga MVPD-integreringar**: Om ditt MVPD-program redan är konfigurerat med Adobe bör anslutningsstegen vara mycket enklare (snabbare) och anslutningen kan ofta göras med hjälp av konfigurationsändringar.
 
@@ -89,7 +88,7 @@ Adobe Primetime-autentisering stöder ett MRSS-baserat metadatamatchema, vilket 
 >
 >MVPD måste FORTFARANDE aktivera Programmeraren och teckna avtal.
 
-**QE med MVPD**: Alla integreringar kommer att omfatta gemensamma QE, och eftersom slutanvändaren i slutändan är en kund i det mobila dokumentationsdokumentet har många testcykler innan de publiceras. Eftersom detta innebär schemaläggning av MVPD-resurser kan detta försenas.
+**QE med MVPD**: Alla integreringar innefattar gemensamma QE, och eftersom slutanvändaren i slutändan är kund hos MVPD har många testcykler innan man trycker&quot;live&quot;. Eftersom detta innebär schemaläggning av MVPD-resurser kan detta försenas.
 
 <!--
 >[RELATEDINFORMATION]

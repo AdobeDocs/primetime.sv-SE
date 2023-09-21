@@ -1,8 +1,7 @@
 ---
 title: Versionsinformation om PTAI 20.12.1
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2020.
-exl-id: 47e36e42-b6a0-408c-93da-f63c929396b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 **Ändringar**
 
-* Innehåller en snabbkorrigering som åtgärdar intermittenta klientanslutningsproblem (5xx) i Primetime Ad Insertion som uppstod 30 november 2020.
+* Innehåller snabbkorrigering för att åtgärda problem med intermittent klientanslutning (5xx) i Primetime Ad Insertion som uppstod 30 november 2020.
 
 ## Förbättringar och korrigeringar i tidigare versioner
 
@@ -29,7 +28,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 **Ändringar**
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.10.2
 
@@ -37,7 +36,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 **Ändringar**
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.10.1
 
@@ -45,7 +44,7 @@ Versionsinformationen för Primetime Ad Insertion 20.12.1 beskriver vad som är 
 
 **Ändringar**
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.9.3
 
@@ -66,9 +65,9 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 * Tillhandahåller stöd för att begränsa den totala tiden för annonsupplösning om leverantörerna tar för lång tid att svara. Om du vill aktivera begränsning anger du parametern för bootstrap-API `ptadtimeout` till ett värde i millisekunder.
 
-   >[!NOTE]
-   >
-   >Den här tidsgränsen gäller endast för annonsförfrågningar, inte för annonsförfrågningar.
+  >[!NOTE]
+  >
+  >Den här tidsgränsen gäller endast för annonsförfrågningar, inte för annonsförfrågningar.
 
 ### Version 20.9.1
 
@@ -84,7 +83,7 @@ Kontakta en supporttekniker om du vill ha mer information eller vill aktivera de
 
 **Förbättringar och korrigeringar**
 
-Underhållsuppdateringar.
+Underhållsuppdateringar
 
 ### Version 20.8.1
 
@@ -92,7 +91,7 @@ Underhållsuppdateringar.
 
 **Förbättringar och korrigeringar**
 
-Underhållsuppdateringar.
+Underhållsuppdateringar
 
 ### Version 20.7.1
 
@@ -124,9 +123,9 @@ Förbättrad synkronisering av strömmar för videoklipp som kräver millisekund
 
 Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via konfigurationen på serversidan:
 
-* Manifestmanipulation: HLS-segment och resurs-URL:er kan nu omvandlas mellan HTTP och HTTPS för att öka prestandan genom att minska antalet TLS-handskakningar vid backend-begäranden. Den kan också användas för att sammanfoga annons-/innehållsfragment till samma CDN:er.
+* Manifestmanipulation: HLS-segment och resurs-URL:er kan nu omvandlas mellan HTTP och HTTPS för att öka prestanda genom att minska antalet TLS-handskakningar vid backend-begäranden. Den kan också användas för att sammanfoga annons-/innehållsfragment till samma CDN:er.
 
-* VOD med lång form: Förbättrade API:er för att hålla sessionerna levande med VOD-resurser i lång form.
+* VOD med lång form: Förbättrade API:er för att hålla sessionen levande med VOD-resurser i lång form.
 
 **Felkorrigeringar**
 
@@ -142,7 +141,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Felkorrigeringar på CRS-kontrollpanelen.
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.3.4
 
@@ -168,7 +167,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Förbättrad SCTE35-signalhantering.
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.3.1
 
@@ -176,7 +175,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * Prestandaförbättringar:
 
-   * Stöd för cacheminne har lagts till för både m3u8-manifest för överordnad/media. De här manifesten svarar nu på Cache-Control: public- och Max-Age-rubriker, som ofta kan förbättra videons startprestanda.
+   * Stöd för cacheminne har lagts till för både mastermanifest/media m3u8-manifest. Dessa manifest svarar nu på Cache-Control: public och Max-Age headers, som ofta kan förbättra videons startprestanda.
 
    * Stöd har lagts till för att tvinga https-kreatörer att hämta över http, vilket även kan förbättra videostartens prestanda.
 
@@ -195,11 +194,11 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 * **VMAP med FER-stöd för nbc CueFormat**
 
-   Konvertera Cues från FER-ström till parametrar för åsidosättning av FW-tidslinje, när `ptcueformat=nbc` används och strömmen är en VOD-ström med in-manifest cues och inbakade annonser.
+  Konvertera Cues från FER-ström till parametrar för åsidosättning av FW-tidslinje, när `ptcueformat=nbc` används och strömmen är en VOD-ström med in-manifest cues och inbakade annonser.
 
 * Anpassa fältet för användaragent i HTTP Header innan det vidarebefordras till tredjeparts annonsleverantörer/ CDN.
 
-* Filtrera bort kontrolltecken/icke-utskrivbara tecken (ASCII-kod &lt; 32) från HTTP-headers för användare/agent innan de skickas till Auditude och andra annonsleverantörer, CDN. Auditude Ad-Call misslyckades tidigare för sådana ogiltiga rubriker.
+* Filtrera bort kontrolltecken/icke-utskrivbara tecken (ASCII-kod &lt; 32) från HTTP-headers för användare/agent innan de skickas till Auditude och andra annonsleverantörer, CDN. Auditude Ad-Call misslyckades tidigare för sådana ogiltiga huvuden.
 
 * Rensa gamla V1-objekt från NetStorage-grupper för att hålla objektantalet inom säkra Akamai-gränser.
 
@@ -207,7 +206,7 @@ Kontakta supporten för Adobe om du vill aktivera följande nya funktioner via k
 
 **När:** Måndagen den 20 januari 2020 från 02:00 till 03:00 Eastern Time
 
-* Underhållsuppdateringar.
+* Underhållsuppdateringar
 
 ### Version 20.1.1
 
@@ -241,7 +240,7 @@ Där upplösning är kopplad till ett rapporterat problem visas en Zendesk-refer
 
 **PTAI 20.3.4**
 
-* Ett problem som gjorde att undertexter inte synkroniserades efter annonsinfogning i VOD/WebVTT.
+* Ett problem som gjorde att undertexter inte synkroniserades efter att annonsen infogats i VOD/WebVTT.
 
 **PTAI 20.3.3**
 

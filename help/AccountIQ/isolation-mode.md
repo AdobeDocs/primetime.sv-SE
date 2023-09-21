@@ -1,8 +1,7 @@
 ---
 title: Visa rapporter i isoleringsläge
 description: Visa rapporter i isoleringsläge för Xfinity.
-exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -30,13 +29,13 @@ Delningspoängen och sannolikheterna beräknas endast med den ström som börjar
 
 Så här visar du mått i isoleringsläge:
 
-1. Välj **isoleringsläge** från **MVPD i segment** och välj **Använd markering**.
+1. Välj **isoleringsläge** från **MVPD i segment** nedrullningsbart alternativ och välj **Använd markering**.
 
    ![](assets/xfinity-in-segment.gif)
 
    *Bild: MVPD-val i isoleringsläge*
 
-1. Välj önskade kanaler på menyn **Kanaler i segment** och välj **Använd markering**. Välj även en [tidsram](/help/AccountIQ/product-concepts.md#granularity-def).
+1. Välj önskade kanaler på menyn **Kanaler i segment** nedrullningsbart alternativ och välj **Använd markering**. Välj även en [tidsram](/help/AccountIQ/product-concepts.md#granularity-def).
 
    >[!IMPORTANT]
    >
@@ -46,4 +45,4 @@ Så här visar du mått i isoleringsläge:
 
    *Bild: Dela sannolikhetsmätare i isoleringsläge*
 
-   Observera att ovanstående mått visar att endast 6 % av alla konton delas. och bara 8 % av innehållet konsumeras av dessa 8 %. Kanalerna kan alltså jämföra sina bakgrundsmusik i isoleringsläge med andra videofilmsprogram. Därför bör den information som erhålls med Isoleringsläge tolkas annorlunda än de övriga uppgifterna.
+   Observera att ovanstående mätare visar att endast 6 % av alla konton delas och att endast 8 % av innehållet förbrukas av dessa 8 %. Kanalerna kan alltså jämföra sina bakgrundsmusik i isoleringsläge med andra videofilmsprogram. Därför bör den information som erhålls med Isoleringsläge tolkas annorlunda än de övriga uppgifterna.

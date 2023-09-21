@@ -2,8 +2,7 @@
 title: Lagra autentiseringsuppgifter
 description: Lagra autentiseringsuppgifter
 copied-description: true
-exl-id: ceb1bc19-56a0-47ce-affd-ce4ecb896c3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Lagra autentiseringsuppgifter{#storing-credentials}
 
-Primetimes DRM SDK har stöd för olika sätt att lagra autentiseringsuppgifter, bland annat via en HSM-modul (Hardware Security Module) eller som en PKCS12-fil. SDK använder en autentiseringsuppgift (certifikat för offentlig nyckel och associerad privat nyckel) när den privata nyckeln krävs. Paketeraren använder till exempel en autentiseringsuppgift för att signera metadata. License Server använder en autentiseringsuppgift för att dekryptera data som har krypterats med den offentliga nyckeln för licensservern eller transport.
+Primetimes DRM SDK har stöd för olika sätt att lagra autentiseringsuppgifter, bland annat via en HSM-modul (Hardware Security Module) eller som en PKCS12-fil. SDK använder en autentiseringsuppgift (certifikat för offentlig nyckel och associerad privat nyckel) när den privata nyckeln krävs. Paketeraren använder till exempel en autentiseringsuppgift för att signera metadata. Licensservern använder en autentiseringsuppgift för att dekryptera data som har krypterats med licensservern eller den offentliga transportnyckeln.
 
 Du måste noga bevaka privata nycklar för att säkerställa säkerheten för ditt innehåll och licensservern. PKCS12 är ett standardfilformat för arkivering av inloggningsuppgifter som har krypterats med ett lösenord. (Du kan också kryptera och signera själva PKCS12-filen.) Filtillägget [!DNL .pfx] används ofta för filer som har stöd för det här formatet.
 

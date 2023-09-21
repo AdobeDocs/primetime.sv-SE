@@ -1,8 +1,7 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayerItem-metoder för åtkomst av MediaResource-information
-exl-id: d6a547f3-0267-4a49-93a4-628b4879aef4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
 | **Annonstaggar** |  |
 | Lista`<String>` getAdTags() | Innehåller en lista med annonstaggar som används för annonsplaceringsprocessen. |
 | **Liveström** |  |
-| boolesk isLive(); | True om strömmen är live; false om det är VOD. |
+| boolesk isLive(); | True if the stream is live; false if it is VOD. |
 | **DRM-skyddad** |  |
 | boolesk isProtected(); | True om strömmen är DRM-skyddad. |
 | Lista`<DRMMetadataInfo>` getDRMMetadataInfos(); | Visar alla DRM-metadataobjekt som identifieras i manifestet. |
@@ -35,7 +34,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
 | **Tidsbestämda metadata** |  |
 | boolean hasTimedMetadata(); | True if the stream has associated timed metadata. |
 | Lista`<TimedMetadata>` getTimedMetadata(); | Innehåller en lista med tidsbestämda metadataobjekt som är associerade med strömmen. |
-| **Flera profiler (bithastighet)** |
+| **Flera profiler (bithastigheter)** |
 | boolean isDynamic(); | True if the stream is a multiple bit rate (MBR) stream. |
 | Lista`<Profile>` getProfiles(); | Innehåller en lista med associerade bithastighetsprofiler. För varje profil kan du hämta dess bithastighet och profilens höjd och bredd. |
 | Profil getSelectedProfile() | Hämtar den markerade profilen. |

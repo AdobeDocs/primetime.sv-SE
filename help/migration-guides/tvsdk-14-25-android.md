@@ -4,8 +4,7 @@ description: TVSDK 2.5 har många fördelar jämfört med version 1.4 när det g
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-exl-id: 3b7f8355-ebea-4322-aef4-5393308391b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 0%
@@ -48,14 +47,14 @@ Funktionerna är viktiga för att uppfylla studiobegränsningarna, som HD-uppspe
 | Upplösningsbaserat utdataskydd | uppspelningen kan begränsas till endast vissa upplösningar som tillåts av DRM-krav. Endast tillgängligt via Primetime DRM. |
 | Stöd för fler | Stöds med DASH VOD-strömmar för att aktivera interna DRM-användningsfall. |
 
-Direktfakturering eliminerar behovet av att skapa manuella rapporter för fakturering varje månad. VHL 2.0 ger kortare time-to-market med integrering före bygget och bättre noggrannhet i spårningen.
+Förbättrad direktfakturering eliminerar behovet av att skapa manuella rapporter för fakturering varje månad. VHL 2.0 ger kortare time-to-market med integrering före bygget och bättre noggrannhet i spårningen.
 
 | Funktioner | Beskrivning |
 |--- |--- |
 | Moat-integrering | Stöd för visning av annonser från Moat. |
 | VHL 2.0 | Den senaste optimerade videofilmen fångar biblioteksintegrationen för automatisk insamling av användningsdata för Adobe Analytics. |
 | Stöd för failover | Ytterligare strategier har implementerats för att fortsätta oavbruten uppspelning, trots fel på värdservrar, spellistfiler och segment. |
-| Direkt faktureringsintegrering | Faktureringsstatistik skickas till Adobe Analytics backend, som certifieras av Adobe Primetime för strömmar som används av kunden. |
+| Direktfakturering | Faktureringsstatistik skickas till Adobe Analytics backend, som certifieras av Adobe Primetime för strömmar som används av kunden. |
 
 >[!NOTE]
 >
@@ -226,7 +225,7 @@ Följande händelsekoder är nya i 2.5:
 | BUFFERING_END | BUFFERING_COMPLETED |
 | AUDIO_TRACK_UPDATED | AUDIO_TRACK_CHANGED |
 | STATUS_CHANGED | STATE_CHANGED |
-| TIMED_METADATA_AVAILABLE | TIMED_METADATA_ADDED |
+| TIMED_METADATA_AVAILABLE | TIMETADATA_ADDED |
 | SIZE_AVAILABLE | SIZE_CHANGED |
 | LOAD_INFO | LOAD_INFORMATION_AVAILABLE |
 
@@ -287,7 +286,7 @@ public void adClick() { mediaPlayer.notifyClick();
 }
 ```
 
-* Den förra `MediaPlayer.MediaPlayer.getNotificationHistory()` metoden är nu borta och inte ersatt.
+* Den förra `MediaPlayer.MediaPlayer.getNotificationHistory()` är nu borta och ersätts inte.
 * Den förra `MediaPlayer.replaceCurrentItem()` delas upp i två metoder: `replaceCurrentResource()`, som tar en instans av `MediaResource`och `replaceCurrentItem()`, som tar en instans av `MediaPlayerItem`. Till exempel:
 
 ```java
@@ -364,7 +363,7 @@ new MediaPlayer(getActivity().getApplicationContext()); return mediaPlayer;
 Andra klasser som inte följer mönstret men använder `create()` I 1.4 ingår följande metoder:
 
 * MediaResource\
-   Detta användes tidigare `MediaResource.createFromUrl()`. Använd nu konstruktorn som tar en URL, resurstyp och metadata. Till exempel:
+  Detta användes tidigare `MediaResource.createFromUrl()`. Använd nu konstruktorn som tar en URL, resurstyp och metadata. Till exempel:
 
 ```java
 //TVSDK v1.4
@@ -444,7 +443,7 @@ Det finns flera annonsrelaterade ändringar i version 2.5.
 
 **Förändringar i reklambeteendet**
 
-Standardbeteendet för annonsuppspelningen när en användare utför en sökning utanför en Ad-ruta ändras något i v2.5. Om annonsbrytningen inte bevakas spelas annonsen upp efter en sökning framåt. När appen använder standardannonsprincipen tas annonsbrytningen bort när uppspelningen är klar. Om en användare använder TVSDK v2.5 och söker bakom en annonsruta på tidslinjen och annonsbrytningen inte bevakas, spelas ingen annons upp.
+Standardbeteendet för annonsuppspelningen när en användare utför en sökning utanför en Ad-ruta ändras något i v2.5. Om annonsbrytningen inte bevakas spelas annonsen upp efter en sökning framåt. När appen använder standardannonsprincipen tas annonsbrytningen bort när uppspelningen är klar. Med TVSDK v2.5 spelas ingen annons upp om en användare söker bakom en annonsruta på tidslinjen och annonsbrytningen inte bevakas.
 
 I TVSDK v1.4 spelas en annons upp som standard om sökningen görs bakåt. Om du till exempel söker bakåt mellan den tredje och fjärde annonsbrytningen är standardbeteendet för TVSDK v1.4 att spela upp den tredje annonsbrytningen.
 
@@ -1042,7 +1041,7 @@ Medan TVSDK v1.4 använde en kombination av null-värden returnerade fel och en 
 
 >[!NOTE]
 >
->Om du vill ha information om ett MediaPlayerException kan du använda `getErrorCode()`.
+>Om du vill ha information om ett MediaPlayer-undantag kan du använda `getErrorCode()`.
 
 Ett exempel på ändringen är nedan:
 

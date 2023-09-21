@@ -1,8 +1,7 @@
 ---
 description: Video Player Ad-Serving Interface Definition (VPAID) är ett gemensamt gränssnitt för att spela upp videoannonser. VPAID ger en multimedieupplevelse för användarna och ger utgivaren möjlighet att bättre rikta annonser, spåra annonsvisningar och tjäna pengar på videoinnehåll.
 title: Anpassade annonskrav
-exl-id: c13748d6-23f1-4f34-95b4-7b532db6e536
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -17,13 +16,13 @@ Video Player Ad-Serving Interface Definition (VPAID) är ett gemensamt gränssni
 
 <!--<a id="section_9A358902CBC24999BA34206EE2029616"></a>-->
 
-TVSDK har stöd för följande funktioner:
+TVSDK stöder följande funktioner:
 
 * Version 1.0 och 2.0 av VPAID-specifikationen
 * Linjära VPAID-annonser om VOD-innehåll (video-on-demand)
 * Flash VPAID-annonser
 
-   VPAID-annonser måste vara Flash-baserade, och annonssvaret måste identifiera medietypen för VPAID-annonsen som `application/x-shockwave-flash`.
+  VPAID-annonser måste vara Flash-baserade, och annonseringssvaret måste identifiera medietypen för VPAID-annonsen som `application/x-shockwave-flash`.
 
 Följande funktioner stöds inte:
 
@@ -42,7 +41,7 @@ TVSDK skickar följande händelser:
 * `AdPlaying`
 * `AdStopped`
 
-Efter `AdStopped` kommer TVSDK att återuppta videoinnehållet.
+Efter `AdStopped` -händelsen återupptar TVSDK videoinnehållet.
 
 >[!TIP]
 >

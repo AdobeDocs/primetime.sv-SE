@@ -1,8 +1,7 @@
 ---
 description: De här ändringarna i TVSDK har stöd för att ta bort och ersätta annonser.
 title: Ändringar i API:t för borttagning och ersättning av annonser
-exl-id: 3cf63353-741b-41f4-93fd-609b69f7c3af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -29,7 +28,7 @@ De här ändringarna i TVSDK har stöd för att ta bort och ersätta annonser.
 
 * Tillagd `ReplaceTimeRange()` method
 
-   Utökar `TimeRange` att ha `replacementDuration` -egenskap. För MARK och DELETE `replacementDuration` är 0.
+  Utökar `TimeRange` att ha `replacementDuration` -egenskap. För MARK och DELETE `replacementDuration` är 0.
 
 * `TimeRangeCollection`
 
@@ -55,26 +54,26 @@ De här ändringarna i TVSDK har stöd för att ta bort och ersätta annonser.
    * `doRetrieveGenerators()`
 
       * Tillagd `CustomRangesOpportunityGenerator` för när metadata innehåller anpassade intervall
+
    * `doRetrieveResolvers()`
 
       * Lägg till `CustomRangeResolver` för när anpassade intervall för DELETE och REPLACE finns i metadata
       * Flyttad `CustomAdMarkerResolver` framför `AuditudeResolver`
-
 
 * Tillagd `CustomRangeOpportunityGenerator`
 
    * `doUpdate()` Leaves empty - no Update, VOD
    * `doProcess()` Skapar en ny placering av en ny typ `Placement.Delete_Range`
 
-   * Tillagd `CustomRangeOppotunityGenerator` överst i generatorlistan i `DefaultContentFactory`så att borttagningsintervall behandlas innan annonsinfogningar infogas.
+   * Tillagd `CustomRangeOppotunityGenerator` längst upp i listan över generatorer i `DefaultContentFactory`så att borttagningsintervall behandlas innan annonsinfogningar infogas.
 
-   * Tillagd `createCustomRangeOpportunities` att skapa alla möjligheter
+   * Tillagd `createCustomRangeOpportunities` för att skapa alla möjligheter
 
-      MARK - en affärsmöjlighet för varje giltigt markeringsintervall för `PlacementType.CUSTOM_RANGE` och `PlacementMode.MARK`
+     MARK - en affärsmöjlighet för varje giltigt markeringsintervall för `PlacementType.CUSTOM_RANGE` och `PlacementMode.MARK`
 
-      DELETE - En möjlighet för varje giltigt borttagningsintervall för `PlacementType.CUSTOM_RANGE` och `PlacementMode.DELETE`
+     DELETE - En möjlighet för varje giltigt borttagningsintervall för `PlacementType.CUSTOM_RANGE` och `PlacementMode.DELETE`
 
-      REPLACE - Två möjligheter för varje giltigt ersättningsintervall:
+     REPLACE - Två möjligheter för varje giltigt ersättningsintervall:
 
       1. En möjlighet att ta bort intervall från `PlacementType.CUSTOM_RANGE` och `PlacementMode.DELETE`.
 
@@ -108,7 +107,7 @@ De här ändringarna i TVSDK har stöd för att ta bort och ersätta annonser.
 * `AdSignalingModeGenerator`
 
    * `doConfigure()` - Lös inte om ingen affärsmöjlighet genereras
-   * `createInitialOpportunity()` - Generera ingen inledande möjlighet för `AdSignalingMode.CUSTOM_RANGE`. The `CustomRangeOpportunityGenerator` täcker detta redan.
+   * `createInitialOpportunity()` - Generera inte någon inledande möjlighet för `AdSignalingMode.CUSTOM_RANGE`. The `CustomRangeOpportunityGenerator` täcker detta redan.
 
 * `DeleteRange`
 

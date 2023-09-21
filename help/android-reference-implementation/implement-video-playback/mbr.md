@@ -1,8 +1,7 @@
 ---
 description: TVSDK kan spela upp videor som har flera profiler med olika bithastigheter och växla mellan dem för att ge mer än en kvalitetsnivå baserat på den tillgängliga bandbredden.
 title: Flera bithastigheter
-exl-id: 5f71d69e-993a-4985-accd-7ce2104f837e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Referensimplementeringen konfigurerar följande ABR-parametrar i [IPlaybackConfi
 
 | Parameter | Beskrivning |
 |--- |--- |
-| Inledande bithastighet: getABRInitialBitRate | Den önskade uppspelningsbithastigheten (i bitar per sekund) för det första segmentet. När uppspelningen startar används den närmaste profilen (lika med eller högre än den ursprungliga bithastigheten) för det första segmentet.  Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. På samma sätt, om den inledande hastigheten ligger över den högsta nivån, väljer TVSDK den högsta nivån under den högsta. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen.  Returnerar ett heltalsvärde som representerar byteprofilen per sekund. |
+| Inledande bithastighet: getABRInitialBitRate | Uppspelningens önskade bithastighet (i bitar per sekund) för det första segmentet. När uppspelningen startar används den närmaste profilen (lika med eller högre än den ursprungliga bithastigheten) för det första segmentet.  Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. På samma sätt, om den inledande hastigheten ligger över den högsta nivån, väljer TVSDK den högsta nivån under den högsta. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen.  Returnerar ett heltalsvärde som representerar byteprofilen per sekund. |
 | Minsta bithastighet: getABRMinBitRate | Den lägsta tillåtna bithastigheten som ABR kan växla till. ABR-växling ignorerar profiler med en lägre bithastighet än så. Returnerar ett heltalsvärde som representerar bitprofilen per sekund. |
 | Maximal bithastighet: getABRMaxBitRate | Den högsta tillåtna bithastighet som ABR kan växla till. ABR-växling ignorerar profiler med en högre bithastighet än detta. Returnerar ett heltalsvärde som representerar bitprofilen per sekund. |
 | Princip för ABR-växling: getABRPolicy | Uppspelningen växlar gradvis till den högsta bithastigheten när det är möjligt. Du kan ange en princip för ABR-växling, som avgör hur snabbt TVSDK växlar mellan profiler. Standardvärdet är Måttligt. <ul><li>*Konservativ*: Växlar till profilen med nästa högre bithastighet när bandbredden är 50 % högre än den aktuella bithastigheten. </li><li>*Måttlig*: Växlar till nästa högre bithastighetsprofil när bandbredden är 20 % högre än den aktuella bithastigheten.</li><li>*Aggressiv*: Växlar omedelbart till den högsta bithastighetsprofilen när bandbredden är högre än den aktuella bithastigheten</li></ul><br/>Om den inledande bithastigheten är noll eller inte har angetts och en princip anges, startar uppspelningen med den lägsta bithastighetsprofilen för Konservativ, den profil som ligger närmast mediandbithastigheten för tillgängliga profiler för Moderate och den högsta bithastighetsprofilen för Aggressiv.<br/><br/>Principen fungerar inom begränsningarna för lägsta och högsta bithastighet, om de anges.  Returnerar den aktuella inställningen från uppräkningen ABRControlParameters: <ul><li>ABR_CONSERVATIVE</li><li>ABR_MODERATE </li><li>ABR_AGGRESSIVE</li></ul><br>Se även [ABRPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/ABRControlParameters.ABRPolicy.html). |
@@ -28,7 +27,6 @@ Referensimplementeringen konfigurerar följande ABR-parametrar i [IPlaybackConfi
 >
 >* Felväxlingsmekanismen för TVSDK kan åsidosätta dessa inställningar eftersom TVSDK prioriterar en kontinuerlig uppspelning framför att strikt respektera kontrollparametrarna.
 >* När bithastigheten ändras skickas TVSDK `onProfileChanged` händelser i `PlaybackEventListener`.
-
 
 ## Aktivera anpassad ABR-kontroll i referensimplementeringen {#section_72A6E7263E1441DD8D7E0690285515E6}
 
@@ -39,7 +37,7 @@ Så här aktiverar du anpassad ABR via inställningsgränssnittet:
 * Öppna dialogrutan Primetime-inställningar.
 * Välj **[!UICONTROL ABR controls]**.
 
-   ![](assets/abr-configuration.jpg)
+  ![](assets/abr-configuration.jpg)
 
 * Tryck på [!UICONTROL Enable ON] kontrollera så att den visas `OFF`.
 

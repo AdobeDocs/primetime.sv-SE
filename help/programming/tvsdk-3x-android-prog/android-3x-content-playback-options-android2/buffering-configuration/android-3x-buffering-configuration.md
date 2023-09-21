@@ -1,15 +1,14 @@
 ---
 description: TVSDK buffrar ibland videoströmmen för att ge en jämnare tittarupplevelse. Du kan konfigurera hur spelaren buffrar.
 title: Buffring
-exl-id: 3b706420-878d-487a-8db7-cff2a12c2660
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
 
 ---
 
-# Översikt {#buffering-overview}
+# Ökning {#buffering-overview}
 
 TVSDK buffrar ibland videoströmmen för att ge en jämnare tittarupplevelse. Du kan konfigurera hur spelaren buffrar.
 
@@ -27,7 +26,7 @@ När videon återges fortsätter TVSDK att buffra nya fragment tills det har buf
 
 >[!TIP]
 >
->Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en jämnare uppspelning under en längre tid. Men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.
+>Om det inledande buffertvärdet är högt kan det ge användaren en lång inledande buffringstid innan start. Detta kan ge en mjuk uppspelning under en längre tid, men om nätverksförhållandena är dåliga kan den inledande uppspelningen fördröjas.
 
 Om du aktiverar direkt genom att ringa `prepareBuffer`börjar den inledande buffringen då i stället för att vänta på `play`.
 
@@ -45,22 +44,22 @@ The `MediaPlayer` innehåller metoder för att ställa in och hämta den inledan
 
    * Så här anger du den inledande bufferttiden som motsvarar uppspelningsbufferttiden:
 
-      ```
-      public static BufferControlParameters createSimple(long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createSimple(long bufferTime)
+     ```
 
    * Så här anger du inledande och uppspelande bufferttider:
 
-      ```
-      public static BufferControlParameters createDual( 
-        long initialBuffer,  
-        long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createDual( 
+       long initialBuffer,  
+       long bufferTime)
+     ```
+
    Om parametrarna inte är giltiga genereras följande metoder `MediaPlayerException` med felkod `PSDKErrorCode.INVALID_ARGUMENT`, till exempel när följande villkor är uppfyllda:
 
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
-
 
 1. Om du vill ange värden för buffertparametrar använder du följande `MediaPlayer` metod:
 

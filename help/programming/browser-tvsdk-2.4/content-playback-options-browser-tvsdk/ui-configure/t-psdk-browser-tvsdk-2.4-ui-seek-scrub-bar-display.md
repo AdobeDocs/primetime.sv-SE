@@ -1,8 +1,7 @@
 ---
 description: I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktuppspelning kan vara en uppspelningslista med glidfönster eller VOD-innehåll (video on demand).
 title: Hantera sökning när sökfältet används
-exl-id: 4c09b218-917a-4318-82b0-c221d450a2c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -19,7 +18,7 @@ I Browser TVSDK kan du söka till en viss position (tid) i en ström. En direktu
 
 1. Vänta tills webbläsarens TVSDK är i ett giltigt söktillstånd.
 
-   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om medieresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge kommer ett försök att anropa följande metoder att resultera i en `IllegalStateException`.
+   Giltiga lägen är PREPARED, COMPLETE, PAUSED och PLAYING. Om mediaresursen är i ett giltigt tillstånd kan du vara säker på att den har lästs in. Om spelaren inte är i ett giltigt sökbart läge kommer ett försök att anropa följande metoder att resultera i en `IllegalStateException`.
 
    Du kan till exempel vänta på att webbläsarens TVSDK ska utlösa  `AdobePSDK.MediaPlayerStatusChangeEvent`  med `event.status` av `AdobePSDK.MediaPlayerStatus.PREPARED`.
 

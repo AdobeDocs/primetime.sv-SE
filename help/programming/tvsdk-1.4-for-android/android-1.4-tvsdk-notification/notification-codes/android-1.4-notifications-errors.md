@@ -1,8 +1,7 @@
 ---
 description: Den här tabellen innehåller detaljerad information om meddelanden om ERROR-typer.
 title: FELMEDDELANDEkoder
-exl-id: 3e60488e-b368-41f6-b32c-cda5688d67de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 4%
@@ -24,7 +23,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <th colname="2" class="entry"> Namn </th> 
    <th colname="3" class="entry"> InnerNotification </th> 
    <th colname="4" class="entry"> Metadatanycklar </th> 
-   <th colname="5" class="entry"> Kommentarer </th> 
+   <th colname="5" class="entry"> Kommentar </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -82,7 +81,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="2"><span class="codeph"> GET_QOS_DATA_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
-   <td colname="5"> Ett fel uppstod när QOS-informationen skulle hämtas. </td> 
+   <td colname="5"> Det uppstod ett fel när QOS-informationen skulle hämtas. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101200 </span> </td> 
@@ -107,7 +106,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 102101 </span> </td> 
-   <td colname="2"><span class="codeph"> RESOURCE_PLACEMENT_ MISSLYCKADES </span> </td> 
+   <td colname="2"><span class="codeph"> RESOURCE_PLACEMENT_FAILED </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> CONTENT_ID </span> </td> 
    <td colname="5"> Ett fel uppstod när en resurs placerades på tidslinjen för uppspelningen. </td> 
@@ -159,7 +158,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <td colname="2"><span class="codeph"> NATIVE_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"> <span class="codeph"> NATIVE_ERROR_CODE </span> <span class="codeph"> NATIVE_ERROR_NAME </span> <span class="codeph"> BESKRIVNING </span> <span class="codeph"> BESKRIVNING</span> <p><b>DRM-information:</b> </p> <span class="codeph"> DRM_ERROR_STRING</span> <span class="codeph"> NATIVE_SUBERROR_CODE</span> </td> 
-   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Se <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> om du vill ha information om värdena för dessa metadatanycklar. </p> </td> 
+   <td colname="5"> <p>Ett fel uppstod i AVE-biblioteket på låg nivå. </p> <p>Se <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Information om NATIVE_ERROR-meddelanden</a> för information om värdena för dessa metadatanycklar. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 106001 </span> </td> 

@@ -1,8 +1,7 @@
 ---
 description: Entitlement Manager är den funktionshanterare som stöder implementeringen av Primetime-autentisering.
 title: Tillståndshanteraren - översikt
-exl-id: a66e131e-283f-4378-b834-7cfa887b3ec9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Entitlement Manager är den funktionshanterare som stöder implementeringen av Primetime-autentisering.
 
-## Funktionsöversikt
+## Översikt över funktioner
 
 Primetimes autentiseringsintegrering med referensimplementeringen för Android Primetime SDK lägger till en ny funktionshanterare i programmet. Till skillnad från många andra funktionshanterare *EntitlementManager används på flera ställen i programmet*. Nedan ges en översikt över ändringar och tillägg som gjorts i referensimplementeringen för att ge stöd åt Primetime-autentisering:
 
@@ -23,7 +22,7 @@ The `EntitlementManager` -klassen hanterar all kommunikation med Primetimes SDK 
 
 ### EntitlementManger-återanrop
 
-Referensprogrammets huvudverksamhet, `CatalogActivity`, skapar en instans av `EntitlementManagerListener` och registrerar det med `EntitlementManager`. På det här sättet `EntitlementManager` kan signalera att det behövs gränssnittsuppdateringar till resten av programmet. Återanropen inkluderar att visa/dölja en inläsningsdialogruta, visa statusdialogrutor, uppdatera behörighets- och autentiseringsikoner och starta videouppspelning vid lyckad auktorisering.
+Referensprogrammets huvudverksamhet, `CatalogActivity`, skapar en instans av `EntitlementManagerListener` och registrerar det med `EntitlementManager`. På det här sättet är `EntitlementManager` kan signalera att det behövs gränssnittsuppdateringar till resten av programmet. Återanropen inkluderar att visa/dölja en inläsningsdialogruta, visa statusdialogrutor, uppdatera behörighets- och autentiseringsikoner och starta videouppspelning vid lyckad auktorisering.
 
 ### Tillståndsdialogrutor
 

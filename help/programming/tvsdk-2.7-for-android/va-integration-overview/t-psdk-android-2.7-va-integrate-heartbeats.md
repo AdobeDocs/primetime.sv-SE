@@ -2,8 +2,7 @@
 title: Initiera och konfigurera videoanalys
 description: Initiera och konfigurera videoanalys
 copied-description: true
-exl-id: add832e3-5a17-4235-a76f-ae342e1d85f0
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -18,21 +17,21 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 * TVSDK 2.5 för Android.
 * Konfigurations-/initieringsinformation
 
-   Kontakta din Adobe-representant för att få specifik information om ditt videospårningskonto:
+  Kontakta din Adobe-representant för att få specifik information om ditt videospårningskonto:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Viktigt: Det här JSON-konfigurationsfilnamnet måste finnas kvar <span class="filepath"> ADBMobileConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till den här filen måste vara <span class="filepath"> &lt;source root=""&gt;/assets </span>. </p> </td> 
+   <td colname="col2"> <p>Viktigt: Det här JSON-konfigurationsfilnamnet måste finnas kvar <span class="filepath"> ADBMobileConfig.json </span>. Det går inte att ändra namnet och sökvägen för den här konfigurationsfilen. Sökvägen till filen måste vara <span class="filepath"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td> 
-   <td colname="col2"> URL:en för Adobe Analytics (tidigare SiteCatalyst) back-end-samlingens slutpunkt. </td> 
+   <td colname="col1"> Slutpunkt för serverspårning av AppMeasurement </td> 
+   <td colname="col2"> URL:en för Adobe Analytics-slutsamlingens slutpunkt (tidigare SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td> 
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips: URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td> 
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips! URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontonamn </td> 
@@ -89,7 +88,7 @@ Så här konfigurerar du videospårning i spelaren:
    1. Kompilera och skapa programmet.
    1. Distribuera och kör det paketerade programmet.
 
-      Mer information om de här AppMeasurement-inställningarna finns i [Mäta video i Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
+      Mer information om AppMeasurementen finns i [Mäta video i Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
 1. Initiera och konfigurera metadata för spårning av pulsslag.
 

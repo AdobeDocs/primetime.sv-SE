@@ -1,8 +1,7 @@
 ---
 description: Du kan konfigurera spelaren så att den spårar och analyserar videoanvändningen.
 title: Initiera och konfigurera videoanalys
-exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -20,12 +19,12 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
-   <td colname="col1"> Slutpunkt för AppMeasurement Tracking-server </td>
-   <td colname="col2"> URL:en för Adobe Analytics (tidigare SiteCatalyst) back-end-samlingens slutpunkt. </td>
+   <td colname="col1"> Slutpunkt för serverspårning av AppMeasurement </td>
+   <td colname="col2"> URL:en för Adobe Analytics-slutsamlingens slutpunkt (tidigare SiteCatalyst). </td>
   </tr>
   <tr>
    <td colname="col1"> Serverslutpunkt för videoanalysspårning </td>
-   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips: URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td>
+   <td colname="col2"> URL:en för videoanalysens back-end-samlingens slutpunkt. Här skickas alla anrop till spårning av pulsslag. <p>Tips! URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern. Information om hur du implementerar tjänsten för besöks-ID finns i <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Tjänst för implementerings-ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Kontonamn </td>
@@ -41,7 +40,7 @@ Innan du aktiverar videospårning (videohjärtslag) bör du kontrollera att du h
   </tr>
   <tr>
    <td colname="col1"> Utgivare </td>
-   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips: Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td>
+   <td colname="col2"> Detta är utgivar-ID, som tillhandahålls kunderna av deras Adobe-representant. <p>Tips! Detta ID är inte bara en sträng med varumärkets/tv-namnet. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -54,11 +53,11 @@ Så här konfigurerar du videospårning i spelaren:
    
    * Instansieringen kräver en indataparameter för Marketing Cloud organisation-ID som tillhandahålls av Adobe.
 
-      Detta är ett strängvärde.
+     Detta är ett strängvärde.
    * Det enda konfigurationsalternativet för VisitorAPI-biblioteket är URL:en för serverslutpunkten som innehåller den unika identifieraren för den aktuella användaren.
    * URL:en för besökarspårningsservern är densamma som URL:en för analysspårningsservern.
 
-      Information om hur du implementerar tjänsten för besöks-ID finns i [Implementering av besökar-ID-tjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
+     Information om hur du implementerar tjänsten för besöks-ID finns i [Implementering av besökar-ID-tjänst](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -67,11 +66,11 @@ Så här konfigurerar du videospårning i spelaren:
 
 2. Instansiera och konfigurera komponenten AppMeasurement.
 
-   AppMeasurement-instansen har många konfigurationsalternativ. Mer information finns på [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) dokumentation. Alternativen i följande exempelkod ( `account`, `visitorNamespace`och `trackingServer`) krävs och värdena anges av Adobe.
+   AppMeasurementen har många konfigurationsalternativ. Mer information finns på [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) dokumentation. Alternativen i följande exempelkod ( `account`, `visitorNamespace`och `trackingServer`) krävs och värdena anges av Adobe.
 
    >[!IMPORTANT]
    >
-   >Du måste se till att beroendekedjan är korrekt konfigurerad. AppMeasurement-instansen aggregerar (är beroende av) Visitor API-komponenten.
+   >Du måste se till att beroendekedjan är korrekt konfigurerad. AppMeasurementen instans aggregerar (beror på) Visitor API-komponenten.
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -119,11 +118,12 @@ Kom ihåg följande:
       * Skapa alltid en ny spårningsinstans för varje innehållsuppspelningssession och ta bort den tidigare referensen (efter att du har kopplat loss mediespelarinstansen).
       * Metadata som skapades i understeg 1 bör anges i konstruktorn för videoanalysspåraren.
 
-         ```js
-         var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
-         videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
-         videoAnalyticsProvider.attachMediaPlayer(player);
-         ```
+        ```js
+        var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
+        videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
+        videoAnalyticsProvider.attachMediaPlayer(player);
+        ```
+
    3. Förstör spårningen av videoanalys.
 Innan du påbörjar en ny innehållsuppspelningssession ska du förstöra den tidigare instansen av videospåraren. När du har tagit emot händelsen complete (eller meddelandet) väntar du några minuter innan du förstör videospårarinstansen. Om instansen förstörs omedelbart kan det påverka möjligheten för Video Analytics-spåraren att skicka en video med fullständig ping.
 

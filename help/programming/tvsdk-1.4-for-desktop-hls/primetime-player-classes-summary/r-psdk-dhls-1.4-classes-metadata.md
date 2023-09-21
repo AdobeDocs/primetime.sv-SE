@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser innehåller metadata för annonsering, namnutrymmen och spårning.
 title: Metadataklasser
-exl-id: 4014b496-7fc4-4fa9-98da-28350668d35f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -24,5 +23,5 @@ Paket: [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api
 | [Metadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/Metadata.html) | Definierar det generiska gränssnittet för att konfigurera alla tillgängliga metadata för spelaren och ytterligare objekt. |
 | [MetadataNode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataNode.html) | Föråldrat. Använd `Metadata`. |
 | [MetadataUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataUtils.html) | Klass av metoder för att arbeta med metadata. |
-| [TimedMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | En klass för Raw-representationen av tidsbestämda metadata som infogats i en medieström. |
+| [TimedMetata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | En klass för Raw-representationen av tidsbestämda metadata som infogats i en medieström. |
 | [TimedMetadataType](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadataType.html) | En klass som innehåller de typer som stöds för tidsbestämda metadata (i spellistan eller strömmen), till exempel ID3-metadata eller -taggar. |

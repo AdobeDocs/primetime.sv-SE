@@ -1,8 +1,7 @@
 ---
 description: Du kan använda TVSDK för att hämta information om spelarens position i mediet och visa den i sökfältet.
 title: Visa videons varaktighet, aktuella tid och återstående tid
-exl-id: 68501c81-346a-4c3e-aa20-a98b8b1c6b17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Du kan använda TVSDK för att hämta information om spelarens position i mediet
       * För VOD börjar intervallet alltid med noll och slutvärdet är lika med summan av innehållets längd och varaktigheten för ytterligare innehåll i flödet (annonser).
       * För en linjär/liveresurs representerar intervallet uppspelningsfönsterintervallet. Det här intervallet ändras under uppspelning.
 
-         TVSDK anropar `ITEM_Updated` återanrop som anger att medieobjektet uppdaterades och att dess attribut, inklusive uppspelningsintervallet, uppdaterades.
+        TVSDK anropar `ITEM_Updated` återanrop som anger att medieobjektet uppdaterades och att dess attribut, inklusive uppspelningsintervallet, uppdaterades.
 
 1. Använd metoder som är tillgängliga på `MediaPlayer` och `SeekBar` i Android SDK för att ställa in sökfältsparametrarna.
 

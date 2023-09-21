@@ -1,8 +1,7 @@
 ---
 description: När webbläsarens TVSDK begär en annons som inte finns på din primära annonsserver, måste spelaren begära annonsen från den sekundära servern. VAST (Video Ad Serving Template) anger kommunikationsstandarden mellan annonsservrar och videospelare och är svaret som skickas av den sekundära annonsservern när annonsen begärs.
 title: VAST-annonser
-exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Följande element stöds:
 * `AdTitle`
 * `Impression`
 
-   Följande valfria element stöds:
+  Följande valfria element stöds:
 
 * `Description`
 * `Survey`
@@ -56,17 +55,17 @@ Här finns mer information om annonstyperna:
 
       * `MediaFile`
 
-         >[!TIP]
-         >
-         >I det här elementet `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` attribut stöds.
+        >[!TIP]
+        >
+        >I det här elementet `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`och `type` attribut stöds.
 
 * **Icke-linjära annonser** Följande element stöds:
 
    * `Non-linear`
 
-      >[!TIP]
-      >
-      >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` attribut stöds.
+     >[!TIP]
+     >
+     >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`och `minSuggestedDuration` attribut stöds.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,9 +77,9 @@ Här finns mer information om annonstyperna:
 
    * `Companion`
 
-      >[!TIP]
-      >
-      >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` attribut stöds.
+     >[!TIP]
+     >
+     >I det här elementet `id`, `width`, `height`, `apiFramework`, `expandedWidth`och `expandedHeight` attribut stöds.
 
       * `StaticResource`
       * `IFrameResource`

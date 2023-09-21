@@ -2,8 +2,7 @@
 title: DRM Revocation List Manager
 description: DRM Revocation List Manager
 copied-description: true
-exl-id: 5b17d195-30ca-4005-b710-83a6f77779a2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%
@@ -42,7 +41,7 @@ java -jar AdobeRevocationListManager.jar
 * `destfile` Anger namnet på filen där egenskaperna för återkallningslistan sparas.
 * `crlNumber` representerar ett versionsnummer som inte är negativt för listan över spärrade certifikat (CRL). Du måste öka det här antalet varje gång CRL-listan uppdateras.
 
-**Tabell 5: Alternativ för kommandorad**
+**Tabell 5: Kommandoradsalternativ**
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_a3y_wqy_n4">  
  <thead class="- topic/thead "> 
@@ -54,7 +53,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p><p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Revocation List Manager efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p><p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p>Anger platsen för konfigurationsfilen. Om du inte använder det här alternativet söker återkallningslisthanteraren efter <span class="filepath"> flashaccesstools.properties</span> i arbetskatalogen. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p><p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Revocation List Manager efter <span class="filepath"> flashaccesstools.properties</span> i aktuell arbetskatalog. </p><p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p>Anger platsen för konfigurationsfilen. Om du inte använder det här alternativet söker återkallningslisthanteraren efter <span class="filepath"> flashaccesstools.properties</span> i arbetskatalogen. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d filnamn</span> </td> 

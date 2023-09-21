@@ -1,8 +1,7 @@
 ---
 description: Händelsehanterare gör att TVSDK kan svara på händelser.
 title: Implementera händelseavlyssnare och återanrop
-exl-id: eda5cd4e-4ee8-4b37-a179-242e8697f61f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -25,13 +24,13 @@ En fullständig lista över händelser för videoanalys finns i Spåra grundläg
 
    * **Nödvändiga händelser**: Lyssna efter alla uppspelningshändelser.
 
-      >[!IMPORTANT]
-      >
-      >Uppspelningshändelsen `onStateChanged` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg
+     >[!IMPORTANT]
+     >
+     >Uppspelningshändelsen `onStateChanged` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg
 
-   * **Andra händelser**: Valfritt, beroende på ditt program.
+   * **Andra händelser**: Valfritt, beroende på vilket program du använder.
 
-      Om du till exempel inkluderar annonsering i uppspelningen implementerar du AdPlaybackEventListener-återanropen.
+     Om du till exempel inkluderar annonsering i uppspelningen implementerar du AdPlaybackEventListener-återanropen.
 
 1. Implementera händelseavlyssnare för varje händelse.
 
@@ -109,7 +108,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## Ordning på annonsevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Ordning på reklamevenemang {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 När din uppspelning inkluderar annonsering skickar TVSDK händelser/meddelanden i de sekvenser som förväntas. Spelaren kan implementera åtgärder baserat på händelser i den förväntade sekvensen.
 

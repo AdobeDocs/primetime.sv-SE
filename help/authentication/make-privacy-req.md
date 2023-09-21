@@ -1,8 +1,7 @@
 ---
 title: Hur man gör en sekretessförfrågan
 description: Hur man gör en sekretessförfrågan
-exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -20,7 +19,7 @@ ht-degree: 0%
 När du skickar en begäran om åtkomst eller borttagning av sekretess måste kundprogrammet inkludera följande identifierare:
 
 * **mvpdID** - Unik identifierare för MVPD.
-* **userID** - Identifierar unikt användaren av en programmerarapp, men härstammar från MVPD. Se Förstå användar-ID:n i Programmeröversikten.
+* **userID** - Identifierar unikt användaren av en programmerarapp, men härstammar från MVPD. Se Förstå användar-ID i Programmeröversikten.
 * **IMSOrgID** - Adobe Experience Cloud Identity Management serviceorganisations-ID, som unikt identifierar kunden i Adobe Experience Cloud
 
 
@@ -52,7 +51,7 @@ alla dessa händelser filtreras per kund.
 
 **Begär exempel**
 
-Du måste överföra en JSON-fil med Primetimes autentiseringsidentifierare som du skickar dataåtkomstbegäran för. Följande exempel visar hur en välformad JSON ser ut:
+Du måste överföra en JSON-fil med Primetime-autentiserings-ID:n som du skickar dataåtkomstbegäran för. Följande exempel visar hur en välformad JSON ser ut:
 
 ```JSON
 {
@@ -132,7 +131,7 @@ Du måste överföra en JSON-fil med Primetimes autentiseringsidentifierare som 
 
 ### Ta bort {#delete-req}
 
-Du måste överföra en JSON-fil med Primetime-autentiserings-ID:n som du skickar begäran om databorttagning för. Följande exempel visar hur en välformad JSON ser ut:
+Du måste överföra en JSON-fil med Primetime-autentiserings-ID:n som du skickar en begäran om att ta bort data för. Följande exempel visar hur en välformad JSON ser ut:
 
 **Begär exempel**
 
@@ -222,11 +221,11 @@ För en Delete-begäran:
 Det finns två sätt för kunder att skicka sekretessförfrågningar till Adobe:
 
 * **manuellt** - genom att använda [Privacy Servicens användargränssnitt](#privacy-service-ui)
-* **automatiskt** - genom att använda [Privacy Services-API ](#privacy-service-api)
+* **automatiskt** - genom att använda [Privacy Services-API](#privacy-service-api)
 
 ### Genom att använda Privacy Servicens användargränssnitt {#privacy-service-ui}
 
-A [komplett självstudiekurs](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) om hur du får åtkomst till och använder Privacy Servicens användargränssnitt finns online via Adobe I/O tjänster. Dessutom kan kunderna använda den här länken för att få tillgång till bibliotek med videoklipp och artiklar om sekretessbestämmelser. Klicka på Adobe Experience Cloud- och GDPR-menyn. Detta öppnar ett antal videofilmer -&quot;GDPR UI How-to&quot; förklarar hur du använder det.
+A [komplett självstudiekurs](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) om hur du får åtkomst till och använder Privacy Servicens användargränssnitt finns online via Adobe I/O-tjänster. Dessutom kan kunderna använda den här länken för att få tillgång till bibliotek med videoklipp och artiklar om sekretessbestämmelser. Klicka på Adobe Experience Cloud- och GDPR-menyn. Detta öppnar ett antal videofilmer -&quot;GDPR UI How-to&quot; förklarar hur du använder det.
 
 I användargränssnittet måste kunderna läsa in sina egna IMSOrgID och en JSON som innehåller GDPR begär information för varje produkt.
 
@@ -239,7 +238,7 @@ The **Privacy Services-API-dokumentation** behandlar ingående hur en Adobe-kund
 **Visualisera API-anrop med Postman (en kostnadsfri tredjepartsprogramvara):**
 
 * [Privacy Service API Postman-samling på GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-* [Videoguide för att skapa Postman-miljön](https://video.tv.adobe.com/v/28832)
+* [Videoguide för Postman](https://video.tv.adobe.com/v/28832)
 * [Steg för att importera miljöer och samlingar i Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
 

@@ -1,8 +1,7 @@
 ---
 description: Dessa klasser innehåller information om annonser som förekommer i en tidslinje.
 title: Tidslinjeannonsklasser
-exl-id: fb31a235-6578-4da1-b732-713a2f9b24be
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Paket: [com.adobe.mediacore.timeline.advertising.audiude](https://help.adobe.com
 |--- |--- |
 | [Annons](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | En klass som definierar Ad-förkortningen och som innehåller all annonsinformation. Den definieras av ett unikt ID, en varaktighet och en `MediaResource`. The `MediaResource` innehåller den URL där det faktiska annonsinnehållet finns. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | En klass som representerar en resurs som ska visas. En klass som representerar en annonsresurs. |
-| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp någon gång under uppspelningen. |
+| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | En klass som ger en enhetlig vy på flera annonser som kommer att spelas upp vid något tillfälle under uppspelningen. |
 | [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | Åtgärdsklass för annonsradbrytning. |
 | [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPolicy.html) | En uppräkning som definierar annonsuppspelningsprincipen som relaterar till användaren som åsidosätter annonser vid sökning. |
 | [AdClick](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | En klass som representerar en klickinstans som är associerad med en resurs. Den här instansen innehåller information om klicknings-URL:en och rubriken som kan användas för att ge användaren mer information. |
@@ -32,4 +31,4 @@ Paket: [com.adobe.mediacore.timeline.advertising.audiude](https://help.adobe.com
 | [AuditudeTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | En klass som implementerar ContentTracker-gränssnittet och definierar Primetime-annonspårningshändelser. |
 | [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | En klass som hanterar annonsupplösningsdelen i frasprocessen. |
 | [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | Gränssnitt som definierar det protokoll som du måste implementera om du vill skapa en annonsspårningsmodul som är utformad för att integreras med biblioteket eller en anpassad annonsspårare. Det här gränssnittet kräver att du definierar hur annonseringshändelser rapporteras till det fjärranslutna annonsspårningssystemet. |
-| [PlacementInformation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | En klass som abstraherar en begäran om placeringsinformation. Varje löst annons måste ha en placeringsinformation kopplad till sig. Placeringsinformationen beskriver var annonsen är avsedd att placeras på tidslinjen. Den innehåller information om: <ul><li>Placeringsposition (i ms) </li><li>Placeringens typ (före-, mitt- eller efterrullning) </li><li>Längden på det huvudinnehållssegment som ska ersättas</li></ul> |
+| [PlacementInformation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | En klass som abstraherar en begäran om placeringsinformation. Varje löst annons måste ha en placeringsinformation kopplad till sig. Placeringsinformationen beskriver var annonsen ska placeras på tidslinjen. Den innehåller information om: <ul><li>Placeringsposition (i ms) </li><li>Placeringens typ (före-, mitt- eller efterrullning) </li><li>Längden på det huvudinnehållssegment som ska ersättas</li></ul> |

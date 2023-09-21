@@ -1,8 +1,7 @@
 ---
 title: Felsökning
 description: Kan du inte visa eller läsa in en rapportpanel? Eller kan du inte exportera en rapport? Lär dig hur du löser vanliga problem i produkten.
-exl-id: 2c3f22c4-5534-424c-b321-b57045bcb7a6
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Har du problem med data och diagram som tar för lång tid att läsa in, rapport
 
 * Om det tar för lång tid att läsa in en sida eller en enskild panel kan du försöka med att uppdatera sidan. För den aktuella versionen kan det ta upp till en minut att läsa in en sida, beroende på vilket urval av programmerare och programmerare som har valts.
 
-   ![](assets/troubleshoot.png)
+  ![](assets/troubleshoot.png)
 
 * Om du inte kan se några data eller diagram även efter uppdateringen loggar du ut från konto-IQ och loggar sedan in igen.
 

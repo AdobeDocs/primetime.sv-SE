@@ -1,8 +1,7 @@
 ---
 description: Här är några exempel på processen att ta bort och ersätta annonser.
 title: Exempel på att ta bort och ersätta annonser
-exl-id: a6fdb86e-507e-4a65-bb32-928e216c6e9a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 title: Visa kontodelningsrapporter för de 10 främsta programmerarna
 description: Visa kontodelningsrapporter för de 10 främsta programmerarna
-exl-id: d67fa9d1-bd77-4781-9245-a98b1754cd99
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -39,7 +38,7 @@ För en inloggad MVPD-användare finns följande tre standardval (för att visa 
 
 ## De 10 viktigaste programmerarna genom att dela poäng {#top-10prog-sharingscore}
 
-När du använder markeringen **de 10 bästa programmerarna genom att dela poäng** för att definiera ert segment identifierar konto-IQ-systemet 10 MVPD-filer från hela branschen och anger högst tio MVPD-filer (tillsammans med deras motsvarande värden) i fallande ordning efter deras [övergripande delningspoäng](/help/AccountIQ/product-concepts.md#overall-sharing-score)
+När du använder markeringen **de 10 bästa programmerarna genom att dela poäng** för att definiera ert segment identifierar konto-IQ-systemet 10 MVPD-filer från hela branschen och anger högst tio MVPD-filer (tillsammans med deras motsvarande värden) i fallande ordning efter deras [totalpoäng för delning](/help/AccountIQ/product-concepts.md#overall-sharing-score)
 
 Så här visar du listan och rapporterna för de tio bästa PDF-filerna genom att dela poängen för din kanal:
 

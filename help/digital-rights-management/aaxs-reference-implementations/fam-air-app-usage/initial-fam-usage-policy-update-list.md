@@ -2,8 +2,7 @@
 title: Lista över principuppdateringar
 description: Lista över principuppdateringar
 copied-description: true
-exl-id: 78078e95-775e-4c64-ab0f-d8bf644f3aee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Du kan använda principuppdateringslistor för att kommunicera principändringar
 
 Om du vill skapa en principuppdateringslista för första gången klickar du på **[!UICONTROL Add policies]** om du vill visa alla tillgängliga principer på servern. För profiler som har uppdaterats sedan de användes för att paketera innehåll väljer du **[!UICONTROL update]** alternativknapp.
 
-Om du inte längre vill använda en profil för att utfärda licenser och profilen redan har använts för att paketera innehåll kan du återkalla profilen. Om du vill göra det väljer du **[!UICONTROL revoke]** alternativknapp. När du har valt profiler väljer du **[!UICONTROL Create Policy Update List]**. En fil som kallas [!DNL PolicyUpdateList.dat] sparas i [!DNL Resources] Katalog.
+Om du inte längre vill använda en profil för att utfärda licenser och profilen redan har använts för att paketera innehåll, kan du återkalla profilen. Om du vill göra det väljer du **[!UICONTROL revoke]** alternativknapp. När du har valt profiler väljer du **[!UICONTROL Create Policy Update List]**. En fil som kallas [!DNL PolicyUpdateList.dat] sparas i [!DNL Resources] Katalog.
 
 Om du vill ändra en befintlig principuppdateringslista klickar du på **[!UICONTROL Add policies]** om du vill visa alla tillgängliga principer på servern. Välj de ytterligare profiler som ska läggas till eller återkallas. Befintliga poster i listan över principuppdateringar kan ändras i skärmens övre del. Profiler som är markerade **[!UICONTROL updated]** kan ändras till **[!UICONTROL revoked]**, men när en policy väl är **[!UICONTROL revoked]** går det inte att ändra tillbaka till **[!UICONTROL updated]**.
 

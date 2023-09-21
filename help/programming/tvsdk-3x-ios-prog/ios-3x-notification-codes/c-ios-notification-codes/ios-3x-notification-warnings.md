@@ -1,8 +1,7 @@
 ---
 description: Den här tabellen visar detaljerad information om WARN-typmeddelanden.
 title: Varningsmeddelandekoder
-exl-id: de922934-9775-463f-a28f-fc891d7a914b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 3%
@@ -24,7 +23,7 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
    <th colname="2" class="entry"><b>Namn</b></th> 
    <th colname="3" class="entry"><b>InnerNotification&gt;/b&gt;</th> 
    <th colname="4" class="entry"><b>Metadatanycklar</b></th> 
-   <th colname="5" class="entry"><b>Kommentarer</b></th> 
+   <th colname="5" class="entry"><b>Kommentar</b></th> 
   </tr> 
  </thead>
  <tbody> 
@@ -135,10 +134,10 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SiteCatalyst_VARNING </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_VARNING </span> </td> 
    <td colname="3"> <p>Ingen </p> </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
-   <td colname="5"> <p>Varning: Se beskrivning av sitecatalyst-varning. </p> </td> 
+   <td colname="5"> <p>Varning: Se beskrivning av platshållarvarning. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270007 </span> </td> 
@@ -152,6 +151,6 @@ De flesta varningar innehåller relevanta metadata, till exempel URL:en för res
 
 >[!NOTE]
 >
->adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` nyckel.
+>adID och källa (URL) kan hämtas via PTAdAsset i meddelandemetadata med `AD_ASSET` -tangenten.
 >
 >The [] -attribut anger en valfri nyckel för meddelanden.

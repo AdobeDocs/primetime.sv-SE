@@ -1,8 +1,7 @@
 ---
 description: Du kan få en beskrivning av tidslinjen som är associerad med det markerade objekt som spelas upp av TVSDK. Detta är mest användbart när programmet visar en anpassad navigeringsfältskontroll där innehållsavsnitt som motsvarar annonsinnehåll identifieras.
 title: Inspect tidslinjen för uppspelning
-exl-id: 2a12fe28-9a8a-45b7-af05-87c17dd25302
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
@@ -15,18 +14,18 @@ Du kan få en beskrivning av tidslinjen som är associerad med det markerade obj
 
 Här är ett exempel på implementering som visas i följande skärmbild.  ![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Öppna `Timeline` objekt i `MediaPlayer` med `getTimeline()` -metod.
+1. Öppna `Timeline` -objektet i `MediaPlayer` med `getTimeline()` -metod.
 
    The `Timeline` klassen kapslar in informationen som är relaterad till innehållet på tidslinjen som är associerad med mediaobjektet som för närvarande är inläst av `MediaPlayer` -instans. The `Timeline` -klassen ger åtkomst till en skrivskyddad vy av den underliggande tidslinjen. The `Timeline` klassen innehåller en get-metod som ger en iterator via en lista med `TimelineMarker` objekt.
 
-1. Upprepa i listan `TimelineMarkers` och använd den returnerade informationen för att implementera tidslinjen.
+1. Upprepa i listan över `TimelineMarkers` och använd den returnerade informationen för att implementera tidslinjen.
 
        Ett TimelineMarker-objekt innehåller två informationsdelar:
    
    * Markörens position på tidslinjen (i millisekunder)
    * Markörens varaktighet på tidslinjen (i millisekunder)
 
-1. Lyssna på `MediaPlayerEvent.TIMELINE_UPDATED` händelsen på `MediaPlayer` -instans och implementera `TimelineUpdatedEventListener.onTimelineUpdated()` återanrop.
+1. Lyssna på `MediaPlayerEvent.TIMELINE_UPDATED` -händelsen på `MediaPlayer` -instans och implementera `TimelineUpdatedEventListener.onTimelineUpdated()` återanrop.
 
    The `Timeline` -objektet kan informera programmet om ändringar som kan inträffa på tidslinjen genom att anropa `OnTimelineUpdated` avlyssnare.
 

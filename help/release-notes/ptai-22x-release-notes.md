@@ -1,8 +1,7 @@
 ---
 title: Versionsinformation om PTAI 22.9.2
 description: Versionsinformationen för PTAI beskriver vad som är nytt eller ändrat, de lösta och kända problemen i Primetime Ad Insertion under 2022.
-exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
@@ -43,7 +42,7 @@ Versionsinformationen för Primetime Ad Insertion 2.xx.x beskriver vad som är n
 
 ### Version 22.6.2
 
-**När:** onsdagen den 29 juni 2022 kl. 18.00-18.00 (östra)
+**När:** onsdagen den 29 juni 2022 kl. 3:00 till kl. 18:00 Eastern Time
 
 **Ändringar**
 
@@ -68,7 +67,7 @@ Versionsinformationen för Primetime Ad Insertion 2.xx.x beskriver vad som är n
 
 **Ändringar**
 
-* Förbättringar av funktionalitet, användbarhet och tillförlitlighet i äldre SSAI- och CRS-konsoler.
+* Förbättrade funktioner, användbarhet och tillförlitlighet i äldre SSAI- och CRS-konsoler.
 
 ### Version 22.4.4
 

@@ -1,8 +1,7 @@
 ---
 description: Du konfigurerar Adobe® Access™ genom att kopiera filer från dvd-skivan. Dessa filer innehåller JAR-filer som innehåller kod, certifikat och klasser från tredje part. Begär dessutom ett certifikat från Adobe Systems Incorporated. Du får flera autentiseringsuppgifter som används för att skydda integriteten för paketerat innehåll, licenser och kommunikation mellan klienten och servern.
 title: Konfigurera utvecklingsmiljön
-exl-id: 66310fc8-7513-4aab-81d6-1370ce216cbf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -53,4 +52,4 @@ Du behöver följande JAR-filer från tredje part som också finns på dvd:n i m
 
 För bättre prestanda kan du som tillval aktivera inbyggt stöd för kryptografiska åtgärder genom att distribuera de plattformsspecifika biblioteken i mappen&quot;Third party/cryptoj&quot; i SDK. Om du vill aktivera inbyggt stöd lägger du till biblioteket för din plattform (jsafe.dll för Windows eller libjsafe.so för Linux) i sökvägen. 32- och 64-bitarsversionerna av dessa bibliotek tillhandahålls. (Observera att 64-bitarsversionen endast bör användas om du har ett 64-bitarsoperativsystem och du kör 64-bitarsversionen av Java).
 
-En del av SDK är dessutom adobe-flashaccess-lcrm.jar (tillval). Den här filen behövs bara för funktioner som är relaterade till FMRMS (Adobe Media Rights Management Server) 1.x-kompatibilitet. Om du tidigare har distribuerat FMRMS 1.x och inte vill paketera om ditt FMRMS-skyddade innehåll måste du lägga till stöd till licensservern så att den kan hantera gammalt innehåll och klienter.
+En del av SDK är dessutom adobe-flashaccess-lcrm.jar (tillval). Den här filen behövs bara för funktioner som är relaterade till FMRMS (Adobe Flash Media Rights Management Server) 1.x-kompatibilitet. Om du tidigare har distribuerat FMRMS 1.x och inte vill paketera om ditt FMRMS-skyddade innehåll måste du lägga till stöd till licensservern så att den kan hantera gammalt innehåll och klienter.

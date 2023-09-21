@@ -1,15 +1,14 @@
 ---
 description: När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill gå över till trickuppspelningsläget måste du ange ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 title: Implementera snabbt framåt och bakåt
-exl-id: 58ed9a96-9617-4364-81d4-b404b23cf265
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-# Översikt {#implement-fast-forward-and-rewind-overview}
+# Ökning {#implement-fast-forward-and-rewind-overview}
 
 När användarna snabbt spolar framåt eller bakåt genom mediet är de i trickläget. Om du vill gå över till trickuppspelningsläget måste du ange ett annat värde än 1 för MediaPlayer-uppspelningshastigheten.
 
@@ -54,4 +53,4 @@ Om du vill växla hastighet måste du ange ett värde.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` när uppspelningen återupptas med vald hastighet.
 
-      TVSDK skickar båda dessa händelser när spelaren återgår från trippelläge till normalt uppspelningsläge.
+     TVSDK skickar båda dessa händelser när spelaren återgår från trippelläge till normalt uppspelningsläge.

@@ -2,8 +2,7 @@
 description: Stöd för attributet withCredentials i XMLHttpRequests tillåter resursdelningsbegäranden mellan ursprung (CORS) att inkludera måldomänens cookies för en mängd olika typer av begäranden.
 keywords: CORS;korsorigo;resursdelning;cookies;withCredentials
 title: Resursdelning mellan olika ursprung
-exl-id: 02826c87-b0c6-495b-a17d-67c5693a9772
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -40,7 +39,7 @@ Aktivera `withCredentials` stöd för de flesta typer av begäranden när en vis
    mediaPlayerItemConfig.networkConfiguration = networkConfig; 
    ```
 
-1. Pass `MediaPlayerItemConfig` till `MediaPlayer.replaceCurrentResource` -metod.
+1. Godkänd `MediaPlayerItemConfig` till `MediaPlayer.replaceCurrentResource` -metod.
 
    ```js
    var player = new AdobePSDK.MediaPlayer(); 
@@ -74,7 +73,7 @@ Aktivera `withCredentials` stöd för de flesta typer av begäranden när en vis
 }
 ```
 
-Flaggan påverkar inte en licensförfrågan eftersom vissa servrar har angett `Access-Control-Allow-Origin` fält till jokertecken (&#39;&#42;&#39;) i sitt svar. Men när inloggningsflaggan är inställd på `true`kan jokertecknet inte användas i `Access-Control-Allow-Origin`. Om du anger `useCookieHeaderForAllRequests` till `true` för alla typer av förfrågningar kan följande fel uppstå för en licensförfrågan:
+Flaggan påverkar inte en licensförfrågan eftersom vissa servrar har angett `Access-Control-Allow-Origin` field to wilcard (&#39;&#42;&#39;) i sitt svar. Men när inloggningsflaggan är inställd på `true`kan jokertecknet inte användas i `Access-Control-Allow-Origin`. Om du anger `useCookieHeaderForAllRequests` till `true` för alla typer av förfrågningar kan följande fel uppstå för en licensförfrågan:
 
 Kom ihåg följande information:
 

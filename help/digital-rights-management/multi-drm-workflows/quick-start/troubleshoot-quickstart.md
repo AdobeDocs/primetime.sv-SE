@@ -1,8 +1,7 @@
 ---
 description: Vanliga problem vid testning är ofta ExpressPlay-autentiserare, transportprotokoll och obligatoriska parametrar för serviceförfrågningar.
 title: Felsökning av snabbstart
-exl-id: d8908f9c-98f4-4100-a003-d3b990105dee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -27,11 +26,11 @@ Dessutom:
 
 * Se till att du inkluderar alla obligatoriska frågeparametrar för den DRM-lösning du arbetar med. Det är enkelt att växla mellan exempelvis PlayReady och Widewin eftersom de båda fungerar med DASH, men de obligatoriska parametrarna för begäran och paketeringskonfigurationerna skiljer sig åt.
 * Bekräfta att ditt ExpressPlay-konto har tillräckligt många tokenkrediter och att det inte har tömts.
-* Bekräfta att triplet med DRM-data som skickas till TVSDK är korrekt: ExpressPlay-token, licensserverns URL och DRM-typ.
+* Bekräfta att trippeln med DRM-data som skickas till TVSDK är korrekt: ExpressPlay-token, licensserverns URL och DRM-typ.
 * Kontrollera att alla dina komponenter antar samma sak om vilken ExpressPlay-miljö som används i två miljöer, Test och Production.
 * Tänk på att olika webbläsare vanligtvis bara har stöd för en DRM för DASH-innehåll.
 * Från och med TVSDK 2.4 stöds bara DASH-LIVE-paketeringsprofilen. (Stöd för DASH-OnDemand finns på färdplanen.)
-* Stödet för AndroidTV PlayReady är tillfälligt på grund av begränsningar i enhetstillverkaren. För att ge exempel
+* Stödet för AndroidTV PlayReady är tillfälligt på grund av begränsningar i enhetstillverkaren. Ge exempel
 
    * Razer Forge-enheten har problem med PlayReady-innehåll
    * Amazon FireTV kan inte använda DASH-innehåll som har ljudspåret krypterat

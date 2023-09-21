@@ -1,16 +1,15 @@
 ---
-title: Välj ljudspår
-description: Välj ljudspår
+title: Markera ljudspåren
+description: Markera ljudspåren
 copied-description: true
-exl-id: d4a7260a-82dd-4b57-8037-b91815d9b954
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-# Välj ljudspår{#select-the-audio-tracks}
+# Markera ljudspåren{#select-the-audio-tracks}
 
 Om du vill välja ljudspår för det senast bindande ljudet implementerar du [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 

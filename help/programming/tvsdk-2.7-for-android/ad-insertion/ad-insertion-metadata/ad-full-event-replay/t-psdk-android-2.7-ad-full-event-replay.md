@@ -1,8 +1,7 @@
 ---
 description: Full-event replay (FER) är en VOD-resurs som fungerar som en live/DVR-resurs, så programmet måste vidta åtgärder för att se till att annonserna placeras på rätt sätt.
 title: Aktivera annonser i repriser vid helhändelse
-exl-id: 866a696d-0c5e-4665-8890-cbbaed3e7a04
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%

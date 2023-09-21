@@ -1,8 +1,7 @@
 ---
 title: Hämta och konfigurera programvara som krävs
 description: Installationsprocessen är enkel. Om du redan har JDK installerat på datorn kan du hoppa över det här steget, men tänk på att JDK, Eclipse IDE och OS måste vara kompatibla.
-exl-id: c2884a55-4f5e-4da8-807d-633625d7fef9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -30,25 +29,25 @@ ht-degree: 0%
 
       * För Mac OS X/Unix:
 
-         ```
-         chmod +x android 
-         android update sdk --no-ui
-         ```
+        ```
+        chmod +x android 
+        android update sdk --no-ui
+        ```
 
       * För Windows:
 
-         ```
-         android update sdk --no-ui
-         ```
+        ```
+        android update sdk --no-ui
+        ```
 
-         Den här processen tar ett tag.
+        Den här processen tar ett tag.
 
 1. Konfigurera Eclipse.
    1. Starta Eclipse.
 
       Om Eclipse inte startar i Windows och felet som rapporteras är att Eclipse inte kan hitta en nödvändig Java-fil kan du försöka med följande:
 
-      * add `-vm C:\[path to your JDK bin]\javaw.exe` till [!DNL eclipse.ini] -fil.
+      * lägg till `-vm C:\[path to your JDK bin]\javaw.exe` till [!DNL eclipse.ini] -fil.
    1. Välj  **[!UICONTROL Help]** > **[!UICONTROL Install New Software]** .
    1. Klicka **[!UICONTROL Add...]**.
    1. Retur `Android` för namnet.

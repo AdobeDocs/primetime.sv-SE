@@ -1,8 +1,7 @@
 ---
 title: MVPD Preflight-auktorisering
 description: MVPD Preflight-auktorisering
-exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 &quot;Preflight-auktorisering&quot; är en enkel behörighetskontroll för flera resurser. Programmerare använder den främst för att dekorera sina användargränssnitt (till exempel för att ange åtkomststatus med lås- och upplåsningsikoner).
 
-Adobe Primetime-autentisering stöder för närvarande Preflight-auktorisering på två sätt för MVPD, antingen via AuthN-svarsattribut eller via en AuthZ-begäran i flera kanaler.  I följande scenarier beskrivs kostnaden/nyttan av de olika sätt som du kan implementera preflight-auktorisering på:
+Adobe Primetime-autentisering stöder för närvarande Preflight-auktorisering på två sätt för MVPD, antingen via AuthN-svarsattribut eller via en AuthZ-begäran i flera kanaler.  I följande scenarier beskrivs kostnaden/nyttan av olika sätt att implementera preflight-auktorisering:
 
 * **Best Case Scenario** - Dokumentationsdokumentet för det virtuella säkerhetsdokumentet innehåller en lista över förauktoriserade resurser under godkännandefasen (Multi-channel AuthZ).
 * **Sämsta scenariot** - Om ett MVPD-dokument inte stöder någon form av auktorisering för flera resurser, kommer Adobe Primetime autentiseringsserver att utföra ett auktoriseringsanrop till MVPD för varje resurs i resurslistan. Det här scenariot påverkar svarstiden för preflight-auktoriseringsbegäran (i förhållande till antalet resurser). Det kan öka belastningen på både Adobe- och MVPD-servrar, vilket kan orsaka prestandaproblem. Dessutom genereras auktoriseringsförfrågningar/svarshändelser utan behov av en uppspelning.
@@ -44,7 +43,7 @@ IdP:s SAML-autentiseringssvar ska innehålla en AttributeStatement som innehåll
 </saml:AttributeStatement>
 ```
 
-Exemplet ovan innehåller en lista med två förauktoriserade resurser: &quot;MMOD&quot; och&quot;Olympic2012&quot;.
+Exemplet ovan innehåller en lista med två förauktoriserade resurser:&quot;MMOD&quot; och&quot;Olympic2012&quot;.
 
 Detta uppnår det bästa scenariot och inga nätverksanrop utförs när programmeraren anropar checkPreauthorizedResources() eftersom allt redan finns på klienten.
 
@@ -55,7 +54,7 @@ Den här preflight-implementeringen är även kompatibel med OLCA (Cablelabs).  
 
 Adobe Primetime-autentisering tar emot en lista över resurser från programmerarens program. Integreringen av Adobe Primetime-autentiseringens MVPD kan sedan göra ett AuthZ-anrop med alla dessa resurser och sedan tolka svaret och extrahera de olika besluten om tillstånd/neka.  Flödet för preflight med AuthZ-scenario med flera kanaler fungerar enligt följande:
 
-1. Programmerarens app skickar en kommaavgränsad lista med resurser via preflight-klientens API, till exempel: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
+1. Programmerarens app skickar en kommaavgränsad lista med resurser via preflight-klientens API, t.ex. &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
 1. MVPD-anropet för preflight-AuthZ-begäran innehåller flera resurser och har följande struktur:
 
 ```XML
@@ -125,7 +124,7 @@ I följande tabell visas de MVPD-filer som stöder Preflight-auktorisering, till
 
 | Preflight-metod | MVPD | Anteckningar |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ med flera kanaler | Comcast AT&amp;T Proxy Clearleap Chart_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| AuthZ med flera kanaler | Comcast AT&amp;T Proxy Clearleap Chart_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | Kanalindelning i användarmetadata | Suddenlink HTC | Alla Synacor Direct-integreringar har även stöd för den här metoden. |
 | Förgrening | Alla andra som inte listas ovan | Det högsta tillåtna standardantalet resurser som kontrollerats = 5. |
 

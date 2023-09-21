@@ -2,8 +2,7 @@
 title: Kryptera spår
 description: Kryptera spår
 copied-description: true
-exl-id: f9d1a589-7545-4fd4-aeaf-d2ee3642882a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
@@ -12,6 +11,6 @@ ht-degree: 0%
 
 # Kryptera spår {#encrypting-tracks}
 
-Det här paketeringsalternativet anger vilka delar av innehållet som du vill kryptera: ljud, video eller båda.
+Det här paketeringsalternativet anger vilka delar av innehållet som du vill kryptera: ljud, video eller både och.
 
 Exempel: Tillstånd som bara krypterar spår som kräver skydd minskar krypteringsbelastningen på klienten och förbättrar uppspelningsprestanda.

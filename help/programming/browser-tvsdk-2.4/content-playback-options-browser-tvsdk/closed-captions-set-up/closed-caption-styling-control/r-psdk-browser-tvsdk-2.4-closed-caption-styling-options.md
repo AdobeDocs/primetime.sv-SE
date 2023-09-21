@@ -1,8 +1,7 @@
 ---
 description: Du kan ange flera alternativ för bildtextformat och de här alternativen åsidosätter formatalternativen i de ursprungliga bildtexterna.
 title: Alternativ för textningsformat
-exl-id: df5377c2-741b-4239-b345-145753896c6b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -43,7 +42,7 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnitt </td> 
-   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips: De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+   <td colname="2"> <p>Teckensnittstypen. </p> <p>Kan endast anges till ett värde som definieras av <span class="codeph"> TextFormat.Font </span> uppräkning och representerar t.ex. fast teckenbredd med eller utan serifer. </p> <p>Tips! De faktiska teckensnitten som finns på en enhet kan variera och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
@@ -52,7 +51,7 @@ new TextFormat(
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDEL </span> - Standardstorleken </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - Cirka 30 % större än mediet </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än mediet </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - bildtextens standardstorlek, samma som medium </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medelvärdet </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 

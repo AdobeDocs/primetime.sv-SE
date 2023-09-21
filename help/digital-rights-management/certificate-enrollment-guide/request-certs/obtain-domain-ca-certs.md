@@ -2,8 +2,7 @@
 title: Hämta certifikat för domän-certifikatutfärdare
 description: Hämta certifikat för domän-certifikatutfärdare
 copied-description: true
-exl-id: cad233e0-41f7-4897-ab5f-d5a098c37306
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Till skillnad från licensservern, paketeraren eller transportcertifikatet utfä
 Domäncertifikatutfärdarcertifikatet bör använda en 1024-bitars nyckel och innehålla de standardattribut som krävs i ett certifikatutfärdarcertifikat:
 
 * Tillägget Grundläggande begränsningar med CA-flaggan inställd på true
-* Tillägget för nyckelanvändning som anger certifikatsignering är tillåtet
+* Tillägg för nyckelanvändning som anger certifikatsignering är tillåtet
 
 Med OpenSSL kan till exempel ett självsignerat certifikatutfärdarcertifikat genereras på följande sätt:
 
@@ -54,7 +53,7 @@ Med OpenSSL kan till exempel ett självsignerat certifikatutfärdarcertifikat ge
    openssl rand -base64 8 
    ```
 
-1. Generera PFX:
+1. Generera PDF:
 
    ```
    openssl pkcs12 -export -inkey domain-ca.key \ 

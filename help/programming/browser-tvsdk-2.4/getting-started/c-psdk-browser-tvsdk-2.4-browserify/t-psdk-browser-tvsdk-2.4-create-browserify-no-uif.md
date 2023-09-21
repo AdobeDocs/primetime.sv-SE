@@ -1,8 +1,7 @@
 ---
 description: Använd Browser TVSDK i din app för att skapa en Browserify-kompatibel spelare.
 title: Skapa en Browserify-kompatibel spelare utan UI-Framework
-exl-id: 27b5e1c5-49c3-44e4-9e34-0f50a50e36f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Använd Browser TVSDK i din app för att skapa en Browserify-kompatibel spelare.
 
-Ämnet [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) visar en lista över de webbläsarbibliotek i TVSDK som du normalt tar med när du skapar en grundläggande videospelare. Om du vill göra det lägger du bara till `script` taggar med `src` attribut som pekar på biblioteken.
+Ämnet [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) visar en lista över de webbläsarbibliotek i TVSDK som du normalt tar med när du skapar en grundläggande videospelare. Det gör du genom att lägga till `script` taggar med `src` attribut som pekar på biblioteken.
 
 Processen skiljer sig något åt när du skapar en Browserify-kompatibel spelare. För detta använder du `require` -kommando som innehåller [!DNL AdobePSDK.module.js] -fil (tillhandahålls av webbläsaren TVSDK) i din app. Den här filen paketerar de grundläggande spelarbiblioteksfilerna i rätt ordning och returnerar `AdobePSDK` namnutrymme som du använder för att implementera funktioner för spelaren.
 

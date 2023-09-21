@@ -1,8 +1,7 @@
 ---
 title: Användarhandbok för Primetime TVE Dashboard
 description: Användarhandbok för Primetime TVE Dashboard
-exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
@@ -38,9 +37,9 @@ Om du fortsätter till nästa avsnitt i den här användarhandboken kommer du at
 >[!IMPORTANT]
 >TVE Dashboard ger möjlighet att växla mellan en grundläggande och en avancerad arbetsyta. Du kan göra detta genom att växla ikonen i det övre högra hörnet. Avancerad arbetsyta är avsedd för användare med omfattande teknisk kunskap och avancerade kunskaper om de funktioner som Adobe Primetime Authentication-produktteamet erbjuder.
 
-![TVE Kontrollpanelarbetsytor](assets/tve-basic-advanced-workspace.png)
+![arbetsytor i TVE Dashboard](assets/tve-basic-advanced-workspace.png)
 
-*Bild 1: Listrutan Adobe Primetime TVE Dashboard &quot;Basic/Advanced Workspace&quot; (Grundläggande/Avancerad arbetsyta)*
+*Bild 1: Listrutan Adobe Primetime TVE Dashboard &quot;Basic/Advanced Workspace&quot;*
 
 ## Miljö {#authn-environments}
 
@@ -79,9 +78,9 @@ Så här gör du administrativa ändringar i din konfiguration för Adobe Primet
 
 Användare som arbetar för medieföretag (programmerare) kan komma åt följande avsnitt i TVE Dashboard från sidofältet:
 
-* **Kanaler** - Innehåller inställningar som är relaterade till innehållsleverantörer
+* **Kanaler** - Innehåller inställningar för innehållsleverantörer
 * **Programmerare** - Innehåller inställningar som är relaterade till överordnad organisation som aggregerar en eller flera **Kanaler**
-* **Integreringar** - Innehåller inställningar som är relaterade till integreringen mellan **Kanaler** och **MVPD**
+* **Integreringar** - Innehåller inställningar som är relaterade till integrationen mellan **Kanaler** och **MVPD**
 * **MVPD** - Innehåller inställningar som är relaterade till tillgängliga **MVPD**
 * **Rapporter** - Innehåller aggregerade data för tre typer av rapporter: AuthN TTL, AuthZ TTL, SSO
 * **Ändringslogg** - Innehåller de senaste ändringarna som används i TVE Dashboard-konfigurationen
@@ -101,20 +100,20 @@ I det här avsnittet kan du visa och redigera inställningar för tillgängliga 
    * **Analyskonfiguration** - Konfigurera Adobe Primetime-autentiseringshändelser som ska vidarebefordras till Adobe Analytics. Kontakta Adobe om du vill ha mer information om hur Report Suite-ID (RSID) måste konfigureras innan den här funktionen aktiveras.
 * **Certifikat**
 
-   Innehåller en lista över certifikat som används i autentiseringsflödet tillsammans med deras utfärdande organisation, utfärdandedatum och utgångsdatum. Dessa certifikat fungerar som privata/offentliga nycklar och används i valideringssyfte.
+  Innehåller en lista över certifikat som används i autentiseringsflödet tillsammans med deras utfärdande organisation, utfärdandedatum och utgångsdatum. Dessa certifikat fungerar som privata/offentliga nycklar och används i valideringssyfte.
 * **Domäner**
 
-   Innehåller listan över domäner från vilka respektive kanal ska kommunicera med Adobe Primetime-autentisering.
+  Innehåller listan över domäner från vilka respektive kanal ska kommunicera med Adobe Primetime-autentisering.
 * **Integreringar**
 
-   Innehåller en lista över integreringar med tillgängliga programmeringsgränssnitt, tillsammans med statusen för varje integrering som kan vara aktiverad eller inte. Du kan navigera till integreringssidan genom att klicka på en viss post.
+  Innehåller en lista över integreringar med tillgängliga programmeringsgränssnitt, tillsammans med statusen för varje integrering som kan vara aktiverad eller inte. Du kan navigera till integreringssidan genom att klicka på en viss post.
 * **Registrerade program**
 
-   Innehåller listan över programregistreringar. Mer information finns i dokumentet [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
+  Innehåller listan över programregistreringar. Mer information finns i dokumentet [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
 
 * **Anpassade scheman**
 
-   Innehåller en lista med anpassade scheman. Mer information finns i [Registrering av iOS/tvOS-program](/help/authentication/iostvos-application-registration.md) och [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md)
+  Innehåller en lista med anpassade scheman. Mer information finns i [Registrering av iOS/tvOS](/help/authentication/iostvos-application-registration.md) och [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md)
 
 
 #### Lägg till/ta bort domäner {#add-delete-domains}
@@ -137,19 +136,19 @@ I det här avsnittet kan du visa och redigera inställningar för tillgängliga 
 
 * **Certifikat**
 
-   Innehåller en lista över certifikat som används i autentiseringsflödet tillsammans med deras utfärdande organisation, utfärdandedatum och utgångsdatum. Dessa certifikat fungerar som privata/offentliga nycklar och används i valideringssyfte.
+  Innehåller en lista över certifikat som används i autentiseringsflödet tillsammans med deras utfärdande organisation, utfärdandedatum och utgångsdatum. Dessa certifikat fungerar som privata/offentliga nycklar och används i valideringssyfte.
 
 * **Kanaler**
 
-   Innehåller en lista med kanaler som tillhör den här specifika programmeraren. Du kan navigera till avsnittet Kanaler genom att klicka på en viss post.
+  Innehåller en lista med kanaler som tillhör den här specifika programmeraren. Du kan navigera till avsnittet Kanaler genom att klicka på en viss post.
 
 * **Registrerade program**
 
-   Innehåller listan över programregistreringar. Mer information finns i [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
+  Innehåller listan över programregistreringar. Mer information finns i [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
 
 * **Anpassade scheman**
 
-   Innehåller en lista med anpassade scheman. Mer information finns i [Registrering av iOS/tvOS-program](/help/authentication/iostvos-application-registration.md) och [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
+  Innehåller en lista med anpassade scheman. Mer information finns i [Registrering av iOS/tvOS](/help/authentication/iostvos-application-registration.md) och [Dynamisk hantering av klientregistrering](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### Integreringar {#tve-db-integrations-sec}
@@ -183,7 +182,7 @@ Följ stegen nedan för att skapa en ny integrering:
 * vänta på att TVE Dashboard ska beräkna integrerings-ID och visa tillgängliga MVPD-slutpunkter
 * välj autentiserings-, auktoriserings- och utloggningsslutpunkter eller använd standardvärden
 * klicka på knappen &quot;Skapa integrering&quot;
-* beroende på inställningarna för MVPD kan ett popup-fönster visas och du kan begära ytterligare egenskaper som ska ha angetts av MVPD i förväg, annars kommer en omdirigering till den nyligen skapade integrationssidan att utföras
+* beroende på inställningarna för MVPD kan ett popup-fönster visas och du kan begära ytterligare egenskaper, som bör ha angetts av MVPD i förväg, annars kommer en omdirigering till den nyligen skapade integrationssidan att utföras
 
 ![](assets/new-integration-window.png)
 
@@ -225,10 +224,10 @@ Det här underavsnittet kan användas för att åsidosätta inställningarna fö
 * **Android** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication Android SDK.
 * **Klientlöst REST API** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication REST API.
 * **Fire TV** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication FireTV SDK.
-* **Flash SDK** - Den här plattformen är föråldrad. **föråldrad**
+* **Flash SDK** - Den här plattformen är inaktuell. **inaktuell**
 * **JavaScript SDK** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication JavaScript SDK.
 * **Roku** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication REST API och som skickar &quot;Roku&quot; som enhetstyp. Detta har företräde framför de värden som anges för den klientlösa REST API-plattformen för Roku-enheter.
-* **Inbyggd Xbox SDK** - Den här plattformen är föråldrad. **föråldrad**
+* **Inbyggd Xbox SDK** - Den här plattformen är inaktuell. **inaktuell**
 * **Xbox 360 REST API** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication REST API och som skickar &quot;xbox&quot; som enhetstyp. Detta har företräde framför de värden som angetts för den klientlösa REST API-plattformen för Xbox 360-enheter.
 * **Xbox One REST API** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication REST API och som skickar &quot;xboxOne&quot; som enhetstyp. Detta har företräde framför de värden som angetts för den klientlösa REST API-plattformen för XboxOne-enheter.
 * **iOS** - Ange värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication iOS SDK.
@@ -250,18 +249,18 @@ Följ stegen nedan för att aktivera/inaktivera enkel inloggning för en specifi
 * välj den plattform där du vill aktivera eller inaktivera enkel inloggning
 * växla **Aktivera enkel inloggning** flagga till det önskade värdet (Ja/Nej)
 
-   >[!IMPORTANT]
-   >Det är viktigt att notera att **Aktivera enkel inloggning** Flaggan är bara tillgänglig för iOS-, tvOS-, Roku- och FireTV-plattformarna och endast för integreringar med MVPD-program som stöder enkel inloggning för dessa plattformar.
+  >[!IMPORTANT]
+  >Det är viktigt att notera att **Aktivera enkel inloggning** Flaggan är bara tillgänglig för iOS-, tvOS-, Roku- och FireTV-plattformarna och endast för integreringar med MVPD-program som stöder enkel inloggning för dessa plattformar.
 
 * växla **Tvinga plattformsbehörighet** flagga till det önskade värdet (Ja/Nej)
 
-   >[!IMPORTANT]
-   >Det är viktigt att notera att **Tvinga plattformsbehörighet** flaggan kontrollerar om användarens beslut att tillåta eller neka plattformsåtkomst till sin TV-leverantörsprenumeration kommer att verkställas eller inte. Tänk på scenariot när **Aktivera enkel inloggning** flaggan är inställd på Ja, **Tvinga plattformsbehörighet** Flaggan är också inställd på Ja och användaren väljer att neka plattformsåtkomst till sin TV-leverantörsprenumeration. Då kommer respektive program (kanal) inte att kunna använda den Adobe Primetime-autentiseringstoken som erhålls av ett annat program (kanal).
+  >[!IMPORTANT]
+  >Det är viktigt att notera att **Tvinga plattformsbehörighet** flaggan kontrollerar om användarens beslut att tillåta eller neka plattformsåtkomst till sin TV-leverantörsprenumeration kommer att verkställas eller inte. Fundera på scenariot när **Aktivera enkel inloggning** flaggan är inställd på Ja, **Tvinga plattformsbehörighet** Flaggan är också inställd på Ja och användaren väljer att neka plattformsåtkomst till sin TV-leverantörsprenumeration. Då kan inte respektive program (kanal) använda den Adobe Primetime-autentiseringstoken som erhålls av ett annat program (kanal).
 
 
 #### Aktivera hembaserad autentisering {#enable-hba}
 
-Följ stegen nedan för att aktivera/inaktivera autentisering av hembas för **OAuth2** baserade MVPD-program:
+Följ stegen nedan för att aktivera/inaktivera autentisering av hembas för **OAuth2** MVPD-baserade:
 
 * kontrollera att du använder läget Avancerad arbetsyta
 * navigera till önskad integrering
@@ -340,13 +339,13 @@ Alla rapporterar aggregerade värden för följande plattformar:
 **WEBBLÄSARE**
 Visar värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication JavaScript SDK.
 
-**MOBIL: iOS**
+**MOBIL: IOS**
 Visar värden som ska användas för programmeringsimplementeringar via Adobe Primetime Authentication iOS SDK.
 
 **MOBIL: ANDROID**
 Visar värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication Android SDK.
 
-**MOBIL: ANDRA**
+**MOBIL: ÖVRIGT**
 Visar värden som ska tillämpas på programmeringsimplementeringar över Adobe Primetime Authentication REST API som utvecklats för mobila enheter.
 
 **TVCD: ROKU**
@@ -358,7 +357,7 @@ Visar värden som ska tillämpas på programmeringsimplementeringarna via Adobe 
 **TVCD: APPLETV**
 Visar värden som ska tillämpas på programmeringsimplementeringar via Adobe Primetime Authentication TVOS SDK.
 
-**TVCD: ANDRA**
+**TVCD: ÖVRIGT**
 Visar värden som ska tillämpas på programmeringsimplementeringarna via Adobe Primetime Authentication REST API som utvecklats för tv-anslutna enheter.
 
 **PLATTFORM: OKÄND**
@@ -375,9 +374,9 @@ Granska [Miljö](#authn-environments) för mer information om tillgängliga milj
 
 I alla rapporter kan du använda filter genom att välja specifika kanaler eller välja specifika MVPD-filer som ska inkluderas i de resulterande rapporterna.
 
-Om du vill välja en eller flera kanaler använder du **listruta** placerad efter etiketten &quot;Kanaler valda för rapport&quot;. Se figur 8./9./10. bilder nedan.
+Använd **listruta** placerad efter etiketten &quot;Kanaler valda för rapport&quot;. Se Figur 8./9./10. bilder nedan.
 
-Om du vill välja en eller flera PDF-filer använder du **listruta** placerad efter etiketten&quot;MVPDs selected for report&quot;. Se figur 8./9./10. bilder nedan.
+Om du vill välja en eller flera PDF-filer använder du **listruta** placerad efter etiketten&quot;MVPDs selected for report&quot;. Se Figur 8./9./10. bilder nedan.
 
 Som standard sammanställs data i alla företagets kanaler (&quot;Alla kanaler&quot;) och de videoprogrammeringsprogram som de är integrerade med (&quot;Alla videoprogrammeringsprogram&quot;).
 
@@ -388,7 +387,7 @@ Om du avmarkerar Alla kanaler eller Alla PDF-filer utan att välja specifika alt
 
 Alla rapporter tillåter export av data i en fil med kommaseparerade värden (CSV).
 
-Om du vill exportera data använder du knappen &quot;Exportera rapport&quot; i fönstrets övre högra hörn. Se figur 8./9./10. bilder nedan.
+Om du vill exportera data använder du knappen &quot;Exportera rapport&quot; i fönstrets övre högra hörn. Se Figur 8./9./10. bilder nedan.
 
 En fil med namnet **Report.csv** hämtas automatiskt till din dator. Kontrollera därför att webbläsarens inställningar tillåter hämtning av filer.
 
@@ -481,7 +480,7 @@ I det här avsnittet kan användare skicka feedback. Följ de här stegen för a
 
 ![skicka feedback från instrumentpanelen](assets/tve-dashboard-feedback.png)
 
-*Figur 11: Feedback-avsnittet för Adobe Primetime TV E Dashboard*
+*Bild 11: Feedback-avsnittet för Adobe Primetime TV E Dashboard*
 
 Instruktioner om hur du tar skärmdumpar finns på länkarna nedan:
 
@@ -508,7 +507,7 @@ Om detta inträffar måste du vänta på att Adobe Primetime Authentication Engi
 ![TVE-app i degraderat tillstånd](assets/tve-degraded-state.png)
 
 
-*Bild: TVE-app i degraderat tillstånd*
+*Bild: TVE App i degraderat läge*
 
 Om TVE Dashboard är i&quot;degraderat läge&quot; saknar användarna sök- och sorteringsfunktioner, men användarna kan visa eller göra nya ändringar.
 

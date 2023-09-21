@@ -1,15 +1,14 @@
 ---
 description: Du kan aktivera och bygga kontroller för det sena ljudbindningen.
-title: Översikt
-exl-id: be3b41c5-1c30-430c-9baa-06b6496aceb4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Ökning
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview}
+# Ökning {#overview}
 
 Du kan aktivera och bygga kontroller för det sena ljudbindningen.
 

@@ -1,8 +1,7 @@
 ---
 description: Som standard visar en liveström med DVR-stöd ett sökbart intervall där användaren kan pausa och söka.
 title: DVR utan annonsinfogning
-exl-id: 96f39465-0225-4725-90dc-e7ec6e478339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -19,5 +18,5 @@ Du kan förbättra spelarens kontrollfält för DVR med följande extrafunktione
 * Markera sökbart område i kontrollfältet.
 * Ändra längden på kontrollfältet till sökbart intervall för strömmen i stället för uppspelningsintervallet för strömmen.
 
-   Det sökbara intervallet är en delmängd av det spelbara omfånget där annonser kan infogas på ett säkert sätt.
+  Det sökbara intervallet är en delmängd av det spelbara omfånget där annonser kan infogas på ett säkert sätt.
 * Välj en anpassad startpunkt för när du ska ange en ström.

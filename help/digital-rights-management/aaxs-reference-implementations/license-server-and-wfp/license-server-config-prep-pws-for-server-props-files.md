@@ -2,8 +2,7 @@
 title: Förbereda lösenord för serveregenskapsfiler
 description: Förbereda lösenord för serveregenskapsfiler
 copied-description: true
-exl-id: 70f75640-7075-450a-8191-dc348bd269b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -18,12 +17,12 @@ Så här kör du verktyget med det ANT-skript som finns:
 
 * Gå till *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Se till att `sdkdir` egenskap i [!DNL build-refimpl.xml] pekar på katalogen som innehåller Adobe Access SDK
+* Kontrollera `sdkdir` egenskap i [!DNL build-refimpl.xml] pekar på katalogen som innehåller Adobe Access SDK
 * Kör följande kommando med ANT:
 
-   ```
-       ant -f build-refimpl.xml
-   ```
+  ```
+      ant -f build-refimpl.xml
+  ```
 
 * Skriv inloggningsuppgiftens lösenord när du uppmanas till det
 
@@ -35,17 +34,17 @@ Så här kör du verktyget med Java:
 
 * I Windows:
 
-   ```
-   java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-   com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+  java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+  com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 * I Linux:
 
-   ```
-       java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-       com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+      java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+      com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 Verktyget matar ut det krypterade lösenordet, som du måste kopiera till .properties-filen.
 

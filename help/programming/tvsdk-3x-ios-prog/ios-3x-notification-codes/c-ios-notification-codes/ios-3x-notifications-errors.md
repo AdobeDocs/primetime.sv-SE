@@ -1,8 +1,7 @@
 ---
 description: TVSDK-meddelandesystemet genererar olika fel-, varnings- och informationsmeddelanden som tillhandahåller diagnostiska metadata.
 title: FELMEDDELANDEkoder
-exl-id: 2354aad6-dc18-4c55-a1e7-a4938597e124
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 5%
@@ -22,7 +21,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
    <th colname="2" class="entry"><b>Namn</b></th> 
    <th colname="3" class="entry"><b>InnerNotification</b></th> 
    <th colname="4" class="entry"><b>Metadatanycklar</b></th> 
-   <th colname="5" class="entry"><b>Kommentarer</b></th> 
+   <th colname="5" class="entry"><b>Kommentar</b></th> 
   </tr> 
  </thead>
  <tbody> 
@@ -35,7 +34,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 100000 </span> </td> 
-   <td colname="2"><span class="codeph"> DRM_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> DRM_FEL </span> </td> 
    <td colname="3"> </td> 
    <td colname="4"><span class="codeph"> MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"></td> 
@@ -239,7 +238,7 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010 </span> </td> 
-   <td colname="2"><span class="codeph"> SiteCatalyst_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_ERROR </span> </td> 
    <td colname="3"> Ingen </td> 
    <td colname="4"><span class="codeph"> BESKRIVNING </span> </td> 
    <td colname="5"> <p>Platskatalysatorfel. Se beskrivning. </p> </td> 
@@ -256,6 +255,6 @@ De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen 
 
 >[!NOTE]
 >
->adID och källa (URL) kan hämtas via `PTAdAsset` i meddelandets metadata med `AD_ASSET` nyckel.
+>adID och källa (URL) kan hämtas via `PTAdAsset` i meddelandets metadata med `AD_ASSET` -tangenten.
 >
 >The `[]` -attribut anger en valfri nyckel för meddelanden.

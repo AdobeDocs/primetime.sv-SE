@@ -1,8 +1,7 @@
 ---
 description: Du kan behöva veta om medieinnehållet är live eller on demand-video (VOD).
 title: Identifiera om innehållet är live eller VOD
-exl-id: a75332d9-a23a-423c-8d1f-81b40ca73b21
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%

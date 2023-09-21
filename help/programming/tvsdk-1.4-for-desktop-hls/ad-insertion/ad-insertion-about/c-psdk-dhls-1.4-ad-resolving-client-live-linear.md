@@ -1,8 +1,7 @@
 ---
 description: För direktsänt/linjärt innehåll ersätter TVSDK en del av huvudströmsinnehållet med en annonsbrytning med samma varaktighet, så att tidslinjens varaktighet förblir densamma.
 title: Lösning och infogning av annonser live/linjärt
-exl-id: b0fbdddf-8529-4f7a-aef2-1764320307f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -28,6 +27,6 @@ TVSDK accepterar annonsbrytningen även om längden är längre eller kortare ä
 
 >[!IMPORTANT]
 >
->Vid implementering av en standard `AdPolicySelector`kan en annan policy ges för förrullning, mellanrullning och efterrullning `AdBreakTimelineItem`s in `AdPolicyInfo`, som baseras på typen av `AdBreakTimelineItem`s. Du kan t.ex. behålla innehåll i mitten av rullen efter att det har spelats upp, men ta bort innehåll före uppspelning.
+>Vid implementering av en standard `AdPolicySelector`kan en annan policy ges för förrullning, mellanrullning och efterrullning `AdBreakTimelineItem`s in `AdPolicyInfo`, som baseras på typen av `AdBreakTimelineItem`s. Du kan t.ex. behålla innehåll i mellanrullen efter att det har spelats upp, men ta bort innehåll i pre-roll efter att det har spelats upp.
 
 När uppspelningen har startats uppdaterar videomotorn regelbundet manifestfilen. TVSDK löser eventuella nya annonser och infogar annonserna när en referenspunkt påträffas i den live- eller linjära ström som definierades i manifestet. När annonserna har lösts och infogats beräknar TVSDK den virtuella tidslinjen igen och skickar en `TimelineEvent.TIMELINE_UPDATED` -händelse.

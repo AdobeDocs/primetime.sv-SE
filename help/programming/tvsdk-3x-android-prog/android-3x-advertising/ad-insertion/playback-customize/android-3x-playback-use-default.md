@@ -1,8 +1,7 @@
 ---
 description: Du kan välja att använda standardbeteenden för annonser.
 title: Använd standardbeteendet för uppspelning
-exl-id: 0ea3d2bb-b4d4-4090-ab5f-b6c31c1abe32
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -28,11 +27,11 @@ Gör något av följande om du vill anpassa annonsbeteenden:
 
 * Implementera `AdPolicySelector` -gränssnittet och alla dess metoder.
 
-   Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
+  Det här alternativet rekommenderas om du behöver åsidosätta **alla** standardbeteenden för annonser.
 
 * Utöka `DefaultAdPolicySelector` och bara implementera beteenden som kräver anpassning.
 
-   Det här alternativet rekommenderas om du bara behöver åsidosätta **några** av standardbeteendena.
+  Det här alternativet rekommenderas om du bara behöver åsidosätta **några** standardbeteenden.
 
 Så här anpassar du annonsbeteenden:
 

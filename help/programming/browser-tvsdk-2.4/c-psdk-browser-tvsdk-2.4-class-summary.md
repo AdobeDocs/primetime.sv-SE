@@ -1,8 +1,7 @@
 ---
 description: Du kan använda Primetime Player-API:t för att anpassa spelarens beteende.
 title: Sammanfattning av klasser i Primetime-spelaren
-exl-id: c081df21-8b21-4604-abf5-fdbf9d92a046
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%

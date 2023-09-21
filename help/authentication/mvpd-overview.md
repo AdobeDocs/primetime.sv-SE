@@ -1,15 +1,14 @@
 ---
 title: Översikt över PDF-filer
 description: Översikt över PDF-filer
-exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
 
 ---
 
-# En översikt över flerkanalsprogrammeringsprogram {#mvpd-overview}
+# Översikt över flerkanalsprogrammeringsprogram {#mvpd-overview}
 
 >[!NOTE]
 >
@@ -29,7 +28,7 @@ Det kan vara enkelt att samordna autentisering och behörighet av tittare med en
 
 
 
-Underrad: Adobe Primetime-autentisering förmedlar på ett säkert sätt berättigandetransaktioner mellan programmerare och distributörer av videoprogrammeringstjänster, vilket underlättar läsarens åtkomst till prenumerationsinnehåll. Med andra ord gör Adobe Primetime autentisering det enkelt och snabbt för rätt kunder att få tillgång till rätt innehåll.
+Sammanfattningsvis: Adobe Primetime autentisering medföljer på ett säkert sätt berättigandetransaktioner mellan programmerare och distributörer av videoprogrammeringstjänster, vilket underlättar läsarens åtkomst till prenumerationsinnehåll. Med andra ord gör Adobe Primetime autentisering det enkelt och snabbt för rätt kunder att få tillgång till rätt innehåll.
 
 
 Med Adobe Primetime-autentisering får MVPD:
@@ -48,7 +47,7 @@ Hur säker är Adobe Primetime autentisering? Den främsta prioriteten med Adobe
 Krävs Flash Player? Adobe Primetime autentisering för TV Everywhere är en spelare- och plattformsoberoende som integreras med alla uppspelningsapplikationer, inklusive Silverlight och HTML5. Dessutom har Adobe Primetime-autentisering inbyggt stöd för enheter som telefoner och surfplattor som kör iOS och Android.
 
 
-Vilka enheter stöder Adobe Primetime autentisering? Adobe Primetime-autentisering stöds av praktiskt taget alla enheter med webbpaketet HTML 5 för visning i webbläsare. Dessutom fortsätter Adobe Primetime-autentisering att lansera SDK:er (Software Development Kits) för olika enhetsspecifika plattformar, bland annat iOS, Android™, Xbox360 (Borttagen) och Adobe Air® (borttagen). Nyligen har Adobe Primetime-autentisering tagit fram en klientlös lösning för enheter som inte kan återge webbläsarsidor (till exempel&quot;smarta&quot; tv-apparater, digitalboxar och spelkonsoler).  Möjligheten att återge webbläsarsidor är ett krav för att autentisera användare med PDF-filer.
+Vilka enheter stöder Adobe Primetime autentisering? Adobe Primetime-autentisering stöds av praktiskt taget alla enheter med webbpaketet HTML5 för visning i webbläsare. Dessutom fortsätter Adobe Primetime-autentisering att lansera SDK:er (Software Development Kits) för olika enhetsspecifika plattformar, bland annat iOS, Android™, Xbox360 (Borttagen) och Adobe Air® (borttagen). Nyligen har Adobe Primetime-autentisering tagit fram en klientlös lösning för enheter som inte kan återge webbläsarsidor (till exempel&quot;smarta&quot; tv-apparater, digitalboxar och spelkonsoler).  Möjligheten att återge webbläsarsidor är ett krav för att autentisera användare med PDF-filer.
 
 
 Har Adobe Primetime autentisering stöd för de nya standarderna för TV Everywhere? Adobe Primetime-autentisering är kompatibelt med specifikationen CableLabs OLCA (Online Content Access), som innehåller tekniska krav och arkitektur för leverans av video till en Pay TV-kund från onlinekällor. Adobe deltog i det gemensamma CableLabs-projektet för interopt-testning i juni 2011 och klarade testprocessen för en implementering av en tjänsteleverantör. Adobe Primetime-autentisering verifieras (slutförd och testad) mot OLCA-specifikationerna för autentisering. Auktoriseringskomponenten är slutförd, men testverifieringen väntar på att CableLabs-testmiljön ska släppas. Adobe är också en aktiv medlem av OATC (Open Authentication Technical Consortium) och deltar i flera av underkommittéernas projekt för att utarbeta specifikationer som en del av detta organ.
@@ -71,12 +70,13 @@ Adobe Primetime-autentisering är en värdtjänst som möjliggör snabb serverin
 Adobe Primetime autentisering erbjuds via SaaS-modellen (Software as a Service) och möjliggör säkrare kommunikation mellan slutanvändare, distributörer och programmerare för att validera rätten till innehåll. Huvudkomponenterna i tjänsten omfattar följande:
 
 Serversidan - Den värdbaserade Adobe Primetime-autentiseringsservern. Det här är en programserver som engagerar i kommunikation bakkanal (server-till-server) med autentiseringssystemen i MVPD-program.
-Klientsida: Åtkomstaktivering på klientsidan - Åtkomstaktiveraren är en liten fil som läses in i programmerarens webbsida eller spelarprogram. Den ger berättigande API:er till programmerarens visningsprogram och kommunicerar med Adobe Primetime autentiseringsserver.
+Klientsida: Åtkomstaktivering på klientsidan - Åtkomstaktiveraren är en liten fil som läses in i en programmerares webbsida eller spelarprogram. Den ger berättigande API:er till programmerarens visningsprogram och kommunicerar med Adobe Primetime autentiseringsserver.
 Klientlösa webbtjänster (för icke-webbkompatibla enheter) - RESTful-webbtjänster som tillhandahåller berättigande API:er för enheter som Smart TV, spelkonsoler och digitalboxar.
 
 >[!NOTE]
 >
 >Som ett MVPD-program måste dina webbtjänster kunna känna igen begäranden om autentisering och auktorisering från Adobe Primetime-autentisering och svara med nödvändiga data i det förväntade formatet.
+>
 
 Med Adobe Primetime-autentisering kan du förse kunderna med federerad identitetshantering, som också kallas autentisering och auktorisering för enkel inloggning (SSO). Med Adobe Primetime-autentisering behöver abonnenterna inte logga in igen efter den första autentiseringen, så länge som autentiseringen tillåts av MVPD. (Vanligtvis 30 dagar.) För att uppnå detta tillhandahåller Adobe Primetime-autentisering en gemensam domän för autentiseringstoken för våra kunder. Den här informationen om autentiseringstillstånd är tillgänglig för alla deltagande webbplatser som är integrerade med ett visst MVPD.
 
@@ -119,7 +119,7 @@ Klientlösa webbtjänster tillhandahålls genom Adobe Primetime-autentisering f�
 * Cachelagrar de lyckade auktoriseringssvaren per programmerarresurs/kanal för att minimera onödig trafik på begäran.
 * Kan konfigureras för fördefinierade arbetsflöden som är specifika för varje MVPD, till exempel explicit enhetsregistrering.
 * Det finns i följande former:
-   * En SWF-fil som kan köras i Flash Player
+   * En SWF-fil som Flashen Player kan köra
    * En JS-fil som körs direkt av webbläsaren
    * En inbyggd åtkomstfunktion för olika plattformar, inklusive iOS, Android och Xbox.
 
@@ -158,13 +158,13 @@ I följande flödesdiagram visas den övergripande processen för att bekräfta 
 
 ![](assets/authn-authz-entitlmnt-flow.png)
 
-*Bild: Process för att bekräfta tillstånd med hjälp av Adobe Primetime-autentisering*
+*Bild: Processen för att bekräfta tillstånd med hjälp av Adobe Primetime-autentisering*
 
 ## Autentiseringssteg {#authn-steps}
 
-I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetime.  Detta är den del av tillståndsprocessen i vilken en programmerare avgör om användaren är en giltig kund till ett MVPD.  I det här scenariot är användaren en giltig prenumerant på ett MVPD.  Användaren försöker visa skyddat innehåll med en programmerares Flash-program:
+I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetime.  Detta är den del av tillståndsprocessen i vilken en programmerare avgör om användaren är en giltig kund till ett MVPD.  I det här scenariot är användaren en giltig prenumerant på ett MVPD.  Användaren försöker visa skyddat innehåll med en programmerares program för Flash:
 
-1. Användaren bläddrar till programmerarens webbsida, som läser in programmerarens Flash-program och Adobe Primetime Authentication Access Enabler-komponenterna på användarens dator. Programmet Flash använder Access Enabler för att ange programmerarens identifiering med Adobe Primetime-autentisering, och Adobe Primetime-autentiseringar använder Access Enabler med konfigurations- och lägesdata för den programmeraren (&quot;begäraren&quot;). Åtkomstaktiveraren måste ta emot dessa data från servern innan andra API-anrop kan utföras.  Teknisk anmärkning: Programmeraren anger sin identitet med åtkomstaktiverarens `setRequestor()` metod, mer information finns i [Integreringshandbok för programmerare](/help/authentication/programmer-integration-guide-overview.md).
+1. Användaren går till programmerarens webbsida, som läser in programmerarens program för Flash och Adobe Primetime Authentication Access Enabler-komponenterna på användarens dator. Flashen använder Access Enabler för att ange programmerarens identitet med Adobe Primetime-autentisering, och Adobe Primetime-autentiseringar använder Access Enabler med konfigurations- och tillståndsdata för den programmeraren (&quot;begäraren&quot;). Åtkomstaktiveraren måste ta emot dessa data från servern innan andra API-anrop kan utföras.  Teknisk kommentar: Programmeraren anger sin identitet med åtkomstaktiverarens `setRequestor()` metod; mer information finns i [Integreringshandbok för programmerare](/help/authentication/programmer-integration-guide-overview.md).
 1. När användaren försöker visa programmerarens skyddade innehåll, visar programmerarens program användaren en lista med distributörer (MVPD) som användaren väljer en leverantör från.
 1. Användaren omdirigeras till en Adobe Primetime-autentiseringsserver, där en krypterad SAML-begäran för det användarvalda MVPD skapas. Denna begäran skickas som en autentiseringsbegäran för programmeraren till MVPD. Beroende på vilket system som används i MVPD dirigeras användarens webbläsare sedan antingen till webbplatsen för MVPD för att logga in, eller så skapas en iFrame-inloggning i programmerarens app.
 1. I båda fallen (omdirigering eller iFrame) accepterar MVPD begäran och visar sin inloggningssida.
@@ -172,8 +172,8 @@ I följande steg visas ett exempel på autentiseringsflödet för Adobe Primetim
 1. När användaren valideras skapar MVPD ett svar (SAML &amp; encrypted) som MVPD skickar tillbaka till Adobe Primetime-autentiseringen.
 1. Adobe Primetime-autentisering tar emot MVPD-svaret, ser till att en HTTP-session för Adobe Primetime-autentisering är öppen, validerar [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) svar från MVPD och dirigerar om till programmerarens webbplats.
 1. Programmerarens webbplats läses in igen, Access Enabler läses in igen och programmeraren anropar setRequestor() igen.  Det andra anropet till setRequestor() är nödvändigt eftersom den aktuella konfigurationen har ändrats - det finns nu en flagga som informerar Access Enabler om att en AuthN-token väntar på att genereras på servern.
-1. Åtkomstaktiveraren ser att det finns en väntande autentisering och begär token från Adobe Primetime autentiseringsserver. Token hämtas från servern genom att Flash Player DRM-funktionerna anropas.
-1. AuthN-token lagras i programmerarens Flash Player LSO-cache. autentiseringen är nu klar och sessionen tas bort från Adobe Primetime autentiseringsserver.
+1. Åtkomstaktiveraren ser att det finns en väntande autentisering och begär token från Adobe Primetime autentiseringsserver. Token hämtas från servern genom att Flashens Player DRM-funktioner anropas.
+1. AuthN-token lagras i programmerarens LSO-cache för Flash Player. Autentiseringen är nu slutförd och sessionen förstörs på Adobe Primetime autentiseringsserver.
 
 ## Auktoriseringssteg {#authz-steps}
 

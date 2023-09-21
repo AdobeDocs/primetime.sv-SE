@@ -2,8 +2,7 @@
 title: Konfigurationsvaliderare
 description: Konfigurationsvaliderare
 copied-description: true
-exl-id: 9b73e107-6ab7-4089-b415-0af8c9f86995
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -38,7 +37,7 @@ Kör kommandot om du vill utföra filbaserad validering av klientkonfigurationsf
 Validator --file path/flashaccess-tenant.xml --tenant
 ```
 
-Valideraren kan även utföra distributionsbaserad validering; Förutom att kontrollera överensstämmelse med schemat, kontrollerar denna valideringsnivå även att de angivna värdena är giltiga (till exempel att refererade filer finns). Distributionsbaserad validering kan utföras på två nivåer:
+Valideraren kan också utföra distributionsbaserad validering. Förutom att kontrollera överensstämmelse med schemat kontrollerar den här valideringsnivån även att de angivna värdena är giltiga (till exempel säkerställer den att det finns refererade filer). Distributionsbaserad validering kan utföras på två nivåer:
 
 * Klient - Verifierar konfigurationsfilen och autentiseringsuppgifter för en specifik klient. Kör kommandot för att validera konfigurationen för &quot;tenant1&quot;:
 

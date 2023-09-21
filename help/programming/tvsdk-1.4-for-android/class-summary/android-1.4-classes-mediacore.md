@@ -1,8 +1,7 @@
 ---
 description: Du kan använda Primetime Player-API:t för att anpassa spelarens beteende.
 title: Mediacore-klasser
-exl-id: fdbe9cd3-a5ca-4935-b9b3-8a6c04aed9ab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Du kan använda Primetime Player-API:t för att anpassa spelarens beteende.
 
-Om du vill se den fullständiga API-dokumentationen för TVSDK går du till [Adobe Primetime API-referenser](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Den fullständiga API-dokumentationen för TVSDK finns på [Adobe Primetime API-referenser](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
 Dessa klasser beskriver din mediespelare och dess resurser.
 Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/package-summary.html)

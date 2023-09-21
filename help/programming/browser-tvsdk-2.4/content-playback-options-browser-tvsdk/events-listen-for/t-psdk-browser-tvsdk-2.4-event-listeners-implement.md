@@ -1,8 +1,7 @@
 ---
 description: Händelsehanterare gör att Browser TVSDK kan svara på händelser.
 title: Implementera händelseavlyssnare och återanrop
-exl-id: 2ab33c03-4df6-48e5-825c-95aeef8855d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Ditt program måste implementera händelseavlyssnare för Browser TVSDK-händels
 
    * **Nödvändiga händelser**: Lyssna efter alla uppspelningshändelser.
 
-      >[!IMPORTANT]
-      >
-      >Uppspelningshändelsen `STATUS_CHANGED` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
+     >[!IMPORTANT]
+     >
+     >Uppspelningshändelsen `STATUS_CHANGED` innehåller spelarstatus, inklusive fel. Alla lägen kan påverka spelarens nästa steg.
 
-   * **Andra händelser**: Valfritt, beroende på ditt program.
+   * **Andra händelser**: Valfritt, beroende på vilket program du använder.
 
-      Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
+     Om du till exempel inkluderar annonsering i uppspelningen lyssnar du efter alla `AdBreakPlaybackEvent` och `AdPlaybackEvent` händelser.
 
 1. Implementera händelseavlyssnare för varje händelse.
 

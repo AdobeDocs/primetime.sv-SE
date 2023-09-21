@@ -1,8 +1,7 @@
 ---
 description: HLS-strömmar som levereras via ett CDN (Content Delivery Network) kan ibland använda autentiseringstoken för manifest- och segmentbegäranden för verifiering. Dessa variabler kan anges som URL-parametrar eller som cookie-rubriker.
 title: Tokeniserade segmentströmmar
-exl-id: c7b441a7-63b6-4930-93a1-12ef6b72474e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -13,14 +12,14 @@ ht-degree: 0%
 
 HLS-strömmar som levereras via ett CDN (Content Delivery Network) kan ibland använda autentiseringstoken för manifest- och segmentbegäranden för verifiering. Dessa variabler kan anges som URL-parametrar eller som cookie-rubriker.
 
-Tokens som angetts som cookies i det överordnad manifestsvaret (m3u8) delas inte med segmentförfrågningar, även när segmentförfrågningarna gäller samma domän. Om du vill aktivera delning av dessa cookies i en segmentbegäran anger du följande egenskap på `PTMetadata` -instans som har angetts för spelarobjektet: 
+Tokens som angetts som cookies i huvudmanifestets (m3u8) svar delas inte med segmentförfrågningar, även när segmentförfrågningarna gäller samma domän. Om du vill aktivera delning av dessa cookies i en segmentbegäran anger du följande egenskap på `PTMetadata` -instans som har angetts för spelarobjektet: 
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
 [metadata setValue:[NSNumber numberWithBool:YES] forKey:kSyncCookiesWithAVAsset]; 
 ```
 
-Ytterligare en begäran görs till det överordnad manifestet (m3u8) innan strömmen börjar spelas upp.
+Ytterligare en begäran görs till huvudmanifestet (m3u8) innan strömmen börjar spelas upp.
 
 >[!IMPORTANT]
 >

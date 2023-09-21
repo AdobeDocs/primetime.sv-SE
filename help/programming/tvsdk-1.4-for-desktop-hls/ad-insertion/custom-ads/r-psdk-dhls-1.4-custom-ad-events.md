@@ -1,8 +1,7 @@
 ---
 description: TVSDK-spelaren skickar händelser för att visa anpassad annonsinläsningsstatus eller för att ignorera en annons som tar för lång tid att läsa in eller som innehåller fel. Dessa händelser definieras i events.CustomAdEvents.
 title: Anpassade annonshändelser
-exl-id: 44f32584-7f6c-4071-82b6-9cc9584418ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
@@ -59,7 +58,7 @@ TVSDK-spelaren skickar händelser för att visa anpassad annonsinläsningsstatus
   </tr> 
   <tr> 
    <td colname="col1"> AdStoppad </td> 
-   <td colname="col2"> Den anpassade annonsen har spelats upp. </td> 
+   <td colname="col2"> Den anpassade annonsen har slutat spelas upp. </td> 
   </tr> 
  </tbody> 
 </table>

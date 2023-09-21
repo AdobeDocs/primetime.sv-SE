@@ -1,17 +1,16 @@
 ---
-description: TVSDK kan identifiera ändrad uppspelningsinformation i överordnad m3u8-manifest för direktuppspelning och uppdatera uppspelningsinformationen medan direktuppspelningen pågår. TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från det överordnad manifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
-title: Live överordnad-manifest update
-exl-id: e3fffe64-1d44-4227-b830-c7661478f067
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: TVSDK kan identifiera ändrad uppspelningsinformation i mastermanifest m3u8 för direktuppspelning och uppdatera uppspelningsinformationen medan direktuppspelningen pågår. TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från huvudmanifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
+title: Live master-manifest update
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 0%
 
 ---
 
-# Live överordnad-manifest update{#live-master-manifest-update}
+# Live master-manifest update{#live-master-manifest-update}
 
-TVSDK kan identifiera ändrad uppspelningsinformation i överordnad m3u8-manifest för direktuppspelning och uppdatera uppspelningsinformationen medan direktuppspelningen pågår. TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från det överordnad manifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
+TVSDK kan identifiera ändrad uppspelningsinformation i mastermanifest m3u8 för direktuppspelning och uppdatera uppspelningsinformationen medan direktuppspelningen pågår. TVSDK stöder en dynamisk uppsättning bithastighetsprofiler när profilerna visas eller försvinner från huvudmanifestet, inklusive icke-överlappande profilbithastigheter mellan uppdateringar.
 
 Följande funktioner stöds:
 
@@ -28,13 +27,13 @@ Alla följande villkor måste vara uppfyllda:
 * DRM-åtkomstinformationen är densamma.
 * Segment paketeras runt samma PTS och bildrutegränser i ett litet felintervall.
 
-## Live överordnad-manifest update architecture {#section_32254A0F684B4960ACC33BF6B1AEF6F1}
+## Live master-manifest update architecture {#section_32254A0F684B4960ACC33BF6B1AEF6F1}
 
-Här är några exempel och uppgifter om hur TVSDK hanterar uppdaterade överordnad manifest.
+Här följer information och exempel om hur TVSDK kan hantera uppdaterade huvudmanifest.
 
-Som standard är den här funktionen inaktiverad. Om programmet aktiveras genom att en uppdateringsfrekvens anges i minuter utförs följande steg efter varje uppdateringsintervall:
+Som standard är den här funktionen inaktiverad. Om programmet aktiverar det genom att ange en uppdateringsfrekvens i minuter, utförs följande steg efter varje uppdateringsintervall:
 
-1. TVSDK kontrollerar det överordnad manifestets senaste ändringsdatum och -tagg för att avgöra om filen har uppdaterats.
+1. TVSDK kontrollerar huvudmanifestets senaste ändringsdatum och -tagg för att avgöra om filen har uppdaterats.
 
    Om både tid och tagg har ändrats betraktas filen som ändrad.
 1. TVSDK tolkar och analyserar det nya manifestet och vidtar lämpliga åtgärder utifrån uppdateringens karaktär.
@@ -51,27 +50,27 @@ Som standard är den här funktionen inaktiverad. Om programmet aktiveras genom 
 
 ### Exempel 1 {#example_DB55F2B9D98741628C9B973E47A0B6A0}
 
-Följande bithastigheter är direktsändning:
+Följande bithastigheter används för direktsändning:
 
 * 500k
 * 900k
 * 2100k
 
-2100k-strömmen har vissa problem, så den måste startas om. Det överordnad manifestet uppdateras till att endast innehålla 500 kB och 900 kB. Kort därefter kommer användare som tittar på det här programmet vid 2 100 kB att uppleva en nedväxling av bithastigheten till 900 kB. Användare som tittar på 900 kB fortsätter att titta på 900 kB. Senare återupptas strömmen på 2 100 kB och läggs tillbaka i det överordnad manifestet. En stund senare ändras de användare som tittar på 900 kB och har bandbredden till 2 100 kB.
+2100 kB-strömmen har vissa problem, så den måste startas om. Huvudmanifestet uppdateras till att endast innehålla 500 kB och 900 kB. Kort därefter kommer användare som tittar på det här programmet vid 2 100 kB att få en bithastighet som ändras till 900 kB. Användare som tittar på 900 kB fortsätter att titta på 900 kB. Senare återupptas 2 100 kB-strömmen och läggs tillbaka i huvudmanifestet. En stund senare ändras de användare som tittar på 900 kB och har bandbredden till 2 100 kB.
 
 ### Exempel 2 {#example_485E9A9F373D454CADE5395DEC734E5D}
 
-Följande bithastigheter är direktsändning:
+Följande bithastigheter används för direktsändning:
 
 * 500k
 * 900k
 * 2100k
 
-Alla dessa bithastigheter måste startas om. Två tidsströmmar har konfigurerats för detta, 400 kB och 1 500 kB. Användarna växlas till 400 kB, vilket är den lägsta bithastigheten i den nya konfigurationen. Vissa användare växlar till 1 500 kB när deras bandbredd är tillräcklig. Senare är de tre bithastigheterna säkerhetskopierade och det överordnad manifestet uppdateras. Användare växlar automatiskt tillbaka till att titta på vid 500 kB, vilket är den lägsta bandbredden i det reviderade (ursprungliga) manifestet. Under en längre tid växlas användarna till den högsta bandbredd (900 kB eller 1 200 kB) som deras nätverk tillåter.
+Alla dessa bithastigheter måste startas om. Två tidsströmmar har konfigurerats för detta, 400 kB och 1 500 kB. Användarna växlas till 400 kB, vilket är den lägsta bithastigheten i den nya konfigurationen. Vissa användare växlar till 1 500 kB när deras bandbredd är tillräcklig. Senare är de tre bithastigheterna säkerhetskopierade och huvudmanifestet uppdateras. Användare växlar automatiskt tillbaka till att titta på vid 500 kB, vilket är den lägsta bandbredden i det reviderade (ursprungliga) manifestet. Under en längre tid växlas användarna till den högsta bandbredd (900 kB eller 1 200 kB) som deras nätverk tillåter.
 
-## Använd överordnad manifestuppdatering live {#section_34AC4A9751DB4B7C8561302C6A59A1C4}
+## Använd uppdatering av mastermanifest live {#section_34AC4A9751DB4B7C8561302C6A59A1C4}
 
 Du kan aktivera den här funktionen och söka efter relaterade händelser.
 
-1. Om du vill aktivera överordnad manifestuppdateringar anger du uppdateringsfrekvensen (i minuter) genom att ange `NetworkConfiguration.masterUpdateInterval` -egenskap.
+1. Om du vill aktivera uppdateringar av mastermanifestet anger du uppdateringsfrekvensen (i minuter) genom att ange `NetworkConfiguration.masterUpdateInterval` -egenskap.
 1. Du kan också spåra lyckade manifestuppdateringar genom att avlyssna `MediaPlayerItemEvent.MASTER_UPDATED` -händelse.

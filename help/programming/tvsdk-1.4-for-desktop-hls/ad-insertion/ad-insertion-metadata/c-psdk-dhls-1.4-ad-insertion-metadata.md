@@ -1,15 +1,14 @@
 ---
 description: För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
-title: Lägg in metadata
-exl-id: 83c0fd25-dbc3-4529-b81a-16ff78012c80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Lägg till metadata för annonsinfogning
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
 
 ---
 
-# Lägg in metadata {#ad-insertion-metadata}
+# Lägg till metadata för annonsinfogning {#ad-insertion-metadata}
 
 För att annonslösaren ska kunna fungera måste annonsleverantörer, t.ex. Adobe Primetime annonsbeslut, ha konfigurationsvärden för att aktivera anslutningen till leverantören.
 
@@ -17,13 +16,13 @@ TVSDK innehåller annonseringsbiblioteket Primetime. För att ditt innehåll ska
 
 * `mediaID`, som är en unik identifierare för den video som ska spelas upp.
 
-   Utgivaren tilldelar medie-ID när han skickar in videoinnehåll och annonsinformation till Adobe Primetime annonsbeslutsserver. Detta ID används av Primetimes annonsbeslut för att hämta relaterad annonsinformation för videon från servern.
+  Utgivaren tilldelar medie-ID när han skickar in videoinnehåll och annonsinformation till Adobe Primetime annonsbeslutsserver. Detta ID används av Primetimes annonsbeslut för att hämta relaterad annonsinformation för videon från servern.
 
 * Dina `zoneID`, som utses av Adobe, identifierar ditt företag eller din webbplats.
 * Domänen för den tilldelade annonsservern.
-* Andra parametrar för målinriktning.
+* Andra målparametrar.
 
-   Du kan inkludera dessa parametrar beroende på dina behov och annonsleverantörens behov.
+  Du kan inkludera dessa parametrar beroende på dina behov och annonsleverantörens behov.
 
 ## Ställ in metadata för annonsinfogning {#set-up-ad-insertion-metadata}
 
@@ -33,7 +32,7 @@ Använd hjälpklassen AuditudeSettings, som utökar klassen MetadataNode, för a
 >
 >Adobe Primetime annonsbeslut kallades tidigare Auditude.
 
-Advertising metadata is in the `MediaResource.metadata` -egenskap. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
+Reklammetadata finns i `MediaResource.metadata` -egenskap. När du startar uppspelningen av en ny video ansvarar ditt program för att ställa in rätt annonsmetadata.
 
 1. Bygg `AuditudeSettings` -instans.
 
@@ -59,7 +58,7 @@ Advertising metadata is in the `MediaResource.metadata` -egenskap. När du start
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. Skapa en `MediaResource` -instans genom att använda medieströmmens URL och de annonseringsmetadata som skapats tidigare.
+1. Skapa en `MediaResource` -instans med medieströmmens URL och de annonseringsmetadata som skapats tidigare.
 
    ```
    var mediaResourceMetadata:MetadataNode = new MetadataNode(); 

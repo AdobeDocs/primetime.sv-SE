@@ -1,8 +1,7 @@
 ---
 title: Instrumentpanel för konto-IQ
 description: Kontrollpanelen hjälper till att identifiera förekomster av lösenordsdelning genom att analysera en mängd olika prenumerationsdata.
-exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -42,7 +41,7 @@ Värdena hjälper er att förstå omfattningen av dina prenumeranters delning av
 ![](assets/aggregate-sharing-score.png)
 
 
-*Bild: Genomsnittlig poängpanel för delning - aggregerad för det aktuella segmentet*
+*Bild: Panelen för medeldelningspoäng - aggregerad för det aktuella segmentet*
 
 Följande tre mätvärden är komponenter i medeldelningspoängen.
 
@@ -79,7 +78,7 @@ Det ger ett värde som återspeglar den relativa effekten av delning jämfört m
 ![](assets/overall-sharing-score.png)
 
 
-*Bild: Total delning*
+*Bild: Generell poängdelning*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -98,7 +97,7 @@ I den här tabellen visas en jämförande vy över de olika aggregerade delnings
 ![](assets/top-mvpds.png)
 
 
-*Bild: MVPD i segment efter totalpoäng*
+*Bild: De viktigaste videofilmarna i segment efter totalpoäng*
 
 ## Dela poäng via kanaler och videoprogrammeringsfönster {#sharin-score-by-channels-and-mvpds}
 
@@ -121,7 +120,7 @@ Diagrammet delas upp i intervall med sannolika quinles för delning från mycket
 ![](assets/dashboard-ac-sharing-prob.png)
 
 
-*Bild: Antal och procentandelar av prenumerantkonton i olika delningssannolikhetsintervall*
+*Bild: Nummer och procentandelar för abonnentkonton i olika intervall för sannolikhet för delning*
 
 ## Antal konton och användning genom att dela sannolikhetsnivå {#number-of-accounts-usage-sharing-probability}
 

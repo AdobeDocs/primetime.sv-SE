@@ -1,8 +1,7 @@
 ---
 description: Använd hjälpklassen AuditudeSettings för att ställa in Adobe Primetime-metadata för annonsbeslut.
 title: Ställ in metadata för annonsinfogning
-exl-id: 03b2237b-6b3b-46cf-bc0b-691513033463
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Använd hjälpklassen AuditudeSettings för att ställa in Adobe Primetime-metad
 
 >[!TIP]
 >
->Adobe Primetime annonsbeslut kallades tidigare Auditude.
+>Adobe Primetime annonsbeslut kallades tidigare Auditude .
 
 1. Bygg `AuditudeSettings` -instans.
 
@@ -31,7 +30,7 @@ Använd hjälpklassen AuditudeSettings för att ställa in Adobe Primetime-metad
    auditudeSettings.zoneId = "zoneid";
    ```
 
-1. Skapa en `MediaResource` -instans genom att använda medieströmmens URL och de annonseringsmetadata som skapats tidigare.
+1. Skapa en `MediaResource` -instans med medieströmmens URL och de annonseringsmetadata som skapats tidigare.
 
    ```js
    mediaResource = new AdobePSDK.MediaResource ( 

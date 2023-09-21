@@ -1,8 +1,7 @@
 ---
 description: TVSDK innehåller klasser och metoder som du kan använda för att anpassa uppspelningsbeteendet för innehåll som innehåller reklam.
 title: API-element för annonsuppspelning
-exl-id: 1114d00b-e853-47a5-af29-253df615692e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Följande API-element är användbara för att anpassa uppspelning:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="apiname"> AdvertisingMetadata </span> </td> 
+   <td colname="col1"><span class="apiname"> Reklammetadata </span> </td> 
    <td colname="col2">Ange om en annonsbrytning ska markeras som bevakad av en tittare och, om ja, när den ska markeras. Ange och hämta bevakade profiler med <span class="codeph"> setAdBreakAsWatched</span> och <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
@@ -37,7 +36,7 @@ Följande API-element är användbara för att anpassa uppspelning:
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> AdPolicySelector </span> </td> 
-   <td colname="col2"> Gränssnitt som gör det möjligt att anpassa annonsbeteendet i TVSDK. </td> 
+   <td colname="col2"> Gränssnitt som tillåter anpassning av TVSDK:s annonseringsbeteende. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="apiname"> DefaultAdPolicySelector </span> </td> 

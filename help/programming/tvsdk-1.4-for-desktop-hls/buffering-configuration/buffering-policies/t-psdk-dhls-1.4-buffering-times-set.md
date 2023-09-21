@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer innehåller metoder för att ställa in och hämta den inledande buffringstiden och uppspelningsbuffringstiden.
 title: Ange buffringstider
-exl-id: d2fbae05-2190-4acc-ae63-561db030608a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -23,17 +22,17 @@ MediaPlayer innehåller metoder för att ställa in och hämta den inledande buf
    
    * Så här anger du den inledande bufferttiden som motsvarar uppspelningsbufferttiden:
 
-      ```
-      createSimple(bufferTime:uint):BufferControlParameters
-      ```
+     ```
+     createSimple(bufferTime:uint):BufferControlParameters
+     ```
 
    * Så här anger du både inledande och uppspelad bufferttid:
 
-      ```
-      createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
-      ```
+     ```
+     createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
+     ```
 
-      Dessa metoder genererar en `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
+     Dessa metoder genererar `IllegalArgumentException` om parametrarna inte är giltiga, till exempel när:
 
    * Den inledande bufferttiden är mindre än noll.
    * Den inledande bufferttiden är längre än bufferttiden.
@@ -58,4 +57,4 @@ Om du till exempel vill ställa in den inledande bufferten på 2 sekunder och up
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-The `psdkdemo` visar den här funktionen, Använd programmets inställningar för att ange buffertvärden.
+The `psdkdemo` visar den här funktionen. Använd programmets inställningar för att ange buffertvärden.

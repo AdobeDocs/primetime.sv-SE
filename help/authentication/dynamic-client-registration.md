@@ -1,8 +1,7 @@
 ---
 title: Dynamisk klientregistrering
 description: Dynamisk klientregistrering
-exl-id: 9bc2597d-b634-4542-849b-8e91a76cb8da
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -19,9 +18,9 @@ ht-degree: 0%
 
 För att anpassa sig till moderna säkerhetsrutiner, förbättrad användarupplevelse och krav på plattformsägare går Adobe Primetime Authentication Android SDK och iOS SDK mot implementering [Android Chrome, anpassade flikar](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
 
-Den aktuella AdobePass-implementeringen använder plattformsspecifika webbvyer för att tillhandahålla webbmiljön för att visa MVPD-inloggningssidan. De här webbvyerna delar inte autentiseringsuppgiftshantering med plattformswebbläsare och användaren kan därför inte använda ett lösenord som sparats i webbläsaren när ett Adobe Primetime-autentiseringsprogram används. Av säkerhetsskäl håller vissa plattformar dessutom på att bli inaktuella i WebView-styrenheterna för autentiseringsuppgifter. Både Google och Apple har alternativa alternativ som&quot;Anpassade flikar i Chrome&quot; och&quot;Safari View Controller&quot;. De här flikarna är i stort sett enkla att använda i sina respektive webbläsare. Adobe Primetime Authentication kommer att anta dessa nya komponenter under 2018.
+Den aktuella AdobePass-implementeringen använder plattformsspecifika webbvyer för att tillhandahålla webbmiljön för att visa MVPD-inloggningssidan. De här webbvyerna delar inte autentiseringsuppgiftshantering med plattformswebbläsare och användaren kan därför inte använda ett lösenord som sparats i webbläsaren när ett Adobe Primetime-autentiseringsprogram används. Av säkerhetsskäl håller vissa plattformar dessutom på att bli inaktuella i WebView-styrenheterna för autentiseringsuppgifter. Både Google och Apple har alternativa alternativ som&quot;Anpassade flikar i Chrome&quot; och&quot;Safari View Controller&quot;. De här flikarna är i stort sett enkla att använda i sina respektive webbläsare. Adobe Primetime Authentication antar dessa nya komponenter under 2018.
 
-## Detaljer {#details}
+## Information {#details}
 
 För närvarande finns det två sätt på vilka Adobe Pass Authentication identifierar och registrerar program:
 

@@ -1,8 +1,7 @@
 ---
 title: Begränsningar och kända fel
 description: Kända fel i produkten.
-exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Adobe strävar efter att erbjuda robust funktionalitet och smidiga användaruppl
 
 * När du definierar kohorter på kontrollpanelen eller rapportsidorna saknar väljarna för programmeringsdokumentskydd och kanaler sökmekanismen redan nu.
 
-* När du definierar kohorter på kontrollpanelen eller på rapportsidorna finns det en begränsning för att bara välja upp till 10 programmerare och programmerare (eller enskilda kanaler).
+* När du definierar kohorter på kontrollpanelen eller på rapportsidorna finns det en begränsning för att välja upp till 10 programmerare och programmerare (eller enskilda kanaler).
 
 * Alternativet att exportera kontostatistik är begränsat till att exportera 1 000 konton från och med nu.
 
@@ -35,7 +34,7 @@ Adobe strävar efter att erbjuda robust funktionalitet och smidiga användaruppl
 
 * På grund av den mer begränsade uppsättning data som används återspeglar isoleringsläget inte riktigt mängden delning. Därför går det inte att jämföra MVPD i isoleringsläge med något annat MVPD-värde. <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 
-* När du definierar ett nytt [segment](/help/AccountIQ/segments-timeframe.md) för en åtgärd kan du lägga till mått. Men om du markerar ett sparat segment kan du inte lägga till fler mått för att förfina segmentet.
+* När du definierar ett nytt [segment](/help/AccountIQ/segments-timeframe.md) för en åtgärd kan du lägga till mätvärden. Men om du markerar ett sparat segment kan du inte lägga till fler mått för att förfina segmentet.
 
 * Grund- och tidsbildruteväljaren är begränsad till en vecka eller en månad, vilket innebär att data kan utvärderas endast för en vecka eller en månad.
 

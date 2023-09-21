@@ -1,8 +1,7 @@
 ---
 title: PSDK-felkoder
 description: Information om olika felkoder, varningar och inbyggda felkoder.
-exl-id: 90d66c13-c40c-4602-83da-186c2b623375
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 6%
@@ -15,7 +14,7 @@ Läs vidare för att få information om PSDK-felkoder, varningar och inbyggda fe
 
 ## Fel
 
-Följande tabell innehåller detaljerad information om meddelanden om ERROR-typer. De flesta fel innehåller relevanta metadata. till exempel URL för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
+Följande tabell innehåller detaljerad information om meddelanden om ERROR-typer. De flesta fel innehåller relevanta metadata, till exempel URL:en för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -131,7 +130,7 @@ Följande tabell innehåller detaljerad information om meddelanden om ERROR-type
   <tr>
     <td>PLAYBACK_NOT_AUTHZED</td>
     <td>57</td>
-    <td>HLS-uppspelning har inte aktiverats i Flash Player. Se AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
+    <td>HLS-uppspelning har inte aktiverats i Flashen Player. Se AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
@@ -143,7 +142,7 @@ Följande tabell innehåller detaljerad information om meddelanden om ERROR-type
 ## Varningar
 
 Följande tabell innehåller detaljerad information om WARN-typmeddelanden.
-De flesta varningar innehåller relevanta metadata. URL:en till den resurs som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
+De flesta varningar innehåller relevanta metadata, till exempel URL:en för resursen som inte kunde hämtas. Vissa meddelanden innehåller metadata som anger om problemet uppstod i huvudvideoinnehållet, i det alternativa ljudinnehållet eller i en annons.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -206,7 +205,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>  
     <td>END_OF_PERIOD</td>
     <td>-1</td>
-    <td>Periodens slut.</td>
+    <td>Slutet av perioden.</td>
   </tr>
   <tr>
     <td>LYCKADES</td>
@@ -276,7 +275,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>  
     <td>SIZE_UNKNOWN</td>
     <td>13</td>
-    <td>Resursen har en storlek, men är okänd.</td>
+    <td>Resursen har en storlek, men den är okänd.</td>
   </tr>
   <tr>  
     <td>UNDER_FLOW</td>
@@ -409,7 +408,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
     <td>Fragmentläsningsfel. Det finns ingen redundans. Motorn kommer att försöka läsa nästa fragment.</td>
   </tr>
   <tr>
-    <td>AVBRUTEN</td>
+    <td>ABORTERAD</td>
     <td>40</td>
     <td>Åtgärden avbröts av ett explicit anrop om att avbryta eller förstöra.</td>
   </tr>
@@ -421,12 +420,12 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>
     <td>CANNOT_FAIL_OVER</td>
     <td>42</td>
-    <td>Det går inte att redundansväxla.</td>
+    <td>Kan inte redundansväxla.</td>
   </tr>
   <tr> 
     <td>HTTP_TIME_OUT</td>
     <td>43</td>
-    <td>Tidsgränsen för HTTP-hämtning har uppnåtts.</td>
+    <td>Tidsgränsen för HTTP-hämtning har överskridits.</td>
   </tr>
   <tr>
     <td>NETWORK_DOWN</td>
@@ -486,7 +485,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Detta är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder.</td>
+    <td>Ljud- och videointerfolieringen i mediet är inte korrekt gjord. Det här är ett paketeringsfel. Varningen skickas när skillnaden överstiger två sekunder.</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -496,7 +495,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>  
     <td>PLAYBACK_NOT_AUTHZED</td>
     <td>57</td>
-    <td>HLS-uppspelning har inte aktiverats i Flash Player. Se AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>HLS-uppspelning har inte aktiverats i Flashen Player. Se AuthorizedFeatures.enableHLSPlayback.</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
@@ -531,7 +530,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>
     <td>RENDITION_M3U8_ERROR</td>
     <td>64</td>
-    <td>Det uppstod ett fel när återgivningsspellistan lästes in. Detta gäller endast AVE, inte FlashPlayer.</td>
+    <td>Återgivningsspellistan hade ett fel vid inläsningen. Detta gäller endast AVE, inte FlashPlayer.</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
@@ -671,7 +670,7 @@ Video Encoder-gränssnittet i AVE returnerar dessa videouppspelningsmeddelanden 
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>Det uppstod ett fel när media spelades upp i trickläge. Trick-uppspelningsläget avslutas och flödet pausas. Anropa Play() för att spela upp media i normalt läge.</td>
+    <td>Det uppstod ett fel när media spelades upp i tricks-uppspelningsläge. Trick-uppspelningsläget avslutas och flödet pausas. Anropa Play() om du vill spela upp media i normalt läge.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_AHEAD</td>

@@ -1,8 +1,7 @@
 ---
 description: Det finns några sätt att avgöra annonsinfogning och annonsplacering.
 title: Infogning och placering av annonser
-exl-id: 73f24a65-4be2-47d3-8cb9-5cb2c81e6d93
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -27,15 +26,15 @@ TVSDK kan hämta platser för annonsplacering från följande källor:
 
 * **Manifestets metadata/cues**
 
-   TVSDK identifierar ledtrådarna, extraherar nödvändig information från dessa ledtrådar och kommunicerar med en annonsserver för att få motsvarande annonser. Den här källan är vanlig för live/linjära strömmar.
+  TVSDK identifierar ledtrådarna, extraherar nödvändig information från dessa ledtrådar och kommunicerar med en annonsserver för att få motsvarande annonser. Den här källan är vanlig för live/linjära strömmar.
 
-   TVSDK ersätter vanligtvis huvudinnehållet med annonserna på den plats som anges av metadata/ledtrådarna. i annat fall skulle kunden mer och mer lägga sig bakom den verkliga direktpunkten.
+  TVSDK ersätter vanligtvis huvudinnehållet med annonserna på den plats som anges av metadata/ledtrådar. Annars kommer kunden att hamna allt mer bakom den verkliga direktpunkten.
 
 * **Marknadsföringsserverns karta**
 
-   Vanligtvis registreras metadata om dessa strömmar på annonsservern innan de spelas upp. TVSDK hämtar annonstidslinjen och motsvarande annonser från servern. Den här källan är vanlig för VOD-strömmar.
+  Vanligtvis registreras metadata om dessa strömmar på annonsservern innan de spelas upp. TVSDK hämtar annonstidslinjen och motsvarande annonser från servern. Den här källan är vanlig för VOD-strömmar.
 
-   TVSDK infogar vanligtvis lösta annonser i huvudinnehållet enligt serverkartan.
+  TVSDK infogar vanligtvis lösta annonser i huvudinnehållet enligt serverkartan.
 
 >[!NOTE]
 >

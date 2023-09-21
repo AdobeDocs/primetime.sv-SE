@@ -1,8 +1,7 @@
 ---
 description: Om du vill visa bannerannonser måste du skapa bannerinstanser och tillåta webbläsare-TVSDK att lyssna efter annonsrelaterade händelser.
 title: Visa banners
-exl-id: 331c10a4-ae31-4d3b-aaca-9497e2970ecf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Manifester kan ange banners för följeslagare genom att:
 
 * Ett HTML-fragment
 * URL:en för en iFrame-sida
-* URL-adressen till en statisk bild eller en Adobe Flash SWF-fil
+* URL:en för en statisk bild eller en SWF-fil i Adobe Flash
 
 Webbläsare-TVSDK anger vilka typer som är tillgängliga för ditt program för varje kompletterande annons.
 

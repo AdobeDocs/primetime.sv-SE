@@ -1,8 +1,7 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste webbläsarens TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
 title: Annonsinfogning och failover för VOD
-exl-id: 62b82f56-e8c7-4c44-8b70-f204908777c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -21,18 +20,19 @@ Browser TVSDK stöder följande typer av annonseringsleverantörer:
 
 * Metadata och leverantör
 
-   Annonsdata kodas i JSON-filer med oformaterad text.
+  Annonsdata kodas i JSON-filer med vanlig text.
 * Adobe Primetime annonsleverantör för annonsbeslut
 
-   Browser TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till Adobe Primetime server för annonsbeslut. Adobe Primetime annonsbedömning svarar med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
+  Browser TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till Adobe Primetime server för annonsbeslut. Adobe Primetime annonsbedömning svarar med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
 
-   En av följande redundanssituationer kan uppstå under den här fasen:
+  En av följande redundanssituationer kan uppstå under den här fasen:
 
    * Det går inte att hämta data på grund av bl.a. bristande anslutning eller fel på serversidan, t.ex. att en resurs inte kan hittas osv.
    * Data hämtades, men formatet är ogiltigt.
 
-      Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
-   Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
+     Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
+
+  Webbläsarens TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
 ## Fas för annonsinfogning {#section_88A0E4FA12394717A9D85689BD11D59F}
 
@@ -62,6 +62,6 @@ För alla tre felklasserna vidarebefordrar webbläsaren TVSDK utlösta händelse
 * Meddelandehändelser när profilen ändras på grund av redundansalgoritmen.
 * Meddelandehändelser utlöses när alla alternativ för växling vid fel har beaktats och inga ytterligare åtgärder kan vidtas automatiskt.
 
-   Programmet måste vidta rätt åtgärd.
+  Programmet måste vidta rätt åtgärd.
 
 Oavsett om fel uppstår eller inte visas ett meddelande i webbläsaren om när en annonsbrytning börjar och när den är klar. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.

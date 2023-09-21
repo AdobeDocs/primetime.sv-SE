@@ -1,8 +1,7 @@
 ---
 title: Versionsinformation om Adobe Primetime-autentisering 2.63
 description: Versionsinformation om Adobe Primetime-autentisering 2.63
-exl-id: 40987328-6d41-4948-aa4a-bab31f98a18a
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Den här sidan beskriver nya funktioner, ändringar och kända fel i den här ve
 ### Byggnummer {#build-number-263}
 
 Adobe Primetime-autentisering: adobe-pass-**2.63**
-Releasedatum: **09/20/2022 - 09/22/2022**
+Utgivningsdatum: **09/20/2022 - 09/22/2022**
 
 ### Nya funktioner {#new-features-263}
 

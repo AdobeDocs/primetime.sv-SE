@@ -3,8 +3,7 @@ title: Versionsinformation om TVSDK 2.7 för Android™
 description: Versionsinformation om TVSDK 2.7 för Android™ beskriver vad som är nytt eller ändrat, de lösta och kända problemen samt enhetsproblemen i TVSDK Android™ 2.7
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4037'
 ht-degree: 0%
@@ -25,9 +24,7 @@ Android™-referensspelaren ingår i Android™ TVSDK i katalogen samples/ i din
 >
 >1. Hämta VideoHeartbeat.jar från [https://github.com/Adobe-Marketing-Cloud/media-sdks/releases](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) (VideoHeartbeat-bibliotek för Android™ v2.0.0)
 >1. Extrahera VideoHeartbeat.jar till mappen libs/.
-
 >
-
 
 ## Nya funktioner {#new-features}
 
@@ -46,7 +43,7 @@ TVSDK 2.7 stöder den samtidiga upplösningen av alla Ad-begäranden i en Ad bre
 * **TVSDK 2.5 har stöd för Android™ P**
 * **Aktivera bakgrundsljud**
 
-   Om du vill aktivera ljuduppspelning när appen flyttas från förgrunden till bakgrunden ska appen anropa enableAudioPlaybackInBackground API för MediaPlayer med värdet true som argument när spelaren är i tillståndet PREPARED.
+  Om du vill aktivera ljuduppspelning när appen flyttas från förgrunden till bakgrunden ska appen anropa enableAudioPlaybackInBackground API för MediaPlayer med värdet true som argument när spelaren är i tillståndet PREPARED.
 
 * **alwaysUseAudioOutputLatency(booleskt val) i klassen MediaPlayer**
 
@@ -60,14 +57,14 @@ TVSDK avbryter nu hämtning av det pågående segmentet om det behövs och växl
 
 * **Inläggning av delvis annonsbrytning**
 
-   TV-liknande upplevelse av att gå med mitt i en annons utan att aktivera spårningen för den delvis bevakade annonsen.\
-   Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
+  TV-liknande upplevelse av att gå med mitt i en annons utan att aktivera spårningen för den delvis bevakade annonsen.\
+  Exempel: Användaren går med i mitten (vid 40 sekunder) av en 90-sekunders annonsbrytning som består av tre 30-sekunders annonser. Detta är tio sekunder in i den andra annansen i pausen.
    * Den andra annonsen spelas upp för den återstående längden (20 sek) följt av den tredje annonsen.
    * Ad trackers for the part ad ad ad ad (second ad) are not fire. Spåraren för endast den tredje annonsen aktiveras.
 
 * **Säker annonsinläsning över HTTPS**
 
-   Adobe Primetime har ett alternativ för att begära att primetime-annonsservern och CRS ska ringa via https.
+  Adobe Primetime har ett alternativ för att begära att få ett första anrop till en primetime-annonsserver och CRS via https.
 
 * **AdSystem och Creative ID har lagts till i CRS-begäranden**
 
@@ -81,7 +78,7 @@ Android™ TVSDK v2.5.4 erbjuder följande uppdateringar och API-ändringar:
 
 * Ändringar i standardvärdet för `WebViewDebbuging`
 
-   The `WebViewDebbuging` värdet är inställt på _Falskt_ som standard. Om du vill aktivera det ringer du `setWebContentsDebuggingEnabled` till _True_ i programmet.
+  The `WebViewDebbuging` värdet är inställt på _Falskt_ som standard. Om du vill aktivera det ringer du `setWebContentsDebuggingEnabled` till _True_ i programmet.
 
 * Uppgradering av OpenSSL- och Curl-version uppdaterad `libcurl` till v7.57.0 och OpenSSL till v1.0.2k.
 * Åtkomst på appnivå för VAST-svarsobjekt Introducerade ett nytt API NetworkAdInfo::getVastXml() som ger åtkomst till VAST-svarsobjektet för programmet.
@@ -90,16 +87,16 @@ Android™ TVSDK v2.5.4 erbjuder följande uppdateringar och API-ändringar:
 
 Android™ TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
 
-* Alla TVSDK-kunder som använder CRS uppmanas att uppgradera sina appar med TVSDK 2.5.3.85 eller senaste på Android™. Detta är ett tillägg till den befintliga programimplementeringen. Efter TVSDK-uppgraderingen söker du efter CRS Creative URL-begäranden i ett proxyverktyg (t.ex.: Charles) och bekräfta att värdnamnet och versionen i sökvägen återspeglas som i exempelstrukturen nedan.
+* Alla TVSDK-kunder som använder CRS uppmanas att uppgradera sina appar med TVSDK 2.5.3.85 eller senaste på Android™. Detta är ett tillägg till den befintliga programimplementeringen. Efter TVSDK-uppgraderingen söker du efter CRS Creative URL-begäranden i ett proxyverktyg (t.ex. Charles) och bekräftar att värdnamnet och versionen i sökvägen återspeglas som i exempelstrukturen nedan.
 
-   `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
+  `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* Användaragent för TVSDK kan anpassas: har vi lagt till några nya API:er för att anpassa användaragenterna.
+* TVSDK:s användaragent kan anpassas: vi har lagt till några nya API:er för att anpassa användaragenterna.
 
    * `setCustomUserAgent`(Strängvärde)
    * `getCustomUserAgent`()
 
-* Dela cookies mellan Android™-program och TVSDK: Android™ TVSDK har nu stöd för åtkomst av cookies mellan Java™-lager (som lagras i CookieStore för Android™-programmet) och C++ TVSDK-lagret. Nu går det att ange och/eller ändra cookies i ursprungligt C++-lager när de exponeras för Java™ Cookie Store.
+* Dela cookies mellan Android™-program och TVSDK: Android™ TVSDK har nu stöd för åtkomst av cookies mellan Java™-lager (lagras i CookieStore för Android™-programmet) och C++ TVSDK-lagret. Nu går det att ange och/eller ändra cookies i ursprungligt C++-lager när de exponeras för Java™ Cookie Store.
 * API-ändringar:
 
    * En ny Event CookiesUpdatedEvent läggs till. Den skickas av mediaspelaren när dess cookie uppdateras.
@@ -109,7 +106,7 @@ Android™ TVSDK v2.5.3 erbjuder följande uppdateringar och API-ändringar.
    * En ny egenskap läggs till i TextFormat::treatSpaceAsAlphaNum som definierar om mellanrum ska hanteras som alfanumeriskt när bildtexter visas.
 
 * Ändringar i `SizeAvailableEvent`: Tidigare metoderna getHeight() och getWidth() för `SizeAvailableEvent` i 2.5.2 används för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Nu returneras den utdatahöjd respektive utdatavärde som returneras av avkodaren.
-* Förändringar i Buffering-beteende: Buffertbeteendet har ändrats. Det lämnas till apputvecklaren om vad de vill göra om bufferten är tom. 2.5.3 använder uppspelningsbuffertstorlek vid tom buffertsituation.
+* Förändringar i Buffering-beteende: Buffring-beteende ändras. Det lämnas till apputvecklaren om vad de vill göra om bufferten är tom. 2.5.3 använder uppspelningsbuffertstorlek vid tom buffertsituation.
 
 **Version 2.5.2**
 
@@ -125,10 +122,10 @@ Viktiga nya funktioner i Android™ 2.5.1.
 
       * **Förbättrad ABR-logik -** Den nya ABR-logiken baseras på buffertlängd, förändringshastighet för buffertlängd och uppmätt bandbredd. Detta garanterar att ABR väljer rätt bithastighet när bandbredden ändras och även optimerar antalet gånger som bithastighetsväxlingen faktiskt sker genom att övervaka den hastighet med vilken buffertlängden ändras.
       * **Nedladdning/delsegmentering av delar av segment -** TVSDK minskar ytterligare storleken på varje fragment så att uppspelningen kan börja så snart som möjligt. Dess fragment måste ha en nyckelbildruta varannan sekund.
-      * **Lazy ad resolution -** TVSDK väntar inte på att icke-förhandsvisade annonser ska matchas innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt tillåts inte förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
+      * **Lazy ad resolution -** TVSDK väntar inte på att icke-förhandsvisade annonser ska matchas innan uppspelningen startar, vilket minskar starttiden. API:er som sökning och uppspelning är fortfarande inte tillåtna förrän alla annonser är lösta. Detta gäller för VOD-strömmar som används med CSAI. Åtgärder som att söka och snabbt framåt tillåts inte förrän annonsupplösningen är slutförd. För liveströmmar kan den här funktionen inte aktiveras för annonsupplösning under en live-händelse.
       * **Beständiga nätverksanslutningar -** Med den här funktionen kan TVSDK skapa och lagra en intern lista över beständiga nätverksanslutningar. De här anslutningarna återanvänds för flera begäranden i stället för att en ny anslutning öppnas för varje nätverksbegäran och sedan tas bort. Detta ökar effektiviteten och minskar fördröjningen i nätverkskoden, vilket ger snabbare uppspelningsprestanda.
 När TVSDK öppnar en anslutning uppmanas servern att ange *keep-alive* anslutning. Vissa servrar kanske inte stöder den här typen av anslutning. I så fall återgår TVSDK till att skapa en anslutning för varje begäran igen. Även om beständiga anslutningar är aktiverade som standard har TVSDK nu ett konfigurationsalternativ så att program kan inaktivera beständiga anslutningar om så önskas.
-      * **Parallell nedladdning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
+      * **Parallell hämtning -** Att hämta video och ljud parallellt i stället för i serie minskar startfördröjningarna. Den här funktionen gör att HLS Live- och VOD-filer kan spelas upp, optimerar den tillgängliga bandbreddsanvändningen från en server, minskar sannolikheten att hamna i buffertunderkörningssituationer och minimerar fördröjningen mellan hämtning och uppspelning.
       * **Parallella annonshämtningar -** TVSDK förhämtar annonser parallellt med innehållsuppspelningen innan annonsuppspelningen avbryts, vilket möjliggör smidig uppspelning av annonser och innehåll.
 
 * **Uppspelning**
@@ -138,9 +135,9 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och delsegment
    * **Trick play med adaptiv bithastighet (ABR) -** Med den här funktionen kan TVSDK växla mellan iFrame-strömmar i trickuppspelningsläge. Du kan använda profiler som inte är iFrame-profiler för att trigga uppspelningen med lägre hastigheter.
    * **Smidigare tricks -** De här förbättringarna förbättrar användarupplevelsen:
 
-          * Anpassad bithastighet och bildrutehastighet vid uppspelning, baserat på bandbredd och buffertprofil
-          * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
-      
+         * Anpassad bithastighet och bildrutehastighet vid uppspelning, baserat på bandbredd och buffertprofil
+         * Använd huvudströmmen i stället för IDR-strömmen för att få upp till 30 fps snabb uppspelning.
+     
 * **Skydd av innehåll**
 
    * **Upplösningsbaserat utdataskydd -** Den här funktionen kopplar uppspelningsbegränsningar till specifika upplösningar och ger mer detaljerade DRM-kontroller.
@@ -148,7 +145,7 @@ Obs! ABR-växling, tricks play, annonsinfogning, sen ljudbindning och delsegment
 * **Stöd för arbetsflöden**
 
    * **Direkt faktureringsintegrering -** Detta skickar faktureringsmätningar till Adobe Analytics, som certifieras av Adobe Primetime för strömmar som används av kunden.
-TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsmått som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här användningsrapporten regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Om du vill inaktivera den här funktionen läser du referensspelarexemplet.
+TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet för att generera periodiska användningsrapporter som krävs för faktureringsändamål. I varje direktuppspelningshändelse använder TVSDK Adobe Analytics API för att skicka faktureringsvärden som innehållstyp, aktiverade markeringar för annonsinfogning och DRM-aktiverade flaggor - baserat på den fakturerbara strömmens varaktighet - till den rapportserie som ägs av Adobe Analytics Primetime. Detta stör inte och ingår inte i kundens egna Adobe Analytics-rapporteringsprogram eller serversamtal. På begäran skickas den här rapporten över faktureringsanvändning regelbundet till kunderna. Detta är den första fasen av faktureringsfunktionen som endast stöder fakturering av användning. Den kan konfigureras baserat på försäljningskontraktet med hjälp av de API:er som beskrivs i dokumentationen. Den här funktionen är aktiverad som standard. Om du vill inaktivera den här funktionen läser du referensspelarexemplet.
    * **Förbättrat stöd för failover -** Ytterligare strategier har implementerats för att fortsätta oavbruten uppspelning, trots fel på värdservrar, spellistfiler och segment.
 
 * **Reklam**
@@ -161,21 +158,21 @@ TVSDK samlar automatiskt in mätvärden och följer kundförsäljningskontraktet
    * **VHL 2.0 -** Det här är den senaste optimerade VHL-integreringen (Video Heartbeats Library) för automatisk insamling av användningsdata för Adobe Analytics. API:ernas komplexitet har minskat för att underlätta implementeringen. Hämta VHL-biblioteket [v2.0.0 för Android™](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) och extrahera JAR-filen i mappen libs.
 
 * **SizeAvaliableEventListener**
-   * Metoderna getHeight() och getWidth() för SizeAvailableEvent returnerar nu utdata i höjd och bredd. Visningsproportioner kan beräknas enligt följande:
+   * Metoderna getHeight() och getWidth() för SizeAvailableEvent returnerar nu utdata i höjd och bredd. Visningsproportioner kan beräknas på följande sätt:
 
-      ```
-      SizeAvailableEvent e;
-      
-      DAR = e.getWidth()/ e.getHeight();
-      
-      Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
-      
-      SAR = e.getSarWidth()/e.getSarHeight();
-      
-      frameHeight = e.getHeight();
-      
-      frameWidth = e.getWidth()/SAR;    
-      ```
+     ```
+     SizeAvailableEvent e;
+     
+     DAR = e.getWidth()/ e.getHeight();
+     
+     Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
+     
+     SAR = e.getSarWidth()/e.getSarHeight();
+     
+     frameHeight = e.getHeight();
+     
+     frameWidth = e.getWidth()/SAR;    
+     ```
 
 * **Cookies**
 
@@ -307,12 +304,12 @@ Detta avsnitt innehåller en sammanfattning av det problem som löstes i TVSDK 2
 * ZD #34151 - TimedMetadata-objekt är i fel ordning.
    * Två TimedMetadata-händelser visades i slumpmässig ordning om de tillhörde samma tid på tidslinjen. De bibehöll sin ursprungliga order i manifestet.
 * ZD #34189 - Problem vid försök till början av annonsbrytning.
-   * Problemet var SSAI-annonser som sammanfogats med kontinuitet. Och orsaken var ett beteende när vi sökte till början av sådana annonser, vi sökte efter en nyckelbildruta och vi hittade den inte. Orsaken var annonsens lägsta tidsstämpel för ljud före min tidsstämpel för video. Därför söker vi efter en nyckelbildruta vid fel fragmentDump-data. Åtgärdat nu.
+   * Problemet var SSAI-annonser som sammanfogats med kontinuitet. Och orsaken var ett beteende när vi sökte till början av sådana annonser, vi sökte efter en nyckelbildruta och vi hittade den inte. Orsaken var att annonsens lägsta tidsstämpel för ljud var före min tidsstämpel för video. Därför söker vi efter en nyckelbildruta vid fel fragmentDump-data. Åtgärdat nu.
 * ZD #34528 - Videoupplösning som inte uppgraderas utöver 640x360 på tredje generationens FireTV-dongel.
-   * Förbättrad korrigering med de senaste uppdateringarna av inbyggd programvara.
+   * Förbättrad korrigering så att den inkluderar de senaste uppdateringarna av inbyggd programvara.
 * ZD #34793 - TVSDK 2.5.x brukade krascha med anpassad innehållsupplösning ibland när VideoEngine antog att audioSettings var tillgängliga och inte var det.
    * Kraschen inträffade på grund av ett funktionsanrop på en delad Null-pekare (audiudeSettings). En villkorlig kontroll har lagts till i VideoEngineTimeline::placeToSourceTimeline() för att kontrollera att audiudeSettings är tillgängligt innan du anropar något i det objektet.
-* ZD #32584 - Det går inte att komma åt fullständig information som finns i &lt;extensions> nod för ett VAST-svar.
+* ZD #32584 - Det går inte att komma åt fullständig information i &lt;extensions> nod för ett VAST-svar.
    * Problemet med XML-tolkning har åtgärdats och NetworkAdInfo innehåller nu den fullständiga informationen i &lt;extensions> nod.
 * ZD #35086 - Hämtar inte fullständiga tilläggsdata från spelaren om det finns specifika VMAP-svar.
    * Problemet var specifikt för XML-tillägg eftersom XML-tolkning inte fungerade om XML-tillägget hade dubbla citattecken inom attributvärdet. Åtgärdade problemet.
@@ -339,14 +336,14 @@ Detta avsnitt innehåller en sammanfattning av det problem som löstes i TVSDK 2
 * Zendesk#25590 - Förbättra: TVSDK cookie store (C++ till Java™)
    * Android™ TVSDK har nu stöd för åtkomst av cookies mellan Java™-lager (som lagras i CookieStore för Android™-programmet) och C++ TVSDK-lagret.
 * Zendesk#32252 - TVSDK_Android_2.5.2.12 verkar inte ha korrigerat för PTPLAY-20269 Problemet har åtgärdats och integrerats i 2.5.2-grenen.
-* Zendesk#31806 - Auditude-käppar i PREPARING Player fastnade i tillståndet Preparing eftersom XML-svar hade en tom tagg. Problemet är nu åtgärdat.
+* Zendesk#31806 - Auditude-fästingar i PREPARING Player fastnade i tillståndet Preparing eftersom XML-svar hade en tom tagg. Problemet är nu åtgärdat.
 * Zendesk#31727 - TVSDK 2.5 med undertexter tas bort eller felstavas.
    * Problemet är åtgärdat och vi släpper/felstavar inga tecken.
 * Zendesk#31485 - DrmManager in 2.5
    * Ett problem uppstod när DRMManager skapades via nya DrmManager (kontextkontext). En implementerad DRMService-klass som skulle ge DRMManager.
 * Upplösningsströmmen Zendesk#32794-1080P spelas inte upp på Android™.
    * Vi har ändrat SizeAvailableEvent. Tidigare `getHeight()` och `getWidth()` metoder av SizeAvailableEvent i 2.5 används för att returnera bildrutehöjd och bildrutebredd, som returnerades av medieformatet. Den returnerar nu utdatahöjd och utdatavärde som returneras av avkodaren.
-* Zendesk #19359 Flash Player kraschar på grund av positionen för #EXT-X-FAXS-CM-attributet i manifestet på uppsättningsnivå.
+* Flashen Player Zendesk #19359 kraschar på grund av positionen för #EXT-X-FAXS-CM-attributet i manifestet på uppsättningsnivå.
    * Taggen #EXT-X-FAXS-CM måste alltid finnas i den övre spellistan innan enskilda bithastigheter eller segment visas i spellistan.
 
 **Android™ TVSDK 2.5.2**
@@ -364,22 +361,22 @@ Adobe Primetime-versionssträng läggs till i systemanvändaragenten.
 * Zendesk #30809 Saknad SEEK_END-händelse förhindrar att appen övergår till uppspelningsläge.
 * Zendesk #30415 Closed Captions &#39;Cyan&#39;-färg är nu en mörkare nyans av blått (turkos) jämfört med tidigare Primetimes TVSDK-versioner.
 
-   Färgen ändras från DarkCyan till Cyan.
+  Färgen ändras från DarkCyan till Cyan.
 
 * Zendesk #30727 VOD-annonser hämtas/löses inte.
 
-   I VMAP XML om det finns en tom VAST-tagg utan en explicit avslutande tagg (&lt;/vast>&#39;) och utan ett radmatningstecken efter det tolkas inte VMAP-XML korrekt och annonserna kanske inte kan spelas upp.
+  I VMAP XML om det finns en tom VAST-tagg utan en explicit avslutande tagg (&quot;&lt;/vast>&#39;) och utan ett radmatningstecken efter det tolkas inte VMAP-XML korrekt och annonserna kanske inte kan spelas upp.
 
 **Android™ TVSDK 2.5.1**
 
-* Enhetsspecifik (Samsung Galaxy Tab 4) krasch. VOD DRM LBA med Auditude och klicka på annonser.
+* Enhetsspecifik (Samsung Galaxy Tab 4) krasch; VOD DRM LBA med Auditude och klicka på annonserna.
 * VHL - Felaktiga hjärtslagsanrop skickas när innehåll från en förskjutning startas.
 * När VPAID-annonser spelas upp anropas händelsen för VHL-pulsslag:type:play-annons saknas.
 * När du har försatts i COMPLETE-status återgår spelaren till uppspelningsstatus med SKIP och BreakPolicy för postrollannonser.
 * Cookies kopplas inte till utgående annonsåteranrop.
 * Referenspunkter för annonser visas inte.
 * HLS med separat EAC3 SAP-spår läses inte in.
-* Spelaren kraschar när TVSDK får en Screen On-återgivning när Media Player har återställts.
+* Spelaren kraschar när TVSDK får en Screen On-återgivning efter att Media Player har återställts.
 
 ## Kända fel och begränsningar {#known-issues-and-limitations}
 

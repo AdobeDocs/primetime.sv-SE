@@ -1,8 +1,7 @@
 ---
 title: Tillfälligt pass
 description: Tillfälligt pass
-exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Med Temp Pass kan programmerare ge temporär åtkomst till sitt skyddade innehå
 * Tillfälligt pass kan konfigureras för att ge temporär åtkomst för att täcka ett antal olika scenarier, bland annat följande:
    * En programmerare kan erbjuda en daglig, kort (t.ex. en 10-minuters förhandsgranskning) av en av sina webbplatser.
    * En programmerare kan erbjuda en enda, lång presentation (t.ex. fyra timmar) av ett större idrottsevenemang som OS, eller NCAA March Madness.
-   * En programmerare kan ge en kombination av de två föregående scenarierna. till exempel en inledande, längre visningsperiod en dag, följt av en serie korta perioder som upprepas dagligen under ett antal efterföljande dagar.
+   * En programmerare kan innehålla en kombination av de två föregående scenarierna, till exempel en inledande, längre visningsperiod en dag, följt av en serie korta perioder som upprepas dagligen under ett antal efterföljande dagar.
 * Programmerarna anger varaktigheten (Time-To-Live eller TTL) för sitt temporära pass.
 * Temporärt pass utförs per begärande.  NBC kan till exempel konfigurera ett 4-timmars tillfälligt pass för begäraren&quot;NBCOlyics&quot;.
 * Programmerare kan återställa alla token som har tilldelats en viss begärare.  Det tillfälliga MVPD-program som används för att implementera det tillfälliga lösenordet måste konfigureras med alternativet Autentisering per begärande aktiverat.
@@ -35,11 +34,11 @@ Med Temp Pass kan programmerare ge temporär åtkomst till sitt skyddade innehå
 
 ## Funktionsinformation {#tempass-featur-details}
 
-* **Hur visningstiden beräknas** - Den tid som ett tillfälligt pass är giltigt motsvarar inte den tid en användare tillbringar med att visa innehåll i programmerarens program.  Efter den första användarbegäran för auktorisering via tillfälligt godkännande beräknas en förfallotid genom att den inledande aktuella begärandetiden läggs till i TTL-värdet som anges av programmeraren. Den här förfallotiden är kopplad till användarens enhets-ID och programmerarens begärande-ID, och lagras i autentiseringsdatabasen Primetime. Varje gång användaren försöker få åtkomst till innehåll med hjälp av ett tillfälligt pass från samma enhet, kommer Primetime-autentiseringen att jämföra serverns begärandetid med den förfallotid som är associerad med användarens enhets-ID och programmerarens begärande-ID. Om tiden för serverbegäran är kortare än förfallotiden beviljas tillstånd. i annat fall nekas tillstånd.
+* **Hur visningstiden beräknas** - Den tid som ett tillfälligt pass är giltigt motsvarar inte den tid en användare tillbringar med att visa innehåll i programmerarens program.  Efter den första användarbegäran för auktorisering via tillfälligt godkännande beräknas en förfallotid genom att den inledande aktuella begärandetiden läggs till i TTL-värdet som anges av programmeraren. Den här förfallotiden är kopplad till användarens enhets-ID och programmerarens begärande-ID, och lagras i autentiseringsdatabasen Primetime. Varje gång användaren försöker få åtkomst till innehåll med hjälp av ett tillfälligt pass från samma enhet, kommer Primetime-autentiseringen att jämföra serverns begärandetid med den förfallotid som är associerad med användarens enhets-ID och programmerarens begärande-ID. Om serverns begärandetid är kortare än förfallotiden beviljas auktoriseringen. I annat fall nekas auktoriseringen.
 * **Konfigurationsparametrar** - Följande parametrar för tillfälligt pass kan anges av en programmerare för att skapa en regel för tillfälligt pass:
    * **Token-TTL** - Den tid som en användare får titta på utan att logga in på ett separat dokumentationsdokument. Den här tiden är tidsbaserad och upphör att gälla oavsett om användaren tittar på innehåll eller inte.
-   >[!NOTE]
-   >Ett begärande-ID kan inte ha mer än en temporär lösenordsregel kopplad till sig.
+  >[!NOTE]
+  >Ett begärande-ID kan inte ha mer än en temporär lösenordsregel kopplad till sig.
 * **Autentisering/auktorisering** - I det temporära genomströmningsflödet anger du MVPD som &quot;Temp Pass&quot;.  Primetime-autentisering kommunicerar inte med ett faktiskt MVPD i Temp Pass-flödet, så MVPD för Temp Pass godkänner alla resurser. Programmerare kan ange en resurs som är tillgänglig med Temp-pass på samma sätt som de gör för resten av resurserna på deras plats. Mediekontrollantbiblioteket kan användas som vanligt för att verifiera den korta medietoken som används för temporärt pass och framtvinga resurskontroll före uppspelning.
 * **Spåra data i tillfälligt genomströmningsflöde** - Två poäng för spårning av data under ett tillfälligt passningstillståndsflöde:
    * Spårnings-ID som skickas från Primetime-autentisering till din **sendTrackingData()** callback är en hash av enhets-ID:t.
@@ -62,7 +61,7 @@ På programmerarsidan implementeras Temp Pass enligt följande för de två scen
 
 Följande punkter gäller båda implementeringsscenarierna:
 
-* &quot;Temporärt pass&quot; ska endast visas i MVPD-väljaren för användare som ännu inte begärt en Temp Pass-auktorisering. Du kan blockera visningen för efterföljande förfrågningar genom att ha en flagga på cookies. Detta fungerar så länge användaren inte rensar webbläsarens cache. Om användaren rensar sina webbläsarcacheminnen visas&quot;Temporärt pass&quot; igen i väljaren och användaren kan begära det igen. Åtkomst beviljas endast om tiden för tillfälligt pass inte har löpt ut ännu.
+* &quot;Temporärt pass&quot; ska endast visas i MVPD-väljaren för användare som ännu inte begärt en tillfällig godkännande. Du kan blockera visningen för efterföljande förfrågningar genom att ha en flagga på cookies. Detta fungerar så länge användaren inte rensar webbläsarens cache. Om användaren rensar sina webbläsarcacheminnen visas&quot;Temporärt pass&quot; igen i väljaren och användaren kan begära det igen. Åtkomst beviljas endast om tiden för tillfälligt pass inte har löpt ut ännu.
 * När en användare begär åtkomst via ett tillfälligt pass kommer autentiseringsservern Primetime inte att utföra sin vanliga SAML-begäran (Security Assertion Markup Language) under autentiseringsprocessen. I stället returneras autentiseringsslutpunkten varje gång den anropas medan tokens är giltiga för enheten.
 * När ett tillfälligt pass förfaller autentiseras inte användaren längre, eftersom autentiseringstoken och auktoriseringstoken har samma förfallodatum i Temp Pass-flödet. För att förklara för användarna att deras Temp-pass har upphört att gälla måste programmerarna hämta det valda MVPD-programmet direkt efter att ha ringt `setRequestor()`och sedan ringa `checkAuthentication()` som vanligt. I `setAuthenticationStatus()` återanrop kan göras för att avgöra om autentiseringsstatusen är 0, så om den valda MVPD var &quot;TempPass&quot; kan ett meddelande visas för användarna att deras Temp Pass-session har gått ut.
 * Om en användare tar bort den temporära passtoken innan den upphör att gälla, kommer efterföljande tillståndskontroller att generera en token som har en TTL som motsvarar den återstående tiden.
@@ -216,11 +215,11 @@ I det här exemplet visas hur du implementerar Temp Pass för de fall där MVPD-
 
 1. En användare öppnar programmerarens sida och klickar på inloggningslänken.
 1. MVPD-väljaren öppnas och användaren väljer ett MVPD-dokument i listan.
-1. I-bildrutan för autentisering visas. Den här iFrame innehåller länken Temp Pass.
+1. Autentiseringsramen iFrame visas. Den här iFrame innehåller länken Temp Pass.
 1. Användaren klickar på&quot;Tillfälligt pass&quot;, så programmeraren lägger till en flagga i en cookie för att hindra användaren från att se länken&quot;Tillfälligt pass&quot; vid efterföljande besök på sidan.
 1. Autentiseringsbegäran för tillfälligt pass når autentiseringsservrarna för Primetime och genererar en autentiseringstoken. TTL är lika med den tidsperiod som anges av programmeraren för det tillfälliga passet.
 1. Begäran om auktorisering för tillfälligt pass når autentiseringsservrarna för Primetime.
-1. Primetimes autentiseringsservrar extraherar enhets- och begärande-ID från begäran och lagrar dem i databasen tillsammans med förfallotiden. Förfallotiden beräknas som: inledande begärandetid för tillfälligt pass plus TTL (anges av programmeraren).
+1. Primetimes autentiseringsservrar extraherar enhets- och begärande-ID från begäran och lagrar dem i databasen tillsammans med förfallotiden. Förfallotiden beräknas som: inledande tid för begäran om tillfälligt godkännande plus TTL (anges av Programmer).
 1. Primetimes autentiseringsservrar genererar en auktoriseringstoken.
 1. Användaren kommer åt det skyddade innehållet.
 
@@ -228,7 +227,7 @@ I det här exemplet visas hur du implementerar Temp Pass för de fall där MVPD-
 
 1. Användaren öppnar programmerarens sida och klickar på inloggningslänken.
 1. MVPD-väljaren öppnas och användaren väljer ett MVPD-dokument i listan.
-1. I-bildrutan för autentisering visas. Den här iFrame innehåller länken Temp Pass (användaren tog bort den ursprungliga cookien, så programmeraren vet inte om användaren har klickat på länken Temp Pass (Tillfälligt pass) tidigare.
+1. Autentiseringsramen iFrame visas. Den här iFrame innehåller länken Temp Pass (användaren tog bort den ursprungliga cookien, så programmeraren vet inte om användaren har klickat på länken Temp Pass (Tillfälligt pass) tidigare.
 1. Användaren klickar på&quot;Tillfälligt pass&quot; igen, så programmeraren lägger till en flagga i en cookie igen för att förhindra att användaren ser länken&quot;Tillfälligt pass&quot; vid efterföljande besök på sidan.
 1. Autentiseringsbegäran för tillfälligt pass når autentiseringsservrarna i Primetime, som genererar en autentiseringstoken. TTL är nu den återstående tiden för det tillfälliga passet (skillnaden mellan den aktuella tiden och den förfallotid som är kopplad till enhets-ID).
 1. Begäran om auktorisering för tillfälligt pass når autentiseringsservrarna för Primetime.
@@ -483,7 +482,7 @@ I det här scenariot (en inledande 4 timmars kostnadsfri session, följt av dagl
 När Adobe har konfigurerat de två TempPass-instanserna visas de två ytterligare MVPD-filerna (TempPass1 och TempPass2) i programmerarens MVPD-lista.  Programmeraren måste utföra följande steg för att implementera de flera tillfälliga passeren:
 
 1. Vid användarens första besök på webbplatsen loggar du in dem automatiskt med TempPass1. Du kan använda exemplet för automatisk inloggning ovan som utgångspunkt för den här uppgiften.
-1. När du upptäcker att TempPass1 har upphört att gälla, ska du lagra uppgiften (i en cookie/lokal lagring) och visa användaren med standardväljaren för MVPD. **Se till att filtrera bort TempPass1 och TempPass2 från den listan**.
+1. När du upptäcker att TempPass1 har upphört att gälla, ska du lagra uppgiften (i en cookie/lokal lagring) och visa användaren med standardväljaren för MVPD. **Se till att filtrera bort TempPass1 och TempPass2 från listan**.
 1. Om TempPass1 har gått ut följande dag loggar du automatiskt in den användaren med TempPass2.
 1. När TempPass2 har upphört att gälla, lagra detta (i en cookie/lokal lagring) för dagen och ge användaren en MVPD-standardväljare. Se även till att filtrera bort TempPass1 och TempPass2 från den listan.
 1. På varje ny dag, kl. 00:00, återställer du alla tillfälliga pass för TempPass2 med [Återställ TempPass-webb-API](/help/authentication/temp-pass.md#reset-all-tempass).
@@ -511,7 +510,7 @@ DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset
 * **Protokoll:** HTTPS
 * **Värd:**
    * Version - mgmt.auth.adobe.com
-   * Prequal - mgmt-prequal.auth.adobe.com
+   * Föregående - mgmt-prequal.auth.adobe.com
 * **Sökväg:** /reset-tempass/v2/reset
 * **Frågeparametrar:** `device_id=all&requestor_id=REQUESTOR_ID&mvpd_id=TEMPPASS_MVPD_ID`
 * **Sidhuvuden:** ApiKey - 1232293681726481
@@ -535,7 +534,7 @@ Stöd för tillfälligt pass- och återställningsverktyg per plattform:
 | Adobe Primetime-autentiseringsklienter | Temporärt pass | Återställ verktyg |
 |:--------------------------------------:|:---------:|:----------:|
 | JS AccessEnabler | JA | JA |
-| iOS för inbyggd klient | JA | JA |
+| IOS för inbyggd klient | JA | JA |
 | Inbyggt klienttvOS | JA | JA |
 | Android för inbyggd klient | JA | JA |
 | Native Client fireTV | JA | JA |

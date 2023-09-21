@@ -1,8 +1,7 @@
 ---
 description: Licenstoken för FairPlay ger produktions- och testtjänster.
 title: FairPlay-licenstokenbegäran/svar
-exl-id: 7073a74b-d907-4d45-8550-4305655c33f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 4%
@@ -38,31 +37,31 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
 
 * **Exempelsvar:**
 
-   ```
-   https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 **Frågeparametrar för begäran**
 
-**Tabell 3: Parametrar för tokenfråga**
+**Tabell 3: Tokenfrågeparametrar**
 
 | Frågeparameter | Beskrivning | Obligatoriskt? |
 |--- |--- |--- |
 | customerAuthenticator Customer authenticator as query parameter customerAuthenticator FairPlay | Det här är er API-nyckel för era kunder, en för era produktions- och testmiljöer. Det finns på fliken Admin Dashboard för ExpressPlay. | Ja |
-| errorFormat | Antingen html eller json. Om html (standardvärdet) visas en HTML-representation av eventuella fel i svarets entitetstext. Om json anges returneras ett strukturerat svar i JSON-format. Se [JSON-fel](https://www.expressplay.com/developer/restapi/#json-errors) för mer information. MIME-typen för svaret är antingen text/uri-list on success, text/html for HTML error format eller application/json for JSON error format. | Nej |
+| errorFormat | HTML eller json. Om html (standardvärdet) visas en HTML-representation av eventuella fel i svarets entitetstext. Om json anges returneras ett strukturerat svar i JSON-format. Se [JSON-fel](https://www.expressplay.com/developer/restapi/#json-errors) för mer information. MIME-typen för svaret är antingen text/uri-list on success, text/html for HTML error format eller application/json for JSON error format. | Nej |
 
 **Tabell 4: Parametrar för licensfråga**
 
 | **Frågeparameter** | **Beskrivning** | **Obligatoriskt?** |
 |---|---|---|
-| `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. &quot;0000&quot; är det enda tillåtna värdet. | Nej |
-| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). If `kek` anges, antingen en av `kid` eller `ek` parametrar måste anges, *men inte båda*. | Nej |
+| `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. 0000 är det enda tillåtna värdet. | Nej |
+| `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). If `kek` anges, antingen en av `kid` eller `ek` Parametrar måste anges. *men inte båda*. | Nej |
 | `kid` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng `'^somestring'`. Strängens längd följt av `'^'` får inte vara längre än 64 tecken. | Nej |
 | `ek` | En hexadecimal strängrepresentation av den krypterade innehållsnyckeln. | Nej |
 | `contentKey` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln | Ja, såvida inte `kek` och `ek` eller `kid` tillhandahålls. |
 | `iv` | En 16 byte hexadecimal strängbeteckning för innehållskryptering IV | Ja |
 | `rentalDuration` | Hyrningens varaktighet i sekunder (standard - 0) | Nej |
-| `fpExtension` | En kort figursättning `extensionType` och `extensionPayload`, som en kommaavgränsad sträng. Till exempel: [...] `&fpExtension=wudo,AAAAAA==&`[...] | Nej, vilket tal som helst kan användas |
+| `fpExtension` | En kort figursättning `extensionType` och `extensionPayload`, som en kommaavgränsad sträng. Till exempel: [...] `&fpExtension=wudo,AAAAAA==&`[...] | Nej, alla tal kan användas |
 
 **Tabell 5: Frågeparametrar för tokenbegränsning**
 
@@ -133,11 +132,11 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Ogiltig autentiseringstoken: &lt;details&gt; <p>Obs! Detta kan inträffa om autentiseraren är fel eller när testprogrammeringsgränssnittet används på <span class="filepath"> *.test.expressplay.com </span> med produktionsautentiseraren och vice versa. </p> <p importance="high">Obs! Test SDK och Advanced Test Tool (ATT) fungerar endast med <span class="filepath"> *.test.expressplay.com </span>, medan produktionsenheter måste använda <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
+   <td> Ogiltig autentiseringstoken: &lt;details&gt; <p>Obs! Detta kan inträffa om autentiseraren är fel eller när testnings-API:t används på <span class="filepath"> *.test.expressplay.com </span> med produktionsautentiseraren och vice versa. </p> <p importance="high">Obs! Test SDK och Advanced Test Tool (ATT) fungerar endast med <span class="filepath"> *.test.expressplay.com </span>, medan produktionsenheter måste använda <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> Otillräckliga tokens är tillgängliga </td> 
+   <td> Otillräckliga variabler tillgängliga </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
@@ -157,11 +156,11 @@ Licenstoken för FairPlay ger produktions- och testtjänster. Denna begäran ret
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Ogiltig varaktighet för uthyrning av uppspelning </td> 
+   <td> Ogiltig varaktighet för uthyrningsuppspelning </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> Innehållskrypteringsnyckeln måste vara 32-hexadecimala siffror lång </td> 
+   <td> Innehållskrypteringsnyckeln måste innehålla 32 hexadecimala siffror </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 

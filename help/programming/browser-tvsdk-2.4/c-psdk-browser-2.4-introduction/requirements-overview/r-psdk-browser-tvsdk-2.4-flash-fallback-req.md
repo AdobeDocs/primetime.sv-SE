@@ -1,24 +1,23 @@
 ---
-description: För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
-title: Krav för Flash Player
-exl-id: 26531d0d-d34c-4134-8a05-0604f00a3107
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: För att kunna använda Flash Player måste du se till att miljön uppfyller de krav som ställs.
+title: Krav på Flash Player
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
-# Krav för Flash Player{#flash-player-requirements}
+# Krav på Flash Player{#flash-player-requirements}
 
-För att kunna använda Flash Player måste du se till att din miljö uppfyller de krav som ställs.
+För att kunna använda Flash Player måste du se till att miljön uppfyller de krav som ställs.
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Här är kraven för Flash Player:
+Här följer kraven för Flashen Player:
 
 * Spela upp med `Primetime.js`, installera minst Flash Player version 23.
-* Installera minst Flash Player version 11.0.0 om du vill bli tillfrågad om uppdateringar av Flash Player version 23 eller senare.
+* Installera minst Flash Player version 11.0.0 om du vill bli tillfrågad om Flash Player version 23 eller senare.
 
 ## Förpackningskrav {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 

@@ -1,8 +1,7 @@
 ---
 description: Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållsströmmen som representeras av en inläst MediaResource.
 title: MediaPlayer-metoder för åtkomst till MediaResource-information
-exl-id: 8849411a-e94b-43a9-9fa1-143725264304
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Med metoderna i klassen MediaPlayerItem kan du hämta information om innehållss
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> boolesk isLive(); </span> </td> 
-   <td colname="3"> <p>True om strömmen är live; false om det är VOD. </p> </td> 
+   <td colname="3"> <p>True if the stream is live; false if it is VOD. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>DRM-skyddad</b> </td> 

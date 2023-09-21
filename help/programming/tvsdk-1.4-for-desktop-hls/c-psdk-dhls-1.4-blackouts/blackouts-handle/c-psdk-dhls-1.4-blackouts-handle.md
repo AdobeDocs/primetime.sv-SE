@@ -1,21 +1,20 @@
 ---
 description: Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
-title: Hantera strömavbrott i liveströmmar
-exl-id: 2e63fb0c-44b1-46f1-a4b8-f8f67389d183
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Hantera strömavbrott
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
-# Hantera strömavbrott i liveströmmar{#handle-blackouts-in-live-streams}
+# Hantera strömavbrott{#handle-blackouts-in-live-streams}
 
 Ni kan hantera strömmar med livevideo och leverera alternativt innehåll under en strömavgång.
 
 När en strömbrytning inträffar i en liveström använder spelaren händelsehanterare för att upptäcka strömmen och ge alternativt innehåll till de användare som inte är berättigade att titta på huvudströmmen. Spelaren känner av start- och slutpunkten för den utblinda perioden, växlar uppspelningen från huvudströmmen till en alternativ ström och växlar tillbaka till huvudströmmen när den utsläckta perioden är slut.
 
-I din klientapp prenumererar du på taggar för utsvärtning i TVSDK. När nya *tidsbestämda metadata* -objekt, tolkar du data för det tidsbestämda metadataobjektet för att identifiera om objektet indikerar en utströmning eller utträde. För identifierade strömavbrott anropar du de relevanta TVSDK-elementen för att växla till alternativt innehåll i början av strömavbrottet och återigen för att återgå till huvudinnehållet när strömavbrottet är över.
+I din klientapp prenumererar du på taggar för utsvärtning i TVSDK. Vid anmälan av nya *tidsbestämda metadata* -objekt, tolkar du data för det tidsbestämda metadataobjektet för att identifiera om objektet indikerar en utströmning eller utträde. För identifierade strömavbrott anropar du de relevanta TVSDK-elementen för att växla till alternativt innehåll i början av strömavbrottet och återigen för att återgå till huvudinnehållet när strömavbrottet är över.
 
 >[!TIP]
 >
@@ -31,10 +30,10 @@ För att hantera strömavbrott i liveströmmar:
 
 1. Konfigurera appen för att identifiera svarta out-taggar genom att prenumerera på svarta out-taggar i ett live-stream-manifest.
 
-   TVSDK upptäcker inte ensam strömslutningstaggar. du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under tolkningen av manifestfilen.
+   TVSDK identifierar inte svartout-taggar separat. Du måste prenumerera på utmattningstaggar för att få ett meddelande när taggarna påträffas under parsning av manifestfiler.
 1. Skapa händelseavlyssnare för taggar som spelaren prenumererar på.
 
-   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar `TimedMetadataObject` för `TimedMetadataEvent`.
+   När en tagg inträffar som spelaren har prenumererat på (till exempel en tagg som gör att programmet tar slut) i antingen förgrundsströmmen (huvudinnehållet) eller bakgrundsströmmen (alternativt innehåll), skickar TVSDK en `TimedMetadataEvent` och skapar en `TimedMetadataObject` för `TimedMetadataEvent`.
 1. Implementera hanterare för tidsbestämda metadatahändelser för både förgrunds- och bakgrundsströmmarna.
 
    I de här hanterarna hämtar du start- och sluttider för utmörningsperioden från tidsbestämda metadatahändelseobjekt.

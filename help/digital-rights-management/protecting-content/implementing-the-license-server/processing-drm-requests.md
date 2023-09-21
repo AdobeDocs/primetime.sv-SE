@@ -2,8 +2,7 @@
 title: Bearbeta Adobe Primetime DRM-begäranden
 description: Bearbeta Adobe Primetime DRM-begäranden
 copied-description: true
-exl-id: ca9c2ccc-b848-4271-88bc-e7e3ced135ce
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1251'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Det allmänna sättet att hantera begäranden är att skapa en hanterare, tolka 
 
 Den basklass som används för att hantera en begäran/svar-interaktion är `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. En instans av `HandlerConfiguration` -klassen används för att initiera hanteraren. `HandlerConfiguration` lagrar information om serverkonfiguration, inklusive transportreferenser, tolerans för tidsstämpling, listor för principuppdatering och återkallningslistor. Hanteraren läser informationen i begäran och tolkar begäran till en instans av `RequestMessageBase`. Anroparen kan granska informationen i begäran och avgöra om ett fel eller ett svar ska returneras (underklasser till `RequestMessageBase` tillhandahåller en metod för att ställa in svarsdata).
 
-Om begäran lyckas, ange svarsdata. anropa annars `RequestMessageBase.setErrorData()` vid fel. Avsluta alltid implementeringen genom att anropa `close()` metod (vi rekommenderar att `close()` anropas i `finally` block av `try` -programsats). Se `MessageHandlerBase` API-referensdokumentation som innehåller ett exempel på hur hanteraren anropas.
+Om begäran lyckas anger du svarsdata. Anropa annars `RequestMessageBase.setErrorData()` vid fel. Avsluta alltid implementeringen genom att anropa `close()` metod (vi rekommenderar att `close()` anropas i `finally` block av `try` -programsats). Se `MessageHandlerBase` API-referensdokumentation som innehåller ett exempel på hur hanteraren anropas.
 
 >[!NOTE]
 >
@@ -32,32 +31,32 @@ Alla Adobe Primetime DRM-begäranden (med undantag för begäranden som stöder 
 
 Du kan använda en identifierare på följande sätt:
 
-* The `getUniqueId()` returnerar en sträng som har tilldelats en enhet under individualisering. Du kan lagra strängarna i en databas och söka efter identifierare. Den här identifieraren ändras emellertid om användaren formaterar om hårddisken och anpassar den igen. Den här identifieraren har också ett annat värde mellan Adobe AIR och Adobe Flash Player i olika webbläsare på samma dator.
-* Om du vill räkna datorer mer exakt kan du använda `getBytes()` för att lagra hela identifieraren. Hämta alla identifierare för ett användarnamn och anrop för att avgöra om datorn har setts tidigare `matches()` för att kontrollera om det finns någon matchning. På grund av `matches()` -metoden måste användas för att jämföra de värden som returneras av `MachineId.getBytes`Detta alternativ är dock endast praktiskt när det finns ett litet antal värden att jämföra. till exempel de datorer som är kopplade till en viss användare.
+* The `getUniqueId()` returnerar en sträng som har tilldelats en enhet under individualisering. Du kan lagra strängarna i en databas och söka efter identifierare. Den här identifieraren ändras emellertid om användaren formaterar om hårddisken och anpassar den igen. Den här identifieraren har också ett annat värde mellan Adobe AIR och Adobe i olika webbläsare på samma dator.
+* Om du vill räkna datorer mer exakt kan du använda `getBytes()` för att lagra hela identifieraren. Hämta alla identifierare för ett användarnamn och anrop för att avgöra om datorn har setts tidigare `matches()` för att kontrollera om det finns någon matchning. På grund av `matches()` -metoden måste användas för att jämföra de värden som returneras av `MachineId.getBytes`är det här alternativet bara praktiskt när det finns ett litet antal värden att jämföra, till exempel de datorer som är kopplade till en viss användare.
 
 ## Användarautentisering {#user-authentication}
 
 En Adobe Primetime DRM-begäran kan innehålla en autentiseringstoken.
 
-Om autentisering av användarnamn/lösenord användes kan begäran innehålla en `AuthenticationToken` genereras av `AuthenticationHandler`. Om du vill komma åt och verifiera token måste du använda `RequestMessageBase.getAuthenticationToken()`. Använd kommandot `DRMManager.authenticate()` ActionScript eller iOS API.
+Om autentisering av användarnamn/lösenord användes kan begäran innehålla en `AuthenticationToken` genereras av `AuthenticationHandler`. Om du vill komma åt och verifiera token måste du använda `RequestMessageBase.getAuthenticationToken()`. Om du vill initiera en begäran om användarnamn/lösenord på klienten använder du `DRMManager.authenticate()` ActionScript eller iOS API.
 
 Om klienten och servern använder en anpassad autentiseringsmekanism hämtar klienten en autentiseringstoken via någon annan kanal och ställer in den anpassade autentiseringstoken med `DRMManager.setAuthenticationToken` ActionScript 3.0 API. Använd `RequestMessageBase.getRawAuthenticationToken()` för att hämta den anpassade autentiseringstoken. Serverimplementeringen avgör om den anpassade autentiseringstoken är giltig.
 
 ## Uppspelningsskydd {#replay-protection}
 
-För uppspelningsskydd kanske du vill kontrollera om meddelandeidentifieraren har setts nyligen genom att ringa `RequestMessageBase.getMessageId()`. I så fall kan en angripare försöka att upprepa begäran, vilket bör nekas. Servern kan identifiera uppspelningsförsök genom att lagra en lista över nyligen visade meddelande-ID:n och kontrollera varje inkommande begäran mot den cachelagrade listan. Om du vill begränsa hur lång tid som meddelandeidentifierarna behöver lagras, ringer du `HandlerConfiguration.setTimestampTolerance()`. Om den här egenskapen är inställd nekas SDK sedan en begäran som har en tidsstämpel i mer än det angivna antalet sekunder av servertiden.
+För uppspelningsskydd kanske du vill kontrollera om meddelandeidentifieraren nyligen har setts genom att ringa `RequestMessageBase.getMessageId()`. I så fall kan en angripare försöka att upprepa begäran, vilket bör nekas. Servern kan identifiera uppspelningsförsök genom att lagra en lista över nyligen visade meddelande-ID:n och kontrollera varje inkommande begäran mot den cachelagrade listan. Om du vill begränsa hur lång tid som meddelandeidentifierarna behöver lagras, ringer du `HandlerConfiguration.setTimestampTolerance()`. Om den här egenskapen är inställd nekas SDK sedan en begäran som har en tidsstämpel i mer än det angivna antalet sekunder av servertiden.
 
 ## Återställningsigenkänning {#rollback-detection}
 
 För återställningsidentifiering kräver vissa användningsregler att klienten upprätthåller tillståndsinformation för att rättigheterna ska kunna verkställas. För att t.ex. framtvinga regler för användning av uppspelningsfönstret lagrar klienten det datum och den tidpunkt då användaren först började visa innehållet. Den här händelsen startar uppspelningsfönstrets start. För att på ett säkert sätt framtvinga uppspelningsfönstret måste servern se till att användaren inte säkerhetskopierar och återställer klientens tillstånd för att ta bort uppspelningsfönstrets starttid som lagrats på klienten. Servern gör detta genom att spåra värdet för klientens återställningsräknare.
 
-Servern hämtar räknarens värde för varje begäran genom att anropa `RequestMessageBase.getClientState()` för att få `ClientState` objekt, anropa `ClientState.getCounter()` för att hämta det aktuella värdet för klienttillståndsräknaren. Servern bör lagra värdet för varje klient (använd `MachineId.getUniqueId()` för att identifiera klienten som är associerad med värdet för återställningsräknaren) och sedan anropa `ClientState.incrementCounter()` för att öka räknarvärdet med ett. Om servern upptäcker att räknarvärdet är mindre än det senaste värdet som servern ser kan klienttillståndet ha återställts.
+Servern hämtar räknarens värde för varje begäran genom att anropa `RequestMessageBase.getClientState()` för att få `ClientState` objekt, anropa `ClientState.getCounter()` för att hämta det aktuella värdet för klienttillståndsräknaren. Servern bör lagra värdet för varje klient (använd `MachineId.getUniqueId()` för att identifiera klienten som är associerad med värdet för återställningsräknaren), och sedan anropa `ClientState.incrementCounter()` för att öka räknarvärdet med ett. Om servern upptäcker att räknarvärdet är mindre än det senaste värdet som servern ser kan klienttillståndet ha återställts.
 
 Se `ClientState` API-referensdokumentation om du vill ha mer information om hur du identifierar otillåtna klienttillstånd.
 
 ## Konfigurationsdata för global server{#global-server-configuration-data}
 
-Förutom den konfiguration som används av licensservern, `HandlerConfiguration` lagrar konfigurationsinformation som kan skickas till klienten för att styra hur licenser används. Detta görs genom att skapa en `ServerConfigData` klass och anrop `HandlerConfiguration.setServerConfigData()`. De här inställningarna gäller endast för licenser som utfärdas av den här licensservern.
+Förutom den konfiguration som används av licensservern, `HandlerConfiguration` lagrar konfigurationsinformation som kan skickas till klienten för att styra hur licenser används. Detta görs genom att skapa en `ServerConfigData` klass och anrop `HandlerConfiguration.setServerConfigData()`. De här inställningarna gäller endast för licenser som har utfärdats av den här licensservern.
 
 Toleransen för klocktillbakaspolning är en egenskap som kan ställas in av licensservern för att styra hur klienten verkställer licenser. Som standard kan användare ställa in datorklockan fyra timmar tillbaka utan att göra licenserna ogiltiga. Om en licensserveroperator vill använda en annan inställning kan det nya värdet anges i `ServerConfigData` klassen. När du ändrar värdet för någon av dessa inställningar måste du öka versionsnumret genom att anropa `setVersion()`. De nya värdena skickas bara till klienten om klientversionen är äldre än den aktuella `ServerConfigData` version.
 

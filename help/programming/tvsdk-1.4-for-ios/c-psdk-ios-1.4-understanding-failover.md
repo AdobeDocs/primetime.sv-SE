@@ -1,8 +1,7 @@
 ---
-description: Redundanshantering inträffar när en variantspellista har flera renderingar för samma bithastighet och en av renderingarna slutar att fungera. TVSDK växlar mellan renderingar.
+description: Redundanshantering inträffar när en variantspellista har flera renderingar för samma bithastighet, och en av renderingarna slutar att fungera. TVSDK växlar mellan renderingar.
 title: Redundans
-exl-id: 8c215e2b-e601-4991-a66f-0e810176a511
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Redundans{#failover}
 
-Redundanshantering inträffar när en variantspellista har flera renderingar för samma bithastighet och en av renderingarna slutar att fungera. TVSDK växlar mellan renderingar.
+Redundanshantering inträffar när en variantspellista har flera renderingar för samma bithastighet, och en av renderingarna slutar att fungera. TVSDK växlar mellan renderingar.
 
 I följande exempel visas en variantspellista med URL:er för växling vid fel med samma bithastighet:
 

@@ -1,8 +1,7 @@
 ---
 title: Definiera ett segment och en tidsram
 description: Definiera ett segment och en tidsram
-exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Välj MVPD från **MVPD i segment** alternativ:
 
    Du kan ta bort ett PDF-dokument från markeringen genom att avmarkera det.
 
-1. Klicka eller tryck **Använd markering** så att markeringen börjar gälla. Annars kommer du att förlora det du har gjort.
+1. Klicka eller tryck **Använd markering** för att det valda innehållet ska börja gälla. Annars kommer du att förlora det du har gjort.
 
    >[!NOTE]
    >
@@ -67,7 +66,7 @@ Välj önskade programmeringskanaler på menyn **Kanaler i segment** alternativ:
    >
    >När du väljer enskilda kanaler delas aktiviteterna i dessa kanaler upp individuellt i vissa rapporter. När du väljer överordnad programmerare för alla dessa kanaler inkluderas alla dessa kanalers aktivitet, men de delas inte upp individuellt i rapporter.
 
-1. Klicka eller tryck **Använd markering** så att markeringen börjar gälla.
+1. Klicka eller tryck **Använd markering** för att det valda innehållet ska börja gälla.
 
 >[!NOTE]
 >
@@ -83,7 +82,7 @@ Förutom att ändra markeringen i dialogrutan **MVPD i segment** och **Kanaler i
 
 ![](assets/segment-panel-selection.png)
 
-*Bild: Valda videofilmsprogram och kanaler i segment- och tidsbildrutepanelen*
+*Bild: Markerade videofilmsprogram och kanaler på segmentpanelen och tidslinjepanelen*
 
 ## Kornighet och val av tidsram {#granularity-timeframe}
 
@@ -91,7 +90,7 @@ Så här väljer du en utvärderingsperiod:
 
 1. Välj **Kornighet och tidsram** datumväljare.
 
-1. Välj antingen **Vecka** eller **Månad** från **Sammanställd av** för att ange granularitet för utvärderingen.
+1. Välj antingen **Vecka** eller **Månad** från **Sammanställd av** om du vill ange granularitet för utvärderingen.
 
    ![](assets/granularity-timeframe-weekwise.png)
 

@@ -1,8 +1,7 @@
 ---
 description: TVSDK hanterar fel i tidsintervallet beroende på det specifika problemet, antingen genom att slå samman eller genom att ändra ordning på de felaktigt definierade tidsintervallen.
 title: Hantering av fel vid borttagning och ersättning av annonser
-exl-id: 3147d446-68a1-4e4b-9a29-f464b936d650
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -25,7 +24,7 @@ TVSDK hanterar fel i tidsintervallet enligt följande:
 TVSDK hanterar signeringslägeskonflikter med annonseringsmetadata enligt följande:
 
 * Om annonseringssignaleringsläget är i konflikt med tidsintervallets metadata har alltid tidsintervallets metadata prioritet. Om till exempel annonseringssignaleringsläget är inställt som cues för servermappning eller manifest, och det också finns MARK-tidsintervall i annonsmetadata, blir resultatet att intervallen markeras och inga annonser infogas.
-* För REPLACE-intervall, om signeringsläget är inställt som servermappnings- eller manifest-cues, ersätts intervallen enligt vad som anges i REPLACE-intervallen, och det finns ingen annonsinfogning via servermappnings- eller manifest-cues. Se [Läge för annonssignalering](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
+* För REPLACE-intervall, om signaleringsläget är inställt som servermappnings- eller manifestkommandon, ersätts intervallen enligt vad som anges i REPLACE-intervallen, och det finns ingen annonsinfogning via servermappnings- eller manifest-kommandon. Se [Läge för annonssignalering](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
 
 När servern inte returnerar giltig `AdBreaks`:
 

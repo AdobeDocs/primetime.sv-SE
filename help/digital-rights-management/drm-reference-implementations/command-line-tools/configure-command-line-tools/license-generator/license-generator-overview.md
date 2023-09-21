@@ -1,9 +1,8 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: ba6e8fab-b199-4969-b372-06fa6d7a1e4a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -30,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 
 * `metadata` - Innehåller Adobe Primetime DRM-metadata.
 
-   Du kan hämta den här filen från skyddat innehåll med `-d -m` i Media Packager.
+  Du kan hämta den här filen från skyddat innehåll med `-d -m` i Media Packager.
 
 **Visa en tidigare genererad licens:**
 
@@ -55,7 +54,7 @@ java -jar AdobeLicenseGenerator.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM-licensgeneratorn efter <span class="filepath"> flashaccesstools.properties</span> i den aktuella arbetskatalogen. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM-licensgeneratorn efter <span class="filepath"> flashaccesstools.properties</span> i aktuell arbetskatalog. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licensfil</span></i> </p> </td> 
@@ -82,8 +81,8 @@ java -jar AdobeLicenseGenerator.jar -d
    <td colname="2" class="- topic/entry "> <p>Om metadata innehåller flera DRM-principer kan du ange hur många DRM-profiler du kan använda för att generera en licens. </p> <p>Om du inte anger antalet DRM-principer tillämpas den första DRM-principen automatiskt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Skapar en licens för en angiven mottagare. Du kan använda ett enhets- eller domäncertifikat och du kan ange flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>för att skapa en licens för flera mottagare. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-certifikat</span> </td> 
+   <td colname="2" class="- topic/entry ">Skapar en licens för en angiven mottagare. Du kan använda ett enhets- eller domäncertifikat och du kan ange flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>alternativ för att skapa en licens för flera mottagare. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 

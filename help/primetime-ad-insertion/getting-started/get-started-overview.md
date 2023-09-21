@@ -1,8 +1,7 @@
 ---
 title: Kom igång med Adobe Primetime Ad Insertion
 description: Komma igång med Adobe Primetime Ad Insertion
-exl-id: 629ea2a5-1b50-4451-a478-95d02f192145
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -13,11 +12,11 @@ ht-degree: 0%
 
 Primetime Ad Insertion samordnar de system som tillhandahåller innehåll och annonser för att skapa personaliserade annonsupplevelser i strömmen och spårar sedan annonsuppspelningen för era annonsörer.
 
-Primetime Ad Insertion interagerar med klientapplikationer för videoleverans genom att skriva om videomanifest för att tillhandahålla riktade annonser och personaliserade upplevelser för varje visningsprogram. De här manifesten kombinerar innehåll och annonser som levereras från en annonsserver och kan även innehålla metadata med detaljerade anvisningar för annonsspårning. Primetime Ad Insertion har stöd för annonsspårning både på klient- och serversidan.
+Primetime Ad Insertion interagerar med klientapplikationer för videoleverans genom att skriva om videomanifest för att tillhandahålla riktade annonser och personaliserade upplevelser för varje visningsprogram. De här manifesten kombinerar innehåll och annonser som levereras från en annonsserver och kan även innehålla metadata med detaljerade anvisningar för annonsspårning. Primetime Ad Insertion har stöd för annonsspårning både på klientsidan och serversidan.
 
 När systemet har konfigurerats korrekt kan ett typiskt arbetsflöde se ut så här:
 
-1. Klientprogrammet genererar en [Bootstrap URL](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md) med information om videoströmmen och skickar en GET-förfrågan till Primetime Ad Insertion.  Primetime Ad Insertion stöder HLS och DASH med en mängd olika annonssignalformat.
+1. Klientprogrammet genererar en [BOOTSTRAP URL](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md) med information om videoströmmen och skickar en GET-förfrågan till Primetime Ad Insertion.  Primetime Ad Insertion stöder HLS och DASH med en mängd olika annonssignalformat.
 
 1. Primetime Ad Insertion svarar genom att skicka innehållsmanifestet från utgivarens CDN tillbaka till klientprogrammet.
 

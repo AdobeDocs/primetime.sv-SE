@@ -2,8 +2,7 @@
 title: Distribuera Adobe Access Server för skyddad strömning - översikt
 description: Distribuera Adobe Access Server för skyddad strömning - översikt
 copied-description: true
-exl-id: fdefa13a-14ec-4301-ab39-2ceea830463d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Innan du distribuerar Adobe Access Server för skyddad strömning måste du kontrollera att du har installerat de versioner av Java och Tomcat som listas i avsnittet Krav.
 
-Paketet Adobe Access Server för skyddad strömning innehåller [!DNL flashaccesserver.war]. Om du vill distribuera WAR-filen kopierar du den till Tomcat&#39;s [!DNL webapps] katalog. Om du tidigare har distribuerat WAR-filen kan du behöva ta bort den packade WAR-katalogen manuellt ( [!DNL flashaccessserver] på Tomcat&#39;s [!DNL webapps] katalog). Om du vill förhindra att Tomcat packar upp WAR-filer redigerar du [!DNL server.xml] fil i Tomcat&#39;s [!DNL conf] och ange `unpackWARs` attribut till `false`.
+Paketet Adobe Access Server för skyddad strömning innehåller [!DNL flashaccesserver.war]. Om du vill distribuera WAR-filen kopierar du den till Tomcat&#39;s [!DNL webapps] katalog. Om du tidigare har distribuerat WAR-filen kan du behöva ta bort den packade WAR-katalogen manuellt ( [!DNL flashaccessserver] på Tomcat&#39;s [!DNL webapps] ). Om du vill förhindra att Tomcat packar upp WAR-filer redigerar du [!DNL server.xml] fil i Tomcat&#39;s [!DNL conf] och ange `unpackWARs` attribut till `false`.
 
 >[!NOTE]
 >

@@ -1,8 +1,7 @@
 ---
 title: Översikt över konto-IQ
 description: Med hjälp av IQ kan programmerare och distributörer förstå riskerna för sina intäkter och sin verksamhet och fastställa de mest effektiva åtgärder som ska vidtas för att minska verkningarna av kreditbedrägeri.
-exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
-source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Leverantörer av direktuppspelningstjänster för video är i allmänhet medvetn
 
 ![IQ-flödesdiagram för konto](assets/aiq-intro.png)
 
-*Bild: IQ-informationsflöde för konto*
+*Bild: Informationsflöde för IQ-konto*
 
 Med Adobe Primetime Account IQ kan videoströmningstjänster förstå abonnenternas användningsmönster och identifiera delning av autentiseringsuppgifter. Genom att grundligt analysera det långa spåret av data som lämnas kvar av varje abonnent med hjälp av en maskininlärningsmodell som är tillverkad i flera lager från Adobe, kan direktuppspelningstjänster förstå användarbeteendet och identifiera delning av autentiseringsuppgifter med större säkerhet. Dessutom kan åtgärder vidtas genom integreringar med andra system, som att begränsa samtidiga strömmar eller anpassa erbjudanden, och validerar effekten av dessa åtgärder, oavsett om det gäller att uppmuntra till ett lagligt tittande eller öka antalet abonnenter och intäkterna.
 
@@ -33,7 +32,7 @@ Verktyg och funktioner för IQ-program för konton beskrivs i följande avsnitt:
 * [Användningsmönster](/help/AccountIQ/usage-patterns.md)
 * [Operationer](/help/AccountIQ/operations.md)
 
-Låt oss göra en djupdykning i diagram och rapporter i vart och ett av dessa avsnitt.
+Låt oss göra en djupdykning i diagrammen och rapporterna i vart och ett av dessa avsnitt.
 
 >[!MORELIKETHIS]
 >
@@ -44,7 +43,6 @@ Låt oss göra en djupdykning i diagram och rapporter i vart och ett av dessa av
 >* [Användningsmönster](/help/AccountIQ/usage-patterns.md)
 >* [Ordlista över produkttermer](/help/AccountIQ/product-concepts.md)
 >* [IQ-rapport för konto](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
-
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.
 

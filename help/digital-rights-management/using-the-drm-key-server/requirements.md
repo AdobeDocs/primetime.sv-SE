@@ -2,8 +2,7 @@
 title: Krav för att använda Primetime DRM Key Server
 description: Krav för att använda Primetime DRM Key Server
 copied-description: true
-exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Introduktion {#introduction}
 
-Primetime DRM Key Server är en multi-tenant Key Server för Remote iOS och/eller Xbox 360 key delivery. Om Remote Key Delivery är aktiverat i en princip för iOS måste en Primetime DRM Key Server distribueras för att aktivera innehållsuppspelning på iOS-klienter. Primetime DRM Key Server krävs alltid för Xbox 360.
+Primetime DRM Key Server är en multi-tenant Key Server för fjärradministration av iOS och/eller Xbox 360. Om Remote Key Delivery är aktiverat i en princip för iOS måste en Primetime DRM Key Server distribueras för att aktivera innehållsuppspelning på iOS-klienter. Primetime DRM Key Server krävs alltid för Xbox 360.
 
 ## Krav för att använda Primetime DRM Key Server {#requirements-for-using-primetime-drm-key-server}
 

@@ -2,8 +2,7 @@
 title: Leverantörsspecifik säkerhetsinformation
 description: Leverantörsspecifik säkerhetsinformation
 copied-description: true
-exl-id: 668321c5-b2c7-4bb3-9f68-2dba622a54de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Använd länkarna i det här avsnittet för att hitta leverantörsspecifik säke
 
 ## Säkerhetsinformation för operativsystem {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
 
-När du skyddar ditt operativsystem ska du noga implementera de åtgärder som beskrivs av din operativsystemsleverantör, inklusive följande:
+När du skyddar ditt operativsystem ska du noga implementera de åtgärder som beskrivs av din operativsystemsleverantör, bland annat följande:
 
 * Definiera och styra användare, roller och behörigheter
-* Övervaka loggar och åtkomsthistorik
-* Onödiga tjänster och program tas bort
+* Övervakningsloggar och verifieringskedja
+* Tar bort onödiga tjänster och program
 * Säkerhetskopiera filer
 
 Säkerhetsinformation om operativsystem som stöds av Adobe Access finns i resurserna i den här tabellen.

@@ -1,8 +1,7 @@
 ---
 description: Gränssnittet för globala licenstoken tillhandahåller produktions- och testtjänster.
 title: Tokenbegäran för Widewin-licens/svar
-exl-id: f8d71f63-7783-44f9-8b1b-4b5646dca339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 5%
@@ -25,20 +24,20 @@ Denna HTTP-begäran returnerar en token som kan lösas in för en Widewin-licens
 
 * **Exempelbegäran:**
 
-   ```
-   https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
-   <ExpressPlay customer authenticator identifier>
-   ```
+  ```
+  https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
+  <ExpressPlay customer authenticator identifier>
+  ```
 
 * **Exempelsvar:**
 
-   ```
-   https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 <!--<a id="section_1E22012EE4B94BB2974D3B16DE8812D9"></a>-->
 
-**Tabell 13: Parametrar för tokenfråga**
+**Tabell 13: Tokenfrågeparametrar**
 
 <table id="table_ww1_hcs_pv">  
  <thead> 
@@ -56,7 +55,7 @@ Denna HTTP-begäran returnerar en token som kan lösas in för en Widewin-licens
   </tr> 
   <tr> 
    <td> <span class="codeph"> errorFormat </span> </td> 
-   <td> Antingen <span class="codeph"> html </span> eller <span class="codeph"> json </span>. <p>If <span class="codeph"> html </span> (standardvärdet) en HTML-representation av eventuella fel anges i svarets entitetstext. If <span class="codeph"> json </span> anges returneras ett strukturerat svar i JSON-format. Se <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel </a> för mer information. </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list </span> om framgång, <span class="codeph"> text/html </span> for <span class="codeph"> html </span> felformat, eller <span class="codeph"> application/json </span> for <span class="codeph"> json </span> felformat. </p> </td> 
+   <td> Antingen <span class="codeph"> html </span> eller <span class="codeph"> json </span>. <p>If <span class="codeph"> html </span> (standard) en HTML-representation av eventuella fel tillhandahålls i svarets entitetstext. If <span class="codeph"> json </span> anges returneras ett strukturerat svar i JSON-format. Se <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-fel </a> för mer information. </p> <p>MIME-typen för svaret är antingen <span class="codeph"> text/uri-list </span> om framgång, <span class="codeph"> text/HTML </span> for <span class="codeph"> html </span> felformat, eller <span class="codeph"> application/json </span> for <span class="codeph"> json </span> felformat. </p> </td> 
    <td> Nej </td> 
   </tr> 
  </tbody> 
@@ -66,7 +65,7 @@ Denna HTTP-begäran returnerar en token som kan lösas in för en Widewin-licens
 
 | Frågeparameter | Beskrivning | Obligatoriskt? |
 |--- |--- |--- |
-| `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. &quot;0000&quot; är det enda tillåtna värdet | Nej |
+| `generalFlags` | En hexadecimal sträng på 4 byte som representerar licensflaggorna. 0000 är det enda tillåtna värdet | Nej |
 | `kek` | Nyckelkrypteringsnyckel (KEK). Tangenter lagras krypterade med en KEK med hjälp av en nyckelomslutningsalgoritm (AES Key Wrap, RFC3394). | Nej |
 | `kid` | En 16 byte hexadecimal strängbeteckning för innehållskrypteringsnyckeln eller en sträng `^somestring'`. Strängens längd följt av `^` får inte vara längre än 64 tecken. Anteckning nedan innehåller ett exempel. | Ja |
 | `ek` | En hexadecimal strängrepresentation av den krypterade innehållsnyckeln. | Nej |
@@ -75,15 +74,15 @@ Denna HTTP-begäran returnerar en token som kan lösas in för en Widewin-licens
 | `securityLevel` | Tillåtna värden är 1-5. <ul><li>1 = `SW_SECURE_CRYPTO`</li><li> 2 = `SW_SECURE_DECODE` </li><li> 3 = `HW_SECURE_CRYPTO` </li><li> 4 = `HW_SECURE_DECODE` </li><li> 5 = `HW_SECURE_ALL`</li></ul> | Ja |
 | `hdcpOutputControl` | Tillåtna värden är 0, 1, 2. <ul><li>0 = `HDCP_NONE` </li><li> 1 = `HDCP_V1` </li><li> 2 = `HDCP_V2`</li></ul> | Ja |
 | `licenseDuration` * | Licensens varaktighet i sekunder. Om den inte anges anges det att det inte finns någon begränsning av varaktigheten. Mer information finns i anteckningen nedan. | Nej |
-| `wvExtension` | Ett kort formulär som paketerar extensionType och extensionPayload, som en kommaavgränsad sträng. Se formatet nedan. Exempel: `…&wvExtension=wudo,AAAAAA==&…` | Nej, vilket tal som helst kan användas |
+| `wvExtension` | Ett kort formulär som omsluter extensionType och extensionPayload, som en kommaavgränsad sträng. Se formatet nedan. Exempel: `…&wvExtension=wudo,AAAAAA==&…` | Nej, alla tal kan användas |
 
-Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder efter uppspelningens början. </li><li> Om du vill tillåta att uppspelningen stoppas/återupptas under obegränsad tid utelämnar du `licenseDuration` (standard är oändlig). I annat fall anger du hur lång tid slutanvändarna ska kunna utnyttja strömmen. </li></ol>
+Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder efter uppspelningens början. </li><li> Om du vill tillåta att uppspelningen stoppas/återupptas under obegränsad tid utelämnar du `licenseDuration` (standardvärdet är oändligt). I annat fall anger du hur lång tid slutanvändarna ska kunna utnyttja strömmen. </li></ol>
 
 **Tabell 15: Frågeparametrar för tokenbegränsning**
 
 | Frågeparameter | Beskrivning | Obligatoriskt? |
 |--- |--- |--- |
-| `expirationTime` | Förfallotid för denna token. Detta värde MÅSTE vara en sträng i [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) datum-/tidsformat i zondesignern för Z (&quot;Zulu time&quot;) eller ett heltal föregånget av ett +-tecken. Ett exempel på ett RFC 3339-datum/tid är 2006-04-14T12:01:10Z. <br> Om värdet är en sträng i [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) datum-/tidsformat, representerar då ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av tecknet + tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. Till exempel: `+60` anger en minut. <br> Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. | Nej |
+| `expirationTime` | Förfallotid för denna token. Detta värde MÅSTE vara en sträng i [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) datum-/tidsformat i zondesignern för Z (&quot;Zulu time&quot;) eller ett heltal föregånget av ett +-tecken. Ett exempel på ett RFC 3339-datum/tid är 2006-04-14T12:01:10Z. <br> Om värdet är en sträng i [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) datum-/tidsformat, representerar då ett absolut förfallodatum/tid för token. Om värdet är ett heltal som föregås av ett +-tecken tolkas det som ett relativt antal sekunder, från utgivningen, att token är giltig. Till exempel: `+60` anger en minut. <br> Maximal token- och standardtokenlivstid (om inget anges) är 30 dagar. | Nej |
 
 **Tabell 16: Parametrar för korrelationsfråga**
 
@@ -139,7 +138,7 @@ Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> Otillräckliga tokens är tillgängliga </td> 
+   <td> Otillräckliga variabler tillgängliga </td> 
   </tr> 
   <tr> 
    <td> -2022 </td> 
@@ -151,11 +150,11 @@ Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Ogiltig varaktighet för uthyrning av uppspelning </td> 
+   <td> Ogiltig varaktighet för uthyrningsuppspelning </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> Innehållskrypteringsnyckeln måste vara 32-hexadecimala siffror lång </td> 
+   <td> Innehållskrypteringsnyckeln måste innehålla 32 hexadecimala siffror </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
@@ -255,7 +254,7 @@ Om `licenseDuration`: <ol><li> Uppspelningen avbryts `licenseDuration` sekunder 
   </tr> 
   <tr> 
    <td> -7007 </td> 
-   <td> Ogiltig licenslängd har angetts </td> 
+   <td> En ogiltig licenslängd har angetts </td> 
   </tr> 
   <tr> 
    <td> -7008 </td> 

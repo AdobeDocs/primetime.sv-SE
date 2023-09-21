@@ -1,8 +1,7 @@
 ---
 description: Registrera lämplig händelseavlyssnare om du vill få meddelanden om taggar i manifestet.
 title: Lägg till avlyssnare för tidsbestämda metadataaviseringar
-exl-id: 1df8a4fc-8368-4a80-8f8b-00c1207e6602
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -17,15 +16,15 @@ Du kan övervaka tidsbestämda metadata genom att avlyssna följande händelser 
 
 * `MediaPlayerItemEvent.ITEM_CREATED`: Den inledande listan med `TimedMetadata` objekt är tillgängliga efter `MediaPlayerItem` skapas.
 
-   Den här händelsen meddelar programmet när detta händer.
+  Den här händelsen meddelar programmet när detta händer.
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: För live-/linjära strömmar där manifestet/spellistan uppdateras regelbundet kan ytterligare anpassade taggar visas i den uppdaterade spellistan/manifestet, vilket innebär att ytterligare `TimedMetadata` kan läggas till i `MediaPlayerItem.timedMetadata` -egenskap.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: För live-/linjära strömmar där manifestet/spellistan uppdateras regelbundet kan ytterligare anpassade taggar visas i den uppdaterade spellistan/manifestet, så ytterligare `TimedMetadata` kan läggas till i `MediaPlayerItem.timedMetadata` -egenskap.
 
-   Den här händelsen meddelar programmet när detta händer.
+  Den här händelsen meddelar programmet när detta händer.
 
 * `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Varje gång en ny `TimedMetadata` -objektet skapas, den här händelsen skickas av MediaPlayer.
 
-   Den här händelsen skickas inte för `TimedMetadata` objekt som skapades under initieringsfasen.
+  Den här händelsen skickas inte för `TimedMetadata` objekt som skapades under initieringsfasen.
 
 1. Implementera lämpliga avlyssnare.
 

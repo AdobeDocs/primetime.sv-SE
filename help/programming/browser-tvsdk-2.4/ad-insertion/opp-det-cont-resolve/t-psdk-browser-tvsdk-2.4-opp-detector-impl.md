@@ -1,8 +1,7 @@
 ---
 description: Du kan implementera en egen generator för affärsmöjligheter genom att utöka gränssnittet för OpportunityGenerator.
 title: Implementera en generator för anpassade affärsmöjligheter
-exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

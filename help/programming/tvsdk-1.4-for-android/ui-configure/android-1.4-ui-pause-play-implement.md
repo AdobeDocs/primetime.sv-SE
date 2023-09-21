@@ -1,8 +1,7 @@
 ---
 description: Du kan lägga till TVSDK-beteende för att pausa och spela upp knappar.
 title: Spela upp och pausa en video
-exl-id: 62e77f50-5133-4db5-bf10-fde7d28e959d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -27,6 +26,6 @@ Du kan lägga till TVSDK-beteende för att pausa och spela upp knappar.
       void pause() throws IllegalStateException;
       ```
 
-1. Använd `MediaPlayer.PlaybackEventListener.onStateChanged` återanrop för att kontrollera om det finns fel eller för att vidta andra lämpliga åtgärder.
+1. Använd `MediaPlayer.PlaybackEventListener.onStateChanged` återanrop för att söka efter fel eller för att vidta andra lämpliga åtgärder.
 
    TVSDK anropar det här återanropet när pause- eller play-metoden anropas. TVSDK skickar information om lägesändringen i återanropet, inklusive det nya läget, som PAUSED eller PLAYING.

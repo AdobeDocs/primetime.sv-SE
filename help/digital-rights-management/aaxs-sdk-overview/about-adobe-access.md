@@ -2,8 +2,7 @@
 title: Om Adobe Access
 description: Om Adobe Access
 copied-description: true
-exl-id: fb994516-fcad-44a7-9cf0-44a7e3dd8fa1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Om Adobe Access {#about-adobe-access}
 
-Med Adobe Access kan rättighetsinnehavare och distributörer styra hur och var deras innehåll kan distribueras och användas, vilket ger ett komplett skydd under hela innehållets livscykel. Den krypterar FLV- och F4V-videofiler från Flash, som sedan kan direktuppspelas eller laddas ned till Microsoft® Windows®, Apple® Mac OS®, Linux® och Android®, och använder affärsmodeller som webbaserad videorethyrning. Konsumenterna kan njuta av högklassigt innehåll när de vill, online eller offline. Adobe Access erbjuder viktiga fördelar som innehållsägare och distributörer kan använda för att snabbt leverera nya tjänster som särskiljer dem från konkurrenterna.
+Med Adobe Access kan rättighetsinnehavare och distributörer styra hur och var deras innehåll kan distribueras och användas, vilket ger ett komplett skydd under hela innehållets livscykel. Den krypterar FLV- och F4V-videofiler i Flash, som sedan kan direktuppspelas eller laddas ned till Microsoft® Windows®, Apple® Mac OS®, Linux® och Android®, och använder affärsmodeller som hyrning av onlinevideo. Konsumenterna kan njuta av högklassigt innehåll när de vill, online eller offline. Adobe Access erbjuder viktiga fördelar som innehållsägare och distributörer kan använda för att snabbt leverera nya tjänster som särskiljer dem från konkurrenterna.
 
 Denna plattformsoberoende lösning kan integreras i befintliga fakturerings- och autentiseringssystem, vilket gör att rättighetsinnehavare och distributörer kan behålla kontrollen över ljud- och videoinnehåll oavsett hur brett det distribueras. Adobe Access skyddar och ger tryggare intäkter och ger flexibilitet att hantera hur och var skyddat innehåll används.
 

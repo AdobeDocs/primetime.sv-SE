@@ -1,8 +1,7 @@
 ---
 description: Annonsinfogningen åtgärdar annonser för video-on-demand (VOD), för liveströmning och för linjär direktuppspelning med annonsspårning och annonsuppspelning. TVSDK skickar de begärda förfrågningarna till annonsservern, tar emot information om annonser för det angivna innehållet och placerar annonserna i innehållet i faser.
 title: Infoga annonser
-exl-id: 4e5a4fe2-6887-48d0-b335-f3e99559dca8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -65,12 +64,12 @@ Här är några exempel på en snabb radbrytning:
 
 * Annonsens varaktighet vid vissa sportevenemang.
 
-   Även om en standardlängd anges måste annonsbrytningen avslutas om spelet återupptas innan pausen är slut.
+  Även om en standardlängd anges måste annonsbrytningen avslutas om spelet återupptas innan pausen är slut.
 * En nödsignal under en annonsbrytning i en liveström.
 
 Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad tagg i manifestet som kallas&quot;splice-in&quot; eller en cue-in-tagg. TVSDK tillåter att programmet prenumererar på dessa delningstaggar för att ge möjlighet till delning.
 
-* Så här använder du `#EXT-X-CUE-IN` tagga som en möjlighet att dela upp och implementera en snabb radbrytning:
+* Använd `#EXT-X-CUE-IN` tagga som en möjlighet att dela upp och implementera en snabb radbrytning:
 
    1. Prenumerera på taggen.
 
@@ -96,8 +95,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
       >
       >I följande kod antas att programmet har en implementering för `isCueInOpportunity` -metod.
       >
-      >
-      ```
+      >```
       >- (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
       >{ 
       >       if ([self isCueInOpportunity:timedMetadata]) 
@@ -110,6 +108,7 @@ Möjligheten att avsluta en annonsbrytning tidigt identifieras med en anpassad t
       >       } 
       >}
       >```
+      >
 
    1. Registrera den utökade affärsmöjlighetslösaren på `PTDefaultMediaPlayerClientFactory` -instans.
 

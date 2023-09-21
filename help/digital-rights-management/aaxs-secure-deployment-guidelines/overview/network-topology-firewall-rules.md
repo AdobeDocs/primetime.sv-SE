@@ -2,8 +2,7 @@
 title: Brandväggsregler
 description: Brandväggsregler
 copied-description: true
-exl-id: 5f560782-7b09-411a-8791-8d227bc4049b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -36,7 +35,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder klientAPI:er för Adobe Access för att utföra användarautentisering. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för användarautentisering. Den här URL:en måste vara tillgänglig endast om du använder Adobe Access-klient-API:er för att utföra användarautentisering. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -64,7 +63,7 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-40F0952F09674CA3B9AAFB5A62F9D02E"><span class="filepath"> /flashaccess/domain/v4</span> </li> 
      <li id="li-3ADE44B959B548F8A31A6FF08537AF46"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för domänregistrering. Den här URL:en måste vara tillgänglig endast om du implementerar domänstöd. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för domänregistrering. Den här URL:en måste vara tillgänglig endast om du implementerar domänstöd. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -73,15 +72,15 @@ Konfigurera den yttre brandväggen så att den endast visar URL:er för programf
      <li id="li-AB33657BC7E140E695767710DF7AEC72"><span class="filepath"> /flashaccess/dereg/v4</span> </li> 
      <li id="li-D15B32BCD4674269A3A2644DD5204707"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er för domänavregistrering. Den här URL:en måste vara tillgänglig endast om du implementerar domänstödet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för domänavregistrering. Den här URL:en måste vara tillgänglig endast om du implementerar domänstödet. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er som klienten kan använda för att konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Den här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL:er som klienten kan använda för att konvertera DRM-metadata för FMRMS 1.x till DRM-metadata för Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Denna URL måste använda SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för LiveCycle Rights Management ES webbtjänst. Om innehåll publicerades med en tidigare version av FMRMS tillåter den här URL:en att äldre klienter ansluter till servern och uppmanas att uppgradera till Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Den här URL:en måste använda SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL för LiveCycle Rights Management ES webbtjänst. Om innehåll publicerades med en tidigare version av FMRMS tillåter den här URL:en att äldre klienter ansluter till servern och uppmanas att uppgradera till Adobe Access. </p> <p class="- topic/p ">Obs! <i class="+ topic/ph hi-d/i ">Denna URL måste använda SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 

@@ -2,8 +2,7 @@
 title: Skapa en sekundär administratör
 description: Skapa en sekundär administratör
 copied-description: true
-exl-id: c3c58361-d173-425c-b59d-ab4427640cdf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -19,15 +18,15 @@ Kontoadministratören kan skapa en sekundär administratör. Det får bara finna
 
    * **[!UICONTROL Add user]**.
 
-      Om medarbetaren har ett Adobe-konto anger du e-postadressen. Klicka **[!UICONTROL Add]** och fortsätta.
+     Om medarbetaren har ett Adobe-konto anger du e-postadressen. Klicka **[!UICONTROL Add]** och fortsätta.
 
    * **[!UICONTROL Invite user]** Om medarbetaren inte har något Adobe-konto kan du bjuda in dem att skapa ett. Ange medarbetarens e-postadress och namn och klicka på **[!UICONTROL Send an invitation]**. Webbplatsen skickar en e-postinbjudan till den inbjudna. E-postmeddelandet innehåller en länk till adobe.com där mottagaren kan skapa ett konto. Mottagaren måste använda den e-postadress som inbjudan skickades till.
 
-      >[!NOTE]
-      >
-      >Administratören får inget meddelande när en användare har skapat ett konto. Kontrollera **[!UICONTROL User accounts]** på webbplatsen för certifikatregistrering för att se om en inbjudare har skapat ett konto.
+     >[!NOTE]
+     >
+     >Administratören får inget meddelande när en användare har skapat ett konto. Kontrollera **[!UICONTROL User accounts]** på webbplatsen för certifikatregistrering för att se om en inbjudare har skapat ett konto.
 
-1. Om du har lagt till en användare visas rollavsnittet i **[!UICONTROL User accounts]** -fliken öppnas. Gör följande:
+1. Om du har lagt till en användare visas skärmen för rollavsnittet i **[!UICONTROL User accounts]** -fliken öppnas. Gör följande:
 
    1. Kontrollera att användarens information är korrekt.
    1. Ange företagets telefonnummer och svarsfras.
@@ -65,4 +64,4 @@ Kontoadministratören kan skapa en sekundär administratör. Det får bara finna
 
    1. Klicka på Spara.
 
-      Användaren får ett e-postmeddelande om att registreringen av deras Primetime DRM-konto har slutförts.
+      Användaren får ett e-postmeddelande som anger att deras DRM-kontoregistrering för Primetime har slutförts.

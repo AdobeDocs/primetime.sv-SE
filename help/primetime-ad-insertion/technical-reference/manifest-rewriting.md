@@ -1,8 +1,7 @@
 ---
 title: Regler för omskrivning av manifest och annonshämtning
 description: Regler för omskrivning av manifest och annonshämtning
-exl-id: 3750abc1-da60-4faf-ba85-37914f33641f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Primetime Ad Insertion kan skriva om fragment och hämta resurser med hjälp av 
 
 Regler definieras som sökningar/ersättningar för reguljära uttryck och kan användas för att omforma URL:er innan de skickas samt efter att de har infogats i ett manifest.
 
-Den här exempelregeln konverterar alla annonsbegäranden till domain.com från https till http.
+Den här exempelregeln konverterar alla annonsförfrågningar till domain.com från https till http.
 
 ```
 find: "https://domain.com/(.*)"

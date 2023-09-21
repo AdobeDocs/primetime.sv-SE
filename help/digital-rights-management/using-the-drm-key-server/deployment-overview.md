@@ -1,9 +1,8 @@
 ---
-title: Distribuera översikten över Primetime DRM Key Server
-description: Distribuera översikten över Primetime DRM Key Server
+title: Distribuera en översikt över nyckelservern Primetime DRM
+description: Distribuera en översikt över nyckelservern Primetime DRM
 copied-description: true
-exl-id: d70e8315-ed35-4159-842b-5066a2b1c4f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 Innan du distribuerar nyckelservern Primetime DRM måste du kontrollera att du har installerat de nödvändiga versionerna av Java och Tomcat. Se, [DRM-serverkrav](../../digital-rights-management/using-the-drm-key-server/requirements.md).
 
-Nedladdningen av Primetime DRM Key Server innehåller [!DNL faxsks.war]. Om du vill distribuera WAR-filen kopierar du filen till Tomcat&#39;s [!DNL webapps] katalog. Om du tidigare har distribuerat WAR-filen kan du behöva ta bort den opackade WAR-katalogen manuellt, [!DNL faxsks] på Tomcat&#39;s [!DNL webapps] katalog). Om du vill förhindra att Tomcat packar upp WAR-filer redigerar du [!DNL server.xml] fil i Tomcat&#39;s [!DNL conf] och ange `unpackWARs` attribut till `false`.
+Nedladdningen av Primetime DRM Key Server innehåller [!DNL faxsks.war]. Om du vill distribuera WAR-filen kopierar du filen till Tomcat&#39;s [!DNL webapps] katalog. Om du tidigare har distribuerat WAR-filen kan du behöva ta bort den opackade WAR-katalogen manuellt, [!DNL faxsks] på Tomcat&#39;s [!DNL webapps] ). Om du vill förhindra att Tomcat packar upp WAR-filer redigerar du [!DNL server.xml] fil i Tomcat&#39;s [!DNL conf] och ange `unpackWARs` attribut till `false`.
 
 Primetimes DRM-nyckelserver har ett plattformsspecifikt bibliotek (`jsafe.dll` i Windows eller `libjsafe.so` i Linux) för bättre prestanda. Kopiera rätt bibliotek för din plattform från `thirdparty/cryptoj/platform` till en plats som anges av `PATH` miljövariabel (eller `LD_LIBRARY_PATH` i Linux).
 
@@ -24,7 +23,7 @@ Primetimes DRM-nyckelserver har ett plattformsspecifikt bibliotek (`jsafe.dll` i
 
 ## SSL-konfiguration {#ssl-configuration}
 
-SSL krävs för fjärradministration av HTTPS-nyckel. SSL-anslutningarna kan hanteras av programservern (d.v.s. genom att konfigurera SSL i Tomcat) eller hanteras på en annan server (d.v.s. en belastningsutjämnare, SSL-accelerator eller Apache). Fjärradministration av HTTPS-nycklar kräver en SSL-anslutning. Servern behöver ett SSL-certifikat som har utfärdats av en betrodd certifikatutfärdare.
+SSL krävs för fjärradministration av HTTPS-nycklar. SSL-anslutningarna kan hanteras av programservern (d.v.s. genom att konfigurera SSL i Tomcat) eller hanteras på en annan server (t.ex. en belastningsutjämnare, SSL-accelerator eller Apache). Fjärradministration av HTTPS-nycklar kräver en SSL-anslutning. Servern behöver ett SSL-certifikat som har utfärdats av en betrodd certifikatutfärdare.
 
 Det finns många alternativ för att konfigurera SSL. Nedan visas exempel på hur SSL konfigureras med klientautentisering i Apache och Tomcat.
 
@@ -85,7 +84,7 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Primetime DRM-autentiseringsuppgifter {#primetime-drm-credentials}
 
-Om du vill bearbeta nyckelbegäranden från Primetime DRM iOS- och Xbox 360-klienter måste Primetime DRM Key Server konfigureras med en uppsättning autentiseringsuppgifter som utfärdats av Adobe. Dessa autentiseringsuppgifter kan antingen lagras i PKCS#12 ( [!DNL .pfx]) eller på en HSM.
+Om du vill bearbeta nyckelbegäranden från Primetime DRM iOS- och Xbox 360-klienter måste Primetimes DRM-nyckelserver konfigureras med en uppsättning autentiseringsuppgifter som utfärdats av Adobe. Dessa autentiseringsuppgifter kan antingen lagras i PKCS#12 ( [!DNL .pfx]) eller på en HSM.
 
 The [!DNL .pfx] filer kan finnas var som helst, men för att underlätta konfigurationen rekommenderar Adobe att du placerar [!DNL .pfx] filer i klientens konfigurationskatalog. Mer information finns i [Konfigurationsfiler för nyckelservrar](#key-server-configuration-files).
 
@@ -100,7 +99,7 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Om du ser dina inloggningsuppgifter i listan är HSM korrekt konfigurerat och nyckelservern kan komma åt inloggningsuppgifterna.
+Om du ser dina autentiseringsuppgifter i listan är HSM korrekt konfigurerat och nyckelservern kan komma åt autentiseringsuppgifterna.
 
 ## Konfigurationsfiler för nyckelservrar {#key-server-configuration-files}
 
@@ -145,7 +144,7 @@ Du kan ange alla filsökvägar i klientkonfigurationsfilen som antingen absoluta
 
 Alla klientkonfigurationsfiler innehåller:
 
-* Nyckelserverautentiseringsuppgifter - Anger en eller flera nyckelserverautentiseringsuppgifter (certifikat och privat nyckel) som utfärdas av Adobe. Kan anges som en sökväg till en [!DNL .pfx] fil och ett lösenord eller ett alias för en referens som lagras på en HSM. Flera sådana autentiseringsuppgifter kan anges här, antingen som filsökvägar, nyckelalias eller både och.
+* Nyckelserverautentiseringsuppgifter - Anger en eller flera nyckelserverautentiseringsuppgifter (certifikat och privat nyckel) som utfärdas av Adobe. Kan anges som en sökväg till en [!DNL .pfx] fil och ett lösenord eller ett alias för en autentiseringsuppgift som lagras på en HSM. Flera sådana autentiseringsuppgifter kan anges här, antingen som filsökvägar, nyckelalias eller både och.
 
 The **iOS** Klientkonfigurationsfilen innehåller:
 

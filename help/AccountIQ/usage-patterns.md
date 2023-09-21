@@ -1,8 +1,7 @@
 ---
 title: Användningsmönster
-description: Visa kontodelningsbeteende för olika användartypologier.
-exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
-source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
+description: Visa kontodelningsbeteende för olika typer av användare.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Användningsmönster {#usage-patterns}
 
-Med konto-IQ delas abonnentkontots användare in i olika kategorier utifrån deras sociala beteende, t.ex. resenärer eller datorer, stora familjer och communitydelning. The **Användningsmönster** på sidan visas flera olika analyser och rapporter för dessa användartypologier. Till exempel: **Distribution av användningsmönster - användare i segment kontra totalt** rapporten jämför hur det aktuella segmentet används och hela branschen.
+Med konto-IQ delas abonnentkontots användare in i olika kategorier utifrån deras sociala beteende, t.ex. resenärer eller datorer, stora familjer och communitydelning. The **Användningsmönster** på sidan visas flera olika analyser och rapporter för dessa användartypologier. Till exempel: **Distribution av användningsmönster - användare i segment kontra totalt** rapporten jämför hur det aktuella segmentet används och hur hela branschen fungerar.
 
 Analyserna och rapporterna baseras på det aktuella segmentet enligt definitionen i [segmentpanel](/help/AccountIQ/segments-timeframe.md).
 
@@ -23,11 +22,11 @@ Stolpdiagrammet i **Distribution av användningsmönster - Användare i segment 
 
 ## Fördelning av användningsmönster i segment (#usage-pattern-dis-segment)
 
-The **Distribution av användningsmönster i segment** I visas följande information för varje användarmönster:
+The **Distribution av användningsmönster i segment** visas följande information för varje användarmönster i en tabell:
 
-* Sannolikhetsintervall för delning som de enskilda kontona hamnar i
+* Sannolikhetsintervall för delning som de enskilda kontona tillhör
 * Antal och procentandel konton i mönstret
-* Generell och procentuell användning av prenumeranter i den kategorin i fråga om uppspelningsförfrågningar
+* Generell och procentuell användning av prenumeranter i den kategorin i fråga om uppspelningsbegäranden
 
 ![](assets/usage-pattern-segmentwise.png)
 

@@ -1,8 +1,7 @@
 ---
 description: Du kan använda TVSDK för att hämta information om media som du kan visa i sökfältet.
 title: Visa videons varaktighet, aktuella tid och återstående tid
-exl-id: 58288501-7d61-4cf3-ae62-d92b83c73a58
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
@@ -38,7 +37,7 @@ Du kan använda TVSDK för att hämta information om media som du kan visa i sö
 
       För en linjär/liveresurs representerar intervallet uppspelningsfönstret och det här intervallet ändras under uppspelningen.
 
-      TVSDK ringer `onUpdated` återanrop som anger att medieobjektet uppdaterades och att dess attribut (inklusive uppspelningsintervallet) uppdaterades.
+      TVSDK ringer din `onUpdated` återanrop som anger att medieobjektet uppdaterades och att dess attribut (inklusive uppspelningsintervallet) uppdaterades.
 
 1. Använd de metoder som finns på `MediaPlayer` och `SeekBar` klass som är allmänt tillgänglig i Android SDK för att ställa in sökfältsparametrarna.
 

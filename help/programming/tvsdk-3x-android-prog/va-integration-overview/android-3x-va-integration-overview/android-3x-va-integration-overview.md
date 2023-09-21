@@ -1,8 +1,7 @@
 ---
 description: Du kan spåra videoanvändning genom att integrera TVSDK med Adobe Analytics.
 title: Integrera TVSDK med Adobe Analytics
-exl-id: d6e235ad-dffb-4503-bf6f-f7a780523791
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%

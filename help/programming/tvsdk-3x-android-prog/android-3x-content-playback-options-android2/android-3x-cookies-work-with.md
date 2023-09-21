@@ -1,8 +1,7 @@
 ---
 description: Du kan använda TVSDK för att skicka godtyckliga data i cookie-rubriker för sessionshantering, åtkomst till portar och så vidare.
 title: Arbeta med cookies
-exl-id: 7f0e7d77-0718-4df7-8380-0e9351f588bc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
@@ -58,7 +57,7 @@ Så här arbetar du med cookies:
 
    Om ett cookie-värde behöver uppdateras senare under uppspelningen anropar du samma tilläggsmetod för CookieStore med samma nyckel och ett nytt värdefält.
 
-   Även angiven
+   Även inställd
    `networkConfiguration.setReadSetCookieHeader`(false) före anrop
    `config.setNetworkConfiguration(networkConfiguration)`
 

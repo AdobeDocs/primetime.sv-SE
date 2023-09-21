@@ -1,8 +1,7 @@
 ---
 description: Skapa en instans av en MediaPlayer och placera en vy av den i en bildrutelayout.
 title: Konfigurera MediaPlayer
-exl-id: e8fb6527-154b-4f7e-a128-525b5a3b3474
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
@@ -15,13 +14,13 @@ TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din P
 
 Skapa en instans av en MediaPlayer och placera en vy av den i en bildrutelayout.
 
-1. Instansiera `MediaPlayer`, skicka ett `android.content.Context` objekt till konstruktorn:
+1. Skapa `MediaPlayer`, skicka ett `android.content.Context` objekt till konstruktorn:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Ange en ramlayout ( `android.widget.FrameLayout`) för att hålla `ViewGroup` av `mediaPlayer`:
+1. Ange en ramlayout ( `android.widget.FrameLayout`) för att `ViewGroup` av `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);

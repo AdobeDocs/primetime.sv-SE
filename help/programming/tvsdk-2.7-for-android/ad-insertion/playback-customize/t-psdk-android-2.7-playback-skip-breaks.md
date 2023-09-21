@@ -1,8 +1,7 @@
 ---
 description: Som standard tvingar TVSDK en annonsbrytning att spelas upp när användaren söker över en annonsbrytning. Du kan anpassa beteendet för att hoppa över en annonsbrytning om tiden som gått från en tidigare avbruten brytning är inom ett visst antal minuter.
 title: Hoppa över annonsbrytningar under en tidsperiod
-exl-id: 13e34c05-2c43-4459-88ec-5c6cfa8c363d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -22,16 +21,16 @@ Om du vill åsidosätta TVSDK-standardbeteendet för annonsradbrytningar kan du 
 * SPELA
 * HOPPA
 
-   >[!NOTE]
-   >
-   >Det är inte säkert att policyn för SKIP-annonsbrytning fungerar som förväntat för liveströmmar när det finns en annons vid direktpunkten. För en förregistrering kommer till exempel SKIP att orsaka en sökning till slutet av annonsbrytningen, som kan vara större än direktpunkten. I det här fallet kan TVSDK söka mitt i en annons.
+  >[!NOTE]
+  >
+  >Det är inte säkert att policyn för SKIP-annonsbrytning fungerar som förväntat för liveströmmar när det finns en annons vid direktpunkten. För en förregistrering kommer till exempel SKIP att orsaka en sökning till slutet av annonsbrytningen, som kan vara större än direktpunkten. I det här fallet kan TVSDK söka mitt i en annons.
 
 * REMOVE_AFTER
 * TA BORT
 
-   >[!NOTE]
-   >
-   >The `REMOVE` principen för annonsbrytning är nedgraderad. Adobe rekommenderar att du använder `SKIP` och ersättningspolicy istället för `REMOVE`.
+  >[!NOTE]
+  >
+  >The `REMOVE` principen för annonsbrytning är nedgraderad. Adobe rekommenderar att du använder `SKIP` och ersättningspolicy istället för `REMOVE`.
 
 Följande exempel på en anpassad annonsprincipväljare hoppar över annonser inom de kommande fem minuterna (väggklocka) efter att en användare har tittat på en annonsbrytning.
 

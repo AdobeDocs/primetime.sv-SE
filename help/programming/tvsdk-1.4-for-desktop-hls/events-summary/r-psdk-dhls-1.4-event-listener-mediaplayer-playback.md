@@ -1,8 +1,7 @@
 ---
 description: Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga tillstånd genom att avlyssna händelser som skickas av TVSDK.
 title: Uppspelningshändelser
-exl-id: 9fb77b57-be6c-4dab-b779-d8c606938e46
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Programmet kan övervaka aktiviteten i spelaren och spelarens föränderliga tillstånd genom att avlyssna händelser som skickas av TVSDK.
 
-TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp. Om du vill få meddelanden om alla uppspelningsrelaterade händelser registrerar du avlyssnare med `MediaPlayer` -objekt för följande händelser.
+TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, till exempel när en video börjar spelas upp. Registrera avlyssnare med `MediaPlayer` -objekt för följande händelser.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -73,7 +72,7 @@ TVSDK skickar uppspelningshändelser när medieuppspelningsåtgärder utförs, t
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> MediaPlayerItem-händelse.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Ett nytt textningsspår har identifierats i medieströmmen och <span class="codeph"> closedCaptionsTracks</span> samlingen har uppdaterats. </td> 
+   <td colname="2">Ett nytt undertextningsspår har identifierats i medieströmmen och <span class="codeph"> closedCaptionsTracks</span> samlingen har uppdaterats. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Manifest och Timeline</b> </td> 

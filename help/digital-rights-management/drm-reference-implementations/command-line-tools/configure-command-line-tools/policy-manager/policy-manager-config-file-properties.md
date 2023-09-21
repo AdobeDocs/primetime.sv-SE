@@ -3,8 +3,7 @@ keywords: hård stopp
 title: Konfigurationsegenskaper
 description: Konfigurationsegenskaper
 copied-description: true
-exl-id: f88c57d6-d951-4d7a-8de1-44cd1aa8e5f7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 0%
@@ -79,7 +78,7 @@ ht-degree: 0%
      <li class="- topic/li " id="li_2DE0494AF8C446EB9E4567915F5E97C3"><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE</span> </li> 
      <li class="- topic/li " id="li_207D2D6256D6423FBDABA7A8627A9B7D"><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE_ACP</span> </li> 
      <li class="- topic/li " id="li_E17D944BED5F403FAE94708EE6AE4BBE"><span class="+ topic/ph pr-d/codeph codeph"> USE_IF_AVAILABLE_CGMSA</span> </li> 
-     <li class="- topic/li " id="li_66D5A0C8FE154445A522D91EFB05B7ED"><span class="+ topic/ph pr-d/codeph codeph"> OBLIGATORISKT</span> </li> 
+     <li class="- topic/li " id="li_66D5A0C8FE154445A522D91EFB05B7ED"><span class="+ topic/ph pr-d/codeph codeph"> KRÄVS</span> </li> 
      <li class="- topic/li " id="li_AF2024F212A249ED99AEECCF3E844A11"><span class="+ topic/ph pr-d/codeph codeph"> REQUIRED_ACP</span> </li> 
      <li class="- topic/li " id="li_FFF9B7DAE77740EE895EC35D1606A527"><span class="+ topic/ph pr-d/codeph codeph"> REQUIRED_CGMSA</span> </li> 
      <li class="- topic/li " id="li_52DED572F3AE495EB6A6450C611B440E"><span class="+ topic/ph pr-d/codeph codeph"> NO_PLAYBACK</span> </li> 
@@ -99,7 +98,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> <i class="+ topic/ph hi-d/i ">namn/värde-par</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger hur ofta klienter måste skicka synkroniseringsmeddelanden till servern. </p> <p>Om egenskapen inte är inställd skickar klienterna inte synkroniseringsmeddelanden när de spelar upp innehåll som är skyddat med en DRM-princip. Värdet består av kommaavgränsade <span class="codeph"> name=value</span> par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force=numberValue</span> </p> <p class="- topic/p ">Följande lista innehåller ytterligare information om alternativen: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger hur ofta klienter måste skicka synkroniseringsmeddelanden till servern. </p> <p>Om egenskapen inte är inställd kommer klienterna inte att skicka synkroniseringsmeddelanden när de spelar upp innehåll som är skyddat med en DRM-princip. Värdet består av kommaavgränsade <span class="codeph"> name=value</span> par i följande format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force=numberValue</span> </p> <p class="- topic/p ">Följande lista innehåller ytterligare information om alternativen: 
      <ul id="ul_a5j_q4t_44"> 
       <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(obligatoriskt) <span class="codeph"> start</span> anger att klienten måste starta synkroniseringen med servern under de angivna minuterna sedan den senaste synkroniseringen. </li> 
       <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(valfritt) <span class="codeph"> force</span> är sannolikheten (0-100) med vilken klienten måste framtvinga ett synkroniseringsmeddelande under uppspelning. </li> 
@@ -155,7 +154,7 @@ ht-degree: 0%
      <ul id="ul_wsb_kfp_fs"> 
       <li id="li_FE012306F22F4F3FB981FE167C7A8B94"><span class="codeph"> NO_PROTECTION</span> </li> 
       <li id="li_A5591DC8983848FE9823C2A261BF7713"><span class="codeph"> USE_IF_AVAILABLE</span> </li> 
-      <li id="li_74102C36ADE841C4B9ED71156E0A4C2C"><span class="codeph"> OBLIGATORISKT</span> </li> 
+      <li id="li_74102C36ADE841C4B9ED71156E0A4C2C"><span class="codeph"> KRÄVS</span> </li> 
       <li id="li_769E15C85B4E4DD48213DBD019D60BA7"><span class="codeph"> NO_PLAYBACK</span> </li> 
      </ul> </p> </td> 
   </tr> 
@@ -183,7 +182,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Tillåtelselista i andra program än Flash (Adobe AIR, iOS, Android osv.) som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">En tillåtelselista med andra program än Flash (Adobe AIR, iOS, Android osv.) som kan spela upp skyddat innehåll. Egenskapen måste ha följande format: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 

@@ -1,8 +1,7 @@
 ---
 description: Medieuppspelningens beteende påverkas av sökning, pausning, snabb framåtspolning eller tillbakaspolning (trickläge) och inkludering av annonsering.
 title: Standardbeteende och anpassat uppspelningsbeteende med annonser
-exl-id: 56544683-28a3-4720-bfd8-946cb09880aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -37,7 +36,7 @@ I följande tabell beskrivs hur Browser TVSDK hanterar annonser och annonsbrytni
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> För live/linjärt spelas annonsbrytningen upp, även om annonsbrytningen redan har bevakats. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">För VOD spelas annonsbrytningen upp och annonsbrytningen markeras som bevakad. </li> 
     </ul> </td> 
-   <td colname="col3">Ange en annan princip för annonsbrytningen med <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Ange en annan princip för annonsbrytningen genom att använda <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Ditt program söker fram över annonsbrytningar till huvudinnehållet. </td> 
@@ -57,7 +56,7 @@ I följande tabell beskrivs hur Browser TVSDK hanterar annonser och annonsbrytni
   <tr> 
    <td colname="col1"> Ditt program söker bakåt i en annonsbrytning. </td> 
    <td colname="col2"> Spelar upp från början av den annons där sökningen avslutades. </td> 
-   <td colname="col3">Ange en annan annonspolicy för annonsbrytningen och för den specifika annons som sökningen avslutades med <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">Ange en annan annonspolicy för annonsbrytningen och för den specifika annonsen där sökningen avslutades med hjälp av <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Programmet söker framåt eller bakåt över bevakade annonsbrytningar till huvudinnehållet. </td> 

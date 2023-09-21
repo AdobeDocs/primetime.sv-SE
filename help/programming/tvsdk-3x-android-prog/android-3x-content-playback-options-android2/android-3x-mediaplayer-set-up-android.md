@@ -1,8 +1,7 @@
 ---
 description: TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din Primetime-spelare) som du kan integrera med andra Primetime-komponenter. Den innehåller även ett antal funktioner som utformats för att maximera videouppspelningskvaliteten.
 title: Konfigurera mediespelaren
-exl-id: 99fdc4c1-0c67-4de5-87a5-b42d76f43ae9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -17,13 +16,13 @@ TVSDK innehåller verktyg för att skapa ett avancerat videospelarprogram (din P
 
 Instansiera en `MediaPlayer` och montera en vy av den i en ramlayout.
 
-1. Instansiera `MediaPlayer`, skicka ett `android.content.Context` objekt till konstruktorn:
+1. Skapa `MediaPlayer`, skicka ett `android.content.Context` objekt till konstruktorn:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Ange en ramlayout ( `android.widget.FrameLayout`) för att hålla `ViewGroup` av `mediaPlayer`:
+1. Ange en ramlayout ( `android.widget.FrameLayout`) för att `ViewGroup` av `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);

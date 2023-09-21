@@ -2,8 +2,7 @@
 title: Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll
 description: Tillåtelselista för Adobe® Primetime-program som kan spela upp skyddat innehåll
 copied-description: true
-exl-id: 56004a0f-118c-42f3-869b-2cc1c91ee544
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -18,4 +17,4 @@ Exempel: Använd den här regeln om du vill begränsa uppspelningen till ett vis
 
 >[!NOTE]
 >
->Om du använder Adobe Flash Builder för att skapa skyddade program ska du se till att du inte distribuerar programmet i felsökningsläge. När du distribuerar ett program i felsökningsläge lägger Flash Builder till .debug i AIR program-ID. Detta kommer att få tillåtelselista i Adobe Access att uppträda oväntat.
+>Om du använder Adobe Flash Builder för att skapa skyddade program måste du se till att du inte distribuerar programmet i felsökningsläge. När du distribuerar ett program i felsökningsläge kommer Flashen Builder att lägga till&quot;.debug&quot; till AIR program-ID. Detta kommer att få tillåtelselista i Adobe Access att uppträda oväntat.

@@ -2,8 +2,7 @@
 title: Information om NATIVE_ERROR-meddelandet
 description: Information om NATIVE_ERROR-meddelandet
 copied-description: true
-exl-id: 2b75d1ef-bfac-4e2e-a2e8-ee40b25eb8b3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -26,7 +25,7 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
    <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
    <td colname="col2"> 
     <pre>
-      Inbyggd felkod från Flash Player. 
+      Inbyggd felkod från Flashen Player. 
     </pre> Dessa koder representerar följande: 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
      <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM-fel (koderna 3300 till 3367). Detta är samma som motsvarande felkoder för Flash Player. </li> 
@@ -36,11 +35,11 @@ När TVSDK hanterar ett systemspecifikt fel anges några eller alla följande me
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE </span> </td> 
-   <td colname="col2"> En sträng som innehåller felets namn; till exempel <span class="codeph"> AAXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col2"> En sträng som innehåller felets namn, till exempel <span class="codeph"> AAXS_InvalidVoucher </span> eller <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar <span class="codeph"> DRMErrorEvents </span> suberror-kod som returneras av Flash Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
+   <td colname="col2"> För DRM-fel returneras även underfelkoder. Dessa koder motsvarar <span class="codeph"> DRMErrorEvents </span> suberror-kod som returneras av Flashen Player. När du rapporterar fel till Adobe ska du inkludera det här numeriska värdet för felsökningshjälp. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 

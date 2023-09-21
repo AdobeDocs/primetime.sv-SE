@@ -1,8 +1,7 @@
 ---
 title: Stöd för enkel inloggning
 description: Stöd för enkel inloggning
-exl-id: edc3719e-c627-464c-9b10-367a425698c6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -15,11 +14,11 @@ ht-degree: 0%
 >
 >Innehållet på den här sidan tillhandahålls endast i informationssyfte. Användning av denna API kräver en aktuell licens från Adobe. Ingen obehörig användning är tillåten.
 
-## Översikt {#overview-sso-support}
+## Ökning {#overview-sso-support}
 
 Det här dokumentet beskriver de typer av enkel inloggning som stöds och drivs av Adobe Primetime-autentisering på olika plattformar. Det här dokumentets omfattning är att förklara vad som stöds och vad som inte stöds, vad som omfattas av MVPD för varje SSO-metod och vad som krävs av programmerarna för att kunna utnyttja enkel inloggning på varje plattform.
 
-När en användare har loggat in med sina MVPD-autentiseringsuppgifter, genererar Adobe Primetime-autentiseringen en säker token som representerar MVPD:s autentiseringssession och binder denna token till användarens enhet med ett enhets-ID. Adobe Primetime-autentisering lagrar token/enhets-ID antingen på en server eller på enheten. Detta gör att användare kan ange sina inloggningsuppgifter mindre ofta samtidigt som transaktionerna skyddas.
+När en användare har loggat in med sina MVPD-autentiseringsuppgifter, genererar Adobe Primetime-autentiseringen en säker token som representerar MVPD:s autentiseringssession och binder denna token till användarens enhet med ett enhets-ID. Adobe Primetime-autentisering lagrar token/enhets-ID antingen på en server eller på enheten. Detta gör att användare kan ange sina inloggningsuppgifter mindre ofta samtidigt som transaktionerna är säkra.
 
 >[!NOTE]
 >
@@ -30,15 +29,15 @@ När en användare har loggat in med sina MVPD-autentiseringsuppgifter, generera
 | Plattform/enhet | SSO-stöd | SSO-typ | MVPD-täckning | Anteckningar |
 |:-------------------:|:-----------:|:---------------------------------------:|-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Webb (JavaScript) | Ja | Token för delad autentisering (Adobe SSO) | Alla | Ingen SSO för flera webbläsare Följ instruktionerna i Programmer Integration Guide for JavaScript. När du följer instruktionerna aktiveras enkel inloggning som standard.  Aktivering av autentisering per begärande avbryter enkel inloggning |
-| iOS | Ja | Plattforms-SSO - tokenutbyte | Beroende på Apple support - listan är här | Från och med iOS 10 har Apple och Adobe infört SSO-funktioner för deltagande programmerare och programmerare. Genom att använda den senaste Adobe iOS SDK eller genom att använda Adobe klientless REST API och implementera Apple SSO-funktionen kan du dra nytta av enkel inloggning på iOS-enheter. Mer information om SDK-implementering här och mer information om klientlös implementering här. Extra anmärkningar: - Om du inte vill använda Apple SSO kan du fortfarande ha en begränsad enkel inloggning mellan appar från samma leverantör (samma paket-ID) som kan dela lagringsutrymme och ett ID (IDFV) - så enkel inloggning är begränsad till appar från samma leverantör. |
+| iOS | Ja | Plattforms-SSO - tokenutbyte | Beroende på Apple support - listan är här | Från och med iOS 10 har Apple och Adobe infört SSO-funktioner för deltagande programmerare och programmerare. Genom att använda den senaste Adobe iOS SDK eller genom att använda Adobe klientless REST API och implementera Apple SSO-funktionen kan du dra nytta av enkel inloggning på iOS-enheter. Mer information om SDK-implementering här och mer information om klientlös implementering här. Extra noteringar: - Om du inte vill använda Apple SSO kan du fortfarande ha en begränsad enkel inloggning mellan appar från samma leverantör (samma paket-ID) som kan dela lagringsutrymme och ett ID (IDFV) - så enkel inloggning är begränsad till appar från samma leverantör. |
 | Android | Ja | Token för delad autentisering (Adobe SSO) | Alla | Om användaren inte accepterar behörighetsförfrågan WRITE_EXTERNAL_STORAGE kommer biblioteket att använda en lokal sandlådelagring. I det här fallet beror det på att det inte kommer att finnas någon enkel inloggning mellan olika program när du använder den lokala lagringen. |
 | tvOS - ny Apple TV | Ja | Plattforms-SSO - tokenutbyte | Beroende på Apple support - listan är här | Från och med tvOS 10 introducerade Apple och Adobe SSO-funktioner för programmerare och programmerare som deltar. Genom att använda den senaste Adobe tvOS SDK eller genom att använda Adobe klientless REST API och implementera Apple SSO-funktionen kan du dra nytta av enkel inloggning på tvOS-enheter. Mer information om tvOS SDK: här och här och mer information om klientlös implementering här. |
 | Roku | Ja | Token för delad autentisering (Adobe SSO) | Avsevärd fullständig lista över täckning kommer snart. | Roku SSO fungerar direkt med det klientlösa API:t för alla kunder som respekterar Roku-riktlinjerna, utan någon särskild implementering. SSO baseras på enhetsidentifieringsinformation som Roku skickar säkert till Adobe. |
 | Amazon FireTV | Ja | Token för delad autentisering (Adobe SSO) | Avsevärd fullständig lista över täckning kommer snart. | FireTV SDK har stöd för enkel inloggning baserat på Android-funktioner. SSO på den här plattformen är bara möjligt mellan appar som använder Adobe FireTV SDK för tillfället. Mer information om nya FireTV SDK här. FireTV-appar som implementeras ovanpå klientlöst API kan dra nytta av enkel inloggning senast vid EOY 2018. |
-| Xbox 360 | Nej |  |  | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
-| Xbox One | Nej |  |  | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
-| Windows 8/10 | Nej |  |  | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
-| Samsung TV | Nej |  |  | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
+| Xbox 360 | Nej |                                         |                                                     | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
+| Xbox One | Nej |                                         |                                                     | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
+| Windows 8/10 | Nej |                                         |                                                     | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
+| Samsung TV | Nej |                                         |                                                     | Det finns inget enhets-ID som kan utnyttjas. Det finns ett program-ID, så användarna behöver inte autentisera varje gång. |
 
 ### Anteckningar på Xbox 360 och Xbox One {#notes-xbox-360}
 
@@ -56,7 +55,7 @@ I vissa situationer kan vissa appar eller webbplatser behöva inaktivera enkel i
 
 >[!IMPORTANT]
 >
->VIKTIG ANMÄRKNING FÖR KLIENTLESS API SSO: Vissa MVPD-program kräver att varje nätverk (begärande-ID) utför ett eget autentiseringsflöde. För SDK-baserade flöden (iOS osv.) hanteras detta automatiskt av SDK:n. För klientlösa API:er måste dock detta hanteras av programmeraren. Vi rekommenderar varmt att programmerare inte aktiverar SSO-flöden för klientlösa API:er i det här läget och i stället använder en kombination av enhets-ID och program-ID för enhets-ID. Adobe kommer också att arbeta med att förbättra sina klientlösa API-flöden så att rätt enkel inloggning kan upprättas.
+>VIKTIG ANMÄRKNING FÖR KLIENTLESS API SSO: Vissa MVPD-program kräver att varje nätverk (begärande-ID) utför sitt eget autentiseringsflöde. För SDK-baserade flöden (iOS osv.) hanteras detta automatiskt av SDK:n. För klientlösa API:er måste dock detta hanteras av programmeraren. Vi rekommenderar varmt att programmerare inte aktiverar SSO-flöden för klientlösa API:er i det här läget och i stället använder en kombination av enhets-ID och program-ID för enhets-ID. Adobe kommer också att arbeta med att förbättra sina klientlösa API-flöden så att rätt enkel inloggning kan upprättas.
 
 ### Utloggning {#logout-sso-support}
 

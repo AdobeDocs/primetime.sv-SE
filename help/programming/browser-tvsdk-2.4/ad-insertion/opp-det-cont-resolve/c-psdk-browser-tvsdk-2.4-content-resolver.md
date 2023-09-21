@@ -1,15 +1,14 @@
 ---
 description: En affärsmöjlighetsdetektor är en Browser TVSDK-komponent som identifierar anpassade taggar i en ström och identifierar placeringsmöjligheter. Dessa möjligheter skickas till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 title: Anpassa affärsmöjlighetsdetektorer och innehållslösningar
-exl-id: 1866ed53-acfc-45d3-941e-0ed171aa038b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
-# Översikt {#customize-opportunity-detectors-and-content-resolvers-overview}
+# Ökning {#customize-opportunity-detectors-and-content-resolvers-overview}
 
 En affärsmöjlighetsdetektor är en Browser TVSDK-komponent som identifierar anpassade taggar i en ström och identifierar placeringsmöjligheter. Dessa möjligheter skickas till innehållslösaren, som anpassar arbetsflödet för infogning av innehåll/annonser baserat på placeringsmöjlighetens egenskaper och metadata.
 

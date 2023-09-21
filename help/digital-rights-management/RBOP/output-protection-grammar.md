@@ -1,8 +1,7 @@
 ---
 description: I det här avsnittet beskrivs grammatiken för konfigurationsindata, med betoning på giltiga och ogiltiga indataalternativ och hur utelämnade valfria fält tolkas.
 title: RBOP-grammatik
-exl-id: 311194ec-e59b-4145-b22b-6983e212fcab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -31,7 +30,7 @@ AnotherRule ::=
 >
 >För att förbättra läsbarheten för grammatiken återspeglas följande egenskaper inte i grammatiken, men de har fortfarande värdet true:
 
-1. Ordningen på de par som definieras inom objekten är inte fast. Alla permutationer av paren är alltså giltiga.
+1. Ordningen på paren som definieras i objekten är inte fast, vilket innebär att all permutation i paren är giltig.
 
    Om vi till exempel har definierat ett objekt som detta:
 
@@ -111,7 +110,7 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   betyder att en instans av `Foo` kan ersättas med &quot;A&quot;, &quot;B&quot; eller &quot;C&quot;. Detta ska inte blandas ihop med ett formulär som sträcker sig över flera rader. som gör längre formulär mer läsbara.
+   betyder att en instans av `Foo` kan ersättas med &quot;A&quot;, &quot;B&quot; eller &quot;C&quot;. Detta ska inte blandas ihop med ett formulär som sträcker sig över flera rader, det vill säga en funktion som gör längre formulär lättare att läsa.
 
 ## Grammatiken {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
@@ -232,29 +231,29 @@ NonZeroDigit ::=
     | 9
 ```
 
-## Semantik: Juridiska men ogiltiga konfigurationer {#section_709BE240FF0041D4A1B0A0A7544E4966}
+## Semantics: Legal but invalid configurations {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-The *Exempel på konfiguration för utdataskydd* ämnet visade en giltig konfiguration tillsammans med dess semantiska betydelse. Föregående avsnitt i *this* ämnet presenterade grammatikreglerna för konfigurationer. Grammatiken säkerställer syntaktisk korrekthet, men det finns syntaktiskt juridiska konfigurationer som inte är semantiskt korrekta (dvs. de är inte logiska). I det här avsnittet visas konfigurationer som *syntaktiskt* inom juridik, men *semantiskt* felaktigt. Tänk på att exemplen i det här avsnittet har reducerats till den minimistruktur som krävs för att illustrera det scenario som diskuteras.
+The *Exempel på konfiguration för utdataskydd* ämnet visade en giltig konfiguration tillsammans med dess semantiska betydelse. Föregående avsnitt i *this* ämnet presenterade grammatikreglerna för konfigurationer. Grammatiken säkerställer syntaktisk korrekthet, men det finns syntaktiskt juridiska konfigurationer som inte är semantiskt korrekta (dvs. de är inte logiska). I det här avsnittet visas konfigurationer som *syntaktiskt* legal, men *semantiskt* felaktigt. Tänk på att exemplen i det här avsnittet har reducerats till den minimistruktur som krävs för att illustrera det scenario som diskuteras.
 
 * Det är inte tillåtet att definiera flera pixelbegränsningar med samma pixelantal.
 
-   ```
-   {  
-     "pixelConstraints":  
-       [  
-         { "pixelCount": 720 }  
-       ]  
-    }  
-   ```
+  ```
+  {  
+    "pixelConstraints":  
+      [  
+        { "pixelCount": 720 }  
+      ]  
+   }  
+  ```
 
 * Ett pixelantal får inte överskrida den högsta angivna pixelupplösningen.
 
-   ```
-   { 
-     "maxPixel": 720, 
-     "pixelConstraints": 
-       [ 
-         {"pixelCount": 1080} 
-       ] 
-   } 
-   ```
+  ```
+  { 
+    "maxPixel": 720, 
+    "pixelConstraints": 
+      [ 
+        {"pixelCount": 1080} 
+      ] 
+  } 
+  ```

@@ -1,15 +1,14 @@
 ---
 description: MediaPlayerNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
 title: Meddelanden om spelarstatus, aktivitet, fel och loggning
-exl-id: cce634aa-5394-46c0-a031-70d6fc1b754b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-# Översikt {#notifications-for-player-status-activity-errors-and-logging-overview}
+# Ökning {#notifications-for-player-status-activity-errors-and-logging-overview}
 
 MediaPlayerNotification-objekt innehåller information om ändringar i spelarstatus, varningar och fel. Fel som stoppar videouppspelningen orsakar också en statusändring för spelaren.
 

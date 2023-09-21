@@ -1,9 +1,8 @@
 ---
-title: Översikt
-description: Översikt
+title: Ökning
+description: Ökning
 copied-description: true
-exl-id: 1e06bead-4b45-4bf0-8bcf-1ea376af6bd8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -59,7 +58,7 @@ java -jar AdobePolicyUpdateListManager.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Policy Update List Manager efter <span class="filepath"> flashaccesstools.properties </span> i den aktuella arbetskatalogen. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anger namn och plats för konfigurationsfilen. </p> <p class="- topic/p ">Om du inte anger ett namn eller en plats söker DRM Policy Update List Manager efter <span class="filepath"> flashaccesstools.properties </span> i aktuell arbetskatalog. </p> <p>Obs! De alternativ som du anger på kommandoraden åsidosätter de alternativ som du anger i konfigurationsfilen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d filnamn </span> </p> </td> 
@@ -67,7 +66,7 @@ java -jar AdobePolicyUpdateListManager.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e datum </span> </td> 
-   <td colname="2" class="- topic/entry "> <p>(Valfritt) Utgångsdatumet för DRM-principuppdateringslistan. </p> <p>Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>(Valfritt) Utgångsdatumet för DRM-principuppdateringslistan. </p> <p>Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (till exempel 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f filnamn [certfile] </span> </td> 

@@ -1,8 +1,7 @@
 ---
 description: Innehållet i en AdAsset beskriver en tilläggsbanderoll.
 title: Kompletterande banderolldata
-exl-id: fae96cb8-0092-43ed-a26b-cdaa1389a368
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -43,7 +42,7 @@ Varje `AdAsset` innehåller information om hur resursen visas.
   </tr> 
   <tr> 
    <td colname="col1"> statisk URL </td> 
-   <td colname="col2"> <p>Ibland har den andra banderollen också en <span class="codeph"> staticURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du använda en direkt URL till en bild eller swf för att visa banderollen på scenen Flash i stället. I det här fallet kan du använda <span class="codeph"> staticURL</span> för att visa banderollen. </p> <p>Viktigt: Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
+   <td colname="col2"> <p>Ibland har den andra banderollen också en <span class="codeph"> staticURL</span> som är en direkt URL till bilden eller till en <span class="codeph"> .swf</span> (flash banner). </p> <p>Om du inte vill använda html eller iframe kan du i stället använda en direkt URL till en bild eller swf för att visa banderollen på scenen för Flash. I det här fallet kan du använda <span class="codeph"> staticURL</span> för att visa banderollen. </p> <p>Viktigt: Du måste kontrollera om den statiska URL:en är en giltig sträng, eftersom den här egenskapen kanske inte alltid är tillgänglig. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,8 +1,7 @@
 ---
 description: Processen för annonsinfogning video-on-demand (VOD) består av faserna för annonsupplösning, annonsinfogning och annonsuppspelning. För annonsspårning måste TVSDK informera en fjärrspårningsserver om uppspelningsförloppet för varje annons. Om det uppstår oväntade situationer krävs lämpliga åtgärder.
 title: Annonsinfogning och failover för VOD
-exl-id: 5af5bef6-e948-4215-a89f-ee46fd2d8a38
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -21,17 +20,17 @@ TVSDK har stöd för följande typer av annonsleverantörer:
 
 * Metadata och leverantör
 
-   Annonsdata kodas i JSON-filer med oformaterad text.
+  Annonsdata kodas i JSON-filer med vanlig text.
 * Annonsleverantör för Primetime-annonsbeslut
 
-   TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till den bakomliggande servern för Primetime-annonsbeslut. Primetime-annonsbeslut svarar med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
+  TVSDK skickar en begäran, inklusive en uppsättning parametrar för målinriktning och ett resursidentifieringsnummer, till den bakomliggande servern för Primetime-annonsbeslut. Primetime-annonsbeslut svarar med ett SMIL-dokument (synkroniserat multimedieintegrationsspråk) som innehåller den annonseringsinformation som krävs.
 
 En av följande redundanssituationer kan uppstå under den här fasen:
 
 * Det går inte att hämta data på grund av bl.a. bristande anslutning eller fel på serversidan, t.ex. att en resurs inte kan hittas osv.
 * Data hämtades, men formatet är ogiltigt.
 
-   Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
+  Detta kan inträffa till exempel på grund av att tolkningen av inkommande data misslyckades.
 
 TVSDK skickar ett varningsmeddelande om felet och bearbetningen fortsätter.
 
@@ -63,6 +62,6 @@ För alla tre felklasserna vidarebefordrar TVSDK utlösta händelser till ditt p
 * Meddelandehändelser när profilen ändras på grund av redundansalgoritmen.
 * Meddelandehändelser utlöses när alla alternativ för växling vid fel har beaktats och inga ytterligare åtgärder kan vidtas automatiskt.
 
-   Programmet måste vidta rätt åtgärd.
+  Programmet måste vidta rätt åtgärd.
 
 Om fel inträffar eller inte, anropar TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` för varje `AdBreakPlaybackEvent.AD_BREAK_STARTED` och `AdPlaybackEvent.AD_COMPLETED` för varje `AdPLaybackEvent.AD_STARTED`. Om segment inte kunde hämtas kan det dock finnas luckor i tidslinjen. När mellanrummen är tillräckligt stora kan värdena i spelhuvudet och den rapporterade annonsen visa avbrott.

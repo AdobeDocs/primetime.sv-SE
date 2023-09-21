@@ -1,8 +1,7 @@
 ---
 title: Rapporter om delade konton
 description: Rapporter om delade konton
-exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Rapporter om delade konton {#shared-accounts-reports}
 
-Rapporterna om delade konton delar upp mätvärden som antal enheter och enhetstyper efter det valda intervallet med sannolikhet för delning, till exempel **Övermåttlig sannolikhet** och **Över låg sannolikhet** för det aktuella segmentet.
+Rapporterna om delade konton delar upp mätvärden som antal enheter och enhetstyper efter det valda intervallet med sannolikhet för delning, till exempel **Övermåttlig sannolikhet** och **Över låg sannolikhet** för aktuellt segment.
 
 Intervallen kan sedan fungera som användardefinierade tröskelvärden och diagrammen uppdateras utifrån de valda tröskelvärdena.
 
@@ -35,7 +34,7 @@ I stapeldiagrammet visas antalet konton på y-axeln för olika kategorier av del
 
 ![](assets/accounts-sharing-probability-bar.png)
 
-Den röda linjen anger tröskelvärdesintervallet och kan justeras i stapeldiagrammet. Tröskelvärdet som justeras i stapeldiagrammet återspeglar tröskelvärdet i donutdiagrammet.
+Den röda linjen anger tröskelvärdet och kan justeras i stapeldiagrammet. Tröskelvärdet som justeras i stapeldiagrammet återspeglar tröskelvärdet i donutdiagrammet.
 
 <!--![](assets/shared-accounts-rep.gif)-->
 
@@ -57,7 +56,7 @@ När du har valt tröskelvärdet visas procentandelen (och antalet) konton av al
 
 ## Segment - Spela upp begäranden av totalt {#play-request-out-total}
 
-I donndiagrammet visas hur många (och hur många) uppspelningsbegäranden som gjorts av prenumeranter i segmentet. och gör att du kan jämföra uppspelningsbegäranden som gjorts av prenumeranter som inte finns i det definierade segmentet.
+Miniatyrdiagrammet visar hur många (och hur många) uppspelningsbegäranden som gjorts av prenumeranter i segmentet och du kan jämföra uppspelningsbegäranden som gjorts av prenumeranter som inte finns i det definierade segmentet.
 
 ![](assets/play-req-outof-total.png)
 

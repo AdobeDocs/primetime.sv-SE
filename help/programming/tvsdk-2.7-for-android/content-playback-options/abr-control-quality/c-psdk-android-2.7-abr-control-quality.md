@@ -1,15 +1,14 @@
 ---
 description: HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på den aktuella buffertnivån och den tillgängliga bandbredden.
 title: Adaptiva bithastigheter (ABR) för videokvalitet
-exl-id: 76939ace-a7d1-40fc-a199-94b88d90535e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 0%
 
 ---
 
-# Översikt {#adaptive-bit-rates-abr-for-video-quality-overview}
+# Ökning {#adaptive-bit-rates-abr-for-video-quality-overview}
 
 HLS- och DASH-strömmar ger olika bithastighetskodningar (profiler) för samma korta videosekvens. TVSDK kan välja kvalitetsnivå för varje explosion baserat på den aktuella buffertnivån och den tillgängliga bandbredden.
 
@@ -19,7 +18,7 @@ TVSDK övervakar hela tiden bithastigheten för att säkerställa att innehålle
  <tbody> 
   <tr> 
    <td colname="col01"> Inledande bithastighet </td> 
-   <td colname="col2"> <p>Den önskade uppspelningsbithastigheten (i bitar per sekund) för det första segmentet. </p> <p>När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p><span class="codeph"> getABRInitialBitRate</span> returnerar ett heltalsvärde som representerar byteprofilen per sekund. </p> </td> 
+   <td colname="col2"> <p>Uppspelningens önskade bithastighet (i bitar per sekund) för det första segmentet. </p> <p>När uppspelningen startar används den närmaste profilen, som är lika med eller större än den ursprungliga bithastigheten, för det första segmentet. Om en lägsta bithastighet definieras och den inledande bithastigheten är lägre än den lägsta hastigheten, väljer TVSDK profilen med den lägsta bithastigheten över den lägsta bithastigheten. Om den inledande räntan ligger över den högsta nivån väljer TVSDK den högsta nivån under den högsta nivån. Om den inledande bithastigheten är noll eller odefinierad bestäms den inledande bithastigheten av ABR-principen. </p> <p><span class="codeph"> getABRInitialBitRate</span> returnerar ett heltalsvärde som representerar byteprofilen per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Minsta bithastighet </td> 
@@ -27,7 +26,7 @@ TVSDK övervakar hela tiden bithastigheten för att säkerställa att innehålle
   </tr> 
   <tr> 
    <td colname="col01"> Maximal bithastighet </td> 
-   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är högre än den här bithastigheten. <span class="codeph"> getABRMaxBitRate</span> returnerar ett heltalsvärde som representerar profilen bitar per sekund. </p> </td> 
+   <td colname="col2"> <p>Den högsta tillåtna bithastighet som ABR kan växla till. </p> <p>ABR-växling ignorerar profiler med en bithastighet som är högre än denna bithastighet. <span class="codeph"> getABRMaxBitRate</span> returnerar ett heltalsvärde som representerar profilen bitar per sekund. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> ABR-växlingsprincip </td> 

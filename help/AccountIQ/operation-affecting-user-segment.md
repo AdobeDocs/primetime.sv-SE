@@ -1,8 +1,7 @@
 ---
 title: Skapa en åtgärd för ett användarsegment och spåra effekt
 description: Så här skapar du en åtgärd som påverkar och spårar effekten för ett definierat användarsegment.
-exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Skapa en åtgärd för ett användarsegment {#operation-to-track-segment}
 
-Varje rapportsida på konto-IQ har en **Skapa ny åtgärd** möjlighet att hjälpa dig att skapa arbetsflöden för att automatisera (och förenkla) olika (massåtgärder) åtgärder på prenumerantkonton, Definiera regler för att ange ett exempel, definiera åtgärder och registrera och analysera effekterna av dessa åtgärder. På sidan för att skapa åtgärder kan du definiera ett urval av användargrupper som åtgärderna ska utföras på och schemalägga åtgärden för ett framtida datum.
+Varje rapportsida på konto-IQ har en **Skapa ny åtgärd** för att hjälpa dig att skapa arbetsflöden för att automatisera (och förenkla) olika (massåtgärder) åtgärder på prenumerantkonton, definiera regler för att ange ett exempel, definiera åtgärder samt registrera och analysera effekterna av dessa åtgärder. På sidan för att skapa åtgärder kan du definiera ett urval av användargrupper som åtgärderna ska utföras på och schemalägga åtgärden för ett framtida datum.
 
 Så här skapar du en åtgärd:
 
@@ -24,7 +23,7 @@ Så här skapar du en åtgärd:
 
 1. På **Skapa ny åtgärd** sidan, fyll i informationen i formulärfälten för:
 
-   * [Åtgärdsnamn](#operation-details) i åtgärdsinformation
+   * [Åtgärdsnamn](#operation-details) i operationsinformation
    * Segment som åtgärden ska köras på under [Målsegment](#segment) och förfina segmentet med [Ytterligare segmentering](#additional-segmentation)
    * [Segmenttyp](#segment-type) under [Målsegment](#segment)
    * [Åtgärd](#action)
@@ -50,7 +49,7 @@ Namnge den nya åtgärden i **Åtgärdsnamn** fält under Åtgärdsinformation. 
 
 +++Programmer- Målsegment
 
-The **Segment** Här definieras vilka användare som kommer att användas av denna operation. eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på sidan med huvudrapporter eller kontrollpaneler i steg 1 ovan.
+The **Segment** Här definieras vilka användare som ska användas av den här åtgärden, eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på huvudrapporter eller kontrollpaneler i steg 1 ovan.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -64,7 +63,7 @@ Det här segmentet definierar de prenumeranter som påverkas av den åtgärd som
 
 +++MVPD- Målsegment
 
-The **Segment** Här definieras vilka användare som kommer att användas av denna operation. eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på sidan med huvudrapporter eller kontrollpaneler i steg 1 ovan.
+The **Segment** Här definieras vilka användare som ska användas av den här åtgärden, eller exempelgruppen för åtgärden. Standardsegmentet är **segment** du valde med [segment och tidsram](/help/AccountIQ/howto-select-segment-timeframe.md) på huvudrapporter eller kontrollpaneler i steg 1 ovan.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -113,7 +112,7 @@ When you select **Variable number of accounts** segment type, you do not limit t
 
 >[!IMPORTANT]
 >
->Du kan bara använda **Fast antal konton** från och med nu. Alternativet som ska väljas **Variabelt antal konton** kommer att finnas i kommande versioner.
+>Du kan bara använda **Fast antal konton** från nu. Alternativet som ska väljas **Variabelt antal konton** kommer att finnas i kommande versioner.
 
 <!--
 
@@ -146,7 +145,7 @@ The **Åtgärd** definierar vilken åtgärd du ska utföra på det definierade s
 
 Det finns två typer av åtgärder du kan utföra:
 
-* Åtgärder med hjälp av system som är integrerade med konto-IQ. som **Övervakning av samtidig användning** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
+* Åtgärder med system som är integrerade med konto-IQ, till exempel **Övervakning av samtidig användning** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Åtgärder för att skapa och bearbeta arbetsflöden som ligger utanför konto-IQ och inte är integrerade med konto-IQ-systemet. En åtgärd för kanalprogrammeraren &#39;N&#39; som skickar massutskick till alla prenumeranter på MVPD &#39;C&#39;.
 
@@ -163,7 +162,7 @@ Du kan schemalägga aktiveringen för åtgärden genom att ange start- och slutd
 >Startdatumet och slutdatumet har en granularitet som är densamma som den granularitet som du valde för utvärderingen när du definierade segment med **segment och tidsram**, i steg 1.
 >
 >
->Om du valde granulariteten som Vecka anges start- och slutdatum som vecka (till exempel Vecka 14). Om du väljer granularitet som Månad anges start- och slutdatum i månader.
+>Om du valde granularitet som Vecka anges start- och slutdatum som vecka (till exempel Vecka 14). Om du väljer granularitet som Månad anges start- och slutdatum som månader.
 
 
 >[!IMPORTANT]
@@ -196,8 +195,8 @@ När du sparar åtgärden visas ett meddelandefönster som informerar dig om att
 
 När du har skapat en åtgärd körs den från startdatumet till slutdatumet som du har angett.
 
-Information om den sparade åtgärden finns i [Operationer](/help/AccountIQ/operations.md) sida.
+Information om den sparade åtgärden finns på huvudsidan [Operationer](/help/AccountIQ/operations.md) sida.
 
 ![](assets/new-operation-created.png)
 
-*Bild: Åtgärden som skapades listas på huvudsidan*
+*Bild: Åtgärden som skapades nyligen visas på huvudsidan*

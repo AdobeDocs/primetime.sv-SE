@@ -1,8 +1,7 @@
 ---
 description: DRM-arbetsflödena innefattar att paketera ditt innehåll, tillhandahålla licensiering för innehållet och spela upp det skyddade innehållet från ditt eget videoprogram. Arbetsflödet liknar vanligtvis för varje DRM-lösning, men med vissa skillnader finns i informationen.
 title: Arbetsflöde med flera DRM-DRM för FairPlay
-exl-id: a66cecda-762b-48f7-afed-6fef6303d169
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -21,7 +20,7 @@ FairPlay DRM-lösningen från Apple kräver vissa inställningar när du använd
 
 Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda FairPlay-innehåll.
 
-1. Hämta autentiseringsuppgifter från Apple.
+1. Hämta inloggningsuppgifter från Apple.
 
    Dessa autentiseringsuppgifter tilldelas unikt till varje tjänsteleverantör. Du måste beställa dem genom att fylla i följande formulär: [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
@@ -30,7 +29,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
    >Välj **[!UICONTROL Content Provider]** för primär roll.
 
    När din begäran är godkänd skickar Apple en *Distribution av FairPlay-direktuppspelning*.
-1. Skapa en CSR-fil (Certificate Signing Request).
+1. Generera en CSR-fil.
 
    Du kan använda [!DNL openssl] för att generera ditt nyckelpar för offentlig/privat nyckel och din CSR-signerade begäran (Certificate Signing).
 
@@ -52,7 +51,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
       >Instruktionerna för det här steget finns i *Distribution av FairPlay-direktuppspelning*, men finns här för att underlätta för dig. Om du har problem med den här delen av processen kan du läsa instruktionerna i *FairPlayCertificateCreation.pdf* (i ditt distributionspaket).
 
 1. Överför CSR via Apple utvecklarportal.
-   1. Teamagenten för ditt utvecklingsteam måste logga in [!DNL developer.apple.com/account].
+   1. Utvecklingsteamets teamagent måste logga in [!DNL developer.apple.com/account].
    1. Klicka på **[!UICONTROL Certificates, Identifiers & Profiles]** väljer du **[!UICONTROL iOS, tvOS, watchOS]** nedrullningsbar meny längst upp till vänster på sidan och klicka sedan på **[!UICONTROL Certificates->Production]** till vänster på sidan.
    1. Klicka på **[!UICONTROL +]** på sidans övre högra hörn för att begära ett nytt certifikat. Välj **[!UICONTROL FairPlay Streaming Certificate]** option under **[!UICONTROL Production]**.
 
@@ -60,7 +59,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
    1. I *Lägg till iOS-certifikat*, överför CSR-filen som du skapade i steg 2.b och klickar på **[!UICONTROL Generate]**.
 
       Din programhemlighetsnyckel (ASK) visas i samma dialogruta.
-   1. Skriv ned ASK och lagra den på en säker plats.
+   1. Skriv ned din ASK och lagra den på en säker plats.
    1. Nyckel i ASK för att slutföra certifikatgenerering och klicka på **[!UICONTROL Continue]**.
    1. När du har verifierat att du har sparat din ASK klickar du på **[!UICONTROL Generate]** för att fortsätta.
 
@@ -72,7 +71,7 @@ Följ de här stegen för att aktivera ExpressPlay-tjänsten för att skydda Fai
 
       Spara en säkerhetskopia av din privata nyckel (från steg 2.a) och din offentliga nyckel (det FPS-certifikat du laddade ned i det här steget) på en säker plats.
 1. Konfigurera ditt ExpressPlay-konto med dina FairPlay-inloggningsuppgifter.
-   1. Säg namnet på certifikatet som du laddade ned i steg 3.h. är [!DNL fairplay.cer].
+   1. Det certifikatnamn du laddade ned i steg 3.h är [!DNL fairplay.cer].
    1. Öppna [!DNL fairplay.cer] med Apple Keychain Access-verktyget.
    1. Filtrera dina många certifikat genom att ange &quot; `fairplay`&quot; i sökfältet som finns uppe till höger.
    1. Identifiera företagets FairPlay-certifikat.
@@ -158,14 +157,14 @@ Paket förbereder videon för uppspelning (t.ex. fragmentering av originalfilen 
 
 ### Ange principer för FairPlay {#setting-policies-for-fairplay}
 
-Du kan ange principer för FairPlay-skyddat innehåll med hjälp av en tillståndsserver. Du kan konfigurera en egen eller använda en exempeltillståndsserver som tillhandahålls av Adobe.
+Du kan ställa in policyer för FairPlay-skyddat innehåll med hjälp av en tillståndsserver. Du kan konfigurera en egen eller använda en exempeltillståndsserver som tillhandahålls av Adobe.
 
 Adobe har en exempelserver för ExpressPlay-tillstånd (SEES) som visar hur man gör *tidsbaserad* och *enhetsbindning* berättigande. Denna exempeltillståndsserver är byggd på ExpressPlay-tjänster.
 
 [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
 * [Referenstjänst: Tidsbaserat berättigande](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-* [Referenstjänst: Enhetsbindningsberättigande](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+* [Referenstjänst: Enhetsbindningsbehörighet](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
 
 ## Licensiering och uppspelning för FairPlay {#licensing-and-playback-for-fairplay}
 
@@ -202,44 +201,44 @@ Så här lägger du till licensrotation:
 
 * Infoga en ny FairPlay-nyckeltagg under licensrotationstiden.
 
-   Du kan lägga till valfritt antal nyckeltaggar.
+  Du kan lägga till valfritt antal nyckeltaggar.
 
-   För linjärt innehåll måste du se till att behålla den senaste nyckeltaggen i M3U8-fönstret. iOS begär nästa M3U8 när det finns ungefär två TS-segment kvar att spela upp (ca 20 sekunder). Om nya M3U8 innehåller nya nyckeltaggar kommer alla nyckelförfrågningar att ske omedelbart. De tidigare befintliga nycklarna kommer inte att begäras igen. iOS väntar på att alla nyckelbegäranden ska slutföras innan uppspelningen startar.
+  För linjärt innehåll måste du se till att behålla den senaste nyckeltaggen i M3U8-fönstret. iOS begär nästa M3U8 när det finns ungefär två TS-segment kvar att spela upp (ca 20 sekunder). Om nya M3U8 innehåller nya nyckeltaggar kommer alla nyckelförfrågningar att ske omedelbart. De tidigare befintliga nycklarna kommer inte att begäras igen. iOS väntar på att alla nyckelbegäranden ska slutföras innan uppspelningen startar.
 
-   För VOD-innehåll med licensrotation sker alla nyckelbegäranden i början av uppspelningen.
+  För VOD-innehåll med licensrotation sker alla nyckelbegäranden i början av uppspelningen.
 
-   Här följer ett exempel på M3U8 med tangentrotation:
+  Här följer ett exempel på M3U8 med tangentrotation:
 
-   ```
-   #EXTM3U
-   #EXT-X-TARGETDURATION:10
-   #EXT-X-VERSION:5
-   #EXT-X-MEDIA-SEQUENCE:0
-   #EXT-X-PLAYLIST-TYPE:VOD
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
-   212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence0.ts
-   #EXTINF:10,
-   fileSequence1.ts
-   #EXTINF:10,
-   fileSequence2.ts
-   #EXTINF:10,
-   fileSequence3.ts
-   #EXTINF:10,
-   fileSequence4.ts
-   #EXTINF:10,
-   fileSequence5.ts
-   #EXTINF:10,
-   fileSequence6.ts
-   #EXTINF:10,
-   fileSequence7.ts
-   #EXTINF:10,
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
-   337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence8.ts
-   #EXTINF:10,
-   ```
+  ```
+  #EXTM3U
+  #EXT-X-TARGETDURATION:10
+  #EXT-X-VERSION:5
+  #EXT-X-MEDIA-SEQUENCE:0
+  #EXT-X-PLAYLIST-TYPE:VOD
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
+  212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence0.ts
+  #EXTINF:10,
+  fileSequence1.ts
+  #EXTINF:10,
+  fileSequence2.ts
+  #EXTINF:10,
+  fileSequence3.ts
+  #EXTINF:10,
+  fileSequence4.ts
+  #EXTINF:10,
+  fileSequence5.ts
+  #EXTINF:10,
+  fileSequence6.ts
+  #EXTINF:10,
+  fileSequence7.ts
+  #EXTINF:10,
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
+  337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence8.ts
+  #EXTINF:10,
+  ```

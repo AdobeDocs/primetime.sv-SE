@@ -2,8 +2,7 @@
 description: Du kan aktivera eller inaktivera funktionen Lazy Ad Resolving med den befintliga Lazy Ad Loading-mekanismen (Lazy Ad Resolving är inaktiverat som standard).
 keywords: Lazy;Annonsupplösning;Annonsinläsning;delayLoading
 title: Aktivera lat och löst
-exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -22,8 +21,8 @@ Du kan aktivera eller inaktivera Lazy Ad Resolving genom att ringa [AdvertisingM
    * If *hasDelayAdLoading* returnerar true, tolkar TVSDK bara de initiala annonserna och övergångarna till tillståndet PREPARED.
 
       * De återstående annonserna löses och placeras under uppspelningen.
-   * När *hasPreroll *eller *hasLivePreroll* return false, TVSDK antar att det inte finns någon förhandsgranskning och startar uppspelningen av innehållet omedelbart. Dessa är som standard inställda på true.
 
+   * När *hasPreroll *eller *hasLivePreroll* return false, TVSDK antar att det inte finns någon förhandsgranskning och startar uppspelningen av innehållet omedelbart. Dessa är som standard inställda på true.
 
 **API:er som är relevanta för lata annonsupplösningar:**
 

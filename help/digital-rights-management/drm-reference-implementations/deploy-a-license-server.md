@@ -2,8 +2,7 @@
 title: Distribuera licensservern
 description: Distribuera licensservern
 copied-description: true
-exl-id: 1439a5b2-eccb-41b7-a4d3-0673e727fb13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -25,10 +24,9 @@ ht-degree: 0%
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
 
-
    >[!NOTE]
    >
-   >Distribuera inte [!DNL edsws.war] såvida du inte behöver bakåtkompatibilitet med FMRMS v1.5-innehåll (Flash Media Rights Management). (Detta är ett mycket sällsynt krav.)
+   >Distribuera inte [!DNL edsws.war] såvida du inte behöver bakåtkompatibilitet med Flash Media Rights Management (FMRMS) v1.5-innehåll. (Detta är ett mycket sällsynt krav.)
    >
    >Om du föredrar att hindra Tomcat från att packa upp WAR-filer redigerar du `server.xml` i `conf` katalog och ange `unpackWARs` till `false`.
 
@@ -57,15 +55,15 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Redigera `catalina.properties` i din Tomcat `conf` katalog, lägg till platsen för [!DNL resources] katalogen (eller den alternativa platsen där du har lagrat egenskapsfilen och andra resursfiler) till `shared.loader` -egenskap.
+1. Redigera `catalina.properties` i din Tomcat `conf` katalog; lägg till platsen för [!DNL resources] katalogen (eller den alternativa platsen där du har lagrat egenskapsfilen och andra resursfiler) till `shared.loader` -egenskap.
 
-   Om du till exempel har `flashaccess-refimpl.properties` finns i [!DNL [Tomcat - startsida]\resources\]:
+   Om du har `flashaccess-refimpl.properties` finns i [!DNL [Tomcat home]\resources\]:
 
    ```
    shared.loader=..\resources
    ```
 
-   Här `flashaccess-refimpl.properties` på klassökvägen.
+   Här finns `flashaccess-refimpl.properties` på klassökvägen.
 1. Se till att dina andra resursfiler ( [!DNL log4j.xml], principfiler, certifieringar) finns antingen i [!DNL resources] eller finns på klassökvägen och den plats som anges i [!DNL flashaccess-refimpl.properties].
 
    Du vill förmodligen köra `log4j` i felsökningsläge. I [!DNL log4j.xml], ange `debug` till true:

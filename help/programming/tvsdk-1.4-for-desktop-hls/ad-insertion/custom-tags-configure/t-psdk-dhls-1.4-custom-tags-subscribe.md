@@ -1,8 +1,7 @@
 ---
 description: TVSDK förbereder TimedMetadata-objekt för prenumerationstaggar varje gång dessa objekt påträffas i innehållsmanifestet.
 title: Prenumerera på egna taggar
-exl-id: 7a3021cc-d2ba-4a70-9c1f-59766b848a62
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
@@ -22,7 +21,7 @@ För att få meddelanden om anpassade taggar i HLS-manifestationer:
 
    >[!IMPORTANT]
    >
-   >Du måste inkludera `#` prefix när du arbetar med HLS-strömmar.
+   >Du måste inkludera `#` när du arbetar med HLS-strömmar.
 
    Till exempel:
 

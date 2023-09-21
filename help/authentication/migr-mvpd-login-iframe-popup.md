@@ -1,8 +1,7 @@
 ---
 title: Migrera inloggningssidan för MVPD från iFrame till Popup
 description: Migrera inloggningssidan för MVPD från iFrame till Popup
-exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -27,12 +26,12 @@ Adobe Primetime autentiseringsteam **rekommenderar att inloggningssidan för pop
 
 I exempelkoden i den här TechNote-artikeln används en hybridimplementering av både iFrame och popup-fönster, som öppnar en iFrame i Internet Explorer och ett popup-fönster i andra webbläsare.
 
-Eftersom det redan finns en iFrame-implementering visas koden för iFrame-implementeringen i den första delen av Tech note och i den andra delen visas ändringarna för att få plats med popup-implementeringen som standard.
+Med tanke på att det redan finns en iFrame-implementering, presenterar den första delen av TechNote koden för iFrame-implementeringen och den andra delen presenterar ändringarna för att få plats med popup-implementeringen som standard.
 
 
 ## MVPD-väljaren med inloggningssida i en iFrame {#mvpd-pickr-iframe}
 
-I tidigare kodexempel visades en HTML-sida med &lt;div> -tagg där iFrame ska skapas tillsammans med knappen close för iFrame:
+I tidigare kodexempel visades en HTML-sida som innehåller &lt;div> -tagg där iFrame ska skapas tillsammans med knappen close för iFrame:
 
 ```HTML
 <body> 
@@ -105,7 +104,7 @@ function setSelectedProvider(providerID) {
 
 ## MVPD-väljaren med inloggningssida i ett popup-fönster {#mvpd-pickr-popup}
 
-Eftersom vi inte kommer att använda en **iFrame** HTML-koden innehåller inte längre iFrame eller den knapp som behövs för att stänga iFrame. Den div som tidigare innehöll iFrame - **mvpddiv** - kommer att förvaras och användas för följande:
+Eftersom vi inte använder en **iFrame** HTML-koden innehåller inte längre iFrame eller den knapp som behövs för att stänga iFrame. Den div som tidigare innehöll iFrame - **mvpddiv** - kommer att förvaras och användas för följande:
 
 * för att meddela användaren att inloggningssidan för MVPD redan är öppen om popup-fokus försvinner
 * för att skapa en länk för att återfå fokus på popup-fönstret
@@ -134,7 +133,7 @@ Eftersom vi inte kommer att använda en **iFrame** HTML-koden innehåller inte l
 </body>
 ```
 
-Listan över MVPD-filer visas i den div som anropas **väljare** som ett val **-mvpdList**.
+Listan över MVPD visas i den div som anropas **väljare** som ett val **-mvpdList**.
 
 Ett nytt API-återanrop används - **setConfig(configXML)**. Återanropet aktiveras efter att funktionen setRequestor(requestID) har anropats. Det här återanropet returnerar en lista över MVPD-filer som är integrerade med det beställar-ID som tidigare angetts. I callback-metoden tolkas den inkommande XML-filen och listan över MVPD-filer cachelagras. MVPD-väljaren skapas också men visas inte.
 
@@ -168,7 +167,7 @@ function setConfig(configXML) {
 }
 ```
 
-När funktionen getAuthentication() eller getAuthorization() har anropats aktiveras callback-funktionen displayProviderDialog(). I det här återanropet hade MVPD-listan normalt skapats och visats. Eftersom MVPD-väljaren redan är byggd är det enda som återstår att göra att visa den för användaren.
+När funktionen getAuthentication() eller getAuthorization() har anropats aktiveras callback-funktionen displayProviderDialog(). I det här återanropet hade MVPD-listan normalt byggts och visats. Eftersom MVPD-väljaren redan är byggd är det enda som återstår att göra att visa den för användaren.
 
 ```JavaScript
 /*
@@ -232,4 +231,3 @@ function checkClosed() {
 >* Exempelkoden kommer endast att köras korrekt från en vitlistad domän som är associerad med det begärande-ID som används.
 >* Eftersom hela koden är tillgänglig för hämtning har koden som presenteras i den här TechNote trunkerats. Ett fullständigt exempel finns på **JS iFrame vs Popup Sample**.
 >* De externa JavaScript-biblioteken länkades från [Google värdtjänster](https://developers.google.com/speed/libraries/).
-

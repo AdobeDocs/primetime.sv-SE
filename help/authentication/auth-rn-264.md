@@ -1,8 +1,7 @@
 ---
 title: Versionsinformation om Adobe Primetime-autentisering 2.64
 description: Versionsinformation om Adobe Primetime-autentisering 2.64
-exl-id: 4db21026-a0c2-4e33-b01f-4ccae824a110
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Den här sidan beskriver nya funktioner, ändringar och kända fel i den här ve
 
 Adobe Primetime-autentisering: adobe-pass-**2.64**
 
-Releasedatum: **11/08/2022 - 11/10/2022**
+Utgivningsdatum: **11/08/2022 - 11/10/2022**
 
 ### Nya funktioner {#new-featres-264}
 
@@ -38,5 +37,5 @@ Releasedatum: **11/08/2022 - 11/10/2022**
 
 ### Felkorrigeringar {#bug-fixes-264}
 
-* Felaktig formatering av vissa äldre TempPass-token har korrigerats.
+* Korrigerad felaktig formatering av vissa äldre TempPass-token.
 * Åtgärdade mindre problem med autentiseringsflödet på andra skärmen.

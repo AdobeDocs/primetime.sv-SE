@@ -1,8 +1,7 @@
 ---
 description: För live- och video-on-demand-media (VOD) börjar TVSDK uppspelningen genom att ladda ned den spellista som är associerad med den mellanupplösta bithastigheten och hämtar de mediesegment som definieras av den spellistan. Den väljer snabbt spelningslistan med hög upplösning och tillhörande media och fortsätter hämtningsprocessen.
 title: Medieuppspelning och failover
-exl-id: eef1e5ed-422b-4731-8228-d0be63f6f908
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -29,11 +28,11 @@ break;
 ...
 ```
 
-## segmentredundans saknas {#section_D8DF377CCB644D7FB936796DA0CC5A4B}
+## Segmentredundans saknas {#section_D8DF377CCB644D7FB936796DA0CC5A4B}
 
 När ett segment saknas, till exempel om ett visst segment inte kan hämtas, försöker TVSDK att återställas genom en mängd olika redundansförsök. Om det inte går att återställa genereras ett fel.
 
-Om ett segment saknas på servern, till exempel på grund av att manifestfilen inte finns, kan segmentet inte laddas ned och så vidare, försöker TVSDK att redundansväxla genom att försöka med följande alternativ:
+Om ett segment saknas på servern, till exempel på grund av att manifestfilen inte finns, kan segmentet inte laddas ned och så vidare, försöker TVSDK att redundansväxla genom att göra följande:
 
 1. Försök med en växling vid fel till samma segment, med samma bithastighet, i en variantfil.
 1. Växla till en alternativ bithastighet (ABR-switch) i samma fil.
@@ -48,7 +47,7 @@ Om videomotorn inte kontinuerligt kan hämta segment begränsas antalet kontinue
 >
 >**Begränsningar**
 >
->Här är några begränsningar som du bör känna till:
+>Här är några begränsningar som du bör vara medveten om:
 >
 >* ABR-styrparametrarna (Adaptive bit rate) beaktas inte när en växling vid fel inträffar.
 >

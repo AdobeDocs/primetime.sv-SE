@@ -1,8 +1,7 @@
 ---
 description: PTMediaPlayer-objektet representerar din mediespelare. Ett PTMediaPlayerItem representerar ljud eller video i spelaren.
 title: Arbeta med MediaPlayer-objekt
-exl-id: 0dd76446-0ea7-446d-a4bd-746128647173
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Från det ögonblick du skapar `PTMediaPlayer` till den tidpunkt då du avslutar
 
 Vissa åtgärder tillåts bara när spelaren är i ett visst läge. Anropa till exempel `play` in `PTMediaPlayerStatusCreated` är inte tillåtet. Du kan bara anropa den här statusen när spelaren når `PTMediaPlayerStatusReady` status.
 
-Så här arbetar du med status:
+Så här arbetar du med statusvärden:
 
 * Du kan hämta aktuell status för MediaPlayer-objektet med `PTMediaPlayer.status`.
 * Statuslistan definieras i `PTMediaPlayerStatus`.

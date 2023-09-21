@@ -2,8 +2,7 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-exl-id: 4c772010-b7b6-4655-98ee-b52e8022d4af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Användning av kommandorad {#command-line-usage}
 
-Listhanteraren för principuppdatering finns i katalogen \Reference Implementation\Command Line Tools på dvd:n. Använd följande syntax för att skapa en principuppdateringslista:
+Listhanteraren för principuppdatering finns i katalogen \Reference Implementation\Command Line Tools på DVD:n. Använd följande syntax för att skapa en principuppdateringslista:
 
 ```
     java -jar AdobePolicyUpdateListManager.jar  
@@ -55,7 +54,7 @@ Följande tabell innehåller beskrivningar av kommandoradsalternativen som visas
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e datum </span> </td> 
-   <td colname="2" class="- topic/entry "> (Valfritt) Giltighetsdatumet för principuppdateringslistan. Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (t.ex. 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </td> 
+   <td colname="2" class="- topic/entry "> (Valfritt) Giltighetsdatumet för principuppdateringslistan. Använd formatet <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span> eller <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd-h24:min:sek </span> (till exempel 2009-01-31-14:30:00 representerar 31 januari klockan 2:30). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f filnamn [certfile] </span> </td> 

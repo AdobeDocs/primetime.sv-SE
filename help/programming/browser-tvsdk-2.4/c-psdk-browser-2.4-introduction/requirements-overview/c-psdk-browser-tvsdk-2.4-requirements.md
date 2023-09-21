@@ -1,15 +1,14 @@
 ---
 description: Den här versionen innehåller spelare och har stöd för ett stort antal webbläsare.
 title: Krav
-exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-# Översikt {#requirements-overview}
+# Ökning {#requirements-overview}
 
 Browser TVSDK kräver specifika egenskaper för mediematerial, manifestinnehåll och programversioner.
 
@@ -32,22 +31,22 @@ Spelarna innehåller följande referens-API:er:
       * Internet Explorer 11+
       * Krom 33+
       * Firefox 38+
+
    * Microsoft Windows 8.1
 
       * Internet Explorer 11+
       * Krom 33+
       * Firefox 38+
+
    * Microsoft Windows 10
 
       * Edge+
-   * Apple OS X
+
+   * APPLE OS X
 
       * Safari 8+
       * Krom 33+
       * Firefox 38+
-
-
-
 
 * **Webbkonfigurationer för mobiler**
 
@@ -55,18 +54,22 @@ Spelarna innehåller följande referens-API:er:
 
       * Inbyggd webbläsare
       * Krom 33+
+
    * Android 5.0
 
       * Inbyggd webbläsare
       * Krom 33+
+
    * Android 6.0
 
       * Krom 33+
-   * Apple iOS 8
+
+   * APPLE IOS 8
 
       * Safari 8+
       * Krom 33+
-   * Apple iOS 9
+
+   * APPLE IOS 9
 
       * Safari 8+
       * Krom 33+

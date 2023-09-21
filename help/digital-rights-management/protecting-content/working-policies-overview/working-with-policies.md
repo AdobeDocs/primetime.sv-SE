@@ -2,15 +2,14 @@
 title: Arbeta med DRM-principer - översikt
 description: Arbeta med DRM-principer - översikt
 copied-description: true
-exl-id: 734d0be3-2abe-400c-bc34-00046ec52f4c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-# Översikt {#working-with-drm-policies-overview}
+# Ökning {#working-with-drm-policies-overview}
 
 Innehållsleverantörer kan tillämpa DRM-principer på mediefiler med hjälp av Primetimes DRM SDK. Administratörer kan sedan skapa, visa information om och uppdatera DRM-principer med hjälp av principhanterings-API:er.
 

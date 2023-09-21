@@ -2,8 +2,7 @@
 title: Terminologi och centrala begrepp
 description: Terminologi och centrala begrepp
 copied-description: true
-exl-id: eb065dd4-0312-4a5c-b013-a02e6ac85fa0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 0%
@@ -56,11 +55,11 @@ En *licens *är en datastruktur som innehåller en krypterad nyckel som används
 
 **Licenshämtning**
 
-*Licenshämtning* är processen att köpa en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll enligt en uppsättning användningsregler. Licenshämtning sker när en kund skickar information som identifierar det begärda innehållet ( *DRM-metadata*) och datorcertifikatet (som identifierar konsumentens dator) till licensservern (se nedan).
+*Licenshämtning* är processen att köpa en licens som gör det möjligt för konsumenten att dekryptera och visa skyddat innehåll i enlighet med en uppsättning användningsregler. Licenshämtning sker när en kund skickar information som identifierar det begärda innehållet ( *DRM-metadata*) och datorcertifikatet (som identifierar konsumentens dator) till licensservern (se nedan).
 
 **Licensserver**
 
-License Server *kan integreras i distributörens eller tjänsteleverantörens fakturerings- och autentiseringssystem och kan innehålla affärslogik för att verifiera att den konsument som begär skyddat innehåll har behörighet att visa innehållet. Om användaren har behörighet att komma åt innehållet utfärdar licensservern en licens som tillåter körningsklienten att dekryptera och spela upp innehåll baserat på policyn och rättigheterna som är kopplade till konsumentens konto.
+License Server *kan integreras i distributörens eller tjänsteleverantörens fakturerings- och autentiseringssystem och kan innehålla affärslogik för att verifiera att den konsument som begär skyddat innehåll har behörighet att visa innehållet. Om användaren har behörighet att komma åt innehållet utfärdar licensservern en licens som tillåter körningsklienten att dekryptera och spela upp innehåll baserat på den policy och de rättigheter som är kopplade till konsumentens konto.
 
 Du måste skapa och distribuera en licensserver med hjälp av Primetimes DRM SDK.
 
@@ -76,4 +75,4 @@ Profiler skapas med Primetime DRM SDK.
 
 **Återförsäljare**
 
-Se posten för *distributörer* tidigare i det här avsnittet.
+Se tävlingsbidraget för *distributörer* tidigare i det här avsnittet.

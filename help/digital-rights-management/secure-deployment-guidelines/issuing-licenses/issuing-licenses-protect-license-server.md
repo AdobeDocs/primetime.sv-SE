@@ -1,8 +1,7 @@
 ---
 description: Ni måste se till att ni på ett säkert sätt utfärdar licenser. Tänk på följande när det gäller att skydda licensservern
 title: Skydda licensservern
-exl-id: 88b8f44f-c140-4cbc-be0a-f67058548fc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
@@ -21,11 +20,11 @@ Följande API:er kontrollerar att listorna inte har manipulerats och att listorn
 
 * Utlysning [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) för att kontrollera signaturen innan du anger [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) till alla API:er.
 
-   Mer information finns i [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
+  Mer information finns i [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
 * Utlysning [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate)) för att kontrollera signaturen innan du anger `PolicyUpdateList` till alla API:er.
 
-   Mer information finns i [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
+  Mer information finns i [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
 
 ## Använda listor över återkallade certifikat som publicerats av Adobe{#consuming-crls-published-by-adobe}
 
@@ -55,9 +54,9 @@ Om affärsreglerna kräver att antalet datorer för en användare spåras, måst
 
 Det mest robusta sättet att spåra dator-ID:n är att lagra värdet som returneras av [MachineId.getBytes()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getBytes()) i en databas. När en ny begäran tas emot kan du jämföra dator-ID:t i begäran med kända dator-ID:n genom att använda [MachineId.match()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)).
 
-[MachineId.match()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) utför en jämförelse av ID:n för att avgöra om ID:n representerar samma dator. Jämförelsen är bara praktisk om det finns ett litet antal dator-ID. Om användare till exempel tillåts fem datorer i sin domän, kan du söka i databasen efter de dator-ID som är kopplade till användarens användarnamn och få en liten uppsättning data för jämförelse.
+[MachineId.match()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) utför en jämförelse av ID:n för att avgöra om ID:n representerar samma dator. Jämförelsen är bara praktisk om det finns ett litet antal dator-ID. Om användare till exempel tillåts fem datorer i sin domän, kan du söka i databasen efter de dator-ID:n som är kopplade till användarens användarnamn och få en liten uppsättning data för jämförelse.
 
-Den här jämförelsen är inte praktisk för distributioner som tillåter anonym åtkomst. I detta fall [MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()) kan användas. Detta ID kan dock inte vara samma om användaren öppnar innehåll från Flash och Adobe AIR®.
+Den här jämförelsen är inte praktisk för distributioner som tillåter anonym åtkomst. I detta fall [MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()) kan användas. Detta ID kan dock inte vara samma om användaren öppnar innehåll från Flash och Adobe AIR®-miljöer.
 
 >[!NOTE]
 >
@@ -69,7 +68,7 @@ Replay-skydd förhindrar en angripare från att spela upp ett licensförfrågnin
 
 En DoS-attack är ett försök av angripare att förhindra legitima användare av en tjänst från att använda den tjänsten. En repetitionsattack som använder rollback-räknaren kan till exempel användas för att&quot;lura&quot; licensservern att tro att DRM-klienten har återställt sitt tillstånd, vilket leder till att kontot stängs av.
 
-Mer information om uppspelningsskydd finns i [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
+Mer information om uppspelningsskydd finns i [AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
 ## Underhåll en tillåtelselista av pålitliga innehållspaket {#maintain-a-allowlist-of-trusted-content-packagers}
 

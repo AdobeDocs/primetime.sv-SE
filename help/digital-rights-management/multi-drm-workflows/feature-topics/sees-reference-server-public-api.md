@@ -1,8 +1,7 @@
 ---
 description: Begäran om berättigande och svar skickas via en ömsesidigt autentiserad SSL-anslutning mellan licensservern och kundens tillståndstjänst.
 title: SE Offentligt API
-exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -55,7 +54,7 @@ Innehållet i berättigandebegäran blir ett JSON-objekt som definieras enligt n
 
 Innehållet i tillståndssvaret är ett JSON-objekt.
 
-**Definition av JSON-berättigandesvarsobjekt**
+**JSON-berättigandesvarsdefinition**
 
 ```
 { 

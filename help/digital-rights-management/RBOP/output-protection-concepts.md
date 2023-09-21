@@ -1,8 +1,7 @@
 ---
 description: I det här avsnittet finns en konceptuell översikt över konfiguration, alternativ och innebörd för skydd av utdata.
 title: RBOP-begrepp
-exl-id: 5b9de292-e060-467d-beca-5f428e45ed69
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
@@ -28,4 +27,4 @@ Kravet på digitala utdata kan ange restriktiva alternativ, t.ex.&quot;digitalt 
 
 **Analoga utdata**
 
-Analoga utdataanslutningar är enklare än digitala utdata. De består av ett enda produktionskrav.
+Analoga utdataanslutningar är enklare än digitala utdata; de består av ett enda utdatakrav.

@@ -1,8 +1,7 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-exl-id: f5d3e0ff-675f-4bd4-bfda-71988d25c85d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Kom ihåg följande information när du använder TVSDK:
 
 * Adobe Primetime fungerar inte med iOS-simulatorer.
 
-   Du måste använda riktiga enheter för testning.
+  Du måste använda riktiga enheter för testning.
 
 * Uppspelning stöds endast för HTTP-direktuppspelning (HLS).
 
@@ -31,15 +30,15 @@ Kom ihåg följande information när du använder TVSDK:
 
    * Det går inte att ändra tidslinjejusteringar efter den första konfigurationen.
 
-      En annons kan till exempel inte tas bort från tidslinjen efter att den har spelats upp. Om användaren söker tillbaka i presentationen spelas samma annons upp igen även om policyn skulle ha varit att ta bort annonsen.
+     En annons kan till exempel inte tas bort från tidslinjen efter att den har spelats upp. Om användaren söker tillbaka i presentationen spelas samma annons upp igen även om policyn skulle ha varit att ta bort annonsen.
 
    * Beroende på kodningsprecisionen kan den faktiska längden för kodade medier skilja sig från varaktigheten som registreras i strömmens resursmanifest.
 
-      Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
+     Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
 
    * Inkommande användaragent för alla HTTP-begäranden från TVSDK på den här plattformen bestäms av enheten och den iOS-version som körs på enheten.
 
-      Standardvärdet för användaragentsträngen är det som tilldelas av operativsystemet.
+     Standardvärdet för användaragentsträngen är det som tilldelas av operativsystemet.
 
 ## God praxis {#section_tvsdk_best_practices}
 

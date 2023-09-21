@@ -1,8 +1,7 @@
 ---
 title: Så här använder du IQ-värden för ett specifikt MVPD
 description: Hur man använder och tolkar IQ-rapporter för konton.
-exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -29,17 +28,17 @@ Så här visar du rapporter i konto-IQ när du har loggat in som programmerare i
 
 * [Allmän användning](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Delade konton](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Användningsmönster](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Kontrollpanel](/help/AccountIQ/dashboard.md) (kontrollpanelen ger en glimt av de markerade diagrammen från olika rapportsidor).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Var och en av dessa sidor återspeglar aktiviteten i det valda segmentet.
 

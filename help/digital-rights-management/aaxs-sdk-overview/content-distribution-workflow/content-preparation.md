@@ -1,8 +1,7 @@
 ---
 description: All användning av Adobe Access består av två huvudsteg vid olika tidpunkter i arbetsflödet. Förberedelsen av innehållet måste göras en gång per resurs, vilket resulterar i att skyddat innehåll skapas. Inköp av innehåll görs flera gånger, en gång för varje konsument som vill titta på den skyddade resursen.
 title: Förbereda innehåll
-exl-id: c658c7e9-2583-4d74-a94b-800023cf5196
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Innan du gör innehåll tillgängligt för distribution måste du koda innehåll
 Stegen för att koda, paketera och distribuera innehåll är följande:
 
 1. Koda innehållet i FLV- eller F4V-format med kodningsverktygen från Adobe eller från tredje part.
-1. Skapa profiler som anger de användningsregler som konsumenterna kan använda för att visa innehållet.
+1. Skapa profiler som specificerar de användningsregler som konsumenterna kan använda för att visa innehållet.
 
    En policy är behållaren för de regler och begränsningar som avgör hur, när och var det skyddade innehållet kan ses av konsumenterna.
 
-   Paketeraren kräver minst en princip med minst en användningsregel. Du kan åsidosätta användningsregeln och lägga till ytterligare användningsregler när licensservern genererar licensen.
+   Packager kräver minst en princip med minst en användningsregel. Du kan åsidosätta användningsregeln och lägga till ytterligare användningsregler när licensservern genererar licensen.
 
 1. Paketera innehållet och ange vilka profiler som ska användas.
 

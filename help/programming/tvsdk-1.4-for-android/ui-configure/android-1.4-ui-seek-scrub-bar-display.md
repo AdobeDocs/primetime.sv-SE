@@ -1,15 +1,14 @@
 ---
 description: TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
-title: Visa ett söknavigeringsfält med den aktuella uppspelningspositionen
-exl-id: 8076521b-579d-491f-97de-c7b57daa9b2e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: Visa ett söknavigeringsfält med aktuell uppspelningsposition
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-# Visa ett söknavigeringsfält med den aktuella uppspelningspositionen {#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Visa ett söknavigeringsfält med aktuell uppspelningsposition {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK har stöd för sökning till en viss position (tid) där strömmen är en spelningslista med skjutbara fönster, i både VOD (video on demand) och liveströmmar.
 

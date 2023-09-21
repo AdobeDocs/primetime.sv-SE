@@ -1,8 +1,7 @@
 ---
 description: Webbläsare-TVSDK har stöd för ett antal HLS-funktioner som du kan implementera för att lägga till funktioner i dina videoprogram.
 title: HLS-funktioner som stöds
-exl-id: 111a6683-fb5c-4f0a-8665-5b1aab77056c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Webbläsare-TVSDK har stöd för ett antal HLS-funktioner som du kan implementer
 
 >[!TIP]
 >
->I Safari-kolumnen betyder &quot;Plattformsbegränsning&quot; att det inte finns stöd för användningsexemplet eftersom den plattformen inte tillåter implementering av stöd för det. Om du infogar något ska du använda SSAI. Om det finns uppspelningsbegränsningar som är viktiga för dig kan du tvinga fram en återgång till Flash på Safari tills plattformen har stöd för att infoga annonser.
+>I Safari-kolumnen betyder &quot;Plattformsbegränsning&quot; att det inte finns stöd för användningsexemplet eftersom den plattformen inte tillåter implementering av stöd för det. Om du infogar något ska du använda SSAI. Om det finns uppspelningsbegränsningar som är viktiga för dig kan du tvinga fram en återgång till Flash på Safari tills plattformen har stöd för användning av annonsinfogning.
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -82,13 +81,13 @@ Removed Nielsen row
 
 ## HLS-integreringar {#hls-integrations}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Integreringar | VOD + Live | Integrering med Adobe Analytics VHL | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 
 ## HLS-funktioner för avancerad annonsinfogning (CSAI) {#hls-advanced-ad-insertion}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD | Endast annons | Stöds inte | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Ad Insertion | VOD + Live | Målparametrar | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
@@ -99,7 +98,7 @@ Removed Nielsen row
 
 ## Funktioner för infogning av HLS-kärnannonser (CSAI) {#hls-core-ad-insertion}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD + Live | Före rullning | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Ad Insertion | VOD + Live | Mid-roll | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | Plattformsbegränsning |
@@ -110,17 +109,17 @@ Removed Nielsen row
 | Ad Insertion | VOD + Live | VMAP 1.0 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Ad Insertion | VOD + Live | CRS v3.1 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 
-## Funktioner för skydd av HLS-innehåll {#hls-content-protection}
+## HLS-innehållsskyddsfunktioner {#hls-content-protection}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Skydd av innehåll | VOD + Live | AES-128 | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Skydd av innehåll | VOD + Live | Sample-AES | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Skydd av innehåll | VOD | DRM | Adobe Access | Stöds inte | FairPlay |
 
-## Avancerade HLS-uppspelningsfunktioner {#hls-advanced-playback}
+## HLS-avancerade uppspelningsfunktioner {#hls-advanced-playback}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Uppspelning | VOD | Uppspelning vid förskjutning | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Uppspelning | VOD | Uppspelning endast av ljud | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
@@ -134,7 +133,7 @@ Removed Nielsen row
 
 ## HLS-kärnuppspelning {#hls-core-playback}
 
-| Kategori | Innehållstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategori | Innehållstyp | Funktion | Flash | HTML 5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Uppspelning | VOD + Live | Allmän uppspelning (Play, Pause, Seek) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |
 | Uppspelning | FER VOD | Allmän uppspelning (Play, Pause, Seek) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) | ![ikon som stöds](assets/supported15.png) |

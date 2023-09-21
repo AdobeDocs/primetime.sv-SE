@@ -1,8 +1,7 @@
 ---
 description: Anpassa referensimplementeringen för att integrera Adobe Primetime-autentisering för produktionsmiljön.
 title: Integrera Primetime-autentisering
-exl-id: ef6dc75d-d00f-481f-a620-4ec402cbebb6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
 1. Använd `ManagerFactory` för att få en instans av `EntitlementManager`.
 
-   Du måste alltid använda `ManagerFactory` för att hämta en instans av `EntitlementManager`, som `ManagerFactory` underhåller en enda instans av EntitlementManager för programmet. Instansiera aldrig `EntitlementManager` eller `EntitlementManagerOn` genom att använda deras konstruktorer.
+   Du måste alltid använda `ManagerFactory` för att hämta en instans av `EntitlementManager`, som `ManagerFactory` underhåller en enda instans av EntitlementManager för programmet. Instansiera aldrig `EntitlementManager` eller `EntitlementManagerOn` klasser genom att använda deras konstruktorer.
 
    ```java
    EntitlementManager entitlementManager =  
@@ -36,7 +35,7 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
    The `ManagerFactory` returnerar en instans av `EntitlementManagerOn`, med aktiverade berättigandeflöden, om du tidigare har anropat `EntitlementManager.initializeAccessEnabler`. Om du inte ringer första gången `EntitlementManager.initializeAccessEnabler`och sedan `ManagerFactory` returnerar en instans av `EntitlementManager`, med berättigandeflödena inaktiverade. 1. Konfigurera begärande-ID.
 
-   Referensimplementeringen är förkonfigurerad med test-ID:t för begärande inställt på: &quot;REF&quot;. Du kan använda detta begärande-ID för att testa programmet. Uppdatera programmets [!DNL res/values/strings.xml] med ditt begärande-ID.
+   Referensimplementeringen är förkonfigurerad med testbegärande-ID inställt på: &quot;REF&quot;. Du kan använda detta begärande-ID för att testa programmet. När du är redo att använda det begärande-ID som du fått från din autentiseringsrepresentant för Primetime, ska du uppdatera programmets [!DNL res/values/strings.xml] med ditt begärande-ID.
 
    ```xml
    <!-- Programmer Requestor ID, change to ID provided by your Adobe  
@@ -63,7 +62,7 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
    Autentiseringstjänsten Primetime kan köras i två olika miljöer:
 
    * Mellanlagring - Mellanlagringsmiljön används för att testa programmet.
-   * Produktion - Produktionsmiljön används för driftsättning av ditt program.
+   * Produktion - Produktionsmiljön används för driftsättning av ditt program i realtid.
 
    Du ställer in URI:er för både staging- och produktionsmiljöer med programmet, men du måste ange vilken av dessa som ska användas av programmet i koden. I `com.adobe.primetime.reference.manager.EntitlementManger` klass, ange `environmentUri` variabel till antingen `STAGING_URI` eller `PRODUCTION_URI` beroende på vilken autentiseringsmiljö du använder.
 
@@ -95,7 +94,7 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
 
 1. Anpassa MVPD-markeringsstödrastret.
 
-   På urvalssidan för innehållsleverantör visas en tabell med de nio viktigaste PDF-filerna som användaren kan välja bland. Programmet hämtar de nio viktigaste PDF-filerna från en ordnad lista i programmet som matchar de tillgängliga MVPD-filerna som är integrerade med programmeraren i Primetimes autentiseringssystem. Den ordnade listan över de primära PDF-filerna sparas i MVPD-ID:t i autentiseringssystemet Primetime, inte i visningsnamnet för MVPD. Det är viktigt att verifiera att MVPD ID:n i listan över primära MVPD-ID:n matchar MVPD ID:n som är integrerade med programmerarens konto, eftersom ID:n i vissa fall kan vara olika för olika integreringar. Nedan finns den ordnade listan över primära MVPD-filer som finns i klassen `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
+   På urvalssidan för innehållsleverantör visas en tabell med de nio översta PDF-filerna som användaren kan välja bland. Programmet hämtar de nio viktigaste PDF-filerna från en ordnad lista i programmet som matchar de tillgängliga MVPD-filerna som är integrerade med programmeraren i Primetimes autentiseringssystem. Den ordnade listan över de primära PDF-filerna sparas i MVPD-ID:t i autentiseringssystemet Primetime, inte i visningsnamnet för MVPD. Det är viktigt att verifiera att MVPD ID:n i listan över primära MVPD-ID:n matchar MVPD ID:n som är integrerade med programmerarens konto, eftersom ID:n i vissa fall kan vara olika för olika integreringar. Nedan finns den ordnade listan över primära MVPD-filer som finns i klassen `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
 
    ```java
    /* Array of MVPDs to display in a Grid of icons 
@@ -130,10 +129,10 @@ Integreringen av referensimplementering av Primetime-autentiseringstjänsten fun
    };
    ```
 
-   Följande tabell innehåller ett exempel på hur den ordnade listan över primära MVPD används. I den första kolumnen visas de MVPD-program som är integrerade med Programmeraren. Den andra kolumnen är den (förkortade) ordnade listan över MVPD-filer. Den tredje kolumnen är resultatlistan som används för att visa de sex viktigaste PDF-filerna för användaren.
+   Följande tabell innehåller ett exempel på hur den ordnade listan över primära MVPD används. I den första kolumnen visas de MVPD-program som är integrerade med Programmer. Den andra kolumnen är den (förkortade) ordnade listan över MVPD-filer. Den tredje kolumnen är resultatlistan som används för att visa de sex viktigaste PDF-filerna för användaren.
 
    I det här exemplet används de sex bästa videofilmarna i stället för de nio för att exemplet ska vara enkelt. Lägg märke till hur resultatlistan innehåller skärningspunkten för de två första listorna och har samma ordning som den andra listan. Observera också att AT&amp;T U-verse inte finns med i den slutliga listan eftersom endast de första matchande sex PDF-filerna tas.
 
-| Tillgängliga PDF-filer | Primära MVPD-filer | Visa 6 MVPD-filer |
+| Tillgängliga MVPD-filer | Primära MVPD-filer | Visa 6 MVPD-filer |
 |--- |--- |--- |
 | <ol><li>Comcast XFINITY</li><li>TWC</li><li>Mediacom</li><li>RCN</li><li>Danska</li><li>AT&amp;T U-verterad</li><li>CableOne</li><li>Borghfyr</li><li>Atlantic Broadband</li><li>WOW!</li><li>MetroCast</li><li>DirectTV </li><li>Cox</li><li>Cablevision Optimum</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Danska</li><li> TWC</li><li>Cox</li><li>Stadga</li><li>Verizon FiOS</li><li>Cablevision Optimum</li><li>AT&amp;T U-verterad</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Danska</li><li>TWC</li><li>Cox</li><li>Cablevision Optimum</li></ol> |

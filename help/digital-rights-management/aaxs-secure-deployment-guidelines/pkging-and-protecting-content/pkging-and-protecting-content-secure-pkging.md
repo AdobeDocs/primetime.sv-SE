@@ -2,8 +2,7 @@
 title: Säker paketering av innehåll
 description: Säker paketering av innehåll
 copied-description: true
-exl-id: f554852c-83d9-4b31-8dde-2af577c70989
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -26,4 +25,4 @@ Paketerings-API:t för Adobe Access utfärdar varningar under vissa förhålland
 
 Om innehåll paketeras med en princip med felaktiga attribut bör profilen uppdateras och den uppdaterade profilen måste göras tillgänglig för licensservern via en principuppdateringslista eller någon annan metod för att leverera den uppdaterade profilen till servern. Vissa principattribut kan inte ändras efter att principen har skapats. Om attributen är felaktiga hämtar du tillbaka innehållet från distributionswebbplatserna, återkallar policyn så att inga framtida licenser kan beviljas och krypterar om innehållet.
 
-När förpackningen är klar förstörs inte paketeringsnyckeln uttryckligen. Men den skräpsamlas. Paketnyckeln finns därför kvar i minnet under en tid. du måste skydda dig mot obehörig åtkomst till datorn och vidta åtgärder för att se till att du inte visar några filer, t.ex. kärndumpar, som kan avslöja informationen.
+När paketeringen är klar förstörs inte paketeringsnyckeln explicit, men den skräpsamlas. Paketnyckeln finns därför kvar i minnet under en tid. Du måste skydda dig mot obehörig åtkomst till datorn och vidta åtgärder för att se till att du inte exponerar några filer, t.ex. kärndumpar, som kan avslöja informationen.

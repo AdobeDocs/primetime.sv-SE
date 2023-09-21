@@ -1,8 +1,7 @@
 ---
 description: Den här guiden ger information om hur du utvecklar videospelarprogram med TVSDK för Android, som implementeras i Java.
 title: Produktöversikt, målgrupp och den här guiden
-exl-id: 3dfef60a-5547-494b-9bbe-74eb0440ec92
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
@@ -25,7 +24,7 @@ TVSDK innehåller API-beskrivningar och kodexempel som hjälper dig att integrer
 
 ## Målgrupp {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-Den här guiden förutsätter att du förstår hur du utvecklar program och videospelare med Java. Du implementerar gränssnittet för videospelaren i Java och inkluderar de TVSDK-funktioner du behöver.
+Den här guiden förutsätter att du förstår hur du utvecklar program och videospelare med Java. Du implementerar användargränssnittet för videospelaren i Java och inkluderar de TVSDK-funktioner du behöver.
 
 ## Om den här guiden {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 

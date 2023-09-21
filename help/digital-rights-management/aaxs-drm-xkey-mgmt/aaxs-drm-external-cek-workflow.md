@@ -1,8 +1,7 @@
 ---
 title: Externt CEK-arbetsflöde för AXS DRM
 description: Det här arbetsflödet skiljer sig från de flesta befintliga DRM-system eftersom det inte kräver att något centralt arkiv eller CMS (Content Key Management System) används
-exl-id: f084aa57-8bef-40a0-b52d-4d23dfdf36c4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%

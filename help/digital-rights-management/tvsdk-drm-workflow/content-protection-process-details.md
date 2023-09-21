@@ -2,8 +2,7 @@
 title: Information om licensinhämtningsprocess
 description: Information om licensinhämtningsprocess
 copied-description: true
-exl-id: d772339a-8d05-401b-b5c1-18169b3627b6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 I den här processen visas en detaljerad vy på API-nivå av arbetsflödet för skyddat DRM-innehåll i Primetime:
 
-1. Använda en `URLLoader` -objektet, läs in byten för det skyddade innehållets metadatafil.
+1. Använda `URLLoader` -objektet, läs in byten för det skyddade innehållets metadatafil.
 
    Ange det här objektet som en variabel, till exempel `metadata_bytes`. Allt innehåll som styrs av Primetime DRM har Primetimes DRM-metadata. När innehållet paketeras kan dessa metadata sparas som en separat metadatafil ( [!DNL .metadata]) tillsammans med innehållet. Metadata kan också vara Base64-kodade och infogade i videomanifestfilen. Mer information finns i [Paketera mediefiler](../protecting-content/packaging-media-overview/packaging-media-files.md).
    1. Ta bort utropstecknet om det behövs `!` från början av strängen.
@@ -40,7 +39,7 @@ I den här processen visas en detaljerad vy på API-nivå av arbetsflödet för 
    DRMManager.addEventListener(DRMErrorEvent.DRM_ERROR, onDRMError);
    ```
 
-   I `DRMStatusEvent` avlyssnare, kontrollera att licensen är giltig (inte null). I `DRMErrorEvent` avlyssnare, hantera `DRMErrorEvents`. Se *Använda klassen DRMStatusEvent* och *Använda klassen DRMErrorEvent* i den här guiden.
+   I `DRMStatusEvent` ska du kontrollera att licensen är giltig (inte null). I `DRMErrorEvent` avlyssnare, hantera `DRMErrorEvents`. Se *Använda klassen DRMStatusEvent* och *Använda klassen DRMErrorEvent* i den här guiden.
 
 1. Läs in licensen som krävs för att spela upp innehållet.
 Försök först att läsa in en lokalt lagrad licens för att spela upp innehållet:
@@ -62,7 +61,7 @@ Försök först att läsa in en lokalt lagrad licens för att spela upp innehål
 
    [Android: DRMLicenseAcquiredCallback](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMLicenseAcquiredCallback.html)
 
-   [iOS: DRMLicenseInhämtad](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/_d_r_m_interface_8h.html#afe5a9e3a003f312ee268d9b00927fa6d)
+   [iOS: DRMLicenseAcquired](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/_d_r_m_interface_8h.html#afe5a9e3a003f312ee268d9b00927fa6d)
 1. Kontrollera den autentiseringsmetod som krävs av profilen för det här innehållet.
 
    Använd `DRMContentData.authenticationMethod` -egenskap.
@@ -83,7 +82,7 @@ Försök först att läsa in en lokalt lagrad licens för att spela upp innehål
 
       [Android: authenticate()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMManager.html#authenticate(com.adobe.ave.drm.DRMMetadata,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20com.adobe.ave.drm.DRMOperationErrorCallback,%20com.adobe.ave.drm.DRMAuthenticationCompleteCallback))
 
-      [iOS: autentisera:](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/interface_d_r_m_manager.html#a169c1441f196a834094a8e0f5ecb4aca)
+      [iOS: authenticate:](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/interface_d_r_m_manager.html#a169c1441f196a834094a8e0f5ecb4aca)
 
       >[!NOTE]
       >
@@ -99,7 +98,7 @@ Försök först att läsa in en lokalt lagrad licens för att spela upp innehål
 
       >[!NOTE]
       >
-      >Alternativt, oavsett autentiseringsmetod, `.setAuthenticationToken()` kan användas för att skicka anpassade data från klienten till licensservern. Detta är en överlagring av API, eftersom det här är det enda sättet att skicka dynamiska anpassade data från klienten till licensservern vid tidpunkten för licenshämtningen. Denna metod för anpassad datatransport diskuteras ingående i flera inlägg i forumen i [Primetime DRM-forum (Adobe Access) ](https://forums.adobe.com/community/adobe_access).
+      >Alternativt, oavsett autentiseringsmetod, `.setAuthenticationToken()` kan användas för att skicka anpassade data från klienten till licensservern. Detta är en överlagring av API, eftersom det här är det enda sättet att skicka dynamiska anpassade data från klienten till licensservern vid tidpunkten för licenshämtningen. Denna metod för anpassad datatransport diskuteras ingående i flera inlägg i forumen i [Primetime DRM-forum (Adobe Access)](https://forums.adobe.com/community/adobe_access).
 
 1. Om autentiseringen misslyckas måste ditt program återgå till steg 6.
 

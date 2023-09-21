@@ -1,8 +1,7 @@
 ---
 title: API för förkodning
 description: Du kan använda API:t för just-in-time-ompaketering för att koda annonsprojekt i förväg, så att det finns en innehållskompatibel version tillgänglig när det behövs, vilket eliminerar den 2-4 minuters fördröjning som är kopplad till just-in-time-ompaketering (JIT).
-exl-id: d45668e0-ec8a-4e5a-a56b-cffff27561f2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Primetime Ad Insertion erbjuder ett förtranskodnings-API för situationer där 
 
 Skicka ett HTTP-POST-kommando till den angivna URL:en för att tala om för CRS vilken annons du vill omkoda och vilka alternativ du vill att den ska använda. Svarskoden rapporterar om det går eller inte och annan information.
 
-Denna begäran kräver ett användarnamn och lösenord. Du kan få dessa från din kontoansvarige på Adobe. Om du vill ha information om autentisering kontaktar du Adobe Primetime Enablement.
+Denna begäran kräver ett användarnamn och lösenord. Du kan få dessa från din kontoansvarige på Adobe. Om du vill ha information om autentiseringen kontaktar du Adobe Primetime Enablement.
 
 Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelande enligt följande:
 
@@ -31,25 +30,25 @@ Om du vill skicka en begäran om omkodning till CRS skickar du ett HTTP-meddelan
 
 * **Brödtext -** XML som i följande exempel:
 
-   ```xml
-   <RepackageList>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD1</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Zone>3</Zone>
-       </Repackage>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD2</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Format>id3 targetdur=5</Format>
-           <Zone>3</Zone>
-       </Repackage>
-   </RepackageList>
-   ```
+  ```xml
+  <RepackageList>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD1</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Zone>3</Zone>
+      </Repackage>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD2</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Format>id3 targetdur=5</Format>
+          <Zone>3</Zone>
+      </Repackage>
+  </RepackageList>
+  ```
 
 The `RepackageList` -block i brödtexten kan innehålla 1 till 300 `Repackage` -block. Om antalet `Repackage` -block i brödtexten överstiger 300, då misslyckas HTTP-begäran med följande fel:
 
@@ -61,36 +60,37 @@ The `RepackageList` -block i brödtexten kan innehålla 1 till 300 `Repackage` -
 ```
 
 
-De obligatoriska och valfria parametrarna i en `Repackage` -block är som följer:
+obligatoriska och valfria parametrar i en `Repackage` -block är som följer:
 
 * **`AdSystem`** (Obligatoriskt) - Källservern, till exempel `Auditude`, `FreeWheel`, `Apad.tv`. Detta är ett strängvärde som motsvarar VAST-elementet `AdSystem`.
 
-* **`AdId`** (Obligatoriskt) - Detta är en identifierare för den tredjepartsserver som anges i begäran. Den motsvarar `id` attributet för `Ad` -element i ett VAST-svar.
+* **`AdId`** (Obligatoriskt) - Detta är en identifierare för den tredjepartsserver som anges i begäran. Den motsvarar `id` attributet för `Ad` i ett VAST-svar.
 
 * **`CreativeURL`** (Obligatoriskt) - Platsen (URI) för annonsen som ska omkodas. Detta motsvarar VAST. `MediaFile` -element.
 
 * `CreativeID` (valfritt) - Identifieraren för annonsen som ska inkluderas som en del av annonsupplevelsen.
-* **`Zone`** (Obligatoriskt) - Zon-ID för ditt konto (hämtas från din tekniska kontohanterare). Detta är ett numeriskt värde som motsvarar Auditude-plattformen `publisher_site_id` inställning.
+* **`Zone`** (Obligatoriskt) - Zon-ID för ditt konto (hämtas från din tekniska kontohanterare). Detta är ett numeriskt värde som motsvarar plattformen Auditude `publisher_site_id` inställning.
 
 * **`Format`** (valfritt) - Parametrar för att styra hur CRS omkodar annonsens kreativitet:
 
    * `clientside` - Generera utdata som är kompatibla med den URL som TVSDK använder för att kommunicera med CDN.
-   >[!IMPORTANT]
-   >
-   >Du måste ange den här parametern om du vill att den ompaketerade annonsen ska vara kompatibel med Ad Insertion på klientsidan. Om du inte anger detta kommer den ompaketerade annonsen endast att vara kompatibel med Ad Insertion på serversidan.
+
+  >[!IMPORTANT]
+  >
+  >Du måste ange den här parametern om du vill att den ompaketerade annonsen ska vara kompatibel med Ad Insertion på klientsidan. Om du inte anger detta kommer den ompaketerade annonsen endast att vara kompatibel med Ad Insertion på serversidan.
 
    * `hls` - Generera en HLS-kompatibel trancoded creative.
    * `dash` - Generera en DASH-kompatibel trancoded creative.
    * `id3` - Lägg in ID3-taggar med tidsmetadata i den omkodade annonsen.
    * `targetdur` - Segmentets varaktighet (i sekunder) för den omkodade annonsen. Standard är `targetdur=4`. Detta värde ska motsvara värdet som anges i manifestet för `<s>` i målvaraktighetstaggen: `#EXT-X-TARGETDURATION:<s>`.
 
-   >[!NOTE]
-   >
-   >DASH-kompatibla resurser är inte kompatibla med infogning av Adobe Primetime-annonser.
+  >[!NOTE]
+  >
+  >DASH-kompatibla resurser är inte kompatibla med infogning av Adobe Primetime-annonser.
 
 >[!IMPORTANT]
 >
->För att få en jämnare uppspelning anger du `targetdur` för att matcha innehållets segmentvaraktighet.
+>För att uppspelningen ska bli så smidig som möjligt anger du `targetdur` för att matcha innehållets segmentvaraktighet.
 
 ## HTTP-svar {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 

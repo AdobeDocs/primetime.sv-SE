@@ -2,8 +2,7 @@
 title: Exempel på en anpassad VOD-resurs
 description: Exempel på en anpassad VOD-resurs
 copied-description: true
-exl-id: cf37c551-fb94-425e-ae11-d6a421e60566
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%

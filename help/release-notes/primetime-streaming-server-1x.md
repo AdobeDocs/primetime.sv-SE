@@ -3,8 +3,7 @@ title: Primetime Streaming Server-versioner
 description: Nyheter i Primetime Streaming Server 1.3 och 1.4.
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 80c4687e-b0ac-48f2-a1c3-8751552da9d1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1916'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Nyheter i Primetime Streaming Server 1.3 och 1.4.
 * Utdata-HLS-strömmar innehåller nu ID3-metadata i MPEG-2 TS
 * HLS-ljudströmmar kan nu ha en associerad statisk bild
 * Stöd för att tillhandahålla IV som användarindata för HLS AES-krypteringsarbetsflöden
-* Stöd för att exportera IV till en fil när IV genereras av offlinepaketeraren
+* Stöd för IV till en fil när IV genereras av offlinepaketeraren
 * Playlist Creator har nu stöd för att associera flerspråkiga ljudgrupper och flerspråkiga WebVTT-underrubriksgrupper med medieströmmar
 
 **Ursprungsserver**
@@ -118,7 +117,7 @@ Flera prestandaförbättringar har lagts till i JIT-paketeringsfunktionerna i Pr
 
 ## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
 
-### Lägsta systemkrav {#minimum-system-requirements}
+### Systemkrav {#minimum-system-requirements}
 
 **Nätverkskrav**
 
@@ -135,13 +134,13 @@ Flera prestandaförbättringar har lagts till i JIT-paketeringsfunktionerna i Pr
 * 1 Gbit Ethernet-kort rekommenderas (flera nätverkskort och 10 Gbit stöds också)
 * Skiva:
 
-   * (Disk-SAS): Minst 10 GB med 7 500 v/min
+   * (disk-SAS): Minst 10 GB med 7 500 v/min
    * (Disk-SSD): 400 MB/s läs/skriv
    * (NAS): 1 GB dedikerad länk
 
 **Programvarukrav**
 
-* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot-JVM). JDK krävs för JConsole-åtkomst till JMX API:er
+* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot JVM). JDK krävs för JConsole-åtkomst till JMX API:er
 
 ### Installera och konfigurera Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
@@ -195,7 +194,7 @@ Om du vill avinstallera direktuppspelningsservern stoppar du direktuppspelningss
 
 Det här avsnittet gäller när Primetime Streaming Server inte används och istället distribueras Primetime Live Packager AND/OR Primetime Origin Server
 
-### Lägsta systemkrav {#minimum-system-requirements-1}
+### Systemkrav {#minimum-system-requirements-1}
 
 **Nätverkskrav**
 
@@ -212,13 +211,13 @@ Det här avsnittet gäller när Primetime Streaming Server inte används och ist
 * 1 Gbit Ethernet-kort rekommenderas (flera nätverkskort och 10 Gbit stöds också)
 * Skiva:
 
-   * (Disk-SAS): Minst 10 GB med 7 500 v/min
+   * (disk-SAS): Minst 10 GB med 7 500 v/min
    * (Disk-SSD): 400 MB/s läs/skriv
    * (NAS): 1 GB dedikerad länk
 
 **Programvarukrav**
 
-* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot-JVM). JDK krävs för JConsole-åtkomst till JMX API:er
+* Oracle Java JRE 1.7 (rekommenderas: Sun/Oracle Hotspot JVM). JDK krävs för JConsole-åtkomst till JMX API:er
 
 Systemkraven ovan gäller både origin-servern och Live Packager.
 
@@ -290,7 +289,7 @@ Om du vill avinstallera HTTP Origin Server stoppar du HTTP Origin Server och tar
 
 ## Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
 
-### Lägsta systemkrav {#minimum-system-requirements-2}
+### Systemkrav {#minimum-system-requirements-2}
 
 **Operativsystem som stöds**
 
@@ -303,7 +302,7 @@ Om du vill avinstallera HTTP Origin Server stoppar du HTTP Origin Server och tar
 * 1 Gbit Ethernet-kort rekommenderas (flera nätverkskort och 10 Gbit stöds också)
 * Skiva:
 
-   * (Disk-SAS): Minst 10 GB med 7 500 v/min
+   * (disk-SAS): Minst 10 GB med 7 500 v/min
    * (Disk-SSD): 400 MB/s läs/skriv
    * (NAS): 1 GB dedikerad länk
 
@@ -311,7 +310,7 @@ Om du vill avinstallera HTTP Origin Server stoppar du HTTP Origin Server och tar
 
 * Oracle Java JRE 1.7 eller senare.
 
-### Installera och konfigurera offlinepaketeraren {#install-and-configure-offline-packager}
+### Installera och konfigurera Offline Packager {#install-and-configure-offline-packager}
 
 Så här installerar du Offline Packager:
 

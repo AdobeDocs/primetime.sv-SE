@@ -1,8 +1,7 @@
 ---
 description: Om du vill använda TVSDK så effektivt som möjligt bör du ta hänsyn till vissa detaljer i hur TVSDK fungerar och följa vissa bästa metoder.
 title: Överväganden och bästa praxis
-exl-id: 5e1e09e1-f22e-4797-807a-14dbf50bb835
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Kom ihåg följande information när du använder TVSDK:
 
 * Adobe Primetime fungerar inte med emulatorer eller simulatorer.
 
-   Du måste använda riktiga enheter för testning.
+  Du måste använda riktiga enheter för testning.
 * Uppspelning stöds endast för HTTP-direktuppspelning (HLS).
 * Huvudinnehållet i videon kan multiplexas, där video- och ljudströmmar finns i samma återgivning, eller inte multiplexas, där video- och ljudströmmar finns i separata återgivningar.
 * TVSDK-API:t implementeras i ActionScript.
@@ -28,12 +27,12 @@ Kom ihåg följande information när du använder TVSDK:
    * Undertexter stöds i den utsträckning som AVE tillhandahåller.
    * Beroende på kodningsprecisionen kan den faktiska längden för kodade medier skilja sig från varaktigheten som registreras i strömmens resursmanifest.
 
-      Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
+     Det finns inget tillförlitligt sätt att synkronisera om mellan den idealiska virtuella tidslinjen och den faktiska tidslinjen för uppspelning. Förloppsspårning för direktuppspelning för annonshantering och videoanalys måste använda den faktiska uppspelningstiden, så rapporterings- och användargränssnittets beteende kanske inte spårar medie- och reklaminnehållet exakt.
    * Inkommande användaragentnamn för alla HTTP-begäranden från TVSDK på den här plattformen tilldelas följande strängmönster:
 
-      ```
-      "Adobe Flash Player"
-      ```
+     ```
+     "Adobe Flash Player"
+     ```
 
 ## God praxis {#section_tvsdk_best_practices}
 
@@ -42,4 +41,4 @@ Här är de rekommenderade metoderna för TVSDK:
 * Använd HLS version 3.0 eller senare för programinnehåll.
 * För TVSDK 1.4 för DHLS är lat och inläsning aktiverat som standard.
 
-   För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ännu mer.
+  För innehåll utan pre-roll eller middle-roll kan du använda `AdvertisingMetadata.delayAdLoading` för att snabba upp inläsningen av innehåll ännu mer.

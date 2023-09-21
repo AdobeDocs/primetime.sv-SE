@@ -1,15 +1,14 @@
 ---
 description: Du kan styra synligheten för undertexter. När synlighet har aktiverats visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 title: Kontrollera synlighet för undertexter
-exl-id: 358e32d8-7a3b-42bd-900b-dafe8eae3edf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
 
 ---
 
-# Översikt {#control-closed-caption-visibility-overview}
+# Ökning {#control-closed-caption-visibility-overview}
 
 Du kan styra synligheten för undertexter. När synlighet har aktiverats visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 
@@ -19,13 +18,13 @@ Du kan styra synligheten för undertexter. När synlighet har aktiverats visas d
 >
 >Synlighetsvärdena för undertexter definieras i `MediaPlayer.Visibility`.
 >
->
-```java
+>```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
 >```
+>
 
 1. Vänta på `MediaPlayer` vara i åtminstone statusen FÖRBEREDD.
 

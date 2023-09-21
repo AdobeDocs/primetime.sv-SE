@@ -2,8 +2,7 @@
 title: Krav för annonsering
 description: Krav för annonsering
 copied-description: true
-exl-id: 906f4910-396c-4909-8e22-119486ed13a0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Primetimes annonsbeslut fungerar tillsammans med TVSDK för att identifiera anno
 Om du vill lägga in annonser i videomaterialet måste du se till att annonsen och det huvudsakliga videomaterialet uppfyller följande krav:
 
 * Annonsinnehållets HLS-version får inte vara högre än huvudinnehållets HLS-version.
-* Annonserna måste vara multiplexade och måste innehålla en rendering som bara innehåller ljud, oavsett om huvudinnehållet är multiplexat eller inte.
+* Ads must be multiplexed and must contain an audio-only rendition, whether the main content is multiplexed.
 * Lägg till spellistor bör ha samma bithastighetsåtergivningar som återgivningarna i spellistan för huvudinnehållet.
 * Mållängden och den individuella fragmentlängden för en annons får inte överskrida mållängden för huvudinnehållet.
 * Om huvudinnehållet innehåller en ström med enbart ljud måste annonsinnehållet även innehålla en ström med enbart ljud.
@@ -27,4 +26,4 @@ Om du vill lägga in annonser i videomaterialet måste du se till att annonsen o
 * Om huvudinnehållet är en flerbithastighet (MBR) måste även annonsinnehållet vara MBR.
 * Om huvudinnehållet har alternativa ljudspår måste varje annons ha minst en ström med enbart ljud.
 
-   Om annonsen inte har minst en ljudström hoppas annonsen över.
+  Om annonsen inte har minst en ljudström hoppas annonsen över.

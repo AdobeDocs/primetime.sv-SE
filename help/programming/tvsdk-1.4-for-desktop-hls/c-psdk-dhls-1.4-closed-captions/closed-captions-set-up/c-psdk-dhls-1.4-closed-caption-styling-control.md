@@ -1,8 +1,7 @@
 ---
 description: Du kan ange formatinformation för textningsspår med klassen ClosedCaptionStyles. Detta anger formatet för alla undertexter som visas av spelaren.
 title: Styr textningsformat
-exl-id: fd94a851-1e8f-4406-a3bb-ca115b4e60f8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -73,7 +72,7 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>Tips: De faktiska teckensnitten som finns på en enhet kan variera, och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
+     </code> </p> <p>Tips! De faktiska teckensnitten som finns på en enhet kan variera och ersättningar används vid behov. Monospace med serifer används vanligtvis som ersättning, men den här ersättningen kan vara systemspecifik. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Storlek </td> 
@@ -82,8 +81,8 @@ public function TextFormat(
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDEL </span> - Standardstorleken </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> STOR </span> - Cirka 30 % större än mediet </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> - Cirka 30 % mindre än mediet </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - bildtextens standardstorlek, samma som medium </li> 
-     </ul> </p> <p>Tips: Du kan ändra teckenstorleken för WebVTT-bildtexter genom att ändra storleksparametern för <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span> funktion. </p> </td> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Bildtextens standardstorlek; samma som medelvärdet </li> 
+     </ul> </p> <p>Tips! Du kan ändra teckenstorleken för WebVTT-bildtexter genom att ändra storleksparametern för <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span> funktion. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Teckensnittskant </td> 

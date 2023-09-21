@@ -2,8 +2,7 @@
 title: Analysera prestanda
 description: Analysera prestanda
 copied-description: true
-exl-id: bef14bc2-30dc-44e5-bdfe-8b79f3af2cec
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
@@ -16,4 +15,4 @@ Primetimes Ad Insertion-konsol har kontrollpaneler för att analysera begäran o
 
 ## Analysera enskilda tidpunkter för en förfrågan {#analyze-timings}
 
-Tidsinställningarna för både CDN och annonsupplösning kan kontrolleras med rubriker som skickas med varje begäran.  Mer information finns i [Felsökningshuvuden](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).
+Tidsinställningarna för både CDN och annonsupplösning kan kontrolleras med rubriker som skickas med varje begäran.  Mer information finns i [Felsöka rubriker](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).

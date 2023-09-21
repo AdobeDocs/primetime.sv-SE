@@ -2,8 +2,7 @@
 title: Användning av kommandorad
 description: Användning av kommandorad
 copied-description: true
-exl-id: 241849bb-e818-420e-98b4-c12e306b17b2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -76,7 +75,7 @@ I följande tabell beskrivs de kommandoradsalternativ som kan anges tillsammans 
    <td colname="2" class="- topic/entry "> Om metadata innehåller flera profiler anger du numret på profilen som ska användas (med början vid 1) för att generera licensen. Om inget anges används den första principen. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-cert</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r mottagare-certifikat</span> </td> 
    <td colname="2" class="- topic/entry ">Generera en licens för den angivna mottagaren. Ett enhets- eller domäncertifikat kan användas. Flera <span class="+ topic/ph pr-d/codeph codeph"> -r </span>kan anges för att skapa en licens för flera mottagare. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 

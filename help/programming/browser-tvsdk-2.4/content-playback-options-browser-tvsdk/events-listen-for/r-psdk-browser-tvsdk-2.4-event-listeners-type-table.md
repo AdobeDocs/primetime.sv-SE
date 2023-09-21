@@ -1,8 +1,7 @@
 ---
 description: När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelsetyp att avlyssna och namnet på återanropet. När en händelse inträffar anropar webbläsaren TVSDK ditt återanrop och skickar ett händelseobjekt av lämplig typ till den.
 title: Händelsetyper och klasser för återanrop
-exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -16,7 +15,7 @@ När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelset
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> När du lyssnar efter det här händelsenamnet (AdobePSDK.EventType) </th> 
+   <th colname="2" class="entry"> När du lyssnar efter händelsenamnet (AdobePSDK.EventType) </th> 
    <th class="entry">fraser/browser-tvsdk-name skickar en händelse till återanropet för den här objekttypen (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
@@ -64,7 +63,7 @@ När du registrerar händelseavlyssnare med Browser TVSDK anger du en händelset
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
      <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> ÖVERORDNAD_UPDATED</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATED</span> </li> 
      <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
      <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
     </ul> </td> 

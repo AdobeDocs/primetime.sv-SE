@@ -1,15 +1,14 @@
 ---
 description: Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 title: Kontrollera synlighet för undertexter
-exl-id: d9428744-1700-4917-b334-d6e0446eaf37
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
-# Översikt {#control-closed-caption-visibility}
+# Ökning {#control-closed-caption-visibility}
 
 Du kan styra synligheten för undertexter. När synligheten är aktiverad visas det markerade spåret. Om du ändrar vilket spår som är aktuellt ändras inte synlighetsinställningen.
 
@@ -21,13 +20,13 @@ Du kan styra synligheten för undertexter. När synligheten är aktiverad visas 
 >
 >Synlighetsvärdena för undertexter definieras i `MediaPlayer.Visibility`.
 >
->
-```java
+>```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
 >```
+>
 
 1. Vänta tills MediaPlayer har minst tillståndet PREPARED (se [Vänta på ett giltigt tillstånd](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Om du vill hämta den aktuella synlighetsinställningen för undertexter använder du metoden get i MediaPlayer, som returnerar ett synlighetsvärde.
