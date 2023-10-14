@@ -7,12 +7,12 @@ user-guide-description: Lär dig att definiera och tillämpa begränsningar för
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# Hjälp om övervakning av samtidig användning av Primetime {#cm}
+# Övervakning av samtidig användning i Primetime help {#cm}
 
 + [Introduktion till övervakning av samtidig användning](cm-home.md)
 + [Ordlista för övervakning av samtidig användning](cm-glossary.md)

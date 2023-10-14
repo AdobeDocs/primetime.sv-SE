@@ -6,14 +6,14 @@ user-guide-description: Innehåller versionsspecifik information, systemkrav, be
 source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
 # Versionsinformation om Primetime {#release-notes}
 
-+ [Översikt över versionsinformation](home.md)
++ [Versionsinformation Ökning](home.md)
 + Primetime Ad Insertion {#ptai}
    + [Versionsinformation om PTAI 22.9.2](ptai-22x-release-notes.md)
    + [Versionsinformation om PTAI 21.11.1](ptai-21x-release-notes.md)
@@ -32,7 +32,7 @@ ht-degree: 0%
 + TVSDK for Desktop HLS {#tvsdk-desktop-hls}
    + [Versionsinformation om TVSDK 1.4 för Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
-   + [Primetime Offline Packager version 2 - utgåvor](offline-packager-2x-release-note.md)
+   + [Primetime Offline Packager version 2](offline-packager-2x-release-note.md)
 + Primetime Streaming Server {#streaming-server}
    + [Primetime Streaming Server version 1](primetime-streaming-server-1x.md)
 + TVSDK för Playstation 4 {#tvsdk-playstation}

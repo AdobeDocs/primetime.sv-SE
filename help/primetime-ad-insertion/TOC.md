@@ -1,23 +1,23 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Hjälp om Primetime Ad Insertion
+user-guide-title: Hjälp med Primetime Ad Insertion
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
-# Hjälp om Primetime Ad Insertion {#ad-insertion}
+# Hjälp med Primetime Ad Insertion {#ad-insertion}
 
 + [Adobe Primetime Ad Insertion](home.md)
 + Primetime Ad Insertion Announcements{#announcements}
    + [Meddelanden](announcements/overview.md)
    + [Versionsinformation](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-22x-release-notes.html)
 + Kom igång med Primetime Ad Insertion{#get-started}
-   + [Översikt](getting-started/get-started-overview.md)
+   + [Ökning](getting-started/get-started-overview.md)
    + [Förbered användning av Primetime Ad Insertion](getting-started/setup-ptai.md)
    + [Integrera er annonsserver](getting-started/integrate-ad-server.md)
    + [Integrera ditt CDN](getting-started/integrate-cdn.md)
@@ -25,7 +25,7 @@ ht-degree: 0%
    + [Använd annonsinfogning för VOD](getting-started/ad-insertion-vod.md)
    + [Ställ in annonsspårning](getting-started/set-up-ad-tracking.md)
 + Just-in-Time Transcoding{#just-in-time-transcoding}
-   + [Översikt](just-in-time-transcoding/jit-transcoding-overview.md)
+   + [Ökning](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Omkodning och normalisering](just-in-time-transcoding/transcoding-and-normalization.md)
    + [Leverans och lagring](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
    + [API för förtranskodning](just-in-time-transcoding/pre-transcoding-api.md)
@@ -36,23 +36,23 @@ ht-degree: 0%
    + [Lägg till stötfångare för innehåll](advanced-features/add-content-bumpers.md)
    + [Sammanhangsbaserad rapportering och målinriktning](advanced-features/contextual-reporting-and-targeting.md)
 + Prestanda: övervakning, felsökning och rapportering{#performance}
-   + [Översikt](performance-monitoring-debugging-reporting/performance-overview.md)
+   + [Ökning](performance-monitoring-debugging-reporting/performance-overview.md)
    + Övervaka och felsöka{#monitor-debug}
       + [Prestandaövervakning](performance-monitoring-debugging-reporting/performance-monitoring.md)
       + [Felsöka och felsöka](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
    + [Rapportering och fakturering](performance-monitoring-debugging-reporting/reporting-and-billing.md)
 + Avancerad telemetri{#advanced-telemetry}
-   + [Översikt](advanced-telemetry/advanced-telemetry-overview.md)
+   + [Ökning](advanced-telemetry/advanced-telemetry-overview.md)
    + [Viktiga mått och datamått](advanced-telemetry/key-metrics.md)
 + [Övervakning av live-event](live-event-monitoring.md)
 + Referens {#technical-reference}
-   + [Bootstrap API](technical-reference/bootstrap-api.md)
+   + [BOOTSTRAP API](technical-reference/bootstrap-api.md)
    + [Rapporter-API](technical-reference/report-api.md)
    + God praxis{#best-practices}
-      + [Översikt](best-practices/best-practices-overview.md)
+      + [Ökning](best-practices/best-practices-overview.md)
       + [Optimera starttiden för video](best-practices/optimize-video-startup-time.md)
       + [Analysera prestanda](best-practices/analyze-performance.md)
-      + [Cachelagring](best-practices/caching.md)
+      + [Cachning](best-practices/caching.md)
       + [Optimera vägar och protokoll](best-practices/optimize-routes-protocols.md)
       + [Använd begränsningar för annonsupplösning](best-practices/apply-ad-resolution-constraints.md)
    + [CDN:er som stöds](technical-reference/supported-cdns.md)

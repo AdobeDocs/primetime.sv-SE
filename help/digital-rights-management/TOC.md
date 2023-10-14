@@ -1,7 +1,7 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Hjälp om Primetime Digital Rights Management
+user-guide-title: Hjälp med Primetime Digital Rights Management
 user-guide-description: Hjälper dig att lära dig mer om olika användarscenarier i Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Hjälp om Digital Rights Management {#drm}
+# Hjälp med Digital Rights Management {#drm}
 
 + [DRM-översikt](home.md)
 + Handbok för registrering av certifikat {#certificate-enrollment-guide}
@@ -21,13 +21,13 @@ ht-degree: 0%
    + [Lägg till beställare](certificate-enrollment-guide/add-requesters.md)
    + [Skapa en sekundär administratör](certificate-enrollment-guide/add-secondary-admin.md)
    + Begär certifikat {#request-certs}
-      + [Översikt](certificate-enrollment-guide/request-certs/request-certs-overview.md)
+      + [Ökning](certificate-enrollment-guide/request-certs/request-certs-overview.md)
       + [Generera en begäran om certifikatsignering](certificate-enrollment-guide/request-certs/gen-cert-signing-req.md)
       + [Begär ett certifikat](certificate-enrollment-guide/request-certs/request-a-cert.md)
       + [Godkänn ett certifikat](certificate-enrollment-guide/request-certs/approve-a-cert.md)
       + [Hämta certifikat för domän-certifikatutfärdare](certificate-enrollment-guide/request-certs/obtain-domain-ca-certs.md)
    + Distribuera certifikat {#deploy-certs}
-      + [Översikt](certificate-enrollment-guide/deploy-certs/deploy-certs-overview.md)
+      + [Ökning](certificate-enrollment-guide/deploy-certs/deploy-certs-overview.md)
       + [Konvertera filer](certificate-enrollment-guide/deploy-certs/convert-files.md)
       + [Distribuera certifikat](certificate-enrollment-guide/deploy-certs/deploying-certs.md)
    + [Butiksnycklar](certificate-enrollment-guide/storing-keys.md)
@@ -41,12 +41,12 @@ ht-degree: 0%
       + [Förbereda innehåll](drm-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [Inköp av innehåll](drm-sdk-overview/content-distribution-workflow/content-acquisition.md)
    + Adobe Primetime DRM-komponenter {#adobe-access-components}
-      + [Översikt](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
+      + [Ökning](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
       + [Adobe Primetime DRM SDK](drm-sdk-overview/adobe-access-components/drm-sdk.md)
       + [Adobe Primetime DRM Server for Protected Streaming](drm-sdk-overview/adobe-access-components/protected-streaming.md)
       + [Adobe Flash Player](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
       + [Adobe AIR](drm-sdk-overview/adobe-access-components/adobe-air.md)
-      + [iOS- och Android-program](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
+      + [IOS- och Android-program](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
    + [Distribuera Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
    + Ytterligare distributionsscenarier {#additional-deployment-scenarios}
       + [UltraViolet media och Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
@@ -54,7 +54,7 @@ ht-degree: 0%
 + Snabbstartsguide för DRM {#drm-quick-start}
    + [Komma igång](quick-start/getting-started.md)
    + [Installera Tomcat](quick-start/install-tomcat.md)
-   + [Konfigurera och distribuera servern för skyddad direktuppspelning](quick-start/setup-deploy-drm-server-ps.md)
+   + [Konfigurera och distribuera servern för skyddad strömning](quick-start/setup-deploy-drm-server-ps.md)
    + [Paketera krypterat innehåll](quick-start/package-content.md)
    + [Installera testinnehåll för Flash Player och uppspelning](quick-start/install-fp-playback-test.md)
    + [Spela upp en lokalt paketerad video](quick-start/playback-locally-pkgd-video.md)
@@ -87,7 +87,7 @@ ht-degree: 0%
    + [Paketera innehåll](using-the-drm-key-server/packaging-content.md)
 + Riktlinjer för säker driftsättning av Adobe Primetime DRM {#guidelines}
    + Introduktion till nätverkstopologi {#introduction}
-      + [Översikt](secure-deployment-guidelines/overview/network-topology.md)
+      + [Ökning](secure-deployment-guidelines/overview/network-topology.md)
       + [Säkerhet för nätverkslager](secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [Brandväggsregler](secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
       + [Adobe Primetime DRM-nätverksprotokoll](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
@@ -104,7 +104,7 @@ ht-degree: 0%
 + Arbetsflöden för flera DRM {#multi-drm-workflows}
    + [Arbetsflöden för flera DRM](multi-drm-workflows/title-page/overview.md)
    + Snabbstart för Primetime DRM Cloud {#quick-start}
-      + [Översikt](multi-drm-workflows/quick-start/quick-overview.md)
+      + [Ökning](multi-drm-workflows/quick-start/quick-overview.md)
       + [Skaffa licenser (konton, etc.)](multi-drm-workflows/quick-start/get-provisioned.md)
       + [Tangenter, ID:n och autentiserare](multi-drm-workflows/quick-start/keys-ids-and-authenticators.md)
       + [Paketera ditt innehåll](multi-drm-workflows/quick-start/package-your-content.md)
@@ -112,7 +112,7 @@ ht-degree: 0%
       + [Licenser](multi-drm-workflows/quick-start/handle-the-licensing.md)
       + [Spela upp skyddat innehåll](multi-drm-workflows/quick-start/playback-protected-content.md)
       + [Felsökning av snabbstart](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
-   + Arbetsflöden: Paket, licens och uppspelning {#package-license-play}
+   + Arbetsflöden: Paket, Licens och Spela upp {#package-license-play}
       + [Arbetsflöde med flera DRM-DRM för FairPlay](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [Arbetsflöde för flera DRM-kanaler för Widewin och PlayReady](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [Paketera ditt innehåll med Bento4](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
@@ -129,10 +129,10 @@ ht-degree: 0%
    + Funktioner {#feature-topics}
       + [Referensserver: Exempel på ExpressPlay-tillståndsserver (SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
       + [Referenstjänst: Tidsbaserat berättigande](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [Referenstjänst: Enhetsbindningsberättigande](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [Referenstjänst: Enhetsbindningsbehörighet](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [SE Offentligt API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
-   + ExpressPlay-licenstokenbegäran/svarsreferens {#license-token-req-resp-ref}
-      + [Översikt](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
+   + ExpressPlay-licensens tokenbegäran/svarsreferens {#license-token-req-resp-ref}
+      + [Ökning](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
       + [FairPlay-licenstokenbegäran/svar](multi-drm-workflows/license-token-req-resp-ref/fairplay-license-token-request.md)
       + [PlayReady-licenstokenbegäran/svar](multi-drm-workflows/license-token-req-resp-ref/playready-license-token-request.md)
       + [Tokenbegäran för Widewin-licens/svar](multi-drm-workflows/license-token-req-resp-ref/widevine-license-token-request.md)
@@ -175,12 +175,12 @@ ht-degree: 0%
       + [Anpassade auktoriseringstillägg](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [Prestandajustering](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
       + [Uppgraderar Adobe Primetime DRM Server for Protected Streaming](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
-      + [Köra DRM-servern för skyddad direktuppspelning](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
+      + [Köra DRM-servern för skyddad strömning](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [Paketera innehåll](protected-streaming/understanding-deployment/packaging-content.md)
       + DRM Server for Protected Streaming Utilities {#drm-for-protected-streaming-utilities}
          + [Konfigurationsvaliderare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
          + [Lösenordsskrubbare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
-         + [SWF hash-räknare](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
+         + [SWF hash-kalkylator](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
 + Använda Adobe Primetime DRM SDK för att skydda innehåll - 5.3.1 {#using-drm-sdk}
    + [Nyheter i Adobe Primetime DRM](protecting-content/introduction/whats-new.md)
    + Användningsregler och autentisering {#usage-rules-authentication}
@@ -199,7 +199,7 @@ ht-degree: 0%
       + [Anpassade användningsregler](protecting-content/introduction/usage-rules/other-policy-options/custom-usage-rules.md)
       + [Förbättrad kedja av licenser](protecting-content/introduction/usage-rules/other-policy-options/enhanced-license-chaining.md)
       + [Flera uppspelningsrättigheter](protecting-content/introduction/usage-rules/other-policy-options/multiple-play-rights.md)
-      + [Fjärradministration och lokal leverans av iOS-nycklar](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
+      + [Fjärradministration och lokal leverans av iOS-nyckel](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
    + [Domänregistrering för enhetsgrupp](protecting-content/introduction/usage-rules/domain-registration.md)
    + [Skydd av utdata](protecting-content/introduction/usage-rules/output-protection-controls.md)
    + Paketeringsalternativ {#packaging-options}
@@ -217,13 +217,13 @@ ht-degree: 0%
       + [Begär certifikat](protecting-content/setting-up-the-sdk/requesting-certs.md)
       + [Lagra autentiseringsuppgifter](protecting-content/setting-up-the-sdk/storing-credentials.md)
    + Arbeta med DRM-principer {#working-policies}
-      + [Översikt](protecting-content/working-policies-overview/working-with-policies.md)
+      + [Ökning](protecting-content/working-policies-overview/working-with-policies.md)
       + [Skapa en DRM-princip med Java API](protecting-content/working-policies-overview/creating-policy-using-java-api.md)
       + [Uppdatera en DRM-princip med Java API](protecting-content/working-policies-overview/updating-policy-using-java-api.md)
       + [Kritisk DRM-policy](protecting-content/working-policies-overview/policy-criticality.md)
       + [Arbeta med DRM-principuppdateringslistor](protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)
    + Paketera mediefiler {#packaging-media}
-      + [Översikt](protecting-content/packaging-media-overview/packaging-media-files.md)
+      + [Ökning](protecting-content/packaging-media-overview/packaging-media-files.md)
       + [Paketeringsalternativ](protecting-content/packaging-media-overview/content-packaging-options.md)
       + [Kryptera innehåll](protecting-content/packaging-media-overview/encrypting-content.md)
       + [Undersöker krypterat filinnehåll](protecting-content/packaging-media-overview/examining-encrypted-file-content.md)
@@ -231,7 +231,7 @@ ht-degree: 0%
       + [Förgenererande licenser](protecting-content/pre-generating-and-embedded-licenses/pre-generating-licenses.md)
       + [Bädda in licenser](protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md)
    + Implementera en licensserver {#implementing-the-license-server}
-      + [Översikt](protecting-content/implementing-the-license-server/implementing-license-overview.md)
+      + [Ökning](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [Distributionsalternativ för licensserver](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
       + [Bearbeta Adobe Primetime DRM-begäranden](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Hantera begäranden om hämtning av serverversion](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
@@ -240,13 +240,13 @@ ht-degree: 0%
       + [Hantera licensreturbegäranden](protecting-content/implementing-the-license-server/handling-license-return-reqs.md)
       + [Hantera autentiseringsbegäranden](protecting-content/implementing-the-license-server/handling-authentication-reqs.md)
       + Hantera licensbegäranden {#handling-license-reqs}
-         + [Översikt](protecting-content/implementing-the-license-server/handling-license-reqs/license-handling-classes.md)
+         + [Ökning](protecting-content/implementing-the-license-server/handling-license-reqs/license-handling-classes.md)
          + [Felhantering av licensbegäran](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
          + [Genererar licenser](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
          + [Utfärdar domänbundna licenser](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
          + [Utfärda licenser för leverans av fjärrnycklar till iOS-klienter (kräver Adobe Primetime)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
          + [Minsta klientversion](protecting-content/implementing-the-license-server/handling-license-reqs/minimum-client-version.md)
-         + [Förhandsgranska licens](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
+         + [Förhandsgranskning av licens](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
          + [Identitetsbaserade licenser](protecting-content/implementing-the-license-server/handling-license-reqs/identity-based-licenses.md)
          + [Uppdaterar DRM-principer](protecting-content/implementing-the-license-server/handling-license-reqs/updating-policies.md)
       + Licenskedja {#license-chaining}
@@ -256,7 +256,7 @@ ht-degree: 0%
       + [Hantera certifikatuppdateringar när certifikat som utfärdas av Adobe upphör att gälla](protecting-content/implementing-the-license-server/handling-cert-updates.md)
       + [Prestandajustering](protecting-content/implementing-the-license-server/performance-tuning.md)
    + Återkalla klientautentiseringsuppgifter {#revoking-client-creds}
-      + [Översikt](protecting-content/revoking-client-creds/revoking-creds-overview.md)
+      + [Ökning](protecting-content/revoking-client-creds/revoking-creds-overview.md)
       + [Återkalla DRM-klient- och körningsreferenser](protecting-content/revoking-client-creds/revoking-drm-client-and-runtime-creds.md)
       + [Återkallar datorautentiseringsuppgifter](protecting-content/revoking-client-creds/revoking-machine-creds.md)
    + [Skapa videospelare](protecting-content/creating-video-players.md)
@@ -271,11 +271,11 @@ ht-degree: 0%
    + [Referensimplementeringar](drm-reference-implementations/overview.md)
    + [Vanligt arbetsflöde](drm-reference-implementations/typical-scenario.md)
    + Kommandoradsverktyg {#command-line-tools}
-      + [Översikt](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
+      + [Ökning](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
       + [Krav för kommandoradsverktyg](drm-reference-implementations/command-line-tools/requirements.md)
       + [Installera kommandoradsverktygen](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
    + Konfigurera och köra kommandoradsverktygen {#configure-and-run}
-      + [Översikt](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
+      + [Ökning](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
       + [Om konfigurationsfiler för kommandoradsverktyg](drm-reference-implementations/command-line-tools/configure-command-line-tools/config-file.md)
       + [DRM Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Kommandoradsanvändning för principhanteraren](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
@@ -310,7 +310,7 @@ ht-degree: 0%
       + [Uppdatera referensimplementeringsdatabasen](drm-reference-implementations/impl-usage-models/update-db.md)
       + [Affärsregler för demonstration av användningsmodell](drm-reference-implementations/impl-usage-models/usage-model-biz-rules.md)
    + Domänregistrering {#implement-domain-registration}
-      + [Översikt](drm-reference-implementations/impl-domain-registration/impl-domain-registration-overview.md)
+      + [Ökning](drm-reference-implementations/impl-domain-registration/impl-domain-registration-overview.md)
       + [Implementera identitetsbaserad domänregistrering](drm-reference-implementations/impl-domain-registration/implement-domain-based-reg.md)
       + [Identitetsbaserad domänregistreringslogik](drm-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
       + [Implementera anonym domänregistrering](drm-reference-implementations/impl-domain-registration/implement-anon-domain-reg.md)
@@ -336,7 +336,7 @@ ht-degree: 0%
    + [Använda klassen DRMContentData](tvsdk-drm-workflow/using-drmcontentdata.md)
    + [Out-of-band-licenser](tvsdk-drm-workflow/about-out-of-band-licenses.md)
    + [Stöd för enhetsdomän](tvsdk-drm-workflow/device-domain-support.md)
-   + [Förhandsgranska licens](tvsdk-drm-workflow/license-preview.md)
+   + [Förhandsgranskning av licens](tvsdk-drm-workflow/license-preview.md)
    + [Leverera innehåll](tvsdk-drm-workflow/delivering-content.md)
 + [Felmeddelandereferens för DRM-klient](client-error-message-reference.md)
 + Använda Adobe Access DRM med ett externt nyckelhanteringssystem {#external-cek}
@@ -345,7 +345,7 @@ ht-degree: 0%
    + [Externt CEK-arbetsflöde för AXS DRM](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
    + [Använda externt CEK för att sälja och paketera licenser](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
 + Använda Adobe Access Server för skyddad strömning {#adobe-access-server}
-   + [Om Adobe Access Server för skyddad strömning](aaxs-protected-streaming/about-aaxs-protect-stream.md)
+   + [Om Adobe Access Server för skyddad direktuppspelning](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [Användningsregler](aaxs-protected-streaming/usage-rules.md)
    + [Krav](aaxs-protected-streaming/requirements.md)
    + Distribuera Adobe Access Server för skyddad strömning {#deploying-aaxs-protect-stream}
@@ -433,7 +433,7 @@ ht-degree: 0%
    + Andra policyalternativ {#content-other-policy-options}
       + [Förbättrad kedja av licenser](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
       + [Flera uppspelningsrättigheter](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
-      + [Fjärradministration och lokal leverans av iOS-nycklar](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
+      + [Fjärr- och lokal nyckelleverans från iOS](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
       + [Domänregistrering för enhetsgrupp](aaxs-protecting-content/content-introduction/content-usage-rules/content-domain-registration.md)
    + [Skydd av utdata](aaxs-protecting-content/content-introduction/content-usage-rules/output-protection/output-protection-controls.md)
    + Paketeringsalternativ {#packaging-option}
@@ -450,8 +450,8 @@ ht-degree: 0%
       + [Adobe Access-autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
       + [Begär certifikat](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [Lagra autentiseringsuppgifter](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
-   + Arbeta med politik {#working-with-policies}
-      + [Arbeta med politik](aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)
+   + Arbeta med policyer {#working-with-policies}
+      + [Arbeta med policyer](aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)
       + [Skapa en profil med Java API](aaxs-protecting-content/content-working-with-policies/content-creating-policy-using-java-api.md)
       + [Uppdatera en princip med Java API](aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)
       + [Kritisk politik](aaxs-protecting-content/content-working-with-policies/content-policy-criticality.md)
@@ -489,13 +489,13 @@ ht-degree: 0%
       + [Utfärdar domänbundna licenser](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-domian-bound-licenses.md)
       + [Utfärda licenser för leverans av fjärrnycklar till iOS-klienter (kräver Adobe Primetime)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
       + [Minsta klientversion](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)
-      + [Förhandsgranska licens](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
+      + [Förhandsgranskning av licens](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
       + Identitetsbaserade licenser {#licenses}
          + [Översikt över ID-baserade licenser](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-identity-based-licenses.md)
          + [Uppdaterar principer](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-updating-policies.md)
          + [Hantera synkroniseringsbegäranden](aaxs-protecting-content/content-implementing-the-license-server/content-handling-synch-reqs.md)
          + Hantera FMRMS-kompatibilitet {#handling-fmrms-compatibility}
-            + [Översikt](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
+            + [Ökning](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
             + [Uppgraderar klienter](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-clients.md)
             + [Uppgraderar metadata](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-metadata.md)
          + [Hantera certifikatuppdateringar när dina Adobe-utfärdade certifikat upphör att gälla](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
@@ -508,7 +508,7 @@ ht-degree: 0%
    + [Skapa videospelare](aaxs-protecting-content/content-creating-video-players.md)
 + Referensimplementeringar för Adobe Access {#reference-implementation}
    + [Översikt - Använda referensimplementeringar](aaxs-reference-implementations/overview.md)
-   + [Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [Kommandoradsverktyg för att paketera innehåll och skapa ändringslistor](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Policy Manager {#policy-manager}
       + [Använda Policy Manager](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Egenskaper för konfigurationsfil](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
@@ -543,7 +543,7 @@ ht-degree: 0%
       + [Serveregenskapsfiler](aaxs-reference-implementations/license-server-and-wfp/license-server-config-server-props-files.md)
       + [Förbereda lösenord för serveregenskapsfiler](aaxs-reference-implementations/license-server-and-wfp/license-server-config-prep-pws-for-server-props-files.md)
       + [Licensserverns egenskapsfil](aaxs-reference-implementations/license-server-and-wfp/license-server-properties-file.md)
-      + [Packager-egenskapsfil](aaxs-reference-implementations/license-server-and-wfp/packager-properties-file.md)
+      + [Packager properties file](aaxs-reference-implementations/license-server-and-wfp/packager-properties-file.md)
       + [Egenskaper för bevakad mapp](aaxs-reference-implementations/license-server-and-wfp/license-server-watched-folder-props.md)
       + [Konfigurera databasen och konfigurera JNDI-datakällan](aaxs-reference-implementations/license-server-and-wfp/license-server-setting-up-db-jndi.md)
       + [HSM-konfiguration](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config.md)
@@ -555,7 +555,7 @@ ht-degree: 0%
    + Implementera användningsmodellerna {#usage-models}
       + [Implementera översikten över användningsmodeller](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
       + [Ladda ned](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-download-to-own.md)
-      + [Uthyrning/video på begäran](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
+      + [Uthyrning/video-on-demand](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
       + [Prenumeration](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-subscription.md)
       + [Reklamfinansierad](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
    + Implementera domänregistrering {#domain-registration}

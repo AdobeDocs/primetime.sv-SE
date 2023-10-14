@@ -6,7 +6,7 @@ user-guide-description: IQ-hjälpen för Primetime-kontot ger information om IQ-
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 

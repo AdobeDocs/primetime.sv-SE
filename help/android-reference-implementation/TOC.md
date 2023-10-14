@@ -1,12 +1,12 @@
 ---
 product: primetime
 audience: end-user
-user-guide-title: Hjälp om implementering av Primetime Reference
-user-guide-description: Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa din personliga spelare.
+user-guide-title: Hjälp med implementering av Primetime Reference
+user-guide-description: Hjälper dig att förstå TVSDK och ändra funktionshanterarna för att anpassa den personliga spelaren.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -54,12 +54,12 @@ ht-degree: 0%
       + [Lägg till annonser](insert-ads/add-advertising.md)
       + [Relaterad API-dokumentation](insert-ads/aps-callbacks-ad-insertion.md)
    + Ljud med låg bindning {#late-binding-audio}
-      + [Översikt](late-binding-audio/late-binding-audio-overview.md)
+      + [Ökning](late-binding-audio/late-binding-audio-overview.md)
       + [Integrera ljud med senare bindning](late-binding-audio/aa-enable.md)
-      + [Välj ljudspår](late-binding-audio/select-audio-tracks.md)
+      + [Markera ljudspåren](late-binding-audio/select-audio-tracks.md)
       + [Relaterad API-dokumentation](late-binding-audio/aa-api-callbacks.md)
    + Rättighetsflöden för Primetime-autentisering {#primetime-authentications}
-      + [Översikt](paytvpass-entitlement/paytvpass-entitlement-overview.md)
+      + [Ökning](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Tillståndshanteraren - översikt](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integrera Primetime-autentisering](paytvpass-entitlement/integrate-pass.md)
       + [Konfigurera Adobe Analytics Reporting](paytvpass-entitlement/pass-analytics-setup.md)
